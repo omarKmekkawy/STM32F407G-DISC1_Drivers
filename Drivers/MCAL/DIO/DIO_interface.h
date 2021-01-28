@@ -40,6 +40,10 @@
 #define GPIOC_BASE_ADDRESS 0x40020800
 #define GPIOD_BASE_ADDRESS 0x40020C00
 #define GPIOE_BASE_ADDRESS 0x40021000
+#define GPIOF_BASE_ADDRESS 0x40021400
+#define GPIOG_BASE_ADDRESS 0x40021800
+#define GPIOH_BASE_ADDRESS 0x40021C00
+#define GPIOI_BASE_ADDRESS 0x40022000
 
 typedef struct {
 	volatile u32 MODER;		// Offset 0x00
@@ -59,7 +63,10 @@ typedef struct {
 #define GPIOC ((GPIO_TypeDef*)(GPIOC_BASE_ADDRESS))
 #define GPIOD ((GPIO_TypeDef*)(GPIOD_BASE_ADDRESS))
 #define GPIOE ((GPIO_TypeDef*)(GPIOE_BASE_ADDRESS))
-
+#define GPIOF ((GPIO_TypeDef*)(GPIOF_BASE_ADDRESS))
+#define GPIOG ((GPIO_TypeDef*)(GPIOG_BASE_ADDRESS))
+#define GPIOH ((GPIO_TypeDef*)(GPIOH_BASE_ADDRESS))
+#define GPIOI ((GPIO_TypeDef*)(GPIOI_BASE_ADDRESS))
 
 void MGPIO_voidSetPinMode(GPIO_TypeDef *copy_GPIO_TypeDefPORT, u8 copy_u8PIN, u8 copy_u8Mode,u8 copy_u8PULL, u8 copy_u8Speed);
 void MGPIO_voidSetPinValue(GPIO_TypeDef *copy_GPIO_TypeDefPORT, u8 copy_u8PIN, u8 copy_u8Value);
