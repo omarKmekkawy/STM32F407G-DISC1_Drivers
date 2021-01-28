@@ -65,7 +65,6 @@ void MGPIO_voidSetPinMode(GPIO_TypeDef *copy_GPIO_TypeDefPORT, u8 copy_u8PIN, u8
 void MGPIO_voidSetPinValue(GPIO_TypeDef *copy_GPIO_TypeDefPORT, u8 copy_u8PIN, u8 copy_u8Value);
 void MGPIO_voidTogPinValue(GPIO_TypeDef *copy_GPIO_TypeDefPORT, u8 copy_u8PIN);
 u8 MGPIO_u8GetPinValue(GPIO_TypeDef *copy_GPIO_TypeDefPORT, u8 copy_u8PIN);
-
-
+HAL_Status_TypeDef MGPIO_voidLockGPIO(GPIO_TypeDef *copy_GPIO_TypeDefPORT, u8 copy_u8PIN);
 #endif
 
