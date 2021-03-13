@@ -1,0 +1,131 @@
+\doxysection{RTCEx\+\_\+\+Exported\+\_\+\+Functions\+\_\+\+Group1}
+\label{group___r_t_c_ex___exported___functions___group1}\index{RTCEx\_Exported\_Functions\_Group1@{RTCEx\_Exported\_Functions\_Group1}}
+Collaboration diagram for RTCEx\+\_\+\+Exported\+\_\+\+Functions\+\_\+\+Group1\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group___r_t_c_ex___exported___functions___group1}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+RTCEx\+\_\+\+Set\+Time\+Stamp} (\textbf{ RTC\+\_\+\+Handle\+Type\+Def} $\ast$hrtc, uint32\+\_\+t Time\+Stamp\+Edge, uint32\+\_\+t RTC\+\_\+\+Time\+Stamp\+Pin)
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+RTCEx\+\_\+\+Set\+Time\+Stamp\+\_\+\+IT} (\textbf{ RTC\+\_\+\+Handle\+Type\+Def} $\ast$hrtc, uint32\+\_\+t Time\+Stamp\+Edge, uint32\+\_\+t RTC\+\_\+\+Time\+Stamp\+Pin)
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+RTCEx\+\_\+\+Deactivate\+Time\+Stamp} (\textbf{ RTC\+\_\+\+Handle\+Type\+Def} $\ast$hrtc)
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+RTCEx\+\_\+\+Get\+Time\+Stamp} (\textbf{ RTC\+\_\+\+Handle\+Type\+Def} $\ast$hrtc, \textbf{ RTC\+\_\+\+Time\+Type\+Def} $\ast$s\+Time\+Stamp, \textbf{ RTC\+\_\+\+Date\+Type\+Def} $\ast$s\+Time\+Stamp\+Date, uint32\+\_\+t Format)
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+RTCEx\+\_\+\+Set\+Tamper} (\textbf{ RTC\+\_\+\+Handle\+Type\+Def} $\ast$hrtc, \textbf{ RTC\+\_\+\+Tamper\+Type\+Def} $\ast$s\+Tamper)
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+RTCEx\+\_\+\+Set\+Tamper\+\_\+\+IT} (\textbf{ RTC\+\_\+\+Handle\+Type\+Def} $\ast$hrtc, \textbf{ RTC\+\_\+\+Tamper\+Type\+Def} $\ast$s\+Tamper)
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+RTCEx\+\_\+\+Deactivate\+Tamper} (\textbf{ RTC\+\_\+\+Handle\+Type\+Def} $\ast$hrtc, uint32\+\_\+t Tamper)
+\item 
+void \textbf{ HAL\+\_\+\+RTCEx\+\_\+\+Tamper\+Time\+Stamp\+IRQHandler} (\textbf{ RTC\+\_\+\+Handle\+Type\+Def} $\ast$hrtc)
+\item 
+void \textbf{ HAL\+\_\+\+RTCEx\+\_\+\+Tamper1\+Event\+Callback} (\textbf{ RTC\+\_\+\+Handle\+Type\+Def} $\ast$hrtc)
+\item 
+void \textbf{ HAL\+\_\+\+RTCEx\+\_\+\+Tamper2\+Event\+Callback} (\textbf{ RTC\+\_\+\+Handle\+Type\+Def} $\ast$hrtc)
+\item 
+void \textbf{ HAL\+\_\+\+RTCEx\+\_\+\+Time\+Stamp\+Event\+Callback} (\textbf{ RTC\+\_\+\+Handle\+Type\+Def} $\ast$hrtc)
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+RTCEx\+\_\+\+Poll\+For\+Time\+Stamp\+Event} (\textbf{ RTC\+\_\+\+Handle\+Type\+Def} $\ast$hrtc, uint32\+\_\+t Timeout)
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+RTCEx\+\_\+\+Poll\+For\+Tamper1\+Event} (\textbf{ RTC\+\_\+\+Handle\+Type\+Def} $\ast$hrtc, uint32\+\_\+t Timeout)
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+RTCEx\+\_\+\+Poll\+For\+Tamper2\+Event} (\textbf{ RTC\+\_\+\+Handle\+Type\+Def} $\ast$hrtc, uint32\+\_\+t Timeout)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\label{group___r_t_c_ex___exported___functions___group1_gaf0c1b98177dbd9d20c460d6130dbad7e}} 
+\index{RTCEx\_Exported\_Functions\_Group1@{RTCEx\_Exported\_Functions\_Group1}!HAL\_RTCEx\_DeactivateTamper@{HAL\_RTCEx\_DeactivateTamper}}
+\index{HAL\_RTCEx\_DeactivateTamper@{HAL\_RTCEx\_DeactivateTamper}!RTCEx\_Exported\_Functions\_Group1@{RTCEx\_Exported\_Functions\_Group1}}
+\doxysubsubsection{HAL\_RTCEx\_DeactivateTamper()}
+{\footnotesize\ttfamily \textbf{ HAL\+\_\+\+Status\+Type\+Def} HAL\+\_\+\+RTCEx\+\_\+\+Deactivate\+Tamper (\begin{DoxyParamCaption}\item[{\textbf{ RTC\+\_\+\+Handle\+Type\+Def} $\ast$}]{hrtc,  }\item[{uint32\+\_\+t}]{Tamper }\end{DoxyParamCaption})}
+
+\mbox{\label{group___r_t_c_ex___exported___functions___group1_ga1d7152fccc39480de86c555c94e222a0}} 
+\index{RTCEx\_Exported\_Functions\_Group1@{RTCEx\_Exported\_Functions\_Group1}!HAL\_RTCEx\_DeactivateTimeStamp@{HAL\_RTCEx\_DeactivateTimeStamp}}
+\index{HAL\_RTCEx\_DeactivateTimeStamp@{HAL\_RTCEx\_DeactivateTimeStamp}!RTCEx\_Exported\_Functions\_Group1@{RTCEx\_Exported\_Functions\_Group1}}
+\doxysubsubsection{HAL\_RTCEx\_DeactivateTimeStamp()}
+{\footnotesize\ttfamily \textbf{ HAL\+\_\+\+Status\+Type\+Def} HAL\+\_\+\+RTCEx\+\_\+\+Deactivate\+Time\+Stamp (\begin{DoxyParamCaption}\item[{\textbf{ RTC\+\_\+\+Handle\+Type\+Def} $\ast$}]{hrtc }\end{DoxyParamCaption})}
+
+\mbox{\label{group___r_t_c_ex___exported___functions___group1_ga68d83277bafa5fcebd10f1bd83ef059e}} 
+\index{RTCEx\_Exported\_Functions\_Group1@{RTCEx\_Exported\_Functions\_Group1}!HAL\_RTCEx\_GetTimeStamp@{HAL\_RTCEx\_GetTimeStamp}}
+\index{HAL\_RTCEx\_GetTimeStamp@{HAL\_RTCEx\_GetTimeStamp}!RTCEx\_Exported\_Functions\_Group1@{RTCEx\_Exported\_Functions\_Group1}}
+\doxysubsubsection{HAL\_RTCEx\_GetTimeStamp()}
+{\footnotesize\ttfamily \textbf{ HAL\+\_\+\+Status\+Type\+Def} HAL\+\_\+\+RTCEx\+\_\+\+Get\+Time\+Stamp (\begin{DoxyParamCaption}\item[{\textbf{ RTC\+\_\+\+Handle\+Type\+Def} $\ast$}]{hrtc,  }\item[{\textbf{ RTC\+\_\+\+Time\+Type\+Def} $\ast$}]{s\+Time\+Stamp,  }\item[{\textbf{ RTC\+\_\+\+Date\+Type\+Def} $\ast$}]{s\+Time\+Stamp\+Date,  }\item[{uint32\+\_\+t}]{Format }\end{DoxyParamCaption})}
+
+\mbox{\label{group___r_t_c_ex___exported___functions___group1_gadea47894c36fc74044106654c081070b}} 
+\index{RTCEx\_Exported\_Functions\_Group1@{RTCEx\_Exported\_Functions\_Group1}!HAL\_RTCEx\_PollForTamper1Event@{HAL\_RTCEx\_PollForTamper1Event}}
+\index{HAL\_RTCEx\_PollForTamper1Event@{HAL\_RTCEx\_PollForTamper1Event}!RTCEx\_Exported\_Functions\_Group1@{RTCEx\_Exported\_Functions\_Group1}}
+\doxysubsubsection{HAL\_RTCEx\_PollForTamper1Event()}
+{\footnotesize\ttfamily \textbf{ HAL\+\_\+\+Status\+Type\+Def} HAL\+\_\+\+RTCEx\+\_\+\+Poll\+For\+Tamper1\+Event (\begin{DoxyParamCaption}\item[{\textbf{ RTC\+\_\+\+Handle\+Type\+Def} $\ast$}]{hrtc,  }\item[{uint32\+\_\+t}]{Timeout }\end{DoxyParamCaption})}
+
+\mbox{\label{group___r_t_c_ex___exported___functions___group1_ga974cfcdcbc9a6fc70effcf1c701ba535}} 
+\index{RTCEx\_Exported\_Functions\_Group1@{RTCEx\_Exported\_Functions\_Group1}!HAL\_RTCEx\_PollForTamper2Event@{HAL\_RTCEx\_PollForTamper2Event}}
+\index{HAL\_RTCEx\_PollForTamper2Event@{HAL\_RTCEx\_PollForTamper2Event}!RTCEx\_Exported\_Functions\_Group1@{RTCEx\_Exported\_Functions\_Group1}}
+\doxysubsubsection{HAL\_RTCEx\_PollForTamper2Event()}
+{\footnotesize\ttfamily \textbf{ HAL\+\_\+\+Status\+Type\+Def} HAL\+\_\+\+RTCEx\+\_\+\+Poll\+For\+Tamper2\+Event (\begin{DoxyParamCaption}\item[{\textbf{ RTC\+\_\+\+Handle\+Type\+Def} $\ast$}]{hrtc,  }\item[{uint32\+\_\+t}]{Timeout }\end{DoxyParamCaption})}
+
+\mbox{\label{group___r_t_c_ex___exported___functions___group1_gaff8adc3d27b9c84c69b64ffa6ad43457}} 
+\index{RTCEx\_Exported\_Functions\_Group1@{RTCEx\_Exported\_Functions\_Group1}!HAL\_RTCEx\_PollForTimeStampEvent@{HAL\_RTCEx\_PollForTimeStampEvent}}
+\index{HAL\_RTCEx\_PollForTimeStampEvent@{HAL\_RTCEx\_PollForTimeStampEvent}!RTCEx\_Exported\_Functions\_Group1@{RTCEx\_Exported\_Functions\_Group1}}
+\doxysubsubsection{HAL\_RTCEx\_PollForTimeStampEvent()}
+{\footnotesize\ttfamily \textbf{ HAL\+\_\+\+Status\+Type\+Def} HAL\+\_\+\+RTCEx\+\_\+\+Poll\+For\+Time\+Stamp\+Event (\begin{DoxyParamCaption}\item[{\textbf{ RTC\+\_\+\+Handle\+Type\+Def} $\ast$}]{hrtc,  }\item[{uint32\+\_\+t}]{Timeout }\end{DoxyParamCaption})}
+
+\mbox{\label{group___r_t_c_ex___exported___functions___group1_ga4b819431e03c521285cf3e275d930707}} 
+\index{RTCEx\_Exported\_Functions\_Group1@{RTCEx\_Exported\_Functions\_Group1}!HAL\_RTCEx\_SetTamper@{HAL\_RTCEx\_SetTamper}}
+\index{HAL\_RTCEx\_SetTamper@{HAL\_RTCEx\_SetTamper}!RTCEx\_Exported\_Functions\_Group1@{RTCEx\_Exported\_Functions\_Group1}}
+\doxysubsubsection{HAL\_RTCEx\_SetTamper()}
+{\footnotesize\ttfamily \textbf{ HAL\+\_\+\+Status\+Type\+Def} HAL\+\_\+\+RTCEx\+\_\+\+Set\+Tamper (\begin{DoxyParamCaption}\item[{\textbf{ RTC\+\_\+\+Handle\+Type\+Def} $\ast$}]{hrtc,  }\item[{\textbf{ RTC\+\_\+\+Tamper\+Type\+Def} $\ast$}]{s\+Tamper }\end{DoxyParamCaption})}
+
+\mbox{\label{group___r_t_c_ex___exported___functions___group1_ga4984cf38a5bbdf1f607cc94cfdf3797f}} 
+\index{RTCEx\_Exported\_Functions\_Group1@{RTCEx\_Exported\_Functions\_Group1}!HAL\_RTCEx\_SetTamper\_IT@{HAL\_RTCEx\_SetTamper\_IT}}
+\index{HAL\_RTCEx\_SetTamper\_IT@{HAL\_RTCEx\_SetTamper\_IT}!RTCEx\_Exported\_Functions\_Group1@{RTCEx\_Exported\_Functions\_Group1}}
+\doxysubsubsection{HAL\_RTCEx\_SetTamper\_IT()}
+{\footnotesize\ttfamily \textbf{ HAL\+\_\+\+Status\+Type\+Def} HAL\+\_\+\+RTCEx\+\_\+\+Set\+Tamper\+\_\+\+IT (\begin{DoxyParamCaption}\item[{\textbf{ RTC\+\_\+\+Handle\+Type\+Def} $\ast$}]{hrtc,  }\item[{\textbf{ RTC\+\_\+\+Tamper\+Type\+Def} $\ast$}]{s\+Tamper }\end{DoxyParamCaption})}
+
+\mbox{\label{group___r_t_c_ex___exported___functions___group1_ga750db6ed8e6afde87530736826554019}} 
+\index{RTCEx\_Exported\_Functions\_Group1@{RTCEx\_Exported\_Functions\_Group1}!HAL\_RTCEx\_SetTimeStamp@{HAL\_RTCEx\_SetTimeStamp}}
+\index{HAL\_RTCEx\_SetTimeStamp@{HAL\_RTCEx\_SetTimeStamp}!RTCEx\_Exported\_Functions\_Group1@{RTCEx\_Exported\_Functions\_Group1}}
+\doxysubsubsection{HAL\_RTCEx\_SetTimeStamp()}
+{\footnotesize\ttfamily \textbf{ HAL\+\_\+\+Status\+Type\+Def} HAL\+\_\+\+RTCEx\+\_\+\+Set\+Time\+Stamp (\begin{DoxyParamCaption}\item[{\textbf{ RTC\+\_\+\+Handle\+Type\+Def} $\ast$}]{hrtc,  }\item[{uint32\+\_\+t}]{Time\+Stamp\+Edge,  }\item[{uint32\+\_\+t}]{RTC\+\_\+\+Time\+Stamp\+Pin }\end{DoxyParamCaption})}
+
+\mbox{\label{group___r_t_c_ex___exported___functions___group1_ga96faf756e9e07d06ff1d7b696c21a6a4}} 
+\index{RTCEx\_Exported\_Functions\_Group1@{RTCEx\_Exported\_Functions\_Group1}!HAL\_RTCEx\_SetTimeStamp\_IT@{HAL\_RTCEx\_SetTimeStamp\_IT}}
+\index{HAL\_RTCEx\_SetTimeStamp\_IT@{HAL\_RTCEx\_SetTimeStamp\_IT}!RTCEx\_Exported\_Functions\_Group1@{RTCEx\_Exported\_Functions\_Group1}}
+\doxysubsubsection{HAL\_RTCEx\_SetTimeStamp\_IT()}
+{\footnotesize\ttfamily \textbf{ HAL\+\_\+\+Status\+Type\+Def} HAL\+\_\+\+RTCEx\+\_\+\+Set\+Time\+Stamp\+\_\+\+IT (\begin{DoxyParamCaption}\item[{\textbf{ RTC\+\_\+\+Handle\+Type\+Def} $\ast$}]{hrtc,  }\item[{uint32\+\_\+t}]{Time\+Stamp\+Edge,  }\item[{uint32\+\_\+t}]{RTC\+\_\+\+Time\+Stamp\+Pin }\end{DoxyParamCaption})}
+
+\mbox{\label{group___r_t_c_ex___exported___functions___group1_gad849caf1e7b4774af56388a13636ba73}} 
+\index{RTCEx\_Exported\_Functions\_Group1@{RTCEx\_Exported\_Functions\_Group1}!HAL\_RTCEx\_Tamper1EventCallback@{HAL\_RTCEx\_Tamper1EventCallback}}
+\index{HAL\_RTCEx\_Tamper1EventCallback@{HAL\_RTCEx\_Tamper1EventCallback}!RTCEx\_Exported\_Functions\_Group1@{RTCEx\_Exported\_Functions\_Group1}}
+\doxysubsubsection{HAL\_RTCEx\_Tamper1EventCallback()}
+{\footnotesize\ttfamily void HAL\+\_\+\+RTCEx\+\_\+\+Tamper1\+Event\+Callback (\begin{DoxyParamCaption}\item[{\textbf{ RTC\+\_\+\+Handle\+Type\+Def} $\ast$}]{hrtc }\end{DoxyParamCaption})}
+
+\mbox{\label{group___r_t_c_ex___exported___functions___group1_ga14086326964355aaf3793ad3157ea7c3}} 
+\index{RTCEx\_Exported\_Functions\_Group1@{RTCEx\_Exported\_Functions\_Group1}!HAL\_RTCEx\_Tamper2EventCallback@{HAL\_RTCEx\_Tamper2EventCallback}}
+\index{HAL\_RTCEx\_Tamper2EventCallback@{HAL\_RTCEx\_Tamper2EventCallback}!RTCEx\_Exported\_Functions\_Group1@{RTCEx\_Exported\_Functions\_Group1}}
+\doxysubsubsection{HAL\_RTCEx\_Tamper2EventCallback()}
+{\footnotesize\ttfamily void HAL\+\_\+\+RTCEx\+\_\+\+Tamper2\+Event\+Callback (\begin{DoxyParamCaption}\item[{\textbf{ RTC\+\_\+\+Handle\+Type\+Def} $\ast$}]{hrtc }\end{DoxyParamCaption})}
+
+\mbox{\label{group___r_t_c_ex___exported___functions___group1_ga710f2cd8bab31242d496b020c182fef3}} 
+\index{RTCEx\_Exported\_Functions\_Group1@{RTCEx\_Exported\_Functions\_Group1}!HAL\_RTCEx\_TamperTimeStampIRQHandler@{HAL\_RTCEx\_TamperTimeStampIRQHandler}}
+\index{HAL\_RTCEx\_TamperTimeStampIRQHandler@{HAL\_RTCEx\_TamperTimeStampIRQHandler}!RTCEx\_Exported\_Functions\_Group1@{RTCEx\_Exported\_Functions\_Group1}}
+\doxysubsubsection{HAL\_RTCEx\_TamperTimeStampIRQHandler()}
+{\footnotesize\ttfamily void HAL\+\_\+\+RTCEx\+\_\+\+Tamper\+Time\+Stamp\+IRQHandler (\begin{DoxyParamCaption}\item[{\textbf{ RTC\+\_\+\+Handle\+Type\+Def} $\ast$}]{hrtc }\end{DoxyParamCaption})}
+
+\mbox{\label{group___r_t_c_ex___exported___functions___group1_gac9ef67f1f1698e9560a5ecd5e8c9a330}} 
+\index{RTCEx\_Exported\_Functions\_Group1@{RTCEx\_Exported\_Functions\_Group1}!HAL\_RTCEx\_TimeStampEventCallback@{HAL\_RTCEx\_TimeStampEventCallback}}
+\index{HAL\_RTCEx\_TimeStampEventCallback@{HAL\_RTCEx\_TimeStampEventCallback}!RTCEx\_Exported\_Functions\_Group1@{RTCEx\_Exported\_Functions\_Group1}}
+\doxysubsubsection{HAL\_RTCEx\_TimeStampEventCallback()}
+{\footnotesize\ttfamily void HAL\+\_\+\+RTCEx\+\_\+\+Time\+Stamp\+Event\+Callback (\begin{DoxyParamCaption}\item[{\textbf{ RTC\+\_\+\+Handle\+Type\+Def} $\ast$}]{hrtc }\end{DoxyParamCaption})}
+

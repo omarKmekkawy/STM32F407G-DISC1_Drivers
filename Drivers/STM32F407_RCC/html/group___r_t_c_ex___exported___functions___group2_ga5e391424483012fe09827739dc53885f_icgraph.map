@@ -1,0 +1,4 @@
+<map id="HAL_RTCEx_WakeUpTimerIRQHandler" name="HAL_RTCEx_WakeUpTimerIRQHandler">
+<area shape="rect" id="node1" title=" " alt="" coords="220,5,471,32"/>
+<area shape="rect" id="node2" href="$group___h_a_l___time_base___r_t_c___wake_up___template.html#ga53a3fe340e323e2fec8d851cd2e83554" title="This function handles WAKE UP TIMER interrupt request." alt="" coords="5,5,172,32"/>
+</map>

@@ -1,0 +1,112 @@
+\doxysection{system/include/stm32f4-\/hal/stm32f4xx\+\_\+hal\+\_\+wwdg.h File Reference}
+\label{stm32f4xx__hal__wwdg_8h}\index{system/include/stm32f4-\/hal/stm32f4xx\_hal\_wwdg.h@{system/include/stm32f4-\/hal/stm32f4xx\_hal\_wwdg.h}}
+
+
+Header file of WWDG HAL module.  
+
+
+{\ttfamily \#include \char`\"{}stm32f4xx\+\_\+hal\+\_\+def.\+h\char`\"{}}\newline
+Include dependency graph for stm32f4xx\+\_\+hal\+\_\+wwdg.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{stm32f4xx__hal__wwdg_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{stm32f4xx__hal__wwdg_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \textbf{ WWDG\+\_\+\+Init\+Type\+Def}
+\begin{DoxyCompactList}\small\item\em WWDG Init structure definition. \end{DoxyCompactList}\item 
+struct \textbf{ WWDG\+\_\+\+Handle\+Type\+Def}
+\begin{DoxyCompactList}\small\item\em WWDG handle Structure definition. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \textbf{ WWDG\+\_\+\+IT\+\_\+\+EWI}~\textbf{ WWDG\+\_\+\+CFR\+\_\+\+EWI}
+\item 
+\#define \textbf{ WWDG\+\_\+\+FLAG\+\_\+\+EWIF}~\textbf{ WWDG\+\_\+\+SR\+\_\+\+EWIF}
+\item 
+\#define \textbf{ WWDG\+\_\+\+PRESCALER\+\_\+1}~((uint32\+\_\+t)0x00000000U)
+\item 
+\#define \textbf{ WWDG\+\_\+\+PRESCALER\+\_\+2}~\textbf{ WWDG\+\_\+\+CFR\+\_\+\+WDGTB0}
+\item 
+\#define \textbf{ WWDG\+\_\+\+PRESCALER\+\_\+4}~\textbf{ WWDG\+\_\+\+CFR\+\_\+\+WDGTB1}
+\item 
+\#define \textbf{ WWDG\+\_\+\+PRESCALER\+\_\+8}~\textbf{ WWDG\+\_\+\+CFR\+\_\+\+WDGTB}
+\item 
+\#define \textbf{ WWDG\+\_\+\+EWI\+\_\+\+DISABLE}~0x00000000u
+\item 
+\#define \textbf{ WWDG\+\_\+\+EWI\+\_\+\+ENABLE}~\textbf{ WWDG\+\_\+\+CFR\+\_\+\+EWI}
+\item 
+\#define \textbf{ IS\+\_\+\+WWDG\+\_\+\+PRESCALER}(\+\_\+\+\_\+\+PRESCALER\+\_\+\+\_\+)
+\item 
+\#define \textbf{ IS\+\_\+\+WWDG\+\_\+\+WINDOW}(\+\_\+\+\_\+\+WINDOW\+\_\+\+\_\+)~(((\+\_\+\+\_\+\+WINDOW\+\_\+\+\_\+) $>$= \textbf{ WWDG\+\_\+\+CFR\+\_\+\+W\+\_\+6}) \&\& ((\+\_\+\+\_\+\+WINDOW\+\_\+\+\_\+) $<$= \textbf{ WWDG\+\_\+\+CFR\+\_\+W}))
+\item 
+\#define \textbf{ IS\+\_\+\+WWDG\+\_\+\+COUNTER}(\+\_\+\+\_\+\+COUNTER\+\_\+\+\_\+)~(((\+\_\+\+\_\+\+COUNTER\+\_\+\+\_\+) $>$= \textbf{ WWDG\+\_\+\+CR\+\_\+\+T\+\_\+6}) \&\& ((\+\_\+\+\_\+\+COUNTER\+\_\+\+\_\+) $<$= \textbf{ WWDG\+\_\+\+CR\+\_\+T}))
+\item 
+\#define \textbf{ IS\+\_\+\+WWDG\+\_\+\+EWI\+\_\+\+MODE}(\+\_\+\+\_\+\+MODE\+\_\+\+\_\+)
+\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+WWDG\+\_\+\+ENABLE}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)~\textbf{ SET\+\_\+\+BIT}((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$CR, \textbf{ WWDG\+\_\+\+CR\+\_\+\+WDGA})
+\begin{DoxyCompactList}\small\item\em Enables the WWDG peripheral. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+WWDG\+\_\+\+ENABLE\+\_\+\+IT}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)~\textbf{ SET\+\_\+\+BIT}((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$CFR, (\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+))
+\begin{DoxyCompactList}\small\item\em Enables the WWDG early wakeup interrupt. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+WWDG\+\_\+\+GET\+\_\+\+IT}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)~\textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+WWDG\+\_\+\+GET\+\_\+\+FLAG}((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+),(\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+))
+\begin{DoxyCompactList}\small\item\em Checks whether the selected WWDG interrupt has occurred or not. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+WWDG\+\_\+\+CLEAR\+\_\+\+IT}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)~\textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+WWDG\+\_\+\+CLEAR\+\_\+\+FLAG}((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+), (\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+))
+\begin{DoxyCompactList}\small\item\em Clear the WWDG\textquotesingle{}s interrupt pending bits bits to clear the selected interrupt pending bits. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+WWDG\+\_\+\+GET\+\_\+\+FLAG}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+FLAG\+\_\+\+\_\+)~(((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$SR \& (\+\_\+\+\_\+\+FLAG\+\_\+\+\_\+)) == (\+\_\+\+\_\+\+FLAG\+\_\+\+\_\+))
+\begin{DoxyCompactList}\small\item\em Check whether the specified WWDG flag is set or not. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+WWDG\+\_\+\+CLEAR\+\_\+\+FLAG}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+FLAG\+\_\+\+\_\+)~(((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$SR) = $\sim$(\+\_\+\+\_\+\+FLAG\+\_\+\+\_\+))
+\begin{DoxyCompactList}\small\item\em Clears the WWDG\textquotesingle{}s pending flags. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+WWDG\+\_\+\+GET\+\_\+\+IT\+\_\+\+SOURCE}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)~(((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$CFR \& (\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)) == (\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+))
+\begin{DoxyCompactList}\small\item\em Checks if the specified WWDG interrupt source is enabled or disabled. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+WWDG\+\_\+\+Init} (\textbf{ WWDG\+\_\+\+Handle\+Type\+Def} $\ast$hwwdg)
+\item 
+void \textbf{ HAL\+\_\+\+WWDG\+\_\+\+Msp\+Init} (\textbf{ WWDG\+\_\+\+Handle\+Type\+Def} $\ast$hwwdg)
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+WWDG\+\_\+\+Refresh} (\textbf{ WWDG\+\_\+\+Handle\+Type\+Def} $\ast$hwwdg)
+\item 
+void \textbf{ HAL\+\_\+\+WWDG\+\_\+\+IRQHandler} (\textbf{ WWDG\+\_\+\+Handle\+Type\+Def} $\ast$hwwdg)
+\item 
+void \textbf{ HAL\+\_\+\+WWDG\+\_\+\+Early\+Wakeup\+Callback} (\textbf{ WWDG\+\_\+\+Handle\+Type\+Def} $\ast$hwwdg)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Header file of WWDG HAL module. 
+
+\begin{DoxyAuthor}{Author}
+MCD Application Team 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+V1.\+5.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+06-\/May-\/2016
+\end{DoxyDate}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+\doxysubsubsection*{\begin{center}\copyright{} COPYRIGHT(c) 2016 STMicroelectronics\end{center} }
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met\+:
+\begin{DoxyEnumerate}
+\item Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+\item Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+\item Neither the name of STMicroelectronics nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+\end{DoxyEnumerate}
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \char`\"{}\+AS IS\char`\"{} AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. 

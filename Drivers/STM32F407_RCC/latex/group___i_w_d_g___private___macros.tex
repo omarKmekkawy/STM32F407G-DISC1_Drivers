@@ -1,0 +1,134 @@
+\doxysection{IWDG Private Macros}
+\label{group___i_w_d_g___private___macros}\index{IWDG Private Macros@{IWDG Private Macros}}
+Collaboration diagram for IWDG Private Macros\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=348pt]{group___i_w_d_g___private___macros}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \textbf{ IWDG\+\_\+\+ENABLE\+\_\+\+WRITE\+\_\+\+ACCESS}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)~\textbf{ WRITE\+\_\+\+REG}((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$KR, \textbf{ IWDG\+\_\+\+KEY\+\_\+\+WRITE\+\_\+\+ACCESS\+\_\+\+ENABLE})
+\begin{DoxyCompactList}\small\item\em Enable write access to IWDG\+\_\+\+PR and IWDG\+\_\+\+RLR registers. \end{DoxyCompactList}\item 
+\#define \textbf{ IWDG\+\_\+\+DISABLE\+\_\+\+WRITE\+\_\+\+ACCESS}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)~\textbf{ WRITE\+\_\+\+REG}((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$KR, \textbf{ IWDG\+\_\+\+KEY\+\_\+\+WRITE\+\_\+\+ACCESS\+\_\+\+DISABLE})
+\begin{DoxyCompactList}\small\item\em Disable write access to IWDG\+\_\+\+PR and IWDG\+\_\+\+RLR registers. \end{DoxyCompactList}\item 
+\#define \textbf{ IS\+\_\+\+IWDG\+\_\+\+PRESCALER}(\+\_\+\+\_\+\+PRESCALER\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Check IWDG prescaler value. \end{DoxyCompactList}\item 
+\#define \textbf{ IS\+\_\+\+IWDG\+\_\+\+RELOAD}(\+\_\+\+\_\+\+RELOAD\+\_\+\+\_\+)~((\+\_\+\+\_\+\+RELOAD\+\_\+\+\_\+) $<$= \textbf{ IWDG\+\_\+\+RLR\+\_\+\+RL})
+\begin{DoxyCompactList}\small\item\em Check IWDG reload value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\label{group___i_w_d_g___private___macros_ga2b1af237dca5c067fbc9088185cb8185}} 
+\index{IWDG Private Macros@{IWDG Private Macros}!IS\_IWDG\_PRESCALER@{IS\_IWDG\_PRESCALER}}
+\index{IS\_IWDG\_PRESCALER@{IS\_IWDG\_PRESCALER}!IWDG Private Macros@{IWDG Private Macros}}
+\doxysubsubsection{IS\_IWDG\_PRESCALER}
+{\footnotesize\ttfamily \#define IS\+\_\+\+IWDG\+\_\+\+PRESCALER(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+PRESCALER\+\_\+\+\_\+ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                               (((\_\_PRESCALER\_\_) == IWDG\_PRESCALER\_4)  || \(\backslash\)}
+\DoxyCodeLine{                                               ((\_\_PRESCALER\_\_) == IWDG\_PRESCALER\_8)  || \(\backslash\)}
+\DoxyCodeLine{                                               ((\_\_PRESCALER\_\_) == IWDG\_PRESCALER\_16) || \(\backslash\)}
+\DoxyCodeLine{                                               ((\_\_PRESCALER\_\_) == IWDG\_PRESCALER\_32) || \(\backslash\)}
+\DoxyCodeLine{                                               ((\_\_PRESCALER\_\_) == IWDG\_PRESCALER\_64) || \(\backslash\)}
+\DoxyCodeLine{                                               ((\_\_PRESCALER\_\_) == IWDG\_PRESCALER\_128)|| \(\backslash\)}
+\DoxyCodeLine{                                               ((\_\_PRESCALER\_\_) == IWDG\_PRESCALER\_256))}
+
+\end{DoxyCode}
+
+
+Check IWDG prescaler value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$strong$>$\+PRESCALER$<$/strong$>$} & IWDG prescaler value \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 209 of file stm32f4xx\+\_\+hal\+\_\+iwdg.\+h.
+
+\mbox{\label{group___i_w_d_g___private___macros_gad7ade0982243f56ba89ff764534f553c}} 
+\index{IWDG Private Macros@{IWDG Private Macros}!IS\_IWDG\_RELOAD@{IS\_IWDG\_RELOAD}}
+\index{IS\_IWDG\_RELOAD@{IS\_IWDG\_RELOAD}!IWDG Private Macros@{IWDG Private Macros}}
+\doxysubsubsection{IS\_IWDG\_RELOAD}
+{\footnotesize\ttfamily \#define IS\+\_\+\+IWDG\+\_\+\+RELOAD(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+RELOAD\+\_\+\+\_\+ }\end{DoxyParamCaption})~((\+\_\+\+\_\+\+RELOAD\+\_\+\+\_\+) $<$= \textbf{ IWDG\+\_\+\+RLR\+\_\+\+RL})}
+
+
+
+Check IWDG reload value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$strong$>$\+RELOAD$<$/strong$>$} & IWDG reload value \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 222 of file stm32f4xx\+\_\+hal\+\_\+iwdg.\+h.
+
+\mbox{\label{group___i_w_d_g___private___macros_ga31636a55162fc73caf03c2d2808ea9dd}} 
+\index{IWDG Private Macros@{IWDG Private Macros}!IWDG\_DISABLE\_WRITE\_ACCESS@{IWDG\_DISABLE\_WRITE\_ACCESS}}
+\index{IWDG\_DISABLE\_WRITE\_ACCESS@{IWDG\_DISABLE\_WRITE\_ACCESS}!IWDG Private Macros@{IWDG Private Macros}}
+\doxysubsubsection{IWDG\_DISABLE\_WRITE\_ACCESS}
+{\footnotesize\ttfamily \#define IWDG\+\_\+\+DISABLE\+\_\+\+WRITE\+\_\+\+ACCESS(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+ }\end{DoxyParamCaption})~\textbf{ WRITE\+\_\+\+REG}((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$KR, \textbf{ IWDG\+\_\+\+KEY\+\_\+\+WRITE\+\_\+\+ACCESS\+\_\+\+DISABLE})}
+
+
+
+Disable write access to IWDG\+\_\+\+PR and IWDG\+\_\+\+RLR registers. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$strong$>$\+HANDLE$<$/strong$>$} & IWDG handle \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 202 of file stm32f4xx\+\_\+hal\+\_\+iwdg.\+h.
+
+\mbox{\label{group___i_w_d_g___private___macros_ga65cf77f3cfd45d3fd66c0cf33d23d7ab}} 
+\index{IWDG Private Macros@{IWDG Private Macros}!IWDG\_ENABLE\_WRITE\_ACCESS@{IWDG\_ENABLE\_WRITE\_ACCESS}}
+\index{IWDG\_ENABLE\_WRITE\_ACCESS@{IWDG\_ENABLE\_WRITE\_ACCESS}!IWDG Private Macros@{IWDG Private Macros}}
+\doxysubsubsection{IWDG\_ENABLE\_WRITE\_ACCESS}
+{\footnotesize\ttfamily \#define IWDG\+\_\+\+ENABLE\+\_\+\+WRITE\+\_\+\+ACCESS(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+ }\end{DoxyParamCaption})~\textbf{ WRITE\+\_\+\+REG}((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$KR, \textbf{ IWDG\+\_\+\+KEY\+\_\+\+WRITE\+\_\+\+ACCESS\+\_\+\+ENABLE})}
+
+
+
+Enable write access to IWDG\+\_\+\+PR and IWDG\+\_\+\+RLR registers. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$strong$>$\+HANDLE$<$/strong$>$} & IWDG handle \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 195 of file stm32f4xx\+\_\+hal\+\_\+iwdg.\+h.
+

@@ -1,0 +1,180 @@
+\doxysection{Flags Interrupts Management}
+\label{group___r_c_c___flags___interrupts___management}\index{Flags Interrupts Management@{Flags Interrupts Management}}
+
+
+macros to manage the specified RCC Flags and interrupts.  
+
+
+Collaboration diagram for Flags Interrupts Management\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group___r_c_c___flags___interrupts___management}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+ENABLE\+\_\+\+IT}(\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)~($\ast$(\textbf{ \+\_\+\+\_\+\+IO} uint8\+\_\+t $\ast$) \textbf{ RCC\+\_\+\+CIR\+\_\+\+BYTE1\+\_\+\+ADDRESS} $\vert$= (\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+))
+\begin{DoxyCompactList}\small\item\em Enable RCC interrupt (Perform Byte access to RCC\+\_\+\+CIR[14\+:8] bits to enable the selected interrupts). \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+DISABLE\+\_\+\+IT}(\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)~($\ast$(\textbf{ \+\_\+\+\_\+\+IO} uint8\+\_\+t $\ast$) \textbf{ RCC\+\_\+\+CIR\+\_\+\+BYTE1\+\_\+\+ADDRESS} \&= (uint8\+\_\+t)($\sim$(\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)))
+\begin{DoxyCompactList}\small\item\em Disable RCC interrupt (Perform Byte access to RCC\+\_\+\+CIR[14\+:8] bits to disable the selected interrupts). \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+CLEAR\+\_\+\+IT}(\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)~($\ast$(\textbf{ \+\_\+\+\_\+\+IO} uint8\+\_\+t $\ast$) \textbf{ RCC\+\_\+\+CIR\+\_\+\+BYTE2\+\_\+\+ADDRESS} = (\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+))
+\begin{DoxyCompactList}\small\item\em Clear the RCC\textquotesingle{}s interrupt pending bits (Perform Byte access to RCC\+\_\+\+CIR[23\+:16] bits to clear the selected interrupt pending bits. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+GET\+\_\+\+IT}(\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)~((\textbf{ RCC}-\/$>$CIR \& (\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)) == (\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+))
+\begin{DoxyCompactList}\small\item\em Check the RCC\textquotesingle{}s interrupt has occurred or not. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+CLEAR\+\_\+\+RESET\+\_\+\+FLAGS}()~(\textbf{ RCC}-\/$>$CSR $\vert$= \textbf{ RCC\+\_\+\+CSR\+\_\+\+RMVF})
+\begin{DoxyCompactList}\small\item\em Set RMVF bit to clear the reset flags\+: RCC\+\_\+\+FLAG\+\_\+\+PINRST, RCC\+\_\+\+FLAG\+\_\+\+PORRST, RCC\+\_\+\+FLAG\+\_\+\+SFTRST, RCC\+\_\+\+FLAG\+\_\+\+IWDGRST, RCC\+\_\+\+FLAG\+\_\+\+WWDGRST and RCC\+\_\+\+FLAG\+\_\+\+LPWRRST. \end{DoxyCompactList}\item 
+\#define \textbf{ RCC\+\_\+\+FLAG\+\_\+\+MASK}~((uint8\+\_\+t)0x1\+FU)
+\begin{DoxyCompactList}\small\item\em Check RCC flag is set or not. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+GET\+\_\+\+FLAG}(\+\_\+\+\_\+\+FLAG\+\_\+\+\_\+)~(((((((\+\_\+\+\_\+\+FLAG\+\_\+\+\_\+) $>$$>$ 5U) == 1U)? \textbf{ RCC}-\/$>$CR \+:((((\+\_\+\+\_\+\+FLAG\+\_\+\+\_\+) $>$$>$ 5U) == 2U) ? \textbf{ RCC}-\/$>$BDCR \+:((((\+\_\+\+\_\+\+FLAG\+\_\+\+\_\+) $>$$>$ 5U) == 3U)? \textbf{ RCC}-\/$>$CSR \+:\textbf{ RCC}-\/$>$CIR))) \& ((uint32\+\_\+t)1U $<$$<$ ((\+\_\+\+\_\+\+FLAG\+\_\+\+\_\+) \& \textbf{ RCC\+\_\+\+FLAG\+\_\+\+MASK})))!= 0U)? 1U \+: 0U)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+macros to manage the specified RCC Flags and interrupts. 
+
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\label{group___r_c_c___flags___interrupts___management_ga9d8ab157f58045b8daf8136bee54f139}} 
+\index{Flags Interrupts Management@{Flags Interrupts Management}!\_\_HAL\_RCC\_CLEAR\_IT@{\_\_HAL\_RCC\_CLEAR\_IT}}
+\index{\_\_HAL\_RCC\_CLEAR\_IT@{\_\_HAL\_RCC\_CLEAR\_IT}!Flags Interrupts Management@{Flags Interrupts Management}}
+\doxysubsubsection{\_\_HAL\_RCC\_CLEAR\_IT}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+CLEAR\+\_\+\+IT(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+ }\end{DoxyParamCaption})~($\ast$(\textbf{ \+\_\+\+\_\+\+IO} uint8\+\_\+t $\ast$) \textbf{ RCC\+\_\+\+CIR\+\_\+\+BYTE2\+\_\+\+ADDRESS} = (\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+))}
+
+
+
+Clear the RCC\textquotesingle{}s interrupt pending bits (Perform Byte access to RCC\+\_\+\+CIR[23\+:16] bits to clear the selected interrupt pending bits. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$strong$>$\+INTERRUPT$<$/strong$>$} & specifies the interrupt pending bit to clear. This parameter can be any combination of the following values\+: \begin{DoxyItemize}
+\item RCC\+\_\+\+IT\+\_\+\+LSIRDY\+: LSI ready interrupt. \item RCC\+\_\+\+IT\+\_\+\+LSERDY\+: LSE ready interrupt. \item RCC\+\_\+\+IT\+\_\+\+HSIRDY\+: HSI ready interrupt. \item RCC\+\_\+\+IT\+\_\+\+HSERDY\+: HSE ready interrupt. \item RCC\+\_\+\+IT\+\_\+\+PLLRDY\+: Main PLL ready interrupt. \item RCC\+\_\+\+IT\+\_\+\+PLLI2\+SRDY\+: PLLI2S ready interrupt. ~\newline
+ \item RCC\+\_\+\+IT\+\_\+\+CSS\+: Clock Security System interrupt \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 1151 of file stm32f4xx\+\_\+hal\+\_\+rcc.\+h.
+
+\mbox{\label{group___r_c_c___flags___interrupts___management_gaf28c11b36035ef1e27883ff7ee2c46b0}} 
+\index{Flags Interrupts Management@{Flags Interrupts Management}!\_\_HAL\_RCC\_CLEAR\_RESET\_FLAGS@{\_\_HAL\_RCC\_CLEAR\_RESET\_FLAGS}}
+\index{\_\_HAL\_RCC\_CLEAR\_RESET\_FLAGS@{\_\_HAL\_RCC\_CLEAR\_RESET\_FLAGS}!Flags Interrupts Management@{Flags Interrupts Management}}
+\doxysubsubsection{\_\_HAL\_RCC\_CLEAR\_RESET\_FLAGS}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+CLEAR\+\_\+\+RESET\+\_\+\+FLAGS(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~(\textbf{ RCC}-\/$>$CSR $\vert$= \textbf{ RCC\+\_\+\+CSR\+\_\+\+RMVF})}
+
+
+
+Set RMVF bit to clear the reset flags\+: RCC\+\_\+\+FLAG\+\_\+\+PINRST, RCC\+\_\+\+FLAG\+\_\+\+PORRST, RCC\+\_\+\+FLAG\+\_\+\+SFTRST, RCC\+\_\+\+FLAG\+\_\+\+IWDGRST, RCC\+\_\+\+FLAG\+\_\+\+WWDGRST and RCC\+\_\+\+FLAG\+\_\+\+LPWRRST. 
+
+
+
+Definition at line 1170 of file stm32f4xx\+\_\+hal\+\_\+rcc.\+h.
+
+\mbox{\label{group___r_c_c___flags___interrupts___management_gafc4df8cd4df0a529d11f18bf1f7e9f50}} 
+\index{Flags Interrupts Management@{Flags Interrupts Management}!\_\_HAL\_RCC\_DISABLE\_IT@{\_\_HAL\_RCC\_DISABLE\_IT}}
+\index{\_\_HAL\_RCC\_DISABLE\_IT@{\_\_HAL\_RCC\_DISABLE\_IT}!Flags Interrupts Management@{Flags Interrupts Management}}
+\doxysubsubsection{\_\_HAL\_RCC\_DISABLE\_IT}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+DISABLE\+\_\+\+IT(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+ }\end{DoxyParamCaption})~($\ast$(\textbf{ \+\_\+\+\_\+\+IO} uint8\+\_\+t $\ast$) \textbf{ RCC\+\_\+\+CIR\+\_\+\+BYTE1\+\_\+\+ADDRESS} \&= (uint8\+\_\+t)($\sim$(\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)))}
+
+
+
+Disable RCC interrupt (Perform Byte access to RCC\+\_\+\+CIR[14\+:8] bits to disable the selected interrupts). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$strong$>$\+INTERRUPT$<$/strong$>$} & specifies the RCC interrupt sources to be disabled. This parameter can be any combination of the following values\+: \begin{DoxyItemize}
+\item RCC\+\_\+\+IT\+\_\+\+LSIRDY\+: LSI ready interrupt. \item RCC\+\_\+\+IT\+\_\+\+LSERDY\+: LSE ready interrupt. \item RCC\+\_\+\+IT\+\_\+\+HSIRDY\+: HSI ready interrupt. \item RCC\+\_\+\+IT\+\_\+\+HSERDY\+: HSE ready interrupt. \item RCC\+\_\+\+IT\+\_\+\+PLLRDY\+: Main PLL ready interrupt. \item RCC\+\_\+\+IT\+\_\+\+PLLI2\+SRDY\+: PLLI2S ready interrupt. \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 1137 of file stm32f4xx\+\_\+hal\+\_\+rcc.\+h.
+
+\mbox{\label{group___r_c_c___flags___interrupts___management_ga180fb20a37b31a6e4f7e59213a6c0405}} 
+\index{Flags Interrupts Management@{Flags Interrupts Management}!\_\_HAL\_RCC\_ENABLE\_IT@{\_\_HAL\_RCC\_ENABLE\_IT}}
+\index{\_\_HAL\_RCC\_ENABLE\_IT@{\_\_HAL\_RCC\_ENABLE\_IT}!Flags Interrupts Management@{Flags Interrupts Management}}
+\doxysubsubsection{\_\_HAL\_RCC\_ENABLE\_IT}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+ENABLE\+\_\+\+IT(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+ }\end{DoxyParamCaption})~($\ast$(\textbf{ \+\_\+\+\_\+\+IO} uint8\+\_\+t $\ast$) \textbf{ RCC\+\_\+\+CIR\+\_\+\+BYTE1\+\_\+\+ADDRESS} $\vert$= (\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+))}
+
+
+
+Enable RCC interrupt (Perform Byte access to RCC\+\_\+\+CIR[14\+:8] bits to enable the selected interrupts). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$strong$>$\+INTERRUPT$<$/strong$>$} & specifies the RCC interrupt sources to be enabled. This parameter can be any combination of the following values\+: \begin{DoxyItemize}
+\item RCC\+\_\+\+IT\+\_\+\+LSIRDY\+: LSI ready interrupt. \item RCC\+\_\+\+IT\+\_\+\+LSERDY\+: LSE ready interrupt. \item RCC\+\_\+\+IT\+\_\+\+HSIRDY\+: HSI ready interrupt. \item RCC\+\_\+\+IT\+\_\+\+HSERDY\+: HSE ready interrupt. \item RCC\+\_\+\+IT\+\_\+\+PLLRDY\+: Main PLL ready interrupt. \item RCC\+\_\+\+IT\+\_\+\+PLLI2\+SRDY\+: PLLI2S ready interrupt. \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 1124 of file stm32f4xx\+\_\+hal\+\_\+rcc.\+h.
+
+\mbox{\label{group___r_c_c___flags___interrupts___management_gae2d7d461630562bf2a2ddb31b1f96449}} 
+\index{Flags Interrupts Management@{Flags Interrupts Management}!\_\_HAL\_RCC\_GET\_FLAG@{\_\_HAL\_RCC\_GET\_FLAG}}
+\index{\_\_HAL\_RCC\_GET\_FLAG@{\_\_HAL\_RCC\_GET\_FLAG}!Flags Interrupts Management@{Flags Interrupts Management}}
+\doxysubsubsection{\_\_HAL\_RCC\_GET\_FLAG}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+GET\+\_\+\+FLAG(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+FLAG\+\_\+\+\_\+ }\end{DoxyParamCaption})~(((((((\+\_\+\+\_\+\+FLAG\+\_\+\+\_\+) $>$$>$ 5U) == 1U)? \textbf{ RCC}-\/$>$CR \+:((((\+\_\+\+\_\+\+FLAG\+\_\+\+\_\+) $>$$>$ 5U) == 2U) ? \textbf{ RCC}-\/$>$BDCR \+:((((\+\_\+\+\_\+\+FLAG\+\_\+\+\_\+) $>$$>$ 5U) == 3U)? \textbf{ RCC}-\/$>$CSR \+:\textbf{ RCC}-\/$>$CIR))) \& ((uint32\+\_\+t)1U $<$$<$ ((\+\_\+\+\_\+\+FLAG\+\_\+\+\_\+) \& \textbf{ RCC\+\_\+\+FLAG\+\_\+\+MASK})))!= 0U)? 1U \+: 0U)}
+
+
+
+Definition at line 1191 of file stm32f4xx\+\_\+hal\+\_\+rcc.\+h.
+
+\mbox{\label{group___r_c_c___flags___interrupts___management_ga134af980b892f362c05ae21922cd828d}} 
+\index{Flags Interrupts Management@{Flags Interrupts Management}!\_\_HAL\_RCC\_GET\_IT@{\_\_HAL\_RCC\_GET\_IT}}
+\index{\_\_HAL\_RCC\_GET\_IT@{\_\_HAL\_RCC\_GET\_IT}!Flags Interrupts Management@{Flags Interrupts Management}}
+\doxysubsubsection{\_\_HAL\_RCC\_GET\_IT}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+GET\+\_\+\+IT(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+ }\end{DoxyParamCaption})~((\textbf{ RCC}-\/$>$CIR \& (\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)) == (\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+))}
+
+
+
+Check the RCC\textquotesingle{}s interrupt has occurred or not. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$strong$>$\+INTERRUPT$<$/strong$>$} & specifies the RCC interrupt source to check. This parameter can be one of the following values\+: \begin{DoxyItemize}
+\item RCC\+\_\+\+IT\+\_\+\+LSIRDY\+: LSI ready interrupt. \item RCC\+\_\+\+IT\+\_\+\+LSERDY\+: LSE ready interrupt. \item RCC\+\_\+\+IT\+\_\+\+HSIRDY\+: HSI ready interrupt. \item RCC\+\_\+\+IT\+\_\+\+HSERDY\+: HSE ready interrupt. \item RCC\+\_\+\+IT\+\_\+\+PLLRDY\+: Main PLL ready interrupt. \item RCC\+\_\+\+IT\+\_\+\+PLLI2\+SRDY\+: PLLI2S ready interrupt. \item RCC\+\_\+\+IT\+\_\+\+CSS\+: Clock Security System interrupt \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em The} & new state of {\bfseries{INTERRUPT}} (TRUE or FALSE). \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 1165 of file stm32f4xx\+\_\+hal\+\_\+rcc.\+h.
+
+\mbox{\label{group___r_c_c___flags___interrupts___management_ga80017c6bf8a5c6f53a1a21bb8db93a82}} 
+\index{Flags Interrupts Management@{Flags Interrupts Management}!RCC\_FLAG\_MASK@{RCC\_FLAG\_MASK}}
+\index{RCC\_FLAG\_MASK@{RCC\_FLAG\_MASK}!Flags Interrupts Management@{Flags Interrupts Management}}
+\doxysubsubsection{RCC\_FLAG\_MASK}
+{\footnotesize\ttfamily \#define RCC\+\_\+\+FLAG\+\_\+\+MASK~((uint8\+\_\+t)0x1\+FU)}
+
+
+
+Check RCC flag is set or not. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$strong$>$\+FLAG$<$/strong$>$} & specifies the flag to check. This parameter can be one of the following values\+: \begin{DoxyItemize}
+\item RCC\+\_\+\+FLAG\+\_\+\+HSIRDY\+: HSI oscillator clock ready. \item RCC\+\_\+\+FLAG\+\_\+\+HSERDY\+: HSE oscillator clock ready. \item RCC\+\_\+\+FLAG\+\_\+\+PLLRDY\+: Main PLL clock ready. \item RCC\+\_\+\+FLAG\+\_\+\+PLLI2\+SRDY\+: PLLI2S clock ready. \item RCC\+\_\+\+FLAG\+\_\+\+LSERDY\+: LSE oscillator clock ready. \item RCC\+\_\+\+FLAG\+\_\+\+LSIRDY\+: LSI oscillator clock ready. \item RCC\+\_\+\+FLAG\+\_\+\+BORRST\+: POR/\+PDR or BOR reset. \item RCC\+\_\+\+FLAG\+\_\+\+PINRST\+: Pin reset. \item RCC\+\_\+\+FLAG\+\_\+\+PORRST\+: POR/\+PDR reset. \item RCC\+\_\+\+FLAG\+\_\+\+SFTRST\+: Software reset. \item RCC\+\_\+\+FLAG\+\_\+\+IWDGRST\+: Independent Watchdog reset. \item RCC\+\_\+\+FLAG\+\_\+\+WWDGRST\+: Window Watchdog reset. \item RCC\+\_\+\+FLAG\+\_\+\+LPWRRST\+: Low Power reset. \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em The} & new state of {\bfseries{FLAG}} (TRUE or FALSE). \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 1190 of file stm32f4xx\+\_\+hal\+\_\+rcc.\+h.
+

@@ -1,0 +1,41 @@
+\doxysection{system/include/cmsis/cmsis\+\_\+gcc.h File Reference}
+\label{cmsis__gcc_8h}\index{system/include/cmsis/cmsis\_gcc.h@{system/include/cmsis/cmsis\_gcc.h}}
+
+
+CMSIS Cortex-\/M Core Function/\+Instruction Header File.  
+
+
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \textbf{ \+\_\+\+\_\+\+CMSIS\+\_\+\+GCC\+\_\+\+OUT\+\_\+\+REG}(r)~\char`\"{}=r\char`\"{} (r)
+\item 
+\#define \textbf{ \+\_\+\+\_\+\+CMSIS\+\_\+\+GCC\+\_\+\+USE\+\_\+\+REG}(r)~\char`\"{}r\char`\"{} (r)
+\item 
+\#define \textbf{ \+\_\+\+\_\+\+BKPT}(\textbf{ value})~\+\_\+\+\_\+\+ASM \textbf{ volatile} (\char`\"{}bkpt \char`\"{}\#value)
+\begin{DoxyCompactList}\small\item\em Breakpoint. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+CLZ}~\+\_\+\+\_\+builtin\+\_\+clz
+\begin{DoxyCompactList}\small\item\em Count leading zeros. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ \+\_\+\+\_\+attribute\+\_\+\+\_\+} ((always\+\_\+inline)) \+\_\+\+\_\+\+STATIC\+\_\+\+INLINE void \+\_\+\+\_\+enable\+\_\+irq(void)
+\begin{DoxyCompactList}\small\item\em Enable IRQ Interrupts. \end{DoxyCompactList}\item 
+\textbf{ \+\_\+\+\_\+attribute\+\_\+\+\_\+} ((always\+\_\+inline)) \+\_\+\+\_\+\+STATIC\+\_\+\+INLINE uint32\+\_\+t \+\_\+\+\_\+\+RBIT(uint32\+\_\+t \textbf{ value})
+\begin{DoxyCompactList}\small\item\em Reverse bit order of value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \textbf{ op2}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+CMSIS Cortex-\/M Core Function/\+Instruction Header File. 
+
+\begin{DoxyVersion}{Version}
+V4.\+30 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+20. October 2015 
+\end{DoxyDate}

@@ -1,0 +1,5 @@
+<map id="HAL_Delay" name="HAL_Delay">
+<area shape="rect" id="node1" title="This function provides accurate delay (in milliseconds) based on variable incremented." alt="" coords="5,31,92,57"/>
+<area shape="rect" id="node2" href="$main_8c.html#a5f14cfb523122289d4ab3955244e2497" title=" " alt="" coords="162,5,217,32"/>
+<area shape="rect" id="node3" href="$group___h_a_l___exported___functions___group2.html#gac9b3a85a73735ac840d0dcb59bc0fdd6" title="Provides a tick value in millisecond." alt="" coords="140,56,239,83"/>
+</map>

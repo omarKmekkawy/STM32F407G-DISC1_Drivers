@@ -97,7 +97,7 @@ u8 MGPIO_u8GetPinValue(GPIO_TypeDef *copy_GPIO_TypeDefPORT, u8 copy_u8PIN) {
 	Local_u8GetBit = GET_BIT(copy_GPIO_TypeDefPORT->IDR, copy_u8PIN);
 	return Local_u8GetBit;
 }
-HAL_Status_TypeDef MGPIO_HAL_Status_TypeDefLockGPIO(GPIO_TypeDef *copy_GPIO_TypeDefPORT, u8 copy_u8PIN) {
+MCAL_Status_TypeDef MGPIO_MCAL_Status_TypeDefLockGPIO(GPIO_TypeDef *copy_GPIO_TypeDefPORT, u8 copy_u8PIN) {
 
 	volatile u32 tmp = (0x1UL << 16U);
 	volatile u32 Pin = (1 << copy_u8PIN);
@@ -120,7 +120,7 @@ HAL_Status_TypeDef MGPIO_HAL_Status_TypeDefLockGPIO(GPIO_TypeDef *copy_GPIO_Type
 	}
 }
 
-HAL_Status_TypeDef MGPIO_HAL_Status_TypeDefEnableAlternateFunction(GPIO_TypeDef *copy_GPIO_TypeDefPORT, u8 copy_u8AlternateFunction)
+MCAL_Status_TypeDef MGPIO_MCAL_Status_TypeDefEnableAlternateFunction(GPIO_TypeDef *copy_GPIO_TypeDefPORT, GPIOx_AF_t copy_u8AlternateFunction)
 {
 
 	/* Alternate Function Mapping
@@ -160,7 +160,7 @@ HAL_Status_TypeDef MGPIO_HAL_Status_TypeDefEnableAlternateFunction(GPIO_TypeDef 
 
 	return HAL_STATUS_OK;
 }
-HAL_Status_TypeDef MGPIO_HAL_Status_TypeDefResetAlternateFunction(GPIO_TypeDef *copy_GPIO_TypeDefPORT, u8 copy_u8PIN)
+MCAL_Status_TypeDef MGPIO_MCAL_Status_TypeDefResetAlternateFunction(GPIO_TypeDef *copy_GPIO_TypeDefPORT, u8 copy_u8PIN)
 {
 
 

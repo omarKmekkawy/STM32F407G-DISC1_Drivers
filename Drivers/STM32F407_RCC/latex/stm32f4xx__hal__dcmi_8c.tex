@@ -1,0 +1,96 @@
+\doxysection{system/src/stm32f4-\/hal/stm32f4xx\+\_\+hal\+\_\+dcmi.c File Reference}
+\label{stm32f4xx__hal__dcmi_8c}\index{system/src/stm32f4-\/hal/stm32f4xx\_hal\_dcmi.c@{system/src/stm32f4-\/hal/stm32f4xx\_hal\_dcmi.c}}
+
+
+DCMI HAL module driver This file provides firmware functions to manage the following functionalities of the Digital Camera Interface (DCMI) peripheral\+:  
+
+
+{\ttfamily \#include \char`\"{}stm32f4xx\+\_\+hal.\+h\char`\"{}}\newline
+Include dependency graph for stm32f4xx\+\_\+hal\+\_\+dcmi.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{stm32f4xx__hal__dcmi_8c__incl}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Detailed Description}
+DCMI HAL module driver This file provides firmware functions to manage the following functionalities of the Digital Camera Interface (DCMI) peripheral\+: 
+
+\begin{DoxyAuthor}{Author}
+MCD Application Team 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+V1.\+5.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+06-\/May-\/2016
+\begin{DoxyItemize}
+\item Initialization and de-\/initialization functions
+\item IO operation functions
+\item Peripheral Control functions
+\item Peripheral State and Error functions
+\end{DoxyItemize}
+\end{DoxyDate}
+\begin{DoxyVerb}==============================================================================
+                      ##### How to use this driver #####
+==============================================================================
+[..]
+    The sequence below describes how to use this driver to capture image
+    from a camera module connected to the DCMI Interface.
+    This sequence does not take into account the configuration of the
+    camera module, which should be made before to configure and enable
+    the DCMI to capture images.
+
+  (#) Program the required configuration through following parameters:
+      horizontal and vertical polarity, pixel clock polarity, Capture Rate,
+      Synchronization Mode, code of the frame delimiter and data width 
+      using HAL_DCMI_Init() function.
+
+  (#) Configure the DMA2_Stream1 channel1 to transfer Data from DCMI DR
+      register to the destination memory buffer.
+
+  (#) Program the required configuration through following parameters:
+      DCMI mode, destination memory Buffer address and the data length
+      and enable capture using HAL_DCMI_Start_DMA() function.
+
+  (#) Optionally, configure and Enable the CROP feature to select a rectangular
+      window from the received image using HAL_DCMI_ConfigCrop()
+      and HAL_DCMI_EnableCROP() functions
+
+  (#) The capture can be stopped using HAL_DCMI_Stop() function.
+
+  (#) To control DCMI state you can use the function HAL_DCMI_GetState().
+
+   *** DCMI HAL driver macros list ***
+   =============================================
+   [..]
+     Below the list of most used macros in DCMI HAL driver.
+     
+    (+) __HAL_DCMI_ENABLE: Enable the DCMI peripheral.
+    (+) __HAL_DCMI_DISABLE: Disable the DCMI peripheral.
+    (+) __HAL_DCMI_GET_FLAG: Get the DCMI pending flags.
+    (+) __HAL_DCMI_CLEAR_FLAG: Clear the DCMI pending flags.
+    (+) __HAL_DCMI_ENABLE_IT: Enable the specified DCMI interrupts.
+    (+) __HAL_DCMI_DISABLE_IT: Disable the specified DCMI interrupts.
+    (+) __HAL_DCMI_GET_IT_SOURCE: Check whether the specified DCMI interrupt has occurred or not.
+
+   [..]
+     (@) You can refer to the DCMI HAL driver header file for more useful macros\end{DoxyVerb}
+
+
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+\doxysubsubsection*{\begin{center}\copyright{} COPYRIGHT(c) 2016 STMicroelectronics\end{center} }
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met\+:
+\begin{DoxyEnumerate}
+\item Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+\item Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+\item Neither the name of STMicroelectronics nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+\end{DoxyEnumerate}
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \char`\"{}\+AS IS\char`\"{} AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. 

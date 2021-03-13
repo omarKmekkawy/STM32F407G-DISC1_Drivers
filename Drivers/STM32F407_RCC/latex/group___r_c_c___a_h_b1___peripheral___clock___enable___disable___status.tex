@@ -1,0 +1,173 @@
+\doxysection{AHB1 Peripheral Clock Enable Disable Status}
+\label{group___r_c_c___a_h_b1___peripheral___clock___enable___disable___status}\index{AHB1 Peripheral Clock Enable Disable Status@{AHB1 Peripheral Clock Enable Disable Status}}
+
+
+Get the enable or disable status of the AHB1 peripheral clock.  
+
+
+Collaboration diagram for AHB1 Peripheral Clock Enable Disable Status\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=346pt]{group___r_c_c___a_h_b1___peripheral___clock___enable___disable___status}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+GPIOA\+\_\+\+IS\+\_\+\+CLK\+\_\+\+ENABLED}()~((\textbf{ RCC}-\/$>$AHB1\+ENR \&(\textbf{ RCC\+\_\+\+AHB1\+ENR\+\_\+\+GPIOAEN})) != \textbf{ RESET})
+\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+GPIOB\+\_\+\+IS\+\_\+\+CLK\+\_\+\+ENABLED}()~((\textbf{ RCC}-\/$>$AHB1\+ENR \&(\textbf{ RCC\+\_\+\+AHB1\+ENR\+\_\+\+GPIOBEN})) != \textbf{ RESET})
+\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+GPIOC\+\_\+\+IS\+\_\+\+CLK\+\_\+\+ENABLED}()~((\textbf{ RCC}-\/$>$AHB1\+ENR \&(\textbf{ RCC\+\_\+\+AHB1\+ENR\+\_\+\+GPIOCEN})) != \textbf{ RESET})
+\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+GPIOH\+\_\+\+IS\+\_\+\+CLK\+\_\+\+ENABLED}()~((\textbf{ RCC}-\/$>$AHB1\+ENR \&(\textbf{ RCC\+\_\+\+AHB1\+ENR\+\_\+\+GPIOHEN})) != \textbf{ RESET})
+\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+DMA1\+\_\+\+IS\+\_\+\+CLK\+\_\+\+ENABLED}()~((\textbf{ RCC}-\/$>$AHB1\+ENR \&(\textbf{ RCC\+\_\+\+AHB1\+ENR\+\_\+\+DMA1\+EN})) != \textbf{ RESET})
+\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+DMA2\+\_\+\+IS\+\_\+\+CLK\+\_\+\+ENABLED}()~((\textbf{ RCC}-\/$>$AHB1\+ENR \&(\textbf{ RCC\+\_\+\+AHB1\+ENR\+\_\+\+DMA2\+EN})) != \textbf{ RESET})
+\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+GPIOA\+\_\+\+IS\+\_\+\+CLK\+\_\+\+DISABLED}()~((\textbf{ RCC}-\/$>$AHB1\+ENR \&(\textbf{ RCC\+\_\+\+AHB1\+ENR\+\_\+\+GPIOAEN})) == \textbf{ RESET})
+\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+GPIOB\+\_\+\+IS\+\_\+\+CLK\+\_\+\+DISABLED}()~((\textbf{ RCC}-\/$>$AHB1\+ENR \&(\textbf{ RCC\+\_\+\+AHB1\+ENR\+\_\+\+GPIOBEN})) == \textbf{ RESET})
+\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+GPIOC\+\_\+\+IS\+\_\+\+CLK\+\_\+\+DISABLED}()~((\textbf{ RCC}-\/$>$AHB1\+ENR \&(\textbf{ RCC\+\_\+\+AHB1\+ENR\+\_\+\+GPIOCEN})) == \textbf{ RESET})
+\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+GPIOH\+\_\+\+IS\+\_\+\+CLK\+\_\+\+DISABLED}()~((\textbf{ RCC}-\/$>$AHB1\+ENR \&(\textbf{ RCC\+\_\+\+AHB1\+ENR\+\_\+\+GPIOHEN})) == \textbf{ RESET})
+\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+DMA1\+\_\+\+IS\+\_\+\+CLK\+\_\+\+DISABLED}()~((\textbf{ RCC}-\/$>$AHB1\+ENR \&(\textbf{ RCC\+\_\+\+AHB1\+ENR\+\_\+\+DMA1\+EN})) == \textbf{ RESET})
+\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+DMA2\+\_\+\+IS\+\_\+\+CLK\+\_\+\+DISABLED}()~((\textbf{ RCC}-\/$>$AHB1\+ENR \&(\textbf{ RCC\+\_\+\+AHB1\+ENR\+\_\+\+DMA2\+EN})) == \textbf{ RESET})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Get the enable or disable status of the AHB1 peripheral clock. 
+
+\begin{DoxyNote}{Note}
+After reset, the peripheral clock (used for registers read/write access) is disabled and the application software has to enable this clock before using it. 
+\end{DoxyNote}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\label{group___r_c_c___a_h_b1___peripheral___clock___enable___disable___status_gae89d94d6252c79e450623f69eb939ed6}} 
+\index{AHB1 Peripheral Clock Enable Disable Status@{AHB1 Peripheral Clock Enable Disable Status}!\_\_HAL\_RCC\_DMA1\_IS\_CLK\_DISABLED@{\_\_HAL\_RCC\_DMA1\_IS\_CLK\_DISABLED}}
+\index{\_\_HAL\_RCC\_DMA1\_IS\_CLK\_DISABLED@{\_\_HAL\_RCC\_DMA1\_IS\_CLK\_DISABLED}!AHB1 Peripheral Clock Enable Disable Status@{AHB1 Peripheral Clock Enable Disable Status}}
+\doxysubsubsection{\_\_HAL\_RCC\_DMA1\_IS\_CLK\_DISABLED}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+DMA1\+\_\+\+IS\+\_\+\+CLK\+\_\+\+DISABLED(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~((\textbf{ RCC}-\/$>$AHB1\+ENR \&(\textbf{ RCC\+\_\+\+AHB1\+ENR\+\_\+\+DMA1\+EN})) == \textbf{ RESET})}
+
+
+
+Definition at line 469 of file stm32f4xx\+\_\+hal\+\_\+rcc.\+h.
+
+\mbox{\label{group___r_c_c___a_h_b1___peripheral___clock___enable___disable___status_gaab05e603c9cadd72e4b6397837b46cef}} 
+\index{AHB1 Peripheral Clock Enable Disable Status@{AHB1 Peripheral Clock Enable Disable Status}!\_\_HAL\_RCC\_DMA1\_IS\_CLK\_ENABLED@{\_\_HAL\_RCC\_DMA1\_IS\_CLK\_ENABLED}}
+\index{\_\_HAL\_RCC\_DMA1\_IS\_CLK\_ENABLED@{\_\_HAL\_RCC\_DMA1\_IS\_CLK\_ENABLED}!AHB1 Peripheral Clock Enable Disable Status@{AHB1 Peripheral Clock Enable Disable Status}}
+\doxysubsubsection{\_\_HAL\_RCC\_DMA1\_IS\_CLK\_ENABLED}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+DMA1\+\_\+\+IS\+\_\+\+CLK\+\_\+\+ENABLED(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~((\textbf{ RCC}-\/$>$AHB1\+ENR \&(\textbf{ RCC\+\_\+\+AHB1\+ENR\+\_\+\+DMA1\+EN})) != \textbf{ RESET})}
+
+
+
+Definition at line 462 of file stm32f4xx\+\_\+hal\+\_\+rcc.\+h.
+
+\mbox{\label{group___r_c_c___a_h_b1___peripheral___clock___enable___disable___status_ga725d2a38d8519867922438d48a5885cf}} 
+\index{AHB1 Peripheral Clock Enable Disable Status@{AHB1 Peripheral Clock Enable Disable Status}!\_\_HAL\_RCC\_DMA2\_IS\_CLK\_DISABLED@{\_\_HAL\_RCC\_DMA2\_IS\_CLK\_DISABLED}}
+\index{\_\_HAL\_RCC\_DMA2\_IS\_CLK\_DISABLED@{\_\_HAL\_RCC\_DMA2\_IS\_CLK\_DISABLED}!AHB1 Peripheral Clock Enable Disable Status@{AHB1 Peripheral Clock Enable Disable Status}}
+\doxysubsubsection{\_\_HAL\_RCC\_DMA2\_IS\_CLK\_DISABLED}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+DMA2\+\_\+\+IS\+\_\+\+CLK\+\_\+\+DISABLED(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~((\textbf{ RCC}-\/$>$AHB1\+ENR \&(\textbf{ RCC\+\_\+\+AHB1\+ENR\+\_\+\+DMA2\+EN})) == \textbf{ RESET})}
+
+
+
+Definition at line 470 of file stm32f4xx\+\_\+hal\+\_\+rcc.\+h.
+
+\mbox{\label{group___r_c_c___a_h_b1___peripheral___clock___enable___disable___status_gad0ccdaf669ea327e80c455db4dc36177}} 
+\index{AHB1 Peripheral Clock Enable Disable Status@{AHB1 Peripheral Clock Enable Disable Status}!\_\_HAL\_RCC\_DMA2\_IS\_CLK\_ENABLED@{\_\_HAL\_RCC\_DMA2\_IS\_CLK\_ENABLED}}
+\index{\_\_HAL\_RCC\_DMA2\_IS\_CLK\_ENABLED@{\_\_HAL\_RCC\_DMA2\_IS\_CLK\_ENABLED}!AHB1 Peripheral Clock Enable Disable Status@{AHB1 Peripheral Clock Enable Disable Status}}
+\doxysubsubsection{\_\_HAL\_RCC\_DMA2\_IS\_CLK\_ENABLED}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+DMA2\+\_\+\+IS\+\_\+\+CLK\+\_\+\+ENABLED(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~((\textbf{ RCC}-\/$>$AHB1\+ENR \&(\textbf{ RCC\+\_\+\+AHB1\+ENR\+\_\+\+DMA2\+EN})) != \textbf{ RESET})}
+
+
+
+Definition at line 463 of file stm32f4xx\+\_\+hal\+\_\+rcc.\+h.
+
+\mbox{\label{group___r_c_c___a_h_b1___peripheral___clock___enable___disable___status_ga2d73b007700fe1576c7965ce677148bd}} 
+\index{AHB1 Peripheral Clock Enable Disable Status@{AHB1 Peripheral Clock Enable Disable Status}!\_\_HAL\_RCC\_GPIOA\_IS\_CLK\_DISABLED@{\_\_HAL\_RCC\_GPIOA\_IS\_CLK\_DISABLED}}
+\index{\_\_HAL\_RCC\_GPIOA\_IS\_CLK\_DISABLED@{\_\_HAL\_RCC\_GPIOA\_IS\_CLK\_DISABLED}!AHB1 Peripheral Clock Enable Disable Status@{AHB1 Peripheral Clock Enable Disable Status}}
+\doxysubsubsection{\_\_HAL\_RCC\_GPIOA\_IS\_CLK\_DISABLED}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+GPIOA\+\_\+\+IS\+\_\+\+CLK\+\_\+\+DISABLED(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~((\textbf{ RCC}-\/$>$AHB1\+ENR \&(\textbf{ RCC\+\_\+\+AHB1\+ENR\+\_\+\+GPIOAEN})) == \textbf{ RESET})}
+
+
+
+Definition at line 465 of file stm32f4xx\+\_\+hal\+\_\+rcc.\+h.
+
+\mbox{\label{group___r_c_c___a_h_b1___peripheral___clock___enable___disable___status_gad1edbd9407c814110f04c1a609a214e4}} 
+\index{AHB1 Peripheral Clock Enable Disable Status@{AHB1 Peripheral Clock Enable Disable Status}!\_\_HAL\_RCC\_GPIOA\_IS\_CLK\_ENABLED@{\_\_HAL\_RCC\_GPIOA\_IS\_CLK\_ENABLED}}
+\index{\_\_HAL\_RCC\_GPIOA\_IS\_CLK\_ENABLED@{\_\_HAL\_RCC\_GPIOA\_IS\_CLK\_ENABLED}!AHB1 Peripheral Clock Enable Disable Status@{AHB1 Peripheral Clock Enable Disable Status}}
+\doxysubsubsection{\_\_HAL\_RCC\_GPIOA\_IS\_CLK\_ENABLED}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+GPIOA\+\_\+\+IS\+\_\+\+CLK\+\_\+\+ENABLED(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~((\textbf{ RCC}-\/$>$AHB1\+ENR \&(\textbf{ RCC\+\_\+\+AHB1\+ENR\+\_\+\+GPIOAEN})) != \textbf{ RESET})}
+
+
+
+Definition at line 458 of file stm32f4xx\+\_\+hal\+\_\+rcc.\+h.
+
+\mbox{\label{group___r_c_c___a_h_b1___peripheral___clock___enable___disable___status_ga9b9353035473ac5f144f6e5385c4bebb}} 
+\index{AHB1 Peripheral Clock Enable Disable Status@{AHB1 Peripheral Clock Enable Disable Status}!\_\_HAL\_RCC\_GPIOB\_IS\_CLK\_DISABLED@{\_\_HAL\_RCC\_GPIOB\_IS\_CLK\_DISABLED}}
+\index{\_\_HAL\_RCC\_GPIOB\_IS\_CLK\_DISABLED@{\_\_HAL\_RCC\_GPIOB\_IS\_CLK\_DISABLED}!AHB1 Peripheral Clock Enable Disable Status@{AHB1 Peripheral Clock Enable Disable Status}}
+\doxysubsubsection{\_\_HAL\_RCC\_GPIOB\_IS\_CLK\_DISABLED}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+GPIOB\+\_\+\+IS\+\_\+\+CLK\+\_\+\+DISABLED(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~((\textbf{ RCC}-\/$>$AHB1\+ENR \&(\textbf{ RCC\+\_\+\+AHB1\+ENR\+\_\+\+GPIOBEN})) == \textbf{ RESET})}
+
+
+
+Definition at line 466 of file stm32f4xx\+\_\+hal\+\_\+rcc.\+h.
+
+\mbox{\label{group___r_c_c___a_h_b1___peripheral___clock___enable___disable___status_ga2fc8f9dc5f5b64c14c325c45ee301b4f}} 
+\index{AHB1 Peripheral Clock Enable Disable Status@{AHB1 Peripheral Clock Enable Disable Status}!\_\_HAL\_RCC\_GPIOB\_IS\_CLK\_ENABLED@{\_\_HAL\_RCC\_GPIOB\_IS\_CLK\_ENABLED}}
+\index{\_\_HAL\_RCC\_GPIOB\_IS\_CLK\_ENABLED@{\_\_HAL\_RCC\_GPIOB\_IS\_CLK\_ENABLED}!AHB1 Peripheral Clock Enable Disable Status@{AHB1 Peripheral Clock Enable Disable Status}}
+\doxysubsubsection{\_\_HAL\_RCC\_GPIOB\_IS\_CLK\_ENABLED}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+GPIOB\+\_\+\+IS\+\_\+\+CLK\+\_\+\+ENABLED(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~((\textbf{ RCC}-\/$>$AHB1\+ENR \&(\textbf{ RCC\+\_\+\+AHB1\+ENR\+\_\+\+GPIOBEN})) != \textbf{ RESET})}
+
+
+
+Definition at line 459 of file stm32f4xx\+\_\+hal\+\_\+rcc.\+h.
+
+\mbox{\label{group___r_c_c___a_h_b1___peripheral___clock___enable___disable___status_ga5e939d98ecca025c028bd1d837b84c81}} 
+\index{AHB1 Peripheral Clock Enable Disable Status@{AHB1 Peripheral Clock Enable Disable Status}!\_\_HAL\_RCC\_GPIOC\_IS\_CLK\_DISABLED@{\_\_HAL\_RCC\_GPIOC\_IS\_CLK\_DISABLED}}
+\index{\_\_HAL\_RCC\_GPIOC\_IS\_CLK\_DISABLED@{\_\_HAL\_RCC\_GPIOC\_IS\_CLK\_DISABLED}!AHB1 Peripheral Clock Enable Disable Status@{AHB1 Peripheral Clock Enable Disable Status}}
+\doxysubsubsection{\_\_HAL\_RCC\_GPIOC\_IS\_CLK\_DISABLED}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+GPIOC\+\_\+\+IS\+\_\+\+CLK\+\_\+\+DISABLED(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~((\textbf{ RCC}-\/$>$AHB1\+ENR \&(\textbf{ RCC\+\_\+\+AHB1\+ENR\+\_\+\+GPIOCEN})) == \textbf{ RESET})}
+
+
+
+Definition at line 467 of file stm32f4xx\+\_\+hal\+\_\+rcc.\+h.
+
+\mbox{\label{group___r_c_c___a_h_b1___peripheral___clock___enable___disable___status_ga528029c120a0154dfd7cfd6159e8debe}} 
+\index{AHB1 Peripheral Clock Enable Disable Status@{AHB1 Peripheral Clock Enable Disable Status}!\_\_HAL\_RCC\_GPIOC\_IS\_CLK\_ENABLED@{\_\_HAL\_RCC\_GPIOC\_IS\_CLK\_ENABLED}}
+\index{\_\_HAL\_RCC\_GPIOC\_IS\_CLK\_ENABLED@{\_\_HAL\_RCC\_GPIOC\_IS\_CLK\_ENABLED}!AHB1 Peripheral Clock Enable Disable Status@{AHB1 Peripheral Clock Enable Disable Status}}
+\doxysubsubsection{\_\_HAL\_RCC\_GPIOC\_IS\_CLK\_ENABLED}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+GPIOC\+\_\+\+IS\+\_\+\+CLK\+\_\+\+ENABLED(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~((\textbf{ RCC}-\/$>$AHB1\+ENR \&(\textbf{ RCC\+\_\+\+AHB1\+ENR\+\_\+\+GPIOCEN})) != \textbf{ RESET})}
+
+
+
+Definition at line 460 of file stm32f4xx\+\_\+hal\+\_\+rcc.\+h.
+
+\mbox{\label{group___r_c_c___a_h_b1___peripheral___clock___enable___disable___status_ga9c405e3a8e5219c98d0262e18bd0eed9}} 
+\index{AHB1 Peripheral Clock Enable Disable Status@{AHB1 Peripheral Clock Enable Disable Status}!\_\_HAL\_RCC\_GPIOH\_IS\_CLK\_DISABLED@{\_\_HAL\_RCC\_GPIOH\_IS\_CLK\_DISABLED}}
+\index{\_\_HAL\_RCC\_GPIOH\_IS\_CLK\_DISABLED@{\_\_HAL\_RCC\_GPIOH\_IS\_CLK\_DISABLED}!AHB1 Peripheral Clock Enable Disable Status@{AHB1 Peripheral Clock Enable Disable Status}}
+\doxysubsubsection{\_\_HAL\_RCC\_GPIOH\_IS\_CLK\_DISABLED}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+GPIOH\+\_\+\+IS\+\_\+\+CLK\+\_\+\+DISABLED(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~((\textbf{ RCC}-\/$>$AHB1\+ENR \&(\textbf{ RCC\+\_\+\+AHB1\+ENR\+\_\+\+GPIOHEN})) == \textbf{ RESET})}
+
+
+
+Definition at line 468 of file stm32f4xx\+\_\+hal\+\_\+rcc.\+h.
+
+\mbox{\label{group___r_c_c___a_h_b1___peripheral___clock___enable___disable___status_ga8e182ed43301e2586bc198a729b50436}} 
+\index{AHB1 Peripheral Clock Enable Disable Status@{AHB1 Peripheral Clock Enable Disable Status}!\_\_HAL\_RCC\_GPIOH\_IS\_CLK\_ENABLED@{\_\_HAL\_RCC\_GPIOH\_IS\_CLK\_ENABLED}}
+\index{\_\_HAL\_RCC\_GPIOH\_IS\_CLK\_ENABLED@{\_\_HAL\_RCC\_GPIOH\_IS\_CLK\_ENABLED}!AHB1 Peripheral Clock Enable Disable Status@{AHB1 Peripheral Clock Enable Disable Status}}
+\doxysubsubsection{\_\_HAL\_RCC\_GPIOH\_IS\_CLK\_ENABLED}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+GPIOH\+\_\+\+IS\+\_\+\+CLK\+\_\+\+ENABLED(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~((\textbf{ RCC}-\/$>$AHB1\+ENR \&(\textbf{ RCC\+\_\+\+AHB1\+ENR\+\_\+\+GPIOHEN})) != \textbf{ RESET})}
+
+
+
+Definition at line 461 of file stm32f4xx\+\_\+hal\+\_\+rcc.\+h.
+

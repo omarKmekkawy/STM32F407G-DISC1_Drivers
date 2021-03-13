@@ -1,0 +1,52 @@
+<map id="system/include/stm32f4&#45;hal/stm32f4xx_hal_flash_ramfunc.h" name="system/include/stm32f4&#45;hal/stm32f4xx_hal_flash_ramfunc.h">
+<area shape="rect" id="node1" title="Header file of FLASH RAMFUNC driver." alt="" coords="4541,5,4707,61"/>
+<area shape="rect" id="node2" href="$stm32f4xx__hal__flash_8h.html" title="Header file of FLASH HAL module." alt="" coords="4536,109,4712,151"/>
+<area shape="rect" id="node3" href="$stm32f4xx__hal__conf_8h.html" title=" " alt="" coords="4458,206,4609,247"/>
+<area shape="rect" id="node50" href="$stm32f4xx__hal__conf__template_8h.html" title="HAL configuration template file. This file should be copied to the application folder and renamed to ..." alt="" coords="4633,199,4796,255"/>
+<area shape="rect" id="node4" href="$stm32f4xx__hal_8h.html" title="This file contains all the functions prototypes for the HAL module driver." alt="" coords="4453,303,4613,344"/>
+<area shape="rect" id="node5" href="$src_2__initialize__hardware_8c.html" title=" " alt="" coords="5,407,173,433"/>
+<area shape="rect" id="node6" href="$stm32f4xx__hal__msp_8c.html" title=" " alt="" coords="197,407,368,433"/>
+<area shape="rect" id="node7" href="$stm32f4xx__hal_8c.html" title="HAL module driver. This is the common part of the HAL initialization." alt="" coords="393,399,535,441"/>
+<area shape="rect" id="node8" href="$stm32f4xx__hal__adc_8c.html" title="This file provides firmware functions to manage the following functionalities of the Analog to Digita..." alt="" coords="560,399,731,441"/>
+<area shape="rect" id="node9" href="$stm32f4xx__hal__adc__ex_8c.html" title="This file provides firmware functions to manage the following functionalities of the ADC extension pe..." alt="" coords="755,399,946,441"/>
+<area shape="rect" id="node10" href="$stm32f4xx__hal__can_8c.html" title="This file provides firmware functions to manage the following functionalities of the Controller Area ..." alt="" coords="971,399,1141,441"/>
+<area shape="rect" id="node11" href="$stm32f4xx__hal__cec_8c.html" title="CEC HAL module driver. This file provides firmware functions to manage the following functionalities ..." alt="" coords="1165,399,1336,441"/>
+<area shape="rect" id="node12" href="$stm32f4xx__hal__cortex_8c.html" title="CORTEX HAL module driver. This file provides firmware functions to manage the following functionaliti..." alt="" coords="1361,399,1546,441"/>
+<area shape="rect" id="node13" href="$stm32f4xx__hal__crc_8c.html" title="CRC HAL module driver. This file provides firmware functions to manage the following functionalities ..." alt="" coords="1570,399,1737,441"/>
+<area shape="rect" id="node14" href="$stm32f4xx__hal__cryp_8c.html" title="CRYP HAL module driver. This file provides firmware functions to manage the following functionalities..." alt="" coords="1761,399,1935,441"/>
+<area shape="rect" id="node15" href="$stm32f4xx__hal__cryp__ex_8c.html" title="Extended CRYP HAL module driver This file provides firmware functions to manage the following functio..." alt="" coords="1960,399,2155,441"/>
+<area shape="rect" id="node16" href="$stm32f4xx__hal__dac_8c.html" title="DAC HAL module driver. This file provides firmware functions to manage the following functionalities ..." alt="" coords="2179,399,2349,441"/>
+<area shape="rect" id="node17" href="$stm32f4xx__hal__dac__ex_8c.html" title="DAC HAL module driver. This file provides firmware functions to manage the following functionalities ..." alt="" coords="2374,399,2565,441"/>
+<area shape="rect" id="node18" href="$stm32f4xx__hal__dcmi_8c.html" title="DCMI HAL module driver This file provides firmware functions to manage the following functionalities ..." alt="" coords="2589,399,2766,441"/>
+<area shape="rect" id="node19" href="$stm32f4xx__hal__dcmi__ex_8c.html" title="DCMI Extension HAL module driver This file provides firmware functions to manage the following functi..." alt="" coords="2790,399,2989,441"/>
+<area shape="rect" id="node20" href="$stm32f4xx__hal__dfsdm_8c.html" title="This file provides firmware functions to manage the following functionalities of the Digital Filter f..." alt="" coords="3013,399,3197,441"/>
+<area shape="rect" id="node21" href="$stm32f4xx__hal__dma_8c.html" title="DMA HAL module driver." alt="" coords="3222,399,3397,441"/>
+<area shape="rect" id="node22" href="$stm32f4xx__hal__dma2d_8c.html" title="DMA2D HAL module driver. This file provides firmware functions to manage the following functionalitie..." alt="" coords="3421,399,3609,441"/>
+<area shape="rect" id="node23" href="$stm32f4xx__hal__dma__ex_8c.html" title="DMA Extension HAL module driver This file provides firmware functions to manage the following functio..." alt="" coords="3633,399,3828,441"/>
+<area shape="rect" id="node24" href="$stm32f4xx__hal__dsi_8c.html" title="DSI HAL module driver. This file provides firmware functions to manage the following functionalities ..." alt="" coords="3853,399,4019,441"/>
+<area shape="rect" id="node25" href="$stm32f4xx__hal__eth_8c.html" title="ETH HAL module driver. This file provides firmware functions to manage the following functionalities ..." alt="" coords="4043,399,4210,441"/>
+<area shape="rect" id="node26" href="$stm32f4xx__hal__flash_8c.html" title="FLASH HAL module driver. This file provides firmware functions to manage the following functionalitie..." alt="" coords="4235,399,4411,441"/>
+<area shape="rect" id="node27" href="$stm32f4xx__hal__flash__ex_8c.html" title="Extended FLASH HAL module driver. This file provides firmware functions to manage the following funct..." alt="" coords="4435,399,4632,441"/>
+<area shape="rect" id="node28" href="$stm32f4xx__hal__flash__ramfunc_8c.html" title="FLASH RAMFUNC module driver. This file provides a FLASH firmware functions which should be executed f..." alt="" coords="4656,392,4821,448"/>
+<area shape="rect" id="node29" href="$stm32f4xx__hal__fmpi2c_8c.html" title="FMPI2C HAL module driver. This file provides firmware functions to manage the following functionaliti..." alt="" coords="4845,399,5032,441"/>
+<area shape="rect" id="node30" href="$stm32f4xx__hal__fmpi2c__ex_8c.html" title="FMPI2C Extended HAL module driver. This file provides firmware functions to manage the following func..." alt="" coords="5056,399,5264,441"/>
+<area shape="rect" id="node31" href="$stm32f4xx__hal__gpio_8c.html" title="GPIO HAL module driver. This file provides firmware functions to manage the following functionalities..." alt="" coords="5288,399,5461,441"/>
+<area shape="rect" id="node32" href="$stm32f4xx__hal__hash_8c.html" title="HASH HAL module driver. This file provides firmware functions to manage the following functionalities..." alt="" coords="5486,399,5663,441"/>
+<area shape="rect" id="node33" href="$stm32f4xx__hal__hash__ex_8c.html" title="HASH HAL Extension module driver. This file provides firmware functions to manage the following funct..." alt="" coords="5687,399,5886,441"/>
+<area shape="rect" id="node34" href="$stm32f4xx__hal__hcd_8c.html" title="HCD HAL module driver. This file provides firmware functions to manage the following functionalities ..." alt="" coords="5911,399,6081,441"/>
+<area shape="rect" id="node35" href="$stm32f4xx__hal__i2c_8c.html" title="I2C HAL module driver. This file provides firmware functions to manage the following functionalities ..." alt="" coords="6106,399,6273,441"/>
+<area shape="rect" id="node36" href="$stm32f4xx__hal__i2c__ex_8c.html" title="I2C Extension HAL module driver. This file provides firmware functions to manage the following functi..." alt="" coords="6297,399,6484,441"/>
+<area shape="rect" id="node37" href="$stm32f4xx__hal__i2s_8c.html" title="I2S HAL module driver. This file provides firmware functions to manage the following functionalities ..." alt="" coords="6509,399,6675,441"/>
+<area shape="rect" id="node38" href="$stm32f4xx__hal__i2s__ex_8c.html" title="I2S HAL module driver. This file provides firmware functions to manage the following functionalities ..." alt="" coords="6700,399,6887,441"/>
+<area shape="rect" id="node39" href="$stm32f4xx__hal__irda_8c.html" title="IRDA HAL module driver. This file provides firmware functions to manage the following functionalities..." alt="" coords="6911,399,7081,441"/>
+<area shape="rect" id="node40" href="$stm32f4xx__hal__iwdg_8c.html" title="IWDG HAL module driver. This file provides firmware functions to manage the following functionalities..." alt="" coords="7106,399,7281,441"/>
+<area shape="rect" id="node41" href="$stm32f4xx__hal__lptim_8c.html" title="LPTIM HAL module driver. This file provides firmware functions to manage the following functionalitie..." alt="" coords="7305,399,7482,441"/>
+<area shape="rect" id="node42" href="$stm32f4xx__hal__ltdc_8c.html" title="LTDC HAL module driver. This file provides firmware functions to manage the following functionalities..." alt="" coords="7507,399,7677,441"/>
+<area shape="rect" id="node43" href="$stm32f4xx__hal__ltdc__ex_8c.html" title="LTDC Extension HAL module driver." alt="" coords="7702,399,7893,441"/>
+<area shape="rect" id="node44" href="$stm32f4xx__hal__msp__template_8c.html" title="This file contains the HAL System and Peripheral (PPP) MSP initialization and de&#45;initialization funct..." alt="" coords="7917,392,8080,448"/>
+<area shape="rect" id="node45" href="$stm32f4xx__hal__nand_8c.html" title="NAND HAL module driver. This file provides a generic firmware to drive NAND memories mounted as exter..." alt="" coords="8105,399,8282,441"/>
+<area shape="rect" id="node46" href="$stm32f4xx__hal__nor_8c.html" title="NOR HAL module driver. This file provides a generic firmware to drive NOR memories mounted as externa..." alt="" coords="8306,399,8473,441"/>
+<area shape="rect" id="node47" href="$stm32f4xx__hal__pccard_8c.html" title="PCCARD HAL module driver. This file provides a generic firmware to drive PCCARD memories mounted as e..." alt="" coords="8497,399,8685,441"/>
+<area shape="rect" id="node48" href="$stm32f4xx__hal__pcd_8c.html" title="PCD HAL module driver. This file provides firmware functions to manage the following functionalities ..." alt="" coords="8709,399,8880,441"/>
+<area shape="rect" id="node49" href="$stm32f4xx__hal__pcd__ex_8c.html" title="PCD HAL module driver. This file provides firmware functions to manage the following functionalities ..." alt="" coords="8905,399,9095,441"/>
+</map>

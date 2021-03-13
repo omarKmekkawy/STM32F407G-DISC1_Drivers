@@ -1,0 +1,254 @@
+\doxysection{RTC Timestamp}
+\label{group___r_t_c_ex___timestamp}\index{RTC Timestamp@{RTC Timestamp}}
+Collaboration diagram for RTC Timestamp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=327pt]{group___r_t_c_ex___timestamp}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+TIMESTAMP\+\_\+\+ENABLE}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$CR $\vert$= (\textbf{ RTC\+\_\+\+CR\+\_\+\+TSE}))
+\begin{DoxyCompactList}\small\item\em Enable the RTC Time\+Stamp peripheral. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+TIMESTAMP\+\_\+\+DISABLE}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$CR \&= $\sim$(\textbf{ RTC\+\_\+\+CR\+\_\+\+TSE}))
+\begin{DoxyCompactList}\small\item\em Disable the RTC Time\+Stamp peripheral. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+TIMESTAMP\+\_\+\+ENABLE\+\_\+\+IT}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$CR $\vert$= (\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+))
+\begin{DoxyCompactList}\small\item\em Enable the RTC Time\+Stamp interrupt. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+TIMESTAMP\+\_\+\+DISABLE\+\_\+\+IT}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$CR \&= $\sim$(\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+))
+\begin{DoxyCompactList}\small\item\em Disable the RTC Time\+Stamp interrupt. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+TIMESTAMP\+\_\+\+GET\+\_\+\+IT}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)~(((((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$ISR) \& ((\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)$>$$>$ 4U)) != \textbf{ RESET})? \textbf{ SET} \+: \textbf{ RESET})
+\begin{DoxyCompactList}\small\item\em Check whether the specified RTC Time\+Stamp interrupt has occurred or not. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+TIMESTAMP\+\_\+\+GET\+\_\+\+IT\+\_\+\+SOURCE}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)~(((((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$CR) \& (\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)) != \textbf{ RESET}) ? \textbf{ SET} \+: \textbf{ RESET})
+\begin{DoxyCompactList}\small\item\em Check whether the specified RTC Time Stamp interrupt has been enabled or not. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+TIMESTAMP\+\_\+\+GET\+\_\+\+FLAG}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+FLAG\+\_\+\+\_\+)~(((((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$ISR) \& (\+\_\+\+\_\+\+FLAG\+\_\+\+\_\+)) != \textbf{ RESET})? \textbf{ SET} \+: \textbf{ RESET})
+\begin{DoxyCompactList}\small\item\em Get the selected RTC Time\+Stamp\textquotesingle{}s flag status. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+TIMESTAMP\+\_\+\+CLEAR\+\_\+\+FLAG}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+FLAG\+\_\+\+\_\+)~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$ISR) = ($\sim$((\+\_\+\+\_\+\+FLAG\+\_\+\+\_\+) $\vert$ \textbf{ RTC\+\_\+\+ISR\+\_\+\+INIT})$\vert$((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$ISR \& \textbf{ RTC\+\_\+\+ISR\+\_\+\+INIT}))
+\begin{DoxyCompactList}\small\item\em Clear the RTC Time Stamp\textquotesingle{}s pending flags. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\label{group___r_t_c_ex___timestamp_gac9d386e61a572b0c9d0e58a04e1819ef}} 
+\index{RTC Timestamp@{RTC Timestamp}!\_\_HAL\_RTC\_TIMESTAMP\_CLEAR\_FLAG@{\_\_HAL\_RTC\_TIMESTAMP\_CLEAR\_FLAG}}
+\index{\_\_HAL\_RTC\_TIMESTAMP\_CLEAR\_FLAG@{\_\_HAL\_RTC\_TIMESTAMP\_CLEAR\_FLAG}!RTC Timestamp@{RTC Timestamp}}
+\doxysubsubsection{\_\_HAL\_RTC\_TIMESTAMP\_CLEAR\_FLAG}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+TIMESTAMP\+\_\+\+CLEAR\+\_\+\+FLAG(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+FLAG\+\_\+\+\_\+ }\end{DoxyParamCaption})~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$ISR) = ($\sim$((\+\_\+\+\_\+\+FLAG\+\_\+\+\_\+) $\vert$ \textbf{ RTC\+\_\+\+ISR\+\_\+\+INIT})$\vert$((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$ISR \& \textbf{ RTC\+\_\+\+ISR\+\_\+\+INIT}))}
+
+
+
+Clear the RTC Time Stamp\textquotesingle{}s pending flags. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$strong$>$\+HANDLE$<$/strong$>$} & specifies the RTC handle. \\
+\hline
+{\em $<$strong$>$\+FLAG$<$/strong$>$} & specifies the RTC Alarm Flag sources to be enabled or disabled. This parameter can be\+: \begin{DoxyItemize}
+\item RTC\+\_\+\+FLAG\+\_\+\+TSF ~\newline
+ \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 565 of file stm32f4xx\+\_\+hal\+\_\+rtc\+\_\+ex.\+h.
+
+\mbox{\label{group___r_t_c_ex___timestamp_ga7281d85b199bee5eb74cc135208051fa}} 
+\index{RTC Timestamp@{RTC Timestamp}!\_\_HAL\_RTC\_TIMESTAMP\_DISABLE@{\_\_HAL\_RTC\_TIMESTAMP\_DISABLE}}
+\index{\_\_HAL\_RTC\_TIMESTAMP\_DISABLE@{\_\_HAL\_RTC\_TIMESTAMP\_DISABLE}!RTC Timestamp@{RTC Timestamp}}
+\doxysubsubsection{\_\_HAL\_RTC\_TIMESTAMP\_DISABLE}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+TIMESTAMP\+\_\+\+DISABLE(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+ }\end{DoxyParamCaption})~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$CR \&= $\sim$(\textbf{ RTC\+\_\+\+CR\+\_\+\+TSE}))}
+
+
+
+Disable the RTC Time\+Stamp peripheral. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$strong$>$\+HANDLE$<$/strong$>$} & specifies the RTC handle. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 504 of file stm32f4xx\+\_\+hal\+\_\+rtc\+\_\+ex.\+h.
+
+\mbox{\label{group___r_t_c_ex___timestamp_gab455d21f8afb5b3d49f2c25e34ce90c2}} 
+\index{RTC Timestamp@{RTC Timestamp}!\_\_HAL\_RTC\_TIMESTAMP\_DISABLE\_IT@{\_\_HAL\_RTC\_TIMESTAMP\_DISABLE\_IT}}
+\index{\_\_HAL\_RTC\_TIMESTAMP\_DISABLE\_IT@{\_\_HAL\_RTC\_TIMESTAMP\_DISABLE\_IT}!RTC Timestamp@{RTC Timestamp}}
+\doxysubsubsection{\_\_HAL\_RTC\_TIMESTAMP\_DISABLE\_IT}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+TIMESTAMP\+\_\+\+DISABLE\+\_\+\+IT(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+ }\end{DoxyParamCaption})~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$CR \&= $\sim$(\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+))}
+
+
+
+Disable the RTC Time\+Stamp interrupt. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$strong$>$\+HANDLE$<$/strong$>$} & specifies the RTC handle. \\
+\hline
+{\em $<$strong$>$\+INTERRUPT$<$/strong$>$} & specifies the RTC Time\+Stamp interrupt sources to be enabled or disabled. This parameter can be\+: \begin{DoxyItemize}
+\item RTC\+\_\+\+IT\+\_\+\+TS\+: Time\+Stamp interrupt \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 524 of file stm32f4xx\+\_\+hal\+\_\+rtc\+\_\+ex.\+h.
+
+\mbox{\label{group___r_t_c_ex___timestamp_gad8400feb7b3dae2c552f2f4a7556bc6d}} 
+\index{RTC Timestamp@{RTC Timestamp}!\_\_HAL\_RTC\_TIMESTAMP\_ENABLE@{\_\_HAL\_RTC\_TIMESTAMP\_ENABLE}}
+\index{\_\_HAL\_RTC\_TIMESTAMP\_ENABLE@{\_\_HAL\_RTC\_TIMESTAMP\_ENABLE}!RTC Timestamp@{RTC Timestamp}}
+\doxysubsubsection{\_\_HAL\_RTC\_TIMESTAMP\_ENABLE}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+TIMESTAMP\+\_\+\+ENABLE(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+ }\end{DoxyParamCaption})~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$CR $\vert$= (\textbf{ RTC\+\_\+\+CR\+\_\+\+TSE}))}
+
+
+
+Enable the RTC Time\+Stamp peripheral. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$strong$>$\+HANDLE$<$/strong$>$} & specifies the RTC handle. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 497 of file stm32f4xx\+\_\+hal\+\_\+rtc\+\_\+ex.\+h.
+
+\mbox{\label{group___r_t_c_ex___timestamp_ga054429581f55a80d922bb5c1e982c06f}} 
+\index{RTC Timestamp@{RTC Timestamp}!\_\_HAL\_RTC\_TIMESTAMP\_ENABLE\_IT@{\_\_HAL\_RTC\_TIMESTAMP\_ENABLE\_IT}}
+\index{\_\_HAL\_RTC\_TIMESTAMP\_ENABLE\_IT@{\_\_HAL\_RTC\_TIMESTAMP\_ENABLE\_IT}!RTC Timestamp@{RTC Timestamp}}
+\doxysubsubsection{\_\_HAL\_RTC\_TIMESTAMP\_ENABLE\_IT}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+TIMESTAMP\+\_\+\+ENABLE\+\_\+\+IT(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+ }\end{DoxyParamCaption})~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$CR $\vert$= (\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+))}
+
+
+
+Enable the RTC Time\+Stamp interrupt. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$strong$>$\+HANDLE$<$/strong$>$} & specifies the RTC handle. \\
+\hline
+{\em $<$strong$>$\+INTERRUPT$<$/strong$>$} & specifies the RTC Time\+Stamp interrupt sources to be enabled or disabled. This parameter can be\+: \begin{DoxyItemize}
+\item RTC\+\_\+\+IT\+\_\+\+TS\+: Time\+Stamp interrupt \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 514 of file stm32f4xx\+\_\+hal\+\_\+rtc\+\_\+ex.\+h.
+
+\mbox{\label{group___r_t_c_ex___timestamp_ga72799940c34e70df0d33eca772794813}} 
+\index{RTC Timestamp@{RTC Timestamp}!\_\_HAL\_RTC\_TIMESTAMP\_GET\_FLAG@{\_\_HAL\_RTC\_TIMESTAMP\_GET\_FLAG}}
+\index{\_\_HAL\_RTC\_TIMESTAMP\_GET\_FLAG@{\_\_HAL\_RTC\_TIMESTAMP\_GET\_FLAG}!RTC Timestamp@{RTC Timestamp}}
+\doxysubsubsection{\_\_HAL\_RTC\_TIMESTAMP\_GET\_FLAG}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+TIMESTAMP\+\_\+\+GET\+\_\+\+FLAG(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+FLAG\+\_\+\+\_\+ }\end{DoxyParamCaption})~(((((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$ISR) \& (\+\_\+\+\_\+\+FLAG\+\_\+\+\_\+)) != \textbf{ RESET})? \textbf{ SET} \+: \textbf{ RESET})}
+
+
+
+Get the selected RTC Time\+Stamp\textquotesingle{}s flag status. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$strong$>$\+HANDLE$<$/strong$>$} & specifies the RTC handle. \\
+\hline
+{\em $<$strong$>$\+FLAG$<$/strong$>$} & specifies the RTC Time\+Stamp flag to check. This parameter can be\+: \begin{DoxyItemize}
+\item RTC\+\_\+\+FLAG\+\_\+\+TSF ~\newline
+ \item RTC\+\_\+\+FLAG\+\_\+\+TSOVF ~\newline
+ \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 555 of file stm32f4xx\+\_\+hal\+\_\+rtc\+\_\+ex.\+h.
+
+\mbox{\label{group___r_t_c_ex___timestamp_gaaf023d7dd4c3068e8297187f2cc6b16e}} 
+\index{RTC Timestamp@{RTC Timestamp}!\_\_HAL\_RTC\_TIMESTAMP\_GET\_IT@{\_\_HAL\_RTC\_TIMESTAMP\_GET\_IT}}
+\index{\_\_HAL\_RTC\_TIMESTAMP\_GET\_IT@{\_\_HAL\_RTC\_TIMESTAMP\_GET\_IT}!RTC Timestamp@{RTC Timestamp}}
+\doxysubsubsection{\_\_HAL\_RTC\_TIMESTAMP\_GET\_IT}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+TIMESTAMP\+\_\+\+GET\+\_\+\+IT(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+ }\end{DoxyParamCaption})~(((((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$ISR) \& ((\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)$>$$>$ 4U)) != \textbf{ RESET})? \textbf{ SET} \+: \textbf{ RESET})}
+
+
+
+Check whether the specified RTC Time\+Stamp interrupt has occurred or not. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$strong$>$\+HANDLE$<$/strong$>$} & specifies the RTC handle. \\
+\hline
+{\em $<$strong$>$\+INTERRUPT$<$/strong$>$} & specifies the RTC Time\+Stamp interrupt to check. This parameter can be\+: \begin{DoxyItemize}
+\item RTC\+\_\+\+IT\+\_\+\+TS\+: Time\+Stamp interrupt \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 534 of file stm32f4xx\+\_\+hal\+\_\+rtc\+\_\+ex.\+h.
+
+\mbox{\label{group___r_t_c_ex___timestamp_ga54100a14a01e1ebe8af226385d12ee57}} 
+\index{RTC Timestamp@{RTC Timestamp}!\_\_HAL\_RTC\_TIMESTAMP\_GET\_IT\_SOURCE@{\_\_HAL\_RTC\_TIMESTAMP\_GET\_IT\_SOURCE}}
+\index{\_\_HAL\_RTC\_TIMESTAMP\_GET\_IT\_SOURCE@{\_\_HAL\_RTC\_TIMESTAMP\_GET\_IT\_SOURCE}!RTC Timestamp@{RTC Timestamp}}
+\doxysubsubsection{\_\_HAL\_RTC\_TIMESTAMP\_GET\_IT\_SOURCE}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+TIMESTAMP\+\_\+\+GET\+\_\+\+IT\+\_\+\+SOURCE(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+ }\end{DoxyParamCaption})~(((((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$CR) \& (\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)) != \textbf{ RESET}) ? \textbf{ SET} \+: \textbf{ RESET})}
+
+
+
+Check whether the specified RTC Time Stamp interrupt has been enabled or not. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$strong$>$\+HANDLE$<$/strong$>$} & specifies the RTC handle. \\
+\hline
+{\em $<$strong$>$\+INTERRUPT$<$/strong$>$} & specifies the RTC Time Stamp interrupt source to check. This parameter can be\+: \begin{DoxyItemize}
+\item RTC\+\_\+\+IT\+\_\+\+TS\+: Time\+Stamp interrupt \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 544 of file stm32f4xx\+\_\+hal\+\_\+rtc\+\_\+ex.\+h.
+

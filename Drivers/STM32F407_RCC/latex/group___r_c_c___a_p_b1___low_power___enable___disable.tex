@@ -1,0 +1,201 @@
+\doxysection{APB1 Peripheral Low Power Enable Disable}
+\label{group___r_c_c___a_p_b1___low_power___enable___disable}\index{APB1 Peripheral Low Power Enable Disable@{APB1 Peripheral Low Power Enable Disable}}
+
+
+Enable or disable the APB1 peripheral clock during Low Power (Sleep) mode.  
+
+
+Collaboration diagram for APB1 Peripheral Low Power Enable Disable\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=345pt]{group___r_c_c___a_p_b1___low_power___enable___disable}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+TIM5\+\_\+\+CLK\+\_\+\+SLEEP\+\_\+\+ENABLE}()~(\textbf{ RCC}-\/$>$APB1\+LPENR $\vert$= (\textbf{ RCC\+\_\+\+APB1\+LPENR\+\_\+\+TIM5\+LPEN}))
+\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+WWDG\+\_\+\+CLK\+\_\+\+SLEEP\+\_\+\+ENABLE}()~(\textbf{ RCC}-\/$>$APB1\+LPENR $\vert$= (\textbf{ RCC\+\_\+\+APB1\+LPENR\+\_\+\+WWDGLPEN}))
+\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+SPI2\+\_\+\+CLK\+\_\+\+SLEEP\+\_\+\+ENABLE}()~(\textbf{ RCC}-\/$>$APB1\+LPENR $\vert$= (\textbf{ RCC\+\_\+\+APB1\+LPENR\+\_\+\+SPI2\+LPEN}))
+\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+USART2\+\_\+\+CLK\+\_\+\+SLEEP\+\_\+\+ENABLE}()~(\textbf{ RCC}-\/$>$APB1\+LPENR $\vert$= (\textbf{ RCC\+\_\+\+APB1\+LPENR\+\_\+\+USART2\+LPEN}))
+\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+I2\+C1\+\_\+\+CLK\+\_\+\+SLEEP\+\_\+\+ENABLE}()~(\textbf{ RCC}-\/$>$APB1\+LPENR $\vert$= (\textbf{ RCC\+\_\+\+APB1\+LPENR\+\_\+\+I2\+C1\+LPEN}))
+\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+I2\+C2\+\_\+\+CLK\+\_\+\+SLEEP\+\_\+\+ENABLE}()~(\textbf{ RCC}-\/$>$APB1\+LPENR $\vert$= (\textbf{ RCC\+\_\+\+APB1\+LPENR\+\_\+\+I2\+C2\+LPEN}))
+\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+PWR\+\_\+\+CLK\+\_\+\+SLEEP\+\_\+\+ENABLE}()~(\textbf{ RCC}-\/$>$APB1\+LPENR $\vert$= (\textbf{ RCC\+\_\+\+APB1\+LPENR\+\_\+\+PWRLPEN}))
+\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+TIM5\+\_\+\+CLK\+\_\+\+SLEEP\+\_\+\+DISABLE}()~(\textbf{ RCC}-\/$>$APB1\+LPENR \&= $\sim$(\textbf{ RCC\+\_\+\+APB1\+LPENR\+\_\+\+TIM5\+LPEN}))
+\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+WWDG\+\_\+\+CLK\+\_\+\+SLEEP\+\_\+\+DISABLE}()~(\textbf{ RCC}-\/$>$APB1\+LPENR \&= $\sim$(\textbf{ RCC\+\_\+\+APB1\+LPENR\+\_\+\+WWDGLPEN}))
+\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+SPI2\+\_\+\+CLK\+\_\+\+SLEEP\+\_\+\+DISABLE}()~(\textbf{ RCC}-\/$>$APB1\+LPENR \&= $\sim$(\textbf{ RCC\+\_\+\+APB1\+LPENR\+\_\+\+SPI2\+LPEN}))
+\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+USART2\+\_\+\+CLK\+\_\+\+SLEEP\+\_\+\+DISABLE}()~(\textbf{ RCC}-\/$>$APB1\+LPENR \&= $\sim$(\textbf{ RCC\+\_\+\+APB1\+LPENR\+\_\+\+USART2\+LPEN}))
+\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+I2\+C1\+\_\+\+CLK\+\_\+\+SLEEP\+\_\+\+DISABLE}()~(\textbf{ RCC}-\/$>$APB1\+LPENR \&= $\sim$(\textbf{ RCC\+\_\+\+APB1\+LPENR\+\_\+\+I2\+C1\+LPEN}))
+\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+I2\+C2\+\_\+\+CLK\+\_\+\+SLEEP\+\_\+\+DISABLE}()~(\textbf{ RCC}-\/$>$APB1\+LPENR \&= $\sim$(\textbf{ RCC\+\_\+\+APB1\+LPENR\+\_\+\+I2\+C2\+LPEN}))
+\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+PWR\+\_\+\+CLK\+\_\+\+SLEEP\+\_\+\+DISABLE}()~(\textbf{ RCC}-\/$>$APB1\+LPENR \&= $\sim$(\textbf{ RCC\+\_\+\+APB1\+LPENR\+\_\+\+PWRLPEN}))
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Enable or disable the APB1 peripheral clock during Low Power (Sleep) mode. 
+
+\begin{DoxyNote}{Note}
+Peripheral clock gating in SLEEP mode can be used to further reduce power consumption. 
+
+After wake-\/up from SLEEP mode, the peripheral clock is enabled again. 
+
+By default, all peripheral clocks are enabled during SLEEP mode. 
+\end{DoxyNote}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\label{group___r_c_c___a_p_b1___low_power___enable___disable_gac7dc1c5239cd70bee94eefa3d91cdd7a}} 
+\index{APB1 Peripheral Low Power Enable Disable@{APB1 Peripheral Low Power Enable Disable}!\_\_HAL\_RCC\_I2C1\_CLK\_SLEEP\_DISABLE@{\_\_HAL\_RCC\_I2C1\_CLK\_SLEEP\_DISABLE}}
+\index{\_\_HAL\_RCC\_I2C1\_CLK\_SLEEP\_DISABLE@{\_\_HAL\_RCC\_I2C1\_CLK\_SLEEP\_DISABLE}!APB1 Peripheral Low Power Enable Disable@{APB1 Peripheral Low Power Enable Disable}}
+\doxysubsubsection{\_\_HAL\_RCC\_I2C1\_CLK\_SLEEP\_DISABLE}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+I2\+C1\+\_\+\+CLK\+\_\+\+SLEEP\+\_\+\+DISABLE(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~(\textbf{ RCC}-\/$>$APB1\+LPENR \&= $\sim$(\textbf{ RCC\+\_\+\+APB1\+LPENR\+\_\+\+I2\+C1\+LPEN}))}
+
+
+
+Definition at line 793 of file stm32f4xx\+\_\+hal\+\_\+rcc.\+h.
+
+\mbox{\label{group___r_c_c___a_p_b1___low_power___enable___disable_ga894dbeada170b01faef303d35de84917}} 
+\index{APB1 Peripheral Low Power Enable Disable@{APB1 Peripheral Low Power Enable Disable}!\_\_HAL\_RCC\_I2C1\_CLK\_SLEEP\_ENABLE@{\_\_HAL\_RCC\_I2C1\_CLK\_SLEEP\_ENABLE}}
+\index{\_\_HAL\_RCC\_I2C1\_CLK\_SLEEP\_ENABLE@{\_\_HAL\_RCC\_I2C1\_CLK\_SLEEP\_ENABLE}!APB1 Peripheral Low Power Enable Disable@{APB1 Peripheral Low Power Enable Disable}}
+\doxysubsubsection{\_\_HAL\_RCC\_I2C1\_CLK\_SLEEP\_ENABLE}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+I2\+C1\+\_\+\+CLK\+\_\+\+SLEEP\+\_\+\+ENABLE(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~(\textbf{ RCC}-\/$>$APB1\+LPENR $\vert$= (\textbf{ RCC\+\_\+\+APB1\+LPENR\+\_\+\+I2\+C1\+LPEN}))}
+
+
+
+Definition at line 785 of file stm32f4xx\+\_\+hal\+\_\+rcc.\+h.
+
+\mbox{\label{group___r_c_c___a_p_b1___low_power___enable___disable_ga46fe2d4331320cfe49b751b5488fc0cd}} 
+\index{APB1 Peripheral Low Power Enable Disable@{APB1 Peripheral Low Power Enable Disable}!\_\_HAL\_RCC\_I2C2\_CLK\_SLEEP\_DISABLE@{\_\_HAL\_RCC\_I2C2\_CLK\_SLEEP\_DISABLE}}
+\index{\_\_HAL\_RCC\_I2C2\_CLK\_SLEEP\_DISABLE@{\_\_HAL\_RCC\_I2C2\_CLK\_SLEEP\_DISABLE}!APB1 Peripheral Low Power Enable Disable@{APB1 Peripheral Low Power Enable Disable}}
+\doxysubsubsection{\_\_HAL\_RCC\_I2C2\_CLK\_SLEEP\_DISABLE}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+I2\+C2\+\_\+\+CLK\+\_\+\+SLEEP\+\_\+\+DISABLE(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~(\textbf{ RCC}-\/$>$APB1\+LPENR \&= $\sim$(\textbf{ RCC\+\_\+\+APB1\+LPENR\+\_\+\+I2\+C2\+LPEN}))}
+
+
+
+Definition at line 794 of file stm32f4xx\+\_\+hal\+\_\+rcc.\+h.
+
+\mbox{\label{group___r_c_c___a_p_b1___low_power___enable___disable_gac0167c77fa1c00add900bb1cf788e68c}} 
+\index{APB1 Peripheral Low Power Enable Disable@{APB1 Peripheral Low Power Enable Disable}!\_\_HAL\_RCC\_I2C2\_CLK\_SLEEP\_ENABLE@{\_\_HAL\_RCC\_I2C2\_CLK\_SLEEP\_ENABLE}}
+\index{\_\_HAL\_RCC\_I2C2\_CLK\_SLEEP\_ENABLE@{\_\_HAL\_RCC\_I2C2\_CLK\_SLEEP\_ENABLE}!APB1 Peripheral Low Power Enable Disable@{APB1 Peripheral Low Power Enable Disable}}
+\doxysubsubsection{\_\_HAL\_RCC\_I2C2\_CLK\_SLEEP\_ENABLE}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+I2\+C2\+\_\+\+CLK\+\_\+\+SLEEP\+\_\+\+ENABLE(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~(\textbf{ RCC}-\/$>$APB1\+LPENR $\vert$= (\textbf{ RCC\+\_\+\+APB1\+LPENR\+\_\+\+I2\+C2\+LPEN}))}
+
+
+
+Definition at line 786 of file stm32f4xx\+\_\+hal\+\_\+rcc.\+h.
+
+\mbox{\label{group___r_c_c___a_p_b1___low_power___enable___disable_ga7b9889044ebfe2c9328d0f6733fda87d}} 
+\index{APB1 Peripheral Low Power Enable Disable@{APB1 Peripheral Low Power Enable Disable}!\_\_HAL\_RCC\_PWR\_CLK\_SLEEP\_DISABLE@{\_\_HAL\_RCC\_PWR\_CLK\_SLEEP\_DISABLE}}
+\index{\_\_HAL\_RCC\_PWR\_CLK\_SLEEP\_DISABLE@{\_\_HAL\_RCC\_PWR\_CLK\_SLEEP\_DISABLE}!APB1 Peripheral Low Power Enable Disable@{APB1 Peripheral Low Power Enable Disable}}
+\doxysubsubsection{\_\_HAL\_RCC\_PWR\_CLK\_SLEEP\_DISABLE}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+PWR\+\_\+\+CLK\+\_\+\+SLEEP\+\_\+\+DISABLE(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~(\textbf{ RCC}-\/$>$APB1\+LPENR \&= $\sim$(\textbf{ RCC\+\_\+\+APB1\+LPENR\+\_\+\+PWRLPEN}))}
+
+
+
+Definition at line 795 of file stm32f4xx\+\_\+hal\+\_\+rcc.\+h.
+
+\mbox{\label{group___r_c_c___a_p_b1___low_power___enable___disable_gacad9c9770ee2525fccf6a15e4ee7a07a}} 
+\index{APB1 Peripheral Low Power Enable Disable@{APB1 Peripheral Low Power Enable Disable}!\_\_HAL\_RCC\_PWR\_CLK\_SLEEP\_ENABLE@{\_\_HAL\_RCC\_PWR\_CLK\_SLEEP\_ENABLE}}
+\index{\_\_HAL\_RCC\_PWR\_CLK\_SLEEP\_ENABLE@{\_\_HAL\_RCC\_PWR\_CLK\_SLEEP\_ENABLE}!APB1 Peripheral Low Power Enable Disable@{APB1 Peripheral Low Power Enable Disable}}
+\doxysubsubsection{\_\_HAL\_RCC\_PWR\_CLK\_SLEEP\_ENABLE}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+PWR\+\_\+\+CLK\+\_\+\+SLEEP\+\_\+\+ENABLE(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~(\textbf{ RCC}-\/$>$APB1\+LPENR $\vert$= (\textbf{ RCC\+\_\+\+APB1\+LPENR\+\_\+\+PWRLPEN}))}
+
+
+
+Definition at line 787 of file stm32f4xx\+\_\+hal\+\_\+rcc.\+h.
+
+\mbox{\label{group___r_c_c___a_p_b1___low_power___enable___disable_ga4fff9b3416d2940cac20962e6d5655ec}} 
+\index{APB1 Peripheral Low Power Enable Disable@{APB1 Peripheral Low Power Enable Disable}!\_\_HAL\_RCC\_SPI2\_CLK\_SLEEP\_DISABLE@{\_\_HAL\_RCC\_SPI2\_CLK\_SLEEP\_DISABLE}}
+\index{\_\_HAL\_RCC\_SPI2\_CLK\_SLEEP\_DISABLE@{\_\_HAL\_RCC\_SPI2\_CLK\_SLEEP\_DISABLE}!APB1 Peripheral Low Power Enable Disable@{APB1 Peripheral Low Power Enable Disable}}
+\doxysubsubsection{\_\_HAL\_RCC\_SPI2\_CLK\_SLEEP\_DISABLE}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+SPI2\+\_\+\+CLK\+\_\+\+SLEEP\+\_\+\+DISABLE(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~(\textbf{ RCC}-\/$>$APB1\+LPENR \&= $\sim$(\textbf{ RCC\+\_\+\+APB1\+LPENR\+\_\+\+SPI2\+LPEN}))}
+
+
+
+Definition at line 791 of file stm32f4xx\+\_\+hal\+\_\+rcc.\+h.
+
+\mbox{\label{group___r_c_c___a_p_b1___low_power___enable___disable_ga8a281ca72aff1c9fa87755c3854cc316}} 
+\index{APB1 Peripheral Low Power Enable Disable@{APB1 Peripheral Low Power Enable Disable}!\_\_HAL\_RCC\_SPI2\_CLK\_SLEEP\_ENABLE@{\_\_HAL\_RCC\_SPI2\_CLK\_SLEEP\_ENABLE}}
+\index{\_\_HAL\_RCC\_SPI2\_CLK\_SLEEP\_ENABLE@{\_\_HAL\_RCC\_SPI2\_CLK\_SLEEP\_ENABLE}!APB1 Peripheral Low Power Enable Disable@{APB1 Peripheral Low Power Enable Disable}}
+\doxysubsubsection{\_\_HAL\_RCC\_SPI2\_CLK\_SLEEP\_ENABLE}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+SPI2\+\_\+\+CLK\+\_\+\+SLEEP\+\_\+\+ENABLE(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~(\textbf{ RCC}-\/$>$APB1\+LPENR $\vert$= (\textbf{ RCC\+\_\+\+APB1\+LPENR\+\_\+\+SPI2\+LPEN}))}
+
+
+
+Definition at line 783 of file stm32f4xx\+\_\+hal\+\_\+rcc.\+h.
+
+\mbox{\label{group___r_c_c___a_p_b1___low_power___enable___disable_gaac91e3596950c8d33760debce6b0e416}} 
+\index{APB1 Peripheral Low Power Enable Disable@{APB1 Peripheral Low Power Enable Disable}!\_\_HAL\_RCC\_TIM5\_CLK\_SLEEP\_DISABLE@{\_\_HAL\_RCC\_TIM5\_CLK\_SLEEP\_DISABLE}}
+\index{\_\_HAL\_RCC\_TIM5\_CLK\_SLEEP\_DISABLE@{\_\_HAL\_RCC\_TIM5\_CLK\_SLEEP\_DISABLE}!APB1 Peripheral Low Power Enable Disable@{APB1 Peripheral Low Power Enable Disable}}
+\doxysubsubsection{\_\_HAL\_RCC\_TIM5\_CLK\_SLEEP\_DISABLE}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+TIM5\+\_\+\+CLK\+\_\+\+SLEEP\+\_\+\+DISABLE(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~(\textbf{ RCC}-\/$>$APB1\+LPENR \&= $\sim$(\textbf{ RCC\+\_\+\+APB1\+LPENR\+\_\+\+TIM5\+LPEN}))}
+
+
+
+Definition at line 789 of file stm32f4xx\+\_\+hal\+\_\+rcc.\+h.
+
+\mbox{\label{group___r_c_c___a_p_b1___low_power___enable___disable_gae99e46f9e40655dc9b5c07b03fdc4a4e}} 
+\index{APB1 Peripheral Low Power Enable Disable@{APB1 Peripheral Low Power Enable Disable}!\_\_HAL\_RCC\_TIM5\_CLK\_SLEEP\_ENABLE@{\_\_HAL\_RCC\_TIM5\_CLK\_SLEEP\_ENABLE}}
+\index{\_\_HAL\_RCC\_TIM5\_CLK\_SLEEP\_ENABLE@{\_\_HAL\_RCC\_TIM5\_CLK\_SLEEP\_ENABLE}!APB1 Peripheral Low Power Enable Disable@{APB1 Peripheral Low Power Enable Disable}}
+\doxysubsubsection{\_\_HAL\_RCC\_TIM5\_CLK\_SLEEP\_ENABLE}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+TIM5\+\_\+\+CLK\+\_\+\+SLEEP\+\_\+\+ENABLE(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~(\textbf{ RCC}-\/$>$APB1\+LPENR $\vert$= (\textbf{ RCC\+\_\+\+APB1\+LPENR\+\_\+\+TIM5\+LPEN}))}
+
+
+
+Definition at line 781 of file stm32f4xx\+\_\+hal\+\_\+rcc.\+h.
+
+\mbox{\label{group___r_c_c___a_p_b1___low_power___enable___disable_ga3ad038000c76cee2e7ca00d56ba64c17}} 
+\index{APB1 Peripheral Low Power Enable Disable@{APB1 Peripheral Low Power Enable Disable}!\_\_HAL\_RCC\_USART2\_CLK\_SLEEP\_DISABLE@{\_\_HAL\_RCC\_USART2\_CLK\_SLEEP\_DISABLE}}
+\index{\_\_HAL\_RCC\_USART2\_CLK\_SLEEP\_DISABLE@{\_\_HAL\_RCC\_USART2\_CLK\_SLEEP\_DISABLE}!APB1 Peripheral Low Power Enable Disable@{APB1 Peripheral Low Power Enable Disable}}
+\doxysubsubsection{\_\_HAL\_RCC\_USART2\_CLK\_SLEEP\_DISABLE}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+USART2\+\_\+\+CLK\+\_\+\+SLEEP\+\_\+\+DISABLE(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~(\textbf{ RCC}-\/$>$APB1\+LPENR \&= $\sim$(\textbf{ RCC\+\_\+\+APB1\+LPENR\+\_\+\+USART2\+LPEN}))}
+
+
+
+Definition at line 792 of file stm32f4xx\+\_\+hal\+\_\+rcc.\+h.
+
+\mbox{\label{group___r_c_c___a_p_b1___low_power___enable___disable_ga12132da4a7f5c62f32cd9d91b1c99495}} 
+\index{APB1 Peripheral Low Power Enable Disable@{APB1 Peripheral Low Power Enable Disable}!\_\_HAL\_RCC\_USART2\_CLK\_SLEEP\_ENABLE@{\_\_HAL\_RCC\_USART2\_CLK\_SLEEP\_ENABLE}}
+\index{\_\_HAL\_RCC\_USART2\_CLK\_SLEEP\_ENABLE@{\_\_HAL\_RCC\_USART2\_CLK\_SLEEP\_ENABLE}!APB1 Peripheral Low Power Enable Disable@{APB1 Peripheral Low Power Enable Disable}}
+\doxysubsubsection{\_\_HAL\_RCC\_USART2\_CLK\_SLEEP\_ENABLE}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+USART2\+\_\+\+CLK\+\_\+\+SLEEP\+\_\+\+ENABLE(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~(\textbf{ RCC}-\/$>$APB1\+LPENR $\vert$= (\textbf{ RCC\+\_\+\+APB1\+LPENR\+\_\+\+USART2\+LPEN}))}
+
+
+
+Definition at line 784 of file stm32f4xx\+\_\+hal\+\_\+rcc.\+h.
+
+\mbox{\label{group___r_c_c___a_p_b1___low_power___enable___disable_gae61c24ac6b36e7edbabc5b050b38d63e}} 
+\index{APB1 Peripheral Low Power Enable Disable@{APB1 Peripheral Low Power Enable Disable}!\_\_HAL\_RCC\_WWDG\_CLK\_SLEEP\_DISABLE@{\_\_HAL\_RCC\_WWDG\_CLK\_SLEEP\_DISABLE}}
+\index{\_\_HAL\_RCC\_WWDG\_CLK\_SLEEP\_DISABLE@{\_\_HAL\_RCC\_WWDG\_CLK\_SLEEP\_DISABLE}!APB1 Peripheral Low Power Enable Disable@{APB1 Peripheral Low Power Enable Disable}}
+\doxysubsubsection{\_\_HAL\_RCC\_WWDG\_CLK\_SLEEP\_DISABLE}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+WWDG\+\_\+\+CLK\+\_\+\+SLEEP\+\_\+\+DISABLE(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~(\textbf{ RCC}-\/$>$APB1\+LPENR \&= $\sim$(\textbf{ RCC\+\_\+\+APB1\+LPENR\+\_\+\+WWDGLPEN}))}
+
+
+
+Definition at line 790 of file stm32f4xx\+\_\+hal\+\_\+rcc.\+h.
+
+\mbox{\label{group___r_c_c___a_p_b1___low_power___enable___disable_gaa3978a2e193b921dc24976880dce7a26}} 
+\index{APB1 Peripheral Low Power Enable Disable@{APB1 Peripheral Low Power Enable Disable}!\_\_HAL\_RCC\_WWDG\_CLK\_SLEEP\_ENABLE@{\_\_HAL\_RCC\_WWDG\_CLK\_SLEEP\_ENABLE}}
+\index{\_\_HAL\_RCC\_WWDG\_CLK\_SLEEP\_ENABLE@{\_\_HAL\_RCC\_WWDG\_CLK\_SLEEP\_ENABLE}!APB1 Peripheral Low Power Enable Disable@{APB1 Peripheral Low Power Enable Disable}}
+\doxysubsubsection{\_\_HAL\_RCC\_WWDG\_CLK\_SLEEP\_ENABLE}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+WWDG\+\_\+\+CLK\+\_\+\+SLEEP\+\_\+\+ENABLE(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~(\textbf{ RCC}-\/$>$APB1\+LPENR $\vert$= (\textbf{ RCC\+\_\+\+APB1\+LPENR\+\_\+\+WWDGLPEN}))}
+
+
+
+Definition at line 782 of file stm32f4xx\+\_\+hal\+\_\+rcc.\+h.
+

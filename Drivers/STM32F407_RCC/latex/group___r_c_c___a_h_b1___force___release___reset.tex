@@ -1,0 +1,194 @@
+\doxysection{AHB1 Force Release Reset}
+\label{group___r_c_c___a_h_b1___force___release___reset}\index{AHB1 Force Release Reset@{AHB1 Force Release Reset}}
+
+
+Force or release AHB1 peripheral reset.  
+
+
+Collaboration diagram for AHB1 Force Release Reset\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=338pt]{group___r_c_c___a_h_b1___force___release___reset}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+AHB1\+\_\+\+FORCE\+\_\+\+RESET}()~(\textbf{ RCC}-\/$>$AHB1\+RSTR = 0x\+FFFFFFFFU)
+\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+GPIOA\+\_\+\+FORCE\+\_\+\+RESET}()~(\textbf{ RCC}-\/$>$AHB1\+RSTR $\vert$= (\textbf{ RCC\+\_\+\+AHB1\+RSTR\+\_\+\+GPIOARST}))
+\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+GPIOB\+\_\+\+FORCE\+\_\+\+RESET}()~(\textbf{ RCC}-\/$>$AHB1\+RSTR $\vert$= (\textbf{ RCC\+\_\+\+AHB1\+RSTR\+\_\+\+GPIOBRST}))
+\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+GPIOC\+\_\+\+FORCE\+\_\+\+RESET}()~(\textbf{ RCC}-\/$>$AHB1\+RSTR $\vert$= (\textbf{ RCC\+\_\+\+AHB1\+RSTR\+\_\+\+GPIOCRST}))
+\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+GPIOH\+\_\+\+FORCE\+\_\+\+RESET}()~(\textbf{ RCC}-\/$>$AHB1\+RSTR $\vert$= (\textbf{ RCC\+\_\+\+AHB1\+RSTR\+\_\+\+GPIOHRST}))
+\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+DMA1\+\_\+\+FORCE\+\_\+\+RESET}()~(\textbf{ RCC}-\/$>$AHB1\+RSTR $\vert$= (\textbf{ RCC\+\_\+\+AHB1\+RSTR\+\_\+\+DMA1\+RST}))
+\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+DMA2\+\_\+\+FORCE\+\_\+\+RESET}()~(\textbf{ RCC}-\/$>$AHB1\+RSTR $\vert$= (\textbf{ RCC\+\_\+\+AHB1\+RSTR\+\_\+\+DMA2\+RST}))
+\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+AHB1\+\_\+\+RELEASE\+\_\+\+RESET}()~(\textbf{ RCC}-\/$>$AHB1\+RSTR = 0x00U)
+\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+GPIOA\+\_\+\+RELEASE\+\_\+\+RESET}()~(\textbf{ RCC}-\/$>$AHB1\+RSTR \&= $\sim$(\textbf{ RCC\+\_\+\+AHB1\+RSTR\+\_\+\+GPIOARST}))
+\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+GPIOB\+\_\+\+RELEASE\+\_\+\+RESET}()~(\textbf{ RCC}-\/$>$AHB1\+RSTR \&= $\sim$(\textbf{ RCC\+\_\+\+AHB1\+RSTR\+\_\+\+GPIOBRST}))
+\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+GPIOC\+\_\+\+RELEASE\+\_\+\+RESET}()~(\textbf{ RCC}-\/$>$AHB1\+RSTR \&= $\sim$(\textbf{ RCC\+\_\+\+AHB1\+RSTR\+\_\+\+GPIOCRST}))
+\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+GPIOH\+\_\+\+RELEASE\+\_\+\+RESET}()~(\textbf{ RCC}-\/$>$AHB1\+RSTR \&= $\sim$(\textbf{ RCC\+\_\+\+AHB1\+RSTR\+\_\+\+GPIOHRST}))
+\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+DMA1\+\_\+\+RELEASE\+\_\+\+RESET}()~(\textbf{ RCC}-\/$>$AHB1\+RSTR \&= $\sim$(\textbf{ RCC\+\_\+\+AHB1\+RSTR\+\_\+\+DMA1\+RST}))
+\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+DMA2\+\_\+\+RELEASE\+\_\+\+RESET}()~(\textbf{ RCC}-\/$>$AHB1\+RSTR \&= $\sim$(\textbf{ RCC\+\_\+\+AHB1\+RSTR\+\_\+\+DMA2\+RST}))
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Force or release AHB1 peripheral reset. 
+
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\label{group___r_c_c___a_h_b1___force___release___reset_ga87d828d91e67aaa931853a60779826c2}} 
+\index{AHB1 Force Release Reset@{AHB1 Force Release Reset}!\_\_HAL\_RCC\_AHB1\_FORCE\_RESET@{\_\_HAL\_RCC\_AHB1\_FORCE\_RESET}}
+\index{\_\_HAL\_RCC\_AHB1\_FORCE\_RESET@{\_\_HAL\_RCC\_AHB1\_FORCE\_RESET}!AHB1 Force Release Reset@{AHB1 Force Release Reset}}
+\doxysubsubsection{\_\_HAL\_RCC\_AHB1\_FORCE\_RESET}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+AHB1\+\_\+\+FORCE\+\_\+\+RESET(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~(\textbf{ RCC}-\/$>$AHB1\+RSTR = 0x\+FFFFFFFFU)}
+
+
+
+Definition at line 677 of file stm32f4xx\+\_\+hal\+\_\+rcc.\+h.
+
+\mbox{\label{group___r_c_c___a_h_b1___force___release___reset_ga23b6a1e77c4f045c29cc36a4b1e910b0}} 
+\index{AHB1 Force Release Reset@{AHB1 Force Release Reset}!\_\_HAL\_RCC\_AHB1\_RELEASE\_RESET@{\_\_HAL\_RCC\_AHB1\_RELEASE\_RESET}}
+\index{\_\_HAL\_RCC\_AHB1\_RELEASE\_RESET@{\_\_HAL\_RCC\_AHB1\_RELEASE\_RESET}!AHB1 Force Release Reset@{AHB1 Force Release Reset}}
+\doxysubsubsection{\_\_HAL\_RCC\_AHB1\_RELEASE\_RESET}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+AHB1\+\_\+\+RELEASE\+\_\+\+RESET(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~(\textbf{ RCC}-\/$>$AHB1\+RSTR = 0x00U)}
+
+
+
+Definition at line 685 of file stm32f4xx\+\_\+hal\+\_\+rcc.\+h.
+
+\mbox{\label{group___r_c_c___a_h_b1___force___release___reset_ga9135dece327ecc27f333f86dcf3ba8ee}} 
+\index{AHB1 Force Release Reset@{AHB1 Force Release Reset}!\_\_HAL\_RCC\_DMA1\_FORCE\_RESET@{\_\_HAL\_RCC\_DMA1\_FORCE\_RESET}}
+\index{\_\_HAL\_RCC\_DMA1\_FORCE\_RESET@{\_\_HAL\_RCC\_DMA1\_FORCE\_RESET}!AHB1 Force Release Reset@{AHB1 Force Release Reset}}
+\doxysubsubsection{\_\_HAL\_RCC\_DMA1\_FORCE\_RESET}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+DMA1\+\_\+\+FORCE\+\_\+\+RESET(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~(\textbf{ RCC}-\/$>$AHB1\+RSTR $\vert$= (\textbf{ RCC\+\_\+\+AHB1\+RSTR\+\_\+\+DMA1\+RST}))}
+
+
+
+Definition at line 682 of file stm32f4xx\+\_\+hal\+\_\+rcc.\+h.
+
+\mbox{\label{group___r_c_c___a_h_b1___force___release___reset_ga8f7eef8316c35175df11d77f5106d334}} 
+\index{AHB1 Force Release Reset@{AHB1 Force Release Reset}!\_\_HAL\_RCC\_DMA1\_RELEASE\_RESET@{\_\_HAL\_RCC\_DMA1\_RELEASE\_RESET}}
+\index{\_\_HAL\_RCC\_DMA1\_RELEASE\_RESET@{\_\_HAL\_RCC\_DMA1\_RELEASE\_RESET}!AHB1 Force Release Reset@{AHB1 Force Release Reset}}
+\doxysubsubsection{\_\_HAL\_RCC\_DMA1\_RELEASE\_RESET}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+DMA1\+\_\+\+RELEASE\+\_\+\+RESET(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~(\textbf{ RCC}-\/$>$AHB1\+RSTR \&= $\sim$(\textbf{ RCC\+\_\+\+AHB1\+RSTR\+\_\+\+DMA1\+RST}))}
+
+
+
+Definition at line 690 of file stm32f4xx\+\_\+hal\+\_\+rcc.\+h.
+
+\mbox{\label{group___r_c_c___a_h_b1___force___release___reset_gaf0be736e6cdebf31eeded223acc25613}} 
+\index{AHB1 Force Release Reset@{AHB1 Force Release Reset}!\_\_HAL\_RCC\_DMA2\_FORCE\_RESET@{\_\_HAL\_RCC\_DMA2\_FORCE\_RESET}}
+\index{\_\_HAL\_RCC\_DMA2\_FORCE\_RESET@{\_\_HAL\_RCC\_DMA2\_FORCE\_RESET}!AHB1 Force Release Reset@{AHB1 Force Release Reset}}
+\doxysubsubsection{\_\_HAL\_RCC\_DMA2\_FORCE\_RESET}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+DMA2\+\_\+\+FORCE\+\_\+\+RESET(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~(\textbf{ RCC}-\/$>$AHB1\+RSTR $\vert$= (\textbf{ RCC\+\_\+\+AHB1\+RSTR\+\_\+\+DMA2\+RST}))}
+
+
+
+Definition at line 683 of file stm32f4xx\+\_\+hal\+\_\+rcc.\+h.
+
+\mbox{\label{group___r_c_c___a_h_b1___force___release___reset_gab7d22b3d82cd2616c8e3fa930e437757}} 
+\index{AHB1 Force Release Reset@{AHB1 Force Release Reset}!\_\_HAL\_RCC\_DMA2\_RELEASE\_RESET@{\_\_HAL\_RCC\_DMA2\_RELEASE\_RESET}}
+\index{\_\_HAL\_RCC\_DMA2\_RELEASE\_RESET@{\_\_HAL\_RCC\_DMA2\_RELEASE\_RESET}!AHB1 Force Release Reset@{AHB1 Force Release Reset}}
+\doxysubsubsection{\_\_HAL\_RCC\_DMA2\_RELEASE\_RESET}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+DMA2\+\_\+\+RELEASE\+\_\+\+RESET(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~(\textbf{ RCC}-\/$>$AHB1\+RSTR \&= $\sim$(\textbf{ RCC\+\_\+\+AHB1\+RSTR\+\_\+\+DMA2\+RST}))}
+
+
+
+Definition at line 691 of file stm32f4xx\+\_\+hal\+\_\+rcc.\+h.
+
+\mbox{\label{group___r_c_c___a_h_b1___force___release___reset_gab329bd497cccffd979bcca9fd42bbc79}} 
+\index{AHB1 Force Release Reset@{AHB1 Force Release Reset}!\_\_HAL\_RCC\_GPIOA\_FORCE\_RESET@{\_\_HAL\_RCC\_GPIOA\_FORCE\_RESET}}
+\index{\_\_HAL\_RCC\_GPIOA\_FORCE\_RESET@{\_\_HAL\_RCC\_GPIOA\_FORCE\_RESET}!AHB1 Force Release Reset@{AHB1 Force Release Reset}}
+\doxysubsubsection{\_\_HAL\_RCC\_GPIOA\_FORCE\_RESET}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+GPIOA\+\_\+\+FORCE\+\_\+\+RESET(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~(\textbf{ RCC}-\/$>$AHB1\+RSTR $\vert$= (\textbf{ RCC\+\_\+\+AHB1\+RSTR\+\_\+\+GPIOARST}))}
+
+
+
+Definition at line 678 of file stm32f4xx\+\_\+hal\+\_\+rcc.\+h.
+
+\mbox{\label{group___r_c_c___a_h_b1___force___release___reset_gad56e47c2eacd972491f94296053d0cc3}} 
+\index{AHB1 Force Release Reset@{AHB1 Force Release Reset}!\_\_HAL\_RCC\_GPIOA\_RELEASE\_RESET@{\_\_HAL\_RCC\_GPIOA\_RELEASE\_RESET}}
+\index{\_\_HAL\_RCC\_GPIOA\_RELEASE\_RESET@{\_\_HAL\_RCC\_GPIOA\_RELEASE\_RESET}!AHB1 Force Release Reset@{AHB1 Force Release Reset}}
+\doxysubsubsection{\_\_HAL\_RCC\_GPIOA\_RELEASE\_RESET}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+GPIOA\+\_\+\+RELEASE\+\_\+\+RESET(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~(\textbf{ RCC}-\/$>$AHB1\+RSTR \&= $\sim$(\textbf{ RCC\+\_\+\+AHB1\+RSTR\+\_\+\+GPIOARST}))}
+
+
+
+Definition at line 686 of file stm32f4xx\+\_\+hal\+\_\+rcc.\+h.
+
+\mbox{\label{group___r_c_c___a_h_b1___force___release___reset_ga3b89be9638638ffce3ebd4f08a3b64cf}} 
+\index{AHB1 Force Release Reset@{AHB1 Force Release Reset}!\_\_HAL\_RCC\_GPIOB\_FORCE\_RESET@{\_\_HAL\_RCC\_GPIOB\_FORCE\_RESET}}
+\index{\_\_HAL\_RCC\_GPIOB\_FORCE\_RESET@{\_\_HAL\_RCC\_GPIOB\_FORCE\_RESET}!AHB1 Force Release Reset@{AHB1 Force Release Reset}}
+\doxysubsubsection{\_\_HAL\_RCC\_GPIOB\_FORCE\_RESET}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+GPIOB\+\_\+\+FORCE\+\_\+\+RESET(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~(\textbf{ RCC}-\/$>$AHB1\+RSTR $\vert$= (\textbf{ RCC\+\_\+\+AHB1\+RSTR\+\_\+\+GPIOBRST}))}
+
+
+
+Definition at line 679 of file stm32f4xx\+\_\+hal\+\_\+rcc.\+h.
+
+\mbox{\label{group___r_c_c___a_h_b1___force___release___reset_gaf03da3b36478071844fbd77df618a686}} 
+\index{AHB1 Force Release Reset@{AHB1 Force Release Reset}!\_\_HAL\_RCC\_GPIOB\_RELEASE\_RESET@{\_\_HAL\_RCC\_GPIOB\_RELEASE\_RESET}}
+\index{\_\_HAL\_RCC\_GPIOB\_RELEASE\_RESET@{\_\_HAL\_RCC\_GPIOB\_RELEASE\_RESET}!AHB1 Force Release Reset@{AHB1 Force Release Reset}}
+\doxysubsubsection{\_\_HAL\_RCC\_GPIOB\_RELEASE\_RESET}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+GPIOB\+\_\+\+RELEASE\+\_\+\+RESET(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~(\textbf{ RCC}-\/$>$AHB1\+RSTR \&= $\sim$(\textbf{ RCC\+\_\+\+AHB1\+RSTR\+\_\+\+GPIOBRST}))}
+
+
+
+Definition at line 687 of file stm32f4xx\+\_\+hal\+\_\+rcc.\+h.
+
+\mbox{\label{group___r_c_c___a_h_b1___force___release___reset_ga6e6a20fa8e0d7b3ebfdce26f6b1a1ed0}} 
+\index{AHB1 Force Release Reset@{AHB1 Force Release Reset}!\_\_HAL\_RCC\_GPIOC\_FORCE\_RESET@{\_\_HAL\_RCC\_GPIOC\_FORCE\_RESET}}
+\index{\_\_HAL\_RCC\_GPIOC\_FORCE\_RESET@{\_\_HAL\_RCC\_GPIOC\_FORCE\_RESET}!AHB1 Force Release Reset@{AHB1 Force Release Reset}}
+\doxysubsubsection{\_\_HAL\_RCC\_GPIOC\_FORCE\_RESET}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+GPIOC\+\_\+\+FORCE\+\_\+\+RESET(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~(\textbf{ RCC}-\/$>$AHB1\+RSTR $\vert$= (\textbf{ RCC\+\_\+\+AHB1\+RSTR\+\_\+\+GPIOCRST}))}
+
+
+
+Definition at line 680 of file stm32f4xx\+\_\+hal\+\_\+rcc.\+h.
+
+\mbox{\label{group___r_c_c___a_h_b1___force___release___reset_ga1df0e3536d3450435bdccdbe9c878736}} 
+\index{AHB1 Force Release Reset@{AHB1 Force Release Reset}!\_\_HAL\_RCC\_GPIOC\_RELEASE\_RESET@{\_\_HAL\_RCC\_GPIOC\_RELEASE\_RESET}}
+\index{\_\_HAL\_RCC\_GPIOC\_RELEASE\_RESET@{\_\_HAL\_RCC\_GPIOC\_RELEASE\_RESET}!AHB1 Force Release Reset@{AHB1 Force Release Reset}}
+\doxysubsubsection{\_\_HAL\_RCC\_GPIOC\_RELEASE\_RESET}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+GPIOC\+\_\+\+RELEASE\+\_\+\+RESET(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~(\textbf{ RCC}-\/$>$AHB1\+RSTR \&= $\sim$(\textbf{ RCC\+\_\+\+AHB1\+RSTR\+\_\+\+GPIOCRST}))}
+
+
+
+Definition at line 688 of file stm32f4xx\+\_\+hal\+\_\+rcc.\+h.
+
+\mbox{\label{group___r_c_c___a_h_b1___force___release___reset_ga4f05c575d762edf40a6d17f88671b68d}} 
+\index{AHB1 Force Release Reset@{AHB1 Force Release Reset}!\_\_HAL\_RCC\_GPIOH\_FORCE\_RESET@{\_\_HAL\_RCC\_GPIOH\_FORCE\_RESET}}
+\index{\_\_HAL\_RCC\_GPIOH\_FORCE\_RESET@{\_\_HAL\_RCC\_GPIOH\_FORCE\_RESET}!AHB1 Force Release Reset@{AHB1 Force Release Reset}}
+\doxysubsubsection{\_\_HAL\_RCC\_GPIOH\_FORCE\_RESET}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+GPIOH\+\_\+\+FORCE\+\_\+\+RESET(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~(\textbf{ RCC}-\/$>$AHB1\+RSTR $\vert$= (\textbf{ RCC\+\_\+\+AHB1\+RSTR\+\_\+\+GPIOHRST}))}
+
+
+
+Definition at line 681 of file stm32f4xx\+\_\+hal\+\_\+rcc.\+h.
+
+\mbox{\label{group___r_c_c___a_h_b1___force___release___reset_gaaf11aa8bacb98c4e567bbaa58635acec}} 
+\index{AHB1 Force Release Reset@{AHB1 Force Release Reset}!\_\_HAL\_RCC\_GPIOH\_RELEASE\_RESET@{\_\_HAL\_RCC\_GPIOH\_RELEASE\_RESET}}
+\index{\_\_HAL\_RCC\_GPIOH\_RELEASE\_RESET@{\_\_HAL\_RCC\_GPIOH\_RELEASE\_RESET}!AHB1 Force Release Reset@{AHB1 Force Release Reset}}
+\doxysubsubsection{\_\_HAL\_RCC\_GPIOH\_RELEASE\_RESET}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+GPIOH\+\_\+\+RELEASE\+\_\+\+RESET(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~(\textbf{ RCC}-\/$>$AHB1\+RSTR \&= $\sim$(\textbf{ RCC\+\_\+\+AHB1\+RSTR\+\_\+\+GPIOHRST}))}
+
+
+
+Definition at line 689 of file stm32f4xx\+\_\+hal\+\_\+rcc.\+h.
+

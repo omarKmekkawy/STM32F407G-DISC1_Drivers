@@ -1,0 +1,142 @@
+\doxysection{system/src/stm32f4-\/hal/stm32f4xx\+\_\+hal\+\_\+rtc.c File Reference}
+\label{stm32f4xx__hal__rtc_8c}\index{system/src/stm32f4-\/hal/stm32f4xx\_hal\_rtc.c@{system/src/stm32f4-\/hal/stm32f4xx\_hal\_rtc.c}}
+
+
+RTC HAL module driver. This file provides firmware functions to manage the following functionalities of the Real Time Clock (RTC) peripheral\+:  
+
+
+{\ttfamily \#include \char`\"{}stm32f4xx\+\_\+hal.\+h\char`\"{}}\newline
+Include dependency graph for stm32f4xx\+\_\+hal\+\_\+rtc.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{stm32f4xx__hal__rtc_8c__incl}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Detailed Description}
+RTC HAL module driver. This file provides firmware functions to manage the following functionalities of the Real Time Clock (RTC) peripheral\+: 
+
+\begin{DoxyAuthor}{Author}
+MCD Application Team 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+V1.\+5.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+06-\/May-\/2016
+\begin{DoxyItemize}
+\item Initialization and de-\/initialization functions
+\item RTC Time and Date functions
+\item RTC Alarm functions
+\item Peripheral Control functions ~\newline
+
+\item Peripheral State functions
+\end{DoxyItemize}
+\end{DoxyDate}
+\begin{DoxyVerb}==============================================================================
+            ##### Backup Domain Operating Condition #####
+==============================================================================
+[..] The real-time clock (RTC), the RTC backup registers, and the backup 
+     SRAM (BKP SRAM) can be powered from the VBAT voltage when the main 
+     VDD supply is powered off.
+     To retain the content of the RTC backup registers, backup SRAM, and supply 
+     the RTC when VDD is turned off, VBAT pin can be connected to an optional 
+     standby voltage supplied by a battery or by another source.
+
+[..] To allow the RTC operating even when the main digital supply (VDD) is turned
+     off, the VBAT pin powers the following blocks:
+  (#) The RTC
+  (#) The LSE oscillator
+  (#) The backup SRAM when the low power backup regulator is enabled
+  (#) PC13 to PC15 I/Os, plus PI8 I/O (when available)
+
+[..] When the backup domain is supplied by VDD (analog switch connected to VDD),
+     the following pins are available:
+  (#) PC14 and PC15 can be used as either GPIO or LSE pins
+  (#) PC13 can be used as a GPIO or as the RTC_AF1 pin
+  (#) PI8 can be used as a GPIO or as the RTC_AF2 pin
+
+[..] When the backup domain is supplied by VBAT (analog switch connected to VBAT 
+     because VDD is not present), the following pins are available:
+  (#) PC14 and PC15 can be used as LSE pins only
+  (#) PC13 can be used as the RTC_AF1 pin 
+  (#) PI8 can be used as the RTC_AF2 pin
+           
+                 ##### Backup Domain Reset #####
+==================================================================
+[..] The backup domain reset sets all RTC registers and the RCC_BDCR register 
+     to their reset values. The BKPSRAM is not affected by this reset. The only
+     way to reset the BKPSRAM is through the Flash interface by requesting 
+     a protection level change from 1 to 0.
+[..] A backup domain reset is generated when one of the following events occurs:
+  (#) Software reset, triggered by setting the BDRST bit in the 
+      RCC Backup domain control register (RCC_BDCR). 
+  (#) VDD or VBAT power on, if both supplies have previously been powered off.  
+
+                 ##### Backup Domain Access #####
+==================================================================
+[..] After reset, the backup domain (RTC registers, RTC backup data 
+     registers and backup SRAM) is protected against possible unwanted write 
+     accesses. 
+[..] To enable access to the RTC Domain and RTC registers, proceed as follows:
+  (+) Enable the Power Controller (PWR) APB1 interface clock using the
+      __HAL_RCC_PWR_CLK_ENABLE() function.
+  (+) Enable access to RTC domain using the HAL_PWR_EnableBkUpAccess() function.
+  (+) Select the RTC clock source using the __HAL_RCC_RTC_CONFIG() function.
+  (+) Enable RTC Clock using the __HAL_RCC_RTC_ENABLE() function.
+
+
+                ##### How to use this driver #####
+==================================================================
+[..] 
+  (+) Enable the RTC domain access (see description in the section above).
+  (+) Configure the RTC Prescaler (Asynchronous and Synchronous) and RTC hour 
+      format using the HAL_RTC_Init() function.
+
+*** Time and Date configuration ***
+===================================
+[..] 
+  (+) To configure the RTC Calendar (Time and Date) use the HAL_RTC_SetTime() 
+      and HAL_RTC_SetDate() functions.
+  (+) To read the RTC Calendar, use the HAL_RTC_GetTime() and HAL_RTC_GetDate() functions. 
+
+*** Alarm configuration ***
+===========================
+[..]
+  (+) To configure the RTC Alarm use the HAL_RTC_SetAlarm() function. 
+      You can also configure the RTC Alarm with interrupt mode using the HAL_RTC_SetAlarm_IT() function.
+  (+) To read the RTC Alarm, use the HAL_RTC_GetAlarm() function.
+
+                ##### RTC and low power modes #####
+==================================================================
+[..] The MCU can be woken up from a low power mode by an RTC alternate 
+     function.
+[..] The RTC alternate functions are the RTC alarms (Alarm A and Alarm B), 
+     RTC wake-up, RTC tamper event detection and RTC time stamp event detection.
+     These RTC alternate functions can wake up the system from the Stop and 
+     Standby low power modes.
+[..] The system can also wake up from low power modes without depending 
+     on an external interrupt (Auto-wake-up mode), by using the RTC alarm 
+     or the RTC wake-up events.
+[..] The RTC provides a programmable time base for waking up from the 
+     Stop or Standby mode at regular intervals.
+     Wake-up from STOP and STANDBY modes is possible only when the RTC clock source
+     is LSE or LSI.\end{DoxyVerb}
+
+
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+\doxysubsubsection*{\begin{center}\copyright{} COPYRIGHT(c) 2016 STMicroelectronics\end{center} }
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met\+:
+\begin{DoxyEnumerate}
+\item Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+\item Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+\item Neither the name of STMicroelectronics nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+\end{DoxyEnumerate}
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \char`\"{}\+AS IS\char`\"{} AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. 

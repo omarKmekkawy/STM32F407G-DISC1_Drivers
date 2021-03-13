@@ -1,0 +1,332 @@
+\doxysection{system/include/stm32f4-\/hal/stm32f4xx\+\_\+hal\+\_\+dma.h File Reference}
+\label{stm32f4xx__hal__dma_8h}\index{system/include/stm32f4-\/hal/stm32f4xx\_hal\_dma.h@{system/include/stm32f4-\/hal/stm32f4xx\_hal\_dma.h}}
+
+
+Header file of DMA HAL module.  
+
+
+{\ttfamily \#include \char`\"{}stm32f4xx\+\_\+hal\+\_\+def.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}stm32f4xx\+\_\+hal\+\_\+dma\+\_\+ex.\+h\char`\"{}}\newline
+Include dependency graph for stm32f4xx\+\_\+hal\+\_\+dma.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{stm32f4xx__hal__dma_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{stm32f4xx__hal__dma_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \textbf{ DMA\+\_\+\+Init\+Type\+Def}
+\begin{DoxyCompactList}\small\item\em DMA Configuration Structure definition. \end{DoxyCompactList}\item 
+struct \textbf{ \+\_\+\+\_\+\+DMA\+\_\+\+Handle\+Type\+Def}
+\begin{DoxyCompactList}\small\item\em DMA handle Structure definition. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \textbf{ HAL\+\_\+\+DMA\+\_\+\+ERROR\+\_\+\+NONE}~((uint32\+\_\+t)0x00000000U)
+\item 
+\#define \textbf{ HAL\+\_\+\+DMA\+\_\+\+ERROR\+\_\+\+TE}~((uint32\+\_\+t)0x00000001U)
+\item 
+\#define \textbf{ HAL\+\_\+\+DMA\+\_\+\+ERROR\+\_\+\+FE}~((uint32\+\_\+t)0x00000002U)
+\item 
+\#define \textbf{ HAL\+\_\+\+DMA\+\_\+\+ERROR\+\_\+\+DME}~((uint32\+\_\+t)0x00000004U)
+\item 
+\#define \textbf{ HAL\+\_\+\+DMA\+\_\+\+ERROR\+\_\+\+TIMEOUT}~((uint32\+\_\+t)0x00000020U)
+\item 
+\#define \textbf{ HAL\+\_\+\+DMA\+\_\+\+ERROR\+\_\+\+PARAM}~((uint32\+\_\+t)0x00000040U)
+\item 
+\#define \textbf{ HAL\+\_\+\+DMA\+\_\+\+ERROR\+\_\+\+NO\+\_\+\+XFER}~((uint32\+\_\+t)0x00000080U)
+\item 
+\#define \textbf{ HAL\+\_\+\+DMA\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+SUPPORTED}~((uint32\+\_\+t)0x00000100U)
+\item 
+\#define \textbf{ DMA\+\_\+\+CHANNEL\+\_\+0}~((uint32\+\_\+t)0x00000000U)
+\item 
+\#define \textbf{ DMA\+\_\+\+CHANNEL\+\_\+1}~((uint32\+\_\+t)0x02000000U)
+\item 
+\#define \textbf{ DMA\+\_\+\+CHANNEL\+\_\+2}~((uint32\+\_\+t)0x04000000U)
+\item 
+\#define \textbf{ DMA\+\_\+\+CHANNEL\+\_\+3}~((uint32\+\_\+t)0x06000000U)
+\item 
+\#define \textbf{ DMA\+\_\+\+CHANNEL\+\_\+4}~((uint32\+\_\+t)0x08000000U)
+\item 
+\#define \textbf{ DMA\+\_\+\+CHANNEL\+\_\+5}~((uint32\+\_\+t)0x0\+A000000U)
+\item 
+\#define \textbf{ DMA\+\_\+\+CHANNEL\+\_\+6}~((uint32\+\_\+t)0x0\+C000000U)
+\item 
+\#define \textbf{ DMA\+\_\+\+CHANNEL\+\_\+7}~((uint32\+\_\+t)0x0\+E000000U)
+\item 
+\#define \textbf{ DMA\+\_\+\+PERIPH\+\_\+\+TO\+\_\+\+MEMORY}~((uint32\+\_\+t)0x00000000U)
+\item 
+\#define \textbf{ DMA\+\_\+\+MEMORY\+\_\+\+TO\+\_\+\+PERIPH}~((uint32\+\_\+t)\textbf{ DMA\+\_\+\+Sx\+CR\+\_\+\+DIR\+\_\+0})
+\item 
+\#define \textbf{ DMA\+\_\+\+MEMORY\+\_\+\+TO\+\_\+\+MEMORY}~((uint32\+\_\+t)\textbf{ DMA\+\_\+\+Sx\+CR\+\_\+\+DIR\+\_\+1})
+\item 
+\#define \textbf{ DMA\+\_\+\+PINC\+\_\+\+ENABLE}~((uint32\+\_\+t)\textbf{ DMA\+\_\+\+Sx\+CR\+\_\+\+PINC})
+\item 
+\#define \textbf{ DMA\+\_\+\+PINC\+\_\+\+DISABLE}~((uint32\+\_\+t)0x00000000U)
+\item 
+\#define \textbf{ DMA\+\_\+\+MINC\+\_\+\+ENABLE}~((uint32\+\_\+t)\textbf{ DMA\+\_\+\+Sx\+CR\+\_\+\+MINC})
+\item 
+\#define \textbf{ DMA\+\_\+\+MINC\+\_\+\+DISABLE}~((uint32\+\_\+t)0x00000000U)
+\item 
+\#define \textbf{ DMA\+\_\+\+PDATAALIGN\+\_\+\+BYTE}~((uint32\+\_\+t)0x00000000U)
+\item 
+\#define \textbf{ DMA\+\_\+\+PDATAALIGN\+\_\+\+HALFWORD}~((uint32\+\_\+t)\textbf{ DMA\+\_\+\+Sx\+CR\+\_\+\+PSIZE\+\_\+0})
+\item 
+\#define \textbf{ DMA\+\_\+\+PDATAALIGN\+\_\+\+WORD}~((uint32\+\_\+t)\textbf{ DMA\+\_\+\+Sx\+CR\+\_\+\+PSIZE\+\_\+1})
+\item 
+\#define \textbf{ DMA\+\_\+\+MDATAALIGN\+\_\+\+BYTE}~((uint32\+\_\+t)0x00000000U)
+\item 
+\#define \textbf{ DMA\+\_\+\+MDATAALIGN\+\_\+\+HALFWORD}~((uint32\+\_\+t)\textbf{ DMA\+\_\+\+Sx\+CR\+\_\+\+MSIZE\+\_\+0})
+\item 
+\#define \textbf{ DMA\+\_\+\+MDATAALIGN\+\_\+\+WORD}~((uint32\+\_\+t)\textbf{ DMA\+\_\+\+Sx\+CR\+\_\+\+MSIZE\+\_\+1})
+\item 
+\#define \textbf{ DMA\+\_\+\+NORMAL}~((uint32\+\_\+t)0x00000000U)
+\item 
+\#define \textbf{ DMA\+\_\+\+CIRCULAR}~((uint32\+\_\+t)\textbf{ DMA\+\_\+\+Sx\+CR\+\_\+\+CIRC})
+\item 
+\#define \textbf{ DMA\+\_\+\+PFCTRL}~((uint32\+\_\+t)\textbf{ DMA\+\_\+\+Sx\+CR\+\_\+\+PFCTRL})
+\item 
+\#define \textbf{ DMA\+\_\+\+PRIORITY\+\_\+\+LOW}~((uint32\+\_\+t)0x00000000U)
+\item 
+\#define \textbf{ DMA\+\_\+\+PRIORITY\+\_\+\+MEDIUM}~((uint32\+\_\+t)\textbf{ DMA\+\_\+\+Sx\+CR\+\_\+\+PL\+\_\+0})
+\item 
+\#define \textbf{ DMA\+\_\+\+PRIORITY\+\_\+\+HIGH}~((uint32\+\_\+t)\textbf{ DMA\+\_\+\+Sx\+CR\+\_\+\+PL\+\_\+1})
+\item 
+\#define \textbf{ DMA\+\_\+\+PRIORITY\+\_\+\+VERY\+\_\+\+HIGH}~((uint32\+\_\+t)\textbf{ DMA\+\_\+\+Sx\+CR\+\_\+\+PL})
+\item 
+\#define \textbf{ DMA\+\_\+\+FIFOMODE\+\_\+\+DISABLE}~((uint32\+\_\+t)0x00000000U)
+\item 
+\#define \textbf{ DMA\+\_\+\+FIFOMODE\+\_\+\+ENABLE}~((uint32\+\_\+t)\textbf{ DMA\+\_\+\+Sx\+FCR\+\_\+\+DMDIS})
+\item 
+\#define \textbf{ DMA\+\_\+\+FIFO\+\_\+\+THRESHOLD\+\_\+1\+QUARTERFULL}~((uint32\+\_\+t)0x00000000U)
+\item 
+\#define \textbf{ DMA\+\_\+\+FIFO\+\_\+\+THRESHOLD\+\_\+\+HALFFULL}~((uint32\+\_\+t)\textbf{ DMA\+\_\+\+Sx\+FCR\+\_\+\+FTH\+\_\+0})
+\item 
+\#define \textbf{ DMA\+\_\+\+FIFO\+\_\+\+THRESHOLD\+\_\+3\+QUARTERSFULL}~((uint32\+\_\+t)\textbf{ DMA\+\_\+\+Sx\+FCR\+\_\+\+FTH\+\_\+1})
+\item 
+\#define \textbf{ DMA\+\_\+\+FIFO\+\_\+\+THRESHOLD\+\_\+\+FULL}~((uint32\+\_\+t)\textbf{ DMA\+\_\+\+Sx\+FCR\+\_\+\+FTH})
+\item 
+\#define \textbf{ DMA\+\_\+\+MBURST\+\_\+\+SINGLE}~((uint32\+\_\+t)0x00000000U)
+\item 
+\#define \textbf{ DMA\+\_\+\+MBURST\+\_\+\+INC4}~((uint32\+\_\+t)\textbf{ DMA\+\_\+\+Sx\+CR\+\_\+\+MBURST\+\_\+0})
+\item 
+\#define \textbf{ DMA\+\_\+\+MBURST\+\_\+\+INC8}~((uint32\+\_\+t)\textbf{ DMA\+\_\+\+Sx\+CR\+\_\+\+MBURST\+\_\+1})
+\item 
+\#define \textbf{ DMA\+\_\+\+MBURST\+\_\+\+INC16}~((uint32\+\_\+t)\textbf{ DMA\+\_\+\+Sx\+CR\+\_\+\+MBURST})
+\item 
+\#define \textbf{ DMA\+\_\+\+PBURST\+\_\+\+SINGLE}~((uint32\+\_\+t)0x00000000U)
+\item 
+\#define \textbf{ DMA\+\_\+\+PBURST\+\_\+\+INC4}~((uint32\+\_\+t)\textbf{ DMA\+\_\+\+Sx\+CR\+\_\+\+PBURST\+\_\+0})
+\item 
+\#define \textbf{ DMA\+\_\+\+PBURST\+\_\+\+INC8}~((uint32\+\_\+t)\textbf{ DMA\+\_\+\+Sx\+CR\+\_\+\+PBURST\+\_\+1})
+\item 
+\#define \textbf{ DMA\+\_\+\+PBURST\+\_\+\+INC16}~((uint32\+\_\+t)\textbf{ DMA\+\_\+\+Sx\+CR\+\_\+\+PBURST})
+\item 
+\#define \textbf{ DMA\+\_\+\+IT\+\_\+\+TC}~((uint32\+\_\+t)\textbf{ DMA\+\_\+\+Sx\+CR\+\_\+\+TCIE})
+\item 
+\#define \textbf{ DMA\+\_\+\+IT\+\_\+\+HT}~((uint32\+\_\+t)\textbf{ DMA\+\_\+\+Sx\+CR\+\_\+\+HTIE})
+\item 
+\#define \textbf{ DMA\+\_\+\+IT\+\_\+\+TE}~((uint32\+\_\+t)\textbf{ DMA\+\_\+\+Sx\+CR\+\_\+\+TEIE})
+\item 
+\#define \textbf{ DMA\+\_\+\+IT\+\_\+\+DME}~((uint32\+\_\+t)\textbf{ DMA\+\_\+\+Sx\+CR\+\_\+\+DMEIE})
+\item 
+\#define \textbf{ DMA\+\_\+\+IT\+\_\+\+FE}~((uint32\+\_\+t)0x00000080U)
+\item 
+\#define \textbf{ DMA\+\_\+\+FLAG\+\_\+\+FEIF0\+\_\+4}~((uint32\+\_\+t)0x00800001U)
+\item 
+\#define \textbf{ DMA\+\_\+\+FLAG\+\_\+\+DMEIF0\+\_\+4}~((uint32\+\_\+t)0x00800004U)
+\item 
+\#define \textbf{ DMA\+\_\+\+FLAG\+\_\+\+TEIF0\+\_\+4}~((uint32\+\_\+t)0x00000008U)
+\item 
+\#define \textbf{ DMA\+\_\+\+FLAG\+\_\+\+HTIF0\+\_\+4}~((uint32\+\_\+t)0x00000010U)
+\item 
+\#define \textbf{ DMA\+\_\+\+FLAG\+\_\+\+TCIF0\+\_\+4}~((uint32\+\_\+t)0x00000020U)
+\item 
+\#define \textbf{ DMA\+\_\+\+FLAG\+\_\+\+FEIF1\+\_\+5}~((uint32\+\_\+t)0x00000040U)
+\item 
+\#define \textbf{ DMA\+\_\+\+FLAG\+\_\+\+DMEIF1\+\_\+5}~((uint32\+\_\+t)0x00000100U)
+\item 
+\#define \textbf{ DMA\+\_\+\+FLAG\+\_\+\+TEIF1\+\_\+5}~((uint32\+\_\+t)0x00000200U)
+\item 
+\#define \textbf{ DMA\+\_\+\+FLAG\+\_\+\+HTIF1\+\_\+5}~((uint32\+\_\+t)0x00000400U)
+\item 
+\#define \textbf{ DMA\+\_\+\+FLAG\+\_\+\+TCIF1\+\_\+5}~((uint32\+\_\+t)0x00000800U)
+\item 
+\#define \textbf{ DMA\+\_\+\+FLAG\+\_\+\+FEIF2\+\_\+6}~((uint32\+\_\+t)0x00010000U)
+\item 
+\#define \textbf{ DMA\+\_\+\+FLAG\+\_\+\+DMEIF2\+\_\+6}~((uint32\+\_\+t)0x00040000U)
+\item 
+\#define \textbf{ DMA\+\_\+\+FLAG\+\_\+\+TEIF2\+\_\+6}~((uint32\+\_\+t)0x00080000U)
+\item 
+\#define \textbf{ DMA\+\_\+\+FLAG\+\_\+\+HTIF2\+\_\+6}~((uint32\+\_\+t)0x00100000U)
+\item 
+\#define \textbf{ DMA\+\_\+\+FLAG\+\_\+\+TCIF2\+\_\+6}~((uint32\+\_\+t)0x00200000U)
+\item 
+\#define \textbf{ DMA\+\_\+\+FLAG\+\_\+\+FEIF3\+\_\+7}~((uint32\+\_\+t)0x00400000U)
+\item 
+\#define \textbf{ DMA\+\_\+\+FLAG\+\_\+\+DMEIF3\+\_\+7}~((uint32\+\_\+t)0x01000000U)
+\item 
+\#define \textbf{ DMA\+\_\+\+FLAG\+\_\+\+TEIF3\+\_\+7}~((uint32\+\_\+t)0x02000000U)
+\item 
+\#define \textbf{ DMA\+\_\+\+FLAG\+\_\+\+HTIF3\+\_\+7}~((uint32\+\_\+t)0x04000000U)
+\item 
+\#define \textbf{ DMA\+\_\+\+FLAG\+\_\+\+TCIF3\+\_\+7}~((uint32\+\_\+t)0x08000000U)
+\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+DMA\+\_\+\+RESET\+\_\+\+HANDLE\+\_\+\+STATE}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$State = \textbf{ HAL\+\_\+\+DMA\+\_\+\+STATE\+\_\+\+RESET})
+\begin{DoxyCompactList}\small\item\em Reset DMA handle state. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+DMA\+\_\+\+GET\+\_\+\+FS}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)~(((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$FCR \& (\textbf{ DMA\+\_\+\+Sx\+FCR\+\_\+\+FS})))
+\begin{DoxyCompactList}\small\item\em Return the current DMA Stream FIFO filled level. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+DMA\+\_\+\+ENABLE}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$CR $\vert$=  \textbf{ DMA\+\_\+\+Sx\+CR\+\_\+\+EN})
+\begin{DoxyCompactList}\small\item\em Enable the specified DMA Stream. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+DMA\+\_\+\+DISABLE}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$CR \&=  $\sim$\textbf{ DMA\+\_\+\+Sx\+CR\+\_\+\+EN})
+\begin{DoxyCompactList}\small\item\em Disable the specified DMA Stream. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+DMA\+\_\+\+GET\+\_\+\+TC\+\_\+\+FLAG\+\_\+\+INDEX}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Return the current DMA Stream transfer complete flag. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+DMA\+\_\+\+GET\+\_\+\+HT\+\_\+\+FLAG\+\_\+\+INDEX}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Return the current DMA Stream half transfer complete flag. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+DMA\+\_\+\+GET\+\_\+\+TE\+\_\+\+FLAG\+\_\+\+INDEX}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Return the current DMA Stream transfer error flag. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+DMA\+\_\+\+GET\+\_\+\+FE\+\_\+\+FLAG\+\_\+\+INDEX}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Return the current DMA Stream FIFO error flag. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+DMA\+\_\+\+GET\+\_\+\+DME\+\_\+\+FLAG\+\_\+\+INDEX}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Return the current DMA Stream direct mode error flag. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+DMA\+\_\+\+GET\+\_\+\+FLAG}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+FLAG\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Get the DMA Stream pending flags. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+DMA\+\_\+\+CLEAR\+\_\+\+FLAG}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+FLAG\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Clear the DMA Stream pending flags. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+DMA\+\_\+\+ENABLE\+\_\+\+IT}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Enable the specified DMA Stream interrupts. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+DMA\+\_\+\+DISABLE\+\_\+\+IT}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Disable the specified DMA Stream interrupts. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+DMA\+\_\+\+GET\+\_\+\+IT\+\_\+\+SOURCE}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Check whether the specified DMA Stream interrupt is enabled or disabled. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+DMA\+\_\+\+SET\+\_\+\+COUNTER}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+COUNTER\+\_\+\+\_\+)~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$NDTR = (uint16\+\_\+t)(\+\_\+\+\_\+\+COUNTER\+\_\+\+\_\+))
+\begin{DoxyCompactList}\small\item\em Writes the number of data units to be transferred on the DMA Stream. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+DMA\+\_\+\+GET\+\_\+\+COUNTER}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$NDTR)
+\begin{DoxyCompactList}\small\item\em Returns the number of remaining data units in the current DMAy Streamx transfer. \end{DoxyCompactList}\item 
+\#define \textbf{ IS\+\_\+\+DMA\+\_\+\+CHANNEL}(CHANNEL)
+\item 
+\#define \textbf{ IS\+\_\+\+DMA\+\_\+\+DIRECTION}(DIRECTION)
+\item 
+\#define \textbf{ IS\+\_\+\+DMA\+\_\+\+BUFFER\+\_\+\+SIZE}(SIZE)~(((SIZE) $>$= 0x01U) \&\& ((SIZE) $<$ 0x10000U))
+\item 
+\#define \textbf{ IS\+\_\+\+DMA\+\_\+\+PERIPHERAL\+\_\+\+INC\+\_\+\+STATE}(STATE)
+\item 
+\#define \textbf{ IS\+\_\+\+DMA\+\_\+\+MEMORY\+\_\+\+INC\+\_\+\+STATE}(STATE)
+\item 
+\#define \textbf{ IS\+\_\+\+DMA\+\_\+\+PERIPHERAL\+\_\+\+DATA\+\_\+\+SIZE}(SIZE)
+\item 
+\#define \textbf{ IS\+\_\+\+DMA\+\_\+\+MEMORY\+\_\+\+DATA\+\_\+\+SIZE}(SIZE)
+\item 
+\#define \textbf{ IS\+\_\+\+DMA\+\_\+\+MODE}(MODE)
+\item 
+\#define \textbf{ IS\+\_\+\+DMA\+\_\+\+PRIORITY}(PRIORITY)
+\item 
+\#define \textbf{ IS\+\_\+\+DMA\+\_\+\+FIFO\+\_\+\+MODE\+\_\+\+STATE}(STATE)
+\item 
+\#define \textbf{ IS\+\_\+\+DMA\+\_\+\+FIFO\+\_\+\+THRESHOLD}(THRESHOLD)
+\item 
+\#define \textbf{ IS\+\_\+\+DMA\+\_\+\+MEMORY\+\_\+\+BURST}(BURST)
+\item 
+\#define \textbf{ IS\+\_\+\+DMA\+\_\+\+PERIPHERAL\+\_\+\+BURST}(BURST)
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \textbf{ \+\_\+\+\_\+\+DMA\+\_\+\+Handle\+Type\+Def} \textbf{ DMA\+\_\+\+Handle\+Type\+Def}
+\begin{DoxyCompactList}\small\item\em DMA handle Structure definition. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \textbf{ HAL\+\_\+\+DMA\+\_\+\+State\+Type\+Def} \{ \newline
+\textbf{ HAL\+\_\+\+DMA\+\_\+\+STATE\+\_\+\+RESET} = 0x00U
+, \textbf{ HAL\+\_\+\+DMA\+\_\+\+STATE\+\_\+\+READY} = 0x01U
+, \textbf{ HAL\+\_\+\+DMA\+\_\+\+STATE\+\_\+\+BUSY} = 0x02U
+, \textbf{ HAL\+\_\+\+DMA\+\_\+\+STATE\+\_\+\+TIMEOUT} = 0x03U
+, \newline
+\textbf{ HAL\+\_\+\+DMA\+\_\+\+STATE\+\_\+\+ERROR} = 0x04U
+, \textbf{ HAL\+\_\+\+DMA\+\_\+\+STATE\+\_\+\+ABORT} = 0x05U
+ \}
+\begin{DoxyCompactList}\small\item\em HAL DMA State structures definition. \end{DoxyCompactList}\item 
+enum \textbf{ HAL\+\_\+\+DMA\+\_\+\+Level\+Complete\+Type\+Def} \{ \textbf{ HAL\+\_\+\+DMA\+\_\+\+FULL\+\_\+\+TRANSFER} = 0x00U
+, \textbf{ HAL\+\_\+\+DMA\+\_\+\+HALF\+\_\+\+TRANSFER} = 0x01U
+ \}
+\begin{DoxyCompactList}\small\item\em HAL DMA Error Code structure definition. \end{DoxyCompactList}\item 
+enum \textbf{ HAL\+\_\+\+DMA\+\_\+\+Callback\+IDType\+Def} \{ \newline
+\textbf{ HAL\+\_\+\+DMA\+\_\+\+XFER\+\_\+\+CPLT\+\_\+\+CB\+\_\+\+ID} = 0x00U
+, \textbf{ HAL\+\_\+\+DMA\+\_\+\+XFER\+\_\+\+HALFCPLT\+\_\+\+CB\+\_\+\+ID} = 0x01U
+, \textbf{ HAL\+\_\+\+DMA\+\_\+\+XFER\+\_\+\+M1\+CPLT\+\_\+\+CB\+\_\+\+ID} = 0x02U
+, \textbf{ HAL\+\_\+\+DMA\+\_\+\+XFER\+\_\+\+M1\+HALFCPLT\+\_\+\+CB\+\_\+\+ID} = 0x03U
+, \newline
+\textbf{ HAL\+\_\+\+DMA\+\_\+\+XFER\+\_\+\+ERROR\+\_\+\+CB\+\_\+\+ID} = 0x04U
+, \textbf{ HAL\+\_\+\+DMA\+\_\+\+XFER\+\_\+\+ABORT\+\_\+\+CB\+\_\+\+ID} = 0x05U
+, \textbf{ HAL\+\_\+\+DMA\+\_\+\+XFER\+\_\+\+ALL\+\_\+\+CB\+\_\+\+ID} = 0x06U
+ \}
+\begin{DoxyCompactList}\small\item\em HAL DMA Error Code structure definition. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+DMA\+\_\+\+Init} (\textbf{ DMA\+\_\+\+Handle\+Type\+Def} $\ast$hdma)
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+DMA\+\_\+\+De\+Init} (\textbf{ DMA\+\_\+\+Handle\+Type\+Def} $\ast$hdma)
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+DMA\+\_\+\+Start} (\textbf{ DMA\+\_\+\+Handle\+Type\+Def} $\ast$hdma, uint32\+\_\+t Src\+Address, uint32\+\_\+t Dst\+Address, uint32\+\_\+t Data\+Length)
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+DMA\+\_\+\+Start\+\_\+\+IT} (\textbf{ DMA\+\_\+\+Handle\+Type\+Def} $\ast$hdma, uint32\+\_\+t Src\+Address, uint32\+\_\+t Dst\+Address, uint32\+\_\+t Data\+Length)
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+DMA\+\_\+\+Abort} (\textbf{ DMA\+\_\+\+Handle\+Type\+Def} $\ast$hdma)
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+DMA\+\_\+\+Abort\+\_\+\+IT} (\textbf{ DMA\+\_\+\+Handle\+Type\+Def} $\ast$hdma)
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+DMA\+\_\+\+Poll\+For\+Transfer} (\textbf{ DMA\+\_\+\+Handle\+Type\+Def} $\ast$hdma, \textbf{ HAL\+\_\+\+DMA\+\_\+\+Level\+Complete\+Type\+Def} Complete\+Level, uint32\+\_\+t Timeout)
+\item 
+void \textbf{ HAL\+\_\+\+DMA\+\_\+\+IRQHandler} (\textbf{ DMA\+\_\+\+Handle\+Type\+Def} $\ast$hdma)
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+DMA\+\_\+\+Clean\+Callbacks} (\textbf{ DMA\+\_\+\+Handle\+Type\+Def} $\ast$hdma)
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+DMA\+\_\+\+Register\+Callback} (\textbf{ DMA\+\_\+\+Handle\+Type\+Def} $\ast$hdma, \textbf{ HAL\+\_\+\+DMA\+\_\+\+Callback\+IDType\+Def} Callback\+ID, void($\ast$p\+Callback)(\textbf{ DMA\+\_\+\+Handle\+Type\+Def} $\ast$\+\_\+hdma))
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+DMA\+\_\+\+Un\+Register\+Callback} (\textbf{ DMA\+\_\+\+Handle\+Type\+Def} $\ast$hdma, \textbf{ HAL\+\_\+\+DMA\+\_\+\+Callback\+IDType\+Def} Callback\+ID)
+\item 
+\textbf{ HAL\+\_\+\+DMA\+\_\+\+State\+Type\+Def} \textbf{ HAL\+\_\+\+DMA\+\_\+\+Get\+State} (\textbf{ DMA\+\_\+\+Handle\+Type\+Def} $\ast$hdma)
+\item 
+uint32\+\_\+t \textbf{ HAL\+\_\+\+DMA\+\_\+\+Get\+Error} (\textbf{ DMA\+\_\+\+Handle\+Type\+Def} $\ast$hdma)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Header file of DMA HAL module. 
+
+\begin{DoxyAuthor}{Author}
+MCD Application Team 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+V1.\+5.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+06-\/May-\/2016
+\end{DoxyDate}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+\doxysubsubsection*{\begin{center}\copyright{} COPYRIGHT(c) 2016 STMicroelectronics\end{center} }
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met\+:
+\begin{DoxyEnumerate}
+\item Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+\item Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+\item Neither the name of STMicroelectronics nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+\end{DoxyEnumerate}
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \char`\"{}\+AS IS\char`\"{} AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. 

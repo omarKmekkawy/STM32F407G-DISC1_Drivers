@@ -1,0 +1,112 @@
+\doxysection{RTC Private Constants}
+\label{group___r_t_c___private___constants}\index{RTC Private Constants@{RTC Private Constants}}
+Collaboration diagram for RTC Private Constants\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=266pt]{group___r_t_c___private___constants}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \textbf{ RTC\+\_\+\+TR\+\_\+\+RESERVED\+\_\+\+MASK}~((uint32\+\_\+t)0x007\+F7\+F7\+FU)
+\item 
+\#define \textbf{ RTC\+\_\+\+DR\+\_\+\+RESERVED\+\_\+\+MASK}~((uint32\+\_\+t)0x00\+FFFF3\+FU)
+\item 
+\#define \textbf{ RTC\+\_\+\+INIT\+\_\+\+MASK}~((uint32\+\_\+t)0x\+FFFFFFFFU)
+\item 
+\#define \textbf{ RTC\+\_\+\+RSF\+\_\+\+MASK}~((uint32\+\_\+t)0x\+FFFFFF5\+FU)
+\item 
+\#define \textbf{ RTC\+\_\+\+FLAGS\+\_\+\+MASK}
+\item 
+\#define \textbf{ RTC\+\_\+\+TIMEOUT\+\_\+\+VALUE}~1000
+\item 
+\#define \textbf{ RTC\+\_\+\+EXTI\+\_\+\+LINE\+\_\+\+ALARM\+\_\+\+EVENT}~((uint32\+\_\+t)\textbf{ EXTI\+\_\+\+IMR\+\_\+\+MR17})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\label{group___r_t_c___private___constants_ga16855eaae542f992c93170492822d058}} 
+\index{RTC Private Constants@{RTC Private Constants}!RTC\_DR\_RESERVED\_MASK@{RTC\_DR\_RESERVED\_MASK}}
+\index{RTC\_DR\_RESERVED\_MASK@{RTC\_DR\_RESERVED\_MASK}!RTC Private Constants@{RTC Private Constants}}
+\doxysubsubsection{RTC\_DR\_RESERVED\_MASK}
+{\footnotesize\ttfamily \#define RTC\+\_\+\+DR\+\_\+\+RESERVED\+\_\+\+MASK~((uint32\+\_\+t)0x00\+FFFF3\+FU)}
+
+
+
+Definition at line 712 of file stm32f4xx\+\_\+hal\+\_\+rtc.\+h.
+
+\mbox{\label{group___r_t_c___private___constants_gaeffe9b89372b06df1c0eff2f4346682b}} 
+\index{RTC Private Constants@{RTC Private Constants}!RTC\_EXTI\_LINE\_ALARM\_EVENT@{RTC\_EXTI\_LINE\_ALARM\_EVENT}}
+\index{RTC\_EXTI\_LINE\_ALARM\_EVENT@{RTC\_EXTI\_LINE\_ALARM\_EVENT}!RTC Private Constants@{RTC Private Constants}}
+\doxysubsubsection{RTC\_EXTI\_LINE\_ALARM\_EVENT}
+{\footnotesize\ttfamily \#define RTC\+\_\+\+EXTI\+\_\+\+LINE\+\_\+\+ALARM\+\_\+\+EVENT~((uint32\+\_\+t)\textbf{ EXTI\+\_\+\+IMR\+\_\+\+MR17})}
+
+External interrupt line 17 Connected to the RTC Alarm event 
+
+Definition at line 723 of file stm32f4xx\+\_\+hal\+\_\+rtc.\+h.
+
+\mbox{\label{group___r_t_c___private___constants_ga0c7513e50528d7b5a52e88340a4e7b25}} 
+\index{RTC Private Constants@{RTC Private Constants}!RTC\_FLAGS\_MASK@{RTC\_FLAGS\_MASK}}
+\index{RTC\_FLAGS\_MASK@{RTC\_FLAGS\_MASK}!RTC Private Constants@{RTC Private Constants}}
+\doxysubsubsection{RTC\_FLAGS\_MASK}
+{\footnotesize\ttfamily \#define RTC\+\_\+\+FLAGS\+\_\+\+MASK}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                            ((uint32\_t)(RTC\_FLAG\_TSOVF | RTC\_FLAG\_TSF | RTC\_FLAG\_WUTF | \(\backslash\)}
+\DoxyCodeLine{                                            RTC\_FLAG\_ALRBF | RTC\_FLAG\_ALRAF | RTC\_FLAG\_INITF | \(\backslash\)}
+\DoxyCodeLine{                                            RTC\_FLAG\_RSF | RTC\_FLAG\_INITS | RTC\_FLAG\_WUTWF | \(\backslash\)}
+\DoxyCodeLine{                                            RTC\_FLAG\_ALRBWF | RTC\_FLAG\_ALRAWF | RTC\_FLAG\_TAMP1F | \(\backslash\)}
+\DoxyCodeLine{                                            RTC\_FLAG\_RECALPF | RTC\_FLAG\_SHPF))}
+
+\end{DoxyCode}
+
+
+Definition at line 715 of file stm32f4xx\+\_\+hal\+\_\+rtc.\+h.
+
+\mbox{\label{group___r_t_c___private___constants_ga0dbaf639bc171f2055c9055d538f13df}} 
+\index{RTC Private Constants@{RTC Private Constants}!RTC\_INIT\_MASK@{RTC\_INIT\_MASK}}
+\index{RTC\_INIT\_MASK@{RTC\_INIT\_MASK}!RTC Private Constants@{RTC Private Constants}}
+\doxysubsubsection{RTC\_INIT\_MASK}
+{\footnotesize\ttfamily \#define RTC\+\_\+\+INIT\+\_\+\+MASK~((uint32\+\_\+t)0x\+FFFFFFFFU)}
+
+
+
+Definition at line 713 of file stm32f4xx\+\_\+hal\+\_\+rtc.\+h.
+
+\mbox{\label{group___r_t_c___private___constants_ga3a1033490aaf8304e1522d551bd1a7b9}} 
+\index{RTC Private Constants@{RTC Private Constants}!RTC\_RSF\_MASK@{RTC\_RSF\_MASK}}
+\index{RTC\_RSF\_MASK@{RTC\_RSF\_MASK}!RTC Private Constants@{RTC Private Constants}}
+\doxysubsubsection{RTC\_RSF\_MASK}
+{\footnotesize\ttfamily \#define RTC\+\_\+\+RSF\+\_\+\+MASK~((uint32\+\_\+t)0x\+FFFFFF5\+FU)}
+
+
+
+Definition at line 714 of file stm32f4xx\+\_\+hal\+\_\+rtc.\+h.
+
+\mbox{\label{group___r_t_c___private___constants_gaca17c243759056a49a411f6324dd6123}} 
+\index{RTC Private Constants@{RTC Private Constants}!RTC\_TIMEOUT\_VALUE@{RTC\_TIMEOUT\_VALUE}}
+\index{RTC\_TIMEOUT\_VALUE@{RTC\_TIMEOUT\_VALUE}!RTC Private Constants@{RTC Private Constants}}
+\doxysubsubsection{RTC\_TIMEOUT\_VALUE}
+{\footnotesize\ttfamily \#define RTC\+\_\+\+TIMEOUT\+\_\+\+VALUE~1000}
+
+
+
+Definition at line 721 of file stm32f4xx\+\_\+hal\+\_\+rtc.\+h.
+
+\mbox{\label{group___r_t_c___private___constants_gacc08d7d212e235f4b04bb88f5567fa54}} 
+\index{RTC Private Constants@{RTC Private Constants}!RTC\_TR\_RESERVED\_MASK@{RTC\_TR\_RESERVED\_MASK}}
+\index{RTC\_TR\_RESERVED\_MASK@{RTC\_TR\_RESERVED\_MASK}!RTC Private Constants@{RTC Private Constants}}
+\doxysubsubsection{RTC\_TR\_RESERVED\_MASK}
+{\footnotesize\ttfamily \#define RTC\+\_\+\+TR\+\_\+\+RESERVED\+\_\+\+MASK~((uint32\+\_\+t)0x007\+F7\+F7\+FU)}
+
+
+
+Definition at line 711 of file stm32f4xx\+\_\+hal\+\_\+rtc.\+h.
+

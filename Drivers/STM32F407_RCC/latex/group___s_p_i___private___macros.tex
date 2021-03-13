@@ -1,0 +1,333 @@
+\doxysection{SPI Private Macros}
+\label{group___s_p_i___private___macros}\index{SPI Private Macros@{SPI Private Macros}}
+Collaboration diagram for SPI Private Macros\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=248pt]{group___s_p_i___private___macros}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \textbf{ SPI\+\_\+1\+LINE\+\_\+\+TX}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$CR1 $\vert$= \textbf{ SPI\+\_\+\+CR1\+\_\+\+BIDIOE})
+\begin{DoxyCompactList}\small\item\em Set the SPI transmit-\/only mode. \end{DoxyCompactList}\item 
+\#define \textbf{ SPI\+\_\+1\+LINE\+\_\+\+RX}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$CR1 \&= ($\sim$\textbf{ SPI\+\_\+\+CR1\+\_\+\+BIDIOE}))
+\begin{DoxyCompactList}\small\item\em Set the SPI receive-\/only mode. \end{DoxyCompactList}\item 
+\#define \textbf{ SPI\+\_\+\+RESET\+\_\+\+CRC}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Reset the CRC calculation of the SPI. \end{DoxyCompactList}\item 
+\#define \textbf{ IS\+\_\+\+SPI\+\_\+\+MODE}(MODE)
+\item 
+\#define \textbf{ IS\+\_\+\+SPI\+\_\+\+DIRECTION}(MODE)
+\item 
+\#define \textbf{ IS\+\_\+\+SPI\+\_\+\+DIRECTION\+\_\+2\+LINES}(MODE)~((MODE) == \textbf{ SPI\+\_\+\+DIRECTION\+\_\+2\+LINES})
+\item 
+\#define \textbf{ IS\+\_\+\+SPI\+\_\+\+DIRECTION\+\_\+2\+LINES\+\_\+\+OR\+\_\+1\+LINE}(MODE)
+\item 
+\#define \textbf{ IS\+\_\+\+SPI\+\_\+\+DATASIZE}(DATASIZE)
+\item 
+\#define \textbf{ IS\+\_\+\+SPI\+\_\+\+CPOL}(CPOL)
+\item 
+\#define \textbf{ IS\+\_\+\+SPI\+\_\+\+CPHA}(CPHA)
+\item 
+\#define \textbf{ IS\+\_\+\+SPI\+\_\+\+NSS}(NSS)
+\item 
+\#define \textbf{ IS\+\_\+\+SPI\+\_\+\+BAUDRATE\+\_\+\+PRESCALER}(PRESCALER)
+\item 
+\#define \textbf{ IS\+\_\+\+SPI\+\_\+\+FIRST\+\_\+\+BIT}(BIT)
+\item 
+\#define \textbf{ IS\+\_\+\+SPI\+\_\+\+TIMODE}(MODE)
+\item 
+\#define \textbf{ IS\+\_\+\+SPI\+\_\+\+CRC\+\_\+\+CALCULATION}(CALCULATION)
+\item 
+\#define \textbf{ IS\+\_\+\+SPI\+\_\+\+CRC\+\_\+\+POLYNOMIAL}(POLYNOMIAL)~(((POLYNOMIAL) $>$= 0x01U) \&\& ((POLYNOMIAL) $<$= 0x\+FFFFU))
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\label{group___s_p_i___private___macros_gae79f46ed9f91e39dc1f6912cb25fc716}} 
+\index{SPI Private Macros@{SPI Private Macros}!IS\_SPI\_BAUDRATE\_PRESCALER@{IS\_SPI\_BAUDRATE\_PRESCALER}}
+\index{IS\_SPI\_BAUDRATE\_PRESCALER@{IS\_SPI\_BAUDRATE\_PRESCALER}!SPI Private Macros@{SPI Private Macros}}
+\doxysubsubsection{IS\_SPI\_BAUDRATE\_PRESCALER}
+{\footnotesize\ttfamily \#define IS\+\_\+\+SPI\+\_\+\+BAUDRATE\+\_\+\+PRESCALER(\begin{DoxyParamCaption}\item[{}]{PRESCALER }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                              (((PRESCALER) == SPI\_BAUDRATEPRESCALER\_2)   || \(\backslash\)}
+\DoxyCodeLine{                                              ((PRESCALER) == SPI\_BAUDRATEPRESCALER\_4)   || \(\backslash\)}
+\DoxyCodeLine{                                              ((PRESCALER) == SPI\_BAUDRATEPRESCALER\_8)   || \(\backslash\)}
+\DoxyCodeLine{                                              ((PRESCALER) == SPI\_BAUDRATEPRESCALER\_16)  || \(\backslash\)}
+\DoxyCodeLine{                                              ((PRESCALER) == SPI\_BAUDRATEPRESCALER\_32)  || \(\backslash\)}
+\DoxyCodeLine{                                              ((PRESCALER) == SPI\_BAUDRATEPRESCALER\_64)  || \(\backslash\)}
+\DoxyCodeLine{                                              ((PRESCALER) == SPI\_BAUDRATEPRESCALER\_128) || \(\backslash\)}
+\DoxyCodeLine{                                              ((PRESCALER) == SPI\_BAUDRATEPRESCALER\_256))}
+
+\end{DoxyCode}
+
+
+Definition at line 536 of file stm32f4xx\+\_\+hal\+\_\+spi.\+h.
+
+\mbox{\label{group___s_p_i___private___macros_ga6441f08edf79dd5b243c54b888d3cbf7}} 
+\index{SPI Private Macros@{SPI Private Macros}!IS\_SPI\_CPHA@{IS\_SPI\_CPHA}}
+\index{IS\_SPI\_CPHA@{IS\_SPI\_CPHA}!SPI Private Macros@{SPI Private Macros}}
+\doxysubsubsection{IS\_SPI\_CPHA}
+{\footnotesize\ttfamily \#define IS\+\_\+\+SPI\+\_\+\+CPHA(\begin{DoxyParamCaption}\item[{}]{CPHA }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                           (((CPHA) == SPI\_PHASE\_1EDGE) || \(\backslash\)}
+\DoxyCodeLine{                           ((CPHA) == SPI\_PHASE\_2EDGE))}
+
+\end{DoxyCode}
+
+
+Definition at line 529 of file stm32f4xx\+\_\+hal\+\_\+spi.\+h.
+
+\mbox{\label{group___s_p_i___private___macros_gafc1cc5b1ff7e801a409a7a1e6047acf9}} 
+\index{SPI Private Macros@{SPI Private Macros}!IS\_SPI\_CPOL@{IS\_SPI\_CPOL}}
+\index{IS\_SPI\_CPOL@{IS\_SPI\_CPOL}!SPI Private Macros@{SPI Private Macros}}
+\doxysubsubsection{IS\_SPI\_CPOL}
+{\footnotesize\ttfamily \#define IS\+\_\+\+SPI\+\_\+\+CPOL(\begin{DoxyParamCaption}\item[{}]{CPOL }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                           (((CPOL) == SPI\_POLARITY\_LOW) || \(\backslash\)}
+\DoxyCodeLine{                           ((CPOL) == SPI\_POLARITY\_HIGH))}
+
+\end{DoxyCode}
+
+
+Definition at line 526 of file stm32f4xx\+\_\+hal\+\_\+spi.\+h.
+
+\mbox{\label{group___s_p_i___private___macros_ga96e66460d09a553fd9996c53dcc4b252}} 
+\index{SPI Private Macros@{SPI Private Macros}!IS\_SPI\_CRC\_CALCULATION@{IS\_SPI\_CRC\_CALCULATION}}
+\index{IS\_SPI\_CRC\_CALCULATION@{IS\_SPI\_CRC\_CALCULATION}!SPI Private Macros@{SPI Private Macros}}
+\doxysubsubsection{IS\_SPI\_CRC\_CALCULATION}
+{\footnotesize\ttfamily \#define IS\+\_\+\+SPI\+\_\+\+CRC\+\_\+\+CALCULATION(\begin{DoxyParamCaption}\item[{}]{CALCULATION }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                             (((CALCULATION) == SPI\_CRCCALCULATION\_DISABLE) || \(\backslash\)}
+\DoxyCodeLine{                                             ((CALCULATION) == SPI\_CRCCALCULATION\_ENABLE))}
+
+\end{DoxyCode}
+
+
+Definition at line 551 of file stm32f4xx\+\_\+hal\+\_\+spi.\+h.
+
+\mbox{\label{group___s_p_i___private___macros_ga76eec5bbb44c873aa52966a9cb6c8f8c}} 
+\index{SPI Private Macros@{SPI Private Macros}!IS\_SPI\_CRC\_POLYNOMIAL@{IS\_SPI\_CRC\_POLYNOMIAL}}
+\index{IS\_SPI\_CRC\_POLYNOMIAL@{IS\_SPI\_CRC\_POLYNOMIAL}!SPI Private Macros@{SPI Private Macros}}
+\doxysubsubsection{IS\_SPI\_CRC\_POLYNOMIAL}
+{\footnotesize\ttfamily \#define IS\+\_\+\+SPI\+\_\+\+CRC\+\_\+\+POLYNOMIAL(\begin{DoxyParamCaption}\item[{}]{POLYNOMIAL }\end{DoxyParamCaption})~(((POLYNOMIAL) $>$= 0x01U) \&\& ((POLYNOMIAL) $<$= 0x\+FFFFU))}
+
+
+
+Definition at line 554 of file stm32f4xx\+\_\+hal\+\_\+spi.\+h.
+
+\mbox{\label{group___s_p_i___private___macros_gab6f9f528f7eb70373b9caf3548e44e67}} 
+\index{SPI Private Macros@{SPI Private Macros}!IS\_SPI\_DATASIZE@{IS\_SPI\_DATASIZE}}
+\index{IS\_SPI\_DATASIZE@{IS\_SPI\_DATASIZE}!SPI Private Macros@{SPI Private Macros}}
+\doxysubsubsection{IS\_SPI\_DATASIZE}
+{\footnotesize\ttfamily \#define IS\+\_\+\+SPI\+\_\+\+DATASIZE(\begin{DoxyParamCaption}\item[{}]{DATASIZE }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                   (((DATASIZE) == SPI\_DATASIZE\_16BIT) || \(\backslash\)}
+\DoxyCodeLine{                                   ((DATASIZE) == SPI\_DATASIZE\_8BIT))}
+
+\end{DoxyCode}
+
+
+Definition at line 523 of file stm32f4xx\+\_\+hal\+\_\+spi.\+h.
+
+\mbox{\label{group___s_p_i___private___macros_ga8ce4827db741ff965ea0cb1c105b00d5}} 
+\index{SPI Private Macros@{SPI Private Macros}!IS\_SPI\_DIRECTION@{IS\_SPI\_DIRECTION}}
+\index{IS\_SPI\_DIRECTION@{IS\_SPI\_DIRECTION}!SPI Private Macros@{SPI Private Macros}}
+\doxysubsubsection{IS\_SPI\_DIRECTION}
+{\footnotesize\ttfamily \#define IS\+\_\+\+SPI\+\_\+\+DIRECTION(\begin{DoxyParamCaption}\item[{}]{MODE }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                (((MODE) == SPI\_DIRECTION\_2LINES)        || \(\backslash\)}
+\DoxyCodeLine{                                ((MODE) == SPI\_DIRECTION\_2LINES\_RXONLY) || \(\backslash\)}
+\DoxyCodeLine{                                ((MODE) == SPI\_DIRECTION\_1LINE))}
+
+\end{DoxyCode}
+
+
+Definition at line 514 of file stm32f4xx\+\_\+hal\+\_\+spi.\+h.
+
+\mbox{\label{group___s_p_i___private___macros_ga79454622381b22d02c8cdd3346c80f78}} 
+\index{SPI Private Macros@{SPI Private Macros}!IS\_SPI\_DIRECTION\_2LINES@{IS\_SPI\_DIRECTION\_2LINES}}
+\index{IS\_SPI\_DIRECTION\_2LINES@{IS\_SPI\_DIRECTION\_2LINES}!SPI Private Macros@{SPI Private Macros}}
+\doxysubsubsection{IS\_SPI\_DIRECTION\_2LINES}
+{\footnotesize\ttfamily \#define IS\+\_\+\+SPI\+\_\+\+DIRECTION\+\_\+2\+LINES(\begin{DoxyParamCaption}\item[{}]{MODE }\end{DoxyParamCaption})~((MODE) == \textbf{ SPI\+\_\+\+DIRECTION\+\_\+2\+LINES})}
+
+
+
+Definition at line 518 of file stm32f4xx\+\_\+hal\+\_\+spi.\+h.
+
+\mbox{\label{group___s_p_i___private___macros_ga29847ebb8b15a550b45705881641e7a4}} 
+\index{SPI Private Macros@{SPI Private Macros}!IS\_SPI\_DIRECTION\_2LINES\_OR\_1LINE@{IS\_SPI\_DIRECTION\_2LINES\_OR\_1LINE}}
+\index{IS\_SPI\_DIRECTION\_2LINES\_OR\_1LINE@{IS\_SPI\_DIRECTION\_2LINES\_OR\_1LINE}!SPI Private Macros@{SPI Private Macros}}
+\doxysubsubsection{IS\_SPI\_DIRECTION\_2LINES\_OR\_1LINE}
+{\footnotesize\ttfamily \#define IS\+\_\+\+SPI\+\_\+\+DIRECTION\+\_\+2\+LINES\+\_\+\+OR\+\_\+1\+LINE(\begin{DoxyParamCaption}\item[{}]{MODE }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                                (((MODE) == SPI\_DIRECTION\_2LINES)  || \(\backslash\)}
+\DoxyCodeLine{                                                ((MODE) == SPI\_DIRECTION\_1LINE))}
+
+\end{DoxyCode}
+
+
+Definition at line 520 of file stm32f4xx\+\_\+hal\+\_\+spi.\+h.
+
+\mbox{\label{group___s_p_i___private___macros_gabee8e0302741f4a5c41b96af640c63ad}} 
+\index{SPI Private Macros@{SPI Private Macros}!IS\_SPI\_FIRST\_BIT@{IS\_SPI\_FIRST\_BIT}}
+\index{IS\_SPI\_FIRST\_BIT@{IS\_SPI\_FIRST\_BIT}!SPI Private Macros@{SPI Private Macros}}
+\doxysubsubsection{IS\_SPI\_FIRST\_BIT}
+{\footnotesize\ttfamily \#define IS\+\_\+\+SPI\+\_\+\+FIRST\+\_\+\+BIT(\begin{DoxyParamCaption}\item[{}]{BIT }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                               (((BIT) == SPI\_FIRSTBIT\_MSB) || \(\backslash\)}
+\DoxyCodeLine{                               ((BIT) == SPI\_FIRSTBIT\_LSB))}
+
+\end{DoxyCode}
+
+
+Definition at line 545 of file stm32f4xx\+\_\+hal\+\_\+spi.\+h.
+
+\mbox{\label{group___s_p_i___private___macros_gad5135300763c75dbb446861536359f12}} 
+\index{SPI Private Macros@{SPI Private Macros}!IS\_SPI\_MODE@{IS\_SPI\_MODE}}
+\index{IS\_SPI\_MODE@{IS\_SPI\_MODE}!SPI Private Macros@{SPI Private Macros}}
+\doxysubsubsection{IS\_SPI\_MODE}
+{\footnotesize\ttfamily \#define IS\+\_\+\+SPI\+\_\+\+MODE(\begin{DoxyParamCaption}\item[{}]{MODE }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                           (((MODE) == SPI\_MODE\_SLAVE) || \(\backslash\)}
+\DoxyCodeLine{                           ((MODE) == SPI\_MODE\_MASTER))}
+
+\end{DoxyCode}
+
+
+Definition at line 511 of file stm32f4xx\+\_\+hal\+\_\+spi.\+h.
+
+\mbox{\label{group___s_p_i___private___macros_gabbeedf42eccef1bae4f88c606fc3b261}} 
+\index{SPI Private Macros@{SPI Private Macros}!IS\_SPI\_NSS@{IS\_SPI\_NSS}}
+\index{IS\_SPI\_NSS@{IS\_SPI\_NSS}!SPI Private Macros@{SPI Private Macros}}
+\doxysubsubsection{IS\_SPI\_NSS}
+{\footnotesize\ttfamily \#define IS\+\_\+\+SPI\+\_\+\+NSS(\begin{DoxyParamCaption}\item[{}]{NSS }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                         (((NSS) == SPI\_NSS\_SOFT)       || \(\backslash\)}
+\DoxyCodeLine{                         ((NSS) == SPI\_NSS\_HARD\_INPUT) || \(\backslash\)}
+\DoxyCodeLine{                         ((NSS) == SPI\_NSS\_HARD\_OUTPUT))}
+
+\end{DoxyCode}
+
+
+Definition at line 532 of file stm32f4xx\+\_\+hal\+\_\+spi.\+h.
+
+\mbox{\label{group___s_p_i___private___macros_ga812f7bf5919bc6e45727d6ac05c60b49}} 
+\index{SPI Private Macros@{SPI Private Macros}!IS\_SPI\_TIMODE@{IS\_SPI\_TIMODE}}
+\index{IS\_SPI\_TIMODE@{IS\_SPI\_TIMODE}!SPI Private Macros@{SPI Private Macros}}
+\doxysubsubsection{IS\_SPI\_TIMODE}
+{\footnotesize\ttfamily \#define IS\+\_\+\+SPI\+\_\+\+TIMODE(\begin{DoxyParamCaption}\item[{}]{MODE }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                             (((MODE) == SPI\_TIMODE\_DISABLE) || \(\backslash\)}
+\DoxyCodeLine{                             ((MODE) == SPI\_TIMODE\_ENABLE))}
+
+\end{DoxyCode}
+
+
+Definition at line 548 of file stm32f4xx\+\_\+hal\+\_\+spi.\+h.
+
+\mbox{\label{group___s_p_i___private___macros_gaa8d58cef91c1874d5a4dde4014cf6269}} 
+\index{SPI Private Macros@{SPI Private Macros}!SPI\_1LINE\_RX@{SPI\_1LINE\_RX}}
+\index{SPI\_1LINE\_RX@{SPI\_1LINE\_RX}!SPI Private Macros@{SPI Private Macros}}
+\doxysubsubsection{SPI\_1LINE\_RX}
+{\footnotesize\ttfamily \#define SPI\+\_\+1\+LINE\+\_\+\+RX(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+ }\end{DoxyParamCaption})~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$CR1 \&= ($\sim$\textbf{ SPI\+\_\+\+CR1\+\_\+\+BIDIOE}))}
+
+
+
+Set the SPI receive-\/only mode. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$strong$>$\+HANDLE$<$/strong$>$} & specifies the SPI Handle. This parameter can be SPI where x\+: 1, 2, or 3 to select the SPI peripheral. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 501 of file stm32f4xx\+\_\+hal\+\_\+spi.\+h.
+
+\mbox{\label{group___s_p_i___private___macros_gae3b2eb5e818e58b66474d42dedac5523}} 
+\index{SPI Private Macros@{SPI Private Macros}!SPI\_1LINE\_TX@{SPI\_1LINE\_TX}}
+\index{SPI\_1LINE\_TX@{SPI\_1LINE\_TX}!SPI Private Macros@{SPI Private Macros}}
+\doxysubsubsection{SPI\_1LINE\_TX}
+{\footnotesize\ttfamily \#define SPI\+\_\+1\+LINE\+\_\+\+TX(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+ }\end{DoxyParamCaption})~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$CR1 $\vert$= \textbf{ SPI\+\_\+\+CR1\+\_\+\+BIDIOE})}
+
+
+
+Set the SPI transmit-\/only mode. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$strong$>$\+HANDLE$<$/strong$>$} & specifies the SPI Handle. This parameter can be SPI where x\+: 1, 2, or 3 to select the SPI peripheral. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 494 of file stm32f4xx\+\_\+hal\+\_\+spi.\+h.
+
+\mbox{\label{group___s_p_i___private___macros_gab120a0085b72939e7d19c4f6b3381a99}} 
+\index{SPI Private Macros@{SPI Private Macros}!SPI\_RESET\_CRC@{SPI\_RESET\_CRC}}
+\index{SPI\_RESET\_CRC@{SPI\_RESET\_CRC}!SPI Private Macros@{SPI Private Macros}}
+\doxysubsubsection{SPI\_RESET\_CRC}
+{\footnotesize\ttfamily \#define SPI\+\_\+\+RESET\+\_\+\+CRC(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                     \textcolor{keywordflow}{do}\{(\_\_HANDLE\_\_)-\/>Instance-\/>CR1 \&= (uint16\_t)(\string~SPI\_CR1\_CRCEN);\(\backslash\)}
+\DoxyCodeLine{                                     (\_\_HANDLE\_\_)-\/>Instance-\/>CR1 |= SPI\_CR1\_CRCEN;\}\textcolor{keywordflow}{while}(0)}
+
+\end{DoxyCode}
+
+
+Reset the CRC calculation of the SPI. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$strong$>$\+HANDLE$<$/strong$>$} & specifies the SPI Handle. This parameter can be SPI where x\+: 1, 2, or 3 to select the SPI peripheral. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 508 of file stm32f4xx\+\_\+hal\+\_\+spi.\+h.
+

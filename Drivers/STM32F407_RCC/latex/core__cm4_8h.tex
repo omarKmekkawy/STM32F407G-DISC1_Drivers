@@ -1,0 +1,1114 @@
+\doxysection{system/include/cmsis/core\+\_\+cm4.h File Reference}
+\label{core__cm4_8h}\index{system/include/cmsis/core\_cm4.h@{system/include/cmsis/core\_cm4.h}}
+
+
+CMSIS Cortex-\/\+M4 Core Peripheral Access Layer Header File.  
+
+
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}core\+\_\+cm\+Instr.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}core\+\_\+cm\+Func.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}core\+\_\+cm\+Simd.\+h\char`\"{}}\newline
+Include dependency graph for core\+\_\+cm4.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{core__cm4_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=192pt]{core__cm4_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+union \textbf{ APSR\+\_\+\+Type}
+\begin{DoxyCompactList}\small\item\em Union type to access the Application Program Status Register (APSR). \end{DoxyCompactList}\item 
+union \textbf{ IPSR\+\_\+\+Type}
+\begin{DoxyCompactList}\small\item\em Union type to access the Interrupt Program Status Register (IPSR). \end{DoxyCompactList}\item 
+union \textbf{ x\+PSR\+\_\+\+Type}
+\begin{DoxyCompactList}\small\item\em Union type to access the Special-\/\+Purpose Program Status Registers (x\+PSR). \end{DoxyCompactList}\item 
+union \textbf{ CONTROL\+\_\+\+Type}
+\begin{DoxyCompactList}\small\item\em Union type to access the Control Registers (CONTROL). \end{DoxyCompactList}\item 
+struct \textbf{ NVIC\+\_\+\+Type}
+\begin{DoxyCompactList}\small\item\em Structure type to access the Nested Vectored Interrupt Controller (NVIC). \end{DoxyCompactList}\item 
+struct \textbf{ SCB\+\_\+\+Type}
+\begin{DoxyCompactList}\small\item\em Structure type to access the System Control Block (SCB). \end{DoxyCompactList}\item 
+struct \textbf{ SCn\+SCB\+\_\+\+Type}
+\begin{DoxyCompactList}\small\item\em Structure type to access the System Control and ID Register not in the SCB. \end{DoxyCompactList}\item 
+struct \textbf{ Sys\+Tick\+\_\+\+Type}
+\begin{DoxyCompactList}\small\item\em Structure type to access the System Timer (Sys\+Tick). \end{DoxyCompactList}\item 
+struct \textbf{ ITM\+\_\+\+Type}
+\begin{DoxyCompactList}\small\item\em Structure type to access the Instrumentation Trace Macrocell Register (ITM). \end{DoxyCompactList}\item 
+struct \textbf{ DWT\+\_\+\+Type}
+\begin{DoxyCompactList}\small\item\em Structure type to access the Data Watchpoint and Trace Register (DWT). \end{DoxyCompactList}\item 
+struct \textbf{ TPI\+\_\+\+Type}
+\begin{DoxyCompactList}\small\item\em Structure type to access the Trace Port Interface Register (TPI). \end{DoxyCompactList}\item 
+struct \textbf{ Core\+Debug\+\_\+\+Type}
+\begin{DoxyCompactList}\small\item\em Structure type to access the Core Debug Register (Core\+Debug). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \textbf{ \+\_\+\+\_\+\+CORE\+\_\+\+CM4\+\_\+\+H\+\_\+\+GENERIC}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\textbf{ }\par
+\begin{DoxyCompactItemize}
+\item 
+\+\_\+\+\_\+\+STATIC\+\_\+\+INLINE void \textbf{ NVIC\+\_\+\+Set\+Priority\+Grouping} (uint32\+\_\+t Priority\+Group)
+\begin{DoxyCompactList}\small\item\em Set Priority Grouping. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+STATIC\+\_\+\+INLINE uint32\+\_\+t \textbf{ NVIC\+\_\+\+Get\+Priority\+Grouping} (void)
+\begin{DoxyCompactList}\small\item\em Get Priority Grouping. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+STATIC\+\_\+\+INLINE uint32\+\_\+t \textbf{ NVIC\+\_\+\+Get\+Active} (\textbf{ IRQn\+\_\+\+Type} IRQn)
+\begin{DoxyCompactList}\small\item\em Get Active Interrupt. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+STATIC\+\_\+\+INLINE uint32\+\_\+t \textbf{ NVIC\+\_\+\+Encode\+Priority} (uint32\+\_\+t Priority\+Group, uint32\+\_\+t Preempt\+Priority, uint32\+\_\+t Sub\+Priority)
+\begin{DoxyCompactList}\small\item\em Encode Priority. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+STATIC\+\_\+\+INLINE void \textbf{ NVIC\+\_\+\+Decode\+Priority} (uint32\+\_\+t Priority, uint32\+\_\+t Priority\+Group, uint32\+\_\+t $\ast$const p\+Preempt\+Priority, uint32\+\_\+t $\ast$const p\+Sub\+Priority)
+\begin{DoxyCompactList}\small\item\em Decode Priority. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+STATIC\+\_\+\+INLINE uint32\+\_\+t \textbf{ ITM\+\_\+\+Send\+Char} (uint32\+\_\+t ch)
+\begin{DoxyCompactList}\small\item\em ITM Send Character. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+STATIC\+\_\+\+INLINE int32\+\_\+t \textbf{ ITM\+\_\+\+Receive\+Char} (void)
+\begin{DoxyCompactList}\small\item\em ITM Receive Character. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+STATIC\+\_\+\+INLINE int32\+\_\+t \textbf{ ITM\+\_\+\+Check\+Char} (void)
+\begin{DoxyCompactList}\small\item\em ITM Check Character. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+\textbf{ }\par
+\begin{DoxyCompactItemize}
+\item 
+\+\_\+\+\_\+\+STATIC\+\_\+\+INLINE void \textbf{ NVIC\+\_\+\+Enable\+IRQ} (\textbf{ IRQn\+\_\+\+Type} IRQn)
+\begin{DoxyCompactList}\small\item\em Enable External Interrupt. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+STATIC\+\_\+\+INLINE void \textbf{ NVIC\+\_\+\+Disable\+IRQ} (\textbf{ IRQn\+\_\+\+Type} IRQn)
+\begin{DoxyCompactList}\small\item\em Disable External Interrupt. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+STATIC\+\_\+\+INLINE uint32\+\_\+t \textbf{ NVIC\+\_\+\+Get\+Pending\+IRQ} (\textbf{ IRQn\+\_\+\+Type} IRQn)
+\begin{DoxyCompactList}\small\item\em Get Pending Interrupt. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+STATIC\+\_\+\+INLINE void \textbf{ NVIC\+\_\+\+Set\+Pending\+IRQ} (\textbf{ IRQn\+\_\+\+Type} IRQn)
+\begin{DoxyCompactList}\small\item\em Set Pending Interrupt. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+STATIC\+\_\+\+INLINE void \textbf{ NVIC\+\_\+\+Clear\+Pending\+IRQ} (\textbf{ IRQn\+\_\+\+Type} IRQn)
+\begin{DoxyCompactList}\small\item\em Clear Pending Interrupt. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+STATIC\+\_\+\+INLINE void \textbf{ NVIC\+\_\+\+Set\+Priority} (\textbf{ IRQn\+\_\+\+Type} IRQn, uint32\+\_\+t priority)
+\begin{DoxyCompactList}\small\item\em Set Interrupt Priority. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+STATIC\+\_\+\+INLINE uint32\+\_\+t \textbf{ NVIC\+\_\+\+Get\+Priority} (\textbf{ IRQn\+\_\+\+Type} IRQn)
+\begin{DoxyCompactList}\small\item\em Get Interrupt Priority. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+STATIC\+\_\+\+INLINE void \textbf{ NVIC\+\_\+\+System\+Reset} (void)
+\begin{DoxyCompactList}\small\item\em System Reset. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+STATIC\+\_\+\+INLINE uint32\+\_\+t \textbf{ Sys\+Tick\+\_\+\+Config} (uint32\+\_\+t ticks)
+\begin{DoxyCompactList}\small\item\em System Tick Configuration. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+\begin{DoxyCompactItemize}
+\item 
+\#define \textbf{ \+\_\+\+\_\+\+CM4\+\_\+\+CMSIS\+\_\+\+VERSION\+\_\+\+MAIN}~(0x04U)
+\item 
+\#define \textbf{ \+\_\+\+\_\+\+CM4\+\_\+\+CMSIS\+\_\+\+VERSION\+\_\+\+SUB}~(0x1\+EU)
+\item 
+\#define \textbf{ \+\_\+\+\_\+\+CM4\+\_\+\+CMSIS\+\_\+\+VERSION}
+\item 
+\#define \textbf{ \+\_\+\+\_\+\+CORTEX\+\_\+M}~(0x04U)
+\item 
+\#define \textbf{ \+\_\+\+\_\+\+CORE\+\_\+\+CM4\+\_\+\+H\+\_\+\+DEPENDANT}
+\item 
+\#define \textbf{ \+\_\+\+\_\+I}~\textbf{ volatile} const
+\item 
+\#define \textbf{ \+\_\+\+\_\+O}~\textbf{ volatile}
+\item 
+\#define \textbf{ \+\_\+\+\_\+\+IO}~\textbf{ volatile}
+\item 
+\#define \textbf{ \+\_\+\+\_\+\+IM}~\textbf{ volatile} const      /$\ast$! Defines \textquotesingle{}read only\textquotesingle{} structure member permissions $\ast$/
+\item 
+\#define \textbf{ \+\_\+\+\_\+\+OM}~\textbf{ volatile}            /$\ast$! Defines \textquotesingle{}write only\textquotesingle{} structure member permissions $\ast$/
+\item 
+\#define \textbf{ \+\_\+\+\_\+\+IOM}~\textbf{ volatile}            /$\ast$! Defines \textquotesingle{}read / write\textquotesingle{} structure member permissions $\ast$/
+\item 
+\#define \textbf{ APSR\+\_\+\+N\+\_\+\+Pos}~31U
+\item 
+\#define \textbf{ APSR\+\_\+\+N\+\_\+\+Msk}~(1UL $<$$<$ \textbf{ APSR\+\_\+\+N\+\_\+\+Pos})
+\item 
+\#define \textbf{ APSR\+\_\+\+Z\+\_\+\+Pos}~30U
+\item 
+\#define \textbf{ APSR\+\_\+\+Z\+\_\+\+Msk}~(1UL $<$$<$ \textbf{ APSR\+\_\+\+Z\+\_\+\+Pos})
+\item 
+\#define \textbf{ APSR\+\_\+\+C\+\_\+\+Pos}~29U
+\item 
+\#define \textbf{ APSR\+\_\+\+C\+\_\+\+Msk}~(1UL $<$$<$ \textbf{ APSR\+\_\+\+C\+\_\+\+Pos})
+\item 
+\#define \textbf{ APSR\+\_\+\+V\+\_\+\+Pos}~28U
+\item 
+\#define \textbf{ APSR\+\_\+\+V\+\_\+\+Msk}~(1UL $<$$<$ \textbf{ APSR\+\_\+\+V\+\_\+\+Pos})
+\item 
+\#define \textbf{ APSR\+\_\+\+Q\+\_\+\+Pos}~27U
+\item 
+\#define \textbf{ APSR\+\_\+\+Q\+\_\+\+Msk}~(1UL $<$$<$ \textbf{ APSR\+\_\+\+Q\+\_\+\+Pos})
+\item 
+\#define \textbf{ APSR\+\_\+\+GE\+\_\+\+Pos}~16U
+\item 
+\#define \textbf{ APSR\+\_\+\+GE\+\_\+\+Msk}~(0x\+FUL $<$$<$ \textbf{ APSR\+\_\+\+GE\+\_\+\+Pos})
+\item 
+\#define \textbf{ IPSR\+\_\+\+ISR\+\_\+\+Pos}~0U
+\item 
+\#define \textbf{ IPSR\+\_\+\+ISR\+\_\+\+Msk}~(0x1\+FFUL /$\ast$$<$$<$ \textbf{ IPSR\+\_\+\+ISR\+\_\+\+Pos}$\ast$/)
+\item 
+\#define \textbf{ x\+PSR\+\_\+\+N\+\_\+\+Pos}~31U
+\item 
+\#define \textbf{ x\+PSR\+\_\+\+N\+\_\+\+Msk}~(1UL $<$$<$ \textbf{ x\+PSR\+\_\+\+N\+\_\+\+Pos})
+\item 
+\#define \textbf{ x\+PSR\+\_\+\+Z\+\_\+\+Pos}~30U
+\item 
+\#define \textbf{ x\+PSR\+\_\+\+Z\+\_\+\+Msk}~(1UL $<$$<$ \textbf{ x\+PSR\+\_\+\+Z\+\_\+\+Pos})
+\item 
+\#define \textbf{ x\+PSR\+\_\+\+C\+\_\+\+Pos}~29U
+\item 
+\#define \textbf{ x\+PSR\+\_\+\+C\+\_\+\+Msk}~(1UL $<$$<$ \textbf{ x\+PSR\+\_\+\+C\+\_\+\+Pos})
+\item 
+\#define \textbf{ x\+PSR\+\_\+\+V\+\_\+\+Pos}~28U
+\item 
+\#define \textbf{ x\+PSR\+\_\+\+V\+\_\+\+Msk}~(1UL $<$$<$ \textbf{ x\+PSR\+\_\+\+V\+\_\+\+Pos})
+\item 
+\#define \textbf{ x\+PSR\+\_\+\+Q\+\_\+\+Pos}~27U
+\item 
+\#define \textbf{ x\+PSR\+\_\+\+Q\+\_\+\+Msk}~(1UL $<$$<$ \textbf{ x\+PSR\+\_\+\+Q\+\_\+\+Pos})
+\item 
+\#define \textbf{ x\+PSR\+\_\+\+IT\+\_\+\+Pos}~25U
+\item 
+\#define \textbf{ x\+PSR\+\_\+\+IT\+\_\+\+Msk}~(3UL $<$$<$ \textbf{ x\+PSR\+\_\+\+IT\+\_\+\+Pos})
+\item 
+\#define \textbf{ x\+PSR\+\_\+\+T\+\_\+\+Pos}~24U
+\item 
+\#define \textbf{ x\+PSR\+\_\+\+T\+\_\+\+Msk}~(1UL $<$$<$ \textbf{ x\+PSR\+\_\+\+T\+\_\+\+Pos})
+\item 
+\#define \textbf{ x\+PSR\+\_\+\+GE\+\_\+\+Pos}~16U
+\item 
+\#define \textbf{ x\+PSR\+\_\+\+GE\+\_\+\+Msk}~(0x\+FUL $<$$<$ \textbf{ x\+PSR\+\_\+\+GE\+\_\+\+Pos})
+\item 
+\#define \textbf{ x\+PSR\+\_\+\+ISR\+\_\+\+Pos}~0U
+\item 
+\#define \textbf{ x\+PSR\+\_\+\+ISR\+\_\+\+Msk}~(0x1\+FFUL /$\ast$$<$$<$ \textbf{ x\+PSR\+\_\+\+ISR\+\_\+\+Pos}$\ast$/)
+\item 
+\#define \textbf{ CONTROL\+\_\+\+FPCA\+\_\+\+Pos}~2U
+\item 
+\#define \textbf{ CONTROL\+\_\+\+FPCA\+\_\+\+Msk}~(1UL $<$$<$ \textbf{ CONTROL\+\_\+\+FPCA\+\_\+\+Pos})
+\item 
+\#define \textbf{ CONTROL\+\_\+\+SPSEL\+\_\+\+Pos}~1U
+\item 
+\#define \textbf{ CONTROL\+\_\+\+SPSEL\+\_\+\+Msk}~(1UL $<$$<$ \textbf{ CONTROL\+\_\+\+SPSEL\+\_\+\+Pos})
+\item 
+\#define \textbf{ CONTROL\+\_\+n\+PRIV\+\_\+\+Pos}~0U
+\item 
+\#define \textbf{ CONTROL\+\_\+n\+PRIV\+\_\+\+Msk}~(1UL /$\ast$$<$$<$ \textbf{ CONTROL\+\_\+n\+PRIV\+\_\+\+Pos}$\ast$/)
+\item 
+\#define \textbf{ NVIC\+\_\+\+STIR\+\_\+\+INTID\+\_\+\+Pos}~0U
+\item 
+\#define \textbf{ NVIC\+\_\+\+STIR\+\_\+\+INTID\+\_\+\+Msk}~(0x1\+FFUL /$\ast$$<$$<$ \textbf{ NVIC\+\_\+\+STIR\+\_\+\+INTID\+\_\+\+Pos}$\ast$/)
+\item 
+\#define \textbf{ SCB\+\_\+\+CPUID\+\_\+\+IMPLEMENTER\+\_\+\+Pos}~24U
+\item 
+\#define \textbf{ SCB\+\_\+\+CPUID\+\_\+\+IMPLEMENTER\+\_\+\+Msk}~(0x\+FFUL $<$$<$ \textbf{ SCB\+\_\+\+CPUID\+\_\+\+IMPLEMENTER\+\_\+\+Pos})
+\item 
+\#define \textbf{ SCB\+\_\+\+CPUID\+\_\+\+VARIANT\+\_\+\+Pos}~20U
+\item 
+\#define \textbf{ SCB\+\_\+\+CPUID\+\_\+\+VARIANT\+\_\+\+Msk}~(0x\+FUL $<$$<$ \textbf{ SCB\+\_\+\+CPUID\+\_\+\+VARIANT\+\_\+\+Pos})
+\item 
+\#define \textbf{ SCB\+\_\+\+CPUID\+\_\+\+ARCHITECTURE\+\_\+\+Pos}~16U
+\item 
+\#define \textbf{ SCB\+\_\+\+CPUID\+\_\+\+ARCHITECTURE\+\_\+\+Msk}~(0x\+FUL $<$$<$ \textbf{ SCB\+\_\+\+CPUID\+\_\+\+ARCHITECTURE\+\_\+\+Pos})
+\item 
+\#define \textbf{ SCB\+\_\+\+CPUID\+\_\+\+PARTNO\+\_\+\+Pos}~4U
+\item 
+\#define \textbf{ SCB\+\_\+\+CPUID\+\_\+\+PARTNO\+\_\+\+Msk}~(0x\+FFFUL $<$$<$ \textbf{ SCB\+\_\+\+CPUID\+\_\+\+PARTNO\+\_\+\+Pos})
+\item 
+\#define \textbf{ SCB\+\_\+\+CPUID\+\_\+\+REVISION\+\_\+\+Pos}~0U
+\item 
+\#define \textbf{ SCB\+\_\+\+CPUID\+\_\+\+REVISION\+\_\+\+Msk}~(0x\+FUL /$\ast$$<$$<$ \textbf{ SCB\+\_\+\+CPUID\+\_\+\+REVISION\+\_\+\+Pos}$\ast$/)
+\item 
+\#define \textbf{ SCB\+\_\+\+ICSR\+\_\+\+NMIPENDSET\+\_\+\+Pos}~31U
+\item 
+\#define \textbf{ SCB\+\_\+\+ICSR\+\_\+\+NMIPENDSET\+\_\+\+Msk}~(1UL $<$$<$ \textbf{ SCB\+\_\+\+ICSR\+\_\+\+NMIPENDSET\+\_\+\+Pos})
+\item 
+\#define \textbf{ SCB\+\_\+\+ICSR\+\_\+\+PENDSVSET\+\_\+\+Pos}~28U
+\item 
+\#define \textbf{ SCB\+\_\+\+ICSR\+\_\+\+PENDSVSET\+\_\+\+Msk}~(1UL $<$$<$ \textbf{ SCB\+\_\+\+ICSR\+\_\+\+PENDSVSET\+\_\+\+Pos})
+\item 
+\#define \textbf{ SCB\+\_\+\+ICSR\+\_\+\+PENDSVCLR\+\_\+\+Pos}~27U
+\item 
+\#define \textbf{ SCB\+\_\+\+ICSR\+\_\+\+PENDSVCLR\+\_\+\+Msk}~(1UL $<$$<$ \textbf{ SCB\+\_\+\+ICSR\+\_\+\+PENDSVCLR\+\_\+\+Pos})
+\item 
+\#define \textbf{ SCB\+\_\+\+ICSR\+\_\+\+PENDSTSET\+\_\+\+Pos}~26U
+\item 
+\#define \textbf{ SCB\+\_\+\+ICSR\+\_\+\+PENDSTSET\+\_\+\+Msk}~(1UL $<$$<$ \textbf{ SCB\+\_\+\+ICSR\+\_\+\+PENDSTSET\+\_\+\+Pos})
+\item 
+\#define \textbf{ SCB\+\_\+\+ICSR\+\_\+\+PENDSTCLR\+\_\+\+Pos}~25U
+\item 
+\#define \textbf{ SCB\+\_\+\+ICSR\+\_\+\+PENDSTCLR\+\_\+\+Msk}~(1UL $<$$<$ \textbf{ SCB\+\_\+\+ICSR\+\_\+\+PENDSTCLR\+\_\+\+Pos})
+\item 
+\#define \textbf{ SCB\+\_\+\+ICSR\+\_\+\+ISRPREEMPT\+\_\+\+Pos}~23U
+\item 
+\#define \textbf{ SCB\+\_\+\+ICSR\+\_\+\+ISRPREEMPT\+\_\+\+Msk}~(1UL $<$$<$ \textbf{ SCB\+\_\+\+ICSR\+\_\+\+ISRPREEMPT\+\_\+\+Pos})
+\item 
+\#define \textbf{ SCB\+\_\+\+ICSR\+\_\+\+ISRPENDING\+\_\+\+Pos}~22U
+\item 
+\#define \textbf{ SCB\+\_\+\+ICSR\+\_\+\+ISRPENDING\+\_\+\+Msk}~(1UL $<$$<$ \textbf{ SCB\+\_\+\+ICSR\+\_\+\+ISRPENDING\+\_\+\+Pos})
+\item 
+\#define \textbf{ SCB\+\_\+\+ICSR\+\_\+\+VECTPENDING\+\_\+\+Pos}~12U
+\item 
+\#define \textbf{ SCB\+\_\+\+ICSR\+\_\+\+VECTPENDING\+\_\+\+Msk}~(0x1\+FFUL $<$$<$ \textbf{ SCB\+\_\+\+ICSR\+\_\+\+VECTPENDING\+\_\+\+Pos})
+\item 
+\#define \textbf{ SCB\+\_\+\+ICSR\+\_\+\+RETTOBASE\+\_\+\+Pos}~11U
+\item 
+\#define \textbf{ SCB\+\_\+\+ICSR\+\_\+\+RETTOBASE\+\_\+\+Msk}~(1UL $<$$<$ \textbf{ SCB\+\_\+\+ICSR\+\_\+\+RETTOBASE\+\_\+\+Pos})
+\item 
+\#define \textbf{ SCB\+\_\+\+ICSR\+\_\+\+VECTACTIVE\+\_\+\+Pos}~0U
+\item 
+\#define \textbf{ SCB\+\_\+\+ICSR\+\_\+\+VECTACTIVE\+\_\+\+Msk}~(0x1\+FFUL /$\ast$$<$$<$ \textbf{ SCB\+\_\+\+ICSR\+\_\+\+VECTACTIVE\+\_\+\+Pos}$\ast$/)
+\item 
+\#define \textbf{ SCB\+\_\+\+VTOR\+\_\+\+TBLOFF\+\_\+\+Pos}~7U
+\item 
+\#define \textbf{ SCB\+\_\+\+VTOR\+\_\+\+TBLOFF\+\_\+\+Msk}~(0x1\+FFFFFFUL $<$$<$ \textbf{ SCB\+\_\+\+VTOR\+\_\+\+TBLOFF\+\_\+\+Pos})
+\item 
+\#define \textbf{ SCB\+\_\+\+AIRCR\+\_\+\+VECTKEY\+\_\+\+Pos}~16U
+\item 
+\#define \textbf{ SCB\+\_\+\+AIRCR\+\_\+\+VECTKEY\+\_\+\+Msk}~(0x\+FFFFUL $<$$<$ \textbf{ SCB\+\_\+\+AIRCR\+\_\+\+VECTKEY\+\_\+\+Pos})
+\item 
+\#define \textbf{ SCB\+\_\+\+AIRCR\+\_\+\+VECTKEYSTAT\+\_\+\+Pos}~16U
+\item 
+\#define \textbf{ SCB\+\_\+\+AIRCR\+\_\+\+VECTKEYSTAT\+\_\+\+Msk}~(0x\+FFFFUL $<$$<$ \textbf{ SCB\+\_\+\+AIRCR\+\_\+\+VECTKEYSTAT\+\_\+\+Pos})
+\item 
+\#define \textbf{ SCB\+\_\+\+AIRCR\+\_\+\+ENDIANESS\+\_\+\+Pos}~15U
+\item 
+\#define \textbf{ SCB\+\_\+\+AIRCR\+\_\+\+ENDIANESS\+\_\+\+Msk}~(1UL $<$$<$ \textbf{ SCB\+\_\+\+AIRCR\+\_\+\+ENDIANESS\+\_\+\+Pos})
+\item 
+\#define \textbf{ SCB\+\_\+\+AIRCR\+\_\+\+PRIGROUP\+\_\+\+Pos}~8U
+\item 
+\#define \textbf{ SCB\+\_\+\+AIRCR\+\_\+\+PRIGROUP\+\_\+\+Msk}~(7UL $<$$<$ \textbf{ SCB\+\_\+\+AIRCR\+\_\+\+PRIGROUP\+\_\+\+Pos})
+\item 
+\#define \textbf{ SCB\+\_\+\+AIRCR\+\_\+\+SYSRESETREQ\+\_\+\+Pos}~2U
+\item 
+\#define \textbf{ SCB\+\_\+\+AIRCR\+\_\+\+SYSRESETREQ\+\_\+\+Msk}~(1UL $<$$<$ \textbf{ SCB\+\_\+\+AIRCR\+\_\+\+SYSRESETREQ\+\_\+\+Pos})
+\item 
+\#define \textbf{ SCB\+\_\+\+AIRCR\+\_\+\+VECTCLRACTIVE\+\_\+\+Pos}~1U
+\item 
+\#define \textbf{ SCB\+\_\+\+AIRCR\+\_\+\+VECTCLRACTIVE\+\_\+\+Msk}~(1UL $<$$<$ \textbf{ SCB\+\_\+\+AIRCR\+\_\+\+VECTCLRACTIVE\+\_\+\+Pos})
+\item 
+\#define \textbf{ SCB\+\_\+\+AIRCR\+\_\+\+VECTRESET\+\_\+\+Pos}~0U
+\item 
+\#define \textbf{ SCB\+\_\+\+AIRCR\+\_\+\+VECTRESET\+\_\+\+Msk}~(1UL /$\ast$$<$$<$ \textbf{ SCB\+\_\+\+AIRCR\+\_\+\+VECTRESET\+\_\+\+Pos}$\ast$/)
+\item 
+\#define \textbf{ SCB\+\_\+\+SCR\+\_\+\+SEVONPEND\+\_\+\+Pos}~4U
+\item 
+\#define \textbf{ SCB\+\_\+\+SCR\+\_\+\+SEVONPEND\+\_\+\+Msk}~(1UL $<$$<$ \textbf{ SCB\+\_\+\+SCR\+\_\+\+SEVONPEND\+\_\+\+Pos})
+\item 
+\#define \textbf{ SCB\+\_\+\+SCR\+\_\+\+SLEEPDEEP\+\_\+\+Pos}~2U
+\item 
+\#define \textbf{ SCB\+\_\+\+SCR\+\_\+\+SLEEPDEEP\+\_\+\+Msk}~(1UL $<$$<$ \textbf{ SCB\+\_\+\+SCR\+\_\+\+SLEEPDEEP\+\_\+\+Pos})
+\item 
+\#define \textbf{ SCB\+\_\+\+SCR\+\_\+\+SLEEPONEXIT\+\_\+\+Pos}~1U
+\item 
+\#define \textbf{ SCB\+\_\+\+SCR\+\_\+\+SLEEPONEXIT\+\_\+\+Msk}~(1UL $<$$<$ \textbf{ SCB\+\_\+\+SCR\+\_\+\+SLEEPONEXIT\+\_\+\+Pos})
+\item 
+\#define \textbf{ SCB\+\_\+\+CCR\+\_\+\+STKALIGN\+\_\+\+Pos}~9U
+\item 
+\#define \textbf{ SCB\+\_\+\+CCR\+\_\+\+STKALIGN\+\_\+\+Msk}~(1UL $<$$<$ \textbf{ SCB\+\_\+\+CCR\+\_\+\+STKALIGN\+\_\+\+Pos})
+\item 
+\#define \textbf{ SCB\+\_\+\+CCR\+\_\+\+BFHFNMIGN\+\_\+\+Pos}~8U
+\item 
+\#define \textbf{ SCB\+\_\+\+CCR\+\_\+\+BFHFNMIGN\+\_\+\+Msk}~(1UL $<$$<$ \textbf{ SCB\+\_\+\+CCR\+\_\+\+BFHFNMIGN\+\_\+\+Pos})
+\item 
+\#define \textbf{ SCB\+\_\+\+CCR\+\_\+\+DIV\+\_\+0\+\_\+\+TRP\+\_\+\+Pos}~4U
+\item 
+\#define \textbf{ SCB\+\_\+\+CCR\+\_\+\+DIV\+\_\+0\+\_\+\+TRP\+\_\+\+Msk}~(1UL $<$$<$ \textbf{ SCB\+\_\+\+CCR\+\_\+\+DIV\+\_\+0\+\_\+\+TRP\+\_\+\+Pos})
+\item 
+\#define \textbf{ SCB\+\_\+\+CCR\+\_\+\+UNALIGN\+\_\+\+TRP\+\_\+\+Pos}~3U
+\item 
+\#define \textbf{ SCB\+\_\+\+CCR\+\_\+\+UNALIGN\+\_\+\+TRP\+\_\+\+Msk}~(1UL $<$$<$ \textbf{ SCB\+\_\+\+CCR\+\_\+\+UNALIGN\+\_\+\+TRP\+\_\+\+Pos})
+\item 
+\#define \textbf{ SCB\+\_\+\+CCR\+\_\+\+USERSETMPEND\+\_\+\+Pos}~1U
+\item 
+\#define \textbf{ SCB\+\_\+\+CCR\+\_\+\+USERSETMPEND\+\_\+\+Msk}~(1UL $<$$<$ \textbf{ SCB\+\_\+\+CCR\+\_\+\+USERSETMPEND\+\_\+\+Pos})
+\item 
+\#define \textbf{ SCB\+\_\+\+CCR\+\_\+\+NONBASETHRDENA\+\_\+\+Pos}~0U
+\item 
+\#define \textbf{ SCB\+\_\+\+CCR\+\_\+\+NONBASETHRDENA\+\_\+\+Msk}~(1UL /$\ast$$<$$<$ \textbf{ SCB\+\_\+\+CCR\+\_\+\+NONBASETHRDENA\+\_\+\+Pos}$\ast$/)
+\item 
+\#define \textbf{ SCB\+\_\+\+SHCSR\+\_\+\+USGFAULTENA\+\_\+\+Pos}~18U
+\item 
+\#define \textbf{ SCB\+\_\+\+SHCSR\+\_\+\+USGFAULTENA\+\_\+\+Msk}~(1UL $<$$<$ \textbf{ SCB\+\_\+\+SHCSR\+\_\+\+USGFAULTENA\+\_\+\+Pos})
+\item 
+\#define \textbf{ SCB\+\_\+\+SHCSR\+\_\+\+BUSFAULTENA\+\_\+\+Pos}~17U
+\item 
+\#define \textbf{ SCB\+\_\+\+SHCSR\+\_\+\+BUSFAULTENA\+\_\+\+Msk}~(1UL $<$$<$ \textbf{ SCB\+\_\+\+SHCSR\+\_\+\+BUSFAULTENA\+\_\+\+Pos})
+\item 
+\#define \textbf{ SCB\+\_\+\+SHCSR\+\_\+\+MEMFAULTENA\+\_\+\+Pos}~16U
+\item 
+\#define \textbf{ SCB\+\_\+\+SHCSR\+\_\+\+MEMFAULTENA\+\_\+\+Msk}~(1UL $<$$<$ \textbf{ SCB\+\_\+\+SHCSR\+\_\+\+MEMFAULTENA\+\_\+\+Pos})
+\item 
+\#define \textbf{ SCB\+\_\+\+SHCSR\+\_\+\+SVCALLPENDED\+\_\+\+Pos}~15U
+\item 
+\#define \textbf{ SCB\+\_\+\+SHCSR\+\_\+\+SVCALLPENDED\+\_\+\+Msk}~(1UL $<$$<$ \textbf{ SCB\+\_\+\+SHCSR\+\_\+\+SVCALLPENDED\+\_\+\+Pos})
+\item 
+\#define \textbf{ SCB\+\_\+\+SHCSR\+\_\+\+BUSFAULTPENDED\+\_\+\+Pos}~14U
+\item 
+\#define \textbf{ SCB\+\_\+\+SHCSR\+\_\+\+BUSFAULTPENDED\+\_\+\+Msk}~(1UL $<$$<$ \textbf{ SCB\+\_\+\+SHCSR\+\_\+\+BUSFAULTPENDED\+\_\+\+Pos})
+\item 
+\#define \textbf{ SCB\+\_\+\+SHCSR\+\_\+\+MEMFAULTPENDED\+\_\+\+Pos}~13U
+\item 
+\#define \textbf{ SCB\+\_\+\+SHCSR\+\_\+\+MEMFAULTPENDED\+\_\+\+Msk}~(1UL $<$$<$ \textbf{ SCB\+\_\+\+SHCSR\+\_\+\+MEMFAULTPENDED\+\_\+\+Pos})
+\item 
+\#define \textbf{ SCB\+\_\+\+SHCSR\+\_\+\+USGFAULTPENDED\+\_\+\+Pos}~12U
+\item 
+\#define \textbf{ SCB\+\_\+\+SHCSR\+\_\+\+USGFAULTPENDED\+\_\+\+Msk}~(1UL $<$$<$ \textbf{ SCB\+\_\+\+SHCSR\+\_\+\+USGFAULTPENDED\+\_\+\+Pos})
+\item 
+\#define \textbf{ SCB\+\_\+\+SHCSR\+\_\+\+SYSTICKACT\+\_\+\+Pos}~11U
+\item 
+\#define \textbf{ SCB\+\_\+\+SHCSR\+\_\+\+SYSTICKACT\+\_\+\+Msk}~(1UL $<$$<$ \textbf{ SCB\+\_\+\+SHCSR\+\_\+\+SYSTICKACT\+\_\+\+Pos})
+\item 
+\#define \textbf{ SCB\+\_\+\+SHCSR\+\_\+\+PENDSVACT\+\_\+\+Pos}~10U
+\item 
+\#define \textbf{ SCB\+\_\+\+SHCSR\+\_\+\+PENDSVACT\+\_\+\+Msk}~(1UL $<$$<$ \textbf{ SCB\+\_\+\+SHCSR\+\_\+\+PENDSVACT\+\_\+\+Pos})
+\item 
+\#define \textbf{ SCB\+\_\+\+SHCSR\+\_\+\+MONITORACT\+\_\+\+Pos}~8U
+\item 
+\#define \textbf{ SCB\+\_\+\+SHCSR\+\_\+\+MONITORACT\+\_\+\+Msk}~(1UL $<$$<$ \textbf{ SCB\+\_\+\+SHCSR\+\_\+\+MONITORACT\+\_\+\+Pos})
+\item 
+\#define \textbf{ SCB\+\_\+\+SHCSR\+\_\+\+SVCALLACT\+\_\+\+Pos}~7U
+\item 
+\#define \textbf{ SCB\+\_\+\+SHCSR\+\_\+\+SVCALLACT\+\_\+\+Msk}~(1UL $<$$<$ \textbf{ SCB\+\_\+\+SHCSR\+\_\+\+SVCALLACT\+\_\+\+Pos})
+\item 
+\#define \textbf{ SCB\+\_\+\+SHCSR\+\_\+\+USGFAULTACT\+\_\+\+Pos}~3U
+\item 
+\#define \textbf{ SCB\+\_\+\+SHCSR\+\_\+\+USGFAULTACT\+\_\+\+Msk}~(1UL $<$$<$ \textbf{ SCB\+\_\+\+SHCSR\+\_\+\+USGFAULTACT\+\_\+\+Pos})
+\item 
+\#define \textbf{ SCB\+\_\+\+SHCSR\+\_\+\+BUSFAULTACT\+\_\+\+Pos}~1U
+\item 
+\#define \textbf{ SCB\+\_\+\+SHCSR\+\_\+\+BUSFAULTACT\+\_\+\+Msk}~(1UL $<$$<$ \textbf{ SCB\+\_\+\+SHCSR\+\_\+\+BUSFAULTACT\+\_\+\+Pos})
+\item 
+\#define \textbf{ SCB\+\_\+\+SHCSR\+\_\+\+MEMFAULTACT\+\_\+\+Pos}~0U
+\item 
+\#define \textbf{ SCB\+\_\+\+SHCSR\+\_\+\+MEMFAULTACT\+\_\+\+Msk}~(1UL /$\ast$$<$$<$ \textbf{ SCB\+\_\+\+SHCSR\+\_\+\+MEMFAULTACT\+\_\+\+Pos}$\ast$/)
+\item 
+\#define \textbf{ SCB\+\_\+\+CFSR\+\_\+\+USGFAULTSR\+\_\+\+Pos}~16U
+\item 
+\#define \textbf{ SCB\+\_\+\+CFSR\+\_\+\+USGFAULTSR\+\_\+\+Msk}~(0x\+FFFFUL $<$$<$ \textbf{ SCB\+\_\+\+CFSR\+\_\+\+USGFAULTSR\+\_\+\+Pos})
+\item 
+\#define \textbf{ SCB\+\_\+\+CFSR\+\_\+\+BUSFAULTSR\+\_\+\+Pos}~8U
+\item 
+\#define \textbf{ SCB\+\_\+\+CFSR\+\_\+\+BUSFAULTSR\+\_\+\+Msk}~(0x\+FFUL $<$$<$ \textbf{ SCB\+\_\+\+CFSR\+\_\+\+BUSFAULTSR\+\_\+\+Pos})
+\item 
+\#define \textbf{ SCB\+\_\+\+CFSR\+\_\+\+MEMFAULTSR\+\_\+\+Pos}~0U
+\item 
+\#define \textbf{ SCB\+\_\+\+CFSR\+\_\+\+MEMFAULTSR\+\_\+\+Msk}~(0x\+FFUL /$\ast$$<$$<$ \textbf{ SCB\+\_\+\+CFSR\+\_\+\+MEMFAULTSR\+\_\+\+Pos}$\ast$/)
+\item 
+\#define \textbf{ SCB\+\_\+\+HFSR\+\_\+\+DEBUGEVT\+\_\+\+Pos}~31U
+\item 
+\#define \textbf{ SCB\+\_\+\+HFSR\+\_\+\+DEBUGEVT\+\_\+\+Msk}~(1UL $<$$<$ \textbf{ SCB\+\_\+\+HFSR\+\_\+\+DEBUGEVT\+\_\+\+Pos})
+\item 
+\#define \textbf{ SCB\+\_\+\+HFSR\+\_\+\+FORCED\+\_\+\+Pos}~30U
+\item 
+\#define \textbf{ SCB\+\_\+\+HFSR\+\_\+\+FORCED\+\_\+\+Msk}~(1UL $<$$<$ \textbf{ SCB\+\_\+\+HFSR\+\_\+\+FORCED\+\_\+\+Pos})
+\item 
+\#define \textbf{ SCB\+\_\+\+HFSR\+\_\+\+VECTTBL\+\_\+\+Pos}~1U
+\item 
+\#define \textbf{ SCB\+\_\+\+HFSR\+\_\+\+VECTTBL\+\_\+\+Msk}~(1UL $<$$<$ \textbf{ SCB\+\_\+\+HFSR\+\_\+\+VECTTBL\+\_\+\+Pos})
+\item 
+\#define \textbf{ SCB\+\_\+\+DFSR\+\_\+\+EXTERNAL\+\_\+\+Pos}~4U
+\item 
+\#define \textbf{ SCB\+\_\+\+DFSR\+\_\+\+EXTERNAL\+\_\+\+Msk}~(1UL $<$$<$ \textbf{ SCB\+\_\+\+DFSR\+\_\+\+EXTERNAL\+\_\+\+Pos})
+\item 
+\#define \textbf{ SCB\+\_\+\+DFSR\+\_\+\+VCATCH\+\_\+\+Pos}~3U
+\item 
+\#define \textbf{ SCB\+\_\+\+DFSR\+\_\+\+VCATCH\+\_\+\+Msk}~(1UL $<$$<$ \textbf{ SCB\+\_\+\+DFSR\+\_\+\+VCATCH\+\_\+\+Pos})
+\item 
+\#define \textbf{ SCB\+\_\+\+DFSR\+\_\+\+DWTTRAP\+\_\+\+Pos}~2U
+\item 
+\#define \textbf{ SCB\+\_\+\+DFSR\+\_\+\+DWTTRAP\+\_\+\+Msk}~(1UL $<$$<$ \textbf{ SCB\+\_\+\+DFSR\+\_\+\+DWTTRAP\+\_\+\+Pos})
+\item 
+\#define \textbf{ SCB\+\_\+\+DFSR\+\_\+\+BKPT\+\_\+\+Pos}~1U
+\item 
+\#define \textbf{ SCB\+\_\+\+DFSR\+\_\+\+BKPT\+\_\+\+Msk}~(1UL $<$$<$ \textbf{ SCB\+\_\+\+DFSR\+\_\+\+BKPT\+\_\+\+Pos})
+\item 
+\#define \textbf{ SCB\+\_\+\+DFSR\+\_\+\+HALTED\+\_\+\+Pos}~0U
+\item 
+\#define \textbf{ SCB\+\_\+\+DFSR\+\_\+\+HALTED\+\_\+\+Msk}~(1UL /$\ast$$<$$<$ \textbf{ SCB\+\_\+\+DFSR\+\_\+\+HALTED\+\_\+\+Pos}$\ast$/)
+\item 
+\#define \textbf{ SCn\+SCB\+\_\+\+ICTR\+\_\+\+INTLINESNUM\+\_\+\+Pos}~0U
+\item 
+\#define \textbf{ SCn\+SCB\+\_\+\+ICTR\+\_\+\+INTLINESNUM\+\_\+\+Msk}~(0x\+FUL /$\ast$$<$$<$ \textbf{ SCn\+SCB\+\_\+\+ICTR\+\_\+\+INTLINESNUM\+\_\+\+Pos}$\ast$/)
+\item 
+\#define \textbf{ SCn\+SCB\+\_\+\+ACTLR\+\_\+\+DISOOFP\+\_\+\+Pos}~9U
+\item 
+\#define \textbf{ SCn\+SCB\+\_\+\+ACTLR\+\_\+\+DISOOFP\+\_\+\+Msk}~(1UL $<$$<$ \textbf{ SCn\+SCB\+\_\+\+ACTLR\+\_\+\+DISOOFP\+\_\+\+Pos})
+\item 
+\#define \textbf{ SCn\+SCB\+\_\+\+ACTLR\+\_\+\+DISFPCA\+\_\+\+Pos}~8U
+\item 
+\#define \textbf{ SCn\+SCB\+\_\+\+ACTLR\+\_\+\+DISFPCA\+\_\+\+Msk}~(1UL $<$$<$ \textbf{ SCn\+SCB\+\_\+\+ACTLR\+\_\+\+DISFPCA\+\_\+\+Pos})
+\item 
+\#define \textbf{ SCn\+SCB\+\_\+\+ACTLR\+\_\+\+DISFOLD\+\_\+\+Pos}~2U
+\item 
+\#define \textbf{ SCn\+SCB\+\_\+\+ACTLR\+\_\+\+DISFOLD\+\_\+\+Msk}~(1UL $<$$<$ \textbf{ SCn\+SCB\+\_\+\+ACTLR\+\_\+\+DISFOLD\+\_\+\+Pos})
+\item 
+\#define \textbf{ SCn\+SCB\+\_\+\+ACTLR\+\_\+\+DISDEFWBUF\+\_\+\+Pos}~1U
+\item 
+\#define \textbf{ SCn\+SCB\+\_\+\+ACTLR\+\_\+\+DISDEFWBUF\+\_\+\+Msk}~(1UL $<$$<$ \textbf{ SCn\+SCB\+\_\+\+ACTLR\+\_\+\+DISDEFWBUF\+\_\+\+Pos})
+\item 
+\#define \textbf{ SCn\+SCB\+\_\+\+ACTLR\+\_\+\+DISMCYCINT\+\_\+\+Pos}~0U
+\item 
+\#define \textbf{ SCn\+SCB\+\_\+\+ACTLR\+\_\+\+DISMCYCINT\+\_\+\+Msk}~(1UL /$\ast$$<$$<$ \textbf{ SCn\+SCB\+\_\+\+ACTLR\+\_\+\+DISMCYCINT\+\_\+\+Pos}$\ast$/)
+\item 
+\#define \textbf{ Sys\+Tick\+\_\+\+CTRL\+\_\+\+COUNTFLAG\+\_\+\+Pos}~16U
+\item 
+\#define \textbf{ Sys\+Tick\+\_\+\+CTRL\+\_\+\+COUNTFLAG\+\_\+\+Msk}~(1UL $<$$<$ \textbf{ Sys\+Tick\+\_\+\+CTRL\+\_\+\+COUNTFLAG\+\_\+\+Pos})
+\item 
+\#define \textbf{ Sys\+Tick\+\_\+\+CTRL\+\_\+\+CLKSOURCE\+\_\+\+Pos}~2U
+\item 
+\#define \textbf{ Sys\+Tick\+\_\+\+CTRL\+\_\+\+CLKSOURCE\+\_\+\+Msk}~(1UL $<$$<$ \textbf{ Sys\+Tick\+\_\+\+CTRL\+\_\+\+CLKSOURCE\+\_\+\+Pos})
+\item 
+\#define \textbf{ Sys\+Tick\+\_\+\+CTRL\+\_\+\+TICKINT\+\_\+\+Pos}~1U
+\item 
+\#define \textbf{ Sys\+Tick\+\_\+\+CTRL\+\_\+\+TICKINT\+\_\+\+Msk}~(1UL $<$$<$ \textbf{ Sys\+Tick\+\_\+\+CTRL\+\_\+\+TICKINT\+\_\+\+Pos})
+\item 
+\#define \textbf{ Sys\+Tick\+\_\+\+CTRL\+\_\+\+ENABLE\+\_\+\+Pos}~0U
+\item 
+\#define \textbf{ Sys\+Tick\+\_\+\+CTRL\+\_\+\+ENABLE\+\_\+\+Msk}~(1UL /$\ast$$<$$<$ \textbf{ Sys\+Tick\+\_\+\+CTRL\+\_\+\+ENABLE\+\_\+\+Pos}$\ast$/)
+\item 
+\#define \textbf{ Sys\+Tick\+\_\+\+LOAD\+\_\+\+RELOAD\+\_\+\+Pos}~0U
+\item 
+\#define \textbf{ Sys\+Tick\+\_\+\+LOAD\+\_\+\+RELOAD\+\_\+\+Msk}~(0x\+FFFFFFUL /$\ast$$<$$<$ \textbf{ Sys\+Tick\+\_\+\+LOAD\+\_\+\+RELOAD\+\_\+\+Pos}$\ast$/)
+\item 
+\#define \textbf{ Sys\+Tick\+\_\+\+VAL\+\_\+\+CURRENT\+\_\+\+Pos}~0U
+\item 
+\#define \textbf{ Sys\+Tick\+\_\+\+VAL\+\_\+\+CURRENT\+\_\+\+Msk}~(0x\+FFFFFFUL /$\ast$$<$$<$ \textbf{ Sys\+Tick\+\_\+\+VAL\+\_\+\+CURRENT\+\_\+\+Pos}$\ast$/)
+\item 
+\#define \textbf{ Sys\+Tick\+\_\+\+CALIB\+\_\+\+NOREF\+\_\+\+Pos}~31U
+\item 
+\#define \textbf{ Sys\+Tick\+\_\+\+CALIB\+\_\+\+NOREF\+\_\+\+Msk}~(1UL $<$$<$ \textbf{ Sys\+Tick\+\_\+\+CALIB\+\_\+\+NOREF\+\_\+\+Pos})
+\item 
+\#define \textbf{ Sys\+Tick\+\_\+\+CALIB\+\_\+\+SKEW\+\_\+\+Pos}~30U
+\item 
+\#define \textbf{ Sys\+Tick\+\_\+\+CALIB\+\_\+\+SKEW\+\_\+\+Msk}~(1UL $<$$<$ \textbf{ Sys\+Tick\+\_\+\+CALIB\+\_\+\+SKEW\+\_\+\+Pos})
+\item 
+\#define \textbf{ Sys\+Tick\+\_\+\+CALIB\+\_\+\+TENMS\+\_\+\+Pos}~0U
+\item 
+\#define \textbf{ Sys\+Tick\+\_\+\+CALIB\+\_\+\+TENMS\+\_\+\+Msk}~(0x\+FFFFFFUL /$\ast$$<$$<$ \textbf{ Sys\+Tick\+\_\+\+CALIB\+\_\+\+TENMS\+\_\+\+Pos}$\ast$/)
+\item 
+\#define \textbf{ ITM\+\_\+\+TPR\+\_\+\+PRIVMASK\+\_\+\+Pos}~0U
+\item 
+\#define \textbf{ ITM\+\_\+\+TPR\+\_\+\+PRIVMASK\+\_\+\+Msk}~(0x\+FUL /$\ast$$<$$<$ \textbf{ ITM\+\_\+\+TPR\+\_\+\+PRIVMASK\+\_\+\+Pos}$\ast$/)
+\item 
+\#define \textbf{ ITM\+\_\+\+TCR\+\_\+\+BUSY\+\_\+\+Pos}~23U
+\item 
+\#define \textbf{ ITM\+\_\+\+TCR\+\_\+\+BUSY\+\_\+\+Msk}~(1UL $<$$<$ \textbf{ ITM\+\_\+\+TCR\+\_\+\+BUSY\+\_\+\+Pos})
+\item 
+\#define \textbf{ ITM\+\_\+\+TCR\+\_\+\+Trace\+Bus\+ID\+\_\+\+Pos}~16U
+\item 
+\#define \textbf{ ITM\+\_\+\+TCR\+\_\+\+Trace\+Bus\+ID\+\_\+\+Msk}~(0x7\+FUL $<$$<$ \textbf{ ITM\+\_\+\+TCR\+\_\+\+Trace\+Bus\+ID\+\_\+\+Pos})
+\item 
+\#define \textbf{ ITM\+\_\+\+TCR\+\_\+\+GTSFREQ\+\_\+\+Pos}~10U
+\item 
+\#define \textbf{ ITM\+\_\+\+TCR\+\_\+\+GTSFREQ\+\_\+\+Msk}~(3UL $<$$<$ \textbf{ ITM\+\_\+\+TCR\+\_\+\+GTSFREQ\+\_\+\+Pos})
+\item 
+\#define \textbf{ ITM\+\_\+\+TCR\+\_\+\+TSPrescale\+\_\+\+Pos}~8U
+\item 
+\#define \textbf{ ITM\+\_\+\+TCR\+\_\+\+TSPrescale\+\_\+\+Msk}~(3UL $<$$<$ \textbf{ ITM\+\_\+\+TCR\+\_\+\+TSPrescale\+\_\+\+Pos})
+\item 
+\#define \textbf{ ITM\+\_\+\+TCR\+\_\+\+SWOENA\+\_\+\+Pos}~4U
+\item 
+\#define \textbf{ ITM\+\_\+\+TCR\+\_\+\+SWOENA\+\_\+\+Msk}~(1UL $<$$<$ \textbf{ ITM\+\_\+\+TCR\+\_\+\+SWOENA\+\_\+\+Pos})
+\item 
+\#define \textbf{ ITM\+\_\+\+TCR\+\_\+\+DWTENA\+\_\+\+Pos}~3U
+\item 
+\#define \textbf{ ITM\+\_\+\+TCR\+\_\+\+DWTENA\+\_\+\+Msk}~(1UL $<$$<$ \textbf{ ITM\+\_\+\+TCR\+\_\+\+DWTENA\+\_\+\+Pos})
+\item 
+\#define \textbf{ ITM\+\_\+\+TCR\+\_\+\+SYNCENA\+\_\+\+Pos}~2U
+\item 
+\#define \textbf{ ITM\+\_\+\+TCR\+\_\+\+SYNCENA\+\_\+\+Msk}~(1UL $<$$<$ \textbf{ ITM\+\_\+\+TCR\+\_\+\+SYNCENA\+\_\+\+Pos})
+\item 
+\#define \textbf{ ITM\+\_\+\+TCR\+\_\+\+TSENA\+\_\+\+Pos}~1U
+\item 
+\#define \textbf{ ITM\+\_\+\+TCR\+\_\+\+TSENA\+\_\+\+Msk}~(1UL $<$$<$ \textbf{ ITM\+\_\+\+TCR\+\_\+\+TSENA\+\_\+\+Pos})
+\item 
+\#define \textbf{ ITM\+\_\+\+TCR\+\_\+\+ITMENA\+\_\+\+Pos}~0U
+\item 
+\#define \textbf{ ITM\+\_\+\+TCR\+\_\+\+ITMENA\+\_\+\+Msk}~(1UL /$\ast$$<$$<$ \textbf{ ITM\+\_\+\+TCR\+\_\+\+ITMENA\+\_\+\+Pos}$\ast$/)
+\item 
+\#define \textbf{ ITM\+\_\+\+IWR\+\_\+\+ATVALIDM\+\_\+\+Pos}~0U
+\item 
+\#define \textbf{ ITM\+\_\+\+IWR\+\_\+\+ATVALIDM\+\_\+\+Msk}~(1UL /$\ast$$<$$<$ \textbf{ ITM\+\_\+\+IWR\+\_\+\+ATVALIDM\+\_\+\+Pos}$\ast$/)
+\item 
+\#define \textbf{ ITM\+\_\+\+IRR\+\_\+\+ATREADYM\+\_\+\+Pos}~0U
+\item 
+\#define \textbf{ ITM\+\_\+\+IRR\+\_\+\+ATREADYM\+\_\+\+Msk}~(1UL /$\ast$$<$$<$ \textbf{ ITM\+\_\+\+IRR\+\_\+\+ATREADYM\+\_\+\+Pos}$\ast$/)
+\item 
+\#define \textbf{ ITM\+\_\+\+IMCR\+\_\+\+INTEGRATION\+\_\+\+Pos}~0U
+\item 
+\#define \textbf{ ITM\+\_\+\+IMCR\+\_\+\+INTEGRATION\+\_\+\+Msk}~(1UL /$\ast$$<$$<$ \textbf{ ITM\+\_\+\+IMCR\+\_\+\+INTEGRATION\+\_\+\+Pos}$\ast$/)
+\item 
+\#define \textbf{ ITM\+\_\+\+LSR\+\_\+\+Byte\+Acc\+\_\+\+Pos}~2U
+\item 
+\#define \textbf{ ITM\+\_\+\+LSR\+\_\+\+Byte\+Acc\+\_\+\+Msk}~(1UL $<$$<$ \textbf{ ITM\+\_\+\+LSR\+\_\+\+Byte\+Acc\+\_\+\+Pos})
+\item 
+\#define \textbf{ ITM\+\_\+\+LSR\+\_\+\+Access\+\_\+\+Pos}~1U
+\item 
+\#define \textbf{ ITM\+\_\+\+LSR\+\_\+\+Access\+\_\+\+Msk}~(1UL $<$$<$ \textbf{ ITM\+\_\+\+LSR\+\_\+\+Access\+\_\+\+Pos})
+\item 
+\#define \textbf{ ITM\+\_\+\+LSR\+\_\+\+Present\+\_\+\+Pos}~0U
+\item 
+\#define \textbf{ ITM\+\_\+\+LSR\+\_\+\+Present\+\_\+\+Msk}~(1UL /$\ast$$<$$<$ \textbf{ ITM\+\_\+\+LSR\+\_\+\+Present\+\_\+\+Pos}$\ast$/)
+\item 
+\#define \textbf{ DWT\+\_\+\+CTRL\+\_\+\+NUMCOMP\+\_\+\+Pos}~28U
+\item 
+\#define \textbf{ DWT\+\_\+\+CTRL\+\_\+\+NUMCOMP\+\_\+\+Msk}~(0x\+FUL $<$$<$ \textbf{ DWT\+\_\+\+CTRL\+\_\+\+NUMCOMP\+\_\+\+Pos})
+\item 
+\#define \textbf{ DWT\+\_\+\+CTRL\+\_\+\+NOTRCPKT\+\_\+\+Pos}~27U
+\item 
+\#define \textbf{ DWT\+\_\+\+CTRL\+\_\+\+NOTRCPKT\+\_\+\+Msk}~(0x1\+UL $<$$<$ \textbf{ DWT\+\_\+\+CTRL\+\_\+\+NOTRCPKT\+\_\+\+Pos})
+\item 
+\#define \textbf{ DWT\+\_\+\+CTRL\+\_\+\+NOEXTTRIG\+\_\+\+Pos}~26U
+\item 
+\#define \textbf{ DWT\+\_\+\+CTRL\+\_\+\+NOEXTTRIG\+\_\+\+Msk}~(0x1\+UL $<$$<$ \textbf{ DWT\+\_\+\+CTRL\+\_\+\+NOEXTTRIG\+\_\+\+Pos})
+\item 
+\#define \textbf{ DWT\+\_\+\+CTRL\+\_\+\+NOCYCCNT\+\_\+\+Pos}~25U
+\item 
+\#define \textbf{ DWT\+\_\+\+CTRL\+\_\+\+NOCYCCNT\+\_\+\+Msk}~(0x1\+UL $<$$<$ \textbf{ DWT\+\_\+\+CTRL\+\_\+\+NOCYCCNT\+\_\+\+Pos})
+\item 
+\#define \textbf{ DWT\+\_\+\+CTRL\+\_\+\+NOPRFCNT\+\_\+\+Pos}~24U
+\item 
+\#define \textbf{ DWT\+\_\+\+CTRL\+\_\+\+NOPRFCNT\+\_\+\+Msk}~(0x1\+UL $<$$<$ \textbf{ DWT\+\_\+\+CTRL\+\_\+\+NOPRFCNT\+\_\+\+Pos})
+\item 
+\#define \textbf{ DWT\+\_\+\+CTRL\+\_\+\+CYCEVTENA\+\_\+\+Pos}~22U
+\item 
+\#define \textbf{ DWT\+\_\+\+CTRL\+\_\+\+CYCEVTENA\+\_\+\+Msk}~(0x1\+UL $<$$<$ \textbf{ DWT\+\_\+\+CTRL\+\_\+\+CYCEVTENA\+\_\+\+Pos})
+\item 
+\#define \textbf{ DWT\+\_\+\+CTRL\+\_\+\+FOLDEVTENA\+\_\+\+Pos}~21U
+\item 
+\#define \textbf{ DWT\+\_\+\+CTRL\+\_\+\+FOLDEVTENA\+\_\+\+Msk}~(0x1\+UL $<$$<$ \textbf{ DWT\+\_\+\+CTRL\+\_\+\+FOLDEVTENA\+\_\+\+Pos})
+\item 
+\#define \textbf{ DWT\+\_\+\+CTRL\+\_\+\+LSUEVTENA\+\_\+\+Pos}~20U
+\item 
+\#define \textbf{ DWT\+\_\+\+CTRL\+\_\+\+LSUEVTENA\+\_\+\+Msk}~(0x1\+UL $<$$<$ \textbf{ DWT\+\_\+\+CTRL\+\_\+\+LSUEVTENA\+\_\+\+Pos})
+\item 
+\#define \textbf{ DWT\+\_\+\+CTRL\+\_\+\+SLEEPEVTENA\+\_\+\+Pos}~19U
+\item 
+\#define \textbf{ DWT\+\_\+\+CTRL\+\_\+\+SLEEPEVTENA\+\_\+\+Msk}~(0x1\+UL $<$$<$ \textbf{ DWT\+\_\+\+CTRL\+\_\+\+SLEEPEVTENA\+\_\+\+Pos})
+\item 
+\#define \textbf{ DWT\+\_\+\+CTRL\+\_\+\+EXCEVTENA\+\_\+\+Pos}~18U
+\item 
+\#define \textbf{ DWT\+\_\+\+CTRL\+\_\+\+EXCEVTENA\+\_\+\+Msk}~(0x1\+UL $<$$<$ \textbf{ DWT\+\_\+\+CTRL\+\_\+\+EXCEVTENA\+\_\+\+Pos})
+\item 
+\#define \textbf{ DWT\+\_\+\+CTRL\+\_\+\+CPIEVTENA\+\_\+\+Pos}~17U
+\item 
+\#define \textbf{ DWT\+\_\+\+CTRL\+\_\+\+CPIEVTENA\+\_\+\+Msk}~(0x1\+UL $<$$<$ \textbf{ DWT\+\_\+\+CTRL\+\_\+\+CPIEVTENA\+\_\+\+Pos})
+\item 
+\#define \textbf{ DWT\+\_\+\+CTRL\+\_\+\+EXCTRCENA\+\_\+\+Pos}~16U
+\item 
+\#define \textbf{ DWT\+\_\+\+CTRL\+\_\+\+EXCTRCENA\+\_\+\+Msk}~(0x1\+UL $<$$<$ \textbf{ DWT\+\_\+\+CTRL\+\_\+\+EXCTRCENA\+\_\+\+Pos})
+\item 
+\#define \textbf{ DWT\+\_\+\+CTRL\+\_\+\+PCSAMPLENA\+\_\+\+Pos}~12U
+\item 
+\#define \textbf{ DWT\+\_\+\+CTRL\+\_\+\+PCSAMPLENA\+\_\+\+Msk}~(0x1\+UL $<$$<$ \textbf{ DWT\+\_\+\+CTRL\+\_\+\+PCSAMPLENA\+\_\+\+Pos})
+\item 
+\#define \textbf{ DWT\+\_\+\+CTRL\+\_\+\+SYNCTAP\+\_\+\+Pos}~10U
+\item 
+\#define \textbf{ DWT\+\_\+\+CTRL\+\_\+\+SYNCTAP\+\_\+\+Msk}~(0x3\+UL $<$$<$ \textbf{ DWT\+\_\+\+CTRL\+\_\+\+SYNCTAP\+\_\+\+Pos})
+\item 
+\#define \textbf{ DWT\+\_\+\+CTRL\+\_\+\+CYCTAP\+\_\+\+Pos}~9U
+\item 
+\#define \textbf{ DWT\+\_\+\+CTRL\+\_\+\+CYCTAP\+\_\+\+Msk}~(0x1\+UL $<$$<$ \textbf{ DWT\+\_\+\+CTRL\+\_\+\+CYCTAP\+\_\+\+Pos})
+\item 
+\#define \textbf{ DWT\+\_\+\+CTRL\+\_\+\+POSTINIT\+\_\+\+Pos}~5U
+\item 
+\#define \textbf{ DWT\+\_\+\+CTRL\+\_\+\+POSTINIT\+\_\+\+Msk}~(0x\+FUL $<$$<$ \textbf{ DWT\+\_\+\+CTRL\+\_\+\+POSTINIT\+\_\+\+Pos})
+\item 
+\#define \textbf{ DWT\+\_\+\+CTRL\+\_\+\+POSTPRESET\+\_\+\+Pos}~1U
+\item 
+\#define \textbf{ DWT\+\_\+\+CTRL\+\_\+\+POSTPRESET\+\_\+\+Msk}~(0x\+FUL $<$$<$ \textbf{ DWT\+\_\+\+CTRL\+\_\+\+POSTPRESET\+\_\+\+Pos})
+\item 
+\#define \textbf{ DWT\+\_\+\+CTRL\+\_\+\+CYCCNTENA\+\_\+\+Pos}~0U
+\item 
+\#define \textbf{ DWT\+\_\+\+CTRL\+\_\+\+CYCCNTENA\+\_\+\+Msk}~(0x1\+UL /$\ast$$<$$<$ \textbf{ DWT\+\_\+\+CTRL\+\_\+\+CYCCNTENA\+\_\+\+Pos}$\ast$/)
+\item 
+\#define \textbf{ DWT\+\_\+\+CPICNT\+\_\+\+CPICNT\+\_\+\+Pos}~0U
+\item 
+\#define \textbf{ DWT\+\_\+\+CPICNT\+\_\+\+CPICNT\+\_\+\+Msk}~(0x\+FFUL /$\ast$$<$$<$ \textbf{ DWT\+\_\+\+CPICNT\+\_\+\+CPICNT\+\_\+\+Pos}$\ast$/)
+\item 
+\#define \textbf{ DWT\+\_\+\+EXCCNT\+\_\+\+EXCCNT\+\_\+\+Pos}~0U
+\item 
+\#define \textbf{ DWT\+\_\+\+EXCCNT\+\_\+\+EXCCNT\+\_\+\+Msk}~(0x\+FFUL /$\ast$$<$$<$ \textbf{ DWT\+\_\+\+EXCCNT\+\_\+\+EXCCNT\+\_\+\+Pos}$\ast$/)
+\item 
+\#define \textbf{ DWT\+\_\+\+SLEEPCNT\+\_\+\+SLEEPCNT\+\_\+\+Pos}~0U
+\item 
+\#define \textbf{ DWT\+\_\+\+SLEEPCNT\+\_\+\+SLEEPCNT\+\_\+\+Msk}~(0x\+FFUL /$\ast$$<$$<$ \textbf{ DWT\+\_\+\+SLEEPCNT\+\_\+\+SLEEPCNT\+\_\+\+Pos}$\ast$/)
+\item 
+\#define \textbf{ DWT\+\_\+\+LSUCNT\+\_\+\+LSUCNT\+\_\+\+Pos}~0U
+\item 
+\#define \textbf{ DWT\+\_\+\+LSUCNT\+\_\+\+LSUCNT\+\_\+\+Msk}~(0x\+FFUL /$\ast$$<$$<$ \textbf{ DWT\+\_\+\+LSUCNT\+\_\+\+LSUCNT\+\_\+\+Pos}$\ast$/)
+\item 
+\#define \textbf{ DWT\+\_\+\+FOLDCNT\+\_\+\+FOLDCNT\+\_\+\+Pos}~0U
+\item 
+\#define \textbf{ DWT\+\_\+\+FOLDCNT\+\_\+\+FOLDCNT\+\_\+\+Msk}~(0x\+FFUL /$\ast$$<$$<$ \textbf{ DWT\+\_\+\+FOLDCNT\+\_\+\+FOLDCNT\+\_\+\+Pos}$\ast$/)
+\item 
+\#define \textbf{ DWT\+\_\+\+MASK\+\_\+\+MASK\+\_\+\+Pos}~0U
+\item 
+\#define \textbf{ DWT\+\_\+\+MASK\+\_\+\+MASK\+\_\+\+Msk}~(0x1\+FUL /$\ast$$<$$<$ \textbf{ DWT\+\_\+\+MASK\+\_\+\+MASK\+\_\+\+Pos}$\ast$/)
+\item 
+\#define \textbf{ DWT\+\_\+\+FUNCTION\+\_\+\+MATCHED\+\_\+\+Pos}~24U
+\item 
+\#define \textbf{ DWT\+\_\+\+FUNCTION\+\_\+\+MATCHED\+\_\+\+Msk}~(0x1\+UL $<$$<$ \textbf{ DWT\+\_\+\+FUNCTION\+\_\+\+MATCHED\+\_\+\+Pos})
+\item 
+\#define \textbf{ DWT\+\_\+\+FUNCTION\+\_\+\+DATAVADDR1\+\_\+\+Pos}~16U
+\item 
+\#define \textbf{ DWT\+\_\+\+FUNCTION\+\_\+\+DATAVADDR1\+\_\+\+Msk}~(0x\+FUL $<$$<$ \textbf{ DWT\+\_\+\+FUNCTION\+\_\+\+DATAVADDR1\+\_\+\+Pos})
+\item 
+\#define \textbf{ DWT\+\_\+\+FUNCTION\+\_\+\+DATAVADDR0\+\_\+\+Pos}~12U
+\item 
+\#define \textbf{ DWT\+\_\+\+FUNCTION\+\_\+\+DATAVADDR0\+\_\+\+Msk}~(0x\+FUL $<$$<$ \textbf{ DWT\+\_\+\+FUNCTION\+\_\+\+DATAVADDR0\+\_\+\+Pos})
+\item 
+\#define \textbf{ DWT\+\_\+\+FUNCTION\+\_\+\+DATAVSIZE\+\_\+\+Pos}~10U
+\item 
+\#define \textbf{ DWT\+\_\+\+FUNCTION\+\_\+\+DATAVSIZE\+\_\+\+Msk}~(0x3\+UL $<$$<$ \textbf{ DWT\+\_\+\+FUNCTION\+\_\+\+DATAVSIZE\+\_\+\+Pos})
+\item 
+\#define \textbf{ DWT\+\_\+\+FUNCTION\+\_\+\+LNK1\+ENA\+\_\+\+Pos}~9U
+\item 
+\#define \textbf{ DWT\+\_\+\+FUNCTION\+\_\+\+LNK1\+ENA\+\_\+\+Msk}~(0x1\+UL $<$$<$ \textbf{ DWT\+\_\+\+FUNCTION\+\_\+\+LNK1\+ENA\+\_\+\+Pos})
+\item 
+\#define \textbf{ DWT\+\_\+\+FUNCTION\+\_\+\+DATAVMATCH\+\_\+\+Pos}~8U
+\item 
+\#define \textbf{ DWT\+\_\+\+FUNCTION\+\_\+\+DATAVMATCH\+\_\+\+Msk}~(0x1\+UL $<$$<$ \textbf{ DWT\+\_\+\+FUNCTION\+\_\+\+DATAVMATCH\+\_\+\+Pos})
+\item 
+\#define \textbf{ DWT\+\_\+\+FUNCTION\+\_\+\+CYCMATCH\+\_\+\+Pos}~7U
+\item 
+\#define \textbf{ DWT\+\_\+\+FUNCTION\+\_\+\+CYCMATCH\+\_\+\+Msk}~(0x1\+UL $<$$<$ \textbf{ DWT\+\_\+\+FUNCTION\+\_\+\+CYCMATCH\+\_\+\+Pos})
+\item 
+\#define \textbf{ DWT\+\_\+\+FUNCTION\+\_\+\+EMITRANGE\+\_\+\+Pos}~5U
+\item 
+\#define \textbf{ DWT\+\_\+\+FUNCTION\+\_\+\+EMITRANGE\+\_\+\+Msk}~(0x1\+UL $<$$<$ \textbf{ DWT\+\_\+\+FUNCTION\+\_\+\+EMITRANGE\+\_\+\+Pos})
+\item 
+\#define \textbf{ DWT\+\_\+\+FUNCTION\+\_\+\+FUNCTION\+\_\+\+Pos}~0U
+\item 
+\#define \textbf{ DWT\+\_\+\+FUNCTION\+\_\+\+FUNCTION\+\_\+\+Msk}~(0x\+FUL /$\ast$$<$$<$ \textbf{ DWT\+\_\+\+FUNCTION\+\_\+\+FUNCTION\+\_\+\+Pos}$\ast$/)
+\item 
+\#define \textbf{ TPI\+\_\+\+ACPR\+\_\+\+PRESCALER\+\_\+\+Pos}~0U
+\item 
+\#define \textbf{ TPI\+\_\+\+ACPR\+\_\+\+PRESCALER\+\_\+\+Msk}~(0x1\+FFFUL /$\ast$$<$$<$ \textbf{ TPI\+\_\+\+ACPR\+\_\+\+PRESCALER\+\_\+\+Pos}$\ast$/)
+\item 
+\#define \textbf{ TPI\+\_\+\+SPPR\+\_\+\+TXMODE\+\_\+\+Pos}~0U
+\item 
+\#define \textbf{ TPI\+\_\+\+SPPR\+\_\+\+TXMODE\+\_\+\+Msk}~(0x3\+UL /$\ast$$<$$<$ \textbf{ TPI\+\_\+\+SPPR\+\_\+\+TXMODE\+\_\+\+Pos}$\ast$/)
+\item 
+\#define \textbf{ TPI\+\_\+\+FFSR\+\_\+\+Ft\+Non\+Stop\+\_\+\+Pos}~3U
+\item 
+\#define \textbf{ TPI\+\_\+\+FFSR\+\_\+\+Ft\+Non\+Stop\+\_\+\+Msk}~(0x1\+UL $<$$<$ \textbf{ TPI\+\_\+\+FFSR\+\_\+\+Ft\+Non\+Stop\+\_\+\+Pos})
+\item 
+\#define \textbf{ TPI\+\_\+\+FFSR\+\_\+\+TCPresent\+\_\+\+Pos}~2U
+\item 
+\#define \textbf{ TPI\+\_\+\+FFSR\+\_\+\+TCPresent\+\_\+\+Msk}~(0x1\+UL $<$$<$ \textbf{ TPI\+\_\+\+FFSR\+\_\+\+TCPresent\+\_\+\+Pos})
+\item 
+\#define \textbf{ TPI\+\_\+\+FFSR\+\_\+\+Ft\+Stopped\+\_\+\+Pos}~1U
+\item 
+\#define \textbf{ TPI\+\_\+\+FFSR\+\_\+\+Ft\+Stopped\+\_\+\+Msk}~(0x1\+UL $<$$<$ \textbf{ TPI\+\_\+\+FFSR\+\_\+\+Ft\+Stopped\+\_\+\+Pos})
+\item 
+\#define \textbf{ TPI\+\_\+\+FFSR\+\_\+\+Fl\+In\+Prog\+\_\+\+Pos}~0U
+\item 
+\#define \textbf{ TPI\+\_\+\+FFSR\+\_\+\+Fl\+In\+Prog\+\_\+\+Msk}~(0x1\+UL /$\ast$$<$$<$ \textbf{ TPI\+\_\+\+FFSR\+\_\+\+Fl\+In\+Prog\+\_\+\+Pos}$\ast$/)
+\item 
+\#define \textbf{ TPI\+\_\+\+FFCR\+\_\+\+Trig\+In\+\_\+\+Pos}~8U
+\item 
+\#define \textbf{ TPI\+\_\+\+FFCR\+\_\+\+Trig\+In\+\_\+\+Msk}~(0x1\+UL $<$$<$ \textbf{ TPI\+\_\+\+FFCR\+\_\+\+Trig\+In\+\_\+\+Pos})
+\item 
+\#define \textbf{ TPI\+\_\+\+FFCR\+\_\+\+En\+FCont\+\_\+\+Pos}~1U
+\item 
+\#define \textbf{ TPI\+\_\+\+FFCR\+\_\+\+En\+FCont\+\_\+\+Msk}~(0x1\+UL $<$$<$ \textbf{ TPI\+\_\+\+FFCR\+\_\+\+En\+FCont\+\_\+\+Pos})
+\item 
+\#define \textbf{ TPI\+\_\+\+TRIGGER\+\_\+\+TRIGGER\+\_\+\+Pos}~0U
+\item 
+\#define \textbf{ TPI\+\_\+\+TRIGGER\+\_\+\+TRIGGER\+\_\+\+Msk}~(0x1\+UL /$\ast$$<$$<$ \textbf{ TPI\+\_\+\+TRIGGER\+\_\+\+TRIGGER\+\_\+\+Pos}$\ast$/)
+\item 
+\#define \textbf{ TPI\+\_\+\+FIFO0\+\_\+\+ITM\+\_\+\+ATVALID\+\_\+\+Pos}~29U
+\item 
+\#define \textbf{ TPI\+\_\+\+FIFO0\+\_\+\+ITM\+\_\+\+ATVALID\+\_\+\+Msk}~(0x3\+UL $<$$<$ \textbf{ TPI\+\_\+\+FIFO0\+\_\+\+ITM\+\_\+\+ATVALID\+\_\+\+Pos})
+\item 
+\#define \textbf{ TPI\+\_\+\+FIFO0\+\_\+\+ITM\+\_\+bytecount\+\_\+\+Pos}~27U
+\item 
+\#define \textbf{ TPI\+\_\+\+FIFO0\+\_\+\+ITM\+\_\+bytecount\+\_\+\+Msk}~(0x3\+UL $<$$<$ \textbf{ TPI\+\_\+\+FIFO0\+\_\+\+ITM\+\_\+bytecount\+\_\+\+Pos})
+\item 
+\#define \textbf{ TPI\+\_\+\+FIFO0\+\_\+\+ETM\+\_\+\+ATVALID\+\_\+\+Pos}~26U
+\item 
+\#define \textbf{ TPI\+\_\+\+FIFO0\+\_\+\+ETM\+\_\+\+ATVALID\+\_\+\+Msk}~(0x3\+UL $<$$<$ \textbf{ TPI\+\_\+\+FIFO0\+\_\+\+ETM\+\_\+\+ATVALID\+\_\+\+Pos})
+\item 
+\#define \textbf{ TPI\+\_\+\+FIFO0\+\_\+\+ETM\+\_\+bytecount\+\_\+\+Pos}~24U
+\item 
+\#define \textbf{ TPI\+\_\+\+FIFO0\+\_\+\+ETM\+\_\+bytecount\+\_\+\+Msk}~(0x3\+UL $<$$<$ \textbf{ TPI\+\_\+\+FIFO0\+\_\+\+ETM\+\_\+bytecount\+\_\+\+Pos})
+\item 
+\#define \textbf{ TPI\+\_\+\+FIFO0\+\_\+\+ETM2\+\_\+\+Pos}~16U
+\item 
+\#define \textbf{ TPI\+\_\+\+FIFO0\+\_\+\+ETM2\+\_\+\+Msk}~(0x\+FFUL $<$$<$ \textbf{ TPI\+\_\+\+FIFO0\+\_\+\+ETM2\+\_\+\+Pos})
+\item 
+\#define \textbf{ TPI\+\_\+\+FIFO0\+\_\+\+ETM1\+\_\+\+Pos}~8U
+\item 
+\#define \textbf{ TPI\+\_\+\+FIFO0\+\_\+\+ETM1\+\_\+\+Msk}~(0x\+FFUL $<$$<$ \textbf{ TPI\+\_\+\+FIFO0\+\_\+\+ETM1\+\_\+\+Pos})
+\item 
+\#define \textbf{ TPI\+\_\+\+FIFO0\+\_\+\+ETM0\+\_\+\+Pos}~0U
+\item 
+\#define \textbf{ TPI\+\_\+\+FIFO0\+\_\+\+ETM0\+\_\+\+Msk}~(0x\+FFUL /$\ast$$<$$<$ \textbf{ TPI\+\_\+\+FIFO0\+\_\+\+ETM0\+\_\+\+Pos}$\ast$/)
+\item 
+\#define \textbf{ TPI\+\_\+\+ITATBCTR2\+\_\+\+ATREADY\+\_\+\+Pos}~0U
+\item 
+\#define \textbf{ TPI\+\_\+\+ITATBCTR2\+\_\+\+ATREADY\+\_\+\+Msk}~(0x1\+UL /$\ast$$<$$<$ \textbf{ TPI\+\_\+\+ITATBCTR2\+\_\+\+ATREADY\+\_\+\+Pos}$\ast$/)
+\item 
+\#define \textbf{ TPI\+\_\+\+FIFO1\+\_\+\+ITM\+\_\+\+ATVALID\+\_\+\+Pos}~29U
+\item 
+\#define \textbf{ TPI\+\_\+\+FIFO1\+\_\+\+ITM\+\_\+\+ATVALID\+\_\+\+Msk}~(0x3\+UL $<$$<$ \textbf{ TPI\+\_\+\+FIFO1\+\_\+\+ITM\+\_\+\+ATVALID\+\_\+\+Pos})
+\item 
+\#define \textbf{ TPI\+\_\+\+FIFO1\+\_\+\+ITM\+\_\+bytecount\+\_\+\+Pos}~27U
+\item 
+\#define \textbf{ TPI\+\_\+\+FIFO1\+\_\+\+ITM\+\_\+bytecount\+\_\+\+Msk}~(0x3\+UL $<$$<$ \textbf{ TPI\+\_\+\+FIFO1\+\_\+\+ITM\+\_\+bytecount\+\_\+\+Pos})
+\item 
+\#define \textbf{ TPI\+\_\+\+FIFO1\+\_\+\+ETM\+\_\+\+ATVALID\+\_\+\+Pos}~26U
+\item 
+\#define \textbf{ TPI\+\_\+\+FIFO1\+\_\+\+ETM\+\_\+\+ATVALID\+\_\+\+Msk}~(0x3\+UL $<$$<$ \textbf{ TPI\+\_\+\+FIFO1\+\_\+\+ETM\+\_\+\+ATVALID\+\_\+\+Pos})
+\item 
+\#define \textbf{ TPI\+\_\+\+FIFO1\+\_\+\+ETM\+\_\+bytecount\+\_\+\+Pos}~24U
+\item 
+\#define \textbf{ TPI\+\_\+\+FIFO1\+\_\+\+ETM\+\_\+bytecount\+\_\+\+Msk}~(0x3\+UL $<$$<$ \textbf{ TPI\+\_\+\+FIFO1\+\_\+\+ETM\+\_\+bytecount\+\_\+\+Pos})
+\item 
+\#define \textbf{ TPI\+\_\+\+FIFO1\+\_\+\+ITM2\+\_\+\+Pos}~16U
+\item 
+\#define \textbf{ TPI\+\_\+\+FIFO1\+\_\+\+ITM2\+\_\+\+Msk}~(0x\+FFUL $<$$<$ \textbf{ TPI\+\_\+\+FIFO1\+\_\+\+ITM2\+\_\+\+Pos})
+\item 
+\#define \textbf{ TPI\+\_\+\+FIFO1\+\_\+\+ITM1\+\_\+\+Pos}~8U
+\item 
+\#define \textbf{ TPI\+\_\+\+FIFO1\+\_\+\+ITM1\+\_\+\+Msk}~(0x\+FFUL $<$$<$ \textbf{ TPI\+\_\+\+FIFO1\+\_\+\+ITM1\+\_\+\+Pos})
+\item 
+\#define \textbf{ TPI\+\_\+\+FIFO1\+\_\+\+ITM0\+\_\+\+Pos}~0U
+\item 
+\#define \textbf{ TPI\+\_\+\+FIFO1\+\_\+\+ITM0\+\_\+\+Msk}~(0x\+FFUL /$\ast$$<$$<$ \textbf{ TPI\+\_\+\+FIFO1\+\_\+\+ITM0\+\_\+\+Pos}$\ast$/)
+\item 
+\#define \textbf{ TPI\+\_\+\+ITATBCTR0\+\_\+\+ATREADY\+\_\+\+Pos}~0U
+\item 
+\#define \textbf{ TPI\+\_\+\+ITATBCTR0\+\_\+\+ATREADY\+\_\+\+Msk}~(0x1\+UL /$\ast$$<$$<$ \textbf{ TPI\+\_\+\+ITATBCTR0\+\_\+\+ATREADY\+\_\+\+Pos}$\ast$/)
+\item 
+\#define \textbf{ TPI\+\_\+\+ITCTRL\+\_\+\+Mode\+\_\+\+Pos}~0U
+\item 
+\#define \textbf{ TPI\+\_\+\+ITCTRL\+\_\+\+Mode\+\_\+\+Msk}~(0x1\+UL /$\ast$$<$$<$ \textbf{ TPI\+\_\+\+ITCTRL\+\_\+\+Mode\+\_\+\+Pos}$\ast$/)
+\item 
+\#define \textbf{ TPI\+\_\+\+DEVID\+\_\+\+NRZVALID\+\_\+\+Pos}~11U
+\item 
+\#define \textbf{ TPI\+\_\+\+DEVID\+\_\+\+NRZVALID\+\_\+\+Msk}~(0x1\+UL $<$$<$ \textbf{ TPI\+\_\+\+DEVID\+\_\+\+NRZVALID\+\_\+\+Pos})
+\item 
+\#define \textbf{ TPI\+\_\+\+DEVID\+\_\+\+MANCVALID\+\_\+\+Pos}~10U
+\item 
+\#define \textbf{ TPI\+\_\+\+DEVID\+\_\+\+MANCVALID\+\_\+\+Msk}~(0x1\+UL $<$$<$ \textbf{ TPI\+\_\+\+DEVID\+\_\+\+MANCVALID\+\_\+\+Pos})
+\item 
+\#define \textbf{ TPI\+\_\+\+DEVID\+\_\+\+PTINVALID\+\_\+\+Pos}~9U
+\item 
+\#define \textbf{ TPI\+\_\+\+DEVID\+\_\+\+PTINVALID\+\_\+\+Msk}~(0x1\+UL $<$$<$ \textbf{ TPI\+\_\+\+DEVID\+\_\+\+PTINVALID\+\_\+\+Pos})
+\item 
+\#define \textbf{ TPI\+\_\+\+DEVID\+\_\+\+Min\+Buf\+Sz\+\_\+\+Pos}~6U
+\item 
+\#define \textbf{ TPI\+\_\+\+DEVID\+\_\+\+Min\+Buf\+Sz\+\_\+\+Msk}~(0x7\+UL $<$$<$ \textbf{ TPI\+\_\+\+DEVID\+\_\+\+Min\+Buf\+Sz\+\_\+\+Pos})
+\item 
+\#define \textbf{ TPI\+\_\+\+DEVID\+\_\+\+Asyn\+Clk\+In\+\_\+\+Pos}~5U
+\item 
+\#define \textbf{ TPI\+\_\+\+DEVID\+\_\+\+Asyn\+Clk\+In\+\_\+\+Msk}~(0x1\+UL $<$$<$ \textbf{ TPI\+\_\+\+DEVID\+\_\+\+Asyn\+Clk\+In\+\_\+\+Pos})
+\item 
+\#define \textbf{ TPI\+\_\+\+DEVID\+\_\+\+Nr\+Trace\+Input\+\_\+\+Pos}~0U
+\item 
+\#define \textbf{ TPI\+\_\+\+DEVID\+\_\+\+Nr\+Trace\+Input\+\_\+\+Msk}~(0x1\+FUL /$\ast$$<$$<$ \textbf{ TPI\+\_\+\+DEVID\+\_\+\+Nr\+Trace\+Input\+\_\+\+Pos}$\ast$/)
+\item 
+\#define \textbf{ TPI\+\_\+\+DEVTYPE\+\_\+\+Major\+Type\+\_\+\+Pos}~4U
+\item 
+\#define \textbf{ TPI\+\_\+\+DEVTYPE\+\_\+\+Major\+Type\+\_\+\+Msk}~(0x\+FUL $<$$<$ \textbf{ TPI\+\_\+\+DEVTYPE\+\_\+\+Major\+Type\+\_\+\+Pos})
+\item 
+\#define \textbf{ TPI\+\_\+\+DEVTYPE\+\_\+\+Sub\+Type\+\_\+\+Pos}~0U
+\item 
+\#define \textbf{ TPI\+\_\+\+DEVTYPE\+\_\+\+Sub\+Type\+\_\+\+Msk}~(0x\+FUL /$\ast$$<$$<$ \textbf{ TPI\+\_\+\+DEVTYPE\+\_\+\+Sub\+Type\+\_\+\+Pos}$\ast$/)
+\item 
+\#define \textbf{ Core\+Debug\+\_\+\+DHCSR\+\_\+\+DBGKEY\+\_\+\+Pos}~16U
+\item 
+\#define \textbf{ Core\+Debug\+\_\+\+DHCSR\+\_\+\+DBGKEY\+\_\+\+Msk}~(0x\+FFFFUL $<$$<$ \textbf{ Core\+Debug\+\_\+\+DHCSR\+\_\+\+DBGKEY\+\_\+\+Pos})
+\item 
+\#define \textbf{ Core\+Debug\+\_\+\+DHCSR\+\_\+\+S\+\_\+\+RESET\+\_\+\+ST\+\_\+\+Pos}~25U
+\item 
+\#define \textbf{ Core\+Debug\+\_\+\+DHCSR\+\_\+\+S\+\_\+\+RESET\+\_\+\+ST\+\_\+\+Msk}~(1UL $<$$<$ \textbf{ Core\+Debug\+\_\+\+DHCSR\+\_\+\+S\+\_\+\+RESET\+\_\+\+ST\+\_\+\+Pos})
+\item 
+\#define \textbf{ Core\+Debug\+\_\+\+DHCSR\+\_\+\+S\+\_\+\+RETIRE\+\_\+\+ST\+\_\+\+Pos}~24U
+\item 
+\#define \textbf{ Core\+Debug\+\_\+\+DHCSR\+\_\+\+S\+\_\+\+RETIRE\+\_\+\+ST\+\_\+\+Msk}~(1UL $<$$<$ \textbf{ Core\+Debug\+\_\+\+DHCSR\+\_\+\+S\+\_\+\+RETIRE\+\_\+\+ST\+\_\+\+Pos})
+\item 
+\#define \textbf{ Core\+Debug\+\_\+\+DHCSR\+\_\+\+S\+\_\+\+LOCKUP\+\_\+\+Pos}~19U
+\item 
+\#define \textbf{ Core\+Debug\+\_\+\+DHCSR\+\_\+\+S\+\_\+\+LOCKUP\+\_\+\+Msk}~(1UL $<$$<$ \textbf{ Core\+Debug\+\_\+\+DHCSR\+\_\+\+S\+\_\+\+LOCKUP\+\_\+\+Pos})
+\item 
+\#define \textbf{ Core\+Debug\+\_\+\+DHCSR\+\_\+\+S\+\_\+\+SLEEP\+\_\+\+Pos}~18U
+\item 
+\#define \textbf{ Core\+Debug\+\_\+\+DHCSR\+\_\+\+S\+\_\+\+SLEEP\+\_\+\+Msk}~(1UL $<$$<$ \textbf{ Core\+Debug\+\_\+\+DHCSR\+\_\+\+S\+\_\+\+SLEEP\+\_\+\+Pos})
+\item 
+\#define \textbf{ Core\+Debug\+\_\+\+DHCSR\+\_\+\+S\+\_\+\+HALT\+\_\+\+Pos}~17U
+\item 
+\#define \textbf{ Core\+Debug\+\_\+\+DHCSR\+\_\+\+S\+\_\+\+HALT\+\_\+\+Msk}~(1UL $<$$<$ \textbf{ Core\+Debug\+\_\+\+DHCSR\+\_\+\+S\+\_\+\+HALT\+\_\+\+Pos})
+\item 
+\#define \textbf{ Core\+Debug\+\_\+\+DHCSR\+\_\+\+S\+\_\+\+REGRDY\+\_\+\+Pos}~16U
+\item 
+\#define \textbf{ Core\+Debug\+\_\+\+DHCSR\+\_\+\+S\+\_\+\+REGRDY\+\_\+\+Msk}~(1UL $<$$<$ \textbf{ Core\+Debug\+\_\+\+DHCSR\+\_\+\+S\+\_\+\+REGRDY\+\_\+\+Pos})
+\item 
+\#define \textbf{ Core\+Debug\+\_\+\+DHCSR\+\_\+\+C\+\_\+\+SNAPSTALL\+\_\+\+Pos}~5U
+\item 
+\#define \textbf{ Core\+Debug\+\_\+\+DHCSR\+\_\+\+C\+\_\+\+SNAPSTALL\+\_\+\+Msk}~(1UL $<$$<$ \textbf{ Core\+Debug\+\_\+\+DHCSR\+\_\+\+C\+\_\+\+SNAPSTALL\+\_\+\+Pos})
+\item 
+\#define \textbf{ Core\+Debug\+\_\+\+DHCSR\+\_\+\+C\+\_\+\+MASKINTS\+\_\+\+Pos}~3U
+\item 
+\#define \textbf{ Core\+Debug\+\_\+\+DHCSR\+\_\+\+C\+\_\+\+MASKINTS\+\_\+\+Msk}~(1UL $<$$<$ \textbf{ Core\+Debug\+\_\+\+DHCSR\+\_\+\+C\+\_\+\+MASKINTS\+\_\+\+Pos})
+\item 
+\#define \textbf{ Core\+Debug\+\_\+\+DHCSR\+\_\+\+C\+\_\+\+STEP\+\_\+\+Pos}~2U
+\item 
+\#define \textbf{ Core\+Debug\+\_\+\+DHCSR\+\_\+\+C\+\_\+\+STEP\+\_\+\+Msk}~(1UL $<$$<$ \textbf{ Core\+Debug\+\_\+\+DHCSR\+\_\+\+C\+\_\+\+STEP\+\_\+\+Pos})
+\item 
+\#define \textbf{ Core\+Debug\+\_\+\+DHCSR\+\_\+\+C\+\_\+\+HALT\+\_\+\+Pos}~1U
+\item 
+\#define \textbf{ Core\+Debug\+\_\+\+DHCSR\+\_\+\+C\+\_\+\+HALT\+\_\+\+Msk}~(1UL $<$$<$ \textbf{ Core\+Debug\+\_\+\+DHCSR\+\_\+\+C\+\_\+\+HALT\+\_\+\+Pos})
+\item 
+\#define \textbf{ Core\+Debug\+\_\+\+DHCSR\+\_\+\+C\+\_\+\+DEBUGEN\+\_\+\+Pos}~0U
+\item 
+\#define \textbf{ Core\+Debug\+\_\+\+DHCSR\+\_\+\+C\+\_\+\+DEBUGEN\+\_\+\+Msk}~(1UL /$\ast$$<$$<$ \textbf{ Core\+Debug\+\_\+\+DHCSR\+\_\+\+C\+\_\+\+DEBUGEN\+\_\+\+Pos}$\ast$/)
+\item 
+\#define \textbf{ Core\+Debug\+\_\+\+DCRSR\+\_\+\+REGWn\+R\+\_\+\+Pos}~16U
+\item 
+\#define \textbf{ Core\+Debug\+\_\+\+DCRSR\+\_\+\+REGWn\+R\+\_\+\+Msk}~(1UL $<$$<$ \textbf{ Core\+Debug\+\_\+\+DCRSR\+\_\+\+REGWn\+R\+\_\+\+Pos})
+\item 
+\#define \textbf{ Core\+Debug\+\_\+\+DCRSR\+\_\+\+REGSEL\+\_\+\+Pos}~0U
+\item 
+\#define \textbf{ Core\+Debug\+\_\+\+DCRSR\+\_\+\+REGSEL\+\_\+\+Msk}~(0x1\+FUL /$\ast$$<$$<$ \textbf{ Core\+Debug\+\_\+\+DCRSR\+\_\+\+REGSEL\+\_\+\+Pos}$\ast$/)
+\item 
+\#define \textbf{ Core\+Debug\+\_\+\+DEMCR\+\_\+\+TRCENA\+\_\+\+Pos}~24U
+\item 
+\#define \textbf{ Core\+Debug\+\_\+\+DEMCR\+\_\+\+TRCENA\+\_\+\+Msk}~(1UL $<$$<$ \textbf{ Core\+Debug\+\_\+\+DEMCR\+\_\+\+TRCENA\+\_\+\+Pos})
+\item 
+\#define \textbf{ Core\+Debug\+\_\+\+DEMCR\+\_\+\+MON\+\_\+\+REQ\+\_\+\+Pos}~19U
+\item 
+\#define \textbf{ Core\+Debug\+\_\+\+DEMCR\+\_\+\+MON\+\_\+\+REQ\+\_\+\+Msk}~(1UL $<$$<$ \textbf{ Core\+Debug\+\_\+\+DEMCR\+\_\+\+MON\+\_\+\+REQ\+\_\+\+Pos})
+\item 
+\#define \textbf{ Core\+Debug\+\_\+\+DEMCR\+\_\+\+MON\+\_\+\+STEP\+\_\+\+Pos}~18U
+\item 
+\#define \textbf{ Core\+Debug\+\_\+\+DEMCR\+\_\+\+MON\+\_\+\+STEP\+\_\+\+Msk}~(1UL $<$$<$ \textbf{ Core\+Debug\+\_\+\+DEMCR\+\_\+\+MON\+\_\+\+STEP\+\_\+\+Pos})
+\item 
+\#define \textbf{ Core\+Debug\+\_\+\+DEMCR\+\_\+\+MON\+\_\+\+PEND\+\_\+\+Pos}~17U
+\item 
+\#define \textbf{ Core\+Debug\+\_\+\+DEMCR\+\_\+\+MON\+\_\+\+PEND\+\_\+\+Msk}~(1UL $<$$<$ \textbf{ Core\+Debug\+\_\+\+DEMCR\+\_\+\+MON\+\_\+\+PEND\+\_\+\+Pos})
+\item 
+\#define \textbf{ Core\+Debug\+\_\+\+DEMCR\+\_\+\+MON\+\_\+\+EN\+\_\+\+Pos}~16U
+\item 
+\#define \textbf{ Core\+Debug\+\_\+\+DEMCR\+\_\+\+MON\+\_\+\+EN\+\_\+\+Msk}~(1UL $<$$<$ \textbf{ Core\+Debug\+\_\+\+DEMCR\+\_\+\+MON\+\_\+\+EN\+\_\+\+Pos})
+\item 
+\#define \textbf{ Core\+Debug\+\_\+\+DEMCR\+\_\+\+VC\+\_\+\+HARDERR\+\_\+\+Pos}~10U
+\item 
+\#define \textbf{ Core\+Debug\+\_\+\+DEMCR\+\_\+\+VC\+\_\+\+HARDERR\+\_\+\+Msk}~(1UL $<$$<$ \textbf{ Core\+Debug\+\_\+\+DEMCR\+\_\+\+VC\+\_\+\+HARDERR\+\_\+\+Pos})
+\item 
+\#define \textbf{ Core\+Debug\+\_\+\+DEMCR\+\_\+\+VC\+\_\+\+INTERR\+\_\+\+Pos}~9U
+\item 
+\#define \textbf{ Core\+Debug\+\_\+\+DEMCR\+\_\+\+VC\+\_\+\+INTERR\+\_\+\+Msk}~(1UL $<$$<$ \textbf{ Core\+Debug\+\_\+\+DEMCR\+\_\+\+VC\+\_\+\+INTERR\+\_\+\+Pos})
+\item 
+\#define \textbf{ Core\+Debug\+\_\+\+DEMCR\+\_\+\+VC\+\_\+\+BUSERR\+\_\+\+Pos}~8U
+\item 
+\#define \textbf{ Core\+Debug\+\_\+\+DEMCR\+\_\+\+VC\+\_\+\+BUSERR\+\_\+\+Msk}~(1UL $<$$<$ \textbf{ Core\+Debug\+\_\+\+DEMCR\+\_\+\+VC\+\_\+\+BUSERR\+\_\+\+Pos})
+\item 
+\#define \textbf{ Core\+Debug\+\_\+\+DEMCR\+\_\+\+VC\+\_\+\+STATERR\+\_\+\+Pos}~7U
+\item 
+\#define \textbf{ Core\+Debug\+\_\+\+DEMCR\+\_\+\+VC\+\_\+\+STATERR\+\_\+\+Msk}~(1UL $<$$<$ \textbf{ Core\+Debug\+\_\+\+DEMCR\+\_\+\+VC\+\_\+\+STATERR\+\_\+\+Pos})
+\item 
+\#define \textbf{ Core\+Debug\+\_\+\+DEMCR\+\_\+\+VC\+\_\+\+CHKERR\+\_\+\+Pos}~6U
+\item 
+\#define \textbf{ Core\+Debug\+\_\+\+DEMCR\+\_\+\+VC\+\_\+\+CHKERR\+\_\+\+Msk}~(1UL $<$$<$ \textbf{ Core\+Debug\+\_\+\+DEMCR\+\_\+\+VC\+\_\+\+CHKERR\+\_\+\+Pos})
+\item 
+\#define \textbf{ Core\+Debug\+\_\+\+DEMCR\+\_\+\+VC\+\_\+\+NOCPERR\+\_\+\+Pos}~5U
+\item 
+\#define \textbf{ Core\+Debug\+\_\+\+DEMCR\+\_\+\+VC\+\_\+\+NOCPERR\+\_\+\+Msk}~(1UL $<$$<$ \textbf{ Core\+Debug\+\_\+\+DEMCR\+\_\+\+VC\+\_\+\+NOCPERR\+\_\+\+Pos})
+\item 
+\#define \textbf{ Core\+Debug\+\_\+\+DEMCR\+\_\+\+VC\+\_\+\+MMERR\+\_\+\+Pos}~4U
+\item 
+\#define \textbf{ Core\+Debug\+\_\+\+DEMCR\+\_\+\+VC\+\_\+\+MMERR\+\_\+\+Msk}~(1UL $<$$<$ \textbf{ Core\+Debug\+\_\+\+DEMCR\+\_\+\+VC\+\_\+\+MMERR\+\_\+\+Pos})
+\item 
+\#define \textbf{ Core\+Debug\+\_\+\+DEMCR\+\_\+\+VC\+\_\+\+CORERESET\+\_\+\+Pos}~0U
+\item 
+\#define \textbf{ Core\+Debug\+\_\+\+DEMCR\+\_\+\+VC\+\_\+\+CORERESET\+\_\+\+Msk}~(1UL /$\ast$$<$$<$ \textbf{ Core\+Debug\+\_\+\+DEMCR\+\_\+\+VC\+\_\+\+CORERESET\+\_\+\+Pos}$\ast$/)
+\item 
+\#define \textbf{ \+\_\+\+VAL2\+FLD}(field,  \textbf{ value})~((\textbf{ value} $<$$<$ field \#\# \+\_\+\+Pos) \& field \#\# \+\_\+\+Msk)
+\begin{DoxyCompactList}\small\item\em Mask and shift a bit field value for use in a register bit range. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+FLD2\+VAL}(field,  \textbf{ value})~((\textbf{ value} \& field \#\# \+\_\+\+Msk) $>$$>$ field \#\# \+\_\+\+Pos)
+\begin{DoxyCompactList}\small\item\em Mask and shift a register value to extract a bit filed value. \end{DoxyCompactList}\item 
+\#define \textbf{ SCS\+\_\+\+BASE}~(0x\+E000\+E000\+UL)
+\item 
+\#define \textbf{ ITM\+\_\+\+BASE}~(0x\+E0000000\+UL)
+\item 
+\#define \textbf{ DWT\+\_\+\+BASE}~(0x\+E0001000\+UL)
+\item 
+\#define \textbf{ TPI\+\_\+\+BASE}~(0x\+E0040000\+UL)
+\item 
+\#define \textbf{ Core\+Debug\+\_\+\+BASE}~(0x\+E000\+EDF0\+UL)
+\item 
+\#define \textbf{ Sys\+Tick\+\_\+\+BASE}~(\textbf{ SCS\+\_\+\+BASE} +  0x0010\+UL)
+\item 
+\#define \textbf{ NVIC\+\_\+\+BASE}~(\textbf{ SCS\+\_\+\+BASE} +  0x0100\+UL)
+\item 
+\#define \textbf{ SCB\+\_\+\+BASE}~(\textbf{ SCS\+\_\+\+BASE} +  0x0\+D00\+UL)
+\item 
+\#define \textbf{ SCn\+SCB}~((\textbf{ SCn\+SCB\+\_\+\+Type}    $\ast$)     \textbf{ SCS\+\_\+\+BASE}      )
+\item 
+\#define \textbf{ SCB}~((\textbf{ SCB\+\_\+\+Type}       $\ast$)     \textbf{ SCB\+\_\+\+BASE}      )
+\item 
+\#define \textbf{ Sys\+Tick}~((\textbf{ Sys\+Tick\+\_\+\+Type}   $\ast$)     \textbf{ Sys\+Tick\+\_\+\+BASE}  )
+\item 
+\#define \textbf{ NVIC}~((\textbf{ NVIC\+\_\+\+Type}      $\ast$)     \textbf{ NVIC\+\_\+\+BASE}     )
+\item 
+\#define \textbf{ ITM}~((\textbf{ ITM\+\_\+\+Type}       $\ast$)     \textbf{ ITM\+\_\+\+BASE}      )
+\item 
+\#define \textbf{ DWT}~((\textbf{ DWT\+\_\+\+Type}       $\ast$)     \textbf{ DWT\+\_\+\+BASE}      )
+\item 
+\#define \textbf{ TPI}~((\textbf{ TPI\+\_\+\+Type}       $\ast$)     \textbf{ TPI\+\_\+\+BASE}      )
+\item 
+\#define \textbf{ Core\+Debug}~((\textbf{ Core\+Debug\+\_\+\+Type} $\ast$)     \textbf{ Core\+Debug\+\_\+\+BASE})
+\item 
+\#define \textbf{ ITM\+\_\+\+RXBUFFER\+\_\+\+EMPTY}~0x5\+AA55\+AA5U
+\item 
+\textbf{ volatile} int32\+\_\+t \textbf{ ITM\+\_\+\+Rx\+Buffer}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+CMSIS Cortex-\/\+M4 Core Peripheral Access Layer Header File. 
+
+\begin{DoxyVersion}{Version}
+V4.\+30 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+20. October 2015 
+\end{DoxyDate}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\label{core__cm4_8h_acb6f5d2c3271c95d0a02fd06723af25d}} 
+\index{core\_cm4.h@{core\_cm4.h}!\_\_CM4\_CMSIS\_VERSION@{\_\_CM4\_CMSIS\_VERSION}}
+\index{\_\_CM4\_CMSIS\_VERSION@{\_\_CM4\_CMSIS\_VERSION}!core\_cm4.h@{core\_cm4.h}}
+\doxysubsubsection{\_\_CM4\_CMSIS\_VERSION}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+CM4\+\_\+\+CMSIS\+\_\+\+VERSION}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                    ((\_\_CM4\_CMSIS\_VERSION\_MAIN << 16U) | \(\backslash\)}
+\DoxyCodeLine{                                    \_\_CM4\_CMSIS\_VERSION\_SUB           )}
+
+\end{DoxyCode}
+CMSIS HAL version number 
+
+Definition at line 85 of file core\+\_\+cm4.\+h.
+
+\mbox{\label{core__cm4_8h_a90ffc8179476f80347379bfe29639edc}} 
+\index{core\_cm4.h@{core\_cm4.h}!\_\_CM4\_CMSIS\_VERSION\_MAIN@{\_\_CM4\_CMSIS\_VERSION\_MAIN}}
+\index{\_\_CM4\_CMSIS\_VERSION\_MAIN@{\_\_CM4\_CMSIS\_VERSION\_MAIN}!core\_cm4.h@{core\_cm4.h}}
+\doxysubsubsection{\_\_CM4\_CMSIS\_VERSION\_MAIN}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+CM4\+\_\+\+CMSIS\+\_\+\+VERSION\+\_\+\+MAIN~(0x04U)}
+
+[31\+:16] CMSIS HAL main version 
+
+Definition at line 82 of file core\+\_\+cm4.\+h.
+
+\mbox{\label{core__cm4_8h_afc7392964da961a44e916fcff7add532}} 
+\index{core\_cm4.h@{core\_cm4.h}!\_\_CM4\_CMSIS\_VERSION\_SUB@{\_\_CM4\_CMSIS\_VERSION\_SUB}}
+\index{\_\_CM4\_CMSIS\_VERSION\_SUB@{\_\_CM4\_CMSIS\_VERSION\_SUB}!core\_cm4.h@{core\_cm4.h}}
+\doxysubsubsection{\_\_CM4\_CMSIS\_VERSION\_SUB}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+CM4\+\_\+\+CMSIS\+\_\+\+VERSION\+\_\+\+SUB~(0x1\+EU)}
+
+[15\+:0] CMSIS HAL sub version 
+
+Definition at line 83 of file core\+\_\+cm4.\+h.
+
+\mbox{\label{core__cm4_8h_a65104fb6a96df4ec7f7e72781b561060}} 
+\index{core\_cm4.h@{core\_cm4.h}!\_\_CORE\_CM4\_H\_DEPENDANT@{\_\_CORE\_CM4\_H\_DEPENDANT}}
+\index{\_\_CORE\_CM4\_H\_DEPENDANT@{\_\_CORE\_CM4\_H\_DEPENDANT}!core\_cm4.h@{core\_cm4.h}}
+\doxysubsubsection{\_\_CORE\_CM4\_H\_DEPENDANT}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+CORE\+\_\+\+CM4\+\_\+\+H\+\_\+\+DEPENDANT}
+
+\+\_\+\+\_\+\+FPU\+\_\+\+USED indicates whether an FPU is used or not. For this, \+\_\+\+\_\+\+FPU\+\_\+\+PRESENT has to be checked prior to making use of FPU specific registers and functions. 
+
+Definition at line 231 of file core\+\_\+cm4.\+h.
+
+\mbox{\label{core__cm4_8h_a041c3808b4c105d23b90b54646e2eeb6}} 
+\index{core\_cm4.h@{core\_cm4.h}!\_\_CORE\_CM4\_H\_GENERIC@{\_\_CORE\_CM4\_H\_GENERIC}}
+\index{\_\_CORE\_CM4\_H\_GENERIC@{\_\_CORE\_CM4\_H\_GENERIC}!core\_cm4.h@{core\_cm4.h}}
+\doxysubsubsection{\_\_CORE\_CM4\_H\_GENERIC}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+CORE\+\_\+\+CM4\+\_\+\+H\+\_\+\+GENERIC}
+
+
+
+Definition at line 42 of file core\+\_\+cm4.\+h.
+
+\mbox{\label{core__cm4_8h_a63ea62503c88acab19fcf3d5743009e3}} 
+\index{core\_cm4.h@{core\_cm4.h}!\_\_CORTEX\_M@{\_\_CORTEX\_M}}
+\index{\_\_CORTEX\_M@{\_\_CORTEX\_M}!core\_cm4.h@{core\_cm4.h}}
+\doxysubsubsection{\_\_CORTEX\_M}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+CORTEX\+\_\+M~(0x04U)}
+
+Cortex-\/M Core 
+
+Definition at line 87 of file core\+\_\+cm4.\+h.
+
+\mbox{\label{core__cm4_8h_af63697ed9952cc71e1225efe205f6cd3}} 
+\index{core\_cm4.h@{core\_cm4.h}!\_\_I@{\_\_I}}
+\index{\_\_I@{\_\_I}!core\_cm4.h@{core\_cm4.h}}
+\doxysubsubsection{\_\_I}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+I~\textbf{ volatile} const}
+
+Defines \textquotesingle{}read only\textquotesingle{} permissions 
+
+Definition at line 276 of file core\+\_\+cm4.\+h.
+
+\mbox{\label{core__cm4_8h_a4cc1649793116d7c2d8afce7a4ffce43}} 
+\index{core\_cm4.h@{core\_cm4.h}!\_\_IM@{\_\_IM}}
+\index{\_\_IM@{\_\_IM}!core\_cm4.h@{core\_cm4.h}}
+\doxysubsubsection{\_\_IM}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+IM~\textbf{ volatile} const      /$\ast$! Defines \textquotesingle{}read only\textquotesingle{} structure member permissions $\ast$/}
+
+
+
+Definition at line 282 of file core\+\_\+cm4.\+h.
+
+\mbox{\label{core__cm4_8h_aec43007d9998a0a0e01faede4133d6be}} 
+\index{core\_cm4.h@{core\_cm4.h}!\_\_IO@{\_\_IO}}
+\index{\_\_IO@{\_\_IO}!core\_cm4.h@{core\_cm4.h}}
+\doxysubsubsection{\_\_IO}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+IO~\textbf{ volatile}}
+
+Defines \textquotesingle{}read / write\textquotesingle{} permissions 
+
+Definition at line 279 of file core\+\_\+cm4.\+h.
+
+\mbox{\label{core__cm4_8h_ab6caba5853a60a17e8e04499b52bf691}} 
+\index{core\_cm4.h@{core\_cm4.h}!\_\_IOM@{\_\_IOM}}
+\index{\_\_IOM@{\_\_IOM}!core\_cm4.h@{core\_cm4.h}}
+\doxysubsubsection{\_\_IOM}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+IOM~\textbf{ volatile}            /$\ast$! Defines \textquotesingle{}read / write\textquotesingle{} structure member permissions $\ast$/}
+
+
+
+Definition at line 284 of file core\+\_\+cm4.\+h.
+
+\mbox{\label{core__cm4_8h_a7e25d9380f9ef903923964322e71f2f6}} 
+\index{core\_cm4.h@{core\_cm4.h}!\_\_O@{\_\_O}}
+\index{\_\_O@{\_\_O}!core\_cm4.h@{core\_cm4.h}}
+\doxysubsubsection{\_\_O}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+O~\textbf{ volatile}}
+
+Defines \textquotesingle{}write only\textquotesingle{} permissions 
+
+Definition at line 278 of file core\+\_\+cm4.\+h.
+
+\mbox{\label{core__cm4_8h_a0ea2009ed8fd9ef35b48708280fdb758}} 
+\index{core\_cm4.h@{core\_cm4.h}!\_\_OM@{\_\_OM}}
+\index{\_\_OM@{\_\_OM}!core\_cm4.h@{core\_cm4.h}}
+\doxysubsubsection{\_\_OM}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+OM~\textbf{ volatile}            /$\ast$! Defines \textquotesingle{}write only\textquotesingle{} structure member permissions $\ast$/}
+
+
+
+Definition at line 283 of file core\+\_\+cm4.\+h.
+

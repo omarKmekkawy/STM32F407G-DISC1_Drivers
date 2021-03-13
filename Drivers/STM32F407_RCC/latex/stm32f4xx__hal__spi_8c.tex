@@ -1,0 +1,157 @@
+\doxysection{system/src/stm32f4-\/hal/stm32f4xx\+\_\+hal\+\_\+spi.c File Reference}
+\label{stm32f4xx__hal__spi_8c}\index{system/src/stm32f4-\/hal/stm32f4xx\_hal\_spi.c@{system/src/stm32f4-\/hal/stm32f4xx\_hal\_spi.c}}
+
+
+SPI HAL module driver. This file provides firmware functions to manage the following functionalities of the Serial Peripheral Interface (SPI) peripheral\+:  
+
+
+{\ttfamily \#include \char`\"{}stm32f4xx\+\_\+hal.\+h\char`\"{}}\newline
+Include dependency graph for stm32f4xx\+\_\+hal\+\_\+spi.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{stm32f4xx__hal__spi_8c__incl}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Detailed Description}
+SPI HAL module driver. This file provides firmware functions to manage the following functionalities of the Serial Peripheral Interface (SPI) peripheral\+: 
+
+\begin{DoxyAuthor}{Author}
+MCD Application Team 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+V1.\+5.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+06-\/May-\/2016
+\begin{DoxyItemize}
+\item Initialization and de-\/initialization functions
+\item IO operation functions
+\item Peripheral Control functions
+\item Peripheral State functions
+\end{DoxyItemize}
+\end{DoxyDate}
+\begin{DoxyVerb}==============================================================================
+                      ##### How to use this driver #####
+==============================================================================
+  [..]
+    The SPI HAL driver can be used as follows:
+
+    (#) Declare a SPI_HandleTypeDef handle structure, for example:
+        SPI_HandleTypeDef  hspi;
+
+    (#)Initialize the SPI low level resources by implementing the HAL_SPI_MspInit() API:
+        (##) Enable the SPIx interface clock
+        (##) SPI pins configuration
+            (+++) Enable the clock for the SPI GPIOs
+            (+++) Configure these SPI pins as alternate function push-pull
+        (##) NVIC configuration if you need to use interrupt process
+            (+++) Configure the SPIx interrupt priority
+            (+++) Enable the NVIC SPI IRQ handle
+        (##) DMA Configuration if you need to use DMA process
+            (+++) Declare a DMA_HandleTypeDef handle structure for the transmit or receive stream
+            (+++) Enable the DMAx clock
+            (+++) Configure the DMA handle parameters
+            (+++) Configure the DMA Tx or Rx stream
+            (+++) Associate the initialized hdma_tx handle to the hspi DMA Tx or Rx handle
+            (+++) Configure the priority and enable the NVIC for the transfer complete interrupt on the DMA Tx or Rx stream
+
+    (#) Program the Mode, BidirectionalMode , Data size, Baudrate Prescaler, NSS
+        management, Clock polarity and phase, FirstBit and CRC configuration in the hspi Init structure.
+
+    (#) Initialize the SPI registers by calling the HAL_SPI_Init() API:
+        (++) This API configures also the low level Hardware GPIO, CLOCK, CORTEX...etc)
+            by calling the customized HAL_SPI_MspInit() API.
+   [..]
+     Circular mode restriction:
+    (#) The DMA circular mode cannot be used when the SPI is configured in these modes:
+        (##) Master 2Lines RxOnly
+        (##) Master 1Line Rx
+    (#) The CRC feature is not managed when the DMA circular mode is enabled
+    (#) When the SPI DMA Pause/Stop features are used, we must use the following APIs
+        the HAL_SPI_DMAPause()/ HAL_SPI_DMAStop() only under the SPI callbacks
+   [..]
+     Master Receive mode restriction:
+    (#) In Master unidirectional receive-only mode (MSTR =1, BIDIMODE=0, RXONLY=0) or
+        bidirectional receive mode (MSTR=1, BIDIMODE=1, BIDIOE=0), to ensure that the SPI
+        does not initiate a new transfer the following procedure has to be respected:
+        (##) HAL_SPI_DeInit()
+        (##) HAL_SPI_Init()
+   [..]
+     Using the HAL it is not possible to reach all supported SPI frequency with the differents SPI Modes,
+     the following table resume the max SPI frequency reached with data size 8bits/16bits,
+     according to frequency used on APBx Peripheral Clock (fPCLK) used by the SPI instance :
+
+     DataSize = SPI_DATASIZE_8BIT:
+     +----------------------------------------------------------------------------------------------+
+     |         |                | 2Lines Fullduplex   |     2Lines RxOnly    |         1Line        |
+     | Process | Tranfert mode  |---------------------|----------------------|----------------------|
+     |         |                |  Master  |  Slave   |  Master   |  Slave   |  Master   |  Slave   |
+     |==============================================================================================|
+     |    T    |     Polling    | Fpclk/2  | Fpclk/2  |    NA     |    NA    |    NA     |   NA     |
+     |    X    |----------------|----------|----------|-----------|----------|-----------|----------|
+     |    /    |     Interrupt  | Fpclk/4  | Fpclk/8  |    NA     |    NA    |    NA     |   NA     |
+     |    R    |----------------|----------|----------|-----------|----------|-----------|----------|
+     |    X    |       DMA      | Fpclk/2  | Fpclk/2  |    NA     |    NA    |    NA     |   NA     |
+     |=========|================|==========|==========|===========|==========|===========|==========|
+     |         |     Polling    | Fpclk/2  | Fpclk/2  | Fpclk/64  | Fpclk/2  | Fpclk/64  | Fpclk/2  |
+     |         |----------------|----------|----------|-----------|----------|-----------|----------|
+     |    R    |     Interrupt  | Fpclk/8  | Fpclk/8  | Fpclk/64  | Fpclk/2  | Fpclk/64  | Fpclk/2  |
+     |    X    |----------------|----------|----------|-----------|----------|-----------|----------|
+     |         |       DMA      | Fpclk/2  | Fpclk/2  | Fpclk/64  | Fpclk/2  | Fpclk/128 | Fpclk/2  |
+     |=========|================|==========|==========|===========|==========|===========|==========|
+     |         |     Polling    | Fpclk/2  | Fpclk/4  |     NA    |    NA    | Fpclk/2   | Fpclk/64 |
+     |         |----------------|----------|----------|-----------|----------|-----------|----------|
+     |    T    |     Interrupt  | Fpclk/2  | Fpclk/4  |     NA    |    NA    | Fpclk/2   | Fpclk/64 |
+     |    X    |----------------|----------|----------|-----------|----------|-----------|----------|
+     |         |       DMA      | Fpclk/2  | Fpclk/2  |     NA    |    NA    | Fpclk/2   | Fpclk/128|
+     +----------------------------------------------------------------------------------------------+
+
+     DataSize = SPI_DATASIZE_16BIT:
+     +----------------------------------------------------------------------------------------------+
+     |         |                | 2Lines Fullduplex   |     2Lines RxOnly    |         1Line        |
+     | Process | Tranfert mode  |---------------------|----------------------|----------------------|
+     |         |                |  Master  |  Slave   |  Master   |  Slave   |  Master   |  Slave   |
+     |==============================================================================================|
+     |    T    |     Polling    | Fpclk/2  | Fpclk/2  |    NA     |    NA    |    NA     |   NA     |
+     |    X    |----------------|----------|----------|-----------|----------|-----------|----------|
+     |    /    |     Interrupt  | Fpclk/4  | Fpclk/4  |    NA     |    NA    |    NA     |   NA     |
+     |    R    |----------------|----------|----------|-----------|----------|-----------|----------|
+     |    X    |       DMA      | Fpclk/2  | Fpclk/2  |    NA     |    NA    |    NA     |   NA     |
+     |=========|================|==========|==========|===========|==========|===========|==========|
+     |         |     Polling    | Fpclk/2  | Fpclk/2  | Fpclk/64  | Fpclk/2  | Fpclk/32  | Fpclk/2  |
+     |         |----------------|----------|----------|-----------|----------|-----------|----------|
+     |    R    |     Interrupt  | Fpclk/4  | Fpclk/4  | Fpclk/64  | Fpclk/2  | Fpclk/64  | Fpclk/2  |
+     |    X    |----------------|----------|----------|-----------|----------|-----------|----------|
+     |         |       DMA      | Fpclk/2  | Fpclk/2  | Fpclk/64  | Fpclk/2  | Fpclk/128 | Fpclk/2  |
+     |=========|================|==========|==========|===========|==========|===========|==========|
+     |         |     Polling    | Fpclk/2  | Fpclk/2  |     NA    |    NA    | Fpclk/2   | Fpclk/32 |
+     |         |----------------|----------|----------|-----------|----------|-----------|----------|
+     |    T    |     Interrupt  | Fpclk/2  | Fpclk/2  |     NA    |    NA    | Fpclk/2   | Fpclk/64 |
+     |    X    |----------------|----------|----------|-----------|----------|-----------|----------|
+     |         |       DMA      | Fpclk/2  | Fpclk/2  |     NA    |    NA    | Fpclk/2   | Fpclk/128|
+     +----------------------------------------------------------------------------------------------+
+     @note The max SPI frequency depend on SPI data size (8bits, 16bits),
+           SPI mode(2 Lines fullduplex, 2 lines RxOnly, 1 line TX/RX) and Process mode (Polling, IT, DMA).
+     @note
+          (#) TX/RX processes are HAL_SPI_TransmitReceive(), HAL_SPI_TransmitReceive_IT() and HAL_SPI_TransmitReceive_DMA()
+          (#) RX processes are HAL_SPI_Receive(), HAL_SPI_Receive_IT() and HAL_SPI_Receive_DMA()
+          (#) TX processes are HAL_SPI_Transmit(), HAL_SPI_Transmit_IT() and HAL_SPI_Transmit_DMA()\end{DoxyVerb}
+
+
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+\doxysubsubsection*{\begin{center}\copyright{} COPYRIGHT(c) 2016 STMicroelectronics\end{center} }
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met\+:
+\begin{DoxyEnumerate}
+\item Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+\item Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+\item Neither the name of STMicroelectronics nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+\end{DoxyEnumerate}
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \char`\"{}\+AS IS\char`\"{} AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. 

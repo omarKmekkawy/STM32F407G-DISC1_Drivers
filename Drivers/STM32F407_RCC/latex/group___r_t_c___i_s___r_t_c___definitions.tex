@@ -1,0 +1,406 @@
+\doxysection{RTC Private macros to check input parameters}
+\label{group___r_t_c___i_s___r_t_c___definitions}\index{RTC Private macros to check input parameters@{RTC Private macros to check input parameters}}
+Collaboration diagram for RTC Private macros to check input parameters\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group___r_t_c___i_s___r_t_c___definitions}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \textbf{ IS\+\_\+\+RTC\+\_\+\+HOUR\+\_\+\+FORMAT}(FORMAT)
+\item 
+\#define \textbf{ IS\+\_\+\+RTC\+\_\+\+OUTPUT}(OUTPUT)
+\item 
+\#define \textbf{ IS\+\_\+\+RTC\+\_\+\+OUTPUT\+\_\+\+POL}(POL)
+\item 
+\#define \textbf{ IS\+\_\+\+RTC\+\_\+\+OUTPUT\+\_\+\+TYPE}(TYPE)
+\item 
+\#define \textbf{ IS\+\_\+\+RTC\+\_\+\+HOUR12}(HOUR)~(((HOUR) $>$ (uint32\+\_\+t)0U) \&\& ((HOUR) $<$= (uint32\+\_\+t)12U))
+\item 
+\#define \textbf{ IS\+\_\+\+RTC\+\_\+\+HOUR24}(HOUR)~((HOUR) $<$= (uint32\+\_\+t)23U)
+\item 
+\#define \textbf{ IS\+\_\+\+RTC\+\_\+\+ASYNCH\+\_\+\+PREDIV}(PREDIV)~((PREDIV) $<$= (uint32\+\_\+t)0x7\+FU)
+\item 
+\#define \textbf{ IS\+\_\+\+RTC\+\_\+\+SYNCH\+\_\+\+PREDIV}(PREDIV)~((PREDIV) $<$= (uint32\+\_\+t)0x7\+FFFU)
+\item 
+\#define \textbf{ IS\+\_\+\+RTC\+\_\+\+MINUTES}(MINUTES)~((MINUTES) $<$= (uint32\+\_\+t)59U)
+\item 
+\#define \textbf{ IS\+\_\+\+RTC\+\_\+\+SECONDS}(SECONDS)~((SECONDS) $<$= (uint32\+\_\+t)59U)
+\item 
+\#define \textbf{ IS\+\_\+\+RTC\+\_\+\+HOURFORMAT12}(PM)~(((PM) == \textbf{ RTC\+\_\+\+HOURFORMAT12\+\_\+\+AM}) $\vert$$\vert$ ((PM) == \textbf{ RTC\+\_\+\+HOURFORMAT12\+\_\+\+PM}))
+\item 
+\#define \textbf{ IS\+\_\+\+RTC\+\_\+\+DAYLIGHT\+\_\+\+SAVING}(SAVE)
+\item 
+\#define \textbf{ IS\+\_\+\+RTC\+\_\+\+STORE\+\_\+\+OPERATION}(OPERATION)
+\item 
+\#define \textbf{ IS\+\_\+\+RTC\+\_\+\+FORMAT}(FORMAT)~(((FORMAT) == \textbf{ RTC\+\_\+\+FORMAT\+\_\+\+BIN}) $\vert$$\vert$ ((FORMAT) == \textbf{ RTC\+\_\+\+FORMAT\+\_\+\+BCD}))
+\item 
+\#define \textbf{ IS\+\_\+\+RTC\+\_\+\+YEAR}(YEAR)~((YEAR) $<$= (uint32\+\_\+t)99U)
+\item 
+\#define \textbf{ IS\+\_\+\+RTC\+\_\+\+MONTH}(MONTH)~(((MONTH) $>$= (uint32\+\_\+t)1U) \&\& ((MONTH) $<$= (uint32\+\_\+t)12U))
+\item 
+\#define \textbf{ IS\+\_\+\+RTC\+\_\+\+DATE}(DATE)~(((DATE) $>$= (uint32\+\_\+t)1U) \&\& ((DATE) $<$= (uint32\+\_\+t)31U))
+\item 
+\#define \textbf{ IS\+\_\+\+RTC\+\_\+\+WEEKDAY}(WEEKDAY)
+\item 
+\#define \textbf{ IS\+\_\+\+RTC\+\_\+\+ALARM\+\_\+\+DATE\+\_\+\+WEEKDAY\+\_\+\+DATE}(DATE)~(((DATE) $>$(uint32\+\_\+t) 0U) \&\& ((DATE) $<$= (uint32\+\_\+t)31U))
+\item 
+\#define \textbf{ IS\+\_\+\+RTC\+\_\+\+ALARM\+\_\+\+DATE\+\_\+\+WEEKDAY\+\_\+\+WEEKDAY}(WEEKDAY)
+\item 
+\#define \textbf{ IS\+\_\+\+RTC\+\_\+\+ALARM\+\_\+\+DATE\+\_\+\+WEEKDAY\+\_\+\+SEL}(SEL)
+\item 
+\#define \textbf{ IS\+\_\+\+RTC\+\_\+\+ALARM\+\_\+\+MASK}(MASK)~(((MASK) \& 0x7\+F7\+F7\+F7\+FU) == (uint32\+\_\+t)\textbf{ RESET})
+\item 
+\#define \textbf{ IS\+\_\+\+RTC\+\_\+\+ALARM}(ALARM)~(((ALARM) == \textbf{ RTC\+\_\+\+ALARM\+\_\+A}) $\vert$$\vert$ ((ALARM) == \textbf{ RTC\+\_\+\+ALARM\+\_\+B}))
+\item 
+\#define \textbf{ IS\+\_\+\+RTC\+\_\+\+ALARM\+\_\+\+SUB\+\_\+\+SECOND\+\_\+\+VALUE}(VALUE)~((VALUE) $<$= (uint32\+\_\+t)0x00007\+FFFU)
+\item 
+\#define \textbf{ IS\+\_\+\+RTC\+\_\+\+ALARM\+\_\+\+SUB\+\_\+\+SECOND\+\_\+\+MASK}(MASK)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\label{group___r_t_c___i_s___r_t_c___definitions_gab101ad18b0bcde557eb8caac469d7725}} 
+\index{RTC Private macros to check input parameters@{RTC Private macros to check input parameters}!IS\_RTC\_ALARM@{IS\_RTC\_ALARM}}
+\index{IS\_RTC\_ALARM@{IS\_RTC\_ALARM}!RTC Private macros to check input parameters@{RTC Private macros to check input parameters}}
+\doxysubsubsection{IS\_RTC\_ALARM}
+{\footnotesize\ttfamily \#define IS\+\_\+\+RTC\+\_\+\+ALARM(\begin{DoxyParamCaption}\item[{}]{ALARM }\end{DoxyParamCaption})~(((ALARM) == \textbf{ RTC\+\_\+\+ALARM\+\_\+A}) $\vert$$\vert$ ((ALARM) == \textbf{ RTC\+\_\+\+ALARM\+\_\+B}))}
+
+
+
+Definition at line 781 of file stm32f4xx\+\_\+hal\+\_\+rtc.\+h.
+
+\mbox{\label{group___r_t_c___i_s___r_t_c___definitions_ga8b6cb39fac113de7c5d2b05a93093243}} 
+\index{RTC Private macros to check input parameters@{RTC Private macros to check input parameters}!IS\_RTC\_ALARM\_DATE\_WEEKDAY\_DATE@{IS\_RTC\_ALARM\_DATE\_WEEKDAY\_DATE}}
+\index{IS\_RTC\_ALARM\_DATE\_WEEKDAY\_DATE@{IS\_RTC\_ALARM\_DATE\_WEEKDAY\_DATE}!RTC Private macros to check input parameters@{RTC Private macros to check input parameters}}
+\doxysubsubsection{IS\_RTC\_ALARM\_DATE\_WEEKDAY\_DATE}
+{\footnotesize\ttfamily \#define IS\+\_\+\+RTC\+\_\+\+ALARM\+\_\+\+DATE\+\_\+\+WEEKDAY\+\_\+\+DATE(\begin{DoxyParamCaption}\item[{}]{DATE }\end{DoxyParamCaption})~(((DATE) $>$(uint32\+\_\+t) 0U) \&\& ((DATE) $<$= (uint32\+\_\+t)31U))}
+
+
+
+Definition at line 770 of file stm32f4xx\+\_\+hal\+\_\+rtc.\+h.
+
+\mbox{\label{group___r_t_c___i_s___r_t_c___definitions_gac5d3e2182217ad6c5a75eba5c88cb335}} 
+\index{RTC Private macros to check input parameters@{RTC Private macros to check input parameters}!IS\_RTC\_ALARM\_DATE\_WEEKDAY\_SEL@{IS\_RTC\_ALARM\_DATE\_WEEKDAY\_SEL}}
+\index{IS\_RTC\_ALARM\_DATE\_WEEKDAY\_SEL@{IS\_RTC\_ALARM\_DATE\_WEEKDAY\_SEL}!RTC Private macros to check input parameters@{RTC Private macros to check input parameters}}
+\doxysubsubsection{IS\_RTC\_ALARM\_DATE\_WEEKDAY\_SEL}
+{\footnotesize\ttfamily \#define IS\+\_\+\+RTC\+\_\+\+ALARM\+\_\+\+DATE\+\_\+\+WEEKDAY\+\_\+\+SEL(\begin{DoxyParamCaption}\item[{}]{SEL }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                            (((SEL) == RTC\_ALARMDATEWEEKDAYSEL\_DATE) || \(\backslash\)}
+\DoxyCodeLine{                                            ((SEL) == RTC\_ALARMDATEWEEKDAYSEL\_WEEKDAY))}
+
+\end{DoxyCode}
+
+
+Definition at line 778 of file stm32f4xx\+\_\+hal\+\_\+rtc.\+h.
+
+\mbox{\label{group___r_t_c___i_s___r_t_c___definitions_gabc968cd70cf33e06b8e2886c98099021}} 
+\index{RTC Private macros to check input parameters@{RTC Private macros to check input parameters}!IS\_RTC\_ALARM\_DATE\_WEEKDAY\_WEEKDAY@{IS\_RTC\_ALARM\_DATE\_WEEKDAY\_WEEKDAY}}
+\index{IS\_RTC\_ALARM\_DATE\_WEEKDAY\_WEEKDAY@{IS\_RTC\_ALARM\_DATE\_WEEKDAY\_WEEKDAY}!RTC Private macros to check input parameters@{RTC Private macros to check input parameters}}
+\doxysubsubsection{IS\_RTC\_ALARM\_DATE\_WEEKDAY\_WEEKDAY}
+{\footnotesize\ttfamily \#define IS\+\_\+\+RTC\+\_\+\+ALARM\+\_\+\+DATE\+\_\+\+WEEKDAY\+\_\+\+WEEKDAY(\begin{DoxyParamCaption}\item[{}]{WEEKDAY }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                                    (((WEEKDAY) == RTC\_WEEKDAY\_MONDAY)    || \(\backslash\)}
+\DoxyCodeLine{                                                    ((WEEKDAY) == RTC\_WEEKDAY\_TUESDAY)   || \(\backslash\)}
+\DoxyCodeLine{                                                    ((WEEKDAY) == RTC\_WEEKDAY\_WEDNESDAY) || \(\backslash\)}
+\DoxyCodeLine{                                                    ((WEEKDAY) == RTC\_WEEKDAY\_THURSDAY)  || \(\backslash\)}
+\DoxyCodeLine{                                                    ((WEEKDAY) == RTC\_WEEKDAY\_FRIDAY)    || \(\backslash\)}
+\DoxyCodeLine{                                                    ((WEEKDAY) == RTC\_WEEKDAY\_SATURDAY)  || \(\backslash\)}
+\DoxyCodeLine{                                                    ((WEEKDAY) == RTC\_WEEKDAY\_SUNDAY))}
+
+\end{DoxyCode}
+
+
+Definition at line 771 of file stm32f4xx\+\_\+hal\+\_\+rtc.\+h.
+
+\mbox{\label{group___r_t_c___i_s___r_t_c___definitions_ga166108e7bf226d4ea345822eb81ea358}} 
+\index{RTC Private macros to check input parameters@{RTC Private macros to check input parameters}!IS\_RTC\_ALARM\_MASK@{IS\_RTC\_ALARM\_MASK}}
+\index{IS\_RTC\_ALARM\_MASK@{IS\_RTC\_ALARM\_MASK}!RTC Private macros to check input parameters@{RTC Private macros to check input parameters}}
+\doxysubsubsection{IS\_RTC\_ALARM\_MASK}
+{\footnotesize\ttfamily \#define IS\+\_\+\+RTC\+\_\+\+ALARM\+\_\+\+MASK(\begin{DoxyParamCaption}\item[{}]{MASK }\end{DoxyParamCaption})~(((MASK) \& 0x7\+F7\+F7\+F7\+FU) == (uint32\+\_\+t)\textbf{ RESET})}
+
+
+
+Definition at line 780 of file stm32f4xx\+\_\+hal\+\_\+rtc.\+h.
+
+\mbox{\label{group___r_t_c___i_s___r_t_c___definitions_gae6814af31d0cc72b784bc85f63ec4de7}} 
+\index{RTC Private macros to check input parameters@{RTC Private macros to check input parameters}!IS\_RTC\_ALARM\_SUB\_SECOND\_MASK@{IS\_RTC\_ALARM\_SUB\_SECOND\_MASK}}
+\index{IS\_RTC\_ALARM\_SUB\_SECOND\_MASK@{IS\_RTC\_ALARM\_SUB\_SECOND\_MASK}!RTC Private macros to check input parameters@{RTC Private macros to check input parameters}}
+\doxysubsubsection{IS\_RTC\_ALARM\_SUB\_SECOND\_MASK}
+{\footnotesize\ttfamily \#define IS\+\_\+\+RTC\+\_\+\+ALARM\+\_\+\+SUB\+\_\+\+SECOND\+\_\+\+MASK(\begin{DoxyParamCaption}\item[{}]{MASK }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                              (((MASK) == RTC\_ALARMSUBSECONDMASK\_ALL) || \(\backslash\)}
+\DoxyCodeLine{                                              ((MASK) == RTC\_ALARMSUBSECONDMASK\_SS14\_1) || \(\backslash\)}
+\DoxyCodeLine{                                              ((MASK) == RTC\_ALARMSUBSECONDMASK\_SS14\_2) || \(\backslash\)}
+\DoxyCodeLine{                                              ((MASK) == RTC\_ALARMSUBSECONDMASK\_SS14\_3) || \(\backslash\)}
+\DoxyCodeLine{                                              ((MASK) == RTC\_ALARMSUBSECONDMASK\_SS14\_4) || \(\backslash\)}
+\DoxyCodeLine{                                              ((MASK) == RTC\_ALARMSUBSECONDMASK\_SS14\_5) || \(\backslash\)}
+\DoxyCodeLine{                                              ((MASK) == RTC\_ALARMSUBSECONDMASK\_SS14\_6) || \(\backslash\)}
+\DoxyCodeLine{                                              ((MASK) == RTC\_ALARMSUBSECONDMASK\_SS14\_7) || \(\backslash\)}
+\DoxyCodeLine{                                              ((MASK) == RTC\_ALARMSUBSECONDMASK\_SS14\_8) || \(\backslash\)}
+\DoxyCodeLine{                                              ((MASK) == RTC\_ALARMSUBSECONDMASK\_SS14\_9) || \(\backslash\)}
+\DoxyCodeLine{                                              ((MASK) == RTC\_ALARMSUBSECONDMASK\_SS14\_10) || \(\backslash\)}
+\DoxyCodeLine{                                              ((MASK) == RTC\_ALARMSUBSECONDMASK\_SS14\_11) || \(\backslash\)}
+\DoxyCodeLine{                                              ((MASK) == RTC\_ALARMSUBSECONDMASK\_SS14\_12) || \(\backslash\)}
+\DoxyCodeLine{                                              ((MASK) == RTC\_ALARMSUBSECONDMASK\_SS14\_13) || \(\backslash\)}
+\DoxyCodeLine{                                              ((MASK) == RTC\_ALARMSUBSECONDMASK\_SS14) || \(\backslash\)}
+\DoxyCodeLine{                                              ((MASK) == RTC\_ALARMSUBSECONDMASK\_NONE))}
+
+\end{DoxyCode}
+
+
+Definition at line 784 of file stm32f4xx\+\_\+hal\+\_\+rtc.\+h.
+
+\mbox{\label{group___r_t_c___i_s___r_t_c___definitions_gae7cd07c18cdb2946a2b06f6606ede93c}} 
+\index{RTC Private macros to check input parameters@{RTC Private macros to check input parameters}!IS\_RTC\_ALARM\_SUB\_SECOND\_VALUE@{IS\_RTC\_ALARM\_SUB\_SECOND\_VALUE}}
+\index{IS\_RTC\_ALARM\_SUB\_SECOND\_VALUE@{IS\_RTC\_ALARM\_SUB\_SECOND\_VALUE}!RTC Private macros to check input parameters@{RTC Private macros to check input parameters}}
+\doxysubsubsection{IS\_RTC\_ALARM\_SUB\_SECOND\_VALUE}
+{\footnotesize\ttfamily \#define IS\+\_\+\+RTC\+\_\+\+ALARM\+\_\+\+SUB\+\_\+\+SECOND\+\_\+\+VALUE(\begin{DoxyParamCaption}\item[{}]{VALUE }\end{DoxyParamCaption})~((VALUE) $<$= (uint32\+\_\+t)0x00007\+FFFU)}
+
+
+
+Definition at line 782 of file stm32f4xx\+\_\+hal\+\_\+rtc.\+h.
+
+\mbox{\label{group___r_t_c___i_s___r_t_c___definitions_gac20f6c94ede2d474df8ba4acb7328d93}} 
+\index{RTC Private macros to check input parameters@{RTC Private macros to check input parameters}!IS\_RTC\_ASYNCH\_PREDIV@{IS\_RTC\_ASYNCH\_PREDIV}}
+\index{IS\_RTC\_ASYNCH\_PREDIV@{IS\_RTC\_ASYNCH\_PREDIV}!RTC Private macros to check input parameters@{RTC Private macros to check input parameters}}
+\doxysubsubsection{IS\_RTC\_ASYNCH\_PREDIV}
+{\footnotesize\ttfamily \#define IS\+\_\+\+RTC\+\_\+\+ASYNCH\+\_\+\+PREDIV(\begin{DoxyParamCaption}\item[{}]{PREDIV }\end{DoxyParamCaption})~((PREDIV) $<$= (uint32\+\_\+t)0x7\+FU)}
+
+
+
+Definition at line 748 of file stm32f4xx\+\_\+hal\+\_\+rtc.\+h.
+
+\mbox{\label{group___r_t_c___i_s___r_t_c___definitions_ga3b6e966e144cb0495563ef0283d16510}} 
+\index{RTC Private macros to check input parameters@{RTC Private macros to check input parameters}!IS\_RTC\_DATE@{IS\_RTC\_DATE}}
+\index{IS\_RTC\_DATE@{IS\_RTC\_DATE}!RTC Private macros to check input parameters@{RTC Private macros to check input parameters}}
+\doxysubsubsection{IS\_RTC\_DATE}
+{\footnotesize\ttfamily \#define IS\+\_\+\+RTC\+\_\+\+DATE(\begin{DoxyParamCaption}\item[{}]{DATE }\end{DoxyParamCaption})~(((DATE) $>$= (uint32\+\_\+t)1U) \&\& ((DATE) $<$= (uint32\+\_\+t)31U))}
+
+
+
+Definition at line 762 of file stm32f4xx\+\_\+hal\+\_\+rtc.\+h.
+
+\mbox{\label{group___r_t_c___i_s___r_t_c___definitions_ga4922f8f31df54481bc002b16bc1effc3}} 
+\index{RTC Private macros to check input parameters@{RTC Private macros to check input parameters}!IS\_RTC\_DAYLIGHT\_SAVING@{IS\_RTC\_DAYLIGHT\_SAVING}}
+\index{IS\_RTC\_DAYLIGHT\_SAVING@{IS\_RTC\_DAYLIGHT\_SAVING}!RTC Private macros to check input parameters@{RTC Private macros to check input parameters}}
+\doxysubsubsection{IS\_RTC\_DAYLIGHT\_SAVING}
+{\footnotesize\ttfamily \#define IS\+\_\+\+RTC\+\_\+\+DAYLIGHT\+\_\+\+SAVING(\begin{DoxyParamCaption}\item[{}]{SAVE }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                      (((SAVE) == RTC\_DAYLIGHTSAVING\_SUB1H) || \(\backslash\)}
+\DoxyCodeLine{                                      ((SAVE) == RTC\_DAYLIGHTSAVING\_ADD1H) || \(\backslash\)}
+\DoxyCodeLine{                                      ((SAVE) == RTC\_DAYLIGHTSAVING\_NONE))}
+
+\end{DoxyCode}
+
+
+Definition at line 754 of file stm32f4xx\+\_\+hal\+\_\+rtc.\+h.
+
+\mbox{\label{group___r_t_c___i_s___r_t_c___definitions_ga05a1ca8558058d71322ccf1045b8fb1c}} 
+\index{RTC Private macros to check input parameters@{RTC Private macros to check input parameters}!IS\_RTC\_FORMAT@{IS\_RTC\_FORMAT}}
+\index{IS\_RTC\_FORMAT@{IS\_RTC\_FORMAT}!RTC Private macros to check input parameters@{RTC Private macros to check input parameters}}
+\doxysubsubsection{IS\_RTC\_FORMAT}
+{\footnotesize\ttfamily \#define IS\+\_\+\+RTC\+\_\+\+FORMAT(\begin{DoxyParamCaption}\item[{}]{FORMAT }\end{DoxyParamCaption})~(((FORMAT) == \textbf{ RTC\+\_\+\+FORMAT\+\_\+\+BIN}) $\vert$$\vert$ ((FORMAT) == \textbf{ RTC\+\_\+\+FORMAT\+\_\+\+BCD}))}
+
+
+
+Definition at line 759 of file stm32f4xx\+\_\+hal\+\_\+rtc.\+h.
+
+\mbox{\label{group___r_t_c___i_s___r_t_c___definitions_ga6bdfe3bed0a57dfafc2d1de785d48a62}} 
+\index{RTC Private macros to check input parameters@{RTC Private macros to check input parameters}!IS\_RTC\_HOUR12@{IS\_RTC\_HOUR12}}
+\index{IS\_RTC\_HOUR12@{IS\_RTC\_HOUR12}!RTC Private macros to check input parameters@{RTC Private macros to check input parameters}}
+\doxysubsubsection{IS\_RTC\_HOUR12}
+{\footnotesize\ttfamily \#define IS\+\_\+\+RTC\+\_\+\+HOUR12(\begin{DoxyParamCaption}\item[{}]{HOUR }\end{DoxyParamCaption})~(((HOUR) $>$ (uint32\+\_\+t)0U) \&\& ((HOUR) $<$= (uint32\+\_\+t)12U))}
+
+
+
+Definition at line 746 of file stm32f4xx\+\_\+hal\+\_\+rtc.\+h.
+
+\mbox{\label{group___r_t_c___i_s___r_t_c___definitions_ga4883613bec76074ac62608b89e3f48a8}} 
+\index{RTC Private macros to check input parameters@{RTC Private macros to check input parameters}!IS\_RTC\_HOUR24@{IS\_RTC\_HOUR24}}
+\index{IS\_RTC\_HOUR24@{IS\_RTC\_HOUR24}!RTC Private macros to check input parameters@{RTC Private macros to check input parameters}}
+\doxysubsubsection{IS\_RTC\_HOUR24}
+{\footnotesize\ttfamily \#define IS\+\_\+\+RTC\+\_\+\+HOUR24(\begin{DoxyParamCaption}\item[{}]{HOUR }\end{DoxyParamCaption})~((HOUR) $<$= (uint32\+\_\+t)23U)}
+
+
+
+Definition at line 747 of file stm32f4xx\+\_\+hal\+\_\+rtc.\+h.
+
+\mbox{\label{group___r_t_c___i_s___r_t_c___definitions_ga597042eec4479e028c32973bc69f4a26}} 
+\index{RTC Private macros to check input parameters@{RTC Private macros to check input parameters}!IS\_RTC\_HOUR\_FORMAT@{IS\_RTC\_HOUR\_FORMAT}}
+\index{IS\_RTC\_HOUR\_FORMAT@{IS\_RTC\_HOUR\_FORMAT}!RTC Private macros to check input parameters@{RTC Private macros to check input parameters}}
+\doxysubsubsection{IS\_RTC\_HOUR\_FORMAT}
+{\footnotesize\ttfamily \#define IS\+\_\+\+RTC\+\_\+\+HOUR\+\_\+\+FORMAT(\begin{DoxyParamCaption}\item[{}]{FORMAT }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                        (((FORMAT) == RTC\_HOURFORMAT\_12) || \(\backslash\)}
+\DoxyCodeLine{                                        ((FORMAT) == RTC\_HOURFORMAT\_24))}
+
+\end{DoxyCode}
+
+
+Definition at line 736 of file stm32f4xx\+\_\+hal\+\_\+rtc.\+h.
+
+\mbox{\label{group___r_t_c___i_s___r_t_c___definitions_gaac5777b612cdee4c43d4399f40b1bd3a}} 
+\index{RTC Private macros to check input parameters@{RTC Private macros to check input parameters}!IS\_RTC\_HOURFORMAT12@{IS\_RTC\_HOURFORMAT12}}
+\index{IS\_RTC\_HOURFORMAT12@{IS\_RTC\_HOURFORMAT12}!RTC Private macros to check input parameters@{RTC Private macros to check input parameters}}
+\doxysubsubsection{IS\_RTC\_HOURFORMAT12}
+{\footnotesize\ttfamily \#define IS\+\_\+\+RTC\+\_\+\+HOURFORMAT12(\begin{DoxyParamCaption}\item[{}]{PM }\end{DoxyParamCaption})~(((PM) == \textbf{ RTC\+\_\+\+HOURFORMAT12\+\_\+\+AM}) $\vert$$\vert$ ((PM) == \textbf{ RTC\+\_\+\+HOURFORMAT12\+\_\+\+PM}))}
+
+
+
+Definition at line 753 of file stm32f4xx\+\_\+hal\+\_\+rtc.\+h.
+
+\mbox{\label{group___r_t_c___i_s___r_t_c___definitions_ga8475ceaf2d35d98be0b3401812aef445}} 
+\index{RTC Private macros to check input parameters@{RTC Private macros to check input parameters}!IS\_RTC\_MINUTES@{IS\_RTC\_MINUTES}}
+\index{IS\_RTC\_MINUTES@{IS\_RTC\_MINUTES}!RTC Private macros to check input parameters@{RTC Private macros to check input parameters}}
+\doxysubsubsection{IS\_RTC\_MINUTES}
+{\footnotesize\ttfamily \#define IS\+\_\+\+RTC\+\_\+\+MINUTES(\begin{DoxyParamCaption}\item[{}]{MINUTES }\end{DoxyParamCaption})~((MINUTES) $<$= (uint32\+\_\+t)59U)}
+
+
+
+Definition at line 750 of file stm32f4xx\+\_\+hal\+\_\+rtc.\+h.
+
+\mbox{\label{group___r_t_c___i_s___r_t_c___definitions_ga7fa60f17b2ae529c35b1fa3dd4d6853f}} 
+\index{RTC Private macros to check input parameters@{RTC Private macros to check input parameters}!IS\_RTC\_MONTH@{IS\_RTC\_MONTH}}
+\index{IS\_RTC\_MONTH@{IS\_RTC\_MONTH}!RTC Private macros to check input parameters@{RTC Private macros to check input parameters}}
+\doxysubsubsection{IS\_RTC\_MONTH}
+{\footnotesize\ttfamily \#define IS\+\_\+\+RTC\+\_\+\+MONTH(\begin{DoxyParamCaption}\item[{}]{MONTH }\end{DoxyParamCaption})~(((MONTH) $>$= (uint32\+\_\+t)1U) \&\& ((MONTH) $<$= (uint32\+\_\+t)12U))}
+
+
+
+Definition at line 761 of file stm32f4xx\+\_\+hal\+\_\+rtc.\+h.
+
+\mbox{\label{group___r_t_c___i_s___r_t_c___definitions_gabc8a868f360abe629c8d8de8b44b3b63}} 
+\index{RTC Private macros to check input parameters@{RTC Private macros to check input parameters}!IS\_RTC\_OUTPUT@{IS\_RTC\_OUTPUT}}
+\index{IS\_RTC\_OUTPUT@{IS\_RTC\_OUTPUT}!RTC Private macros to check input parameters@{RTC Private macros to check input parameters}}
+\doxysubsubsection{IS\_RTC\_OUTPUT}
+{\footnotesize\ttfamily \#define IS\+\_\+\+RTC\+\_\+\+OUTPUT(\begin{DoxyParamCaption}\item[{}]{OUTPUT }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                               (((OUTPUT) == RTC\_OUTPUT\_DISABLE) || \(\backslash\)}
+\DoxyCodeLine{                               ((OUTPUT) == RTC\_OUTPUT\_ALARMA)  || \(\backslash\)}
+\DoxyCodeLine{                               ((OUTPUT) == RTC\_OUTPUT\_ALARMB)  || \(\backslash\)}
+\DoxyCodeLine{                               ((OUTPUT) == RTC\_OUTPUT\_WAKEUP))}
+
+\end{DoxyCode}
+
+
+Definition at line 738 of file stm32f4xx\+\_\+hal\+\_\+rtc.\+h.
+
+\mbox{\label{group___r_t_c___i_s___r_t_c___definitions_ga1bc0fee899de25a9c1bcbb6c2b21b35d}} 
+\index{RTC Private macros to check input parameters@{RTC Private macros to check input parameters}!IS\_RTC\_OUTPUT\_POL@{IS\_RTC\_OUTPUT\_POL}}
+\index{IS\_RTC\_OUTPUT\_POL@{IS\_RTC\_OUTPUT\_POL}!RTC Private macros to check input parameters@{RTC Private macros to check input parameters}}
+\doxysubsubsection{IS\_RTC\_OUTPUT\_POL}
+{\footnotesize\ttfamily \#define IS\+\_\+\+RTC\+\_\+\+OUTPUT\+\_\+\+POL(\begin{DoxyParamCaption}\item[{}]{POL }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                (((POL) == RTC\_OUTPUT\_POLARITY\_HIGH) || \(\backslash\)}
+\DoxyCodeLine{                                ((POL) == RTC\_OUTPUT\_POLARITY\_LOW))}
+
+\end{DoxyCode}
+
+
+Definition at line 742 of file stm32f4xx\+\_\+hal\+\_\+rtc.\+h.
+
+\mbox{\label{group___r_t_c___i_s___r_t_c___definitions_ga69e263212d90ca91ccfc72e930f26cd8}} 
+\index{RTC Private macros to check input parameters@{RTC Private macros to check input parameters}!IS\_RTC\_OUTPUT\_TYPE@{IS\_RTC\_OUTPUT\_TYPE}}
+\index{IS\_RTC\_OUTPUT\_TYPE@{IS\_RTC\_OUTPUT\_TYPE}!RTC Private macros to check input parameters@{RTC Private macros to check input parameters}}
+\doxysubsubsection{IS\_RTC\_OUTPUT\_TYPE}
+{\footnotesize\ttfamily \#define IS\+\_\+\+RTC\+\_\+\+OUTPUT\+\_\+\+TYPE(\begin{DoxyParamCaption}\item[{}]{TYPE }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                  (((TYPE) == RTC\_OUTPUT\_TYPE\_OPENDRAIN) || \(\backslash\)}
+\DoxyCodeLine{                                  ((TYPE) == RTC\_OUTPUT\_TYPE\_PUSHPULL))}
+
+\end{DoxyCode}
+
+
+Definition at line 744 of file stm32f4xx\+\_\+hal\+\_\+rtc.\+h.
+
+\mbox{\label{group___r_t_c___i_s___r_t_c___definitions_gadb5a39d98fc906a8ea035bd29308bc5c}} 
+\index{RTC Private macros to check input parameters@{RTC Private macros to check input parameters}!IS\_RTC\_SECONDS@{IS\_RTC\_SECONDS}}
+\index{IS\_RTC\_SECONDS@{IS\_RTC\_SECONDS}!RTC Private macros to check input parameters@{RTC Private macros to check input parameters}}
+\doxysubsubsection{IS\_RTC\_SECONDS}
+{\footnotesize\ttfamily \#define IS\+\_\+\+RTC\+\_\+\+SECONDS(\begin{DoxyParamCaption}\item[{}]{SECONDS }\end{DoxyParamCaption})~((SECONDS) $<$= (uint32\+\_\+t)59U)}
+
+
+
+Definition at line 751 of file stm32f4xx\+\_\+hal\+\_\+rtc.\+h.
+
+\mbox{\label{group___r_t_c___i_s___r_t_c___definitions_ga550da5c8a2382badcb391507fd6f07f4}} 
+\index{RTC Private macros to check input parameters@{RTC Private macros to check input parameters}!IS\_RTC\_STORE\_OPERATION@{IS\_RTC\_STORE\_OPERATION}}
+\index{IS\_RTC\_STORE\_OPERATION@{IS\_RTC\_STORE\_OPERATION}!RTC Private macros to check input parameters@{RTC Private macros to check input parameters}}
+\doxysubsubsection{IS\_RTC\_STORE\_OPERATION}
+{\footnotesize\ttfamily \#define IS\+\_\+\+RTC\+\_\+\+STORE\+\_\+\+OPERATION(\begin{DoxyParamCaption}\item[{}]{OPERATION }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                           (((OPERATION) == RTC\_STOREOPERATION\_RESET) || \(\backslash\)}
+\DoxyCodeLine{                                           ((OPERATION) == RTC\_STOREOPERATION\_SET))}
+
+\end{DoxyCode}
+
+
+Definition at line 757 of file stm32f4xx\+\_\+hal\+\_\+rtc.\+h.
+
+\mbox{\label{group___r_t_c___i_s___r_t_c___definitions_ga32fccaa6ec65f9fceb3e6e4f31ab11cf}} 
+\index{RTC Private macros to check input parameters@{RTC Private macros to check input parameters}!IS\_RTC\_SYNCH\_PREDIV@{IS\_RTC\_SYNCH\_PREDIV}}
+\index{IS\_RTC\_SYNCH\_PREDIV@{IS\_RTC\_SYNCH\_PREDIV}!RTC Private macros to check input parameters@{RTC Private macros to check input parameters}}
+\doxysubsubsection{IS\_RTC\_SYNCH\_PREDIV}
+{\footnotesize\ttfamily \#define IS\+\_\+\+RTC\+\_\+\+SYNCH\+\_\+\+PREDIV(\begin{DoxyParamCaption}\item[{}]{PREDIV }\end{DoxyParamCaption})~((PREDIV) $<$= (uint32\+\_\+t)0x7\+FFFU)}
+
+
+
+Definition at line 749 of file stm32f4xx\+\_\+hal\+\_\+rtc.\+h.
+
+\mbox{\label{group___r_t_c___i_s___r_t_c___definitions_gaf17712ffb0834287f23c19235d53c7ec}} 
+\index{RTC Private macros to check input parameters@{RTC Private macros to check input parameters}!IS\_RTC\_WEEKDAY@{IS\_RTC\_WEEKDAY}}
+\index{IS\_RTC\_WEEKDAY@{IS\_RTC\_WEEKDAY}!RTC Private macros to check input parameters@{RTC Private macros to check input parameters}}
+\doxysubsubsection{IS\_RTC\_WEEKDAY}
+{\footnotesize\ttfamily \#define IS\+\_\+\+RTC\+\_\+\+WEEKDAY(\begin{DoxyParamCaption}\item[{}]{WEEKDAY }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                 (((WEEKDAY) == RTC\_WEEKDAY\_MONDAY)    || \(\backslash\)}
+\DoxyCodeLine{                                 ((WEEKDAY) == RTC\_WEEKDAY\_TUESDAY)   || \(\backslash\)}
+\DoxyCodeLine{                                 ((WEEKDAY) == RTC\_WEEKDAY\_WEDNESDAY) || \(\backslash\)}
+\DoxyCodeLine{                                 ((WEEKDAY) == RTC\_WEEKDAY\_THURSDAY)  || \(\backslash\)}
+\DoxyCodeLine{                                 ((WEEKDAY) == RTC\_WEEKDAY\_FRIDAY)    || \(\backslash\)}
+\DoxyCodeLine{                                 ((WEEKDAY) == RTC\_WEEKDAY\_SATURDAY)  || \(\backslash\)}
+\DoxyCodeLine{                                 ((WEEKDAY) == RTC\_WEEKDAY\_SUNDAY))}
+
+\end{DoxyCode}
+
+
+Definition at line 763 of file stm32f4xx\+\_\+hal\+\_\+rtc.\+h.
+
+\mbox{\label{group___r_t_c___i_s___r_t_c___definitions_gae59c9cfe6f9532ab26d74c25bcbe814b}} 
+\index{RTC Private macros to check input parameters@{RTC Private macros to check input parameters}!IS\_RTC\_YEAR@{IS\_RTC\_YEAR}}
+\index{IS\_RTC\_YEAR@{IS\_RTC\_YEAR}!RTC Private macros to check input parameters@{RTC Private macros to check input parameters}}
+\doxysubsubsection{IS\_RTC\_YEAR}
+{\footnotesize\ttfamily \#define IS\+\_\+\+RTC\+\_\+\+YEAR(\begin{DoxyParamCaption}\item[{}]{YEAR }\end{DoxyParamCaption})~((YEAR) $<$= (uint32\+\_\+t)99U)}
+
+
+
+Definition at line 760 of file stm32f4xx\+\_\+hal\+\_\+rtc.\+h.
+

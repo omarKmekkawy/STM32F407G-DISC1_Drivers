@@ -1,0 +1,178 @@
+\doxysection{system/src/stm32f4-\/hal/stm32f4xx\+\_\+hal\+\_\+sai.c File Reference}
+\label{stm32f4xx__hal__sai_8c}\index{system/src/stm32f4-\/hal/stm32f4xx\_hal\_sai.c@{system/src/stm32f4-\/hal/stm32f4xx\_hal\_sai.c}}
+
+
+SAI HAL module driver. This file provides firmware functions to manage the following functionalities of the Serial Audio Interface (SAI) peripheral\+:  
+
+
+{\ttfamily \#include \char`\"{}stm32f4xx\+\_\+hal.\+h\char`\"{}}\newline
+Include dependency graph for stm32f4xx\+\_\+hal\+\_\+sai.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{stm32f4xx__hal__sai_8c__incl}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Detailed Description}
+SAI HAL module driver. This file provides firmware functions to manage the following functionalities of the Serial Audio Interface (SAI) peripheral\+: 
+
+\begin{DoxyAuthor}{Author}
+MCD Application Team 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+V1.\+5.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+06-\/May-\/2016
+\begin{DoxyItemize}
+\item Initialization/de-\/initialization functions
+\item I/O operation functions
+\item Peripheral Control functions
+\item Peripheral State functions
+\end{DoxyItemize}
+\end{DoxyDate}
+\begin{DoxyVerb}==============================================================================
+                ##### How to use this driver #####
+==============================================================================
+
+[..]
+  The SAI HAL driver can be used as follows:
+
+  (#) Declare a SAI_HandleTypeDef handle structure (eg. SAI_HandleTypeDef hsai).
+  (#) Initialize the SAI low level resources by implementing the HAL_SAI_MspInit() API:
+      (##) Enable the SAI interface clock.
+      (##) SAI pins configuration:
+          (+++) Enable the clock for the SAI GPIOs.
+          (+++) Configure these SAI pins as alternate function pull-up.
+      (##) NVIC configuration if you need to use interrupt process (HAL_SAI_Transmit_IT()
+           and HAL_SAI_Receive_IT() APIs):
+          (+++) Configure the SAI interrupt priority.
+          (+++) Enable the NVIC SAI IRQ handle.
+
+      (##) DMA Configuration if you need to use DMA process (HAL_SAI_Transmit_DMA()
+           and HAL_SAI_Receive_DMA() APIs):
+          (+++) Declare a DMA handle structure for the Tx/Rx stream.
+          (+++) Enable the DMAx interface clock.
+          (+++) Configure the declared DMA handle structure with the required Tx/Rx parameters.
+          (+++) Configure the DMA Tx/Rx Stream.
+          (+++) Associate the initialized DMA handle to the SAI DMA Tx/Rx handle.
+          (+++) Configure the priority and enable the NVIC for the transfer complete interrupt on the
+              DMA Tx/Rx Stream.
+
+  (#) The initialization can be done by two ways
+      (##) Expert mode : Initialize the structures Init, FrameInit and SlotInit and call HAL_SAI_Init().
+      (##) Simplified mode : Initialize the high part of Init Structure and call HAL_SAI_InitProtocol().
+
+[..]
+  (@) The specific SAI interrupts (FIFO request and Overrun underrun interrupt)
+      will be managed using the macros __HAL_SAI_ENABLE_IT() and __HAL_SAI_DISABLE_IT()
+      inside the transmit and receive process.
+
+[..]
+ (@) SAI Clock Source configuration is managed differently depending on the selected
+     STM32F4 devices :
+     (+@) For STM32F446xx devices, the configuration is managed through RCCEx_PeriphCLKConfig()
+          function in the HAL RCC drivers
+     (+@) For STM32F439xx/STM32F437xx/STM32F429xx/STM32F427xx devices, the configuration 
+          is managed within HAL SAI drivers through HAL_SAI_Init() function using
+          ClockSource field of SAI_InitTypeDef structure.
+[..]
+ (@) Make sure that either:
+     (+@) I2S PLL is configured or
+     (+@) SAI PLL is configured or
+     (+@) External clock source is configured after setting correctly
+          the define constant EXTERNAL_CLOCK_VALUE in the stm32f4xx_hal_conf.h file.
+[..]
+  (@) In master Tx mode: enabling the audio block immediately generates the bit clock
+      for the external slaves even if there is no data in the FIFO, However FS signal
+      generation is conditioned by the presence of data in the FIFO.
+
+[..]
+  (@) In master Rx mode: enabling the audio block immediately generates the bit clock
+      and FS signal for the external slaves.
+
+[..]
+  (@) It is mandatory to respect the following conditions in order to avoid bad SAI behavior:
+      (+@) First bit Offset <= (SLOT size - Data size)
+      (+@) Data size <= SLOT size
+      (+@) Number of SLOT x SLOT size = Frame length
+      (+@) The number of slots should be even when SAI_FS_CHANNEL_IDENTIFICATION is selected.
+
+[..]
+  Three operation modes are available within this driver :
+
+  *** Polling mode IO operation ***
+  =================================
+  [..]
+    (+) Send an amount of data in blocking mode using HAL_SAI_Transmit()
+    (+) Receive an amount of data in blocking mode using HAL_SAI_Receive()
+
+  *** Interrupt mode IO operation ***
+  ===================================
+  [..]
+    (+) Send an amount of data in non-blocking mode using HAL_SAI_Transmit_IT()
+    (+) At transmission end of transfer HAL_SAI_TxCpltCallback() is executed and user can
+        add his own code by customization of function pointer HAL_SAI_TxCpltCallback()
+    (+) Receive an amount of data in non-blocking mode using HAL_SAI_Receive_IT()
+    (+) At reception end of transfer HAL_SAI_RxCpltCallback() is executed and user can
+        add his own code by customization of function pointer HAL_SAI_RxCpltCallback()
+    (+) In case of flag error, HAL_SAI_ErrorCallback() function is executed and user can 
+        add his own code by customization of function pointer HAL_SAI_ErrorCallback()
+
+  *** DMA mode IO operation ***
+  =============================
+  [..]
+    (+) Send an amount of data in non-blocking mode (DMA) using HAL_SAI_Transmit_DMA()
+    (+) At transmission end of transfer HAL_SAI_TxCpltCallback() is executed and user can
+        add his own code by customization of function pointer HAL_SAI_TxCpltCallback()
+    (+) Receive an amount of data in non-blocking mode (DMA) using HAL_SAI_Receive_DMA()
+    (+) At reception end of transfer HAL_SAI_RxCpltCallback() is executed and user can
+        add his own code by customization of function pointer HAL_SAI_RxCpltCallback()
+    (+) In case of flag error, HAL_SAI_ErrorCallback() function is executed and user can
+        add his own code by customization of function pointer HAL_SAI_ErrorCallback()
+    (+) Pause the DMA Transfer using HAL_SAI_DMAPause()
+    (+) Resume the DMA Transfer using HAL_SAI_DMAResume()
+    (+) Stop the DMA Transfer using HAL_SAI_DMAStop()
+
+  *** SAI HAL driver additional function list ***
+  ===============================================
+  [..]
+    Below the list the others API available SAI HAL driver :
+
+    (+) HAL_SAI_EnableTxMuteMode(): Enable the mute in tx mode
+    (+) HAL_SAI_DisableTxMuteMode(): Disable the mute in tx mode
+    (+) HAL_SAI_EnableRxMuteMode(): Enable the mute in Rx mode
+    (+) HAL_SAI_DisableRxMuteMode(): Disable the mute in Rx mode
+    (+) HAL_SAI_FlushRxFifo(): Flush the rx fifo.
+    (+) HAL_SAI_Abort(): Abort the current transfer
+
+  *** SAI HAL driver macros list ***
+  ==================================
+  [..]
+    Below the list of most used macros in SAI HAL driver :
+
+    (+) __HAL_SAI_ENABLE(): Enable the SAI peripheral
+    (+) __HAL_SAI_DISABLE(): Disable the SAI peripheral
+    (+) __HAL_SAI_ENABLE_IT(): Enable the specified SAI interrupts
+    (+) __HAL_SAI_DISABLE_IT(): Disable the specified SAI interrupts
+    (+) __HAL_SAI_GET_IT_SOURCE(): Check if the specified SAI interrupt source is
+        enabled or disabled
+    (+) __HAL_SAI_GET_FLAG(): Check whether the specified SAI flag is set or not\end{DoxyVerb}
+
+
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+\doxysubsubsection*{\begin{center}\copyright{} COPYRIGHT(c) 2016 STMicroelectronics\end{center} }
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met\+:
+\begin{DoxyEnumerate}
+\item Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+\item Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+\item Neither the name of STMicroelectronics nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+\end{DoxyEnumerate}
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \char`\"{}\+AS IS\char`\"{} AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. 

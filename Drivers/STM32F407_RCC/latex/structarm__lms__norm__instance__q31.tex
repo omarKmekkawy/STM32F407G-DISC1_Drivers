@@ -1,0 +1,125 @@
+\doxysection{arm\+\_\+lms\+\_\+norm\+\_\+instance\+\_\+q31 Struct Reference}
+\label{structarm__lms__norm__instance__q31}\index{arm\_lms\_norm\_instance\_q31@{arm\_lms\_norm\_instance\_q31}}
+
+
+Instance structure for the Q31 normalized LMS filter.  
+
+
+
+
+{\ttfamily \#include $<$arm\+\_\+math.\+h$>$}
+
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+uint16\+\_\+t \textbf{ num\+Taps}
+\item 
+\textbf{ q31\+\_\+t} $\ast$ \textbf{ p\+State}
+\item 
+\textbf{ q31\+\_\+t} $\ast$ \textbf{ p\+Coeffs}
+\item 
+\textbf{ q31\+\_\+t} \textbf{ mu}
+\item 
+uint8\+\_\+t \textbf{ post\+Shift}
+\item 
+\textbf{ q31\+\_\+t} $\ast$ \textbf{ recip\+Table}
+\item 
+\textbf{ q31\+\_\+t} \textbf{ energy}
+\item 
+\textbf{ q31\+\_\+t} \textbf{ x0}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Instance structure for the Q31 normalized LMS filter. 
+
+Definition at line 4168 of file arm\+\_\+math.\+h.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\label{structarm__lms__norm__instance__q31_a012fee0f71095d2557bb633e73ef7355}} 
+\index{arm\_lms\_norm\_instance\_q31@{arm\_lms\_norm\_instance\_q31}!energy@{energy}}
+\index{energy@{energy}!arm\_lms\_norm\_instance\_q31@{arm\_lms\_norm\_instance\_q31}}
+\doxysubsubsection{energy}
+{\footnotesize\ttfamily \textbf{ q31\+\_\+t} energy}
+
+saves previous frame energy. 
+
+Definition at line 4176 of file arm\+\_\+math.\+h.
+
+\mbox{\label{structarm__lms__norm__instance__q31_a21ab4237a726ea7751f5026d89d2e577}} 
+\index{arm\_lms\_norm\_instance\_q31@{arm\_lms\_norm\_instance\_q31}!mu@{mu}}
+\index{mu@{mu}!arm\_lms\_norm\_instance\_q31@{arm\_lms\_norm\_instance\_q31}}
+\doxysubsubsection{mu}
+{\footnotesize\ttfamily \textbf{ q31\+\_\+t} mu}
+
+step size that controls filter coefficient updates. 
+
+Definition at line 4173 of file arm\+\_\+math.\+h.
+
+\mbox{\label{structarm__lms__norm__instance__q31_a751941891e47f522a7f5375fe8990aac}} 
+\index{arm\_lms\_norm\_instance\_q31@{arm\_lms\_norm\_instance\_q31}!numTaps@{numTaps}}
+\index{numTaps@{numTaps}!arm\_lms\_norm\_instance\_q31@{arm\_lms\_norm\_instance\_q31}}
+\doxysubsubsection{numTaps}
+{\footnotesize\ttfamily uint16\+\_\+t num\+Taps}
+
+number of coefficients in the filter. 
+
+Definition at line 4170 of file arm\+\_\+math.\+h.
+
+\mbox{\label{structarm__lms__norm__instance__q31_a68888e36167d81cb7836db10367a1682}} 
+\index{arm\_lms\_norm\_instance\_q31@{arm\_lms\_norm\_instance\_q31}!pCoeffs@{pCoeffs}}
+\index{pCoeffs@{pCoeffs}!arm\_lms\_norm\_instance\_q31@{arm\_lms\_norm\_instance\_q31}}
+\doxysubsubsection{pCoeffs}
+{\footnotesize\ttfamily \textbf{ q31\+\_\+t}$\ast$ p\+Coeffs}
+
+points to the coefficient array. The array is of length num\+Taps. 
+
+Definition at line 4172 of file arm\+\_\+math.\+h.
+
+\mbox{\label{structarm__lms__norm__instance__q31_a74050e9f36542bd56f4052381a82ae8f}} 
+\index{arm\_lms\_norm\_instance\_q31@{arm\_lms\_norm\_instance\_q31}!postShift@{postShift}}
+\index{postShift@{postShift}!arm\_lms\_norm\_instance\_q31@{arm\_lms\_norm\_instance\_q31}}
+\doxysubsubsection{postShift}
+{\footnotesize\ttfamily uint8\+\_\+t post\+Shift}
+
+bit shift applied to coefficients. 
+
+Definition at line 4174 of file arm\+\_\+math.\+h.
+
+\mbox{\label{structarm__lms__norm__instance__q31_adee4ba3ee8869865af7d8fa08ca913d6}} 
+\index{arm\_lms\_norm\_instance\_q31@{arm\_lms\_norm\_instance\_q31}!pState@{pState}}
+\index{pState@{pState}!arm\_lms\_norm\_instance\_q31@{arm\_lms\_norm\_instance\_q31}}
+\doxysubsubsection{pState}
+{\footnotesize\ttfamily \textbf{ q31\+\_\+t}$\ast$ p\+State}
+
+points to the state variable array. The array is of length num\+Taps+block\+Size-\/1. 
+
+Definition at line 4171 of file arm\+\_\+math.\+h.
+
+\mbox{\label{structarm__lms__norm__instance__q31_aec8a88dd688519b6b1e3c8d2e24bb775}} 
+\index{arm\_lms\_norm\_instance\_q31@{arm\_lms\_norm\_instance\_q31}!recipTable@{recipTable}}
+\index{recipTable@{recipTable}!arm\_lms\_norm\_instance\_q31@{arm\_lms\_norm\_instance\_q31}}
+\doxysubsubsection{recipTable}
+{\footnotesize\ttfamily \textbf{ q31\+\_\+t}$\ast$ recip\+Table}
+
+points to the reciprocal initial value table. 
+
+Definition at line 4175 of file arm\+\_\+math.\+h.
+
+\mbox{\label{structarm__lms__norm__instance__q31_a973b8350a0c7b113a5f002bc0b86bf76}} 
+\index{arm\_lms\_norm\_instance\_q31@{arm\_lms\_norm\_instance\_q31}!x0@{x0}}
+\index{x0@{x0}!arm\_lms\_norm\_instance\_q31@{arm\_lms\_norm\_instance\_q31}}
+\doxysubsubsection{x0}
+{\footnotesize\ttfamily \textbf{ q31\+\_\+t} x0}
+
+saves previous input sample. 
+
+Definition at line 4177 of file arm\+\_\+math.\+h.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+system/include/cmsis/\textbf{ arm\+\_\+math.\+h}\end{DoxyCompactItemize}

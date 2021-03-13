@@ -1,0 +1,198 @@
+\doxysection{src/\+NVIC\+\_\+program.c File Reference}
+\label{_n_v_i_c__program_8c}\index{src/NVIC\_program.c@{src/NVIC\_program.c}}
+{\ttfamily \#include \char`\"{}NONSTD\+\_\+\+TYPES.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}STD\+\_\+\+TYPES.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}BIT\+\_\+\+MATH.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}NVIC\+\_\+interface.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}NVIC\+\_\+private.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}NVIC\+\_\+config.\+h\char`\"{}}\newline
+Include dependency graph for NVIC\+\_\+program.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_n_v_i_c__program_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \textbf{ MNVIC\+\_\+void\+\_\+\+Set\+Priority\+Grouping} (\textbf{ u32} priority\+\_\+grouping)
+\item 
+void \textbf{ MNVIC\+\_\+void\+\_\+\+Enable\+IRQ} (\textbf{ IRQn\+\_\+t} IRQn)
+\item 
+void \textbf{ MNVIC\+\_\+void\+\_\+\+Disable\+IRQ} (\textbf{ IRQn\+\_\+t} IRQn)
+\item 
+\textbf{ u32} \textbf{ MNVIC\+\_\+u32\+\_\+\+Get\+Pending\+IRQ} (\textbf{ IRQn\+\_\+t} IRQn)
+\item 
+void \textbf{ MNVIC\+\_\+void\+\_\+\+Set\+Pending\+IRQ} (\textbf{ IRQn\+\_\+t} IRQn)
+\item 
+void \textbf{ MNVIC\+\_\+void\+\_\+\+Clear\+Pending\+IRQ} (\textbf{ IRQn\+\_\+t} IRQn)
+\item 
+\textbf{ u32} \textbf{ MNVIC\+\_\+u32\+\_\+\+Get\+Active} (\textbf{ IRQn\+\_\+t} IRQn)
+\item 
+void \textbf{ MNVIC\+\_\+void\+\_\+\+Set\+Priority} (\textbf{ IRQn\+\_\+t} IRQn, \textbf{ u32} priority)
+\item 
+\textbf{ u32} \textbf{ MNVIC\+\_\+u32\+\_\+\+Get\+Priority} (\textbf{ IRQn\+\_\+t} IRQn)
+\item 
+void \textbf{ MNVIC\+\_\+void\+\_\+\+System\+Reset} (void)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\label{_n_v_i_c__program_8c_a44dc4a829564fec8c442e0a2596a5c0b}} 
+\index{NVIC\_program.c@{NVIC\_program.c}!MNVIC\_u32\_GetActive@{MNVIC\_u32\_GetActive}}
+\index{MNVIC\_u32\_GetActive@{MNVIC\_u32\_GetActive}!NVIC\_program.c@{NVIC\_program.c}}
+\doxysubsubsection{MNVIC\_u32\_GetActive()}
+{\footnotesize\ttfamily \textbf{ u32} MNVIC\+\_\+u32\+\_\+\+Get\+Active (\begin{DoxyParamCaption}\item[{\textbf{ IRQn\+\_\+t}}]{IRQn }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em IRQn} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 77 of file NVIC\+\_\+program.\+c.
+
+\mbox{\label{_n_v_i_c__program_8c_ada6411814f814a6e2357d859024f889b}} 
+\index{NVIC\_program.c@{NVIC\_program.c}!MNVIC\_u32\_GetPendingIRQ@{MNVIC\_u32\_GetPendingIRQ}}
+\index{MNVIC\_u32\_GetPendingIRQ@{MNVIC\_u32\_GetPendingIRQ}!NVIC\_program.c@{NVIC\_program.c}}
+\doxysubsubsection{MNVIC\_u32\_GetPendingIRQ()}
+{\footnotesize\ttfamily \textbf{ u32} MNVIC\+\_\+u32\+\_\+\+Get\+Pending\+IRQ (\begin{DoxyParamCaption}\item[{\textbf{ IRQn\+\_\+t}}]{IRQn }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em IRQn} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 46 of file NVIC\+\_\+program.\+c.
+
+\mbox{\label{_n_v_i_c__program_8c_a1393887d1834dc89bbac0593809d1cb7}} 
+\index{NVIC\_program.c@{NVIC\_program.c}!MNVIC\_u32\_GetPriority@{MNVIC\_u32\_GetPriority}}
+\index{MNVIC\_u32\_GetPriority@{MNVIC\_u32\_GetPriority}!NVIC\_program.c@{NVIC\_program.c}}
+\doxysubsubsection{MNVIC\_u32\_GetPriority()}
+{\footnotesize\ttfamily \textbf{ u32} MNVIC\+\_\+u32\+\_\+\+Get\+Priority (\begin{DoxyParamCaption}\item[{\textbf{ IRQn\+\_\+t}}]{IRQn }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em IRQn} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 99 of file NVIC\+\_\+program.\+c.
+
+\mbox{\label{_n_v_i_c__program_8c_a1096e48b409457a3ea25df04b7ebdc6f}} 
+\index{NVIC\_program.c@{NVIC\_program.c}!MNVIC\_void\_ClearPendingIRQ@{MNVIC\_void\_ClearPendingIRQ}}
+\index{MNVIC\_void\_ClearPendingIRQ@{MNVIC\_void\_ClearPendingIRQ}!NVIC\_program.c@{NVIC\_program.c}}
+\doxysubsubsection{MNVIC\_void\_ClearPendingIRQ()}
+{\footnotesize\ttfamily void MNVIC\+\_\+void\+\_\+\+Clear\+Pending\+IRQ (\begin{DoxyParamCaption}\item[{\textbf{ IRQn\+\_\+t}}]{IRQn }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em IRQn} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 66 of file NVIC\+\_\+program.\+c.
+
+\mbox{\label{_n_v_i_c__program_8c_afbbaa6acb0bb4f622c852bc5c1d48e60}} 
+\index{NVIC\_program.c@{NVIC\_program.c}!MNVIC\_void\_DisableIRQ@{MNVIC\_void\_DisableIRQ}}
+\index{MNVIC\_void\_DisableIRQ@{MNVIC\_void\_DisableIRQ}!NVIC\_program.c@{NVIC\_program.c}}
+\doxysubsubsection{MNVIC\_void\_DisableIRQ()}
+{\footnotesize\ttfamily void MNVIC\+\_\+void\+\_\+\+Disable\+IRQ (\begin{DoxyParamCaption}\item[{\textbf{ IRQn\+\_\+t}}]{IRQn }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em IRQn} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 35 of file NVIC\+\_\+program.\+c.
+
+\mbox{\label{_n_v_i_c__program_8c_a546864559dbefb13700d5796b4791880}} 
+\index{NVIC\_program.c@{NVIC\_program.c}!MNVIC\_void\_EnableIRQ@{MNVIC\_void\_EnableIRQ}}
+\index{MNVIC\_void\_EnableIRQ@{MNVIC\_void\_EnableIRQ}!NVIC\_program.c@{NVIC\_program.c}}
+\doxysubsubsection{MNVIC\_void\_EnableIRQ()}
+{\footnotesize\ttfamily void MNVIC\+\_\+void\+\_\+\+Enable\+IRQ (\begin{DoxyParamCaption}\item[{\textbf{ IRQn\+\_\+t}}]{IRQn }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em IRQn} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 25 of file NVIC\+\_\+program.\+c.
+
+\mbox{\label{_n_v_i_c__program_8c_a8da954aff35d4c1113fae8f6995acedd}} 
+\index{NVIC\_program.c@{NVIC\_program.c}!MNVIC\_void\_SetPendingIRQ@{MNVIC\_void\_SetPendingIRQ}}
+\index{MNVIC\_void\_SetPendingIRQ@{MNVIC\_void\_SetPendingIRQ}!NVIC\_program.c@{NVIC\_program.c}}
+\doxysubsubsection{MNVIC\_void\_SetPendingIRQ()}
+{\footnotesize\ttfamily void MNVIC\+\_\+void\+\_\+\+Set\+Pending\+IRQ (\begin{DoxyParamCaption}\item[{\textbf{ IRQn\+\_\+t}}]{IRQn }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em IRQn} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 56 of file NVIC\+\_\+program.\+c.
+
+\mbox{\label{_n_v_i_c__program_8c_acc7b93a7b27271331fbba48284b0c8a5}} 
+\index{NVIC\_program.c@{NVIC\_program.c}!MNVIC\_void\_SetPriority@{MNVIC\_void\_SetPriority}}
+\index{MNVIC\_void\_SetPriority@{MNVIC\_void\_SetPriority}!NVIC\_program.c@{NVIC\_program.c}}
+\doxysubsubsection{MNVIC\_void\_SetPriority()}
+{\footnotesize\ttfamily void MNVIC\+\_\+void\+\_\+\+Set\+Priority (\begin{DoxyParamCaption}\item[{\textbf{ IRQn\+\_\+t}}]{IRQn,  }\item[{\textbf{ u32}}]{priority }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em IRQn} & \\
+\hline
+{\em priority} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 88 of file NVIC\+\_\+program.\+c.
+
+\mbox{\label{_n_v_i_c__program_8c_a8c1670cb6769be6e42884a2004365933}} 
+\index{NVIC\_program.c@{NVIC\_program.c}!MNVIC\_void\_SetPriorityGrouping@{MNVIC\_void\_SetPriorityGrouping}}
+\index{MNVIC\_void\_SetPriorityGrouping@{MNVIC\_void\_SetPriorityGrouping}!NVIC\_program.c@{NVIC\_program.c}}
+\doxysubsubsection{MNVIC\_void\_SetPriorityGrouping()}
+{\footnotesize\ttfamily void MNVIC\+\_\+void\+\_\+\+Set\+Priority\+Grouping (\begin{DoxyParamCaption}\item[{\textbf{ u32}}]{priority\+\_\+grouping }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em priority\+\_\+grouping} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 15 of file NVIC\+\_\+program.\+c.
+
+\mbox{\label{_n_v_i_c__program_8c_abfcdb747afc2b48bb328992d71453f24}} 
+\index{NVIC\_program.c@{NVIC\_program.c}!MNVIC\_void\_SystemReset@{MNVIC\_void\_SystemReset}}
+\index{MNVIC\_void\_SystemReset@{MNVIC\_void\_SystemReset}!NVIC\_program.c@{NVIC\_program.c}}
+\doxysubsubsection{MNVIC\_void\_SystemReset()}
+{\footnotesize\ttfamily void MNVIC\+\_\+void\+\_\+\+System\+Reset (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 108 of file NVIC\+\_\+program.\+c.
+

@@ -1,0 +1,153 @@
+\doxysection{IRDA Private Macros}
+\label{group___i_r_d_a___private___macros}\index{IRDA Private Macros@{IRDA Private Macros}}
+Collaboration diagram for IRDA Private Macros\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=262pt]{group___i_r_d_a___private___macros}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \textbf{ IS\+\_\+\+IRDA\+\_\+\+WORD\+\_\+\+LENGTH}(LENGTH)
+\item 
+\#define \textbf{ IS\+\_\+\+IRDA\+\_\+\+PARITY}(PARITY)
+\item 
+\#define \textbf{ IS\+\_\+\+IRDA\+\_\+\+MODE}(MODE)~((((MODE) \& (uint32\+\_\+t)0x0000\+FFF3U) == 0x00U) \&\& ((MODE) != (uint32\+\_\+t)0x00000000U))
+\item 
+\#define \textbf{ IS\+\_\+\+IRDA\+\_\+\+POWERMODE}(MODE)
+\item 
+\#define \textbf{ IS\+\_\+\+IRDA\+\_\+\+BAUDRATE}(BAUDRATE)~((BAUDRATE) $<$ 115201U)
+\item 
+\#define \textbf{ IRDA\+\_\+\+DIV}(\+\_\+\+PCLK\+\_\+,  \+\_\+\+BAUD\+\_\+)~(((\+\_\+\+PCLK\+\_\+)$\ast$25U)/(4U$\ast$(\+\_\+\+BAUD\+\_\+)))
+\item 
+\#define \textbf{ IRDA\+\_\+\+DIVMANT}(\+\_\+\+PCLK\+\_\+,  \+\_\+\+BAUD\+\_\+)~(\textbf{ IRDA\+\_\+\+DIV}((\+\_\+\+PCLK\+\_\+), (\+\_\+\+BAUD\+\_\+))/100U)
+\item 
+\#define \textbf{ IRDA\+\_\+\+DIVFRAQ}(\+\_\+\+PCLK\+\_\+,  \+\_\+\+BAUD\+\_\+)~(((\textbf{ IRDA\+\_\+\+DIV}((\+\_\+\+PCLK\+\_\+), (\+\_\+\+BAUD\+\_\+)) -\/ (\textbf{ IRDA\+\_\+\+DIVMANT}((\+\_\+\+PCLK\+\_\+), (\+\_\+\+BAUD\+\_\+)) $\ast$ 100U)) $\ast$ 16U + 50U) / 100U)
+\item 
+\#define \textbf{ IRDA\+\_\+\+BRR}(\+\_\+\+PCLK\+\_\+,  \+\_\+\+BAUD\+\_\+)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\label{group___i_r_d_a___private___macros_ga5694b0652cf8290331bd421ee7740859}} 
+\index{IRDA Private Macros@{IRDA Private Macros}!IRDA\_BRR@{IRDA\_BRR}}
+\index{IRDA\_BRR@{IRDA\_BRR}!IRDA Private Macros@{IRDA Private Macros}}
+\doxysubsubsection{IRDA\_BRR}
+{\footnotesize\ttfamily \#define IRDA\+\_\+\+BRR(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+PCLK\+\_\+,  }\item[{}]{\+\_\+\+BAUD\+\_\+ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                             (((IRDA\_DIVMANT((\_PCLK\_), (\_BAUD\_)) << 4U) + \(\backslash\)}
+\DoxyCodeLine{                                             (IRDA\_DIVFRAQ((\_PCLK\_), (\_BAUD\_)) \& 0xF0U)) + \(\backslash\)}
+\DoxyCodeLine{                                             (IRDA\_DIVFRAQ((\_PCLK\_), (\_BAUD\_)) \& 0x0FU))}
+
+\end{DoxyCode}
+
+
+Definition at line 563 of file stm32f4xx\+\_\+hal\+\_\+irda.\+h.
+
+\mbox{\label{group___i_r_d_a___private___macros_gae414cb88195361652fbda5a33bb730b9}} 
+\index{IRDA Private Macros@{IRDA Private Macros}!IRDA\_DIV@{IRDA\_DIV}}
+\index{IRDA\_DIV@{IRDA\_DIV}!IRDA Private Macros@{IRDA Private Macros}}
+\doxysubsubsection{IRDA\_DIV}
+{\footnotesize\ttfamily \#define IRDA\+\_\+\+DIV(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+PCLK\+\_\+,  }\item[{}]{\+\_\+\+BAUD\+\_\+ }\end{DoxyParamCaption})~(((\+\_\+\+PCLK\+\_\+)$\ast$25U)/(4U$\ast$(\+\_\+\+BAUD\+\_\+)))}
+
+
+
+Definition at line 558 of file stm32f4xx\+\_\+hal\+\_\+irda.\+h.
+
+\mbox{\label{group___i_r_d_a___private___macros_ga3245c6313dd792d63e20ca702f6f2a58}} 
+\index{IRDA Private Macros@{IRDA Private Macros}!IRDA\_DIVFRAQ@{IRDA\_DIVFRAQ}}
+\index{IRDA\_DIVFRAQ@{IRDA\_DIVFRAQ}!IRDA Private Macros@{IRDA Private Macros}}
+\doxysubsubsection{IRDA\_DIVFRAQ}
+{\footnotesize\ttfamily \#define IRDA\+\_\+\+DIVFRAQ(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+PCLK\+\_\+,  }\item[{}]{\+\_\+\+BAUD\+\_\+ }\end{DoxyParamCaption})~(((\textbf{ IRDA\+\_\+\+DIV}((\+\_\+\+PCLK\+\_\+), (\+\_\+\+BAUD\+\_\+)) -\/ (\textbf{ IRDA\+\_\+\+DIVMANT}((\+\_\+\+PCLK\+\_\+), (\+\_\+\+BAUD\+\_\+)) $\ast$ 100U)) $\ast$ 16U + 50U) / 100U)}
+
+
+
+Definition at line 560 of file stm32f4xx\+\_\+hal\+\_\+irda.\+h.
+
+\mbox{\label{group___i_r_d_a___private___macros_ga3bb3188956e72958105fc4bb8b663370}} 
+\index{IRDA Private Macros@{IRDA Private Macros}!IRDA\_DIVMANT@{IRDA\_DIVMANT}}
+\index{IRDA\_DIVMANT@{IRDA\_DIVMANT}!IRDA Private Macros@{IRDA Private Macros}}
+\doxysubsubsection{IRDA\_DIVMANT}
+{\footnotesize\ttfamily \#define IRDA\+\_\+\+DIVMANT(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+PCLK\+\_\+,  }\item[{}]{\+\_\+\+BAUD\+\_\+ }\end{DoxyParamCaption})~(\textbf{ IRDA\+\_\+\+DIV}((\+\_\+\+PCLK\+\_\+), (\+\_\+\+BAUD\+\_\+))/100U)}
+
+
+
+Definition at line 559 of file stm32f4xx\+\_\+hal\+\_\+irda.\+h.
+
+\mbox{\label{group___i_r_d_a___private___macros_ga5816332e344ead2dcd06a1f0ed59ae27}} 
+\index{IRDA Private Macros@{IRDA Private Macros}!IS\_IRDA\_BAUDRATE@{IS\_IRDA\_BAUDRATE}}
+\index{IS\_IRDA\_BAUDRATE@{IS\_IRDA\_BAUDRATE}!IRDA Private Macros@{IRDA Private Macros}}
+\doxysubsubsection{IS\_IRDA\_BAUDRATE}
+{\footnotesize\ttfamily \#define IS\+\_\+\+IRDA\+\_\+\+BAUDRATE(\begin{DoxyParamCaption}\item[{}]{BAUDRATE }\end{DoxyParamCaption})~((BAUDRATE) $<$ 115201U)}
+
+
+
+Definition at line 556 of file stm32f4xx\+\_\+hal\+\_\+irda.\+h.
+
+\mbox{\label{group___i_r_d_a___private___macros_ga0374a7ffe9d35087bc02ccdac0953a1d}} 
+\index{IRDA Private Macros@{IRDA Private Macros}!IS\_IRDA\_MODE@{IS\_IRDA\_MODE}}
+\index{IS\_IRDA\_MODE@{IS\_IRDA\_MODE}!IRDA Private Macros@{IRDA Private Macros}}
+\doxysubsubsection{IS\_IRDA\_MODE}
+{\footnotesize\ttfamily \#define IS\+\_\+\+IRDA\+\_\+\+MODE(\begin{DoxyParamCaption}\item[{}]{MODE }\end{DoxyParamCaption})~((((MODE) \& (uint32\+\_\+t)0x0000\+FFF3U) == 0x00U) \&\& ((MODE) != (uint32\+\_\+t)0x00000000U))}
+
+
+
+Definition at line 553 of file stm32f4xx\+\_\+hal\+\_\+irda.\+h.
+
+\mbox{\label{group___i_r_d_a___private___macros_ga34e19b19860989a491f71503e2da6345}} 
+\index{IRDA Private Macros@{IRDA Private Macros}!IS\_IRDA\_PARITY@{IS\_IRDA\_PARITY}}
+\index{IS\_IRDA\_PARITY@{IS\_IRDA\_PARITY}!IRDA Private Macros@{IRDA Private Macros}}
+\doxysubsubsection{IS\_IRDA\_PARITY}
+{\footnotesize\ttfamily \#define IS\+\_\+\+IRDA\+\_\+\+PARITY(\begin{DoxyParamCaption}\item[{}]{PARITY }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                (((PARITY) == IRDA\_PARITY\_NONE) || \(\backslash\)}
+\DoxyCodeLine{                                ((PARITY) == IRDA\_PARITY\_EVEN) || \(\backslash\)}
+\DoxyCodeLine{                                ((PARITY) == IRDA\_PARITY\_ODD))}
+
+\end{DoxyCode}
+
+
+Definition at line 550 of file stm32f4xx\+\_\+hal\+\_\+irda.\+h.
+
+\mbox{\label{group___i_r_d_a___private___macros_gaf4f91e06bf94c98a099156b035c4f6b0}} 
+\index{IRDA Private Macros@{IRDA Private Macros}!IS\_IRDA\_POWERMODE@{IS\_IRDA\_POWERMODE}}
+\index{IS\_IRDA\_POWERMODE@{IS\_IRDA\_POWERMODE}!IRDA Private Macros@{IRDA Private Macros}}
+\doxysubsubsection{IS\_IRDA\_POWERMODE}
+{\footnotesize\ttfamily \#define IS\+\_\+\+IRDA\+\_\+\+POWERMODE(\begin{DoxyParamCaption}\item[{}]{MODE }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                 (((MODE) == IRDA\_POWERMODE\_LOWPOWER) || \(\backslash\)}
+\DoxyCodeLine{                                 ((MODE) == IRDA\_POWERMODE\_NORMAL))}
+
+\end{DoxyCode}
+
+
+Definition at line 554 of file stm32f4xx\+\_\+hal\+\_\+irda.\+h.
+
+\mbox{\label{group___i_r_d_a___private___macros_gac5f8051e9bbc581a294dfbca6d805542}} 
+\index{IRDA Private Macros@{IRDA Private Macros}!IS\_IRDA\_WORD\_LENGTH@{IS\_IRDA\_WORD\_LENGTH}}
+\index{IS\_IRDA\_WORD\_LENGTH@{IS\_IRDA\_WORD\_LENGTH}!IRDA Private Macros@{IRDA Private Macros}}
+\doxysubsubsection{IS\_IRDA\_WORD\_LENGTH}
+{\footnotesize\ttfamily \#define IS\+\_\+\+IRDA\+\_\+\+WORD\+\_\+\+LENGTH(\begin{DoxyParamCaption}\item[{}]{LENGTH }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                     (((LENGTH) == IRDA\_WORDLENGTH\_8B) || \(\backslash\)}
+\DoxyCodeLine{                                     ((LENGTH) == IRDA\_WORDLENGTH\_9B))}
+
+\end{DoxyCode}
+
+
+Definition at line 548 of file stm32f4xx\+\_\+hal\+\_\+irda.\+h.
+

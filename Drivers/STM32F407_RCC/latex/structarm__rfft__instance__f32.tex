@@ -1,0 +1,135 @@
+\doxysection{arm\+\_\+rfft\+\_\+instance\+\_\+f32 Struct Reference}
+\label{structarm__rfft__instance__f32}\index{arm\_rfft\_instance\_f32@{arm\_rfft\_instance\_f32}}
+
+
+Instance structure for the floating-\/point RFFT/\+RIFFT function.  
+
+
+
+
+{\ttfamily \#include $<$arm\+\_\+math.\+h$>$}
+
+
+
+Collaboration diagram for arm\+\_\+rfft\+\_\+instance\+\_\+f32\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=223pt]{structarm__rfft__instance__f32__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \textbf{ fft\+Len\+Real}
+\item 
+uint16\+\_\+t \textbf{ fft\+Len\+By2}
+\item 
+uint8\+\_\+t \textbf{ ifft\+FlagR}
+\item 
+uint8\+\_\+t \textbf{ bit\+Reverse\+FlagR}
+\item 
+uint32\+\_\+t \textbf{ twid\+Coef\+RModifier}
+\item 
+\textbf{ float32\+\_\+t} $\ast$ \textbf{ p\+Twiddle\+AReal}
+\item 
+\textbf{ float32\+\_\+t} $\ast$ \textbf{ p\+Twiddle\+BReal}
+\item 
+\textbf{ arm\+\_\+cfft\+\_\+radix4\+\_\+instance\+\_\+f32} $\ast$ \textbf{ p\+Cfft}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Instance structure for the floating-\/point RFFT/\+RIFFT function. 
+
+Definition at line 2208 of file arm\+\_\+math.\+h.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\label{structarm__rfft__instance__f32_ad56ec2425e2422108b8767b43d944591}} 
+\index{arm\_rfft\_instance\_f32@{arm\_rfft\_instance\_f32}!bitReverseFlagR@{bitReverseFlagR}}
+\index{bitReverseFlagR@{bitReverseFlagR}!arm\_rfft\_instance\_f32@{arm\_rfft\_instance\_f32}}
+\doxysubsubsection{bitReverseFlagR}
+{\footnotesize\ttfamily uint8\+\_\+t bit\+Reverse\+FlagR}
+
+flag that enables (bit\+Reverse\+FlagR=1) or disables (bit\+Reverse\+FlagR=0) bit reversal of output. 
+
+Definition at line 2213 of file arm\+\_\+math.\+h.
+
+\mbox{\label{structarm__rfft__instance__f32_a206b7cd92c35fde3432e5b9a0650c42c}} 
+\index{arm\_rfft\_instance\_f32@{arm\_rfft\_instance\_f32}!fftLenBy2@{fftLenBy2}}
+\index{fftLenBy2@{fftLenBy2}!arm\_rfft\_instance\_f32@{arm\_rfft\_instance\_f32}}
+\doxysubsubsection{fftLenBy2}
+{\footnotesize\ttfamily uint16\+\_\+t fft\+Len\+By2}
+
+length of the complex FFT. 
+
+Definition at line 2211 of file arm\+\_\+math.\+h.
+
+\mbox{\label{structarm__rfft__instance__f32_adf0d4604cf5546075d9d4cf122d6c986}} 
+\index{arm\_rfft\_instance\_f32@{arm\_rfft\_instance\_f32}!fftLenReal@{fftLenReal}}
+\index{fftLenReal@{fftLenReal}!arm\_rfft\_instance\_f32@{arm\_rfft\_instance\_f32}}
+\doxysubsubsection{fftLenReal}
+{\footnotesize\ttfamily uint32\+\_\+t fft\+Len\+Real}
+
+length of the real FFT. 
+
+Definition at line 2210 of file arm\+\_\+math.\+h.
+
+\mbox{\label{structarm__rfft__instance__f32_a787d72055c89e4d62b188d6bd646341c}} 
+\index{arm\_rfft\_instance\_f32@{arm\_rfft\_instance\_f32}!ifftFlagR@{ifftFlagR}}
+\index{ifftFlagR@{ifftFlagR}!arm\_rfft\_instance\_f32@{arm\_rfft\_instance\_f32}}
+\doxysubsubsection{ifftFlagR}
+{\footnotesize\ttfamily uint8\+\_\+t ifft\+FlagR}
+
+flag that selects forward (ifft\+FlagR=0) or inverse (ifft\+FlagR=1) transform. 
+
+Definition at line 2212 of file arm\+\_\+math.\+h.
+
+\mbox{\label{structarm__rfft__instance__f32_ab7bd4d374a1780dea50efd3e7ac220be}} 
+\index{arm\_rfft\_instance\_f32@{arm\_rfft\_instance\_f32}!pCfft@{pCfft}}
+\index{pCfft@{pCfft}!arm\_rfft\_instance\_f32@{arm\_rfft\_instance\_f32}}
+\doxysubsubsection{pCfft}
+{\footnotesize\ttfamily \textbf{ arm\+\_\+cfft\+\_\+radix4\+\_\+instance\+\_\+f32}$\ast$ p\+Cfft}
+
+points to the complex FFT instance. 
+
+Definition at line 2217 of file arm\+\_\+math.\+h.
+
+\mbox{\label{structarm__rfft__instance__f32_a1fb731395d060f9999c91c242b3e8a61}} 
+\index{arm\_rfft\_instance\_f32@{arm\_rfft\_instance\_f32}!pTwiddleAReal@{pTwiddleAReal}}
+\index{pTwiddleAReal@{pTwiddleAReal}!arm\_rfft\_instance\_f32@{arm\_rfft\_instance\_f32}}
+\doxysubsubsection{pTwiddleAReal}
+{\footnotesize\ttfamily \textbf{ float32\+\_\+t}$\ast$ p\+Twiddle\+AReal}
+
+points to the real twiddle factor table. 
+
+Definition at line 2215 of file arm\+\_\+math.\+h.
+
+\mbox{\label{structarm__rfft__instance__f32_ab13a458744ac79bb23784351e8002382}} 
+\index{arm\_rfft\_instance\_f32@{arm\_rfft\_instance\_f32}!pTwiddleBReal@{pTwiddleBReal}}
+\index{pTwiddleBReal@{pTwiddleBReal}!arm\_rfft\_instance\_f32@{arm\_rfft\_instance\_f32}}
+\doxysubsubsection{pTwiddleBReal}
+{\footnotesize\ttfamily \textbf{ float32\+\_\+t}$\ast$ p\+Twiddle\+BReal}
+
+points to the imag twiddle factor table. 
+
+Definition at line 2216 of file arm\+\_\+math.\+h.
+
+\mbox{\label{structarm__rfft__instance__f32_a5b06f7f76c018db993fe6acc5708c589}} 
+\index{arm\_rfft\_instance\_f32@{arm\_rfft\_instance\_f32}!twidCoefRModifier@{twidCoefRModifier}}
+\index{twidCoefRModifier@{twidCoefRModifier}!arm\_rfft\_instance\_f32@{arm\_rfft\_instance\_f32}}
+\doxysubsubsection{twidCoefRModifier}
+{\footnotesize\ttfamily uint32\+\_\+t twid\+Coef\+RModifier}
+
+twiddle coefficient modifier that supports different size FFTs with the same twiddle factor table. 
+
+Definition at line 2214 of file arm\+\_\+math.\+h.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+system/include/cmsis/\textbf{ arm\+\_\+math.\+h}\end{DoxyCompactItemize}

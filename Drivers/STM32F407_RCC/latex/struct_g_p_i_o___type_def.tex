@@ -1,0 +1,266 @@
+\doxysection{GPIO\+\_\+\+Type\+Def Struct Reference}
+\label{struct_g_p_i_o___type_def}\index{GPIO\_TypeDef@{GPIO\_TypeDef}}
+
+
+General Purpose I/O.  
+
+
+
+
+{\ttfamily \#include $<$DIO\+\_\+interface.\+h$>$}
+
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ volatile} \textbf{ u32} \textbf{ MODER}
+\item 
+\textbf{ volatile} \textbf{ u32} \textbf{ OTYPER}
+\item 
+\textbf{ volatile} \textbf{ u32} \textbf{ OSPEEDER}
+\item 
+\textbf{ volatile} \textbf{ u32} \textbf{ PUPDR}
+\item 
+\textbf{ volatile} \textbf{ u32} \textbf{ IDR}
+\item 
+\textbf{ volatile} \textbf{ u32} \textbf{ ODR}
+\item 
+\textbf{ volatile} \textbf{ u32} \textbf{ BSRR}
+\item 
+\textbf{ volatile} \textbf{ u32} \textbf{ LCKR}
+\item 
+\textbf{ volatile} \textbf{ u32} \textbf{ AFRL}
+\item 
+\textbf{ volatile} \textbf{ u32} \textbf{ AFRH}
+\item 
+\textbf{ \+\_\+\+\_\+\+IO} uint32\+\_\+t \textbf{ MODER}
+\item 
+\textbf{ \+\_\+\+\_\+\+IO} uint32\+\_\+t \textbf{ OTYPER}
+\item 
+\textbf{ \+\_\+\+\_\+\+IO} uint32\+\_\+t \textbf{ OSPEEDR}
+\item 
+\textbf{ \+\_\+\+\_\+\+IO} uint32\+\_\+t \textbf{ PUPDR}
+\item 
+\textbf{ \+\_\+\+\_\+\+IO} uint32\+\_\+t \textbf{ IDR}
+\item 
+\textbf{ \+\_\+\+\_\+\+IO} uint32\+\_\+t \textbf{ ODR}
+\item 
+\textbf{ \+\_\+\+\_\+\+IO} uint32\+\_\+t \textbf{ BSRR}
+\item 
+\textbf{ \+\_\+\+\_\+\+IO} uint32\+\_\+t \textbf{ LCKR}
+\item 
+\textbf{ \+\_\+\+\_\+\+IO} uint32\+\_\+t \textbf{ AFR} [2]
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+General Purpose I/O. 
+
+Definition at line 48 of file DIO\+\_\+interface.\+h.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\label{struct_g_p_i_o___type_def_ab67c1158c04450d19ad483dcd2192e43}} 
+\index{GPIO\_TypeDef@{GPIO\_TypeDef}!AFR@{AFR}}
+\index{AFR@{AFR}!GPIO\_TypeDef@{GPIO\_TypeDef}}
+\doxysubsubsection{AFR}
+{\footnotesize\ttfamily \textbf{ \+\_\+\+\_\+\+IO} uint32\+\_\+t AFR[2]}
+
+GPIO alternate function registers, Address offset\+: 0x20-\/0x24 
+
+Definition at line 554 of file stm32f407xx.\+h.
+
+\mbox{\label{struct_g_p_i_o___type_def_a063234a89d2099841b0fd1e91b68593e}} 
+\index{GPIO\_TypeDef@{GPIO\_TypeDef}!AFRH@{AFRH}}
+\index{AFRH@{AFRH}!GPIO\_TypeDef@{GPIO\_TypeDef}}
+\doxysubsubsection{AFRH}
+{\footnotesize\ttfamily \textbf{ volatile} \textbf{ u32} AFRH}
+
+
+
+Definition at line 58 of file DIO\+\_\+interface.\+h.
+
+\mbox{\label{struct_g_p_i_o___type_def_a58052bc846376ed2111c6ce7d2d8d45d}} 
+\index{GPIO\_TypeDef@{GPIO\_TypeDef}!AFRL@{AFRL}}
+\index{AFRL@{AFRL}!GPIO\_TypeDef@{GPIO\_TypeDef}}
+\doxysubsubsection{AFRL}
+{\footnotesize\ttfamily \textbf{ volatile} \textbf{ u32} AFRL}
+
+
+
+Definition at line 57 of file DIO\+\_\+interface.\+h.
+
+\mbox{\label{struct_g_p_i_o___type_def_a65cb6dcece523936f5a4c153575a9e93}} 
+\index{GPIO\_TypeDef@{GPIO\_TypeDef}!BSRR@{BSRR}}
+\index{BSRR@{BSRR}!GPIO\_TypeDef@{GPIO\_TypeDef}}
+\doxysubsubsection{BSRR\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \textbf{ volatile} \textbf{ u32} BSRR}
+
+
+
+Definition at line 55 of file DIO\+\_\+interface.\+h.
+
+\mbox{\label{struct_g_p_i_o___type_def_ac25dd6b9e3d55e17589195b461c5ec80}} 
+\index{GPIO\_TypeDef@{GPIO\_TypeDef}!BSRR@{BSRR}}
+\index{BSRR@{BSRR}!GPIO\_TypeDef@{GPIO\_TypeDef}}
+\doxysubsubsection{BSRR\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \textbf{ \+\_\+\+\_\+\+IO} uint32\+\_\+t BSRR}
+
+GPIO port bit set/reset register, Address offset\+: 0x18 ~\newline
+ 
+
+Definition at line 552 of file stm32f407xx.\+h.
+
+\mbox{\label{struct_g_p_i_o___type_def_af6ea15e86759b39a730be469536c9fc4}} 
+\index{GPIO\_TypeDef@{GPIO\_TypeDef}!IDR@{IDR}}
+\index{IDR@{IDR}!GPIO\_TypeDef@{GPIO\_TypeDef}}
+\doxysubsubsection{IDR\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \textbf{ volatile} \textbf{ u32} IDR}
+
+
+
+Definition at line 53 of file DIO\+\_\+interface.\+h.
+
+\mbox{\label{struct_g_p_i_o___type_def_a328d2fe9ef1d513c3a97d30f98f0047c}} 
+\index{GPIO\_TypeDef@{GPIO\_TypeDef}!IDR@{IDR}}
+\index{IDR@{IDR}!GPIO\_TypeDef@{GPIO\_TypeDef}}
+\doxysubsubsection{IDR\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \textbf{ \+\_\+\+\_\+\+IO} uint32\+\_\+t IDR}
+
+GPIO port input data register, Address offset\+: 0x10 ~\newline
+ 
+
+Definition at line 550 of file stm32f407xx.\+h.
+
+\mbox{\label{struct_g_p_i_o___type_def_a84db198462e8721f5314834303032a00}} 
+\index{GPIO\_TypeDef@{GPIO\_TypeDef}!LCKR@{LCKR}}
+\index{LCKR@{LCKR}!GPIO\_TypeDef@{GPIO\_TypeDef}}
+\doxysubsubsection{LCKR\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \textbf{ volatile} \textbf{ u32} LCKR}
+
+
+
+Definition at line 56 of file DIO\+\_\+interface.\+h.
+
+\mbox{\label{struct_g_p_i_o___type_def_a2612a0f4b3fbdbb6293f6dc70105e190}} 
+\index{GPIO\_TypeDef@{GPIO\_TypeDef}!LCKR@{LCKR}}
+\index{LCKR@{LCKR}!GPIO\_TypeDef@{GPIO\_TypeDef}}
+\doxysubsubsection{LCKR\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \textbf{ \+\_\+\+\_\+\+IO} uint32\+\_\+t LCKR}
+
+GPIO port configuration lock register, Address offset\+: 0x1C ~\newline
+ 
+
+Definition at line 553 of file stm32f407xx.\+h.
+
+\mbox{\label{struct_g_p_i_o___type_def_aa1fb824267c0cec770e39987aa91d89e}} 
+\index{GPIO\_TypeDef@{GPIO\_TypeDef}!MODER@{MODER}}
+\index{MODER@{MODER}!GPIO\_TypeDef@{GPIO\_TypeDef}}
+\doxysubsubsection{MODER\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \textbf{ volatile} \textbf{ u32} MODER}
+
+
+
+Definition at line 49 of file DIO\+\_\+interface.\+h.
+
+\mbox{\label{struct_g_p_i_o___type_def_a2b671a94c63a612f81e0e9de8152d01c}} 
+\index{GPIO\_TypeDef@{GPIO\_TypeDef}!MODER@{MODER}}
+\index{MODER@{MODER}!GPIO\_TypeDef@{GPIO\_TypeDef}}
+\doxysubsubsection{MODER\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \textbf{ \+\_\+\+\_\+\+IO} uint32\+\_\+t MODER}
+
+GPIO port mode register, Address offset\+: 0x00 ~\newline
+ 
+
+Definition at line 546 of file stm32f407xx.\+h.
+
+\mbox{\label{struct_g_p_i_o___type_def_a655aff9c14195267fef34e70a0db3031}} 
+\index{GPIO\_TypeDef@{GPIO\_TypeDef}!ODR@{ODR}}
+\index{ODR@{ODR}!GPIO\_TypeDef@{GPIO\_TypeDef}}
+\doxysubsubsection{ODR\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \textbf{ volatile} \textbf{ u32} ODR}
+
+
+
+Definition at line 54 of file DIO\+\_\+interface.\+h.
+
+\mbox{\label{struct_g_p_i_o___type_def_abff7fffd2b5a718715a130006590c75c}} 
+\index{GPIO\_TypeDef@{GPIO\_TypeDef}!ODR@{ODR}}
+\index{ODR@{ODR}!GPIO\_TypeDef@{GPIO\_TypeDef}}
+\doxysubsubsection{ODR\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \textbf{ \+\_\+\+\_\+\+IO} uint32\+\_\+t ODR}
+
+GPIO port output data register, Address offset\+: 0x14 ~\newline
+ 
+
+Definition at line 551 of file stm32f407xx.\+h.
+
+\mbox{\label{struct_g_p_i_o___type_def_a076b454bebeec0602675410beea81e62}} 
+\index{GPIO\_TypeDef@{GPIO\_TypeDef}!OSPEEDER@{OSPEEDER}}
+\index{OSPEEDER@{OSPEEDER}!GPIO\_TypeDef@{GPIO\_TypeDef}}
+\doxysubsubsection{OSPEEDER}
+{\footnotesize\ttfamily \textbf{ volatile} \textbf{ u32} OSPEEDER}
+
+
+
+Definition at line 51 of file DIO\+\_\+interface.\+h.
+
+\mbox{\label{struct_g_p_i_o___type_def_a328d16cc6213783ede54e4059ffd50a3}} 
+\index{GPIO\_TypeDef@{GPIO\_TypeDef}!OSPEEDR@{OSPEEDR}}
+\index{OSPEEDR@{OSPEEDR}!GPIO\_TypeDef@{GPIO\_TypeDef}}
+\doxysubsubsection{OSPEEDR}
+{\footnotesize\ttfamily \textbf{ \+\_\+\+\_\+\+IO} uint32\+\_\+t OSPEEDR}
+
+GPIO port output speed register, Address offset\+: 0x08 ~\newline
+ 
+
+Definition at line 548 of file stm32f407xx.\+h.
+
+\mbox{\label{struct_g_p_i_o___type_def_a3b9cad87b20ce43a972a3b712bd10013}} 
+\index{GPIO\_TypeDef@{GPIO\_TypeDef}!OTYPER@{OTYPER}}
+\index{OTYPER@{OTYPER}!GPIO\_TypeDef@{GPIO\_TypeDef}}
+\doxysubsubsection{OTYPER\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \textbf{ volatile} \textbf{ u32} OTYPER}
+
+
+
+Definition at line 50 of file DIO\+\_\+interface.\+h.
+
+\mbox{\label{struct_g_p_i_o___type_def_a9543592bda60cb5261075594bdeedac9}} 
+\index{GPIO\_TypeDef@{GPIO\_TypeDef}!OTYPER@{OTYPER}}
+\index{OTYPER@{OTYPER}!GPIO\_TypeDef@{GPIO\_TypeDef}}
+\doxysubsubsection{OTYPER\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \textbf{ \+\_\+\+\_\+\+IO} uint32\+\_\+t OTYPER}
+
+GPIO port output type register, Address offset\+: 0x04 ~\newline
+ 
+
+Definition at line 547 of file stm32f407xx.\+h.
+
+\mbox{\label{struct_g_p_i_o___type_def_aa4cfb4dd4b9cb6f9475ff878437fedef}} 
+\index{GPIO\_TypeDef@{GPIO\_TypeDef}!PUPDR@{PUPDR}}
+\index{PUPDR@{PUPDR}!GPIO\_TypeDef@{GPIO\_TypeDef}}
+\doxysubsubsection{PUPDR\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \textbf{ volatile} \textbf{ u32} PUPDR}
+
+
+
+Definition at line 52 of file DIO\+\_\+interface.\+h.
+
+\mbox{\label{struct_g_p_i_o___type_def_abeed38529bd7b8de082e490e5d4f1727}} 
+\index{GPIO\_TypeDef@{GPIO\_TypeDef}!PUPDR@{PUPDR}}
+\index{PUPDR@{PUPDR}!GPIO\_TypeDef@{GPIO\_TypeDef}}
+\doxysubsubsection{PUPDR\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \textbf{ \+\_\+\+\_\+\+IO} uint32\+\_\+t PUPDR}
+
+GPIO port pull-\/up/pull-\/down register, Address offset\+: 0x0C ~\newline
+ 
+
+Definition at line 549 of file stm32f407xx.\+h.
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\textbf{ DIO\+\_\+interface.\+h}\item 
+system/include/cmsis/\textbf{ stm32f407xx.\+h}\end{DoxyCompactItemize}

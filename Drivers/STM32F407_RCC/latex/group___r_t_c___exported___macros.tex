@@ -1,0 +1,700 @@
+\doxysection{RTC Exported Macros}
+\label{group___r_t_c___exported___macros}\index{RTC Exported Macros@{RTC Exported Macros}}
+Collaboration diagram for RTC Exported Macros\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=264pt]{group___r_t_c___exported___macros}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+RESET\+\_\+\+HANDLE\+\_\+\+STATE}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$State = \textbf{ HAL\+\_\+\+RTC\+\_\+\+STATE\+\_\+\+RESET})
+\begin{DoxyCompactList}\small\item\em Reset RTC handle state. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+WRITEPROTECTION\+\_\+\+DISABLE}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Disable the write protection for RTC registers. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+WRITEPROTECTION\+\_\+\+ENABLE}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Enable the write protection for RTC registers. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+ALARMA\+\_\+\+ENABLE}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$CR $\vert$= (\textbf{ RTC\+\_\+\+CR\+\_\+\+ALRAE}))
+\begin{DoxyCompactList}\small\item\em Enable the RTC ALARMA peripheral. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+ALARMA\+\_\+\+DISABLE}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$CR \&= $\sim$(\textbf{ RTC\+\_\+\+CR\+\_\+\+ALRAE}))
+\begin{DoxyCompactList}\small\item\em Disable the RTC ALARMA peripheral. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+ALARMB\+\_\+\+ENABLE}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$CR $\vert$= (\textbf{ RTC\+\_\+\+CR\+\_\+\+ALRBE}))
+\begin{DoxyCompactList}\small\item\em Enable the RTC ALARMB peripheral. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+ALARMB\+\_\+\+DISABLE}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$CR \&= $\sim$(\textbf{ RTC\+\_\+\+CR\+\_\+\+ALRBE}))
+\begin{DoxyCompactList}\small\item\em Disable the RTC ALARMB peripheral. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+ALARM\+\_\+\+ENABLE\+\_\+\+IT}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$CR $\vert$= (\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+))
+\begin{DoxyCompactList}\small\item\em Enable the RTC Alarm interrupt. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+ALARM\+\_\+\+DISABLE\+\_\+\+IT}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$CR \&= $\sim$(\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+))
+\begin{DoxyCompactList}\small\item\em Disable the RTC Alarm interrupt. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+ALARM\+\_\+\+GET\+\_\+\+IT}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)~(((((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$ISR)\& ((\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)$>$$>$ 4U)) != \textbf{ RESET})? \textbf{ SET} \+: \textbf{ RESET})
+\begin{DoxyCompactList}\small\item\em Check whether the specified RTC Alarm interrupt has occurred or not. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+ALARM\+\_\+\+GET\+\_\+\+FLAG}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+FLAG\+\_\+\+\_\+)~(((((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$ISR) \& (\+\_\+\+\_\+\+FLAG\+\_\+\+\_\+)) != \textbf{ RESET})? \textbf{ SET} \+: \textbf{ RESET})
+\begin{DoxyCompactList}\small\item\em Get the selected RTC Alarm\textquotesingle{}s flag status. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+ALARM\+\_\+\+CLEAR\+\_\+\+FLAG}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+FLAG\+\_\+\+\_\+)~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$ISR) = ($\sim$((\+\_\+\+\_\+\+FLAG\+\_\+\+\_\+) $\vert$ \textbf{ RTC\+\_\+\+ISR\+\_\+\+INIT})$\vert$((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$ISR \& \textbf{ RTC\+\_\+\+ISR\+\_\+\+INIT}))
+\begin{DoxyCompactList}\small\item\em Clear the RTC Alarm\textquotesingle{}s pending flags. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+ALARM\+\_\+\+GET\+\_\+\+IT\+\_\+\+SOURCE}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)~(((((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$CR) \& (\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)) != \textbf{ RESET}) ? \textbf{ SET} \+: \textbf{ RESET})
+\begin{DoxyCompactList}\small\item\em Check whether the specified RTC Alarm interrupt has been enabled or not. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+ALARM\+\_\+\+EXTI\+\_\+\+ENABLE\+\_\+\+IT}()~(\textbf{ EXTI}-\/$>$IMR $\vert$= \textbf{ RTC\+\_\+\+EXTI\+\_\+\+LINE\+\_\+\+ALARM\+\_\+\+EVENT})
+\begin{DoxyCompactList}\small\item\em Enable interrupt on the RTC Alarm associated Exti line. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+ALARM\+\_\+\+EXTI\+\_\+\+DISABLE\+\_\+\+IT}()~(\textbf{ EXTI}-\/$>$IMR \&= $\sim$(\textbf{ RTC\+\_\+\+EXTI\+\_\+\+LINE\+\_\+\+ALARM\+\_\+\+EVENT}))
+\begin{DoxyCompactList}\small\item\em Disable interrupt on the RTC Alarm associated Exti line. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+ALARM\+\_\+\+EXTI\+\_\+\+ENABLE\+\_\+\+EVENT}()~(\textbf{ EXTI}-\/$>$EMR $\vert$= \textbf{ RTC\+\_\+\+EXTI\+\_\+\+LINE\+\_\+\+ALARM\+\_\+\+EVENT})
+\begin{DoxyCompactList}\small\item\em Enable event on the RTC Alarm associated Exti line. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+ALARM\+\_\+\+EXTI\+\_\+\+DISABLE\+\_\+\+EVENT}()~(\textbf{ EXTI}-\/$>$EMR \&= $\sim$(\textbf{ RTC\+\_\+\+EXTI\+\_\+\+LINE\+\_\+\+ALARM\+\_\+\+EVENT}))
+\begin{DoxyCompactList}\small\item\em Disable event on the RTC Alarm associated Exti line. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+ALARM\+\_\+\+EXTI\+\_\+\+ENABLE\+\_\+\+FALLING\+\_\+\+EDGE}()~(\textbf{ EXTI}-\/$>$FTSR $\vert$= \textbf{ RTC\+\_\+\+EXTI\+\_\+\+LINE\+\_\+\+ALARM\+\_\+\+EVENT})
+\begin{DoxyCompactList}\small\item\em Enable falling edge trigger on the RTC Alarm associated Exti line. ~\newline
+ \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+ALARM\+\_\+\+EXTI\+\_\+\+DISABLE\+\_\+\+FALLING\+\_\+\+EDGE}()~(\textbf{ EXTI}-\/$>$FTSR \&= $\sim$(\textbf{ RTC\+\_\+\+EXTI\+\_\+\+LINE\+\_\+\+ALARM\+\_\+\+EVENT}))
+\begin{DoxyCompactList}\small\item\em Disable falling edge trigger on the RTC Alarm associated Exti line. ~\newline
+ \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+ALARM\+\_\+\+EXTI\+\_\+\+ENABLE\+\_\+\+RISING\+\_\+\+EDGE}()~(\textbf{ EXTI}-\/$>$RTSR $\vert$= \textbf{ RTC\+\_\+\+EXTI\+\_\+\+LINE\+\_\+\+ALARM\+\_\+\+EVENT})
+\begin{DoxyCompactList}\small\item\em Enable rising edge trigger on the RTC Alarm associated Exti line. ~\newline
+ \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+ALARM\+\_\+\+EXTI\+\_\+\+DISABLE\+\_\+\+RISING\+\_\+\+EDGE}()~(\textbf{ EXTI}-\/$>$RTSR \&= $\sim$(\textbf{ RTC\+\_\+\+EXTI\+\_\+\+LINE\+\_\+\+ALARM\+\_\+\+EVENT}))
+\begin{DoxyCompactList}\small\item\em Disable rising edge trigger on the RTC Alarm associated Exti line. ~\newline
+ \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+ALARM\+\_\+\+EXTI\+\_\+\+ENABLE\+\_\+\+RISING\+\_\+\+FALLING\+\_\+\+EDGE}()
+\begin{DoxyCompactList}\small\item\em Enable rising \& falling edge trigger on the RTC Alarm associated Exti line. ~\newline
+ \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+ALARM\+\_\+\+EXTI\+\_\+\+DISABLE\+\_\+\+RISING\+\_\+\+FALLING\+\_\+\+EDGE}()
+\begin{DoxyCompactList}\small\item\em Disable rising \& falling edge trigger on the RTC Alarm associated Exti line. ~\newline
+ \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+ALARM\+\_\+\+EXTI\+\_\+\+GET\+\_\+\+FLAG}()~(\textbf{ EXTI}-\/$>$PR \& \textbf{ RTC\+\_\+\+EXTI\+\_\+\+LINE\+\_\+\+ALARM\+\_\+\+EVENT})
+\begin{DoxyCompactList}\small\item\em Check whether the RTC Alarm associated Exti line interrupt flag is set or not. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+ALARM\+\_\+\+EXTI\+\_\+\+CLEAR\+\_\+\+FLAG}()~(\textbf{ EXTI}-\/$>$PR = \textbf{ RTC\+\_\+\+EXTI\+\_\+\+LINE\+\_\+\+ALARM\+\_\+\+EVENT})
+\begin{DoxyCompactList}\small\item\em Clear the RTC Alarm associated Exti line flag. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+ALARM\+\_\+\+EXTI\+\_\+\+GENERATE\+\_\+\+SWIT}()~(\textbf{ EXTI}-\/$>$SWIER $\vert$= \textbf{ RTC\+\_\+\+EXTI\+\_\+\+LINE\+\_\+\+ALARM\+\_\+\+EVENT})
+\begin{DoxyCompactList}\small\item\em Generate a Software interrupt on RTC Alarm associated Exti line. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\label{group___r_t_c___exported___macros_ga93d88df67428f617157346d7cbdb4069}} 
+\index{RTC Exported Macros@{RTC Exported Macros}!\_\_HAL\_RTC\_ALARM\_CLEAR\_FLAG@{\_\_HAL\_RTC\_ALARM\_CLEAR\_FLAG}}
+\index{\_\_HAL\_RTC\_ALARM\_CLEAR\_FLAG@{\_\_HAL\_RTC\_ALARM\_CLEAR\_FLAG}!RTC Exported Macros@{RTC Exported Macros}}
+\doxysubsubsection{\_\_HAL\_RTC\_ALARM\_CLEAR\_FLAG}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+ALARM\+\_\+\+CLEAR\+\_\+\+FLAG(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+FLAG\+\_\+\+\_\+ }\end{DoxyParamCaption})~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$ISR) = ($\sim$((\+\_\+\+\_\+\+FLAG\+\_\+\+\_\+) $\vert$ \textbf{ RTC\+\_\+\+ISR\+\_\+\+INIT})$\vert$((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$ISR \& \textbf{ RTC\+\_\+\+ISR\+\_\+\+INIT}))}
+
+
+
+Clear the RTC Alarm\textquotesingle{}s pending flags. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$strong$>$\+HANDLE$<$/strong$>$} & specifies the RTC handle. \\
+\hline
+{\em $<$strong$>$\+FLAG$<$/strong$>$} & specifies the RTC Alarm Flag sources to be enabled or disabled. This parameter can be\+: \begin{DoxyItemize}
+\item RTC\+\_\+\+FLAG\+\_\+\+ALRAF \item RTC\+\_\+\+FLAG\+\_\+\+ALRBF \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 536 of file stm32f4xx\+\_\+hal\+\_\+rtc.\+h.
+
+\mbox{\label{group___r_t_c___exported___macros_gadc2d6dc4a75136bdd2b67c1b35d04b10}} 
+\index{RTC Exported Macros@{RTC Exported Macros}!\_\_HAL\_RTC\_ALARM\_DISABLE\_IT@{\_\_HAL\_RTC\_ALARM\_DISABLE\_IT}}
+\index{\_\_HAL\_RTC\_ALARM\_DISABLE\_IT@{\_\_HAL\_RTC\_ALARM\_DISABLE\_IT}!RTC Exported Macros@{RTC Exported Macros}}
+\doxysubsubsection{\_\_HAL\_RTC\_ALARM\_DISABLE\_IT}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+ALARM\+\_\+\+DISABLE\+\_\+\+IT(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+ }\end{DoxyParamCaption})~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$CR \&= $\sim$(\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+))}
+
+
+
+Disable the RTC Alarm interrupt. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$strong$>$\+HANDLE$<$/strong$>$} & specifies the RTC handle. \\
+\hline
+{\em $<$strong$>$\+INTERRUPT$<$/strong$>$} & specifies the RTC Alarm interrupt sources to be enabled or disabled. This parameter can be any combination of the following values\+: \begin{DoxyItemize}
+\item RTC\+\_\+\+IT\+\_\+\+ALRA\+: Alarm A interrupt \item RTC\+\_\+\+IT\+\_\+\+ALRB\+: Alarm B interrupt ~\newline
+ \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 501 of file stm32f4xx\+\_\+hal\+\_\+rtc.\+h.
+
+\mbox{\label{group___r_t_c___exported___macros_gab40f07ff2cdf6fc98ccfdd856ba934e4}} 
+\index{RTC Exported Macros@{RTC Exported Macros}!\_\_HAL\_RTC\_ALARM\_ENABLE\_IT@{\_\_HAL\_RTC\_ALARM\_ENABLE\_IT}}
+\index{\_\_HAL\_RTC\_ALARM\_ENABLE\_IT@{\_\_HAL\_RTC\_ALARM\_ENABLE\_IT}!RTC Exported Macros@{RTC Exported Macros}}
+\doxysubsubsection{\_\_HAL\_RTC\_ALARM\_ENABLE\_IT}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+ALARM\+\_\+\+ENABLE\+\_\+\+IT(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+ }\end{DoxyParamCaption})~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$CR $\vert$= (\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+))}
+
+
+
+Enable the RTC Alarm interrupt. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$strong$>$\+HANDLE$<$/strong$>$} & specifies the RTC handle. \\
+\hline
+{\em $<$strong$>$\+INTERRUPT$<$/strong$>$} & specifies the RTC Alarm interrupt sources to be enabled or disabled. This parameter can be any combination of the following values\+: \begin{DoxyItemize}
+\item RTC\+\_\+\+IT\+\_\+\+ALRA\+: Alarm A interrupt \item RTC\+\_\+\+IT\+\_\+\+ALRB\+: Alarm B interrupt ~\newline
+ \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 490 of file stm32f4xx\+\_\+hal\+\_\+rtc.\+h.
+
+\mbox{\label{group___r_t_c___exported___macros_ga7da963373beb744413c1e3302eb91bae}} 
+\index{RTC Exported Macros@{RTC Exported Macros}!\_\_HAL\_RTC\_ALARM\_EXTI\_CLEAR\_FLAG@{\_\_HAL\_RTC\_ALARM\_EXTI\_CLEAR\_FLAG}}
+\index{\_\_HAL\_RTC\_ALARM\_EXTI\_CLEAR\_FLAG@{\_\_HAL\_RTC\_ALARM\_EXTI\_CLEAR\_FLAG}!RTC Exported Macros@{RTC Exported Macros}}
+\doxysubsubsection{\_\_HAL\_RTC\_ALARM\_EXTI\_CLEAR\_FLAG}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+ALARM\+\_\+\+EXTI\+\_\+\+CLEAR\+\_\+\+FLAG(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~(\textbf{ EXTI}-\/$>$PR = \textbf{ RTC\+\_\+\+EXTI\+\_\+\+LINE\+\_\+\+ALARM\+\_\+\+EVENT})}
+
+
+
+Clear the RTC Alarm associated Exti line flag. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em None.} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 624 of file stm32f4xx\+\_\+hal\+\_\+rtc.\+h.
+
+\mbox{\label{group___r_t_c___exported___macros_ga7dea6f849766dd02e03f0ef05191c4d3}} 
+\index{RTC Exported Macros@{RTC Exported Macros}!\_\_HAL\_RTC\_ALARM\_EXTI\_DISABLE\_EVENT@{\_\_HAL\_RTC\_ALARM\_EXTI\_DISABLE\_EVENT}}
+\index{\_\_HAL\_RTC\_ALARM\_EXTI\_DISABLE\_EVENT@{\_\_HAL\_RTC\_ALARM\_EXTI\_DISABLE\_EVENT}!RTC Exported Macros@{RTC Exported Macros}}
+\doxysubsubsection{\_\_HAL\_RTC\_ALARM\_EXTI\_DISABLE\_EVENT}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+ALARM\+\_\+\+EXTI\+\_\+\+DISABLE\+\_\+\+EVENT(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~(\textbf{ EXTI}-\/$>$EMR \&= $\sim$(\textbf{ RTC\+\_\+\+EXTI\+\_\+\+LINE\+\_\+\+ALARM\+\_\+\+EVENT}))}
+
+
+
+Disable event on the RTC Alarm associated Exti line. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em None.} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 572 of file stm32f4xx\+\_\+hal\+\_\+rtc.\+h.
+
+\mbox{\label{group___r_t_c___exported___macros_gae772f6119533837dc7a0cc54ed5fb88b}} 
+\index{RTC Exported Macros@{RTC Exported Macros}!\_\_HAL\_RTC\_ALARM\_EXTI\_DISABLE\_FALLING\_EDGE@{\_\_HAL\_RTC\_ALARM\_EXTI\_DISABLE\_FALLING\_EDGE}}
+\index{\_\_HAL\_RTC\_ALARM\_EXTI\_DISABLE\_FALLING\_EDGE@{\_\_HAL\_RTC\_ALARM\_EXTI\_DISABLE\_FALLING\_EDGE}!RTC Exported Macros@{RTC Exported Macros}}
+\doxysubsubsection{\_\_HAL\_RTC\_ALARM\_EXTI\_DISABLE\_FALLING\_EDGE}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+ALARM\+\_\+\+EXTI\+\_\+\+DISABLE\+\_\+\+FALLING\+\_\+\+EDGE(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~(\textbf{ EXTI}-\/$>$FTSR \&= $\sim$(\textbf{ RTC\+\_\+\+EXTI\+\_\+\+LINE\+\_\+\+ALARM\+\_\+\+EVENT}))}
+
+
+
+Disable falling edge trigger on the RTC Alarm associated Exti line. ~\newline
+ 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em None.} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 584 of file stm32f4xx\+\_\+hal\+\_\+rtc.\+h.
+
+\mbox{\label{group___r_t_c___exported___macros_gaa6cd8249ed39c941d83f77ce507b8e0a}} 
+\index{RTC Exported Macros@{RTC Exported Macros}!\_\_HAL\_RTC\_ALARM\_EXTI\_DISABLE\_IT@{\_\_HAL\_RTC\_ALARM\_EXTI\_DISABLE\_IT}}
+\index{\_\_HAL\_RTC\_ALARM\_EXTI\_DISABLE\_IT@{\_\_HAL\_RTC\_ALARM\_EXTI\_DISABLE\_IT}!RTC Exported Macros@{RTC Exported Macros}}
+\doxysubsubsection{\_\_HAL\_RTC\_ALARM\_EXTI\_DISABLE\_IT}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+ALARM\+\_\+\+EXTI\+\_\+\+DISABLE\+\_\+\+IT(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~(\textbf{ EXTI}-\/$>$IMR \&= $\sim$(\textbf{ RTC\+\_\+\+EXTI\+\_\+\+LINE\+\_\+\+ALARM\+\_\+\+EVENT}))}
+
+
+
+Disable interrupt on the RTC Alarm associated Exti line. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 560 of file stm32f4xx\+\_\+hal\+\_\+rtc.\+h.
+
+\mbox{\label{group___r_t_c___exported___macros_gafdbfefbdc7ae8ce2a12aa698ee1b8142}} 
+\index{RTC Exported Macros@{RTC Exported Macros}!\_\_HAL\_RTC\_ALARM\_EXTI\_DISABLE\_RISING\_EDGE@{\_\_HAL\_RTC\_ALARM\_EXTI\_DISABLE\_RISING\_EDGE}}
+\index{\_\_HAL\_RTC\_ALARM\_EXTI\_DISABLE\_RISING\_EDGE@{\_\_HAL\_RTC\_ALARM\_EXTI\_DISABLE\_RISING\_EDGE}!RTC Exported Macros@{RTC Exported Macros}}
+\doxysubsubsection{\_\_HAL\_RTC\_ALARM\_EXTI\_DISABLE\_RISING\_EDGE}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+ALARM\+\_\+\+EXTI\+\_\+\+DISABLE\+\_\+\+RISING\+\_\+\+EDGE(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~(\textbf{ EXTI}-\/$>$RTSR \&= $\sim$(\textbf{ RTC\+\_\+\+EXTI\+\_\+\+LINE\+\_\+\+ALARM\+\_\+\+EVENT}))}
+
+
+
+Disable rising edge trigger on the RTC Alarm associated Exti line. ~\newline
+ 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em None.} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 596 of file stm32f4xx\+\_\+hal\+\_\+rtc.\+h.
+
+\mbox{\label{group___r_t_c___exported___macros_ga2a1848b21c468b2fbc2435afe2de44ab}} 
+\index{RTC Exported Macros@{RTC Exported Macros}!\_\_HAL\_RTC\_ALARM\_EXTI\_DISABLE\_RISING\_FALLING\_EDGE@{\_\_HAL\_RTC\_ALARM\_EXTI\_DISABLE\_RISING\_FALLING\_EDGE}}
+\index{\_\_HAL\_RTC\_ALARM\_EXTI\_DISABLE\_RISING\_FALLING\_EDGE@{\_\_HAL\_RTC\_ALARM\_EXTI\_DISABLE\_RISING\_FALLING\_EDGE}!RTC Exported Macros@{RTC Exported Macros}}
+\doxysubsubsection{\_\_HAL\_RTC\_ALARM\_EXTI\_DISABLE\_RISING\_FALLING\_EDGE}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+ALARM\+\_\+\+EXTI\+\_\+\+DISABLE\+\_\+\+RISING\+\_\+\+FALLING\+\_\+\+EDGE(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                                                \textcolor{keywordflow}{do} \{ \_\_HAL\_RTC\_ALARM\_EXTI\_DISABLE\_RISING\_EDGE();\(\backslash\)}
+\DoxyCodeLine{                                                                \_\_HAL\_RTC\_ALARM\_EXTI\_DISABLE\_FALLING\_EDGE();\(\backslash\)}
+\DoxyCodeLine{                                                              \} \textcolor{keywordflow}{while}(0)}
+
+\end{DoxyCode}
+
+
+Disable rising \& falling edge trigger on the RTC Alarm associated Exti line. ~\newline
+ 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em None.} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 610 of file stm32f4xx\+\_\+hal\+\_\+rtc.\+h.
+
+\mbox{\label{group___r_t_c___exported___macros_gad80750a7f77e40f636c61d85c01df489}} 
+\index{RTC Exported Macros@{RTC Exported Macros}!\_\_HAL\_RTC\_ALARM\_EXTI\_ENABLE\_EVENT@{\_\_HAL\_RTC\_ALARM\_EXTI\_ENABLE\_EVENT}}
+\index{\_\_HAL\_RTC\_ALARM\_EXTI\_ENABLE\_EVENT@{\_\_HAL\_RTC\_ALARM\_EXTI\_ENABLE\_EVENT}!RTC Exported Macros@{RTC Exported Macros}}
+\doxysubsubsection{\_\_HAL\_RTC\_ALARM\_EXTI\_ENABLE\_EVENT}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+ALARM\+\_\+\+EXTI\+\_\+\+ENABLE\+\_\+\+EVENT(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~(\textbf{ EXTI}-\/$>$EMR $\vert$= \textbf{ RTC\+\_\+\+EXTI\+\_\+\+LINE\+\_\+\+ALARM\+\_\+\+EVENT})}
+
+
+
+Enable event on the RTC Alarm associated Exti line. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em None.} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 566 of file stm32f4xx\+\_\+hal\+\_\+rtc.\+h.
+
+\mbox{\label{group___r_t_c___exported___macros_gafb2f49d2954f9ea1dae2ec92156d7b87}} 
+\index{RTC Exported Macros@{RTC Exported Macros}!\_\_HAL\_RTC\_ALARM\_EXTI\_ENABLE\_FALLING\_EDGE@{\_\_HAL\_RTC\_ALARM\_EXTI\_ENABLE\_FALLING\_EDGE}}
+\index{\_\_HAL\_RTC\_ALARM\_EXTI\_ENABLE\_FALLING\_EDGE@{\_\_HAL\_RTC\_ALARM\_EXTI\_ENABLE\_FALLING\_EDGE}!RTC Exported Macros@{RTC Exported Macros}}
+\doxysubsubsection{\_\_HAL\_RTC\_ALARM\_EXTI\_ENABLE\_FALLING\_EDGE}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+ALARM\+\_\+\+EXTI\+\_\+\+ENABLE\+\_\+\+FALLING\+\_\+\+EDGE(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~(\textbf{ EXTI}-\/$>$FTSR $\vert$= \textbf{ RTC\+\_\+\+EXTI\+\_\+\+LINE\+\_\+\+ALARM\+\_\+\+EVENT})}
+
+
+
+Enable falling edge trigger on the RTC Alarm associated Exti line. ~\newline
+ 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em None.} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 578 of file stm32f4xx\+\_\+hal\+\_\+rtc.\+h.
+
+\mbox{\label{group___r_t_c___exported___macros_ga47fd0b2d9a8679d49ae554d482231780}} 
+\index{RTC Exported Macros@{RTC Exported Macros}!\_\_HAL\_RTC\_ALARM\_EXTI\_ENABLE\_IT@{\_\_HAL\_RTC\_ALARM\_EXTI\_ENABLE\_IT}}
+\index{\_\_HAL\_RTC\_ALARM\_EXTI\_ENABLE\_IT@{\_\_HAL\_RTC\_ALARM\_EXTI\_ENABLE\_IT}!RTC Exported Macros@{RTC Exported Macros}}
+\doxysubsubsection{\_\_HAL\_RTC\_ALARM\_EXTI\_ENABLE\_IT}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+ALARM\+\_\+\+EXTI\+\_\+\+ENABLE\+\_\+\+IT(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~(\textbf{ EXTI}-\/$>$IMR $\vert$= \textbf{ RTC\+\_\+\+EXTI\+\_\+\+LINE\+\_\+\+ALARM\+\_\+\+EVENT})}
+
+
+
+Enable interrupt on the RTC Alarm associated Exti line. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 554 of file stm32f4xx\+\_\+hal\+\_\+rtc.\+h.
+
+\mbox{\label{group___r_t_c___exported___macros_ga9d6c820076d2e583f6354f4e37217d1b}} 
+\index{RTC Exported Macros@{RTC Exported Macros}!\_\_HAL\_RTC\_ALARM\_EXTI\_ENABLE\_RISING\_EDGE@{\_\_HAL\_RTC\_ALARM\_EXTI\_ENABLE\_RISING\_EDGE}}
+\index{\_\_HAL\_RTC\_ALARM\_EXTI\_ENABLE\_RISING\_EDGE@{\_\_HAL\_RTC\_ALARM\_EXTI\_ENABLE\_RISING\_EDGE}!RTC Exported Macros@{RTC Exported Macros}}
+\doxysubsubsection{\_\_HAL\_RTC\_ALARM\_EXTI\_ENABLE\_RISING\_EDGE}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+ALARM\+\_\+\+EXTI\+\_\+\+ENABLE\+\_\+\+RISING\+\_\+\+EDGE(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~(\textbf{ EXTI}-\/$>$RTSR $\vert$= \textbf{ RTC\+\_\+\+EXTI\+\_\+\+LINE\+\_\+\+ALARM\+\_\+\+EVENT})}
+
+
+
+Enable rising edge trigger on the RTC Alarm associated Exti line. ~\newline
+ 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em None.} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 590 of file stm32f4xx\+\_\+hal\+\_\+rtc.\+h.
+
+\mbox{\label{group___r_t_c___exported___macros_gac697938513fe51b0bcc6279025d2e057}} 
+\index{RTC Exported Macros@{RTC Exported Macros}!\_\_HAL\_RTC\_ALARM\_EXTI\_ENABLE\_RISING\_FALLING\_EDGE@{\_\_HAL\_RTC\_ALARM\_EXTI\_ENABLE\_RISING\_FALLING\_EDGE}}
+\index{\_\_HAL\_RTC\_ALARM\_EXTI\_ENABLE\_RISING\_FALLING\_EDGE@{\_\_HAL\_RTC\_ALARM\_EXTI\_ENABLE\_RISING\_FALLING\_EDGE}!RTC Exported Macros@{RTC Exported Macros}}
+\doxysubsubsection{\_\_HAL\_RTC\_ALARM\_EXTI\_ENABLE\_RISING\_FALLING\_EDGE}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+ALARM\+\_\+\+EXTI\+\_\+\+ENABLE\+\_\+\+RISING\+\_\+\+FALLING\+\_\+\+EDGE(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                                               \textcolor{keywordflow}{do} \{ \_\_HAL\_RTC\_ALARM\_EXTI\_ENABLE\_RISING\_EDGE(); \(\backslash\)}
+\DoxyCodeLine{                                                               \_\_HAL\_RTC\_ALARM\_EXTI\_ENABLE\_FALLING\_EDGE();\(\backslash\)}
+\DoxyCodeLine{                                                             \} \textcolor{keywordflow}{while}(0)}
+
+\end{DoxyCode}
+
+
+Enable rising \& falling edge trigger on the RTC Alarm associated Exti line. ~\newline
+ 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em None.} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 602 of file stm32f4xx\+\_\+hal\+\_\+rtc.\+h.
+
+\mbox{\label{group___r_t_c___exported___macros_ga0ea6a0ad763bcc1913468b57f3972cb2}} 
+\index{RTC Exported Macros@{RTC Exported Macros}!\_\_HAL\_RTC\_ALARM\_EXTI\_GENERATE\_SWIT@{\_\_HAL\_RTC\_ALARM\_EXTI\_GENERATE\_SWIT}}
+\index{\_\_HAL\_RTC\_ALARM\_EXTI\_GENERATE\_SWIT@{\_\_HAL\_RTC\_ALARM\_EXTI\_GENERATE\_SWIT}!RTC Exported Macros@{RTC Exported Macros}}
+\doxysubsubsection{\_\_HAL\_RTC\_ALARM\_EXTI\_GENERATE\_SWIT}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+ALARM\+\_\+\+EXTI\+\_\+\+GENERATE\+\_\+\+SWIT(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~(\textbf{ EXTI}-\/$>$SWIER $\vert$= \textbf{ RTC\+\_\+\+EXTI\+\_\+\+LINE\+\_\+\+ALARM\+\_\+\+EVENT})}
+
+
+
+Generate a Software interrupt on RTC Alarm associated Exti line. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em None.} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 630 of file stm32f4xx\+\_\+hal\+\_\+rtc.\+h.
+
+\mbox{\label{group___r_t_c___exported___macros_ga05c79b3e9c7563c449d6dcb1c4a426bc}} 
+\index{RTC Exported Macros@{RTC Exported Macros}!\_\_HAL\_RTC\_ALARM\_EXTI\_GET\_FLAG@{\_\_HAL\_RTC\_ALARM\_EXTI\_GET\_FLAG}}
+\index{\_\_HAL\_RTC\_ALARM\_EXTI\_GET\_FLAG@{\_\_HAL\_RTC\_ALARM\_EXTI\_GET\_FLAG}!RTC Exported Macros@{RTC Exported Macros}}
+\doxysubsubsection{\_\_HAL\_RTC\_ALARM\_EXTI\_GET\_FLAG}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+ALARM\+\_\+\+EXTI\+\_\+\+GET\+\_\+\+FLAG(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~(\textbf{ EXTI}-\/$>$PR \& \textbf{ RTC\+\_\+\+EXTI\+\_\+\+LINE\+\_\+\+ALARM\+\_\+\+EVENT})}
+
+
+
+Check whether the RTC Alarm associated Exti line interrupt flag is set or not. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em Line} & Status. \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 618 of file stm32f4xx\+\_\+hal\+\_\+rtc.\+h.
+
+\mbox{\label{group___r_t_c___exported___macros_ga9f908cb1fd0f270c66f5deed82e019de}} 
+\index{RTC Exported Macros@{RTC Exported Macros}!\_\_HAL\_RTC\_ALARM\_GET\_FLAG@{\_\_HAL\_RTC\_ALARM\_GET\_FLAG}}
+\index{\_\_HAL\_RTC\_ALARM\_GET\_FLAG@{\_\_HAL\_RTC\_ALARM\_GET\_FLAG}!RTC Exported Macros@{RTC Exported Macros}}
+\doxysubsubsection{\_\_HAL\_RTC\_ALARM\_GET\_FLAG}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+ALARM\+\_\+\+GET\+\_\+\+FLAG(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+FLAG\+\_\+\+\_\+ }\end{DoxyParamCaption})~(((((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$ISR) \& (\+\_\+\+\_\+\+FLAG\+\_\+\+\_\+)) != \textbf{ RESET})? \textbf{ SET} \+: \textbf{ RESET})}
+
+
+
+Get the selected RTC Alarm\textquotesingle{}s flag status. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$strong$>$\+HANDLE$<$/strong$>$} & specifies the RTC handle. \\
+\hline
+{\em $<$strong$>$\+FLAG$<$/strong$>$} & specifies the RTC Alarm Flag to check. This parameter can be\+: \begin{DoxyItemize}
+\item RTC\+\_\+\+FLAG\+\_\+\+ALRAF \item RTC\+\_\+\+FLAG\+\_\+\+ALRBF \item RTC\+\_\+\+FLAG\+\_\+\+ALRAWF ~\newline
+ \item RTC\+\_\+\+FLAG\+\_\+\+ALRBWF ~\newline
+ \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 525 of file stm32f4xx\+\_\+hal\+\_\+rtc.\+h.
+
+\mbox{\label{group___r_t_c___exported___macros_gaf748b95b91cca959f79f441a90678c60}} 
+\index{RTC Exported Macros@{RTC Exported Macros}!\_\_HAL\_RTC\_ALARM\_GET\_IT@{\_\_HAL\_RTC\_ALARM\_GET\_IT}}
+\index{\_\_HAL\_RTC\_ALARM\_GET\_IT@{\_\_HAL\_RTC\_ALARM\_GET\_IT}!RTC Exported Macros@{RTC Exported Macros}}
+\doxysubsubsection{\_\_HAL\_RTC\_ALARM\_GET\_IT}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+ALARM\+\_\+\+GET\+\_\+\+IT(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+ }\end{DoxyParamCaption})~(((((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$ISR)\& ((\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)$>$$>$ 4U)) != \textbf{ RESET})? \textbf{ SET} \+: \textbf{ RESET})}
+
+
+
+Check whether the specified RTC Alarm interrupt has occurred or not. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$strong$>$\+HANDLE$<$/strong$>$} & specifies the RTC handle. \\
+\hline
+{\em $<$strong$>$\+INTERRUPT$<$/strong$>$} & specifies the RTC Alarm interrupt to check. This parameter can be\+: \begin{DoxyItemize}
+\item RTC\+\_\+\+IT\+\_\+\+ALRA\+: Alarm A interrupt \item RTC\+\_\+\+IT\+\_\+\+ALRB\+: Alarm B interrupt ~\newline
+ \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 512 of file stm32f4xx\+\_\+hal\+\_\+rtc.\+h.
+
+\mbox{\label{group___r_t_c___exported___macros_ga8068a537190e4c142b6d5bf41252ed01}} 
+\index{RTC Exported Macros@{RTC Exported Macros}!\_\_HAL\_RTC\_ALARM\_GET\_IT\_SOURCE@{\_\_HAL\_RTC\_ALARM\_GET\_IT\_SOURCE}}
+\index{\_\_HAL\_RTC\_ALARM\_GET\_IT\_SOURCE@{\_\_HAL\_RTC\_ALARM\_GET\_IT\_SOURCE}!RTC Exported Macros@{RTC Exported Macros}}
+\doxysubsubsection{\_\_HAL\_RTC\_ALARM\_GET\_IT\_SOURCE}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+ALARM\+\_\+\+GET\+\_\+\+IT\+\_\+\+SOURCE(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+ }\end{DoxyParamCaption})~(((((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$CR) \& (\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)) != \textbf{ RESET}) ? \textbf{ SET} \+: \textbf{ RESET})}
+
+
+
+Check whether the specified RTC Alarm interrupt has been enabled or not. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$strong$>$\+HANDLE$<$/strong$>$} & specifies the RTC handle. \\
+\hline
+{\em $<$strong$>$\+INTERRUPT$<$/strong$>$} & specifies the RTC Alarm interrupt sources to check. This parameter can be\+: \begin{DoxyItemize}
+\item RTC\+\_\+\+IT\+\_\+\+ALRA\+: Alarm A interrupt \item RTC\+\_\+\+IT\+\_\+\+ALRB\+: Alarm B interrupt \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 548 of file stm32f4xx\+\_\+hal\+\_\+rtc.\+h.
+
+\mbox{\label{group___r_t_c___exported___macros_ga8679ec8def03e05fa39474d83b156699}} 
+\index{RTC Exported Macros@{RTC Exported Macros}!\_\_HAL\_RTC\_ALARMA\_DISABLE@{\_\_HAL\_RTC\_ALARMA\_DISABLE}}
+\index{\_\_HAL\_RTC\_ALARMA\_DISABLE@{\_\_HAL\_RTC\_ALARMA\_DISABLE}!RTC Exported Macros@{RTC Exported Macros}}
+\doxysubsubsection{\_\_HAL\_RTC\_ALARMA\_DISABLE}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+ALARMA\+\_\+\+DISABLE(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+ }\end{DoxyParamCaption})~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$CR \&= $\sim$(\textbf{ RTC\+\_\+\+CR\+\_\+\+ALRAE}))}
+
+
+
+Disable the RTC ALARMA peripheral. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$strong$>$\+HANDLE$<$/strong$>$} & specifies the RTC handle. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 465 of file stm32f4xx\+\_\+hal\+\_\+rtc.\+h.
+
+\mbox{\label{group___r_t_c___exported___macros_ga88aa460d4d8a7a65acf4b3dbcd0a2813}} 
+\index{RTC Exported Macros@{RTC Exported Macros}!\_\_HAL\_RTC\_ALARMA\_ENABLE@{\_\_HAL\_RTC\_ALARMA\_ENABLE}}
+\index{\_\_HAL\_RTC\_ALARMA\_ENABLE@{\_\_HAL\_RTC\_ALARMA\_ENABLE}!RTC Exported Macros@{RTC Exported Macros}}
+\doxysubsubsection{\_\_HAL\_RTC\_ALARMA\_ENABLE}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+ALARMA\+\_\+\+ENABLE(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+ }\end{DoxyParamCaption})~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$CR $\vert$= (\textbf{ RTC\+\_\+\+CR\+\_\+\+ALRAE}))}
+
+
+
+Enable the RTC ALARMA peripheral. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$strong$>$\+HANDLE$<$/strong$>$} & specifies the RTC handle. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 458 of file stm32f4xx\+\_\+hal\+\_\+rtc.\+h.
+
+\mbox{\label{group___r_t_c___exported___macros_ga09c7dd312682d270a8b74bcac3450f8b}} 
+\index{RTC Exported Macros@{RTC Exported Macros}!\_\_HAL\_RTC\_ALARMB\_DISABLE@{\_\_HAL\_RTC\_ALARMB\_DISABLE}}
+\index{\_\_HAL\_RTC\_ALARMB\_DISABLE@{\_\_HAL\_RTC\_ALARMB\_DISABLE}!RTC Exported Macros@{RTC Exported Macros}}
+\doxysubsubsection{\_\_HAL\_RTC\_ALARMB\_DISABLE}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+ALARMB\+\_\+\+DISABLE(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+ }\end{DoxyParamCaption})~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$CR \&= $\sim$(\textbf{ RTC\+\_\+\+CR\+\_\+\+ALRBE}))}
+
+
+
+Disable the RTC ALARMB peripheral. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$strong$>$\+HANDLE$<$/strong$>$} & specifies the RTC handle. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 479 of file stm32f4xx\+\_\+hal\+\_\+rtc.\+h.
+
+\mbox{\label{group___r_t_c___exported___macros_gad643ef2342067f140114d49f28709e92}} 
+\index{RTC Exported Macros@{RTC Exported Macros}!\_\_HAL\_RTC\_ALARMB\_ENABLE@{\_\_HAL\_RTC\_ALARMB\_ENABLE}}
+\index{\_\_HAL\_RTC\_ALARMB\_ENABLE@{\_\_HAL\_RTC\_ALARMB\_ENABLE}!RTC Exported Macros@{RTC Exported Macros}}
+\doxysubsubsection{\_\_HAL\_RTC\_ALARMB\_ENABLE}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+ALARMB\+\_\+\+ENABLE(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+ }\end{DoxyParamCaption})~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$CR $\vert$= (\textbf{ RTC\+\_\+\+CR\+\_\+\+ALRBE}))}
+
+
+
+Enable the RTC ALARMB peripheral. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$strong$>$\+HANDLE$<$/strong$>$} & specifies the RTC handle. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 472 of file stm32f4xx\+\_\+hal\+\_\+rtc.\+h.
+
+\mbox{\label{group___r_t_c___exported___macros_gaf20c09cfca416d79777562ccf7c994a2}} 
+\index{RTC Exported Macros@{RTC Exported Macros}!\_\_HAL\_RTC\_RESET\_HANDLE\_STATE@{\_\_HAL\_RTC\_RESET\_HANDLE\_STATE}}
+\index{\_\_HAL\_RTC\_RESET\_HANDLE\_STATE@{\_\_HAL\_RTC\_RESET\_HANDLE\_STATE}!RTC Exported Macros@{RTC Exported Macros}}
+\doxysubsubsection{\_\_HAL\_RTC\_RESET\_HANDLE\_STATE}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+RESET\+\_\+\+HANDLE\+\_\+\+STATE(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+ }\end{DoxyParamCaption})~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$State = \textbf{ HAL\+\_\+\+RTC\+\_\+\+STATE\+\_\+\+RESET})}
+
+
+
+Reset RTC handle state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$strong$>$\+HANDLE$<$/strong$>$} & specifies the RTC handle. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 430 of file stm32f4xx\+\_\+hal\+\_\+rtc.\+h.
+
+\mbox{\label{group___r_t_c___exported___macros_gae150645fb78c1d175b9e0f88fc3f4ad4}} 
+\index{RTC Exported Macros@{RTC Exported Macros}!\_\_HAL\_RTC\_WRITEPROTECTION\_DISABLE@{\_\_HAL\_RTC\_WRITEPROTECTION\_DISABLE}}
+\index{\_\_HAL\_RTC\_WRITEPROTECTION\_DISABLE@{\_\_HAL\_RTC\_WRITEPROTECTION\_DISABLE}!RTC Exported Macros@{RTC Exported Macros}}
+\doxysubsubsection{\_\_HAL\_RTC\_WRITEPROTECTION\_DISABLE}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+WRITEPROTECTION\+\_\+\+DISABLE(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                        \textcolor{keywordflow}{do}\{                                       \(\backslash\)}
+\DoxyCodeLine{                            (\_\_HANDLE\_\_)-\/>Instance-\/>WPR = 0xCAU;  \(\backslash\)}
+\DoxyCodeLine{                            (\_\_HANDLE\_\_)-\/>Instance-\/>WPR = 0x53U;  \(\backslash\)}
+\DoxyCodeLine{                          \} \textcolor{keywordflow}{while}(0)}
+
+\end{DoxyCode}
+
+
+Disable the write protection for RTC registers. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$strong$>$\+HANDLE$<$/strong$>$} & specifies the RTC handle. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 437 of file stm32f4xx\+\_\+hal\+\_\+rtc.\+h.
+
+\mbox{\label{group___r_t_c___exported___macros_ga9eaed4a4db3b3232c1ca5d8ffa6ff4d8}} 
+\index{RTC Exported Macros@{RTC Exported Macros}!\_\_HAL\_RTC\_WRITEPROTECTION\_ENABLE@{\_\_HAL\_RTC\_WRITEPROTECTION\_ENABLE}}
+\index{\_\_HAL\_RTC\_WRITEPROTECTION\_ENABLE@{\_\_HAL\_RTC\_WRITEPROTECTION\_ENABLE}!RTC Exported Macros@{RTC Exported Macros}}
+\doxysubsubsection{\_\_HAL\_RTC\_WRITEPROTECTION\_ENABLE}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+WRITEPROTECTION\+\_\+\+ENABLE(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                        \textcolor{keywordflow}{do}\{                                       \(\backslash\)}
+\DoxyCodeLine{                            (\_\_HANDLE\_\_)-\/>Instance-\/>WPR = 0xFFU;  \(\backslash\)}
+\DoxyCodeLine{                          \} \textcolor{keywordflow}{while}(0)}
+
+\end{DoxyCode}
+
+
+Enable the write protection for RTC registers. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$strong$>$\+HANDLE$<$/strong$>$} & specifies the RTC handle. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 448 of file stm32f4xx\+\_\+hal\+\_\+rtc.\+h.
+

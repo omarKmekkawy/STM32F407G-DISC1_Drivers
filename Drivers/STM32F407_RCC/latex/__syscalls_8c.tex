@@ -1,0 +1,70 @@
+\doxysection{system/src/newlib/\+\_\+syscalls.c File Reference}
+\label{__syscalls_8c}\index{system/src/newlib/\_syscalls.c@{system/src/newlib/\_syscalls.c}}
+{\ttfamily \#include $<$\+\_\+ansi.\+h$>$}\newline
+{\ttfamily \#include $<$\+\_\+syslist.\+h$>$}\newline
+{\ttfamily \#include $<$errno.\+h$>$}\newline
+{\ttfamily \#include $<$sys/stat.\+h$>$}\newline
+{\ttfamily \#include $<$sys/time.\+h$>$}\newline
+{\ttfamily \#include $<$sys/times.\+h$>$}\newline
+{\ttfamily \#include $<$limits.\+h$>$}\newline
+{\ttfamily \#include $<$signal.\+h$>$}\newline
+Include dependency graph for \+\_\+syscalls.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{__syscalls_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void $\ast$\+\_\+\+\_\+dso\+\_\+handle \textbf{ \+\_\+\+\_\+attribute\+\_\+\+\_\+} ((weak))
+\item 
+void \textbf{ \+\_\+\+\_\+initialize\+\_\+args} (int $\ast$p\+\_\+argc, char $\ast$$\ast$$\ast$p\+\_\+argv)
+\item 
+int \textbf{ kill} (pid\+\_\+t pid, int sig)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \textbf{ errno}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\label{__syscalls_8c_a5844d415953685a00a9b402ceb3cc2ab}} 
+\index{\_syscalls.c@{\_syscalls.c}!\_\_attribute\_\_@{\_\_attribute\_\_}}
+\index{\_\_attribute\_\_@{\_\_attribute\_\_}!\_syscalls.c@{\_syscalls.c}}
+\doxysubsubsection{\_\_attribute\_\_()}
+{\footnotesize\ttfamily void$\ast$ \+\_\+\+\_\+dso\+\_\+handle \+\_\+\+\_\+attribute\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{(weak)}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 56 of file \+\_\+syscalls.\+c.
+
+\mbox{\label{__syscalls_8c_a33bc2e95322efcc789c6cb81624b5527}} 
+\index{\_syscalls.c@{\_syscalls.c}!\_\_initialize\_args@{\_\_initialize\_args}}
+\index{\_\_initialize\_args@{\_\_initialize\_args}!\_syscalls.c@{\_syscalls.c}}
+\doxysubsubsection{\_\_initialize\_args()}
+{\footnotesize\ttfamily void \+\_\+\+\_\+initialize\+\_\+args (\begin{DoxyParamCaption}\item[{int $\ast$}]{p\+\_\+argc,  }\item[{char $\ast$$\ast$$\ast$}]{p\+\_\+argv }\end{DoxyParamCaption})}
+
+\mbox{\label{__syscalls_8c_a4539db972bcf3dd8c8b429af0dc3789d}} 
+\index{\_syscalls.c@{\_syscalls.c}!kill@{kill}}
+\index{kill@{kill}!\_syscalls.c@{\_syscalls.c}}
+\doxysubsubsection{kill()}
+{\footnotesize\ttfamily int kill (\begin{DoxyParamCaption}\item[{pid\+\_\+t}]{pid,  }\item[{int}]{sig }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\label{__syscalls_8c_ad65a8842cc674e3ddf69355898c0ecbf}} 
+\index{\_syscalls.c@{\_syscalls.c}!errno@{errno}}
+\index{errno@{errno}!\_syscalls.c@{\_syscalls.c}}
+\doxysubsubsection{errno}
+{\footnotesize\ttfamily int errno}
+
+
+
+Definition at line 30 of file \+\_\+syscalls.\+c.
+

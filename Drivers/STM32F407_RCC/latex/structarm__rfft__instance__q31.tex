@@ -1,0 +1,123 @@
+\doxysection{arm\+\_\+rfft\+\_\+instance\+\_\+q31 Struct Reference}
+\label{structarm__rfft__instance__q31}\index{arm\_rfft\_instance\_q31@{arm\_rfft\_instance\_q31}}
+
+
+Instance structure for the Q31 RFFT/\+RIFFT function.  
+
+
+
+
+{\ttfamily \#include $<$arm\+\_\+math.\+h$>$}
+
+
+
+Collaboration diagram for arm\+\_\+rfft\+\_\+instance\+\_\+q31\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=194pt]{structarm__rfft__instance__q31__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \textbf{ fft\+Len\+Real}
+\item 
+uint8\+\_\+t \textbf{ ifft\+FlagR}
+\item 
+uint8\+\_\+t \textbf{ bit\+Reverse\+FlagR}
+\item 
+uint32\+\_\+t \textbf{ twid\+Coef\+RModifier}
+\item 
+\textbf{ q31\+\_\+t} $\ast$ \textbf{ p\+Twiddle\+AReal}
+\item 
+\textbf{ q31\+\_\+t} $\ast$ \textbf{ p\+Twiddle\+BReal}
+\item 
+const \textbf{ arm\+\_\+cfft\+\_\+instance\+\_\+q31} $\ast$ \textbf{ p\+Cfft}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Instance structure for the Q31 RFFT/\+RIFFT function. 
+
+Definition at line 2183 of file arm\+\_\+math.\+h.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\label{structarm__rfft__instance__q31_ad56ec2425e2422108b8767b43d944591}} 
+\index{arm\_rfft\_instance\_q31@{arm\_rfft\_instance\_q31}!bitReverseFlagR@{bitReverseFlagR}}
+\index{bitReverseFlagR@{bitReverseFlagR}!arm\_rfft\_instance\_q31@{arm\_rfft\_instance\_q31}}
+\doxysubsubsection{bitReverseFlagR}
+{\footnotesize\ttfamily uint8\+\_\+t bit\+Reverse\+FlagR}
+
+flag that enables (bit\+Reverse\+FlagR=1) or disables (bit\+Reverse\+FlagR=0) bit reversal of output. 
+
+Definition at line 2187 of file arm\+\_\+math.\+h.
+
+\mbox{\label{structarm__rfft__instance__q31_adf0d4604cf5546075d9d4cf122d6c986}} 
+\index{arm\_rfft\_instance\_q31@{arm\_rfft\_instance\_q31}!fftLenReal@{fftLenReal}}
+\index{fftLenReal@{fftLenReal}!arm\_rfft\_instance\_q31@{arm\_rfft\_instance\_q31}}
+\doxysubsubsection{fftLenReal}
+{\footnotesize\ttfamily uint32\+\_\+t fft\+Len\+Real}
+
+length of the real FFT. 
+
+Definition at line 2185 of file arm\+\_\+math.\+h.
+
+\mbox{\label{structarm__rfft__instance__q31_a787d72055c89e4d62b188d6bd646341c}} 
+\index{arm\_rfft\_instance\_q31@{arm\_rfft\_instance\_q31}!ifftFlagR@{ifftFlagR}}
+\index{ifftFlagR@{ifftFlagR}!arm\_rfft\_instance\_q31@{arm\_rfft\_instance\_q31}}
+\doxysubsubsection{ifftFlagR}
+{\footnotesize\ttfamily uint8\+\_\+t ifft\+FlagR}
+
+flag that selects forward (ifft\+FlagR=0) or inverse (ifft\+FlagR=1) transform. 
+
+Definition at line 2186 of file arm\+\_\+math.\+h.
+
+\mbox{\label{structarm__rfft__instance__q31_aa583d759b8b176ad1696b27eb5821daf}} 
+\index{arm\_rfft\_instance\_q31@{arm\_rfft\_instance\_q31}!pCfft@{pCfft}}
+\index{pCfft@{pCfft}!arm\_rfft\_instance\_q31@{arm\_rfft\_instance\_q31}}
+\doxysubsubsection{pCfft}
+{\footnotesize\ttfamily const \textbf{ arm\+\_\+cfft\+\_\+instance\+\_\+q31}$\ast$ p\+Cfft}
+
+points to the complex FFT instance. 
+
+Definition at line 2191 of file arm\+\_\+math.\+h.
+
+\mbox{\label{structarm__rfft__instance__q31_a059faa282f9186687d843ead4a7a0d7e}} 
+\index{arm\_rfft\_instance\_q31@{arm\_rfft\_instance\_q31}!pTwiddleAReal@{pTwiddleAReal}}
+\index{pTwiddleAReal@{pTwiddleAReal}!arm\_rfft\_instance\_q31@{arm\_rfft\_instance\_q31}}
+\doxysubsubsection{pTwiddleAReal}
+{\footnotesize\ttfamily \textbf{ q31\+\_\+t}$\ast$ p\+Twiddle\+AReal}
+
+points to the real twiddle factor table. 
+
+Definition at line 2189 of file arm\+\_\+math.\+h.
+
+\mbox{\label{structarm__rfft__instance__q31_a611c385424ce77519f599980f96d5846}} 
+\index{arm\_rfft\_instance\_q31@{arm\_rfft\_instance\_q31}!pTwiddleBReal@{pTwiddleBReal}}
+\index{pTwiddleBReal@{pTwiddleBReal}!arm\_rfft\_instance\_q31@{arm\_rfft\_instance\_q31}}
+\doxysubsubsection{pTwiddleBReal}
+{\footnotesize\ttfamily \textbf{ q31\+\_\+t}$\ast$ p\+Twiddle\+BReal}
+
+points to the imag twiddle factor table. 
+
+Definition at line 2190 of file arm\+\_\+math.\+h.
+
+\mbox{\label{structarm__rfft__instance__q31_a5b06f7f76c018db993fe6acc5708c589}} 
+\index{arm\_rfft\_instance\_q31@{arm\_rfft\_instance\_q31}!twidCoefRModifier@{twidCoefRModifier}}
+\index{twidCoefRModifier@{twidCoefRModifier}!arm\_rfft\_instance\_q31@{arm\_rfft\_instance\_q31}}
+\doxysubsubsection{twidCoefRModifier}
+{\footnotesize\ttfamily uint32\+\_\+t twid\+Coef\+RModifier}
+
+twiddle coefficient modifier that supports different size FFTs with the same twiddle factor table. 
+
+Definition at line 2188 of file arm\+\_\+math.\+h.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+system/include/cmsis/\textbf{ arm\+\_\+math.\+h}\end{DoxyCompactItemize}

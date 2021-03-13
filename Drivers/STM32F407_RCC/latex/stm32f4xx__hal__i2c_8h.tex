@@ -1,0 +1,344 @@
+\doxysection{system/include/stm32f4-\/hal/stm32f4xx\+\_\+hal\+\_\+i2c.h File Reference}
+\label{stm32f4xx__hal__i2c_8h}\index{system/include/stm32f4-\/hal/stm32f4xx\_hal\_i2c.h@{system/include/stm32f4-\/hal/stm32f4xx\_hal\_i2c.h}}
+
+
+Header file of I2C HAL module.  
+
+
+{\ttfamily \#include \char`\"{}stm32f4xx\+\_\+hal\+\_\+def.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}stm32f4xx\+\_\+hal\+\_\+i2c\+\_\+ex.\+h\char`\"{}}\newline
+Include dependency graph for stm32f4xx\+\_\+hal\+\_\+i2c.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{stm32f4xx__hal__i2c_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{stm32f4xx__hal__i2c_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \textbf{ I2\+C\+\_\+\+Init\+Type\+Def}
+\begin{DoxyCompactList}\small\item\em I2C Configuration Structure definition. \end{DoxyCompactList}\item 
+struct \textbf{ I2\+C\+\_\+\+Handle\+Type\+Def}
+\begin{DoxyCompactList}\small\item\em I2C handle Structure definition. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \textbf{ HAL\+\_\+\+I2\+C\+\_\+\+ERROR\+\_\+\+NONE}~((uint32\+\_\+t)0x00000000U)
+\item 
+\#define \textbf{ HAL\+\_\+\+I2\+C\+\_\+\+ERROR\+\_\+\+BERR}~((uint32\+\_\+t)0x00000001U)
+\item 
+\#define \textbf{ HAL\+\_\+\+I2\+C\+\_\+\+ERROR\+\_\+\+ARLO}~((uint32\+\_\+t)0x00000002U)
+\item 
+\#define \textbf{ HAL\+\_\+\+I2\+C\+\_\+\+ERROR\+\_\+\+AF}~((uint32\+\_\+t)0x00000004U)
+\item 
+\#define \textbf{ HAL\+\_\+\+I2\+C\+\_\+\+ERROR\+\_\+\+OVR}~((uint32\+\_\+t)0x00000008U)
+\item 
+\#define \textbf{ HAL\+\_\+\+I2\+C\+\_\+\+ERROR\+\_\+\+DMA}~((uint32\+\_\+t)0x00000010U)
+\item 
+\#define \textbf{ HAL\+\_\+\+I2\+C\+\_\+\+ERROR\+\_\+\+TIMEOUT}~((uint32\+\_\+t)0x00000020U)
+\item 
+\#define \textbf{ I2\+C\+\_\+\+DUTYCYCLE\+\_\+2}~((uint32\+\_\+t)0x00000000U)
+\item 
+\#define \textbf{ I2\+C\+\_\+\+DUTYCYCLE\+\_\+16\+\_\+9}~\textbf{ I2\+C\+\_\+\+CCR\+\_\+\+DUTY}
+\item 
+\#define \textbf{ I2\+C\+\_\+\+ADDRESSINGMODE\+\_\+7\+BIT}~((uint32\+\_\+t)0x00004000U)
+\item 
+\#define \textbf{ I2\+C\+\_\+\+ADDRESSINGMODE\+\_\+10\+BIT}~(\textbf{ I2\+C\+\_\+\+OAR1\+\_\+\+ADDMODE} $\vert$ ((uint32\+\_\+t)0x00004000U))
+\item 
+\#define \textbf{ I2\+C\+\_\+\+DUALADDRESS\+\_\+\+DISABLE}~((uint32\+\_\+t)0x00000000U)
+\item 
+\#define \textbf{ I2\+C\+\_\+\+DUALADDRESS\+\_\+\+ENABLE}~\textbf{ I2\+C\+\_\+\+OAR2\+\_\+\+ENDUAL}
+\item 
+\#define \textbf{ I2\+C\+\_\+\+GENERALCALL\+\_\+\+DISABLE}~((uint32\+\_\+t)0x00000000U)
+\item 
+\#define \textbf{ I2\+C\+\_\+\+GENERALCALL\+\_\+\+ENABLE}~\textbf{ I2\+C\+\_\+\+CR1\+\_\+\+ENGC}
+\item 
+\#define \textbf{ I2\+C\+\_\+\+NOSTRETCH\+\_\+\+DISABLE}~((uint32\+\_\+t)0x00000000U)
+\item 
+\#define \textbf{ I2\+C\+\_\+\+NOSTRETCH\+\_\+\+ENABLE}~\textbf{ I2\+C\+\_\+\+CR1\+\_\+\+NOSTRETCH}
+\item 
+\#define \textbf{ I2\+C\+\_\+\+MEMADD\+\_\+\+SIZE\+\_\+8\+BIT}~((uint32\+\_\+t)0x00000001U)
+\item 
+\#define \textbf{ I2\+C\+\_\+\+MEMADD\+\_\+\+SIZE\+\_\+16\+BIT}~((uint32\+\_\+t)0x00000010U)
+\item 
+\#define \textbf{ I2\+C\+\_\+\+DIRECTION\+\_\+\+RECEIVE}~((uint32\+\_\+t)0x00000000U)
+\item 
+\#define \textbf{ I2\+C\+\_\+\+DIRECTION\+\_\+\+TRANSMIT}~((uint32\+\_\+t)0x00000001U)
+\item 
+\#define \textbf{ I2\+C\+\_\+\+FIRST\+\_\+\+FRAME}~((uint32\+\_\+t)0x00000001U)
+\item 
+\#define \textbf{ I2\+C\+\_\+\+NEXT\+\_\+\+FRAME}~((uint32\+\_\+t)0x00000002U)
+\item 
+\#define \textbf{ I2\+C\+\_\+\+FIRST\+\_\+\+AND\+\_\+\+LAST\+\_\+\+FRAME}~((uint32\+\_\+t)0x00000004U)
+\item 
+\#define \textbf{ I2\+C\+\_\+\+LAST\+\_\+\+FRAME}~((uint32\+\_\+t)0x00000008U)
+\item 
+\#define \textbf{ I2\+C\+\_\+\+IT\+\_\+\+BUF}~\textbf{ I2\+C\+\_\+\+CR2\+\_\+\+ITBUFEN}
+\item 
+\#define \textbf{ I2\+C\+\_\+\+IT\+\_\+\+EVT}~\textbf{ I2\+C\+\_\+\+CR2\+\_\+\+ITEVTEN}
+\item 
+\#define \textbf{ I2\+C\+\_\+\+IT\+\_\+\+ERR}~\textbf{ I2\+C\+\_\+\+CR2\+\_\+\+ITERREN}
+\item 
+\#define \textbf{ I2\+C\+\_\+\+FLAG\+\_\+\+SMBALERT}~((uint32\+\_\+t)0x00018000U)
+\item 
+\#define \textbf{ I2\+C\+\_\+\+FLAG\+\_\+\+TIMEOUT}~((uint32\+\_\+t)0x00014000U)
+\item 
+\#define \textbf{ I2\+C\+\_\+\+FLAG\+\_\+\+PECERR}~((uint32\+\_\+t)0x00011000U)
+\item 
+\#define \textbf{ I2\+C\+\_\+\+FLAG\+\_\+\+OVR}~((uint32\+\_\+t)0x00010800U)
+\item 
+\#define \textbf{ I2\+C\+\_\+\+FLAG\+\_\+\+AF}~((uint32\+\_\+t)0x00010400U)
+\item 
+\#define \textbf{ I2\+C\+\_\+\+FLAG\+\_\+\+ARLO}~((uint32\+\_\+t)0x00010200U)
+\item 
+\#define \textbf{ I2\+C\+\_\+\+FLAG\+\_\+\+BERR}~((uint32\+\_\+t)0x00010100U)
+\item 
+\#define \textbf{ I2\+C\+\_\+\+FLAG\+\_\+\+TXE}~((uint32\+\_\+t)0x00010080U)
+\item 
+\#define \textbf{ I2\+C\+\_\+\+FLAG\+\_\+\+RXNE}~((uint32\+\_\+t)0x00010040U)
+\item 
+\#define \textbf{ I2\+C\+\_\+\+FLAG\+\_\+\+STOPF}~((uint32\+\_\+t)0x00010010U)
+\item 
+\#define \textbf{ I2\+C\+\_\+\+FLAG\+\_\+\+ADD10}~((uint32\+\_\+t)0x00010008U)
+\item 
+\#define \textbf{ I2\+C\+\_\+\+FLAG\+\_\+\+BTF}~((uint32\+\_\+t)0x00010004U)
+\item 
+\#define \textbf{ I2\+C\+\_\+\+FLAG\+\_\+\+ADDR}~((uint32\+\_\+t)0x00010002U)
+\item 
+\#define \textbf{ I2\+C\+\_\+\+FLAG\+\_\+\+SB}~((uint32\+\_\+t)0x00010001U)
+\item 
+\#define \textbf{ I2\+C\+\_\+\+FLAG\+\_\+\+DUALF}~((uint32\+\_\+t)0x00100080U)
+\item 
+\#define \textbf{ I2\+C\+\_\+\+FLAG\+\_\+\+SMBHOST}~((uint32\+\_\+t)0x00100040U)
+\item 
+\#define \textbf{ I2\+C\+\_\+\+FLAG\+\_\+\+SMBDEFAULT}~((uint32\+\_\+t)0x00100020U)
+\item 
+\#define \textbf{ I2\+C\+\_\+\+FLAG\+\_\+\+GENCALL}~((uint32\+\_\+t)0x00100010U)
+\item 
+\#define \textbf{ I2\+C\+\_\+\+FLAG\+\_\+\+TRA}~((uint32\+\_\+t)0x00100004U)
+\item 
+\#define \textbf{ I2\+C\+\_\+\+FLAG\+\_\+\+BUSY}~((uint32\+\_\+t)0x00100002U)
+\item 
+\#define \textbf{ I2\+C\+\_\+\+FLAG\+\_\+\+MSL}~((uint32\+\_\+t)0x00100001U)
+\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+I2\+C\+\_\+\+RESET\+\_\+\+HANDLE\+\_\+\+STATE}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$State = \textbf{ HAL\+\_\+\+I2\+C\+\_\+\+STATE\+\_\+\+RESET})
+\begin{DoxyCompactList}\small\item\em Reset I2C handle state. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+I2\+C\+\_\+\+ENABLE\+\_\+\+IT}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$CR2 $\vert$= (\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+))
+\begin{DoxyCompactList}\small\item\em Enable or disable the specified I2C interrupts. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+I2\+C\+\_\+\+DISABLE\+\_\+\+IT}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$CR2 \&= ($\sim$(\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)))
+\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+I2\+C\+\_\+\+GET\+\_\+\+IT\+\_\+\+SOURCE}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)~((((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$CR2 \& (\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)) == (\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)) ? \textbf{ SET} \+: \textbf{ RESET})
+\begin{DoxyCompactList}\small\item\em Checks if the specified I2C interrupt source is enabled or disabled. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+I2\+C\+\_\+\+GET\+\_\+\+FLAG}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+FLAG\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Checks whether the specified I2C flag is set or not. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+I2\+C\+\_\+\+CLEAR\+\_\+\+FLAG}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+FLAG\+\_\+\+\_\+)~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$SR1 = $\sim$((\+\_\+\+\_\+\+FLAG\+\_\+\+\_\+) \& \textbf{ I2\+C\+\_\+\+FLAG\+\_\+\+MASK}))
+\begin{DoxyCompactList}\small\item\em Clears the I2C pending flags which are cleared by writing 0 in a specific bit. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+I2\+C\+\_\+\+CLEAR\+\_\+\+ADDRFLAG}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Clears the I2C ADDR pending flag. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+I2\+C\+\_\+\+CLEAR\+\_\+\+STOPFLAG}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Clears the I2C STOPF pending flag. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+I2\+C\+\_\+\+ENABLE}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$CR1 $\vert$=  \textbf{ I2\+C\+\_\+\+CR1\+\_\+\+PE})
+\begin{DoxyCompactList}\small\item\em Enable the I2C peripheral. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+I2\+C\+\_\+\+DISABLE}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$CR1 \&=  $\sim$\textbf{ I2\+C\+\_\+\+CR1\+\_\+\+PE})
+\begin{DoxyCompactList}\small\item\em Disable the I2C peripheral. \end{DoxyCompactList}\item 
+\#define \textbf{ I2\+C\+\_\+\+FLAG\+\_\+\+MASK}~((uint32\+\_\+t)0x0000\+FFFFU)
+\item 
+\#define \textbf{ I2\+C\+\_\+\+FREQRANGE}(\+\_\+\+\_\+\+PCLK\+\_\+\+\_\+)~((\+\_\+\+\_\+\+PCLK\+\_\+\+\_\+)/1000000U)
+\item 
+\#define \textbf{ I2\+C\+\_\+\+RISE\+\_\+\+TIME}(\+\_\+\+\_\+\+FREQRANGE\+\_\+\+\_\+,  \+\_\+\+\_\+\+SPEED\+\_\+\+\_\+)~(((\+\_\+\+\_\+\+SPEED\+\_\+\+\_\+) $<$= 100000U) ? ((\+\_\+\+\_\+\+FREQRANGE\+\_\+\+\_\+) + 1U) \+: ((((\+\_\+\+\_\+\+FREQRANGE\+\_\+\+\_\+) $\ast$ 300U) / 1000U) + 1U))
+\item 
+\#define \textbf{ I2\+C\+\_\+\+SPEED\+\_\+\+STANDARD}(\+\_\+\+\_\+\+PCLK\+\_\+\+\_\+,  \+\_\+\+\_\+\+SPEED\+\_\+\+\_\+)~(((((\+\_\+\+\_\+\+PCLK\+\_\+\+\_\+)/((\+\_\+\+\_\+\+SPEED\+\_\+\+\_\+) $<$$<$ 1U)) \& \textbf{ I2\+C\+\_\+\+CCR\+\_\+\+CCR}) $<$ 4U)? 4U\+:((\+\_\+\+\_\+\+PCLK\+\_\+\+\_\+) / ((\+\_\+\+\_\+\+SPEED\+\_\+\+\_\+) $<$$<$ 1U)))
+\item 
+\#define \textbf{ I2\+C\+\_\+\+SPEED\+\_\+\+FAST}(\+\_\+\+\_\+\+PCLK\+\_\+\+\_\+,  \+\_\+\+\_\+\+SPEED\+\_\+\+\_\+,  \+\_\+\+\_\+\+DUTYCYCLE\+\_\+\+\_\+)~(((\+\_\+\+\_\+\+DUTYCYCLE\+\_\+\+\_\+) == \textbf{ I2\+C\+\_\+\+DUTYCYCLE\+\_\+2})? ((\+\_\+\+\_\+\+PCLK\+\_\+\+\_\+) / ((\+\_\+\+\_\+\+SPEED\+\_\+\+\_\+) $\ast$ 3U)) \+: (((\+\_\+\+\_\+\+PCLK\+\_\+\+\_\+) / ((\+\_\+\+\_\+\+SPEED\+\_\+\+\_\+) $\ast$ 25U)) $\vert$ \textbf{ I2\+C\+\_\+\+DUTYCYCLE\+\_\+16\+\_\+9}))
+\item 
+\#define \textbf{ I2\+C\+\_\+\+SPEED}(\+\_\+\+\_\+\+PCLK\+\_\+\+\_\+,  \+\_\+\+\_\+\+SPEED\+\_\+\+\_\+,  \+\_\+\+\_\+\+DUTYCYCLE\+\_\+\+\_\+)
+\item 
+\#define \textbf{ I2\+C\+\_\+7\+BIT\+\_\+\+ADD\+\_\+\+WRITE}(\+\_\+\+\_\+\+ADDRESS\+\_\+\+\_\+)~((uint8\+\_\+t)((\+\_\+\+\_\+\+ADDRESS\+\_\+\+\_\+) \& ($\sim$\textbf{ I2\+C\+\_\+\+OAR1\+\_\+\+ADD0})))
+\item 
+\#define \textbf{ I2\+C\+\_\+7\+BIT\+\_\+\+ADD\+\_\+\+READ}(\+\_\+\+\_\+\+ADDRESS\+\_\+\+\_\+)~((uint8\+\_\+t)((\+\_\+\+\_\+\+ADDRESS\+\_\+\+\_\+) $\vert$ \textbf{ I2\+C\+\_\+\+OAR1\+\_\+\+ADD0}))
+\item 
+\#define \textbf{ I2\+C\+\_\+10\+BIT\+\_\+\+ADDRESS}(\+\_\+\+\_\+\+ADDRESS\+\_\+\+\_\+)~((uint8\+\_\+t)((uint16\+\_\+t)((\+\_\+\+\_\+\+ADDRESS\+\_\+\+\_\+) \& (uint16\+\_\+t)(0x00\+FFU))))
+\item 
+\#define \textbf{ I2\+C\+\_\+10\+BIT\+\_\+\+HEADER\+\_\+\+WRITE}(\+\_\+\+\_\+\+ADDRESS\+\_\+\+\_\+)~((uint8\+\_\+t)((uint16\+\_\+t)((uint16\+\_\+t)(((uint16\+\_\+t)((\+\_\+\+\_\+\+ADDRESS\+\_\+\+\_\+) \& (uint16\+\_\+t)(0x0300U))) $>$$>$ 7U) $\vert$ (uint16\+\_\+t)(0x00\+F0U))))
+\item 
+\#define \textbf{ I2\+C\+\_\+10\+BIT\+\_\+\+HEADER\+\_\+\+READ}(\+\_\+\+\_\+\+ADDRESS\+\_\+\+\_\+)~((uint8\+\_\+t)((uint16\+\_\+t)((uint16\+\_\+t)(((uint16\+\_\+t)((\+\_\+\+\_\+\+ADDRESS\+\_\+\+\_\+) \& (uint16\+\_\+t)(0x0300U))) $>$$>$ 7U) $\vert$ (uint16\+\_\+t)(0x00\+F1U))))
+\item 
+\#define \textbf{ I2\+C\+\_\+\+MEM\+\_\+\+ADD\+\_\+\+MSB}(\+\_\+\+\_\+\+ADDRESS\+\_\+\+\_\+)~((uint8\+\_\+t)((uint16\+\_\+t)(((uint16\+\_\+t)((\+\_\+\+\_\+\+ADDRESS\+\_\+\+\_\+) \& (uint16\+\_\+t)(0x\+FF00U))) $>$$>$ 8U)))
+\item 
+\#define \textbf{ I2\+C\+\_\+\+MEM\+\_\+\+ADD\+\_\+\+LSB}(\+\_\+\+\_\+\+ADDRESS\+\_\+\+\_\+)~((uint8\+\_\+t)((uint16\+\_\+t)((\+\_\+\+\_\+\+ADDRESS\+\_\+\+\_\+) \& (uint16\+\_\+t)(0x00\+FFU))))
+\item 
+\#define \textbf{ IS\+\_\+\+I2\+C\+\_\+\+DUTY\+\_\+\+CYCLE}(CYCLE)
+\item 
+\#define \textbf{ IS\+\_\+\+I2\+C\+\_\+\+ADDRESSING\+\_\+\+MODE}(ADDRESS)
+\item 
+\#define \textbf{ IS\+\_\+\+I2\+C\+\_\+\+DUAL\+\_\+\+ADDRESS}(ADDRESS)
+\item 
+\#define \textbf{ IS\+\_\+\+I2\+C\+\_\+\+GENERAL\+\_\+\+CALL}(CALL)
+\item 
+\#define \textbf{ IS\+\_\+\+I2\+C\+\_\+\+NO\+\_\+\+STRETCH}(STRETCH)
+\item 
+\#define \textbf{ IS\+\_\+\+I2\+C\+\_\+\+MEMADD\+\_\+\+SIZE}(SIZE)
+\item 
+\#define \textbf{ IS\+\_\+\+I2\+C\+\_\+\+CLOCK\+\_\+\+SPEED}(SPEED)~(((SPEED) $>$ 0) \&\& ((SPEED) $<$= 400000U))
+\item 
+\#define \textbf{ IS\+\_\+\+I2\+C\+\_\+\+OWN\+\_\+\+ADDRESS1}(ADDRESS1)~(((ADDRESS1) \& (uint32\+\_\+t)(0x\+FFFFFC00U)) == 0U)
+\item 
+\#define \textbf{ IS\+\_\+\+I2\+C\+\_\+\+OWN\+\_\+\+ADDRESS2}(ADDRESS2)~(((ADDRESS2) \& (uint32\+\_\+t)(0x\+FFFFFF01U)) == 0U)
+\item 
+\#define \textbf{ IS\+\_\+\+I2\+C\+\_\+\+TRANSFER\+\_\+\+OPTIONS\+\_\+\+REQUEST}(REQUEST)
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \textbf{ HAL\+\_\+\+I2\+C\+\_\+\+State\+Type\+Def} \{ \newline
+\textbf{ HAL\+\_\+\+I2\+C\+\_\+\+STATE\+\_\+\+RESET} = 0x00U
+, \textbf{ HAL\+\_\+\+I2\+C\+\_\+\+STATE\+\_\+\+READY} = 0x20U
+, \textbf{ HAL\+\_\+\+I2\+C\+\_\+\+STATE\+\_\+\+BUSY} = 0x24U
+, \textbf{ HAL\+\_\+\+I2\+C\+\_\+\+STATE\+\_\+\+BUSY\+\_\+\+TX} = 0x21U
+, \newline
+\textbf{ HAL\+\_\+\+I2\+C\+\_\+\+STATE\+\_\+\+BUSY\+\_\+\+RX} = 0x22U
+, \textbf{ HAL\+\_\+\+I2\+C\+\_\+\+STATE\+\_\+\+LISTEN} = 0x28U
+, \textbf{ HAL\+\_\+\+I2\+C\+\_\+\+STATE\+\_\+\+BUSY\+\_\+\+TX\+\_\+\+LISTEN} = 0x29U
+, \textbf{ HAL\+\_\+\+I2\+C\+\_\+\+STATE\+\_\+\+BUSY\+\_\+\+RX\+\_\+\+LISTEN} = 0x2\+AU
+, \newline
+\textbf{ HAL\+\_\+\+I2\+C\+\_\+\+STATE\+\_\+\+ABORT} = 0x60U
+, \textbf{ HAL\+\_\+\+I2\+C\+\_\+\+STATE\+\_\+\+TIMEOUT} = 0x\+A0U
+, \textbf{ HAL\+\_\+\+I2\+C\+\_\+\+STATE\+\_\+\+ERROR} = 0x\+E0U
+ \}
+\begin{DoxyCompactList}\small\item\em HAL State structure definition. \end{DoxyCompactList}\item 
+enum \textbf{ HAL\+\_\+\+I2\+C\+\_\+\+Mode\+Type\+Def} \{ \textbf{ HAL\+\_\+\+I2\+C\+\_\+\+MODE\+\_\+\+NONE} = 0x00U
+, \textbf{ HAL\+\_\+\+I2\+C\+\_\+\+MODE\+\_\+\+MASTER} = 0x10U
+, \textbf{ HAL\+\_\+\+I2\+C\+\_\+\+MODE\+\_\+\+SLAVE} = 0x20U
+, \textbf{ HAL\+\_\+\+I2\+C\+\_\+\+MODE\+\_\+\+MEM} = 0x40U
+ \}
+\begin{DoxyCompactList}\small\item\em HAL Mode structure definition. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+I2\+C\+\_\+\+Init} (\textbf{ I2\+C\+\_\+\+Handle\+Type\+Def} $\ast$hi2c)
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+I2\+C\+\_\+\+De\+Init} (\textbf{ I2\+C\+\_\+\+Handle\+Type\+Def} $\ast$hi2c)
+\item 
+void \textbf{ HAL\+\_\+\+I2\+C\+\_\+\+Msp\+Init} (\textbf{ I2\+C\+\_\+\+Handle\+Type\+Def} $\ast$hi2c)
+\item 
+void \textbf{ HAL\+\_\+\+I2\+C\+\_\+\+Msp\+De\+Init} (\textbf{ I2\+C\+\_\+\+Handle\+Type\+Def} $\ast$hi2c)
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+I2\+C\+\_\+\+Master\+\_\+\+Transmit} (\textbf{ I2\+C\+\_\+\+Handle\+Type\+Def} $\ast$hi2c, uint16\+\_\+t Dev\+Address, uint8\+\_\+t $\ast$p\+Data, uint16\+\_\+t Size, uint32\+\_\+t Timeout)
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+I2\+C\+\_\+\+Master\+\_\+\+Receive} (\textbf{ I2\+C\+\_\+\+Handle\+Type\+Def} $\ast$hi2c, uint16\+\_\+t Dev\+Address, uint8\+\_\+t $\ast$p\+Data, uint16\+\_\+t Size, uint32\+\_\+t Timeout)
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+I2\+C\+\_\+\+Slave\+\_\+\+Transmit} (\textbf{ I2\+C\+\_\+\+Handle\+Type\+Def} $\ast$hi2c, uint8\+\_\+t $\ast$p\+Data, uint16\+\_\+t Size, uint32\+\_\+t Timeout)
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+I2\+C\+\_\+\+Slave\+\_\+\+Receive} (\textbf{ I2\+C\+\_\+\+Handle\+Type\+Def} $\ast$hi2c, uint8\+\_\+t $\ast$p\+Data, uint16\+\_\+t Size, uint32\+\_\+t Timeout)
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+I2\+C\+\_\+\+Mem\+\_\+\+Write} (\textbf{ I2\+C\+\_\+\+Handle\+Type\+Def} $\ast$hi2c, uint16\+\_\+t Dev\+Address, uint16\+\_\+t Mem\+Address, uint16\+\_\+t Mem\+Add\+Size, uint8\+\_\+t $\ast$p\+Data, uint16\+\_\+t Size, uint32\+\_\+t Timeout)
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+I2\+C\+\_\+\+Mem\+\_\+\+Read} (\textbf{ I2\+C\+\_\+\+Handle\+Type\+Def} $\ast$hi2c, uint16\+\_\+t Dev\+Address, uint16\+\_\+t Mem\+Address, uint16\+\_\+t Mem\+Add\+Size, uint8\+\_\+t $\ast$p\+Data, uint16\+\_\+t Size, uint32\+\_\+t Timeout)
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+I2\+C\+\_\+\+Is\+Device\+Ready} (\textbf{ I2\+C\+\_\+\+Handle\+Type\+Def} $\ast$hi2c, uint16\+\_\+t Dev\+Address, uint32\+\_\+t Trials, uint32\+\_\+t Timeout)
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+I2\+C\+\_\+\+Master\+\_\+\+Transmit\+\_\+\+IT} (\textbf{ I2\+C\+\_\+\+Handle\+Type\+Def} $\ast$hi2c, uint16\+\_\+t Dev\+Address, uint8\+\_\+t $\ast$p\+Data, uint16\+\_\+t Size)
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+I2\+C\+\_\+\+Master\+\_\+\+Receive\+\_\+\+IT} (\textbf{ I2\+C\+\_\+\+Handle\+Type\+Def} $\ast$hi2c, uint16\+\_\+t Dev\+Address, uint8\+\_\+t $\ast$p\+Data, uint16\+\_\+t Size)
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+I2\+C\+\_\+\+Slave\+\_\+\+Transmit\+\_\+\+IT} (\textbf{ I2\+C\+\_\+\+Handle\+Type\+Def} $\ast$hi2c, uint8\+\_\+t $\ast$p\+Data, uint16\+\_\+t Size)
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+I2\+C\+\_\+\+Slave\+\_\+\+Receive\+\_\+\+IT} (\textbf{ I2\+C\+\_\+\+Handle\+Type\+Def} $\ast$hi2c, uint8\+\_\+t $\ast$p\+Data, uint16\+\_\+t Size)
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+I2\+C\+\_\+\+Mem\+\_\+\+Write\+\_\+\+IT} (\textbf{ I2\+C\+\_\+\+Handle\+Type\+Def} $\ast$hi2c, uint16\+\_\+t Dev\+Address, uint16\+\_\+t Mem\+Address, uint16\+\_\+t Mem\+Add\+Size, uint8\+\_\+t $\ast$p\+Data, uint16\+\_\+t Size)
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+I2\+C\+\_\+\+Mem\+\_\+\+Read\+\_\+\+IT} (\textbf{ I2\+C\+\_\+\+Handle\+Type\+Def} $\ast$hi2c, uint16\+\_\+t Dev\+Address, uint16\+\_\+t Mem\+Address, uint16\+\_\+t Mem\+Add\+Size, uint8\+\_\+t $\ast$p\+Data, uint16\+\_\+t Size)
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+I2\+C\+\_\+\+Master\+\_\+\+Sequential\+\_\+\+Transmit\+\_\+\+IT} (\textbf{ I2\+C\+\_\+\+Handle\+Type\+Def} $\ast$hi2c, uint16\+\_\+t Dev\+Address, uint8\+\_\+t $\ast$p\+Data, uint16\+\_\+t Size, uint32\+\_\+t Xfer\+Options)
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+I2\+C\+\_\+\+Master\+\_\+\+Sequential\+\_\+\+Receive\+\_\+\+IT} (\textbf{ I2\+C\+\_\+\+Handle\+Type\+Def} $\ast$hi2c, uint16\+\_\+t Dev\+Address, uint8\+\_\+t $\ast$p\+Data, uint16\+\_\+t Size, uint32\+\_\+t Xfer\+Options)
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+I2\+C\+\_\+\+Slave\+\_\+\+Sequential\+\_\+\+Transmit\+\_\+\+IT} (\textbf{ I2\+C\+\_\+\+Handle\+Type\+Def} $\ast$hi2c, uint8\+\_\+t $\ast$p\+Data, uint16\+\_\+t Size, uint32\+\_\+t Xfer\+Options)
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+I2\+C\+\_\+\+Slave\+\_\+\+Sequential\+\_\+\+Receive\+\_\+\+IT} (\textbf{ I2\+C\+\_\+\+Handle\+Type\+Def} $\ast$hi2c, uint8\+\_\+t $\ast$p\+Data, uint16\+\_\+t Size, uint32\+\_\+t Xfer\+Options)
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+I2\+C\+\_\+\+Master\+\_\+\+Abort\+\_\+\+IT} (\textbf{ I2\+C\+\_\+\+Handle\+Type\+Def} $\ast$hi2c, uint16\+\_\+t Dev\+Address)
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+I2\+C\+\_\+\+Enable\+Listen\+\_\+\+IT} (\textbf{ I2\+C\+\_\+\+Handle\+Type\+Def} $\ast$hi2c)
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+I2\+C\+\_\+\+Disable\+Listen\+\_\+\+IT} (\textbf{ I2\+C\+\_\+\+Handle\+Type\+Def} $\ast$hi2c)
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+I2\+C\+\_\+\+Master\+\_\+\+Transmit\+\_\+\+DMA} (\textbf{ I2\+C\+\_\+\+Handle\+Type\+Def} $\ast$hi2c, uint16\+\_\+t Dev\+Address, uint8\+\_\+t $\ast$p\+Data, uint16\+\_\+t Size)
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+I2\+C\+\_\+\+Master\+\_\+\+Receive\+\_\+\+DMA} (\textbf{ I2\+C\+\_\+\+Handle\+Type\+Def} $\ast$hi2c, uint16\+\_\+t Dev\+Address, uint8\+\_\+t $\ast$p\+Data, uint16\+\_\+t Size)
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+I2\+C\+\_\+\+Slave\+\_\+\+Transmit\+\_\+\+DMA} (\textbf{ I2\+C\+\_\+\+Handle\+Type\+Def} $\ast$hi2c, uint8\+\_\+t $\ast$p\+Data, uint16\+\_\+t Size)
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+I2\+C\+\_\+\+Slave\+\_\+\+Receive\+\_\+\+DMA} (\textbf{ I2\+C\+\_\+\+Handle\+Type\+Def} $\ast$hi2c, uint8\+\_\+t $\ast$p\+Data, uint16\+\_\+t Size)
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+I2\+C\+\_\+\+Mem\+\_\+\+Write\+\_\+\+DMA} (\textbf{ I2\+C\+\_\+\+Handle\+Type\+Def} $\ast$hi2c, uint16\+\_\+t Dev\+Address, uint16\+\_\+t Mem\+Address, uint16\+\_\+t Mem\+Add\+Size, uint8\+\_\+t $\ast$p\+Data, uint16\+\_\+t Size)
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+I2\+C\+\_\+\+Mem\+\_\+\+Read\+\_\+\+DMA} (\textbf{ I2\+C\+\_\+\+Handle\+Type\+Def} $\ast$hi2c, uint16\+\_\+t Dev\+Address, uint16\+\_\+t Mem\+Address, uint16\+\_\+t Mem\+Add\+Size, uint8\+\_\+t $\ast$p\+Data, uint16\+\_\+t Size)
+\item 
+void \textbf{ HAL\+\_\+\+I2\+C\+\_\+\+EV\+\_\+\+IRQHandler} (\textbf{ I2\+C\+\_\+\+Handle\+Type\+Def} $\ast$hi2c)
+\item 
+void \textbf{ HAL\+\_\+\+I2\+C\+\_\+\+ER\+\_\+\+IRQHandler} (\textbf{ I2\+C\+\_\+\+Handle\+Type\+Def} $\ast$hi2c)
+\item 
+void \textbf{ HAL\+\_\+\+I2\+C\+\_\+\+Master\+Tx\+Cplt\+Callback} (\textbf{ I2\+C\+\_\+\+Handle\+Type\+Def} $\ast$hi2c)
+\item 
+void \textbf{ HAL\+\_\+\+I2\+C\+\_\+\+Master\+Rx\+Cplt\+Callback} (\textbf{ I2\+C\+\_\+\+Handle\+Type\+Def} $\ast$hi2c)
+\item 
+void \textbf{ HAL\+\_\+\+I2\+C\+\_\+\+Slave\+Tx\+Cplt\+Callback} (\textbf{ I2\+C\+\_\+\+Handle\+Type\+Def} $\ast$hi2c)
+\item 
+void \textbf{ HAL\+\_\+\+I2\+C\+\_\+\+Slave\+Rx\+Cplt\+Callback} (\textbf{ I2\+C\+\_\+\+Handle\+Type\+Def} $\ast$hi2c)
+\item 
+void \textbf{ HAL\+\_\+\+I2\+C\+\_\+\+Addr\+Callback} (\textbf{ I2\+C\+\_\+\+Handle\+Type\+Def} $\ast$hi2c, uint8\+\_\+t Transfer\+Direction, uint16\+\_\+t Addr\+Match\+Code)
+\item 
+void \textbf{ HAL\+\_\+\+I2\+C\+\_\+\+Listen\+Cplt\+Callback} (\textbf{ I2\+C\+\_\+\+Handle\+Type\+Def} $\ast$hi2c)
+\item 
+void \textbf{ HAL\+\_\+\+I2\+C\+\_\+\+Mem\+Tx\+Cplt\+Callback} (\textbf{ I2\+C\+\_\+\+Handle\+Type\+Def} $\ast$hi2c)
+\item 
+void \textbf{ HAL\+\_\+\+I2\+C\+\_\+\+Mem\+Rx\+Cplt\+Callback} (\textbf{ I2\+C\+\_\+\+Handle\+Type\+Def} $\ast$hi2c)
+\item 
+void \textbf{ HAL\+\_\+\+I2\+C\+\_\+\+Error\+Callback} (\textbf{ I2\+C\+\_\+\+Handle\+Type\+Def} $\ast$hi2c)
+\item 
+void \textbf{ HAL\+\_\+\+I2\+C\+\_\+\+Abort\+Cplt\+Callback} (\textbf{ I2\+C\+\_\+\+Handle\+Type\+Def} $\ast$hi2c)
+\item 
+\textbf{ HAL\+\_\+\+I2\+C\+\_\+\+State\+Type\+Def} \textbf{ HAL\+\_\+\+I2\+C\+\_\+\+Get\+State} (\textbf{ I2\+C\+\_\+\+Handle\+Type\+Def} $\ast$hi2c)
+\item 
+\textbf{ HAL\+\_\+\+I2\+C\+\_\+\+Mode\+Type\+Def} \textbf{ HAL\+\_\+\+I2\+C\+\_\+\+Get\+Mode} (\textbf{ I2\+C\+\_\+\+Handle\+Type\+Def} $\ast$hi2c)
+\item 
+uint32\+\_\+t \textbf{ HAL\+\_\+\+I2\+C\+\_\+\+Get\+Error} (\textbf{ I2\+C\+\_\+\+Handle\+Type\+Def} $\ast$hi2c)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Header file of I2C HAL module. 
+
+\begin{DoxyAuthor}{Author}
+MCD Application Team 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+V1.\+5.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+06-\/May-\/2016
+\end{DoxyDate}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+\doxysubsubsection*{\begin{center}\copyright{} COPYRIGHT(c) 2016 STMicroelectronics\end{center} }
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met\+:
+\begin{DoxyEnumerate}
+\item Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+\item Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+\item Neither the name of STMicroelectronics nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+\end{DoxyEnumerate}
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \char`\"{}\+AS IS\char`\"{} AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. 

@@ -1,0 +1,80 @@
+\doxysection{system/include/stm32f4-\/hal/stm32f4xx\+\_\+hal\+\_\+rcc\+\_\+ex.h File Reference}
+\label{stm32f4xx__hal__rcc__ex_8h}\index{system/include/stm32f4-\/hal/stm32f4xx\_hal\_rcc\_ex.h@{system/include/stm32f4-\/hal/stm32f4xx\_hal\_rcc\_ex.h}}
+
+
+Header file of RCC HAL Extension module.  
+
+
+{\ttfamily \#include \char`\"{}stm32f4xx\+\_\+hal\+\_\+def.\+h\char`\"{}}\newline
+Include dependency graph for stm32f4xx\+\_\+hal\+\_\+rcc\+\_\+ex.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{stm32f4xx__hal__rcc__ex_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{stm32f4xx__hal__rcc__ex_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \textbf{ RCC\+\_\+\+PLLInit\+Type\+Def}
+\begin{DoxyCompactList}\small\item\em RCC PLL configuration structure definition. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+PLL\+\_\+\+CONFIG}(\+\_\+\+\_\+\+RCC\+\_\+\+PLLSource\+\_\+\+\_\+,  \+\_\+\+\_\+\+PLLM\+\_\+\+\_\+,  \+\_\+\+\_\+\+PLLN\+\_\+\+\_\+,  \+\_\+\+\_\+\+PLLP\+\_\+\+\_\+,  \+\_\+\+\_\+\+PLLQ\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Macro to configure the main PLL clock source, multiplication and division factors. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+PLLI2\+S\+\_\+\+CONFIG}(\+\_\+\+\_\+\+PLLI2\+SN\+\_\+\+\_\+,  \+\_\+\+\_\+\+PLLI2\+SR\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Macro to configure the PLLI2S clock multiplication and division factors . \end{DoxyCompactList}\item 
+\#define \textbf{ RCC\+\_\+\+CFGR\+\_\+\+OFFSET}~(\textbf{ RCC\+\_\+\+OFFSET} + 0x08U)
+\item 
+\#define \textbf{ PLL\+\_\+\+TIMEOUT\+\_\+\+VALUE}~((uint32\+\_\+t)2)  /$\ast$ 2 ms $\ast$/
+\item 
+\#define \textbf{ IS\+\_\+\+RCC\+\_\+\+PLLN\+\_\+\+VALUE}(VALUE)~((50U $<$= (VALUE)) \&\& ((VALUE) $<$= 432U))
+\item 
+\#define \textbf{ IS\+\_\+\+RCC\+\_\+\+PLLI2\+SN\+\_\+\+VALUE}(VALUE)~((50U $<$= (VALUE)) \&\& ((VALUE) $<$= 432U))
+\item 
+\#define \textbf{ IS\+\_\+\+RCC\+\_\+\+PLLI2\+SR\+\_\+\+VALUE}(VALUE)~((2U $<$= (VALUE)) \&\& ((VALUE) $<$= 7U))
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+RCCEx\+\_\+\+Periph\+CLKConfig} (RCC\+\_\+\+Periph\+CLKInit\+Type\+Def $\ast$Periph\+Clk\+Init)
+\item 
+void \textbf{ HAL\+\_\+\+RCCEx\+\_\+\+Get\+Periph\+CLKConfig} (RCC\+\_\+\+Periph\+CLKInit\+Type\+Def $\ast$Periph\+Clk\+Init)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Header file of RCC HAL Extension module. 
+
+\begin{DoxyAuthor}{Author}
+MCD Application Team 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+V1.\+5.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+06-\/May-\/2016
+\end{DoxyDate}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+\doxysubsubsection*{\begin{center}\copyright{} COPYRIGHT(c) 2016 STMicroelectronics\end{center} }
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met\+:
+\begin{DoxyEnumerate}
+\item Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+\item Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+\item Neither the name of STMicroelectronics nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+\end{DoxyEnumerate}
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \char`\"{}\+AS IS\char`\"{} AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. 

@@ -1,0 +1,83 @@
+\doxysection{I2S Private Functions}
+\label{group___i2_s___private___functions}\index{I2S Private Functions@{I2S Private Functions}}
+Collaboration diagram for I2S Private Functions\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=256pt]{group___i2_s___private___functions}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \textbf{ I2\+S\+\_\+\+DMATx\+Cplt} (\textbf{ DMA\+\_\+\+Handle\+Type\+Def} $\ast$hdma)
+\item 
+void \textbf{ I2\+S\+\_\+\+DMATx\+Half\+Cplt} (\textbf{ DMA\+\_\+\+Handle\+Type\+Def} $\ast$hdma)
+\item 
+void \textbf{ I2\+S\+\_\+\+DMARx\+Cplt} (\textbf{ DMA\+\_\+\+Handle\+Type\+Def} $\ast$hdma)
+\item 
+void \textbf{ I2\+S\+\_\+\+DMARx\+Half\+Cplt} (\textbf{ DMA\+\_\+\+Handle\+Type\+Def} $\ast$hdma)
+\item 
+void \textbf{ I2\+S\+\_\+\+DMAError} (\textbf{ DMA\+\_\+\+Handle\+Type\+Def} $\ast$hdma)
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ I2\+S\+\_\+\+Wait\+Flag\+State\+Until\+Timeout} (\textbf{ I2\+S\+\_\+\+Handle\+Type\+Def} $\ast$hi2s, uint32\+\_\+t Flag, uint32\+\_\+t Status, uint32\+\_\+t Timeout)
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ I2\+S\+\_\+\+Transmit\+\_\+\+IT} (\textbf{ I2\+S\+\_\+\+Handle\+Type\+Def} $\ast$hi2s)
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ I2\+S\+\_\+\+Receive\+\_\+\+IT} (\textbf{ I2\+S\+\_\+\+Handle\+Type\+Def} $\ast$hi2s)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\label{group___i2_s___private___functions_gaba9556ceca0ad8bffa4946c2bb2598ae}} 
+\index{I2S Private Functions@{I2S Private Functions}!I2S\_DMAError@{I2S\_DMAError}}
+\index{I2S\_DMAError@{I2S\_DMAError}!I2S Private Functions@{I2S Private Functions}}
+\doxysubsubsection{I2S\_DMAError()}
+{\footnotesize\ttfamily void I2\+S\+\_\+\+DMAError (\begin{DoxyParamCaption}\item[{\textbf{ DMA\+\_\+\+Handle\+Type\+Def} $\ast$}]{hdma }\end{DoxyParamCaption})}
+
+\mbox{\label{group___i2_s___private___functions_ga8d2bf0ca3ff0f11da49d3e8616c75d36}} 
+\index{I2S Private Functions@{I2S Private Functions}!I2S\_DMARxCplt@{I2S\_DMARxCplt}}
+\index{I2S\_DMARxCplt@{I2S\_DMARxCplt}!I2S Private Functions@{I2S Private Functions}}
+\doxysubsubsection{I2S\_DMARxCplt()}
+{\footnotesize\ttfamily void I2\+S\+\_\+\+DMARx\+Cplt (\begin{DoxyParamCaption}\item[{\textbf{ DMA\+\_\+\+Handle\+Type\+Def} $\ast$}]{hdma }\end{DoxyParamCaption})}
+
+\mbox{\label{group___i2_s___private___functions_ga21556bd3ebfc035450de4628b5b029d8}} 
+\index{I2S Private Functions@{I2S Private Functions}!I2S\_DMARxHalfCplt@{I2S\_DMARxHalfCplt}}
+\index{I2S\_DMARxHalfCplt@{I2S\_DMARxHalfCplt}!I2S Private Functions@{I2S Private Functions}}
+\doxysubsubsection{I2S\_DMARxHalfCplt()}
+{\footnotesize\ttfamily void I2\+S\+\_\+\+DMARx\+Half\+Cplt (\begin{DoxyParamCaption}\item[{\textbf{ DMA\+\_\+\+Handle\+Type\+Def} $\ast$}]{hdma }\end{DoxyParamCaption})}
+
+\mbox{\label{group___i2_s___private___functions_ga716b431b25e7fd7c359dcc0ed9ffb6e2}} 
+\index{I2S Private Functions@{I2S Private Functions}!I2S\_DMATxCplt@{I2S\_DMATxCplt}}
+\index{I2S\_DMATxCplt@{I2S\_DMATxCplt}!I2S Private Functions@{I2S Private Functions}}
+\doxysubsubsection{I2S\_DMATxCplt()}
+{\footnotesize\ttfamily void I2\+S\+\_\+\+DMATx\+Cplt (\begin{DoxyParamCaption}\item[{\textbf{ DMA\+\_\+\+Handle\+Type\+Def} $\ast$}]{hdma }\end{DoxyParamCaption})}
+
+\mbox{\label{group___i2_s___private___functions_gaf2d811c698cf13db91942c5b7e0c4a85}} 
+\index{I2S Private Functions@{I2S Private Functions}!I2S\_DMATxHalfCplt@{I2S\_DMATxHalfCplt}}
+\index{I2S\_DMATxHalfCplt@{I2S\_DMATxHalfCplt}!I2S Private Functions@{I2S Private Functions}}
+\doxysubsubsection{I2S\_DMATxHalfCplt()}
+{\footnotesize\ttfamily void I2\+S\+\_\+\+DMATx\+Half\+Cplt (\begin{DoxyParamCaption}\item[{\textbf{ DMA\+\_\+\+Handle\+Type\+Def} $\ast$}]{hdma }\end{DoxyParamCaption})}
+
+\mbox{\label{group___i2_s___private___functions_ga63ccf6ad24ce0c2ea10431c268898abb}} 
+\index{I2S Private Functions@{I2S Private Functions}!I2S\_Receive\_IT@{I2S\_Receive\_IT}}
+\index{I2S\_Receive\_IT@{I2S\_Receive\_IT}!I2S Private Functions@{I2S Private Functions}}
+\doxysubsubsection{I2S\_Receive\_IT()}
+{\footnotesize\ttfamily \textbf{ HAL\+\_\+\+Status\+Type\+Def} I2\+S\+\_\+\+Receive\+\_\+\+IT (\begin{DoxyParamCaption}\item[{\textbf{ I2\+S\+\_\+\+Handle\+Type\+Def} $\ast$}]{hi2s }\end{DoxyParamCaption})}
+
+\mbox{\label{group___i2_s___private___functions_ga80e9ca584798c1c970bd234b7294b09b}} 
+\index{I2S Private Functions@{I2S Private Functions}!I2S\_Transmit\_IT@{I2S\_Transmit\_IT}}
+\index{I2S\_Transmit\_IT@{I2S\_Transmit\_IT}!I2S Private Functions@{I2S Private Functions}}
+\doxysubsubsection{I2S\_Transmit\_IT()}
+{\footnotesize\ttfamily \textbf{ HAL\+\_\+\+Status\+Type\+Def} I2\+S\+\_\+\+Transmit\+\_\+\+IT (\begin{DoxyParamCaption}\item[{\textbf{ I2\+S\+\_\+\+Handle\+Type\+Def} $\ast$}]{hi2s }\end{DoxyParamCaption})}
+
+\mbox{\label{group___i2_s___private___functions_gab49e7928ef4021ca00931059b0cc3545}} 
+\index{I2S Private Functions@{I2S Private Functions}!I2S\_WaitFlagStateUntilTimeout@{I2S\_WaitFlagStateUntilTimeout}}
+\index{I2S\_WaitFlagStateUntilTimeout@{I2S\_WaitFlagStateUntilTimeout}!I2S Private Functions@{I2S Private Functions}}
+\doxysubsubsection{I2S\_WaitFlagStateUntilTimeout()}
+{\footnotesize\ttfamily \textbf{ HAL\+\_\+\+Status\+Type\+Def} I2\+S\+\_\+\+Wait\+Flag\+State\+Until\+Timeout (\begin{DoxyParamCaption}\item[{\textbf{ I2\+S\+\_\+\+Handle\+Type\+Def} $\ast$}]{hi2s,  }\item[{uint32\+\_\+t}]{Flag,  }\item[{uint32\+\_\+t}]{Status,  }\item[{uint32\+\_\+t}]{Timeout }\end{DoxyParamCaption})}
+

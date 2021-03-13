@@ -1,0 +1,21 @@
+<map id="RTCEx Exported Constants" name="RTCEx Exported Constants">
+<area shape="rect" id="node1" href="$group___r_t_c_ex___tamper___filter___definitions.html" title=" " alt="" coords="353,5,543,31"/>
+<area shape="rect" id="node2" href="$group___r_t_c_ex___tamper___trigger___definitions.html" title=" " alt="" coords="376,55,520,95"/>
+<area shape="rect" id="node3" href="$group___r_t_c_ex___tamper___sampling___frequencies___definitions.html" title=" " alt="" coords="367,119,529,159"/>
+<area shape="rect" id="node4" href="$group___r_t_c_ex.html" title="RTC HAL module driver." alt="" coords="5,484,68,509"/>
+<area shape="rect" id="node15" title=" " alt="" coords="116,484,299,509"/>
+<area shape="rect" id="node5" href="$group___r_t_c_ex___smooth__calib___plus__pulses___definitions.html" title=" " alt="" coords="369,183,527,223"/>
+<area shape="rect" id="node6" href="$group___r_t_c_ex___tamper___pins___selection.html" title=" " alt="" coords="359,248,537,273"/>
+<area shape="rect" id="node7" href="$group___r_t_c_ex___add__1___second___parameter___definitions.html" title=" " alt="" coords="349,298,547,338"/>
+<area shape="rect" id="node8" href="$group___r_t_c_ex___backup___registers___definitions.html" title=" " alt="" coords="371,362,525,402"/>
+<area shape="rect" id="node9" href="$group___r_t_c_ex___digital___calibration___definitions.html" title=" " alt="" coords="356,427,540,452"/>
+<area shape="rect" id="node10" href="$group___r_t_c_ex___time___stamp___edges__definitions.html" title=" " alt="" coords="369,477,527,517"/>
+<area shape="rect" id="node11" href="$group___r_t_c_ex___wakeup___timer___definitions.html" title=" " alt="" coords="347,541,549,567"/>
+<area shape="rect" id="node12" href="$group___r_t_c_ex___calib___output__selection___definitions.html" title=" " alt="" coords="357,591,539,631"/>
+<area shape="rect" id="node13" href="$group___r_t_c_ex___time_stamp___pin___selection.html" title=" " alt="" coords="375,655,521,695"/>
+<area shape="rect" id="node14" href="$group___r_t_c_ex___tamper___pull___u_p___definitions.html" title=" " alt="" coords="378,719,518,759"/>
+<area shape="rect" id="node16" href="$group___r_t_c_ex___tamper___time_stamp_on_tamper_detection___definitions.html" title=" " alt="" coords="366,784,530,839"/>
+<area shape="rect" id="node17" href="$group___r_t_c_ex___tamper___pins___definitions.html" title=" " alt="" coords="354,863,542,888"/>
+<area shape="rect" id="node18" href="$group___r_t_c_ex___smooth__calib__period___definitions.html" title=" " alt="" coords="363,913,533,953"/>
+<area shape="rect" id="node19" href="$group___r_t_c_ex___tamper___pin___precharge___duration___definitions.html" title=" " alt="" coords="358,977,538,1017"/>
+</map>

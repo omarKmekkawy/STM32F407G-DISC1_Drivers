@@ -1,0 +1,81 @@
+\doxysection{system/src/stm32f4-\/hal/stm32f4xx\+\_\+hal\+\_\+pccard.c File Reference}
+\label{stm32f4xx__hal__pccard_8c}\index{system/src/stm32f4-\/hal/stm32f4xx\_hal\_pccard.c@{system/src/stm32f4-\/hal/stm32f4xx\_hal\_pccard.c}}
+
+
+PCCARD HAL module driver. This file provides a generic firmware to drive PCCARD memories mounted as external device.  
+
+
+{\ttfamily \#include \char`\"{}stm32f4xx\+\_\+hal.\+h\char`\"{}}\newline
+Include dependency graph for stm32f4xx\+\_\+hal\+\_\+pccard.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{stm32f4xx__hal__pccard_8c__incl}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Detailed Description}
+PCCARD HAL module driver. This file provides a generic firmware to drive PCCARD memories mounted as external device. 
+
+\begin{DoxyAuthor}{Author}
+MCD Application Team 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+V1.\+5.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+06-\/May-\/2016
+\end{DoxyDate}
+\begin{DoxyVerb}===============================================================================
+                       ##### How to use this driver #####
+===============================================================================  
+  [..]
+    This driver is a generic layered driver which contains a set of APIs used to 
+    control PCCARD/compact flash memories. It uses the FMC/FSMC layer functions 
+    to interface with PCCARD devices. This driver is used for:
+   
+   (+) PCCARD/Compact Flash memory configuration sequence using the function 
+       HAL_PCCARD_Init()/HAL_CF_Init() with control and timing parameters for
+       both common and attribute spaces.
+           
+   (+) Read PCCARD/Compact Flash memory maker and device IDs using the function
+       HAL_PCCARD_Read_ID()/HAL_CF_Read_ID(). The read information is stored in
+       the CompactFlash_ID structure declared by the function caller. 
+       
+   (+) Access PCCARD/Compact Flash memory by read/write operations using the functions
+       HAL_PCCARD_Read_Sector()/ HAL_PCCARD_Write_Sector() - 
+       HAL_CF_Read_Sector()/HAL_CF_Write_Sector(), to read/write sector. 
+       
+   (+) Perform PCCARD/Compact Flash Reset chip operation using the function
+       HAL_PCCARD_Reset()/HAL_CF_Reset.
+       
+   (+) Perform PCCARD/Compact Flash erase sector operation using the function 
+       HAL_PCCARD_Erase_Sector()/HAL_CF_Erase_Sector.
+   
+   (+) Read the PCCARD/Compact Flash status operation using the function
+       HAL_PCCARD_ReadStatus()/HAL_CF_ReadStatus().
+    
+   (+) You can monitor the PCCARD/Compact Flash  device HAL state by calling
+       the function HAL_PCCARD_GetState()/HAL_CF_GetState()
+       
+  [..]
+    (@) This driver is a set of generic APIs which handle standard PCCARD/compact flash 
+        operations. If a PCCARD/Compact Flash device contains different operations 
+        and/or implementations, it should be implemented separately.\end{DoxyVerb}
+
+
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+\doxysubsubsection*{\begin{center}\copyright{} COPYRIGHT(c) 2016 STMicroelectronics\end{center} }
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met\+:
+\begin{DoxyEnumerate}
+\item Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+\item Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+\item Neither the name of STMicroelectronics nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+\end{DoxyEnumerate}
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \char`\"{}\+AS IS\char`\"{} AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. 

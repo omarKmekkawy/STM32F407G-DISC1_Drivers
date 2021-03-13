@@ -1,0 +1,139 @@
+\doxysection{IRDA\+\_\+\+Exported\+\_\+\+Functions\+\_\+\+Group2}
+\label{group___i_r_d_a___exported___functions___group2}\index{IRDA\_Exported\_Functions\_Group2@{IRDA\_Exported\_Functions\_Group2}}
+Collaboration diagram for IRDA\+\_\+\+Exported\+\_\+\+Functions\+\_\+\+Group2\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group___i_r_d_a___exported___functions___group2}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+IRDA\+\_\+\+Transmit} (\textbf{ IRDA\+\_\+\+Handle\+Type\+Def} $\ast$hirda, uint8\+\_\+t $\ast$p\+Data, uint16\+\_\+t Size, uint32\+\_\+t Timeout)
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+IRDA\+\_\+\+Receive} (\textbf{ IRDA\+\_\+\+Handle\+Type\+Def} $\ast$hirda, uint8\+\_\+t $\ast$p\+Data, uint16\+\_\+t Size, uint32\+\_\+t Timeout)
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+IRDA\+\_\+\+Transmit\+\_\+\+IT} (\textbf{ IRDA\+\_\+\+Handle\+Type\+Def} $\ast$hirda, uint8\+\_\+t $\ast$p\+Data, uint16\+\_\+t Size)
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+IRDA\+\_\+\+Receive\+\_\+\+IT} (\textbf{ IRDA\+\_\+\+Handle\+Type\+Def} $\ast$hirda, uint8\+\_\+t $\ast$p\+Data, uint16\+\_\+t Size)
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+IRDA\+\_\+\+Transmit\+\_\+\+DMA} (\textbf{ IRDA\+\_\+\+Handle\+Type\+Def} $\ast$hirda, uint8\+\_\+t $\ast$p\+Data, uint16\+\_\+t Size)
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+IRDA\+\_\+\+Receive\+\_\+\+DMA} (\textbf{ IRDA\+\_\+\+Handle\+Type\+Def} $\ast$hirda, uint8\+\_\+t $\ast$p\+Data, uint16\+\_\+t Size)
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+IRDA\+\_\+\+DMAPause} (\textbf{ IRDA\+\_\+\+Handle\+Type\+Def} $\ast$hirda)
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+IRDA\+\_\+\+DMAResume} (\textbf{ IRDA\+\_\+\+Handle\+Type\+Def} $\ast$hirda)
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+IRDA\+\_\+\+DMAStop} (\textbf{ IRDA\+\_\+\+Handle\+Type\+Def} $\ast$hirda)
+\item 
+void \textbf{ HAL\+\_\+\+IRDA\+\_\+\+IRQHandler} (\textbf{ IRDA\+\_\+\+Handle\+Type\+Def} $\ast$hirda)
+\item 
+void \textbf{ HAL\+\_\+\+IRDA\+\_\+\+Tx\+Cplt\+Callback} (\textbf{ IRDA\+\_\+\+Handle\+Type\+Def} $\ast$hirda)
+\item 
+void \textbf{ HAL\+\_\+\+IRDA\+\_\+\+Rx\+Cplt\+Callback} (\textbf{ IRDA\+\_\+\+Handle\+Type\+Def} $\ast$hirda)
+\item 
+void \textbf{ HAL\+\_\+\+IRDA\+\_\+\+Tx\+Half\+Cplt\+Callback} (\textbf{ IRDA\+\_\+\+Handle\+Type\+Def} $\ast$hirda)
+\item 
+void \textbf{ HAL\+\_\+\+IRDA\+\_\+\+Rx\+Half\+Cplt\+Callback} (\textbf{ IRDA\+\_\+\+Handle\+Type\+Def} $\ast$hirda)
+\item 
+void \textbf{ HAL\+\_\+\+IRDA\+\_\+\+Error\+Callback} (\textbf{ IRDA\+\_\+\+Handle\+Type\+Def} $\ast$hirda)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\label{group___i_r_d_a___exported___functions___group2_ga4920b45618df428b579260ccb0783eb7}} 
+\index{IRDA\_Exported\_Functions\_Group2@{IRDA\_Exported\_Functions\_Group2}!HAL\_IRDA\_DMAPause@{HAL\_IRDA\_DMAPause}}
+\index{HAL\_IRDA\_DMAPause@{HAL\_IRDA\_DMAPause}!IRDA\_Exported\_Functions\_Group2@{IRDA\_Exported\_Functions\_Group2}}
+\doxysubsubsection{HAL\_IRDA\_DMAPause()}
+{\footnotesize\ttfamily \textbf{ HAL\+\_\+\+Status\+Type\+Def} HAL\+\_\+\+IRDA\+\_\+\+DMAPause (\begin{DoxyParamCaption}\item[{\textbf{ IRDA\+\_\+\+Handle\+Type\+Def} $\ast$}]{hirda }\end{DoxyParamCaption})}
+
+\mbox{\label{group___i_r_d_a___exported___functions___group2_gaf82acca0902e184d0805569889932795}} 
+\index{IRDA\_Exported\_Functions\_Group2@{IRDA\_Exported\_Functions\_Group2}!HAL\_IRDA\_DMAResume@{HAL\_IRDA\_DMAResume}}
+\index{HAL\_IRDA\_DMAResume@{HAL\_IRDA\_DMAResume}!IRDA\_Exported\_Functions\_Group2@{IRDA\_Exported\_Functions\_Group2}}
+\doxysubsubsection{HAL\_IRDA\_DMAResume()}
+{\footnotesize\ttfamily \textbf{ HAL\+\_\+\+Status\+Type\+Def} HAL\+\_\+\+IRDA\+\_\+\+DMAResume (\begin{DoxyParamCaption}\item[{\textbf{ IRDA\+\_\+\+Handle\+Type\+Def} $\ast$}]{hirda }\end{DoxyParamCaption})}
+
+\mbox{\label{group___i_r_d_a___exported___functions___group2_ga3ffa3a8e6af6c73b96c482b306d20c6b}} 
+\index{IRDA\_Exported\_Functions\_Group2@{IRDA\_Exported\_Functions\_Group2}!HAL\_IRDA\_DMAStop@{HAL\_IRDA\_DMAStop}}
+\index{HAL\_IRDA\_DMAStop@{HAL\_IRDA\_DMAStop}!IRDA\_Exported\_Functions\_Group2@{IRDA\_Exported\_Functions\_Group2}}
+\doxysubsubsection{HAL\_IRDA\_DMAStop()}
+{\footnotesize\ttfamily \textbf{ HAL\+\_\+\+Status\+Type\+Def} HAL\+\_\+\+IRDA\+\_\+\+DMAStop (\begin{DoxyParamCaption}\item[{\textbf{ IRDA\+\_\+\+Handle\+Type\+Def} $\ast$}]{hirda }\end{DoxyParamCaption})}
+
+\mbox{\label{group___i_r_d_a___exported___functions___group2_ga85ffb4337deb42820d49f3882a728f7f}} 
+\index{IRDA\_Exported\_Functions\_Group2@{IRDA\_Exported\_Functions\_Group2}!HAL\_IRDA\_ErrorCallback@{HAL\_IRDA\_ErrorCallback}}
+\index{HAL\_IRDA\_ErrorCallback@{HAL\_IRDA\_ErrorCallback}!IRDA\_Exported\_Functions\_Group2@{IRDA\_Exported\_Functions\_Group2}}
+\doxysubsubsection{HAL\_IRDA\_ErrorCallback()}
+{\footnotesize\ttfamily void HAL\+\_\+\+IRDA\+\_\+\+Error\+Callback (\begin{DoxyParamCaption}\item[{\textbf{ IRDA\+\_\+\+Handle\+Type\+Def} $\ast$}]{hirda }\end{DoxyParamCaption})}
+
+\mbox{\label{group___i_r_d_a___exported___functions___group2_ga816a681851f93d038e7bda5193b9d933}} 
+\index{IRDA\_Exported\_Functions\_Group2@{IRDA\_Exported\_Functions\_Group2}!HAL\_IRDA\_IRQHandler@{HAL\_IRDA\_IRQHandler}}
+\index{HAL\_IRDA\_IRQHandler@{HAL\_IRDA\_IRQHandler}!IRDA\_Exported\_Functions\_Group2@{IRDA\_Exported\_Functions\_Group2}}
+\doxysubsubsection{HAL\_IRDA\_IRQHandler()}
+{\footnotesize\ttfamily void HAL\+\_\+\+IRDA\+\_\+\+IRQHandler (\begin{DoxyParamCaption}\item[{\textbf{ IRDA\+\_\+\+Handle\+Type\+Def} $\ast$}]{hirda }\end{DoxyParamCaption})}
+
+\mbox{\label{group___i_r_d_a___exported___functions___group2_ga4148e8cd07056a07a827c537f2f7823c}} 
+\index{IRDA\_Exported\_Functions\_Group2@{IRDA\_Exported\_Functions\_Group2}!HAL\_IRDA\_Receive@{HAL\_IRDA\_Receive}}
+\index{HAL\_IRDA\_Receive@{HAL\_IRDA\_Receive}!IRDA\_Exported\_Functions\_Group2@{IRDA\_Exported\_Functions\_Group2}}
+\doxysubsubsection{HAL\_IRDA\_Receive()}
+{\footnotesize\ttfamily \textbf{ HAL\+\_\+\+Status\+Type\+Def} HAL\+\_\+\+IRDA\+\_\+\+Receive (\begin{DoxyParamCaption}\item[{\textbf{ IRDA\+\_\+\+Handle\+Type\+Def} $\ast$}]{hirda,  }\item[{uint8\+\_\+t $\ast$}]{p\+Data,  }\item[{uint16\+\_\+t}]{Size,  }\item[{uint32\+\_\+t}]{Timeout }\end{DoxyParamCaption})}
+
+\mbox{\label{group___i_r_d_a___exported___functions___group2_gac62331245b03bde69283075bcfd8533c}} 
+\index{IRDA\_Exported\_Functions\_Group2@{IRDA\_Exported\_Functions\_Group2}!HAL\_IRDA\_Receive\_DMA@{HAL\_IRDA\_Receive\_DMA}}
+\index{HAL\_IRDA\_Receive\_DMA@{HAL\_IRDA\_Receive\_DMA}!IRDA\_Exported\_Functions\_Group2@{IRDA\_Exported\_Functions\_Group2}}
+\doxysubsubsection{HAL\_IRDA\_Receive\_DMA()}
+{\footnotesize\ttfamily \textbf{ HAL\+\_\+\+Status\+Type\+Def} HAL\+\_\+\+IRDA\+\_\+\+Receive\+\_\+\+DMA (\begin{DoxyParamCaption}\item[{\textbf{ IRDA\+\_\+\+Handle\+Type\+Def} $\ast$}]{hirda,  }\item[{uint8\+\_\+t $\ast$}]{p\+Data,  }\item[{uint16\+\_\+t}]{Size }\end{DoxyParamCaption})}
+
+\mbox{\label{group___i_r_d_a___exported___functions___group2_ga0ea98454afb5ec16a39ba1b5b8142005}} 
+\index{IRDA\_Exported\_Functions\_Group2@{IRDA\_Exported\_Functions\_Group2}!HAL\_IRDA\_Receive\_IT@{HAL\_IRDA\_Receive\_IT}}
+\index{HAL\_IRDA\_Receive\_IT@{HAL\_IRDA\_Receive\_IT}!IRDA\_Exported\_Functions\_Group2@{IRDA\_Exported\_Functions\_Group2}}
+\doxysubsubsection{HAL\_IRDA\_Receive\_IT()}
+{\footnotesize\ttfamily \textbf{ HAL\+\_\+\+Status\+Type\+Def} HAL\+\_\+\+IRDA\+\_\+\+Receive\+\_\+\+IT (\begin{DoxyParamCaption}\item[{\textbf{ IRDA\+\_\+\+Handle\+Type\+Def} $\ast$}]{hirda,  }\item[{uint8\+\_\+t $\ast$}]{p\+Data,  }\item[{uint16\+\_\+t}]{Size }\end{DoxyParamCaption})}
+
+\mbox{\label{group___i_r_d_a___exported___functions___group2_gafbebae7dda1e7b54dc664c95802127c6}} 
+\index{IRDA\_Exported\_Functions\_Group2@{IRDA\_Exported\_Functions\_Group2}!HAL\_IRDA\_RxCpltCallback@{HAL\_IRDA\_RxCpltCallback}}
+\index{HAL\_IRDA\_RxCpltCallback@{HAL\_IRDA\_RxCpltCallback}!IRDA\_Exported\_Functions\_Group2@{IRDA\_Exported\_Functions\_Group2}}
+\doxysubsubsection{HAL\_IRDA\_RxCpltCallback()}
+{\footnotesize\ttfamily void HAL\+\_\+\+IRDA\+\_\+\+Rx\+Cplt\+Callback (\begin{DoxyParamCaption}\item[{\textbf{ IRDA\+\_\+\+Handle\+Type\+Def} $\ast$}]{hirda }\end{DoxyParamCaption})}
+
+\mbox{\label{group___i_r_d_a___exported___functions___group2_gab164406c67c36ab562580e3fce8d6165}} 
+\index{IRDA\_Exported\_Functions\_Group2@{IRDA\_Exported\_Functions\_Group2}!HAL\_IRDA\_RxHalfCpltCallback@{HAL\_IRDA\_RxHalfCpltCallback}}
+\index{HAL\_IRDA\_RxHalfCpltCallback@{HAL\_IRDA\_RxHalfCpltCallback}!IRDA\_Exported\_Functions\_Group2@{IRDA\_Exported\_Functions\_Group2}}
+\doxysubsubsection{HAL\_IRDA\_RxHalfCpltCallback()}
+{\footnotesize\ttfamily void HAL\+\_\+\+IRDA\+\_\+\+Rx\+Half\+Cplt\+Callback (\begin{DoxyParamCaption}\item[{\textbf{ IRDA\+\_\+\+Handle\+Type\+Def} $\ast$}]{hirda }\end{DoxyParamCaption})}
+
+\mbox{\label{group___i_r_d_a___exported___functions___group2_ga8581077ae166780a2bd0c8d9b38c1ab2}} 
+\index{IRDA\_Exported\_Functions\_Group2@{IRDA\_Exported\_Functions\_Group2}!HAL\_IRDA\_Transmit@{HAL\_IRDA\_Transmit}}
+\index{HAL\_IRDA\_Transmit@{HAL\_IRDA\_Transmit}!IRDA\_Exported\_Functions\_Group2@{IRDA\_Exported\_Functions\_Group2}}
+\doxysubsubsection{HAL\_IRDA\_Transmit()}
+{\footnotesize\ttfamily \textbf{ HAL\+\_\+\+Status\+Type\+Def} HAL\+\_\+\+IRDA\+\_\+\+Transmit (\begin{DoxyParamCaption}\item[{\textbf{ IRDA\+\_\+\+Handle\+Type\+Def} $\ast$}]{hirda,  }\item[{uint8\+\_\+t $\ast$}]{p\+Data,  }\item[{uint16\+\_\+t}]{Size,  }\item[{uint32\+\_\+t}]{Timeout }\end{DoxyParamCaption})}
+
+\mbox{\label{group___i_r_d_a___exported___functions___group2_ga18d0f0c044c27c41223b2f0361fe3ae3}} 
+\index{IRDA\_Exported\_Functions\_Group2@{IRDA\_Exported\_Functions\_Group2}!HAL\_IRDA\_Transmit\_DMA@{HAL\_IRDA\_Transmit\_DMA}}
+\index{HAL\_IRDA\_Transmit\_DMA@{HAL\_IRDA\_Transmit\_DMA}!IRDA\_Exported\_Functions\_Group2@{IRDA\_Exported\_Functions\_Group2}}
+\doxysubsubsection{HAL\_IRDA\_Transmit\_DMA()}
+{\footnotesize\ttfamily \textbf{ HAL\+\_\+\+Status\+Type\+Def} HAL\+\_\+\+IRDA\+\_\+\+Transmit\+\_\+\+DMA (\begin{DoxyParamCaption}\item[{\textbf{ IRDA\+\_\+\+Handle\+Type\+Def} $\ast$}]{hirda,  }\item[{uint8\+\_\+t $\ast$}]{p\+Data,  }\item[{uint16\+\_\+t}]{Size }\end{DoxyParamCaption})}
+
+\mbox{\label{group___i_r_d_a___exported___functions___group2_gac6ea111f9cf4b8a89059708e2e8f1b81}} 
+\index{IRDA\_Exported\_Functions\_Group2@{IRDA\_Exported\_Functions\_Group2}!HAL\_IRDA\_Transmit\_IT@{HAL\_IRDA\_Transmit\_IT}}
+\index{HAL\_IRDA\_Transmit\_IT@{HAL\_IRDA\_Transmit\_IT}!IRDA\_Exported\_Functions\_Group2@{IRDA\_Exported\_Functions\_Group2}}
+\doxysubsubsection{HAL\_IRDA\_Transmit\_IT()}
+{\footnotesize\ttfamily \textbf{ HAL\+\_\+\+Status\+Type\+Def} HAL\+\_\+\+IRDA\+\_\+\+Transmit\+\_\+\+IT (\begin{DoxyParamCaption}\item[{\textbf{ IRDA\+\_\+\+Handle\+Type\+Def} $\ast$}]{hirda,  }\item[{uint8\+\_\+t $\ast$}]{p\+Data,  }\item[{uint16\+\_\+t}]{Size }\end{DoxyParamCaption})}
+
+\mbox{\label{group___i_r_d_a___exported___functions___group2_gaafb45ea63d8cd87e6856c320135b78dd}} 
+\index{IRDA\_Exported\_Functions\_Group2@{IRDA\_Exported\_Functions\_Group2}!HAL\_IRDA\_TxCpltCallback@{HAL\_IRDA\_TxCpltCallback}}
+\index{HAL\_IRDA\_TxCpltCallback@{HAL\_IRDA\_TxCpltCallback}!IRDA\_Exported\_Functions\_Group2@{IRDA\_Exported\_Functions\_Group2}}
+\doxysubsubsection{HAL\_IRDA\_TxCpltCallback()}
+{\footnotesize\ttfamily void HAL\+\_\+\+IRDA\+\_\+\+Tx\+Cplt\+Callback (\begin{DoxyParamCaption}\item[{\textbf{ IRDA\+\_\+\+Handle\+Type\+Def} $\ast$}]{hirda }\end{DoxyParamCaption})}
+
+\mbox{\label{group___i_r_d_a___exported___functions___group2_gab2f5c3c37aae09155b6872f93f12761f}} 
+\index{IRDA\_Exported\_Functions\_Group2@{IRDA\_Exported\_Functions\_Group2}!HAL\_IRDA\_TxHalfCpltCallback@{HAL\_IRDA\_TxHalfCpltCallback}}
+\index{HAL\_IRDA\_TxHalfCpltCallback@{HAL\_IRDA\_TxHalfCpltCallback}!IRDA\_Exported\_Functions\_Group2@{IRDA\_Exported\_Functions\_Group2}}
+\doxysubsubsection{HAL\_IRDA\_TxHalfCpltCallback()}
+{\footnotesize\ttfamily void HAL\+\_\+\+IRDA\+\_\+\+Tx\+Half\+Cplt\+Callback (\begin{DoxyParamCaption}\item[{\textbf{ IRDA\+\_\+\+Handle\+Type\+Def} $\ast$}]{hirda }\end{DoxyParamCaption})}
+

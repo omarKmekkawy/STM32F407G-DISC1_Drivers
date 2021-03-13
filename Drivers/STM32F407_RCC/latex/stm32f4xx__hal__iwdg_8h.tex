@@ -1,0 +1,102 @@
+\doxysection{system/include/stm32f4-\/hal/stm32f4xx\+\_\+hal\+\_\+iwdg.h File Reference}
+\label{stm32f4xx__hal__iwdg_8h}\index{system/include/stm32f4-\/hal/stm32f4xx\_hal\_iwdg.h@{system/include/stm32f4-\/hal/stm32f4xx\_hal\_iwdg.h}}
+
+
+Header file of IWDG HAL module.  
+
+
+{\ttfamily \#include \char`\"{}stm32f4xx\+\_\+hal\+\_\+def.\+h\char`\"{}}\newline
+Include dependency graph for stm32f4xx\+\_\+hal\+\_\+iwdg.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{stm32f4xx__hal__iwdg_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{stm32f4xx__hal__iwdg_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \textbf{ IWDG\+\_\+\+Init\+Type\+Def}
+\begin{DoxyCompactList}\small\item\em IWDG Init structure definition. \end{DoxyCompactList}\item 
+struct \textbf{ IWDG\+\_\+\+Handle\+Type\+Def}
+\begin{DoxyCompactList}\small\item\em IWDG Handle Structure definition. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \textbf{ IWDG\+\_\+\+PRESCALER\+\_\+4}~0x00000000U
+\item 
+\#define \textbf{ IWDG\+\_\+\+PRESCALER\+\_\+8}~\textbf{ IWDG\+\_\+\+PR\+\_\+\+PR\+\_\+0}
+\item 
+\#define \textbf{ IWDG\+\_\+\+PRESCALER\+\_\+16}~\textbf{ IWDG\+\_\+\+PR\+\_\+\+PR\+\_\+1}
+\item 
+\#define \textbf{ IWDG\+\_\+\+PRESCALER\+\_\+32}~(\textbf{ IWDG\+\_\+\+PR\+\_\+\+PR\+\_\+1} $\vert$ \textbf{ IWDG\+\_\+\+PR\+\_\+\+PR\+\_\+0})
+\item 
+\#define \textbf{ IWDG\+\_\+\+PRESCALER\+\_\+64}~\textbf{ IWDG\+\_\+\+PR\+\_\+\+PR\+\_\+2}
+\item 
+\#define \textbf{ IWDG\+\_\+\+PRESCALER\+\_\+128}~(\textbf{ IWDG\+\_\+\+PR\+\_\+\+PR\+\_\+2} $\vert$ \textbf{ IWDG\+\_\+\+PR\+\_\+\+PR\+\_\+0})
+\item 
+\#define \textbf{ IWDG\+\_\+\+PRESCALER\+\_\+256}~(\textbf{ IWDG\+\_\+\+PR\+\_\+\+PR\+\_\+2} $\vert$ \textbf{ IWDG\+\_\+\+PR\+\_\+\+PR\+\_\+1})
+\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+IWDG\+\_\+\+START}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)~\textbf{ WRITE\+\_\+\+REG}((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$KR, \textbf{ IWDG\+\_\+\+KEY\+\_\+\+ENABLE})
+\begin{DoxyCompactList}\small\item\em Enable the IWDG peripheral. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+IWDG\+\_\+\+RELOAD\+\_\+\+COUNTER}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)~\textbf{ WRITE\+\_\+\+REG}((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$KR, \textbf{ IWDG\+\_\+\+KEY\+\_\+\+RELOAD})
+\begin{DoxyCompactList}\small\item\em Reload IWDG counter with value defined in the reload register (write access to IWDG\+\_\+\+PR \& IWDG\+\_\+\+RLR registers disabled). \end{DoxyCompactList}\item 
+\#define \textbf{ IWDG\+\_\+\+KEY\+\_\+\+RELOAD}~0x0000\+AAAAU
+\begin{DoxyCompactList}\small\item\em IWDG Key Register Bit\+Mask. \end{DoxyCompactList}\item 
+\#define \textbf{ IWDG\+\_\+\+KEY\+\_\+\+ENABLE}~0x0000\+CCCCU
+\item 
+\#define \textbf{ IWDG\+\_\+\+KEY\+\_\+\+WRITE\+\_\+\+ACCESS\+\_\+\+ENABLE}~0x00005555U
+\item 
+\#define \textbf{ IWDG\+\_\+\+KEY\+\_\+\+WRITE\+\_\+\+ACCESS\+\_\+\+DISABLE}~0x00000000U
+\item 
+\#define \textbf{ IWDG\+\_\+\+ENABLE\+\_\+\+WRITE\+\_\+\+ACCESS}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)~\textbf{ WRITE\+\_\+\+REG}((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$KR, \textbf{ IWDG\+\_\+\+KEY\+\_\+\+WRITE\+\_\+\+ACCESS\+\_\+\+ENABLE})
+\begin{DoxyCompactList}\small\item\em Enable write access to IWDG\+\_\+\+PR and IWDG\+\_\+\+RLR registers. \end{DoxyCompactList}\item 
+\#define \textbf{ IWDG\+\_\+\+DISABLE\+\_\+\+WRITE\+\_\+\+ACCESS}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)~\textbf{ WRITE\+\_\+\+REG}((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$KR, \textbf{ IWDG\+\_\+\+KEY\+\_\+\+WRITE\+\_\+\+ACCESS\+\_\+\+DISABLE})
+\begin{DoxyCompactList}\small\item\em Disable write access to IWDG\+\_\+\+PR and IWDG\+\_\+\+RLR registers. \end{DoxyCompactList}\item 
+\#define \textbf{ IS\+\_\+\+IWDG\+\_\+\+PRESCALER}(\+\_\+\+\_\+\+PRESCALER\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Check IWDG prescaler value. \end{DoxyCompactList}\item 
+\#define \textbf{ IS\+\_\+\+IWDG\+\_\+\+RELOAD}(\+\_\+\+\_\+\+RELOAD\+\_\+\+\_\+)~((\+\_\+\+\_\+\+RELOAD\+\_\+\+\_\+) $<$= \textbf{ IWDG\+\_\+\+RLR\+\_\+\+RL})
+\begin{DoxyCompactList}\small\item\em Check IWDG reload value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+IWDG\+\_\+\+Init} (\textbf{ IWDG\+\_\+\+Handle\+Type\+Def} $\ast$hiwdg)
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+IWDG\+\_\+\+Refresh} (\textbf{ IWDG\+\_\+\+Handle\+Type\+Def} $\ast$hiwdg)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Header file of IWDG HAL module. 
+
+\begin{DoxyAuthor}{Author}
+MCD Application Team 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+V1.\+5.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+06-\/May-\/2016
+\end{DoxyDate}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+\doxysubsubsection*{\begin{center}\copyright{} COPYRIGHT(c) 2016 STMicroelectronics\end{center} }
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met\+:
+\begin{DoxyEnumerate}
+\item Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+\item Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+\item Neither the name of STMicroelectronics nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+\end{DoxyEnumerate}
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \char`\"{}\+AS IS\char`\"{} AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. 

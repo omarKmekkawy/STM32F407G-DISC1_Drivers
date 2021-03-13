@@ -1,0 +1,213 @@
+\doxysection{Initialization and de-\/initialization Functions}
+\label{group___h_a_l___exported___functions___group1}\index{Initialization and de-\/initialization Functions@{Initialization and de-\/initialization Functions}}
+
+
+Initialization and de-\/initialization functions.  
+
+
+Collaboration diagram for Initialization and de-\/initialization Functions\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group___h_a_l___exported___functions___group1}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+Init} (void)
+\begin{DoxyCompactList}\small\item\em This function is used to initialize the HAL Library; it must be the first instruction to be executed in the main program (before to call any other HAL function), it performs the following\+: Configure the Flash prefetch, instruction and Data caches. Configures the Sys\+Tick to generate an interrupt each 1 millisecond, which is clocked by the HSI (at this stage, the clock is not yet configured and thus the system is running from the internal HSI at 16 MHz). Set NVIC Group Priority to 4. Calls the \doxyref{HAL\+\_\+\+Msp\+Init()}{p.}{group___h_a_l___m_s_p___private___functions_gae4fb8e66865c87d0ebab74a726a6891f} callback function defined in user file \char`\"{}stm32f4xx\+\_\+hal\+\_\+msp.\+c\char`\"{} to do the global low level hardware initialization. \end{DoxyCompactList}\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+De\+Init} (void)
+\begin{DoxyCompactList}\small\item\em This function de-\/\+Initializes common part of the HAL and stops the systick. This function is optional. ~\newline
+ \end{DoxyCompactList}\item 
+void \textbf{ HAL\+\_\+\+Msp\+Init} (void)
+\begin{DoxyCompactList}\small\item\em Initializes the MSP. \end{DoxyCompactList}\item 
+void \textbf{ HAL\+\_\+\+Msp\+De\+Init} (void)
+\begin{DoxyCompactList}\small\item\em De\+Initializes the MSP. \end{DoxyCompactList}\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+Init\+Tick} (uint32\+\_\+t Tick\+Priority)
+\begin{DoxyCompactList}\small\item\em This function configures the source of the time base. The time source is configured to have 1ms time base with a dedicated Tick interrupt priority. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Initialization and de-\/initialization functions. 
+
+\begin{DoxyVerb} ===============================================================================
+              ##### Initialization and de-initialization functions #####
+ ===============================================================================
+    [..]  This section provides functions allowing to:
+      (+) Initializes the Flash interface the NVIC allocation and initial clock 
+          configuration. It initializes the systick also when timeout is needed 
+          and the backup domain when enabled.
+      (+) de-Initializes common part of the HAL
+      (+) Configure The time base source to have 1ms time base with a dedicated 
+          Tick interrupt priority. 
+        (++) Systick timer is used by default as source of time base, but user 
+             can eventually implement his proper time base source (a general purpose 
+             timer for example or other time source), keeping in mind that Time base 
+             duration should be kept 1ms since PPP_TIMEOUT_VALUEs are defined and 
+             handled in milliseconds basis.
+        (++) Time base configuration function (HAL_InitTick ()) is called automatically 
+             at the beginning of the program after reset by HAL_Init() or at any time 
+             when clock is configured, by HAL_RCC_ClockConfig(). 
+        (++) Source of time base is configured  to generate interrupts at regular 
+             time intervals. Care must be taken if HAL_Delay() is called from a 
+             peripheral ISR process, the Tick interrupt line must have higher priority 
+            (numerically lower) than the peripheral interrupt. Otherwise the caller 
+            ISR process will be blocked. 
+       (++) functions affecting time base configurations are declared as __weak  
+             to make  override possible  in case of other  implementations in user file.
+\end{DoxyVerb}
+~\newline
+ 
+
+\doxysubsection{Function Documentation}
+\mbox{\label{group___h_a_l___exported___functions___group1_ga95911129a26afb05232caaaefa31956f}} 
+\index{Initialization and de-\/initialization Functions@{Initialization and de-\/initialization Functions}!HAL\_DeInit@{HAL\_DeInit}}
+\index{HAL\_DeInit@{HAL\_DeInit}!Initialization and de-\/initialization Functions@{Initialization and de-\/initialization Functions}}
+\doxysubsubsection{HAL\_DeInit()}
+{\footnotesize\ttfamily \textbf{ HAL\+\_\+\+Status\+Type\+Def} HAL\+\_\+\+De\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+This function de-\/\+Initializes common part of the HAL and stops the systick. This function is optional. ~\newline
+ 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em HAL} & status \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 200 of file stm32f4xx\+\_\+hal.\+c.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=265pt]{group___h_a_l___exported___functions___group1_ga95911129a26afb05232caaaefa31956f_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{group___h_a_l___exported___functions___group1_gaecac54d350c3730e6831eb404e557dc4}} 
+\index{Initialization and de-\/initialization Functions@{Initialization and de-\/initialization Functions}!HAL\_Init@{HAL\_Init}}
+\index{HAL\_Init@{HAL\_Init}!Initialization and de-\/initialization Functions@{Initialization and de-\/initialization Functions}}
+\doxysubsubsection{HAL\_Init()}
+{\footnotesize\ttfamily \textbf{ HAL\+\_\+\+Status\+Type\+Def} HAL\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+This function is used to initialize the HAL Library; it must be the first instruction to be executed in the main program (before to call any other HAL function), it performs the following\+: Configure the Flash prefetch, instruction and Data caches. Configures the Sys\+Tick to generate an interrupt each 1 millisecond, which is clocked by the HSI (at this stage, the clock is not yet configured and thus the system is running from the internal HSI at 16 MHz). Set NVIC Group Priority to 4. Calls the \doxyref{HAL\+\_\+\+Msp\+Init()}{p.}{group___h_a_l___m_s_p___private___functions_gae4fb8e66865c87d0ebab74a726a6891f} callback function defined in user file \char`\"{}stm32f4xx\+\_\+hal\+\_\+msp.\+c\char`\"{} to do the global low level hardware initialization. 
+
+\begin{DoxyNote}{Note}
+Sys\+Tick is used as time base for the \doxyref{HAL\+\_\+\+Delay()}{p.}{group___h_a_l___exported___functions___group2_gaef87d3fec667bb34c418f5687e8204c1} function, the application need to ensure that the Sys\+Tick time base is always set to 1 millisecond to have correct HAL operation. 
+\end{DoxyNote}
+
+\begin{DoxyRetVals}{Return values}
+{\em HAL} & status \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 167 of file stm32f4xx\+\_\+hal.\+c.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group___h_a_l___exported___functions___group1_gaecac54d350c3730e6831eb404e557dc4_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group___h_a_l___exported___functions___group1_gaecac54d350c3730e6831eb404e557dc4_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{group___h_a_l___exported___functions___group1_ga44d1542f9985b2243b14a41070cc41cc}} 
+\index{Initialization and de-\/initialization Functions@{Initialization and de-\/initialization Functions}!HAL\_InitTick@{HAL\_InitTick}}
+\index{HAL\_InitTick@{HAL\_InitTick}!Initialization and de-\/initialization Functions@{Initialization and de-\/initialization Functions}}
+\doxysubsubsection{HAL\_InitTick()}
+{\footnotesize\ttfamily \+\_\+\+\_\+weak \textbf{ HAL\+\_\+\+Status\+Type\+Def} HAL\+\_\+\+Init\+Tick (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Tick\+Priority }\end{DoxyParamCaption})}
+
+
+
+This function configures the source of the time base. The time source is configured to have 1ms time base with a dedicated Tick interrupt priority. 
+
+\begin{DoxyNote}{Note}
+This function is called automatically at the beginning of program after reset by \doxyref{HAL\+\_\+\+Init()}{p.}{group___h_a_l___exported___functions___group1_gaecac54d350c3730e6831eb404e557dc4} or at any time when clock is reconfigured by \doxyref{HAL\+\_\+\+RCC\+\_\+\+Clock\+Config()}{p.}{group___r_c_c___exported___functions___group1_gad0a4b5c7459219fafc15f3f867563ef3}. 
+
+In the default implementation, Sys\+Tick timer is the source of time base. It is used to generate interrupts at regular time intervals. Care must be taken if \doxyref{HAL\+\_\+\+Delay()}{p.}{group___h_a_l___exported___functions___group2_gaef87d3fec667bb34c418f5687e8204c1} is called from a peripheral ISR process, The the Sys\+Tick interrupt must have higher priority (numerically lower) than the peripheral interrupt. Otherwise the caller ISR process will be blocked. The function is declared as \+\_\+\+\_\+weak to be overwritten in case of other implementation in user file. 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em Tick\+Priority} & Tick interrupt priority. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em HAL} & status \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 263 of file stm32f4xx\+\_\+hal.\+c.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=301pt]{group___h_a_l___exported___functions___group1_ga44d1542f9985b2243b14a41070cc41cc_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group___h_a_l___exported___functions___group1_ga44d1542f9985b2243b14a41070cc41cc_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{group___h_a_l___exported___functions___group1_gadd10d026ef02d00e32e80c9eab9db830}} 
+\index{Initialization and de-\/initialization Functions@{Initialization and de-\/initialization Functions}!HAL\_MspDeInit@{HAL\_MspDeInit}}
+\index{HAL\_MspDeInit@{HAL\_MspDeInit}!Initialization and de-\/initialization Functions@{Initialization and de-\/initialization Functions}}
+\doxysubsubsection{HAL\_MspDeInit()}
+{\footnotesize\ttfamily void HAL\+\_\+\+Msp\+De\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+De\+Initializes the MSP. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 240 of file stm32f4xx\+\_\+hal.\+c.
+
+\mbox{\label{group___h_a_l___exported___functions___group1_gae4fb8e66865c87d0ebab74a726a6891f}} 
+\index{Initialization and de-\/initialization Functions@{Initialization and de-\/initialization Functions}!HAL\_MspInit@{HAL\_MspInit}}
+\index{HAL\_MspInit@{HAL\_MspInit}!Initialization and de-\/initialization Functions@{Initialization and de-\/initialization Functions}}
+\doxysubsubsection{HAL\_MspInit()}
+{\footnotesize\ttfamily void HAL\+\_\+\+Msp\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Initializes the MSP. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 229 of file stm32f4xx\+\_\+hal.\+c.
+

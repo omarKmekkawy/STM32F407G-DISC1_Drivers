@@ -1,0 +1,179 @@
+\doxysection{SPI\+\_\+\+Exported\+\_\+\+Functions\+\_\+\+Group2}
+\label{group___s_p_i___exported___functions___group2}\index{SPI\_Exported\_Functions\_Group2@{SPI\_Exported\_Functions\_Group2}}
+Collaboration diagram for SPI\+\_\+\+Exported\+\_\+\+Functions\+\_\+\+Group2\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group___s_p_i___exported___functions___group2}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+SPI\+\_\+\+Transmit} (\textbf{ SPI\+\_\+\+Handle\+Type\+Def} $\ast$hspi, uint8\+\_\+t $\ast$p\+Data, uint16\+\_\+t Size, uint32\+\_\+t Timeout)
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+SPI\+\_\+\+Receive} (\textbf{ SPI\+\_\+\+Handle\+Type\+Def} $\ast$hspi, uint8\+\_\+t $\ast$p\+Data, uint16\+\_\+t Size, uint32\+\_\+t Timeout)
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+SPI\+\_\+\+Transmit\+Receive} (\textbf{ SPI\+\_\+\+Handle\+Type\+Def} $\ast$hspi, uint8\+\_\+t $\ast$p\+Tx\+Data, uint8\+\_\+t $\ast$p\+Rx\+Data, uint16\+\_\+t Size, uint32\+\_\+t Timeout)
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+SPI\+\_\+\+Transmit\+\_\+\+IT} (\textbf{ SPI\+\_\+\+Handle\+Type\+Def} $\ast$hspi, uint8\+\_\+t $\ast$p\+Data, uint16\+\_\+t Size)
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+SPI\+\_\+\+Receive\+\_\+\+IT} (\textbf{ SPI\+\_\+\+Handle\+Type\+Def} $\ast$hspi, uint8\+\_\+t $\ast$p\+Data, uint16\+\_\+t Size)
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+SPI\+\_\+\+Transmit\+Receive\+\_\+\+IT} (\textbf{ SPI\+\_\+\+Handle\+Type\+Def} $\ast$hspi, uint8\+\_\+t $\ast$p\+Tx\+Data, uint8\+\_\+t $\ast$p\+Rx\+Data, uint16\+\_\+t Size)
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+SPI\+\_\+\+Transmit\+\_\+\+DMA} (\textbf{ SPI\+\_\+\+Handle\+Type\+Def} $\ast$hspi, uint8\+\_\+t $\ast$p\+Data, uint16\+\_\+t Size)
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+SPI\+\_\+\+Receive\+\_\+\+DMA} (\textbf{ SPI\+\_\+\+Handle\+Type\+Def} $\ast$hspi, uint8\+\_\+t $\ast$p\+Data, uint16\+\_\+t Size)
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+SPI\+\_\+\+Transmit\+Receive\+\_\+\+DMA} (\textbf{ SPI\+\_\+\+Handle\+Type\+Def} $\ast$hspi, uint8\+\_\+t $\ast$p\+Tx\+Data, uint8\+\_\+t $\ast$p\+Rx\+Data, uint16\+\_\+t Size)
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+SPI\+\_\+\+DMAPause} (\textbf{ SPI\+\_\+\+Handle\+Type\+Def} $\ast$hspi)
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+SPI\+\_\+\+DMAResume} (\textbf{ SPI\+\_\+\+Handle\+Type\+Def} $\ast$hspi)
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+SPI\+\_\+\+DMAStop} (\textbf{ SPI\+\_\+\+Handle\+Type\+Def} $\ast$hspi)
+\item 
+void \textbf{ HAL\+\_\+\+SPI\+\_\+\+IRQHandler} (\textbf{ SPI\+\_\+\+Handle\+Type\+Def} $\ast$hspi)
+\item 
+void \textbf{ HAL\+\_\+\+SPI\+\_\+\+Tx\+Cplt\+Callback} (\textbf{ SPI\+\_\+\+Handle\+Type\+Def} $\ast$hspi)
+\item 
+void \textbf{ HAL\+\_\+\+SPI\+\_\+\+Rx\+Cplt\+Callback} (\textbf{ SPI\+\_\+\+Handle\+Type\+Def} $\ast$hspi)
+\item 
+void \textbf{ HAL\+\_\+\+SPI\+\_\+\+Tx\+Rx\+Cplt\+Callback} (\textbf{ SPI\+\_\+\+Handle\+Type\+Def} $\ast$hspi)
+\item 
+void \textbf{ HAL\+\_\+\+SPI\+\_\+\+Tx\+Half\+Cplt\+Callback} (\textbf{ SPI\+\_\+\+Handle\+Type\+Def} $\ast$hspi)
+\item 
+void \textbf{ HAL\+\_\+\+SPI\+\_\+\+Rx\+Half\+Cplt\+Callback} (\textbf{ SPI\+\_\+\+Handle\+Type\+Def} $\ast$hspi)
+\item 
+void \textbf{ HAL\+\_\+\+SPI\+\_\+\+Tx\+Rx\+Half\+Cplt\+Callback} (\textbf{ SPI\+\_\+\+Handle\+Type\+Def} $\ast$hspi)
+\item 
+void \textbf{ HAL\+\_\+\+SPI\+\_\+\+Error\+Callback} (\textbf{ SPI\+\_\+\+Handle\+Type\+Def} $\ast$hspi)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\label{group___s_p_i___exported___functions___group2_ga61e4a628d6918ec838736d65ae135031}} 
+\index{SPI\_Exported\_Functions\_Group2@{SPI\_Exported\_Functions\_Group2}!HAL\_SPI\_DMAPause@{HAL\_SPI\_DMAPause}}
+\index{HAL\_SPI\_DMAPause@{HAL\_SPI\_DMAPause}!SPI\_Exported\_Functions\_Group2@{SPI\_Exported\_Functions\_Group2}}
+\doxysubsubsection{HAL\_SPI\_DMAPause()}
+{\footnotesize\ttfamily \textbf{ HAL\+\_\+\+Status\+Type\+Def} HAL\+\_\+\+SPI\+\_\+\+DMAPause (\begin{DoxyParamCaption}\item[{\textbf{ SPI\+\_\+\+Handle\+Type\+Def} $\ast$}]{hspi }\end{DoxyParamCaption})}
+
+\mbox{\label{group___s_p_i___exported___functions___group2_ga7fdd4b7aa5c6bd560a476c833f546d93}} 
+\index{SPI\_Exported\_Functions\_Group2@{SPI\_Exported\_Functions\_Group2}!HAL\_SPI\_DMAResume@{HAL\_SPI\_DMAResume}}
+\index{HAL\_SPI\_DMAResume@{HAL\_SPI\_DMAResume}!SPI\_Exported\_Functions\_Group2@{SPI\_Exported\_Functions\_Group2}}
+\doxysubsubsection{HAL\_SPI\_DMAResume()}
+{\footnotesize\ttfamily \textbf{ HAL\+\_\+\+Status\+Type\+Def} HAL\+\_\+\+SPI\+\_\+\+DMAResume (\begin{DoxyParamCaption}\item[{\textbf{ SPI\+\_\+\+Handle\+Type\+Def} $\ast$}]{hspi }\end{DoxyParamCaption})}
+
+\mbox{\label{group___s_p_i___exported___functions___group2_ga7e01eb529af91fabc950180b927fa355}} 
+\index{SPI\_Exported\_Functions\_Group2@{SPI\_Exported\_Functions\_Group2}!HAL\_SPI\_DMAStop@{HAL\_SPI\_DMAStop}}
+\index{HAL\_SPI\_DMAStop@{HAL\_SPI\_DMAStop}!SPI\_Exported\_Functions\_Group2@{SPI\_Exported\_Functions\_Group2}}
+\doxysubsubsection{HAL\_SPI\_DMAStop()}
+{\footnotesize\ttfamily \textbf{ HAL\+\_\+\+Status\+Type\+Def} HAL\+\_\+\+SPI\+\_\+\+DMAStop (\begin{DoxyParamCaption}\item[{\textbf{ SPI\+\_\+\+Handle\+Type\+Def} $\ast$}]{hspi }\end{DoxyParamCaption})}
+
+\mbox{\label{group___s_p_i___exported___functions___group2_ga3db7835e7e7ac335887f62fedf156926}} 
+\index{SPI\_Exported\_Functions\_Group2@{SPI\_Exported\_Functions\_Group2}!HAL\_SPI\_ErrorCallback@{HAL\_SPI\_ErrorCallback}}
+\index{HAL\_SPI\_ErrorCallback@{HAL\_SPI\_ErrorCallback}!SPI\_Exported\_Functions\_Group2@{SPI\_Exported\_Functions\_Group2}}
+\doxysubsubsection{HAL\_SPI\_ErrorCallback()}
+{\footnotesize\ttfamily void HAL\+\_\+\+SPI\+\_\+\+Error\+Callback (\begin{DoxyParamCaption}\item[{\textbf{ SPI\+\_\+\+Handle\+Type\+Def} $\ast$}]{hspi }\end{DoxyParamCaption})}
+
+\mbox{\label{group___s_p_i___exported___functions___group2_gaf3da6e0a87468bc039b578c21329df47}} 
+\index{SPI\_Exported\_Functions\_Group2@{SPI\_Exported\_Functions\_Group2}!HAL\_SPI\_IRQHandler@{HAL\_SPI\_IRQHandler}}
+\index{HAL\_SPI\_IRQHandler@{HAL\_SPI\_IRQHandler}!SPI\_Exported\_Functions\_Group2@{SPI\_Exported\_Functions\_Group2}}
+\doxysubsubsection{HAL\_SPI\_IRQHandler()}
+{\footnotesize\ttfamily void HAL\+\_\+\+SPI\+\_\+\+IRQHandler (\begin{DoxyParamCaption}\item[{\textbf{ SPI\+\_\+\+Handle\+Type\+Def} $\ast$}]{hspi }\end{DoxyParamCaption})}
+
+\mbox{\label{group___s_p_i___exported___functions___group2_gafdf43dbe4e5ef225bed6650b6e8c6313}} 
+\index{SPI\_Exported\_Functions\_Group2@{SPI\_Exported\_Functions\_Group2}!HAL\_SPI\_Receive@{HAL\_SPI\_Receive}}
+\index{HAL\_SPI\_Receive@{HAL\_SPI\_Receive}!SPI\_Exported\_Functions\_Group2@{SPI\_Exported\_Functions\_Group2}}
+\doxysubsubsection{HAL\_SPI\_Receive()}
+{\footnotesize\ttfamily \textbf{ HAL\+\_\+\+Status\+Type\+Def} HAL\+\_\+\+SPI\+\_\+\+Receive (\begin{DoxyParamCaption}\item[{\textbf{ SPI\+\_\+\+Handle\+Type\+Def} $\ast$}]{hspi,  }\item[{uint8\+\_\+t $\ast$}]{p\+Data,  }\item[{uint16\+\_\+t}]{Size,  }\item[{uint32\+\_\+t}]{Timeout }\end{DoxyParamCaption})}
+
+\mbox{\label{group___s_p_i___exported___functions___group2_ga626bb2ec54e7b6ff9bd5d807ae6e6e24}} 
+\index{SPI\_Exported\_Functions\_Group2@{SPI\_Exported\_Functions\_Group2}!HAL\_SPI\_Receive\_DMA@{HAL\_SPI\_Receive\_DMA}}
+\index{HAL\_SPI\_Receive\_DMA@{HAL\_SPI\_Receive\_DMA}!SPI\_Exported\_Functions\_Group2@{SPI\_Exported\_Functions\_Group2}}
+\doxysubsubsection{HAL\_SPI\_Receive\_DMA()}
+{\footnotesize\ttfamily \textbf{ HAL\+\_\+\+Status\+Type\+Def} HAL\+\_\+\+SPI\+\_\+\+Receive\+\_\+\+DMA (\begin{DoxyParamCaption}\item[{\textbf{ SPI\+\_\+\+Handle\+Type\+Def} $\ast$}]{hspi,  }\item[{uint8\+\_\+t $\ast$}]{p\+Data,  }\item[{uint16\+\_\+t}]{Size }\end{DoxyParamCaption})}
+
+\mbox{\label{group___s_p_i___exported___functions___group2_gaaae0af2e2db7e7549b52b020a18f6168}} 
+\index{SPI\_Exported\_Functions\_Group2@{SPI\_Exported\_Functions\_Group2}!HAL\_SPI\_Receive\_IT@{HAL\_SPI\_Receive\_IT}}
+\index{HAL\_SPI\_Receive\_IT@{HAL\_SPI\_Receive\_IT}!SPI\_Exported\_Functions\_Group2@{SPI\_Exported\_Functions\_Group2}}
+\doxysubsubsection{HAL\_SPI\_Receive\_IT()}
+{\footnotesize\ttfamily \textbf{ HAL\+\_\+\+Status\+Type\+Def} HAL\+\_\+\+SPI\+\_\+\+Receive\+\_\+\+IT (\begin{DoxyParamCaption}\item[{\textbf{ SPI\+\_\+\+Handle\+Type\+Def} $\ast$}]{hspi,  }\item[{uint8\+\_\+t $\ast$}]{p\+Data,  }\item[{uint16\+\_\+t}]{Size }\end{DoxyParamCaption})}
+
+\mbox{\label{group___s_p_i___exported___functions___group2_ga3df7021fe24cf874f8b1eec5bd5f4cb3}} 
+\index{SPI\_Exported\_Functions\_Group2@{SPI\_Exported\_Functions\_Group2}!HAL\_SPI\_RxCpltCallback@{HAL\_SPI\_RxCpltCallback}}
+\index{HAL\_SPI\_RxCpltCallback@{HAL\_SPI\_RxCpltCallback}!SPI\_Exported\_Functions\_Group2@{SPI\_Exported\_Functions\_Group2}}
+\doxysubsubsection{HAL\_SPI\_RxCpltCallback()}
+{\footnotesize\ttfamily void HAL\+\_\+\+SPI\+\_\+\+Rx\+Cplt\+Callback (\begin{DoxyParamCaption}\item[{\textbf{ SPI\+\_\+\+Handle\+Type\+Def} $\ast$}]{hspi }\end{DoxyParamCaption})}
+
+\mbox{\label{group___s_p_i___exported___functions___group2_gacf622756a3814edfacf449b5749b048a}} 
+\index{SPI\_Exported\_Functions\_Group2@{SPI\_Exported\_Functions\_Group2}!HAL\_SPI\_RxHalfCpltCallback@{HAL\_SPI\_RxHalfCpltCallback}}
+\index{HAL\_SPI\_RxHalfCpltCallback@{HAL\_SPI\_RxHalfCpltCallback}!SPI\_Exported\_Functions\_Group2@{SPI\_Exported\_Functions\_Group2}}
+\doxysubsubsection{HAL\_SPI\_RxHalfCpltCallback()}
+{\footnotesize\ttfamily void HAL\+\_\+\+SPI\+\_\+\+Rx\+Half\+Cplt\+Callback (\begin{DoxyParamCaption}\item[{\textbf{ SPI\+\_\+\+Handle\+Type\+Def} $\ast$}]{hspi }\end{DoxyParamCaption})}
+
+\mbox{\label{group___s_p_i___exported___functions___group2_ga02ec86e05d0702387c221f90b6f041a2}} 
+\index{SPI\_Exported\_Functions\_Group2@{SPI\_Exported\_Functions\_Group2}!HAL\_SPI\_Transmit@{HAL\_SPI\_Transmit}}
+\index{HAL\_SPI\_Transmit@{HAL\_SPI\_Transmit}!SPI\_Exported\_Functions\_Group2@{SPI\_Exported\_Functions\_Group2}}
+\doxysubsubsection{HAL\_SPI\_Transmit()}
+{\footnotesize\ttfamily \textbf{ HAL\+\_\+\+Status\+Type\+Def} HAL\+\_\+\+SPI\+\_\+\+Transmit (\begin{DoxyParamCaption}\item[{\textbf{ SPI\+\_\+\+Handle\+Type\+Def} $\ast$}]{hspi,  }\item[{uint8\+\_\+t $\ast$}]{p\+Data,  }\item[{uint16\+\_\+t}]{Size,  }\item[{uint32\+\_\+t}]{Timeout }\end{DoxyParamCaption})}
+
+\mbox{\label{group___s_p_i___exported___functions___group2_ga6aebe304396c3e18b55f926dae0dadcb}} 
+\index{SPI\_Exported\_Functions\_Group2@{SPI\_Exported\_Functions\_Group2}!HAL\_SPI\_Transmit\_DMA@{HAL\_SPI\_Transmit\_DMA}}
+\index{HAL\_SPI\_Transmit\_DMA@{HAL\_SPI\_Transmit\_DMA}!SPI\_Exported\_Functions\_Group2@{SPI\_Exported\_Functions\_Group2}}
+\doxysubsubsection{HAL\_SPI\_Transmit\_DMA()}
+{\footnotesize\ttfamily \textbf{ HAL\+\_\+\+Status\+Type\+Def} HAL\+\_\+\+SPI\+\_\+\+Transmit\+\_\+\+DMA (\begin{DoxyParamCaption}\item[{\textbf{ SPI\+\_\+\+Handle\+Type\+Def} $\ast$}]{hspi,  }\item[{uint8\+\_\+t $\ast$}]{p\+Data,  }\item[{uint16\+\_\+t}]{Size }\end{DoxyParamCaption})}
+
+\mbox{\label{group___s_p_i___exported___functions___group2_gafbb309aa738bb3296934fb1a39ffbf40}} 
+\index{SPI\_Exported\_Functions\_Group2@{SPI\_Exported\_Functions\_Group2}!HAL\_SPI\_Transmit\_IT@{HAL\_SPI\_Transmit\_IT}}
+\index{HAL\_SPI\_Transmit\_IT@{HAL\_SPI\_Transmit\_IT}!SPI\_Exported\_Functions\_Group2@{SPI\_Exported\_Functions\_Group2}}
+\doxysubsubsection{HAL\_SPI\_Transmit\_IT()}
+{\footnotesize\ttfamily \textbf{ HAL\+\_\+\+Status\+Type\+Def} HAL\+\_\+\+SPI\+\_\+\+Transmit\+\_\+\+IT (\begin{DoxyParamCaption}\item[{\textbf{ SPI\+\_\+\+Handle\+Type\+Def} $\ast$}]{hspi,  }\item[{uint8\+\_\+t $\ast$}]{p\+Data,  }\item[{uint16\+\_\+t}]{Size }\end{DoxyParamCaption})}
+
+\mbox{\label{group___s_p_i___exported___functions___group2_ga7c3106fe01493a33b08e5c617f45aeb1}} 
+\index{SPI\_Exported\_Functions\_Group2@{SPI\_Exported\_Functions\_Group2}!HAL\_SPI\_TransmitReceive@{HAL\_SPI\_TransmitReceive}}
+\index{HAL\_SPI\_TransmitReceive@{HAL\_SPI\_TransmitReceive}!SPI\_Exported\_Functions\_Group2@{SPI\_Exported\_Functions\_Group2}}
+\doxysubsubsection{HAL\_SPI\_TransmitReceive()}
+{\footnotesize\ttfamily \textbf{ HAL\+\_\+\+Status\+Type\+Def} HAL\+\_\+\+SPI\+\_\+\+Transmit\+Receive (\begin{DoxyParamCaption}\item[{\textbf{ SPI\+\_\+\+Handle\+Type\+Def} $\ast$}]{hspi,  }\item[{uint8\+\_\+t $\ast$}]{p\+Tx\+Data,  }\item[{uint8\+\_\+t $\ast$}]{p\+Rx\+Data,  }\item[{uint16\+\_\+t}]{Size,  }\item[{uint32\+\_\+t}]{Timeout }\end{DoxyParamCaption})}
+
+\mbox{\label{group___s_p_i___exported___functions___group2_ga228553c64b10b8dade9fee525a8a489d}} 
+\index{SPI\_Exported\_Functions\_Group2@{SPI\_Exported\_Functions\_Group2}!HAL\_SPI\_TransmitReceive\_DMA@{HAL\_SPI\_TransmitReceive\_DMA}}
+\index{HAL\_SPI\_TransmitReceive\_DMA@{HAL\_SPI\_TransmitReceive\_DMA}!SPI\_Exported\_Functions\_Group2@{SPI\_Exported\_Functions\_Group2}}
+\doxysubsubsection{HAL\_SPI\_TransmitReceive\_DMA()}
+{\footnotesize\ttfamily \textbf{ HAL\+\_\+\+Status\+Type\+Def} HAL\+\_\+\+SPI\+\_\+\+Transmit\+Receive\+\_\+\+DMA (\begin{DoxyParamCaption}\item[{\textbf{ SPI\+\_\+\+Handle\+Type\+Def} $\ast$}]{hspi,  }\item[{uint8\+\_\+t $\ast$}]{p\+Tx\+Data,  }\item[{uint8\+\_\+t $\ast$}]{p\+Rx\+Data,  }\item[{uint16\+\_\+t}]{Size }\end{DoxyParamCaption})}
+
+\mbox{\label{group___s_p_i___exported___functions___group2_ga518c43d8323499451e7f4782a9dc6e32}} 
+\index{SPI\_Exported\_Functions\_Group2@{SPI\_Exported\_Functions\_Group2}!HAL\_SPI\_TransmitReceive\_IT@{HAL\_SPI\_TransmitReceive\_IT}}
+\index{HAL\_SPI\_TransmitReceive\_IT@{HAL\_SPI\_TransmitReceive\_IT}!SPI\_Exported\_Functions\_Group2@{SPI\_Exported\_Functions\_Group2}}
+\doxysubsubsection{HAL\_SPI\_TransmitReceive\_IT()}
+{\footnotesize\ttfamily \textbf{ HAL\+\_\+\+Status\+Type\+Def} HAL\+\_\+\+SPI\+\_\+\+Transmit\+Receive\+\_\+\+IT (\begin{DoxyParamCaption}\item[{\textbf{ SPI\+\_\+\+Handle\+Type\+Def} $\ast$}]{hspi,  }\item[{uint8\+\_\+t $\ast$}]{p\+Tx\+Data,  }\item[{uint8\+\_\+t $\ast$}]{p\+Rx\+Data,  }\item[{uint16\+\_\+t}]{Size }\end{DoxyParamCaption})}
+
+\mbox{\label{group___s_p_i___exported___functions___group2_ga0a99ab4f6aa6ee7dc2abca5483910dde}} 
+\index{SPI\_Exported\_Functions\_Group2@{SPI\_Exported\_Functions\_Group2}!HAL\_SPI\_TxCpltCallback@{HAL\_SPI\_TxCpltCallback}}
+\index{HAL\_SPI\_TxCpltCallback@{HAL\_SPI\_TxCpltCallback}!SPI\_Exported\_Functions\_Group2@{SPI\_Exported\_Functions\_Group2}}
+\doxysubsubsection{HAL\_SPI\_TxCpltCallback()}
+{\footnotesize\ttfamily void HAL\+\_\+\+SPI\+\_\+\+Tx\+Cplt\+Callback (\begin{DoxyParamCaption}\item[{\textbf{ SPI\+\_\+\+Handle\+Type\+Def} $\ast$}]{hspi }\end{DoxyParamCaption})}
+
+\mbox{\label{group___s_p_i___exported___functions___group2_ga931ef2f7fd94ffa16ec431972b1b237f}} 
+\index{SPI\_Exported\_Functions\_Group2@{SPI\_Exported\_Functions\_Group2}!HAL\_SPI\_TxHalfCpltCallback@{HAL\_SPI\_TxHalfCpltCallback}}
+\index{HAL\_SPI\_TxHalfCpltCallback@{HAL\_SPI\_TxHalfCpltCallback}!SPI\_Exported\_Functions\_Group2@{SPI\_Exported\_Functions\_Group2}}
+\doxysubsubsection{HAL\_SPI\_TxHalfCpltCallback()}
+{\footnotesize\ttfamily void HAL\+\_\+\+SPI\+\_\+\+Tx\+Half\+Cplt\+Callback (\begin{DoxyParamCaption}\item[{\textbf{ SPI\+\_\+\+Handle\+Type\+Def} $\ast$}]{hspi }\end{DoxyParamCaption})}
+
+\mbox{\label{group___s_p_i___exported___functions___group2_ga04e63f382f172164c8e7cae4ff5d883c}} 
+\index{SPI\_Exported\_Functions\_Group2@{SPI\_Exported\_Functions\_Group2}!HAL\_SPI\_TxRxCpltCallback@{HAL\_SPI\_TxRxCpltCallback}}
+\index{HAL\_SPI\_TxRxCpltCallback@{HAL\_SPI\_TxRxCpltCallback}!SPI\_Exported\_Functions\_Group2@{SPI\_Exported\_Functions\_Group2}}
+\doxysubsubsection{HAL\_SPI\_TxRxCpltCallback()}
+{\footnotesize\ttfamily void HAL\+\_\+\+SPI\+\_\+\+Tx\+Rx\+Cplt\+Callback (\begin{DoxyParamCaption}\item[{\textbf{ SPI\+\_\+\+Handle\+Type\+Def} $\ast$}]{hspi }\end{DoxyParamCaption})}
+
+\mbox{\label{group___s_p_i___exported___functions___group2_gab46e2325b0880d5b5a301792438b151b}} 
+\index{SPI\_Exported\_Functions\_Group2@{SPI\_Exported\_Functions\_Group2}!HAL\_SPI\_TxRxHalfCpltCallback@{HAL\_SPI\_TxRxHalfCpltCallback}}
+\index{HAL\_SPI\_TxRxHalfCpltCallback@{HAL\_SPI\_TxRxHalfCpltCallback}!SPI\_Exported\_Functions\_Group2@{SPI\_Exported\_Functions\_Group2}}
+\doxysubsubsection{HAL\_SPI\_TxRxHalfCpltCallback()}
+{\footnotesize\ttfamily void HAL\+\_\+\+SPI\+\_\+\+Tx\+Rx\+Half\+Cplt\+Callback (\begin{DoxyParamCaption}\item[{\textbf{ SPI\+\_\+\+Handle\+Type\+Def} $\ast$}]{hspi }\end{DoxyParamCaption})}
+

@@ -1,0 +1,175 @@
+\doxysection{ADC Private Macros}
+\label{group___a_d_c_ex___private___macros}\index{ADC Private Macros@{ADC Private Macros}}
+Collaboration diagram for ADC Private Macros\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=269pt]{group___a_d_c_ex___private___macros}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \textbf{ IS\+\_\+\+ADC\+\_\+\+MODE}(MODE)
+\item 
+\#define \textbf{ IS\+\_\+\+ADC\+\_\+\+DMA\+\_\+\+ACCESS\+\_\+\+MODE}(MODE)
+\item 
+\#define \textbf{ IS\+\_\+\+ADC\+\_\+\+EXT\+\_\+\+INJEC\+\_\+\+TRIG\+\_\+\+EDGE}(EDGE)
+\item 
+\#define \textbf{ IS\+\_\+\+ADC\+\_\+\+EXT\+\_\+\+INJEC\+\_\+\+TRIG}(INJTRIG)
+\item 
+\#define \textbf{ IS\+\_\+\+ADC\+\_\+\+INJECTED\+\_\+\+LENGTH}(LENGTH)~(((LENGTH) $>$= ((uint32\+\_\+t)1U)) \&\& ((LENGTH) $<$= ((uint32\+\_\+t)4U)))
+\item 
+\#define \textbf{ IS\+\_\+\+ADC\+\_\+\+INJECTED\+\_\+\+RANK}(RANK)~(((RANK) $>$= ((uint32\+\_\+t)1U)) \&\& ((RANK) $<$= ((uint32\+\_\+t)4U)))
+\item 
+\#define \textbf{ ADC\+\_\+\+JSQR}(\+\_\+\+CHANNELNB\+\_\+,  \+\_\+\+RANKNB\+\_\+,  \+\_\+\+JSQR\+\_\+\+JL\+\_\+)~(((uint32\+\_\+t)((uint16\+\_\+t)(\+\_\+\+CHANNELNB\+\_\+))) $<$$<$ (5U $\ast$ (uint8\+\_\+t)(((\+\_\+\+RANKNB\+\_\+) + 3U) -\/ (\+\_\+\+JSQR\+\_\+\+JL\+\_\+))))
+\begin{DoxyCompactList}\small\item\em Set the selected injected Channel rank. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\label{group___a_d_c_ex___private___macros_gaa40c3e803cf20a8aebc3735a714606ad}} 
+\index{ADC Private Macros@{ADC Private Macros}!ADC\_JSQR@{ADC\_JSQR}}
+\index{ADC\_JSQR@{ADC\_JSQR}!ADC Private Macros@{ADC Private Macros}}
+\doxysubsubsection{ADC\_JSQR}
+{\footnotesize\ttfamily \#define ADC\+\_\+\+JSQR(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+CHANNELNB\+\_\+,  }\item[{}]{\+\_\+\+RANKNB\+\_\+,  }\item[{}]{\+\_\+\+JSQR\+\_\+\+JL\+\_\+ }\end{DoxyParamCaption})~(((uint32\+\_\+t)((uint16\+\_\+t)(\+\_\+\+CHANNELNB\+\_\+))) $<$$<$ (5U $\ast$ (uint8\+\_\+t)(((\+\_\+\+RANKNB\+\_\+) + 3U) -\/ (\+\_\+\+JSQR\+\_\+\+JL\+\_\+))))}
+
+
+
+Set the selected injected Channel rank. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$em$>$\+CHANNELNB$<$/em$>$} & Channel number. \\
+\hline
+{\em $<$em$>$\+RANKNB$<$/em$>$} & Rank number. \\
+\hline
+{\em $<$em$>$\+JSQR\+\_\+\+JL$<$/em$>$} & Sequence length. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 383 of file stm32f4xx\+\_\+hal\+\_\+adc\+\_\+ex.\+h.
+
+\mbox{\label{group___a_d_c_ex___private___macros_gacc017b6a9b3ae942307fa95242cc4aa1}} 
+\index{ADC Private Macros@{ADC Private Macros}!IS\_ADC\_DMA\_ACCESS\_MODE@{IS\_ADC\_DMA\_ACCESS\_MODE}}
+\index{IS\_ADC\_DMA\_ACCESS\_MODE@{IS\_ADC\_DMA\_ACCESS\_MODE}!ADC Private Macros@{ADC Private Macros}}
+\doxysubsubsection{IS\_ADC\_DMA\_ACCESS\_MODE}
+{\footnotesize\ttfamily \#define IS\+\_\+\+ADC\+\_\+\+DMA\+\_\+\+ACCESS\+\_\+\+MODE(\begin{DoxyParamCaption}\item[{}]{MODE }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                      (((MODE) == ADC\_DMAACCESSMODE\_DISABLED) || \(\backslash\)}
+\DoxyCodeLine{                                      ((MODE) == ADC\_DMAACCESSMODE\_1)        || \(\backslash\)}
+\DoxyCodeLine{                                      ((MODE) == ADC\_DMAACCESSMODE\_2)        || \(\backslash\)}
+\DoxyCodeLine{                                      ((MODE) == ADC\_DMAACCESSMODE\_3))}
+
+\end{DoxyCode}
+
+
+Definition at line 348 of file stm32f4xx\+\_\+hal\+\_\+adc\+\_\+ex.\+h.
+
+\mbox{\label{group___a_d_c_ex___private___macros_ga3cb8cadbff46e432b5e000c3a7489a0b}} 
+\index{ADC Private Macros@{ADC Private Macros}!IS\_ADC\_EXT\_INJEC\_TRIG@{IS\_ADC\_EXT\_INJEC\_TRIG}}
+\index{IS\_ADC\_EXT\_INJEC\_TRIG@{IS\_ADC\_EXT\_INJEC\_TRIG}!ADC Private Macros@{ADC Private Macros}}
+\doxysubsubsection{IS\_ADC\_EXT\_INJEC\_TRIG}
+{\footnotesize\ttfamily \#define IS\+\_\+\+ADC\+\_\+\+EXT\+\_\+\+INJEC\+\_\+\+TRIG(\begin{DoxyParamCaption}\item[{}]{INJTRIG }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                        (((INJTRIG) == ADC\_EXTERNALTRIGINJECCONV\_T1\_CC4)  || \(\backslash\)}
+\DoxyCodeLine{                                        ((INJTRIG) == ADC\_EXTERNALTRIGINJECCONV\_T1\_TRGO) || \(\backslash\)}
+\DoxyCodeLine{                                        ((INJTRIG) == ADC\_EXTERNALTRIGINJECCONV\_T2\_CC1)  || \(\backslash\)}
+\DoxyCodeLine{                                        ((INJTRIG) == ADC\_EXTERNALTRIGINJECCONV\_T2\_TRGO) || \(\backslash\)}
+\DoxyCodeLine{                                        ((INJTRIG) == ADC\_EXTERNALTRIGINJECCONV\_T3\_CC2)  || \(\backslash\)}
+\DoxyCodeLine{                                        ((INJTRIG) == ADC\_EXTERNALTRIGINJECCONV\_T3\_CC4)  || \(\backslash\)}
+\DoxyCodeLine{                                        ((INJTRIG) == ADC\_EXTERNALTRIGINJECCONV\_T4\_CC1)  || \(\backslash\)}
+\DoxyCodeLine{                                        ((INJTRIG) == ADC\_EXTERNALTRIGINJECCONV\_T4\_CC2)  || \(\backslash\)}
+\DoxyCodeLine{                                        ((INJTRIG) == ADC\_EXTERNALTRIGINJECCONV\_T4\_CC3)  || \(\backslash\)}
+\DoxyCodeLine{                                        ((INJTRIG) == ADC\_EXTERNALTRIGINJECCONV\_T4\_TRGO) || \(\backslash\)}
+\DoxyCodeLine{                                        ((INJTRIG) == ADC\_EXTERNALTRIGINJECCONV\_T5\_CC4)  || \(\backslash\)}
+\DoxyCodeLine{                                        ((INJTRIG) == ADC\_EXTERNALTRIGINJECCONV\_T5\_TRGO) || \(\backslash\)}
+\DoxyCodeLine{                                        ((INJTRIG) == ADC\_EXTERNALTRIGINJECCONV\_T8\_CC2)  || \(\backslash\)}
+\DoxyCodeLine{                                        ((INJTRIG) == ADC\_EXTERNALTRIGINJECCONV\_T8\_CC3)  || \(\backslash\)}
+\DoxyCodeLine{                                        ((INJTRIG) == ADC\_EXTERNALTRIGINJECCONV\_T8\_CC4)  || \(\backslash\)}
+\DoxyCodeLine{                                        ((INJTRIG) == ADC\_EXTERNALTRIGINJECCONV\_EXT\_IT15)|| \(\backslash\)}
+\DoxyCodeLine{                                        ((INJTRIG) == ADC\_INJECTED\_SOFTWARE\_START))}
+
+\end{DoxyCode}
+
+
+Definition at line 356 of file stm32f4xx\+\_\+hal\+\_\+adc\+\_\+ex.\+h.
+
+\mbox{\label{group___a_d_c_ex___private___macros_ga1071d8b9c241b032c87c0f858d8de517}} 
+\index{ADC Private Macros@{ADC Private Macros}!IS\_ADC\_EXT\_INJEC\_TRIG\_EDGE@{IS\_ADC\_EXT\_INJEC\_TRIG\_EDGE}}
+\index{IS\_ADC\_EXT\_INJEC\_TRIG\_EDGE@{IS\_ADC\_EXT\_INJEC\_TRIG\_EDGE}!ADC Private Macros@{ADC Private Macros}}
+\doxysubsubsection{IS\_ADC\_EXT\_INJEC\_TRIG\_EDGE}
+{\footnotesize\ttfamily \#define IS\+\_\+\+ADC\+\_\+\+EXT\+\_\+\+INJEC\+\_\+\+TRIG\+\_\+\+EDGE(\begin{DoxyParamCaption}\item[{}]{EDGE }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                          (((EDGE) == ADC\_EXTERNALTRIGINJECCONVEDGE\_NONE)    || \(\backslash\)}
+\DoxyCodeLine{                                          ((EDGE) == ADC\_EXTERNALTRIGINJECCONVEDGE\_RISING)  || \(\backslash\)}
+\DoxyCodeLine{                                          ((EDGE) == ADC\_EXTERNALTRIGINJECCONVEDGE\_FALLING) || \(\backslash\)}
+\DoxyCodeLine{                                          ((EDGE) == ADC\_EXTERNALTRIGINJECCONVEDGE\_RISINGFALLING))}
+
+\end{DoxyCode}
+
+
+Definition at line 352 of file stm32f4xx\+\_\+hal\+\_\+adc\+\_\+ex.\+h.
+
+\mbox{\label{group___a_d_c_ex___private___macros_gaecdddab7424a697722683296ca70e176}} 
+\index{ADC Private Macros@{ADC Private Macros}!IS\_ADC\_INJECTED\_LENGTH@{IS\_ADC\_INJECTED\_LENGTH}}
+\index{IS\_ADC\_INJECTED\_LENGTH@{IS\_ADC\_INJECTED\_LENGTH}!ADC Private Macros@{ADC Private Macros}}
+\doxysubsubsection{IS\_ADC\_INJECTED\_LENGTH}
+{\footnotesize\ttfamily \#define IS\+\_\+\+ADC\+\_\+\+INJECTED\+\_\+\+LENGTH(\begin{DoxyParamCaption}\item[{}]{LENGTH }\end{DoxyParamCaption})~(((LENGTH) $>$= ((uint32\+\_\+t)1U)) \&\& ((LENGTH) $<$= ((uint32\+\_\+t)4U)))}
+
+
+
+Definition at line 373 of file stm32f4xx\+\_\+hal\+\_\+adc\+\_\+ex.\+h.
+
+\mbox{\label{group___a_d_c_ex___private___macros_ga63f95f9a45f4d718aabc9e429d860e9d}} 
+\index{ADC Private Macros@{ADC Private Macros}!IS\_ADC\_INJECTED\_RANK@{IS\_ADC\_INJECTED\_RANK}}
+\index{IS\_ADC\_INJECTED\_RANK@{IS\_ADC\_INJECTED\_RANK}!ADC Private Macros@{ADC Private Macros}}
+\doxysubsubsection{IS\_ADC\_INJECTED\_RANK}
+{\footnotesize\ttfamily \#define IS\+\_\+\+ADC\+\_\+\+INJECTED\+\_\+\+RANK(\begin{DoxyParamCaption}\item[{}]{RANK }\end{DoxyParamCaption})~(((RANK) $>$= ((uint32\+\_\+t)1U)) \&\& ((RANK) $<$= ((uint32\+\_\+t)4U)))}
+
+
+
+Definition at line 374 of file stm32f4xx\+\_\+hal\+\_\+adc\+\_\+ex.\+h.
+
+\mbox{\label{group___a_d_c_ex___private___macros_ga4abf4c7de28a42d7b124c9e403a6e537}} 
+\index{ADC Private Macros@{ADC Private Macros}!IS\_ADC\_MODE@{IS\_ADC\_MODE}}
+\index{IS\_ADC\_MODE@{IS\_ADC\_MODE}!ADC Private Macros@{ADC Private Macros}}
+\doxysubsubsection{IS\_ADC\_MODE}
+{\footnotesize\ttfamily \#define IS\+\_\+\+ADC\+\_\+\+MODE(\begin{DoxyParamCaption}\item[{}]{MODE }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                           (((MODE) == ADC\_MODE\_INDEPENDENT)                 || \(\backslash\)}
+\DoxyCodeLine{                           ((MODE) == ADC\_DUALMODE\_REGSIMULT\_INJECSIMULT)   || \(\backslash\)}
+\DoxyCodeLine{                           ((MODE) == ADC\_DUALMODE\_REGSIMULT\_ALTERTRIG)     || \(\backslash\)}
+\DoxyCodeLine{                           ((MODE) == ADC\_DUALMODE\_INJECSIMULT)             || \(\backslash\)}
+\DoxyCodeLine{                           ((MODE) == ADC\_DUALMODE\_REGSIMULT)               || \(\backslash\)}
+\DoxyCodeLine{                           ((MODE) == ADC\_DUALMODE\_INTERL)                  || \(\backslash\)}
+\DoxyCodeLine{                           ((MODE) == ADC\_DUALMODE\_ALTERTRIG)               || \(\backslash\)}
+\DoxyCodeLine{                           ((MODE) == ADC\_TRIPLEMODE\_REGSIMULT\_INJECSIMULT) || \(\backslash\)}
+\DoxyCodeLine{                           ((MODE) == ADC\_TRIPLEMODE\_REGSIMULT\_AlterTrig)   || \(\backslash\)}
+\DoxyCodeLine{                           ((MODE) == ADC\_TRIPLEMODE\_INJECSIMULT)           || \(\backslash\)}
+\DoxyCodeLine{                           ((MODE) == ADC\_TRIPLEMODE\_REGSIMULT)             || \(\backslash\)}
+\DoxyCodeLine{                           ((MODE) == ADC\_TRIPLEMODE\_INTERL)                || \(\backslash\)}
+\DoxyCodeLine{                           ((MODE) == ADC\_TRIPLEMODE\_ALTERTRIG))}
+
+\end{DoxyCode}
+
+
+Definition at line 335 of file stm32f4xx\+\_\+hal\+\_\+adc\+\_\+ex.\+h.
+

@@ -1,0 +1,77 @@
+\doxysection{arm\+\_\+biquad\+\_\+casd\+\_\+df1\+\_\+inst\+\_\+q15 Struct Reference}
+\label{structarm__biquad__casd__df1__inst__q15}\index{arm\_biquad\_casd\_df1\_inst\_q15@{arm\_biquad\_casd\_df1\_inst\_q15}}
+
+
+Instance structure for the Q15 Biquad cascade filter.  
+
+
+
+
+{\ttfamily \#include $<$arm\+\_\+math.\+h$>$}
+
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+int8\+\_\+t \textbf{ num\+Stages}
+\item 
+\textbf{ q15\+\_\+t} $\ast$ \textbf{ p\+State}
+\item 
+\textbf{ q15\+\_\+t} $\ast$ \textbf{ p\+Coeffs}
+\item 
+int8\+\_\+t \textbf{ post\+Shift}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Instance structure for the Q15 Biquad cascade filter. 
+
+Definition at line 1220 of file arm\+\_\+math.\+h.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\label{structarm__biquad__casd__df1__inst__q15_af59c4ceb94f92d6613492b37e7c949de}} 
+\index{arm\_biquad\_casd\_df1\_inst\_q15@{arm\_biquad\_casd\_df1\_inst\_q15}!numStages@{numStages}}
+\index{numStages@{numStages}!arm\_biquad\_casd\_df1\_inst\_q15@{arm\_biquad\_casd\_df1\_inst\_q15}}
+\doxysubsubsection{numStages}
+{\footnotesize\ttfamily int8\+\_\+t num\+Stages}
+
+number of 2nd order stages in the filter. Overall order is 2$\ast$num\+Stages. 
+
+Definition at line 1222 of file arm\+\_\+math.\+h.
+
+\mbox{\label{structarm__biquad__casd__df1__inst__q15_a7ca181a37f714d174445f486bebce26f}} 
+\index{arm\_biquad\_casd\_df1\_inst\_q15@{arm\_biquad\_casd\_df1\_inst\_q15}!pCoeffs@{pCoeffs}}
+\index{pCoeffs@{pCoeffs}!arm\_biquad\_casd\_df1\_inst\_q15@{arm\_biquad\_casd\_df1\_inst\_q15}}
+\doxysubsubsection{pCoeffs}
+{\footnotesize\ttfamily \textbf{ q15\+\_\+t}$\ast$ p\+Coeffs}
+
+Points to the array of coefficients. The array is of length 5$\ast$num\+Stages. 
+
+Definition at line 1224 of file arm\+\_\+math.\+h.
+
+\mbox{\label{structarm__biquad__casd__df1__inst__q15_a3603cbf084938b6931bcb05dfe487f09}} 
+\index{arm\_biquad\_casd\_df1\_inst\_q15@{arm\_biquad\_casd\_df1\_inst\_q15}!postShift@{postShift}}
+\index{postShift@{postShift}!arm\_biquad\_casd\_df1\_inst\_q15@{arm\_biquad\_casd\_df1\_inst\_q15}}
+\doxysubsubsection{postShift}
+{\footnotesize\ttfamily int8\+\_\+t post\+Shift}
+
+Additional shift, in bits, applied to each output sample. 
+
+Definition at line 1225 of file arm\+\_\+math.\+h.
+
+\mbox{\label{structarm__biquad__casd__df1__inst__q15_ae29dfdb736374fcddaeaec4b7770170c}} 
+\index{arm\_biquad\_casd\_df1\_inst\_q15@{arm\_biquad\_casd\_df1\_inst\_q15}!pState@{pState}}
+\index{pState@{pState}!arm\_biquad\_casd\_df1\_inst\_q15@{arm\_biquad\_casd\_df1\_inst\_q15}}
+\doxysubsubsection{pState}
+{\footnotesize\ttfamily \textbf{ q15\+\_\+t}$\ast$ p\+State}
+
+Points to the array of state coefficients. The array is of length 4$\ast$num\+Stages. 
+
+Definition at line 1223 of file arm\+\_\+math.\+h.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+system/include/cmsis/\textbf{ arm\+\_\+math.\+h}\end{DoxyCompactItemize}

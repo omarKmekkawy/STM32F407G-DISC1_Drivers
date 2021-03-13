@@ -1,0 +1,165 @@
+\doxysection{system/include/stm32f4-\/hal/stm32f4xx\+\_\+hal\+\_\+tim\+\_\+ex.h File Reference}
+\label{stm32f4xx__hal__tim__ex_8h}\index{system/include/stm32f4-\/hal/stm32f4xx\_hal\_tim\_ex.h@{system/include/stm32f4-\/hal/stm32f4xx\_hal\_tim\_ex.h}}
+
+
+Header file of TIM HAL Extension module.  
+
+
+{\ttfamily \#include \char`\"{}stm32f4xx\+\_\+hal\+\_\+def.\+h\char`\"{}}\newline
+Include dependency graph for stm32f4xx\+\_\+hal\+\_\+tim\+\_\+ex.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{stm32f4xx__hal__tim__ex_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{stm32f4xx__hal__tim__ex_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \textbf{ TIM\+\_\+\+Hall\+Sensor\+\_\+\+Init\+Type\+Def}
+\begin{DoxyCompactList}\small\item\em TIM Hall sensor Configuration Structure definition ~\newline
+ \end{DoxyCompactList}\item 
+struct \textbf{ TIM\+\_\+\+Master\+Config\+Type\+Def}
+\begin{DoxyCompactList}\small\item\em TIM Master configuration Structure definition ~\newline
+ \end{DoxyCompactList}\item 
+struct \textbf{ TIM\+\_\+\+Break\+Dead\+Time\+Config\+Type\+Def}
+\begin{DoxyCompactList}\small\item\em TIM Break and Dead time configuration Structure definition ~\newline
+ \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \textbf{ TIM\+\_\+\+TIM2\+\_\+\+TIM8\+\_\+\+TRGO}~(0x00000000U)
+\item 
+\#define \textbf{ TIM\+\_\+\+TIM2\+\_\+\+ETH\+\_\+\+PTP}~(0x00000400U)
+\item 
+\#define \textbf{ TIM\+\_\+\+TIM2\+\_\+\+USBFS\+\_\+\+SOF}~(0x00000800U)
+\item 
+\#define \textbf{ TIM\+\_\+\+TIM2\+\_\+\+USBHS\+\_\+\+SOF}~(0x00000\+C00U)
+\item 
+\#define \textbf{ TIM\+\_\+\+TIM5\+\_\+\+GPIO}~(0x00000000U)
+\item 
+\#define \textbf{ TIM\+\_\+\+TIM5\+\_\+\+LSI}~(0x00000040U)
+\item 
+\#define \textbf{ TIM\+\_\+\+TIM5\+\_\+\+LSE}~(0x00000080U)
+\item 
+\#define \textbf{ TIM\+\_\+\+TIM5\+\_\+\+RTC}~(0x000000\+C0U)
+\item 
+\#define \textbf{ TIM\+\_\+\+TIM11\+\_\+\+GPIO}~(0x00000000U)
+\item 
+\#define \textbf{ TIM\+\_\+\+TIM11\+\_\+\+HSE}~(0x00000002U)
+\item 
+\#define \textbf{ IS\+\_\+\+TIM\+\_\+\+REMAP}(TIM\+\_\+\+REMAP)
+\item 
+\#define \textbf{ IS\+\_\+\+TIM\+\_\+\+DEADTIME}(DEADTIME)~((DEADTIME) $<$= 0x\+FFU)
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+TIMEx\+\_\+\+Hall\+Sensor\+\_\+\+Init} (\textbf{ TIM\+\_\+\+Handle\+Type\+Def} $\ast$htim, \textbf{ TIM\+\_\+\+Hall\+Sensor\+\_\+\+Init\+Type\+Def} $\ast$s\+Config)
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+TIMEx\+\_\+\+Hall\+Sensor\+\_\+\+De\+Init} (\textbf{ TIM\+\_\+\+Handle\+Type\+Def} $\ast$htim)
+\item 
+void \textbf{ HAL\+\_\+\+TIMEx\+\_\+\+Hall\+Sensor\+\_\+\+Msp\+Init} (\textbf{ TIM\+\_\+\+Handle\+Type\+Def} $\ast$htim)
+\item 
+void \textbf{ HAL\+\_\+\+TIMEx\+\_\+\+Hall\+Sensor\+\_\+\+Msp\+De\+Init} (\textbf{ TIM\+\_\+\+Handle\+Type\+Def} $\ast$htim)
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+TIMEx\+\_\+\+Hall\+Sensor\+\_\+\+Start} (\textbf{ TIM\+\_\+\+Handle\+Type\+Def} $\ast$htim)
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+TIMEx\+\_\+\+Hall\+Sensor\+\_\+\+Stop} (\textbf{ TIM\+\_\+\+Handle\+Type\+Def} $\ast$htim)
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+TIMEx\+\_\+\+Hall\+Sensor\+\_\+\+Start\+\_\+\+IT} (\textbf{ TIM\+\_\+\+Handle\+Type\+Def} $\ast$htim)
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+TIMEx\+\_\+\+Hall\+Sensor\+\_\+\+Stop\+\_\+\+IT} (\textbf{ TIM\+\_\+\+Handle\+Type\+Def} $\ast$htim)
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+TIMEx\+\_\+\+Hall\+Sensor\+\_\+\+Start\+\_\+\+DMA} (\textbf{ TIM\+\_\+\+Handle\+Type\+Def} $\ast$htim, uint32\+\_\+t $\ast$p\+Data, uint16\+\_\+t Length)
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+TIMEx\+\_\+\+Hall\+Sensor\+\_\+\+Stop\+\_\+\+DMA} (\textbf{ TIM\+\_\+\+Handle\+Type\+Def} $\ast$htim)
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+TIMEx\+\_\+\+OCN\+\_\+\+Start} (\textbf{ TIM\+\_\+\+Handle\+Type\+Def} $\ast$htim, uint32\+\_\+t Channel)
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+TIMEx\+\_\+\+OCN\+\_\+\+Stop} (\textbf{ TIM\+\_\+\+Handle\+Type\+Def} $\ast$htim, uint32\+\_\+t Channel)
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+TIMEx\+\_\+\+OCN\+\_\+\+Start\+\_\+\+IT} (\textbf{ TIM\+\_\+\+Handle\+Type\+Def} $\ast$htim, uint32\+\_\+t Channel)
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+TIMEx\+\_\+\+OCN\+\_\+\+Stop\+\_\+\+IT} (\textbf{ TIM\+\_\+\+Handle\+Type\+Def} $\ast$htim, uint32\+\_\+t Channel)
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+TIMEx\+\_\+\+OCN\+\_\+\+Start\+\_\+\+DMA} (\textbf{ TIM\+\_\+\+Handle\+Type\+Def} $\ast$htim, uint32\+\_\+t Channel, uint32\+\_\+t $\ast$p\+Data, uint16\+\_\+t Length)
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+TIMEx\+\_\+\+OCN\+\_\+\+Stop\+\_\+\+DMA} (\textbf{ TIM\+\_\+\+Handle\+Type\+Def} $\ast$htim, uint32\+\_\+t Channel)
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+TIMEx\+\_\+\+PWMN\+\_\+\+Start} (\textbf{ TIM\+\_\+\+Handle\+Type\+Def} $\ast$htim, uint32\+\_\+t Channel)
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+TIMEx\+\_\+\+PWMN\+\_\+\+Stop} (\textbf{ TIM\+\_\+\+Handle\+Type\+Def} $\ast$htim, uint32\+\_\+t Channel)
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+TIMEx\+\_\+\+PWMN\+\_\+\+Start\+\_\+\+IT} (\textbf{ TIM\+\_\+\+Handle\+Type\+Def} $\ast$htim, uint32\+\_\+t Channel)
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+TIMEx\+\_\+\+PWMN\+\_\+\+Stop\+\_\+\+IT} (\textbf{ TIM\+\_\+\+Handle\+Type\+Def} $\ast$htim, uint32\+\_\+t Channel)
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+TIMEx\+\_\+\+PWMN\+\_\+\+Start\+\_\+\+DMA} (\textbf{ TIM\+\_\+\+Handle\+Type\+Def} $\ast$htim, uint32\+\_\+t Channel, uint32\+\_\+t $\ast$p\+Data, uint16\+\_\+t Length)
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+TIMEx\+\_\+\+PWMN\+\_\+\+Stop\+\_\+\+DMA} (\textbf{ TIM\+\_\+\+Handle\+Type\+Def} $\ast$htim, uint32\+\_\+t Channel)
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+TIMEx\+\_\+\+One\+Pulse\+N\+\_\+\+Start} (\textbf{ TIM\+\_\+\+Handle\+Type\+Def} $\ast$htim, uint32\+\_\+t Output\+Channel)
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+TIMEx\+\_\+\+One\+Pulse\+N\+\_\+\+Stop} (\textbf{ TIM\+\_\+\+Handle\+Type\+Def} $\ast$htim, uint32\+\_\+t Output\+Channel)
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+TIMEx\+\_\+\+One\+Pulse\+N\+\_\+\+Start\+\_\+\+IT} (\textbf{ TIM\+\_\+\+Handle\+Type\+Def} $\ast$htim, uint32\+\_\+t Output\+Channel)
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+TIMEx\+\_\+\+One\+Pulse\+N\+\_\+\+Stop\+\_\+\+IT} (\textbf{ TIM\+\_\+\+Handle\+Type\+Def} $\ast$htim, uint32\+\_\+t Output\+Channel)
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+TIMEx\+\_\+\+Config\+Commutation\+Event} (\textbf{ TIM\+\_\+\+Handle\+Type\+Def} $\ast$htim, uint32\+\_\+t Input\+Trigger, uint32\+\_\+t Commutation\+Source)
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+TIMEx\+\_\+\+Config\+Commutation\+Event\+\_\+\+IT} (\textbf{ TIM\+\_\+\+Handle\+Type\+Def} $\ast$htim, uint32\+\_\+t Input\+Trigger, uint32\+\_\+t Commutation\+Source)
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+TIMEx\+\_\+\+Config\+Commutation\+Event\+\_\+\+DMA} (\textbf{ TIM\+\_\+\+Handle\+Type\+Def} $\ast$htim, uint32\+\_\+t Input\+Trigger, uint32\+\_\+t Commutation\+Source)
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+TIMEx\+\_\+\+Master\+Config\+Synchronization} (\textbf{ TIM\+\_\+\+Handle\+Type\+Def} $\ast$htim, \textbf{ TIM\+\_\+\+Master\+Config\+Type\+Def} $\ast$s\+Master\+Config)
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+TIMEx\+\_\+\+Config\+Break\+Dead\+Time} (\textbf{ TIM\+\_\+\+Handle\+Type\+Def} $\ast$htim, \textbf{ TIM\+\_\+\+Break\+Dead\+Time\+Config\+Type\+Def} $\ast$s\+Break\+Dead\+Time\+Config)
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+TIMEx\+\_\+\+Remap\+Config} (\textbf{ TIM\+\_\+\+Handle\+Type\+Def} $\ast$htim, uint32\+\_\+t Remap)
+\item 
+void \textbf{ HAL\+\_\+\+TIMEx\+\_\+\+Commutation\+Callback} (\textbf{ TIM\+\_\+\+Handle\+Type\+Def} $\ast$htim)
+\item 
+void \textbf{ HAL\+\_\+\+TIMEx\+\_\+\+Break\+Callback} (\textbf{ TIM\+\_\+\+Handle\+Type\+Def} $\ast$htim)
+\item 
+void \textbf{ TIMEx\+\_\+\+DMACommutation\+Cplt} (\textbf{ DMA\+\_\+\+Handle\+Type\+Def} $\ast$hdma)
+\item 
+\textbf{ HAL\+\_\+\+TIM\+\_\+\+State\+Type\+Def} \textbf{ HAL\+\_\+\+TIMEx\+\_\+\+Hall\+Sensor\+\_\+\+Get\+State} (\textbf{ TIM\+\_\+\+Handle\+Type\+Def} $\ast$htim)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Header file of TIM HAL Extension module. 
+
+\begin{DoxyAuthor}{Author}
+MCD Application Team 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+V1.\+5.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+06-\/May-\/2016
+\end{DoxyDate}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+\doxysubsubsection*{\begin{center}\copyright{} COPYRIGHT(c) 2016 STMicroelectronics\end{center} }
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met\+:
+\begin{DoxyEnumerate}
+\item Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+\item Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+\item Neither the name of STMicroelectronics nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+\end{DoxyEnumerate}
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \char`\"{}\+AS IS\char`\"{} AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. 

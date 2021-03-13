@@ -1,0 +1,88 @@
+\doxysection{RTC Exported Types}
+\label{group___r_t_c___exported___types}\index{RTC Exported Types@{RTC Exported Types}}
+Collaboration diagram for RTC Exported Types\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=258pt]{group___r_t_c___exported___types}
+\end{center}
+\end{figure}
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \textbf{ RTC\+\_\+\+Init\+Type\+Def}
+\begin{DoxyCompactList}\small\item\em RTC Configuration Structure definition ~\newline
+ \end{DoxyCompactList}\item 
+struct \textbf{ RTC\+\_\+\+Time\+Type\+Def}
+\begin{DoxyCompactList}\small\item\em RTC Time structure definition ~\newline
+ \end{DoxyCompactList}\item 
+struct \textbf{ RTC\+\_\+\+Date\+Type\+Def}
+\begin{DoxyCompactList}\small\item\em RTC Date structure definition ~\newline
+ \end{DoxyCompactList}\item 
+struct \textbf{ RTC\+\_\+\+Alarm\+Type\+Def}
+\begin{DoxyCompactList}\small\item\em RTC Alarm structure definition ~\newline
+ \end{DoxyCompactList}\item 
+struct \textbf{ RTC\+\_\+\+Handle\+Type\+Def}
+\begin{DoxyCompactList}\small\item\em RTC Handle Structure definition ~\newline
+ \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \textbf{ HAL\+\_\+\+RTCState\+Type\+Def} \{ \newline
+\textbf{ HAL\+\_\+\+RTC\+\_\+\+STATE\+\_\+\+RESET} = 0x00U
+, \textbf{ HAL\+\_\+\+RTC\+\_\+\+STATE\+\_\+\+READY} = 0x01U
+, \textbf{ HAL\+\_\+\+RTC\+\_\+\+STATE\+\_\+\+BUSY} = 0x02U
+, \textbf{ HAL\+\_\+\+RTC\+\_\+\+STATE\+\_\+\+TIMEOUT} = 0x03U
+, \newline
+\textbf{ HAL\+\_\+\+RTC\+\_\+\+STATE\+\_\+\+ERROR} = 0x04U
+ \}
+\begin{DoxyCompactList}\small\item\em HAL State structures definition ~\newline
+ \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\label{group___r_t_c___exported___types_ga1e2460a2d13c4efc7a2a1ab2a1ebd32b}} 
+\index{RTC Exported Types@{RTC Exported Types}!HAL\_RTCStateTypeDef@{HAL\_RTCStateTypeDef}}
+\index{HAL\_RTCStateTypeDef@{HAL\_RTCStateTypeDef}!RTC Exported Types@{RTC Exported Types}}
+\doxysubsubsection{HAL\_RTCStateTypeDef}
+{\footnotesize\ttfamily enum \textbf{ HAL\+\_\+\+RTCState\+Type\+Def}}
+
+
+
+HAL State structures definition ~\newline
+ 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HAL\_RTC\_STATE\_RESET@{HAL\_RTC\_STATE\_RESET}!RTC Exported Types@{RTC Exported Types}}\index{RTC Exported Types@{RTC Exported Types}!HAL\_RTC\_STATE\_RESET@{HAL\_RTC\_STATE\_RESET}}}\mbox{\label{group___r_t_c___exported___types_gga1e2460a2d13c4efc7a2a1ab2a1ebd32ba69cd05758f5129525749b65bee6f939f}} 
+HAL\+\_\+\+RTC\+\_\+\+STATE\+\_\+\+RESET&RTC not yet initialized or disabled \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HAL\_RTC\_STATE\_READY@{HAL\_RTC\_STATE\_READY}!RTC Exported Types@{RTC Exported Types}}\index{RTC Exported Types@{RTC Exported Types}!HAL\_RTC\_STATE\_READY@{HAL\_RTC\_STATE\_READY}}}\mbox{\label{group___r_t_c___exported___types_gga1e2460a2d13c4efc7a2a1ab2a1ebd32ba466484cd22333d8c8758ae12890b862f}} 
+HAL\+\_\+\+RTC\+\_\+\+STATE\+\_\+\+READY&RTC initialized and ready for use ~\newline
+ \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HAL\_RTC\_STATE\_BUSY@{HAL\_RTC\_STATE\_BUSY}!RTC Exported Types@{RTC Exported Types}}\index{RTC Exported Types@{RTC Exported Types}!HAL\_RTC\_STATE\_BUSY@{HAL\_RTC\_STATE\_BUSY}}}\mbox{\label{group___r_t_c___exported___types_gga1e2460a2d13c4efc7a2a1ab2a1ebd32ba5e0a8c8e4731ac8f80e9a219413d6f9b}} 
+HAL\+\_\+\+RTC\+\_\+\+STATE\+\_\+\+BUSY&RTC process is ongoing ~\newline
+ \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HAL\_RTC\_STATE\_TIMEOUT@{HAL\_RTC\_STATE\_TIMEOUT}!RTC Exported Types@{RTC Exported Types}}\index{RTC Exported Types@{RTC Exported Types}!HAL\_RTC\_STATE\_TIMEOUT@{HAL\_RTC\_STATE\_TIMEOUT}}}\mbox{\label{group___r_t_c___exported___types_gga1e2460a2d13c4efc7a2a1ab2a1ebd32ba062e7947b5f5f0c2acb7be96207e3d58}} 
+HAL\+\_\+\+RTC\+\_\+\+STATE\+\_\+\+TIMEOUT&RTC timeout state ~\newline
+ \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HAL\_RTC\_STATE\_ERROR@{HAL\_RTC\_STATE\_ERROR}!RTC Exported Types@{RTC Exported Types}}\index{RTC Exported Types@{RTC Exported Types}!HAL\_RTC\_STATE\_ERROR@{HAL\_RTC\_STATE\_ERROR}}}\mbox{\label{group___r_t_c___exported___types_gga1e2460a2d13c4efc7a2a1ab2a1ebd32ba21f381f99f437c340f79407e3d71bb31}} 
+HAL\+\_\+\+RTC\+\_\+\+STATE\+\_\+\+ERROR&RTC error state ~\newline
+ \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 65 of file stm32f4xx\+\_\+hal\+\_\+rtc.\+h.
+

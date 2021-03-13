@@ -1,0 +1,95 @@
+\doxysection{I2S Exported Types}
+\label{group___i2_s___exported___types}\index{I2S Exported Types@{I2S Exported Types}}
+Collaboration diagram for I2S Exported Types\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=249pt]{group___i2_s___exported___types}
+\end{center}
+\end{figure}
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \textbf{ I2\+S\+\_\+\+Init\+Type\+Def}
+\begin{DoxyCompactList}\small\item\em I2S Init structure definition ~\newline
+ \end{DoxyCompactList}\item 
+struct \textbf{ I2\+S\+\_\+\+Handle\+Type\+Def}
+\begin{DoxyCompactList}\small\item\em I2S handle Structure definition ~\newline
+ \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \textbf{ HAL\+\_\+\+I2\+S\+\_\+\+State\+Type\+Def} \{ \newline
+\textbf{ HAL\+\_\+\+I2\+S\+\_\+\+STATE\+\_\+\+RESET} = 0x00U
+, \textbf{ HAL\+\_\+\+I2\+S\+\_\+\+STATE\+\_\+\+READY} = 0x01U
+, \textbf{ HAL\+\_\+\+I2\+S\+\_\+\+STATE\+\_\+\+BUSY} = 0x02U
+, \textbf{ HAL\+\_\+\+I2\+S\+\_\+\+STATE\+\_\+\+BUSY\+\_\+\+TX} = 0x12U
+, \newline
+\textbf{ HAL\+\_\+\+I2\+S\+\_\+\+STATE\+\_\+\+BUSY\+\_\+\+RX} = 0x22U
+, \textbf{ HAL\+\_\+\+I2\+S\+\_\+\+STATE\+\_\+\+BUSY\+\_\+\+TX\+\_\+\+RX} = 0x32U
+, \textbf{ HAL\+\_\+\+I2\+S\+\_\+\+STATE\+\_\+\+TIMEOUT} = 0x03U
+, \textbf{ HAL\+\_\+\+I2\+S\+\_\+\+STATE\+\_\+\+ERROR} = 0x04U
+ \}
+\begin{DoxyCompactList}\small\item\em HAL State structures definition. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\label{group___i2_s___exported___types_ga2588a0c71baf7cd6d2c1b9b11120bef0}} 
+\index{I2S Exported Types@{I2S Exported Types}!HAL\_I2S\_StateTypeDef@{HAL\_I2S\_StateTypeDef}}
+\index{HAL\_I2S\_StateTypeDef@{HAL\_I2S\_StateTypeDef}!I2S Exported Types@{I2S Exported Types}}
+\doxysubsubsection{HAL\_I2S\_StateTypeDef}
+{\footnotesize\ttfamily enum \textbf{ HAL\+\_\+\+I2\+S\+\_\+\+State\+Type\+Def}}
+
+
+
+HAL State structures definition. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HAL\_I2S\_STATE\_RESET@{HAL\_I2S\_STATE\_RESET}!I2S Exported Types@{I2S Exported Types}}\index{I2S Exported Types@{I2S Exported Types}!HAL\_I2S\_STATE\_RESET@{HAL\_I2S\_STATE\_RESET}}}\mbox{\label{group___i2_s___exported___types_gga2588a0c71baf7cd6d2c1b9b11120bef0a2b69279eb021ef38d711edcdc5c95054}} 
+HAL\+\_\+\+I2\+S\+\_\+\+STATE\+\_\+\+RESET&I2S not yet initialized or disabled ~\newline
+ \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HAL\_I2S\_STATE\_READY@{HAL\_I2S\_STATE\_READY}!I2S Exported Types@{I2S Exported Types}}\index{I2S Exported Types@{I2S Exported Types}!HAL\_I2S\_STATE\_READY@{HAL\_I2S\_STATE\_READY}}}\mbox{\label{group___i2_s___exported___types_gga2588a0c71baf7cd6d2c1b9b11120bef0afb3efb92ef3bcfce6f4d34570b31a602}} 
+HAL\+\_\+\+I2\+S\+\_\+\+STATE\+\_\+\+READY&I2S initialized and ready for use ~\newline
+ \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HAL\_I2S\_STATE\_BUSY@{HAL\_I2S\_STATE\_BUSY}!I2S Exported Types@{I2S Exported Types}}\index{I2S Exported Types@{I2S Exported Types}!HAL\_I2S\_STATE\_BUSY@{HAL\_I2S\_STATE\_BUSY}}}\mbox{\label{group___i2_s___exported___types_gga2588a0c71baf7cd6d2c1b9b11120bef0a0d9faadcd5b6010c6071905345a282e7}} 
+HAL\+\_\+\+I2\+S\+\_\+\+STATE\+\_\+\+BUSY&I2S internal process is ongoing ~\newline
+ \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HAL\_I2S\_STATE\_BUSY\_TX@{HAL\_I2S\_STATE\_BUSY\_TX}!I2S Exported Types@{I2S Exported Types}}\index{I2S Exported Types@{I2S Exported Types}!HAL\_I2S\_STATE\_BUSY\_TX@{HAL\_I2S\_STATE\_BUSY\_TX}}}\mbox{\label{group___i2_s___exported___types_gga2588a0c71baf7cd6d2c1b9b11120bef0ab8386636ae24469508b8312e7bfbc4b3}} 
+HAL\+\_\+\+I2\+S\+\_\+\+STATE\+\_\+\+BUSY\+\_\+\+TX&Data Transmission process is ongoing ~\newline
+ \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HAL\_I2S\_STATE\_BUSY\_RX@{HAL\_I2S\_STATE\_BUSY\_RX}!I2S Exported Types@{I2S Exported Types}}\index{I2S Exported Types@{I2S Exported Types}!HAL\_I2S\_STATE\_BUSY\_RX@{HAL\_I2S\_STATE\_BUSY\_RX}}}\mbox{\label{group___i2_s___exported___types_gga2588a0c71baf7cd6d2c1b9b11120bef0a641d635762b2ebb2e8e16917efc13162}} 
+HAL\+\_\+\+I2\+S\+\_\+\+STATE\+\_\+\+BUSY\+\_\+\+RX&Data Reception process is ongoing ~\newline
+ \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HAL\_I2S\_STATE\_BUSY\_TX\_RX@{HAL\_I2S\_STATE\_BUSY\_TX\_RX}!I2S Exported Types@{I2S Exported Types}}\index{I2S Exported Types@{I2S Exported Types}!HAL\_I2S\_STATE\_BUSY\_TX\_RX@{HAL\_I2S\_STATE\_BUSY\_TX\_RX}}}\mbox{\label{group___i2_s___exported___types_gga2588a0c71baf7cd6d2c1b9b11120bef0a4135585ed147654154c0b7be15f3807e}} 
+HAL\+\_\+\+I2\+S\+\_\+\+STATE\+\_\+\+BUSY\+\_\+\+TX\+\_\+\+RX&Data Transmission and Reception process is ongoing \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HAL\_I2S\_STATE\_TIMEOUT@{HAL\_I2S\_STATE\_TIMEOUT}!I2S Exported Types@{I2S Exported Types}}\index{I2S Exported Types@{I2S Exported Types}!HAL\_I2S\_STATE\_TIMEOUT@{HAL\_I2S\_STATE\_TIMEOUT}}}\mbox{\label{group___i2_s___exported___types_gga2588a0c71baf7cd6d2c1b9b11120bef0a95d3eabfe7ff5d52af473e7fc96f9536}} 
+HAL\+\_\+\+I2\+S\+\_\+\+STATE\+\_\+\+TIMEOUT&I2S timeout state ~\newline
+ \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HAL\_I2S\_STATE\_ERROR@{HAL\_I2S\_STATE\_ERROR}!I2S Exported Types@{I2S Exported Types}}\index{I2S Exported Types@{I2S Exported Types}!HAL\_I2S\_STATE\_ERROR@{HAL\_I2S\_STATE\_ERROR}}}\mbox{\label{group___i2_s___exported___types_gga2588a0c71baf7cd6d2c1b9b11120bef0a011e8568b5b81c7074f2cbfa38b8a2d8}} 
+HAL\+\_\+\+I2\+S\+\_\+\+STATE\+\_\+\+ERROR&I2S error state ~\newline
+ \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 96 of file stm32f4xx\+\_\+hal\+\_\+i2s.\+h.
+

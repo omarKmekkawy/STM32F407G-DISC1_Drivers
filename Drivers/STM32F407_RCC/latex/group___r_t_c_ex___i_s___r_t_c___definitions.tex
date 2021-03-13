@@ -1,0 +1,402 @@
+\doxysection{Private macros to check input parameters}
+\label{group___r_t_c_ex___i_s___r_t_c___definitions}\index{Private macros to check input parameters@{Private macros to check input parameters}}
+Collaboration diagram for Private macros to check input parameters\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group___r_t_c_ex___i_s___r_t_c___definitions}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \textbf{ IS\+\_\+\+RTC\+\_\+\+BKP}(BKP)
+\item 
+\#define \textbf{ IS\+\_\+\+TIMESTAMP\+\_\+\+EDGE}(EDGE)
+\item 
+\#define \textbf{ IS\+\_\+\+RTC\+\_\+\+TAMPER}(TAMPER)~((((TAMPER) \& ((uint32\+\_\+t)!(\textbf{ RTC\+\_\+\+TAFCR\+\_\+\+TAMP1E} $\vert$ \textbf{ RTC\+\_\+\+TAFCR\+\_\+\+TAMP2E}))) == 0x00U) \&\& ((TAMPER) != (uint32\+\_\+t)\textbf{ RESET}))
+\item 
+\#define \textbf{ IS\+\_\+\+RTC\+\_\+\+TAMPER\+\_\+\+PIN}(PIN)
+\item 
+\#define \textbf{ IS\+\_\+\+RTC\+\_\+\+TIMESTAMP\+\_\+\+PIN}(PIN)
+\item 
+\#define \textbf{ IS\+\_\+\+RTC\+\_\+\+TAMPER\+\_\+\+TRIGGER}(TRIGGER)
+\item 
+\#define \textbf{ IS\+\_\+\+RTC\+\_\+\+TAMPER\+\_\+\+FILTER}(FILTER)
+\item 
+\#define \textbf{ IS\+\_\+\+RTC\+\_\+\+TAMPER\+\_\+\+SAMPLING\+\_\+\+FREQ}(FREQ)
+\item 
+\#define \textbf{ IS\+\_\+\+RTC\+\_\+\+TAMPER\+\_\+\+PRECHARGE\+\_\+\+DURATION}(DURATION)
+\item 
+\#define \textbf{ IS\+\_\+\+RTC\+\_\+\+TAMPER\+\_\+\+TIMESTAMPONTAMPER\+\_\+\+DETECTION}(DETECTION)
+\item 
+\#define \textbf{ IS\+\_\+\+RTC\+\_\+\+TAMPER\+\_\+\+PULLUP\+\_\+\+STATE}(STATE)
+\item 
+\#define \textbf{ IS\+\_\+\+RTC\+\_\+\+WAKEUP\+\_\+\+CLOCK}(CLOCK)
+\item 
+\#define \textbf{ IS\+\_\+\+RTC\+\_\+\+WAKEUP\+\_\+\+COUNTER}(COUNTER)~((COUNTER) $<$= 0x\+FFFFU)
+\item 
+\#define \textbf{ IS\+\_\+\+RTC\+\_\+\+CALIB\+\_\+\+SIGN}(SIGN)
+\item 
+\#define \textbf{ IS\+\_\+\+RTC\+\_\+\+CALIB\+\_\+\+VALUE}(VALUE)~((VALUE) $<$ 0x20U)
+\item 
+\#define \textbf{ IS\+\_\+\+RTC\+\_\+\+SMOOTH\+\_\+\+CALIB\+\_\+\+PERIOD}(PERIOD)
+\item 
+\#define \textbf{ IS\+\_\+\+RTC\+\_\+\+SMOOTH\+\_\+\+CALIB\+\_\+\+PLUS}(PLUS)
+\item 
+\#define \textbf{ IS\+\_\+\+RTC\+\_\+\+SMOOTH\+\_\+\+CALIB\+\_\+\+MINUS}(VALUE)~((VALUE) $<$= 0x000001\+FFU)
+\item 
+\#define \textbf{ IS\+\_\+\+RTC\+\_\+\+SHIFT\+\_\+\+ADD1S}(SEL)
+\item 
+\#define \textbf{ IS\+\_\+\+RTC\+\_\+\+SHIFT\+\_\+\+SUBFS}(FS)~((FS) $<$= 0x00007\+FFFU)
+\item 
+\#define \textbf{ IS\+\_\+\+RTC\+\_\+\+CALIB\+\_\+\+OUTPUT}(OUTPUT)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\label{group___r_t_c_ex___i_s___r_t_c___definitions_ga7dfcd70f7d46d2a71155b4e4e12d0a60}} 
+\index{Private macros to check input parameters@{Private macros to check input parameters}!IS\_RTC\_BKP@{IS\_RTC\_BKP}}
+\index{IS\_RTC\_BKP@{IS\_RTC\_BKP}!Private macros to check input parameters@{Private macros to check input parameters}}
+\doxysubsubsection{IS\_RTC\_BKP}
+{\footnotesize\ttfamily \#define IS\+\_\+\+RTC\+\_\+\+BKP(\begin{DoxyParamCaption}\item[{}]{BKP }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                           (((BKP) == RTC\_BKP\_DR0)  || \(\backslash\)}
+\DoxyCodeLine{                                           ((BKP) == RTC\_BKP\_DR1)  || \(\backslash\)}
+\DoxyCodeLine{                                           ((BKP) == RTC\_BKP\_DR2)  || \(\backslash\)}
+\DoxyCodeLine{                                           ((BKP) == RTC\_BKP\_DR3)  || \(\backslash\)}
+\DoxyCodeLine{                                           ((BKP) == RTC\_BKP\_DR4)  || \(\backslash\)}
+\DoxyCodeLine{                                           ((BKP) == RTC\_BKP\_DR5)  || \(\backslash\)}
+\DoxyCodeLine{                                           ((BKP) == RTC\_BKP\_DR6)  || \(\backslash\)}
+\DoxyCodeLine{                                           ((BKP) == RTC\_BKP\_DR7)  || \(\backslash\)}
+\DoxyCodeLine{                                           ((BKP) == RTC\_BKP\_DR8)  || \(\backslash\)}
+\DoxyCodeLine{                                           ((BKP) == RTC\_BKP\_DR9)  || \(\backslash\)}
+\DoxyCodeLine{                                           ((BKP) == RTC\_BKP\_DR10) || \(\backslash\)}
+\DoxyCodeLine{                                           ((BKP) == RTC\_BKP\_DR11) || \(\backslash\)}
+\DoxyCodeLine{                                           ((BKP) == RTC\_BKP\_DR12) || \(\backslash\)}
+\DoxyCodeLine{                                           ((BKP) == RTC\_BKP\_DR13) || \(\backslash\)}
+\DoxyCodeLine{                                           ((BKP) == RTC\_BKP\_DR14) || \(\backslash\)}
+\DoxyCodeLine{                                           ((BKP) == RTC\_BKP\_DR15) || \(\backslash\)}
+\DoxyCodeLine{                                           ((BKP) == RTC\_BKP\_DR16) || \(\backslash\)}
+\DoxyCodeLine{                                           ((BKP) == RTC\_BKP\_DR17) || \(\backslash\)}
+\DoxyCodeLine{                                           ((BKP) == RTC\_BKP\_DR18) || \(\backslash\)}
+\DoxyCodeLine{                                           ((BKP) == RTC\_BKP\_DR19))}
+
+\end{DoxyCode}
+
+
+Definition at line 904 of file stm32f4xx\+\_\+hal\+\_\+rtc\+\_\+ex.\+h.
+
+\mbox{\label{group___r_t_c_ex___i_s___r_t_c___definitions_gae8326e278569669e6880388c85cd890a}} 
+\index{Private macros to check input parameters@{Private macros to check input parameters}!IS\_RTC\_CALIB\_OUTPUT@{IS\_RTC\_CALIB\_OUTPUT}}
+\index{IS\_RTC\_CALIB\_OUTPUT@{IS\_RTC\_CALIB\_OUTPUT}!Private macros to check input parameters@{Private macros to check input parameters}}
+\doxysubsubsection{IS\_RTC\_CALIB\_OUTPUT}
+{\footnotesize\ttfamily \#define IS\+\_\+\+RTC\+\_\+\+CALIB\+\_\+\+OUTPUT(\begin{DoxyParamCaption}\item[{}]{OUTPUT }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                      (((OUTPUT) == RTC\_CALIBOUTPUT\_512HZ) || \(\backslash\)}
+\DoxyCodeLine{                                      ((OUTPUT) == RTC\_CALIBOUTPUT\_1HZ))}
+
+\end{DoxyCode}
+
+
+Definition at line 981 of file stm32f4xx\+\_\+hal\+\_\+rtc\+\_\+ex.\+h.
+
+\mbox{\label{group___r_t_c_ex___i_s___r_t_c___definitions_ga8e9688a85c6708500b5f56ddc056beb1}} 
+\index{Private macros to check input parameters@{Private macros to check input parameters}!IS\_RTC\_CALIB\_SIGN@{IS\_RTC\_CALIB\_SIGN}}
+\index{IS\_RTC\_CALIB\_SIGN@{IS\_RTC\_CALIB\_SIGN}!Private macros to check input parameters@{Private macros to check input parameters}}
+\doxysubsubsection{IS\_RTC\_CALIB\_SIGN}
+{\footnotesize\ttfamily \#define IS\+\_\+\+RTC\+\_\+\+CALIB\+\_\+\+SIGN(\begin{DoxyParamCaption}\item[{}]{SIGN }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                 (((SIGN) == RTC\_CALIBSIGN\_POSITIVE) || \(\backslash\)}
+\DoxyCodeLine{                                 ((SIGN) == RTC\_CALIBSIGN\_NEGATIVE))}
+
+\end{DoxyCode}
+
+
+Definition at line 966 of file stm32f4xx\+\_\+hal\+\_\+rtc\+\_\+ex.\+h.
+
+\mbox{\label{group___r_t_c_ex___i_s___r_t_c___definitions_gafa25555b5daedee7b1fcba41afa6ed8b}} 
+\index{Private macros to check input parameters@{Private macros to check input parameters}!IS\_RTC\_CALIB\_VALUE@{IS\_RTC\_CALIB\_VALUE}}
+\index{IS\_RTC\_CALIB\_VALUE@{IS\_RTC\_CALIB\_VALUE}!Private macros to check input parameters@{Private macros to check input parameters}}
+\doxysubsubsection{IS\_RTC\_CALIB\_VALUE}
+{\footnotesize\ttfamily \#define IS\+\_\+\+RTC\+\_\+\+CALIB\+\_\+\+VALUE(\begin{DoxyParamCaption}\item[{}]{VALUE }\end{DoxyParamCaption})~((VALUE) $<$ 0x20U)}
+
+
+
+Definition at line 969 of file stm32f4xx\+\_\+hal\+\_\+rtc\+\_\+ex.\+h.
+
+\mbox{\label{group___r_t_c_ex___i_s___r_t_c___definitions_ga26df4ba48afac04a9798cb24bb0a5823}} 
+\index{Private macros to check input parameters@{Private macros to check input parameters}!IS\_RTC\_SHIFT\_ADD1S@{IS\_RTC\_SHIFT\_ADD1S}}
+\index{IS\_RTC\_SHIFT\_ADD1S@{IS\_RTC\_SHIFT\_ADD1S}!Private macros to check input parameters@{Private macros to check input parameters}}
+\doxysubsubsection{IS\_RTC\_SHIFT\_ADD1S}
+{\footnotesize\ttfamily \#define IS\+\_\+\+RTC\+\_\+\+SHIFT\+\_\+\+ADD1S(\begin{DoxyParamCaption}\item[{}]{SEL }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                 (((SEL) == RTC\_SHIFTADD1S\_RESET) || \(\backslash\)}
+\DoxyCodeLine{                                 ((SEL) == RTC\_SHIFTADD1S\_SET))}
+
+\end{DoxyCode}
+
+
+Definition at line 978 of file stm32f4xx\+\_\+hal\+\_\+rtc\+\_\+ex.\+h.
+
+\mbox{\label{group___r_t_c_ex___i_s___r_t_c___definitions_ga8ad118d512f7dc9ce3d4b6669fd3f4b4}} 
+\index{Private macros to check input parameters@{Private macros to check input parameters}!IS\_RTC\_SHIFT\_SUBFS@{IS\_RTC\_SHIFT\_SUBFS}}
+\index{IS\_RTC\_SHIFT\_SUBFS@{IS\_RTC\_SHIFT\_SUBFS}!Private macros to check input parameters@{Private macros to check input parameters}}
+\doxysubsubsection{IS\_RTC\_SHIFT\_SUBFS}
+{\footnotesize\ttfamily \#define IS\+\_\+\+RTC\+\_\+\+SHIFT\+\_\+\+SUBFS(\begin{DoxyParamCaption}\item[{}]{FS }\end{DoxyParamCaption})~((FS) $<$= 0x00007\+FFFU)}
+
+
+
+Definition at line 980 of file stm32f4xx\+\_\+hal\+\_\+rtc\+\_\+ex.\+h.
+
+\mbox{\label{group___r_t_c_ex___i_s___r_t_c___definitions_ga257f8bd6835bee480a80416bf086e200}} 
+\index{Private macros to check input parameters@{Private macros to check input parameters}!IS\_RTC\_SMOOTH\_CALIB\_MINUS@{IS\_RTC\_SMOOTH\_CALIB\_MINUS}}
+\index{IS\_RTC\_SMOOTH\_CALIB\_MINUS@{IS\_RTC\_SMOOTH\_CALIB\_MINUS}!Private macros to check input parameters@{Private macros to check input parameters}}
+\doxysubsubsection{IS\_RTC\_SMOOTH\_CALIB\_MINUS}
+{\footnotesize\ttfamily \#define IS\+\_\+\+RTC\+\_\+\+SMOOTH\+\_\+\+CALIB\+\_\+\+MINUS(\begin{DoxyParamCaption}\item[{}]{VALUE }\end{DoxyParamCaption})~((VALUE) $<$= 0x000001\+FFU)}
+
+
+
+Definition at line 977 of file stm32f4xx\+\_\+hal\+\_\+rtc\+\_\+ex.\+h.
+
+\mbox{\label{group___r_t_c_ex___i_s___r_t_c___definitions_ga65c64189fd22cb803ffe35cce640071a}} 
+\index{Private macros to check input parameters@{Private macros to check input parameters}!IS\_RTC\_SMOOTH\_CALIB\_PERIOD@{IS\_RTC\_SMOOTH\_CALIB\_PERIOD}}
+\index{IS\_RTC\_SMOOTH\_CALIB\_PERIOD@{IS\_RTC\_SMOOTH\_CALIB\_PERIOD}!Private macros to check input parameters@{Private macros to check input parameters}}
+\doxysubsubsection{IS\_RTC\_SMOOTH\_CALIB\_PERIOD}
+{\footnotesize\ttfamily \#define IS\+\_\+\+RTC\+\_\+\+SMOOTH\+\_\+\+CALIB\+\_\+\+PERIOD(\begin{DoxyParamCaption}\item[{}]{PERIOD }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                            (((PERIOD) == RTC\_SMOOTHCALIB\_PERIOD\_32SEC) || \(\backslash\)}
+\DoxyCodeLine{                                            ((PERIOD) == RTC\_SMOOTHCALIB\_PERIOD\_16SEC) || \(\backslash\)}
+\DoxyCodeLine{                                            ((PERIOD) == RTC\_SMOOTHCALIB\_PERIOD\_8SEC))}
+
+\end{DoxyCode}
+
+
+Definition at line 971 of file stm32f4xx\+\_\+hal\+\_\+rtc\+\_\+ex.\+h.
+
+\mbox{\label{group___r_t_c_ex___i_s___r_t_c___definitions_gad0081b479cf6d71ac588a483d09d7b75}} 
+\index{Private macros to check input parameters@{Private macros to check input parameters}!IS\_RTC\_SMOOTH\_CALIB\_PLUS@{IS\_RTC\_SMOOTH\_CALIB\_PLUS}}
+\index{IS\_RTC\_SMOOTH\_CALIB\_PLUS@{IS\_RTC\_SMOOTH\_CALIB\_PLUS}!Private macros to check input parameters@{Private macros to check input parameters}}
+\doxysubsubsection{IS\_RTC\_SMOOTH\_CALIB\_PLUS}
+{\footnotesize\ttfamily \#define IS\+\_\+\+RTC\+\_\+\+SMOOTH\+\_\+\+CALIB\+\_\+\+PLUS(\begin{DoxyParamCaption}\item[{}]{PLUS }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                        (((PLUS) == RTC\_SMOOTHCALIB\_PLUSPULSES\_SET) || \(\backslash\)}
+\DoxyCodeLine{                                        ((PLUS) == RTC\_SMOOTHCALIB\_PLUSPULSES\_RESET))}
+
+\end{DoxyCode}
+
+
+Definition at line 974 of file stm32f4xx\+\_\+hal\+\_\+rtc\+\_\+ex.\+h.
+
+\mbox{\label{group___r_t_c_ex___i_s___r_t_c___definitions_ga8cb706b03efeeb8534eca0a20450d377}} 
+\index{Private macros to check input parameters@{Private macros to check input parameters}!IS\_RTC\_TAMPER@{IS\_RTC\_TAMPER}}
+\index{IS\_RTC\_TAMPER@{IS\_RTC\_TAMPER}!Private macros to check input parameters@{Private macros to check input parameters}}
+\doxysubsubsection{IS\_RTC\_TAMPER}
+{\footnotesize\ttfamily \#define IS\+\_\+\+RTC\+\_\+\+TAMPER(\begin{DoxyParamCaption}\item[{}]{TAMPER }\end{DoxyParamCaption})~((((TAMPER) \& ((uint32\+\_\+t)!(\textbf{ RTC\+\_\+\+TAFCR\+\_\+\+TAMP1E} $\vert$ \textbf{ RTC\+\_\+\+TAFCR\+\_\+\+TAMP2E}))) == 0x00U) \&\& ((TAMPER) != (uint32\+\_\+t)\textbf{ RESET}))}
+
+
+
+Definition at line 926 of file stm32f4xx\+\_\+hal\+\_\+rtc\+\_\+ex.\+h.
+
+\mbox{\label{group___r_t_c_ex___i_s___r_t_c___definitions_gaa695f102d84ff00aef2b7539f1293b00}} 
+\index{Private macros to check input parameters@{Private macros to check input parameters}!IS\_RTC\_TAMPER\_FILTER@{IS\_RTC\_TAMPER\_FILTER}}
+\index{IS\_RTC\_TAMPER\_FILTER@{IS\_RTC\_TAMPER\_FILTER}!Private macros to check input parameters@{Private macros to check input parameters}}
+\doxysubsubsection{IS\_RTC\_TAMPER\_FILTER}
+{\footnotesize\ttfamily \#define IS\+\_\+\+RTC\+\_\+\+TAMPER\+\_\+\+FILTER(\begin{DoxyParamCaption}\item[{}]{FILTER }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                       (((FILTER) == RTC\_TAMPERFILTER\_DISABLE) || \(\backslash\)}
+\DoxyCodeLine{                                       ((FILTER) == RTC\_TAMPERFILTER\_2SAMPLE) || \(\backslash\)}
+\DoxyCodeLine{                                       ((FILTER) == RTC\_TAMPERFILTER\_4SAMPLE) || \(\backslash\)}
+\DoxyCodeLine{                                       ((FILTER) == RTC\_TAMPERFILTER\_8SAMPLE))}
+
+\end{DoxyCode}
+
+
+Definition at line 938 of file stm32f4xx\+\_\+hal\+\_\+rtc\+\_\+ex.\+h.
+
+\mbox{\label{group___r_t_c_ex___i_s___r_t_c___definitions_gafee4c4fb7be2053b14b061e5725561ee}} 
+\index{Private macros to check input parameters@{Private macros to check input parameters}!IS\_RTC\_TAMPER\_PIN@{IS\_RTC\_TAMPER\_PIN}}
+\index{IS\_RTC\_TAMPER\_PIN@{IS\_RTC\_TAMPER\_PIN}!Private macros to check input parameters@{Private macros to check input parameters}}
+\doxysubsubsection{IS\_RTC\_TAMPER\_PIN}
+{\footnotesize\ttfamily \#define IS\+\_\+\+RTC\+\_\+\+TAMPER\+\_\+\+PIN(\begin{DoxyParamCaption}\item[{}]{PIN }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                (((PIN) == RTC\_TAMPERPIN\_DEFAULT) || \(\backslash\)}
+\DoxyCodeLine{                                ((PIN) == RTC\_TAMPERPIN\_POS1))}
+
+\end{DoxyCode}
+
+
+Definition at line 928 of file stm32f4xx\+\_\+hal\+\_\+rtc\+\_\+ex.\+h.
+
+\mbox{\label{group___r_t_c_ex___i_s___r_t_c___definitions_gafcbbdc089fbfc3c82a12d0fcdcee8473}} 
+\index{Private macros to check input parameters@{Private macros to check input parameters}!IS\_RTC\_TAMPER\_PRECHARGE\_DURATION@{IS\_RTC\_TAMPER\_PRECHARGE\_DURATION}}
+\index{IS\_RTC\_TAMPER\_PRECHARGE\_DURATION@{IS\_RTC\_TAMPER\_PRECHARGE\_DURATION}!Private macros to check input parameters@{Private macros to check input parameters}}
+\doxysubsubsection{IS\_RTC\_TAMPER\_PRECHARGE\_DURATION}
+{\footnotesize\ttfamily \#define IS\+\_\+\+RTC\+\_\+\+TAMPER\+\_\+\+PRECHARGE\+\_\+\+DURATION(\begin{DoxyParamCaption}\item[{}]{DURATION }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                                    (((DURATION) == RTC\_TAMPERPRECHARGEDURATION\_1RTCCLK) || \(\backslash\)}
+\DoxyCodeLine{                                                    ((DURATION) == RTC\_TAMPERPRECHARGEDURATION\_2RTCCLK) || \(\backslash\)}
+\DoxyCodeLine{                                                    ((DURATION) == RTC\_TAMPERPRECHARGEDURATION\_4RTCCLK) || \(\backslash\)}
+\DoxyCodeLine{                                                    ((DURATION) == RTC\_TAMPERPRECHARGEDURATION\_8RTCCLK))}
+
+\end{DoxyCode}
+
+
+Definition at line 950 of file stm32f4xx\+\_\+hal\+\_\+rtc\+\_\+ex.\+h.
+
+\mbox{\label{group___r_t_c_ex___i_s___r_t_c___definitions_gaad007ed47ef7ae636945088c93e42f5d}} 
+\index{Private macros to check input parameters@{Private macros to check input parameters}!IS\_RTC\_TAMPER\_PULLUP\_STATE@{IS\_RTC\_TAMPER\_PULLUP\_STATE}}
+\index{IS\_RTC\_TAMPER\_PULLUP\_STATE@{IS\_RTC\_TAMPER\_PULLUP\_STATE}!Private macros to check input parameters@{Private macros to check input parameters}}
+\doxysubsubsection{IS\_RTC\_TAMPER\_PULLUP\_STATE}
+{\footnotesize\ttfamily \#define IS\+\_\+\+RTC\+\_\+\+TAMPER\+\_\+\+PULLUP\+\_\+\+STATE(\begin{DoxyParamCaption}\item[{}]{STATE }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                           (((STATE) == RTC\_TAMPER\_PULLUP\_ENABLE) || \(\backslash\)}
+\DoxyCodeLine{                                           ((STATE) == RTC\_TAMPER\_PULLUP\_DISABLE))}
+
+\end{DoxyCode}
+
+
+Definition at line 956 of file stm32f4xx\+\_\+hal\+\_\+rtc\+\_\+ex.\+h.
+
+\mbox{\label{group___r_t_c_ex___i_s___r_t_c___definitions_gaf355fb7bd95d7cffb14a212b4507cbdb}} 
+\index{Private macros to check input parameters@{Private macros to check input parameters}!IS\_RTC\_TAMPER\_SAMPLING\_FREQ@{IS\_RTC\_TAMPER\_SAMPLING\_FREQ}}
+\index{IS\_RTC\_TAMPER\_SAMPLING\_FREQ@{IS\_RTC\_TAMPER\_SAMPLING\_FREQ}!Private macros to check input parameters@{Private macros to check input parameters}}
+\doxysubsubsection{IS\_RTC\_TAMPER\_SAMPLING\_FREQ}
+{\footnotesize\ttfamily \#define IS\+\_\+\+RTC\+\_\+\+TAMPER\+\_\+\+SAMPLING\+\_\+\+FREQ(\begin{DoxyParamCaption}\item[{}]{FREQ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                           (((FREQ) == RTC\_TAMPERSAMPLINGFREQ\_RTCCLK\_DIV32768)|| \(\backslash\)}
+\DoxyCodeLine{                                           ((FREQ) == RTC\_TAMPERSAMPLINGFREQ\_RTCCLK\_DIV16384)|| \(\backslash\)}
+\DoxyCodeLine{                                           ((FREQ) == RTC\_TAMPERSAMPLINGFREQ\_RTCCLK\_DIV8192) || \(\backslash\)}
+\DoxyCodeLine{                                           ((FREQ) == RTC\_TAMPERSAMPLINGFREQ\_RTCCLK\_DIV4096) || \(\backslash\)}
+\DoxyCodeLine{                                           ((FREQ) == RTC\_TAMPERSAMPLINGFREQ\_RTCCLK\_DIV2048) || \(\backslash\)}
+\DoxyCodeLine{                                           ((FREQ) == RTC\_TAMPERSAMPLINGFREQ\_RTCCLK\_DIV1024) || \(\backslash\)}
+\DoxyCodeLine{                                           ((FREQ) == RTC\_TAMPERSAMPLINGFREQ\_RTCCLK\_DIV512)  || \(\backslash\)}
+\DoxyCodeLine{                                           ((FREQ) == RTC\_TAMPERSAMPLINGFREQ\_RTCCLK\_DIV256))}
+
+\end{DoxyCode}
+
+
+Definition at line 942 of file stm32f4xx\+\_\+hal\+\_\+rtc\+\_\+ex.\+h.
+
+\mbox{\label{group___r_t_c_ex___i_s___r_t_c___definitions_gae114944f3238c6e500bed1132edeeab6}} 
+\index{Private macros to check input parameters@{Private macros to check input parameters}!IS\_RTC\_TAMPER\_TIMESTAMPONTAMPER\_DETECTION@{IS\_RTC\_TAMPER\_TIMESTAMPONTAMPER\_DETECTION}}
+\index{IS\_RTC\_TAMPER\_TIMESTAMPONTAMPER\_DETECTION@{IS\_RTC\_TAMPER\_TIMESTAMPONTAMPER\_DETECTION}!Private macros to check input parameters@{Private macros to check input parameters}}
+\doxysubsubsection{IS\_RTC\_TAMPER\_TIMESTAMPONTAMPER\_DETECTION}
+{\footnotesize\ttfamily \#define IS\+\_\+\+RTC\+\_\+\+TAMPER\+\_\+\+TIMESTAMPONTAMPER\+\_\+\+DETECTION(\begin{DoxyParamCaption}\item[{}]{DETECTION }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                                              (((DETECTION) == RTC\_TIMESTAMPONTAMPERDETECTION\_ENABLE) || \(\backslash\)}
+\DoxyCodeLine{                                                              ((DETECTION) == RTC\_TIMESTAMPONTAMPERDETECTION\_DISABLE))}
+
+\end{DoxyCode}
+
+
+Definition at line 954 of file stm32f4xx\+\_\+hal\+\_\+rtc\+\_\+ex.\+h.
+
+\mbox{\label{group___r_t_c_ex___i_s___r_t_c___definitions_ga4b0308730f7fa04b8db39270d0b90ca5}} 
+\index{Private macros to check input parameters@{Private macros to check input parameters}!IS\_RTC\_TAMPER\_TRIGGER@{IS\_RTC\_TAMPER\_TRIGGER}}
+\index{IS\_RTC\_TAMPER\_TRIGGER@{IS\_RTC\_TAMPER\_TRIGGER}!Private macros to check input parameters@{Private macros to check input parameters}}
+\doxysubsubsection{IS\_RTC\_TAMPER\_TRIGGER}
+{\footnotesize\ttfamily \#define IS\+\_\+\+RTC\+\_\+\+TAMPER\+\_\+\+TRIGGER(\begin{DoxyParamCaption}\item[{}]{TRIGGER }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                        (((TRIGGER) == RTC\_TAMPERTRIGGER\_RISINGEDGE) || \(\backslash\)}
+\DoxyCodeLine{                                        ((TRIGGER) == RTC\_TAMPERTRIGGER\_FALLINGEDGE) || \(\backslash\)}
+\DoxyCodeLine{                                        ((TRIGGER) == RTC\_TAMPERTRIGGER\_LOWLEVEL) || \(\backslash\)}
+\DoxyCodeLine{                                        ((TRIGGER) == RTC\_TAMPERTRIGGER\_HIGHLEVEL))}
+
+\end{DoxyCode}
+
+
+Definition at line 934 of file stm32f4xx\+\_\+hal\+\_\+rtc\+\_\+ex.\+h.
+
+\mbox{\label{group___r_t_c_ex___i_s___r_t_c___definitions_ga5558a9d932619b51a5a60fa4746dd852}} 
+\index{Private macros to check input parameters@{Private macros to check input parameters}!IS\_RTC\_TIMESTAMP\_PIN@{IS\_RTC\_TIMESTAMP\_PIN}}
+\index{IS\_RTC\_TIMESTAMP\_PIN@{IS\_RTC\_TIMESTAMP\_PIN}!Private macros to check input parameters@{Private macros to check input parameters}}
+\doxysubsubsection{IS\_RTC\_TIMESTAMP\_PIN}
+{\footnotesize\ttfamily \#define IS\+\_\+\+RTC\+\_\+\+TIMESTAMP\+\_\+\+PIN(\begin{DoxyParamCaption}\item[{}]{PIN }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                   (((PIN) == RTC\_TIMESTAMPPIN\_DEFAULT) || \(\backslash\)}
+\DoxyCodeLine{                                   ((PIN) == RTC\_TIMESTAMPPIN\_POS1))}
+
+\end{DoxyCode}
+
+
+Definition at line 931 of file stm32f4xx\+\_\+hal\+\_\+rtc\+\_\+ex.\+h.
+
+\mbox{\label{group___r_t_c_ex___i_s___r_t_c___definitions_gab847ce0346dc26930a3b2c1da3ed9e28}} 
+\index{Private macros to check input parameters@{Private macros to check input parameters}!IS\_RTC\_WAKEUP\_CLOCK@{IS\_RTC\_WAKEUP\_CLOCK}}
+\index{IS\_RTC\_WAKEUP\_CLOCK@{IS\_RTC\_WAKEUP\_CLOCK}!Private macros to check input parameters@{Private macros to check input parameters}}
+\doxysubsubsection{IS\_RTC\_WAKEUP\_CLOCK}
+{\footnotesize\ttfamily \#define IS\+\_\+\+RTC\+\_\+\+WAKEUP\+\_\+\+CLOCK(\begin{DoxyParamCaption}\item[{}]{CLOCK }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                    (((CLOCK) == RTC\_WAKEUPCLOCK\_RTCCLK\_DIV16)   || \(\backslash\)}
+\DoxyCodeLine{                                    ((CLOCK) == RTC\_WAKEUPCLOCK\_RTCCLK\_DIV8)    || \(\backslash\)}
+\DoxyCodeLine{                                    ((CLOCK) == RTC\_WAKEUPCLOCK\_RTCCLK\_DIV4)    || \(\backslash\)}
+\DoxyCodeLine{                                    ((CLOCK) == RTC\_WAKEUPCLOCK\_RTCCLK\_DIV2)    || \(\backslash\)}
+\DoxyCodeLine{                                    ((CLOCK) == RTC\_WAKEUPCLOCK\_CK\_SPRE\_16BITS) || \(\backslash\)}
+\DoxyCodeLine{                                    ((CLOCK) == RTC\_WAKEUPCLOCK\_CK\_SPRE\_17BITS))}
+
+\end{DoxyCode}
+
+
+Definition at line 958 of file stm32f4xx\+\_\+hal\+\_\+rtc\+\_\+ex.\+h.
+
+\mbox{\label{group___r_t_c_ex___i_s___r_t_c___definitions_ga6254b48843bdcb83b5b5cd640aeb6f9c}} 
+\index{Private macros to check input parameters@{Private macros to check input parameters}!IS\_RTC\_WAKEUP\_COUNTER@{IS\_RTC\_WAKEUP\_COUNTER}}
+\index{IS\_RTC\_WAKEUP\_COUNTER@{IS\_RTC\_WAKEUP\_COUNTER}!Private macros to check input parameters@{Private macros to check input parameters}}
+\doxysubsubsection{IS\_RTC\_WAKEUP\_COUNTER}
+{\footnotesize\ttfamily \#define IS\+\_\+\+RTC\+\_\+\+WAKEUP\+\_\+\+COUNTER(\begin{DoxyParamCaption}\item[{}]{COUNTER }\end{DoxyParamCaption})~((COUNTER) $<$= 0x\+FFFFU)}
+
+
+
+Definition at line 965 of file stm32f4xx\+\_\+hal\+\_\+rtc\+\_\+ex.\+h.
+
+\mbox{\label{group___r_t_c_ex___i_s___r_t_c___definitions_ga4fe0db6ab44713a1674702d867482f9a}} 
+\index{Private macros to check input parameters@{Private macros to check input parameters}!IS\_TIMESTAMP\_EDGE@{IS\_TIMESTAMP\_EDGE}}
+\index{IS\_TIMESTAMP\_EDGE@{IS\_TIMESTAMP\_EDGE}!Private macros to check input parameters@{Private macros to check input parameters}}
+\doxysubsubsection{IS\_TIMESTAMP\_EDGE}
+{\footnotesize\ttfamily \#define IS\+\_\+\+TIMESTAMP\+\_\+\+EDGE(\begin{DoxyParamCaption}\item[{}]{EDGE }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                 (((EDGE) == RTC\_TIMESTAMPEDGE\_RISING) || \(\backslash\)}
+\DoxyCodeLine{                                 ((EDGE) == RTC\_TIMESTAMPEDGE\_FALLING))}
+
+\end{DoxyCode}
+
+
+Definition at line 924 of file stm32f4xx\+\_\+hal\+\_\+rtc\+\_\+ex.\+h.
+

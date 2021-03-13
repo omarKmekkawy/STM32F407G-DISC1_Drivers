@@ -1,0 +1,128 @@
+\doxysection{RTC\+\_\+\+Time\+Type\+Def Struct Reference}
+\label{struct_r_t_c___time_type_def}\index{RTC\_TimeTypeDef@{RTC\_TimeTypeDef}}
+
+
+RTC Time structure definition ~\newline
+  
+
+
+
+
+{\ttfamily \#include $<$stm32f4xx\+\_\+hal\+\_\+rtc.\+h$>$}
+
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \textbf{ Hours}
+\item 
+uint8\+\_\+t \textbf{ Minutes}
+\item 
+uint8\+\_\+t \textbf{ Seconds}
+\item 
+uint8\+\_\+t \textbf{ Time\+Format}
+\item 
+uint32\+\_\+t \textbf{ Sub\+Seconds}
+\item 
+uint32\+\_\+t \textbf{ Second\+Fraction}
+\item 
+uint32\+\_\+t \textbf{ Day\+Light\+Saving}
+\item 
+uint32\+\_\+t \textbf{ Store\+Operation}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+RTC Time structure definition ~\newline
+ 
+
+Definition at line 101 of file stm32f4xx\+\_\+hal\+\_\+rtc.\+h.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\label{struct_r_t_c___time_type_def_a07a6bb22b53266f71c1b97b5e6aeb5e4}} 
+\index{RTC\_TimeTypeDef@{RTC\_TimeTypeDef}!DayLightSaving@{DayLightSaving}}
+\index{DayLightSaving@{DayLightSaving}!RTC\_TimeTypeDef@{RTC\_TimeTypeDef}}
+\doxysubsubsection{DayLightSaving}
+{\footnotesize\ttfamily uint32\+\_\+t Day\+Light\+Saving}
+
+Specifies Day\+Light Save Operation. This parameter can be a value of \doxyref{RTC Day\+Light Saving Definitions}{p.}{group___r_t_c___day_light_saving___definitions} 
+
+Definition at line 126 of file stm32f4xx\+\_\+hal\+\_\+rtc.\+h.
+
+\mbox{\label{struct_r_t_c___time_type_def_a836edba653a6aa73789d68e7bd2ee757}} 
+\index{RTC\_TimeTypeDef@{RTC\_TimeTypeDef}!Hours@{Hours}}
+\index{Hours@{Hours}!RTC\_TimeTypeDef@{RTC\_TimeTypeDef}}
+\doxysubsubsection{Hours}
+{\footnotesize\ttfamily uint8\+\_\+t Hours}
+
+Specifies the RTC Time Hour. This parameter must be a number between Min\+\_\+\+Data = 0 and Max\+\_\+\+Data = 12 if the RTC\+\_\+\+Hour\+Format\+\_\+12 is selected. This parameter must be a number between Min\+\_\+\+Data = 0 and Max\+\_\+\+Data = 23 if the RTC\+\_\+\+Hour\+Format\+\_\+24 is selected ~\newline
+ 
+
+Definition at line 103 of file stm32f4xx\+\_\+hal\+\_\+rtc.\+h.
+
+\mbox{\label{struct_r_t_c___time_type_def_a37e1bd6f0ab1dcc18f95f8d0193cd26e}} 
+\index{RTC\_TimeTypeDef@{RTC\_TimeTypeDef}!Minutes@{Minutes}}
+\index{Minutes@{Minutes}!RTC\_TimeTypeDef@{RTC\_TimeTypeDef}}
+\doxysubsubsection{Minutes}
+{\footnotesize\ttfamily uint8\+\_\+t Minutes}
+
+Specifies the RTC Time Minutes. This parameter must be a number between Min\+\_\+\+Data = 0 and Max\+\_\+\+Data = 59 
+
+Definition at line 107 of file stm32f4xx\+\_\+hal\+\_\+rtc.\+h.
+
+\mbox{\label{struct_r_t_c___time_type_def_a0a6d7b93d51459e83607fd65d86aa497}} 
+\index{RTC\_TimeTypeDef@{RTC\_TimeTypeDef}!SecondFraction@{SecondFraction}}
+\index{SecondFraction@{SecondFraction}!RTC\_TimeTypeDef@{RTC\_TimeTypeDef}}
+\doxysubsubsection{SecondFraction}
+{\footnotesize\ttfamily uint32\+\_\+t Second\+Fraction}
+
+Specifies the range or granularity of Sub Second register content corresponding to Synchronous pre-\/scaler factor value (PREDIV\+\_\+S) This parameter corresponds to a time unit range between [0-\/1] Second with [1 Sec / Second\+Fraction +1] granularity. This field will be used only by HAL\+\_\+\+RTC\+\_\+\+Get\+Time function 
+
+Definition at line 120 of file stm32f4xx\+\_\+hal\+\_\+rtc.\+h.
+
+\mbox{\label{struct_r_t_c___time_type_def_a42120bdc40e6f49bb5b4dec78220c87b}} 
+\index{RTC\_TimeTypeDef@{RTC\_TimeTypeDef}!Seconds@{Seconds}}
+\index{Seconds@{Seconds}!RTC\_TimeTypeDef@{RTC\_TimeTypeDef}}
+\doxysubsubsection{Seconds}
+{\footnotesize\ttfamily uint8\+\_\+t Seconds}
+
+Specifies the RTC Time Seconds. This parameter must be a number between Min\+\_\+\+Data = 0 and Max\+\_\+\+Data = 59 
+
+Definition at line 110 of file stm32f4xx\+\_\+hal\+\_\+rtc.\+h.
+
+\mbox{\label{struct_r_t_c___time_type_def_a26435214093d019db4d67a77a8ad99d1}} 
+\index{RTC\_TimeTypeDef@{RTC\_TimeTypeDef}!StoreOperation@{StoreOperation}}
+\index{StoreOperation@{StoreOperation}!RTC\_TimeTypeDef@{RTC\_TimeTypeDef}}
+\doxysubsubsection{StoreOperation}
+{\footnotesize\ttfamily uint32\+\_\+t Store\+Operation}
+
+Specifies RTC\+\_\+\+Store\+Operation value to be written in the BCK bit in CR register to store the operation. This parameter can be a value of \doxyref{RTC Store Operation Definitions}{p.}{group___r_t_c___store_operation___definitions} 
+
+Definition at line 129 of file stm32f4xx\+\_\+hal\+\_\+rtc.\+h.
+
+\mbox{\label{struct_r_t_c___time_type_def_a8059189ca602372f4759497c776c8fbb}} 
+\index{RTC\_TimeTypeDef@{RTC\_TimeTypeDef}!SubSeconds@{SubSeconds}}
+\index{SubSeconds@{SubSeconds}!RTC\_TimeTypeDef@{RTC\_TimeTypeDef}}
+\doxysubsubsection{SubSeconds}
+{\footnotesize\ttfamily uint32\+\_\+t Sub\+Seconds}
+
+Specifies the RTC\+\_\+\+SSR RTC Sub Second register content. This parameter corresponds to a time unit range between [0-\/1] Second with [1 Sec / Second\+Fraction +1] granularity 
+
+Definition at line 116 of file stm32f4xx\+\_\+hal\+\_\+rtc.\+h.
+
+\mbox{\label{struct_r_t_c___time_type_def_a7ca2cf99b14ee49dae5c787b2800f482}} 
+\index{RTC\_TimeTypeDef@{RTC\_TimeTypeDef}!TimeFormat@{TimeFormat}}
+\index{TimeFormat@{TimeFormat}!RTC\_TimeTypeDef@{RTC\_TimeTypeDef}}
+\doxysubsubsection{TimeFormat}
+{\footnotesize\ttfamily uint8\+\_\+t Time\+Format}
+
+Specifies the RTC AM/\+PM Time. This parameter can be a value of \doxyref{RTC AM PM Definitions}{p.}{group___r_t_c___a_m___p_m___definitions} 
+
+Definition at line 113 of file stm32f4xx\+\_\+hal\+\_\+rtc.\+h.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+system/include/stm32f4-\/hal/\textbf{ stm32f4xx\+\_\+hal\+\_\+rtc.\+h}\end{DoxyCompactItemize}

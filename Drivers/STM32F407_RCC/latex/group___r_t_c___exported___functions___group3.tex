@@ -1,0 +1,112 @@
+\doxysection{RTC\+\_\+\+Exported\+\_\+\+Functions\+\_\+\+Group3}
+\label{group___r_t_c___exported___functions___group3}\index{RTC\_Exported\_Functions\_Group3@{RTC\_Exported\_Functions\_Group3}}
+Collaboration diagram for RTC\+\_\+\+Exported\+\_\+\+Functions\+\_\+\+Group3\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group___r_t_c___exported___functions___group3}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+RTC\+\_\+\+Set\+Alarm} (\textbf{ RTC\+\_\+\+Handle\+Type\+Def} $\ast$hrtc, \textbf{ RTC\+\_\+\+Alarm\+Type\+Def} $\ast$s\+Alarm, uint32\+\_\+t Format)
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+RTC\+\_\+\+Set\+Alarm\+\_\+\+IT} (\textbf{ RTC\+\_\+\+Handle\+Type\+Def} $\ast$hrtc, \textbf{ RTC\+\_\+\+Alarm\+Type\+Def} $\ast$s\+Alarm, uint32\+\_\+t Format)
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+RTC\+\_\+\+Deactivate\+Alarm} (\textbf{ RTC\+\_\+\+Handle\+Type\+Def} $\ast$hrtc, uint32\+\_\+t Alarm)
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+RTC\+\_\+\+Get\+Alarm} (\textbf{ RTC\+\_\+\+Handle\+Type\+Def} $\ast$hrtc, \textbf{ RTC\+\_\+\+Alarm\+Type\+Def} $\ast$s\+Alarm, uint32\+\_\+t Alarm, uint32\+\_\+t Format)
+\item 
+void \textbf{ HAL\+\_\+\+RTC\+\_\+\+Alarm\+IRQHandler} (\textbf{ RTC\+\_\+\+Handle\+Type\+Def} $\ast$hrtc)
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+RTC\+\_\+\+Poll\+For\+Alarm\+AEvent} (\textbf{ RTC\+\_\+\+Handle\+Type\+Def} $\ast$hrtc, uint32\+\_\+t Timeout)
+\item 
+void \textbf{ HAL\+\_\+\+RTC\+\_\+\+Alarm\+AEvent\+Callback} (\textbf{ RTC\+\_\+\+Handle\+Type\+Def} $\ast$hrtc)
+\begin{DoxyCompactList}\small\item\em ALARM A Event Callback in non blocking mode. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\label{group___r_t_c___exported___functions___group3_ga11aeff83fd498cddbed3bcddcf017e0a}} 
+\index{RTC\_Exported\_Functions\_Group3@{RTC\_Exported\_Functions\_Group3}!HAL\_RTC\_AlarmAEventCallback@{HAL\_RTC\_AlarmAEventCallback}}
+\index{HAL\_RTC\_AlarmAEventCallback@{HAL\_RTC\_AlarmAEventCallback}!RTC\_Exported\_Functions\_Group3@{RTC\_Exported\_Functions\_Group3}}
+\doxysubsubsection{HAL\_RTC\_AlarmAEventCallback()}
+{\footnotesize\ttfamily void HAL\+\_\+\+RTC\+\_\+\+Alarm\+AEvent\+Callback (\begin{DoxyParamCaption}\item[{\textbf{ RTC\+\_\+\+Handle\+Type\+Def} $\ast$}]{hrtc }\end{DoxyParamCaption})}
+
+
+
+ALARM A Event Callback in non blocking mode. 
+
+\begin{DoxyNote}{Note}
+This function is called when RTC\+\_\+\+ALARM interrupt took place, inside RTC\+\_\+\+ALARM\+\_\+\+IRQHandler(). It makes a direct call to \doxyref{HAL\+\_\+\+Inc\+Tick()}{p.}{group___h_a_l___exported___functions___group2_gaba5b726bfedd013bf7bb5a51d5c4f188} to increment a global variable \char`\"{}uw\+Tick\char`\"{} used as application time base. 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em hrtc} & \+: RTC handle \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 271 of file stm32f4xx\+\_\+hal\+\_\+timebase\+\_\+rtc\+\_\+alarm\+\_\+template.\+c.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=345pt]{group___r_t_c___exported___functions___group3_ga11aeff83fd498cddbed3bcddcf017e0a_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{group___r_t_c___exported___functions___group3_gac185f2ce34fe566418d0978a48e0c199}} 
+\index{RTC\_Exported\_Functions\_Group3@{RTC\_Exported\_Functions\_Group3}!HAL\_RTC\_AlarmIRQHandler@{HAL\_RTC\_AlarmIRQHandler}}
+\index{HAL\_RTC\_AlarmIRQHandler@{HAL\_RTC\_AlarmIRQHandler}!RTC\_Exported\_Functions\_Group3@{RTC\_Exported\_Functions\_Group3}}
+\doxysubsubsection{HAL\_RTC\_AlarmIRQHandler()}
+{\footnotesize\ttfamily void HAL\+\_\+\+RTC\+\_\+\+Alarm\+IRQHandler (\begin{DoxyParamCaption}\item[{\textbf{ RTC\+\_\+\+Handle\+Type\+Def} $\ast$}]{hrtc }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group___r_t_c___exported___functions___group3_gac185f2ce34fe566418d0978a48e0c199_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{group___r_t_c___exported___functions___group3_ga186d852f8aee8a4d0dfeec778be35482}} 
+\index{RTC\_Exported\_Functions\_Group3@{RTC\_Exported\_Functions\_Group3}!HAL\_RTC\_DeactivateAlarm@{HAL\_RTC\_DeactivateAlarm}}
+\index{HAL\_RTC\_DeactivateAlarm@{HAL\_RTC\_DeactivateAlarm}!RTC\_Exported\_Functions\_Group3@{RTC\_Exported\_Functions\_Group3}}
+\doxysubsubsection{HAL\_RTC\_DeactivateAlarm()}
+{\footnotesize\ttfamily \textbf{ HAL\+\_\+\+Status\+Type\+Def} HAL\+\_\+\+RTC\+\_\+\+Deactivate\+Alarm (\begin{DoxyParamCaption}\item[{\textbf{ RTC\+\_\+\+Handle\+Type\+Def} $\ast$}]{hrtc,  }\item[{uint32\+\_\+t}]{Alarm }\end{DoxyParamCaption})}
+
+\mbox{\label{group___r_t_c___exported___functions___group3_ga4786b652ffee2d59da2c65dd78646405}} 
+\index{RTC\_Exported\_Functions\_Group3@{RTC\_Exported\_Functions\_Group3}!HAL\_RTC\_GetAlarm@{HAL\_RTC\_GetAlarm}}
+\index{HAL\_RTC\_GetAlarm@{HAL\_RTC\_GetAlarm}!RTC\_Exported\_Functions\_Group3@{RTC\_Exported\_Functions\_Group3}}
+\doxysubsubsection{HAL\_RTC\_GetAlarm()}
+{\footnotesize\ttfamily \textbf{ HAL\+\_\+\+Status\+Type\+Def} HAL\+\_\+\+RTC\+\_\+\+Get\+Alarm (\begin{DoxyParamCaption}\item[{\textbf{ RTC\+\_\+\+Handle\+Type\+Def} $\ast$}]{hrtc,  }\item[{\textbf{ RTC\+\_\+\+Alarm\+Type\+Def} $\ast$}]{s\+Alarm,  }\item[{uint32\+\_\+t}]{Alarm,  }\item[{uint32\+\_\+t}]{Format }\end{DoxyParamCaption})}
+
+\mbox{\label{group___r_t_c___exported___functions___group3_gaedc27fe412f45d999d74a0b98dce4d09}} 
+\index{RTC\_Exported\_Functions\_Group3@{RTC\_Exported\_Functions\_Group3}!HAL\_RTC\_PollForAlarmAEvent@{HAL\_RTC\_PollForAlarmAEvent}}
+\index{HAL\_RTC\_PollForAlarmAEvent@{HAL\_RTC\_PollForAlarmAEvent}!RTC\_Exported\_Functions\_Group3@{RTC\_Exported\_Functions\_Group3}}
+\doxysubsubsection{HAL\_RTC\_PollForAlarmAEvent()}
+{\footnotesize\ttfamily \textbf{ HAL\+\_\+\+Status\+Type\+Def} HAL\+\_\+\+RTC\+\_\+\+Poll\+For\+Alarm\+AEvent (\begin{DoxyParamCaption}\item[{\textbf{ RTC\+\_\+\+Handle\+Type\+Def} $\ast$}]{hrtc,  }\item[{uint32\+\_\+t}]{Timeout }\end{DoxyParamCaption})}
+
+\mbox{\label{group___r_t_c___exported___functions___group3_gafd78015b93b16dcb9e41a4655a7ea972}} 
+\index{RTC\_Exported\_Functions\_Group3@{RTC\_Exported\_Functions\_Group3}!HAL\_RTC\_SetAlarm@{HAL\_RTC\_SetAlarm}}
+\index{HAL\_RTC\_SetAlarm@{HAL\_RTC\_SetAlarm}!RTC\_Exported\_Functions\_Group3@{RTC\_Exported\_Functions\_Group3}}
+\doxysubsubsection{HAL\_RTC\_SetAlarm()}
+{\footnotesize\ttfamily \textbf{ HAL\+\_\+\+Status\+Type\+Def} HAL\+\_\+\+RTC\+\_\+\+Set\+Alarm (\begin{DoxyParamCaption}\item[{\textbf{ RTC\+\_\+\+Handle\+Type\+Def} $\ast$}]{hrtc,  }\item[{\textbf{ RTC\+\_\+\+Alarm\+Type\+Def} $\ast$}]{s\+Alarm,  }\item[{uint32\+\_\+t}]{Format }\end{DoxyParamCaption})}
+
+\mbox{\label{group___r_t_c___exported___functions___group3_gab66a7fec05e9d9374de95d5f61e16c16}} 
+\index{RTC\_Exported\_Functions\_Group3@{RTC\_Exported\_Functions\_Group3}!HAL\_RTC\_SetAlarm\_IT@{HAL\_RTC\_SetAlarm\_IT}}
+\index{HAL\_RTC\_SetAlarm\_IT@{HAL\_RTC\_SetAlarm\_IT}!RTC\_Exported\_Functions\_Group3@{RTC\_Exported\_Functions\_Group3}}
+\doxysubsubsection{HAL\_RTC\_SetAlarm\_IT()}
+{\footnotesize\ttfamily \textbf{ HAL\+\_\+\+Status\+Type\+Def} HAL\+\_\+\+RTC\+\_\+\+Set\+Alarm\+\_\+\+IT (\begin{DoxyParamCaption}\item[{\textbf{ RTC\+\_\+\+Handle\+Type\+Def} $\ast$}]{hrtc,  }\item[{\textbf{ RTC\+\_\+\+Alarm\+Type\+Def} $\ast$}]{s\+Alarm,  }\item[{uint32\+\_\+t}]{Format }\end{DoxyParamCaption})}
+

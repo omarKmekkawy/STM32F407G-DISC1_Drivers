@@ -1,0 +1,184 @@
+\doxysection{FLASH Private macros to check input parameters}
+\label{group___f_l_a_s_h_ex___i_s___f_l_a_s_h___definitions}\index{FLASH Private macros to check input parameters@{FLASH Private macros to check input parameters}}
+Collaboration diagram for FLASH Private macros to check input parameters\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group___f_l_a_s_h_ex___i_s___f_l_a_s_h___definitions}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \textbf{ IS\+\_\+\+FLASH\+\_\+\+TYPEERASE}(VALUE)
+\item 
+\#define \textbf{ IS\+\_\+\+VOLTAGERANGE}(RANGE)
+\item 
+\#define \textbf{ IS\+\_\+\+WRPSTATE}(VALUE)
+\item 
+\#define \textbf{ IS\+\_\+\+OPTIONBYTE}(VALUE)~(((VALUE) $<$= (\textbf{ OPTIONBYTE\+\_\+\+WRP}$\vert$\textbf{ OPTIONBYTE\+\_\+\+RDP}$\vert$\textbf{ OPTIONBYTE\+\_\+\+USER}$\vert$\textbf{ OPTIONBYTE\+\_\+\+BOR})))
+\item 
+\#define \textbf{ IS\+\_\+\+OB\+\_\+\+RDP\+\_\+\+LEVEL}(LEVEL)
+\item 
+\#define \textbf{ IS\+\_\+\+OB\+\_\+\+IWDG\+\_\+\+SOURCE}(SOURCE)~(((SOURCE) == \textbf{ OB\+\_\+\+IWDG\+\_\+\+SW}) $\vert$$\vert$ ((SOURCE) == \textbf{ OB\+\_\+\+IWDG\+\_\+\+HW}))
+\item 
+\#define \textbf{ IS\+\_\+\+OB\+\_\+\+STOP\+\_\+\+SOURCE}(SOURCE)~(((SOURCE) == \textbf{ OB\+\_\+\+STOP\+\_\+\+NO\+\_\+\+RST}) $\vert$$\vert$ ((SOURCE) == \textbf{ OB\+\_\+\+STOP\+\_\+\+RST}))
+\item 
+\#define \textbf{ IS\+\_\+\+OB\+\_\+\+STDBY\+\_\+\+SOURCE}(SOURCE)~(((SOURCE) == \textbf{ OB\+\_\+\+STDBY\+\_\+\+NO\+\_\+\+RST}) $\vert$$\vert$ ((SOURCE) == \textbf{ OB\+\_\+\+STDBY\+\_\+\+RST}))
+\item 
+\#define \textbf{ IS\+\_\+\+OB\+\_\+\+BOR\+\_\+\+LEVEL}(LEVEL)
+\item 
+\#define \textbf{ IS\+\_\+\+FLASH\+\_\+\+ADDRESS}(ADDRESS)~(((ADDRESS) $>$= \textbf{ FLASH\+\_\+\+BASE}) \&\& ((ADDRESS) $<$= \textbf{ FLASH\+\_\+\+END}))
+\item 
+\#define \textbf{ IS\+\_\+\+FLASH\+\_\+\+NBSECTORS}(NBSECTORS)~(((NBSECTORS) != 0) \&\& ((NBSECTORS) $<$= FLASH\+\_\+\+SECTOR\+\_\+\+TOTAL))
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\label{group___f_l_a_s_h_ex___i_s___f_l_a_s_h___definitions_gad0c8166ba15a0b8d458412a8bb74e2f0}} 
+\index{FLASH Private macros to check input parameters@{FLASH Private macros to check input parameters}!IS\_FLASH\_ADDRESS@{IS\_FLASH\_ADDRESS}}
+\index{IS\_FLASH\_ADDRESS@{IS\_FLASH\_ADDRESS}!FLASH Private macros to check input parameters@{FLASH Private macros to check input parameters}}
+\doxysubsubsection{IS\_FLASH\_ADDRESS}
+{\footnotesize\ttfamily \#define IS\+\_\+\+FLASH\+\_\+\+ADDRESS(\begin{DoxyParamCaption}\item[{}]{ADDRESS }\end{DoxyParamCaption})~(((ADDRESS) $>$= \textbf{ FLASH\+\_\+\+BASE}) \&\& ((ADDRESS) $<$= \textbf{ FLASH\+\_\+\+END}))}
+
+
+
+Definition at line 897 of file stm32f4xx\+\_\+hal\+\_\+flash\+\_\+ex.\+h.
+
+\mbox{\label{group___f_l_a_s_h_ex___i_s___f_l_a_s_h___definitions_ga5b85e63e0066bf7ca518cb3790ad67e0}} 
+\index{FLASH Private macros to check input parameters@{FLASH Private macros to check input parameters}!IS\_FLASH\_NBSECTORS@{IS\_FLASH\_NBSECTORS}}
+\index{IS\_FLASH\_NBSECTORS@{IS\_FLASH\_NBSECTORS}!FLASH Private macros to check input parameters@{FLASH Private macros to check input parameters}}
+\doxysubsubsection{IS\_FLASH\_NBSECTORS}
+{\footnotesize\ttfamily \#define IS\+\_\+\+FLASH\+\_\+\+NBSECTORS(\begin{DoxyParamCaption}\item[{}]{NBSECTORS }\end{DoxyParamCaption})~(((NBSECTORS) != 0) \&\& ((NBSECTORS) $<$= FLASH\+\_\+\+SECTOR\+\_\+\+TOTAL))}
+
+
+
+Definition at line 898 of file stm32f4xx\+\_\+hal\+\_\+flash\+\_\+ex.\+h.
+
+\mbox{\label{group___f_l_a_s_h_ex___i_s___f_l_a_s_h___definitions_gaf15a6822d2421a33b6857059348ab476}} 
+\index{FLASH Private macros to check input parameters@{FLASH Private macros to check input parameters}!IS\_FLASH\_TYPEERASE@{IS\_FLASH\_TYPEERASE}}
+\index{IS\_FLASH\_TYPEERASE@{IS\_FLASH\_TYPEERASE}!FLASH Private macros to check input parameters@{FLASH Private macros to check input parameters}}
+\doxysubsubsection{IS\_FLASH\_TYPEERASE}
+{\footnotesize\ttfamily \#define IS\+\_\+\+FLASH\+\_\+\+TYPEERASE(\begin{DoxyParamCaption}\item[{}]{VALUE }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                  (((VALUE) == FLASH\_TYPEERASE\_SECTORS) || \(\backslash\)}
+\DoxyCodeLine{                                  ((VALUE) == FLASH\_TYPEERASE\_MASSERASE))}
+
+\end{DoxyCode}
+
+
+Definition at line 754 of file stm32f4xx\+\_\+hal\+\_\+flash\+\_\+ex.\+h.
+
+\mbox{\label{group___f_l_a_s_h_ex___i_s___f_l_a_s_h___definitions_gac97ecd832fce5f4b4ff9ef7bc4493013}} 
+\index{FLASH Private macros to check input parameters@{FLASH Private macros to check input parameters}!IS\_OB\_BOR\_LEVEL@{IS\_OB\_BOR\_LEVEL}}
+\index{IS\_OB\_BOR\_LEVEL@{IS\_OB\_BOR\_LEVEL}!FLASH Private macros to check input parameters@{FLASH Private macros to check input parameters}}
+\doxysubsubsection{IS\_OB\_BOR\_LEVEL}
+{\footnotesize\ttfamily \#define IS\+\_\+\+OB\+\_\+\+BOR\+\_\+\+LEVEL(\begin{DoxyParamCaption}\item[{}]{LEVEL }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                (((LEVEL) == OB\_BOR\_LEVEL1) || ((LEVEL) == OB\_BOR\_LEVEL2) ||\(\backslash\)}
+\DoxyCodeLine{                                ((LEVEL) == OB\_BOR\_LEVEL3) || ((LEVEL) == OB\_BOR\_OFF))}
+
+\end{DoxyCode}
+
+
+Definition at line 777 of file stm32f4xx\+\_\+hal\+\_\+flash\+\_\+ex.\+h.
+
+\mbox{\label{group___f_l_a_s_h_ex___i_s___f_l_a_s_h___definitions_gaf2871652c08e76499d9449be6556f12c}} 
+\index{FLASH Private macros to check input parameters@{FLASH Private macros to check input parameters}!IS\_OB\_IWDG\_SOURCE@{IS\_OB\_IWDG\_SOURCE}}
+\index{IS\_OB\_IWDG\_SOURCE@{IS\_OB\_IWDG\_SOURCE}!FLASH Private macros to check input parameters@{FLASH Private macros to check input parameters}}
+\doxysubsubsection{IS\_OB\_IWDG\_SOURCE}
+{\footnotesize\ttfamily \#define IS\+\_\+\+OB\+\_\+\+IWDG\+\_\+\+SOURCE(\begin{DoxyParamCaption}\item[{}]{SOURCE }\end{DoxyParamCaption})~(((SOURCE) == \textbf{ OB\+\_\+\+IWDG\+\_\+\+SW}) $\vert$$\vert$ ((SOURCE) == \textbf{ OB\+\_\+\+IWDG\+\_\+\+HW}))}
+
+
+
+Definition at line 771 of file stm32f4xx\+\_\+hal\+\_\+flash\+\_\+ex.\+h.
+
+\mbox{\label{group___f_l_a_s_h_ex___i_s___f_l_a_s_h___definitions_ga8d602a97cd688390b3d1956d9970e712}} 
+\index{FLASH Private macros to check input parameters@{FLASH Private macros to check input parameters}!IS\_OB\_RDP\_LEVEL@{IS\_OB\_RDP\_LEVEL}}
+\index{IS\_OB\_RDP\_LEVEL@{IS\_OB\_RDP\_LEVEL}!FLASH Private macros to check input parameters@{FLASH Private macros to check input parameters}}
+\doxysubsubsection{IS\_OB\_RDP\_LEVEL}
+{\footnotesize\ttfamily \#define IS\+\_\+\+OB\+\_\+\+RDP\+\_\+\+LEVEL(\begin{DoxyParamCaption}\item[{}]{LEVEL }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                (((LEVEL) == OB\_RDP\_LEVEL\_0) ||\(\backslash\)}
+\DoxyCodeLine{                                ((LEVEL) == OB\_RDP\_LEVEL\_1) ||\(\backslash\)}
+\DoxyCodeLine{                                ((LEVEL) == OB\_RDP\_LEVEL\_2))}
+
+\end{DoxyCode}
+
+
+Definition at line 767 of file stm32f4xx\+\_\+hal\+\_\+flash\+\_\+ex.\+h.
+
+\mbox{\label{group___f_l_a_s_h_ex___i_s___f_l_a_s_h___definitions_ga8a05393df3a5e89551b4e2e1e8c5b884}} 
+\index{FLASH Private macros to check input parameters@{FLASH Private macros to check input parameters}!IS\_OB\_STDBY\_SOURCE@{IS\_OB\_STDBY\_SOURCE}}
+\index{IS\_OB\_STDBY\_SOURCE@{IS\_OB\_STDBY\_SOURCE}!FLASH Private macros to check input parameters@{FLASH Private macros to check input parameters}}
+\doxysubsubsection{IS\_OB\_STDBY\_SOURCE}
+{\footnotesize\ttfamily \#define IS\+\_\+\+OB\+\_\+\+STDBY\+\_\+\+SOURCE(\begin{DoxyParamCaption}\item[{}]{SOURCE }\end{DoxyParamCaption})~(((SOURCE) == \textbf{ OB\+\_\+\+STDBY\+\_\+\+NO\+\_\+\+RST}) $\vert$$\vert$ ((SOURCE) == \textbf{ OB\+\_\+\+STDBY\+\_\+\+RST}))}
+
+
+
+Definition at line 775 of file stm32f4xx\+\_\+hal\+\_\+flash\+\_\+ex.\+h.
+
+\mbox{\label{group___f_l_a_s_h_ex___i_s___f_l_a_s_h___definitions_ga131ae3434f300c8317dd6b3b349c7cab}} 
+\index{FLASH Private macros to check input parameters@{FLASH Private macros to check input parameters}!IS\_OB\_STOP\_SOURCE@{IS\_OB\_STOP\_SOURCE}}
+\index{IS\_OB\_STOP\_SOURCE@{IS\_OB\_STOP\_SOURCE}!FLASH Private macros to check input parameters@{FLASH Private macros to check input parameters}}
+\doxysubsubsection{IS\_OB\_STOP\_SOURCE}
+{\footnotesize\ttfamily \#define IS\+\_\+\+OB\+\_\+\+STOP\+\_\+\+SOURCE(\begin{DoxyParamCaption}\item[{}]{SOURCE }\end{DoxyParamCaption})~(((SOURCE) == \textbf{ OB\+\_\+\+STOP\+\_\+\+NO\+\_\+\+RST}) $\vert$$\vert$ ((SOURCE) == \textbf{ OB\+\_\+\+STOP\+\_\+\+RST}))}
+
+
+
+Definition at line 773 of file stm32f4xx\+\_\+hal\+\_\+flash\+\_\+ex.\+h.
+
+\mbox{\label{group___f_l_a_s_h_ex___i_s___f_l_a_s_h___definitions_ga87cd48c2373f47668470a38892ed07e3}} 
+\index{FLASH Private macros to check input parameters@{FLASH Private macros to check input parameters}!IS\_OPTIONBYTE@{IS\_OPTIONBYTE}}
+\index{IS\_OPTIONBYTE@{IS\_OPTIONBYTE}!FLASH Private macros to check input parameters@{FLASH Private macros to check input parameters}}
+\doxysubsubsection{IS\_OPTIONBYTE}
+{\footnotesize\ttfamily \#define IS\+\_\+\+OPTIONBYTE(\begin{DoxyParamCaption}\item[{}]{VALUE }\end{DoxyParamCaption})~(((VALUE) $<$= (\textbf{ OPTIONBYTE\+\_\+\+WRP}$\vert$\textbf{ OPTIONBYTE\+\_\+\+RDP}$\vert$\textbf{ OPTIONBYTE\+\_\+\+USER}$\vert$\textbf{ OPTIONBYTE\+\_\+\+BOR})))}
+
+
+
+Definition at line 765 of file stm32f4xx\+\_\+hal\+\_\+flash\+\_\+ex.\+h.
+
+\mbox{\label{group___f_l_a_s_h_ex___i_s___f_l_a_s_h___definitions_gaa9682aea9d9ceebca83c48e53f9f6028}} 
+\index{FLASH Private macros to check input parameters@{FLASH Private macros to check input parameters}!IS\_VOLTAGERANGE@{IS\_VOLTAGERANGE}}
+\index{IS\_VOLTAGERANGE@{IS\_VOLTAGERANGE}!FLASH Private macros to check input parameters@{FLASH Private macros to check input parameters}}
+\doxysubsubsection{IS\_VOLTAGERANGE}
+{\footnotesize\ttfamily \#define IS\+\_\+\+VOLTAGERANGE(\begin{DoxyParamCaption}\item[{}]{RANGE }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                               (((RANGE) == FLASH\_VOLTAGE\_RANGE\_1) || \(\backslash\)}
+\DoxyCodeLine{                               ((RANGE) == FLASH\_VOLTAGE\_RANGE\_2) || \(\backslash\)}
+\DoxyCodeLine{                               ((RANGE) == FLASH\_VOLTAGE\_RANGE\_3) || \(\backslash\)}
+\DoxyCodeLine{                               ((RANGE) == FLASH\_VOLTAGE\_RANGE\_4))}
+
+\end{DoxyCode}
+
+
+Definition at line 757 of file stm32f4xx\+\_\+hal\+\_\+flash\+\_\+ex.\+h.
+
+\mbox{\label{group___f_l_a_s_h_ex___i_s___f_l_a_s_h___definitions_ga8164622401a6cacf006679166de93c21}} 
+\index{FLASH Private macros to check input parameters@{FLASH Private macros to check input parameters}!IS\_WRPSTATE@{IS\_WRPSTATE}}
+\index{IS\_WRPSTATE@{IS\_WRPSTATE}!FLASH Private macros to check input parameters@{FLASH Private macros to check input parameters}}
+\doxysubsubsection{IS\_WRPSTATE}
+{\footnotesize\ttfamily \#define IS\+\_\+\+WRPSTATE(\begin{DoxyParamCaption}\item[{}]{VALUE }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                           (((VALUE) == OB\_WRPSTATE\_DISABLE) || \(\backslash\)}
+\DoxyCodeLine{                           ((VALUE) == OB\_WRPSTATE\_ENABLE))}
+
+\end{DoxyCode}
+
+
+Definition at line 762 of file stm32f4xx\+\_\+hal\+\_\+flash\+\_\+ex.\+h.
+

@@ -1,0 +1,107 @@
+\doxysection{GPIO Private Macros}
+\label{group___g_p_i_o___private___macros}\index{GPIO Private Macros@{GPIO Private Macros}}
+Collaboration diagram for GPIO Private Macros\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=265pt]{group___g_p_i_o___private___macros}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \textbf{ IS\+\_\+\+GPIO\+\_\+\+PIN\+\_\+\+ACTION}(ACTION)~(((ACTION) == \textbf{ GPIO\+\_\+\+PIN\+\_\+\+RESET}) $\vert$$\vert$ ((ACTION) == \textbf{ GPIO\+\_\+\+PIN\+\_\+\+SET}))
+\item 
+\#define \textbf{ IS\+\_\+\+GPIO\+\_\+\+PIN}(PIN)~(((PIN) \& \textbf{ GPIO\+\_\+\+PIN\+\_\+\+MASK} ) != (uint32\+\_\+t)0x00U)
+\item 
+\#define \textbf{ IS\+\_\+\+GPIO\+\_\+\+MODE}(MODE)
+\item 
+\#define \textbf{ IS\+\_\+\+GPIO\+\_\+\+SPEED}(SPEED)
+\item 
+\#define \textbf{ IS\+\_\+\+GPIO\+\_\+\+PULL}(PULL)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\label{group___g_p_i_o___private___macros_gacc5fde3eef57ec3c558c11d0011d900c}} 
+\index{GPIO Private Macros@{GPIO Private Macros}!IS\_GPIO\_MODE@{IS\_GPIO\_MODE}}
+\index{IS\_GPIO\_MODE@{IS\_GPIO\_MODE}!GPIO Private Macros@{GPIO Private Macros}}
+\doxysubsubsection{IS\_GPIO\_MODE}
+{\footnotesize\ttfamily \#define IS\+\_\+\+GPIO\+\_\+\+MODE(\begin{DoxyParamCaption}\item[{}]{MODE }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                            (((MODE) == GPIO\_MODE\_INPUT)              ||\(\backslash\)}
+\DoxyCodeLine{                            ((MODE) == GPIO\_MODE\_OUTPUT\_PP)          ||\(\backslash\)}
+\DoxyCodeLine{                            ((MODE) == GPIO\_MODE\_OUTPUT\_OD)          ||\(\backslash\)}
+\DoxyCodeLine{                            ((MODE) == GPIO\_MODE\_AF\_PP)              ||\(\backslash\)}
+\DoxyCodeLine{                            ((MODE) == GPIO\_MODE\_AF\_OD)              ||\(\backslash\)}
+\DoxyCodeLine{                            ((MODE) == GPIO\_MODE\_IT\_RISING)          ||\(\backslash\)}
+\DoxyCodeLine{                            ((MODE) == GPIO\_MODE\_IT\_FALLING)         ||\(\backslash\)}
+\DoxyCodeLine{                            ((MODE) == GPIO\_MODE\_IT\_RISING\_FALLING)  ||\(\backslash\)}
+\DoxyCodeLine{                            ((MODE) == GPIO\_MODE\_EVT\_RISING)         ||\(\backslash\)}
+\DoxyCodeLine{                            ((MODE) == GPIO\_MODE\_EVT\_FALLING)        ||\(\backslash\)}
+\DoxyCodeLine{                            ((MODE) == GPIO\_MODE\_EVT\_RISING\_FALLING) ||\(\backslash\)}
+\DoxyCodeLine{                            ((MODE) == GPIO\_MODE\_ANALOG))}
+
+\end{DoxyCode}
+
+
+Definition at line 284 of file stm32f4xx\+\_\+hal\+\_\+gpio.\+h.
+
+\mbox{\label{group___g_p_i_o___private___macros_gad6ec74e33360395535ad5d91ba6d4781}} 
+\index{GPIO Private Macros@{GPIO Private Macros}!IS\_GPIO\_PIN@{IS\_GPIO\_PIN}}
+\index{IS\_GPIO\_PIN@{IS\_GPIO\_PIN}!GPIO Private Macros@{GPIO Private Macros}}
+\doxysubsubsection{IS\_GPIO\_PIN}
+{\footnotesize\ttfamily \#define IS\+\_\+\+GPIO\+\_\+\+PIN(\begin{DoxyParamCaption}\item[{}]{PIN }\end{DoxyParamCaption})~(((PIN) \& \textbf{ GPIO\+\_\+\+PIN\+\_\+\+MASK} ) != (uint32\+\_\+t)0x00U)}
+
+
+
+Definition at line 283 of file stm32f4xx\+\_\+hal\+\_\+gpio.\+h.
+
+\mbox{\label{group___g_p_i_o___private___macros_ga6da646a4924c5cfae3024c660476f26f}} 
+\index{GPIO Private Macros@{GPIO Private Macros}!IS\_GPIO\_PIN\_ACTION@{IS\_GPIO\_PIN\_ACTION}}
+\index{IS\_GPIO\_PIN\_ACTION@{IS\_GPIO\_PIN\_ACTION}!GPIO Private Macros@{GPIO Private Macros}}
+\doxysubsubsection{IS\_GPIO\_PIN\_ACTION}
+{\footnotesize\ttfamily \#define IS\+\_\+\+GPIO\+\_\+\+PIN\+\_\+\+ACTION(\begin{DoxyParamCaption}\item[{}]{ACTION }\end{DoxyParamCaption})~(((ACTION) == \textbf{ GPIO\+\_\+\+PIN\+\_\+\+RESET}) $\vert$$\vert$ ((ACTION) == \textbf{ GPIO\+\_\+\+PIN\+\_\+\+SET}))}
+
+
+
+Definition at line 282 of file stm32f4xx\+\_\+hal\+\_\+gpio.\+h.
+
+\mbox{\label{group___g_p_i_o___private___macros_ga1cb9706d23fb79584aae41e5e503f3cd}} 
+\index{GPIO Private Macros@{GPIO Private Macros}!IS\_GPIO\_PULL@{IS\_GPIO\_PULL}}
+\index{IS\_GPIO\_PULL@{IS\_GPIO\_PULL}!GPIO Private Macros@{GPIO Private Macros}}
+\doxysubsubsection{IS\_GPIO\_PULL}
+{\footnotesize\ttfamily \#define IS\+\_\+\+GPIO\+\_\+\+PULL(\begin{DoxyParamCaption}\item[{}]{PULL }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                            (((PULL) == GPIO\_NOPULL) || ((PULL) == GPIO\_PULLUP) || \(\backslash\)}
+\DoxyCodeLine{                            ((PULL) == GPIO\_PULLDOWN))}
+
+\end{DoxyCode}
+
+
+Definition at line 298 of file stm32f4xx\+\_\+hal\+\_\+gpio.\+h.
+
+\mbox{\label{group___g_p_i_o___private___macros_ga888e1f951df2fe9dbf827528051a3a56}} 
+\index{GPIO Private Macros@{GPIO Private Macros}!IS\_GPIO\_SPEED@{IS\_GPIO\_SPEED}}
+\index{IS\_GPIO\_SPEED@{IS\_GPIO\_SPEED}!GPIO Private Macros@{GPIO Private Macros}}
+\doxysubsubsection{IS\_GPIO\_SPEED}
+{\footnotesize\ttfamily \#define IS\+\_\+\+GPIO\+\_\+\+SPEED(\begin{DoxyParamCaption}\item[{}]{SPEED }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                              (((SPEED) == GPIO\_SPEED\_FREQ\_LOW)  || ((SPEED) == GPIO\_SPEED\_FREQ\_MEDIUM) || \(\backslash\)}
+\DoxyCodeLine{                              ((SPEED) == GPIO\_SPEED\_FREQ\_HIGH) || ((SPEED) == GPIO\_SPEED\_FREQ\_VERY\_HIGH))}
+
+\end{DoxyCode}
+
+
+Definition at line 296 of file stm32f4xx\+\_\+hal\+\_\+gpio.\+h.
+

@@ -1,0 +1,131 @@
+\doxysection{system/src/stm32f4-\/hal/stm32f4xx\+\_\+hal\+\_\+dma2d.c File Reference}
+\label{stm32f4xx__hal__dma2d_8c}\index{system/src/stm32f4-\/hal/stm32f4xx\_hal\_dma2d.c@{system/src/stm32f4-\/hal/stm32f4xx\_hal\_dma2d.c}}
+
+
+DMA2D HAL module driver. This file provides firmware functions to manage the following functionalities of the DMA2D peripheral\+:  
+
+
+{\ttfamily \#include \char`\"{}stm32f4xx\+\_\+hal.\+h\char`\"{}}\newline
+Include dependency graph for stm32f4xx\+\_\+hal\+\_\+dma2d.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{stm32f4xx__hal__dma2d_8c__incl}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Detailed Description}
+DMA2D HAL module driver. This file provides firmware functions to manage the following functionalities of the DMA2D peripheral\+: 
+
+\begin{DoxyAuthor}{Author}
+MCD Application Team 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+V1.\+5.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+06-\/May-\/2016
+\begin{DoxyItemize}
+\item Initialization and de-\/initialization functions
+\item IO operation functions
+\item Peripheral Control functions
+\item Peripheral State and Errors functions
+\end{DoxyItemize}
+\end{DoxyDate}
+\begin{DoxyVerb}==============================================================================
+                      ##### How to use this driver #####
+==============================================================================
+  [..]
+    (#) Program the required configuration through the following parameters:
+        the transfer mode, the output color mode and the output offset using
+        HAL_DMA2D_Init() function.
+
+    (#) Program the required configuration through the following parameters:
+        the input color mode, the input color, the input alpha value, the alpha mode,
+        and the input offset using HAL_DMA2D_ConfigLayer() function for foreground 
+        or/and background layer.
+        
+   *** Polling mode IO operation ***
+   =================================
+  [..]
+     (#) Configure pdata parameter (explained hereafter), destination and data length
+         and enable the transfer using HAL_DMA2D_Start().
+     (#) Wait for end of transfer using HAL_DMA2D_PollForTransfer(), at this stage
+         user can specify the value of timeout according to his end application.
+
+   *** Interrupt mode IO operation ***
+   ===================================
+   [..]
+     (#) Configure pdata parameter, destination and data length and enable 
+         the transfer using HAL_DMA2D_Start_IT().
+     (#) Use HAL_DMA2D_IRQHandler() called under DMA2D_IRQHandler() interrupt subroutine
+     (#) At the end of data transfer HAL_DMA2D_IRQHandler() function is executed and user can
+         add his own function by customization of function pointer XferCpltCallback (member
+         of DMA2D handle structure).
+     (#) In case of error, the HAL_DMA2D_IRQHandler() function will call the callback
+         XferErrorCallback.
+
+       -@-   In Register-to-Memory transfer mode, pdata parameter is the register
+             color, in Memory-to-memory or Memory-to-Memory with pixel format
+             conversion pdata is the source address.
+
+       -@-   Configure the foreground source address, the background source address,
+             the destination and data length then Enable the transfer using
+             HAL_DMA2D_BlendingStart() in polling mode and HAL_DMA2D_BlendingStart_IT()
+             in interrupt mode
+
+       -@-   HAL_DMA2D_BlendingStart() and HAL_DMA2D_BlendingStart_IT() functions
+             are used if the memory to memory with blending transfer mode is selected.
+
+    (#) Optionally, configure and enable the CLUT using HAL_DMA2D_CLUTLoad() in polling
+        mode or HAL_DMA2D_CLUTLoad_IT() in interrupt mode.
+
+    (#) Optionally, configure the line watermark in using the API HAL_DMA2D_ProgramLineEvent()
+
+    (#) Optionally, configure the dead time value in the AHB clock cycle inserted between two 
+        consecutive accesses on the AHB master port in using the API HAL_DMA2D_ConfigDeadTime()
+        and enable/disable the functionality  with the APIs HAL_DMA2D_EnableDeadTime() or
+        HAL_DMA2D_DisableDeadTime().
+
+    (#) The transfer can be suspended, resumed and aborted using the following
+        functions: HAL_DMA2D_Suspend(), HAL_DMA2D_Resume(), HAL_DMA2D_Abort().
+
+    (#) The CLUT loading can be suspended, resumed and aborted using the following
+        functions: HAL_DMA2D_CLUTLoading_Suspend(), HAL_DMA2D_CLUTLoading_Resume(),
+        HAL_DMA2D_CLUTLoading_Abort().
+
+    (#) To control the DMA2D state, use the following function: HAL_DMA2D_GetState().
+    
+    (#) To read the DMA2D error code, use the following function: HAL_DMA2D_GetError().
+
+   *** DMA2D HAL driver macros list ***
+   =============================================
+   [..]
+     Below the list of most used macros in DMA2D HAL driver :
+
+    (+) __HAL_DMA2D_ENABLE: Enable the DMA2D peripheral.
+    (+) __HAL_DMA2D_GET_FLAG: Get the DMA2D pending flags.
+    (+) __HAL_DMA2D_CLEAR_FLAG: Clear the DMA2D pending flags.
+    (+) __HAL_DMA2D_ENABLE_IT: Enable the specified DMA2D interrupts.
+    (+) __HAL_DMA2D_DISABLE_IT: Disable the specified DMA2D interrupts.
+    (+) __HAL_DMA2D_GET_IT_SOURCE: Check whether the specified DMA2D interrupt is enabled or not
+
+   [..]
+    (@) You can refer to the DMA2D HAL driver header file for more useful macros\end{DoxyVerb}
+
+
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+\doxysubsubsection*{\begin{center}\copyright{} COPYRIGHT(c) 2016 STMicroelectronics\end{center} }
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met\+:
+\begin{DoxyEnumerate}
+\item Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+\item Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+\item Neither the name of STMicroelectronics nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+\end{DoxyEnumerate}
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \char`\"{}\+AS IS\char`\"{} AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. 

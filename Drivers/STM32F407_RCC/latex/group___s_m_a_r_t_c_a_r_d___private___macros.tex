@@ -1,0 +1,151 @@
+\doxysection{SMARTCARD Private Macros}
+\label{group___s_m_a_r_t_c_a_r_d___private___macros}\index{SMARTCARD Private Macros@{SMARTCARD Private Macros}}
+Collaboration diagram for SMARTCARD Private Macros\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=338pt]{group___s_m_a_r_t_c_a_r_d___private___macros}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \textbf{ IS\+\_\+\+SMARTCARD\+\_\+\+WORD\+\_\+\+LENGTH}(LENGTH)~((LENGTH) == \textbf{ SMARTCARD\+\_\+\+WORDLENGTH\+\_\+9B})
+\item 
+\#define \textbf{ IS\+\_\+\+SMARTCARD\+\_\+\+STOPBITS}(STOPBITS)
+\item 
+\#define \textbf{ IS\+\_\+\+SMARTCARD\+\_\+\+PARITY}(PARITY)
+\item 
+\#define \textbf{ IS\+\_\+\+SMARTCARD\+\_\+\+MODE}(MODE)~((((MODE) \& (uint32\+\_\+t)0x0000\+FFF3U) == 0x00U) \&\& ((MODE) != (uint32\+\_\+t)0x000000U))
+\item 
+\#define \textbf{ IS\+\_\+\+SMARTCARD\+\_\+\+POLARITY}(CPOL)~(((CPOL) == \textbf{ SMARTCARD\+\_\+\+POLARITY\+\_\+\+LOW}) $\vert$$\vert$ ((CPOL) == \textbf{ SMARTCARD\+\_\+\+POLARITY\+\_\+\+HIGH}))
+\item 
+\#define \textbf{ IS\+\_\+\+SMARTCARD\+\_\+\+PHASE}(CPHA)~(((CPHA) == \textbf{ SMARTCARD\+\_\+\+PHASE\+\_\+1\+EDGE}) $\vert$$\vert$ ((CPHA) == \textbf{ SMARTCARD\+\_\+\+PHASE\+\_\+2\+EDGE}))
+\item 
+\#define \textbf{ IS\+\_\+\+SMARTCARD\+\_\+\+LASTBIT}(LASTBIT)
+\item 
+\#define \textbf{ IS\+\_\+\+SMARTCARD\+\_\+\+NACK\+\_\+\+STATE}(NACK)
+\item 
+\#define \textbf{ IS\+\_\+\+SMARTCARD\+\_\+\+BAUDRATE}(BAUDRATE)~((BAUDRATE) $<$ 10500001U)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\label{group___s_m_a_r_t_c_a_r_d___private___macros_ga8af8fc5fa79cca4a3bf1bce5d051e371}} 
+\index{SMARTCARD Private Macros@{SMARTCARD Private Macros}!IS\_SMARTCARD\_BAUDRATE@{IS\_SMARTCARD\_BAUDRATE}}
+\index{IS\_SMARTCARD\_BAUDRATE@{IS\_SMARTCARD\_BAUDRATE}!SMARTCARD Private Macros@{SMARTCARD Private Macros}}
+\doxysubsubsection{IS\_SMARTCARD\_BAUDRATE}
+{\footnotesize\ttfamily \#define IS\+\_\+\+SMARTCARD\+\_\+\+BAUDRATE(\begin{DoxyParamCaption}\item[{}]{BAUDRATE }\end{DoxyParamCaption})~((BAUDRATE) $<$ 10500001U)}
+
+
+
+Definition at line 650 of file stm32f4xx\+\_\+hal\+\_\+smartcard.\+h.
+
+\mbox{\label{group___s_m_a_r_t_c_a_r_d___private___macros_ga77540ed09a99dfb4b1283b4d4560733f}} 
+\index{SMARTCARD Private Macros@{SMARTCARD Private Macros}!IS\_SMARTCARD\_LASTBIT@{IS\_SMARTCARD\_LASTBIT}}
+\index{IS\_SMARTCARD\_LASTBIT@{IS\_SMARTCARD\_LASTBIT}!SMARTCARD Private Macros@{SMARTCARD Private Macros}}
+\doxysubsubsection{IS\_SMARTCARD\_LASTBIT}
+{\footnotesize\ttfamily \#define IS\+\_\+\+SMARTCARD\+\_\+\+LASTBIT(\begin{DoxyParamCaption}\item[{}]{LASTBIT }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                       (((LASTBIT) == SMARTCARD\_LASTBIT\_DISABLE) || \(\backslash\)}
+\DoxyCodeLine{                                       ((LASTBIT) == SMARTCARD\_LASTBIT\_ENABLE))}
+
+\end{DoxyCode}
+
+
+Definition at line 646 of file stm32f4xx\+\_\+hal\+\_\+smartcard.\+h.
+
+\mbox{\label{group___s_m_a_r_t_c_a_r_d___private___macros_ga2dc06686d0651b6a8504ccffd028d2c4}} 
+\index{SMARTCARD Private Macros@{SMARTCARD Private Macros}!IS\_SMARTCARD\_MODE@{IS\_SMARTCARD\_MODE}}
+\index{IS\_SMARTCARD\_MODE@{IS\_SMARTCARD\_MODE}!SMARTCARD Private Macros@{SMARTCARD Private Macros}}
+\doxysubsubsection{IS\_SMARTCARD\_MODE}
+{\footnotesize\ttfamily \#define IS\+\_\+\+SMARTCARD\+\_\+\+MODE(\begin{DoxyParamCaption}\item[{}]{MODE }\end{DoxyParamCaption})~((((MODE) \& (uint32\+\_\+t)0x0000\+FFF3U) == 0x00U) \&\& ((MODE) != (uint32\+\_\+t)0x000000U))}
+
+
+
+Definition at line 643 of file stm32f4xx\+\_\+hal\+\_\+smartcard.\+h.
+
+\mbox{\label{group___s_m_a_r_t_c_a_r_d___private___macros_ga2ee3e5dd705563b63d6551497b514fe1}} 
+\index{SMARTCARD Private Macros@{SMARTCARD Private Macros}!IS\_SMARTCARD\_NACK\_STATE@{IS\_SMARTCARD\_NACK\_STATE}}
+\index{IS\_SMARTCARD\_NACK\_STATE@{IS\_SMARTCARD\_NACK\_STATE}!SMARTCARD Private Macros@{SMARTCARD Private Macros}}
+\doxysubsubsection{IS\_SMARTCARD\_NACK\_STATE}
+{\footnotesize\ttfamily \#define IS\+\_\+\+SMARTCARD\+\_\+\+NACK\+\_\+\+STATE(\begin{DoxyParamCaption}\item[{}]{NACK }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                       (((NACK) == SMARTCARD\_NACK\_ENABLE) || \(\backslash\)}
+\DoxyCodeLine{                                       ((NACK) == SMARTCARD\_NACK\_DISABLE))}
+
+\end{DoxyCode}
+
+
+Definition at line 648 of file stm32f4xx\+\_\+hal\+\_\+smartcard.\+h.
+
+\mbox{\label{group___s_m_a_r_t_c_a_r_d___private___macros_ga958995a8f043b3057cee33a8098ca095}} 
+\index{SMARTCARD Private Macros@{SMARTCARD Private Macros}!IS\_SMARTCARD\_PARITY@{IS\_SMARTCARD\_PARITY}}
+\index{IS\_SMARTCARD\_PARITY@{IS\_SMARTCARD\_PARITY}!SMARTCARD Private Macros@{SMARTCARD Private Macros}}
+\doxysubsubsection{IS\_SMARTCARD\_PARITY}
+{\footnotesize\ttfamily \#define IS\+\_\+\+SMARTCARD\+\_\+\+PARITY(\begin{DoxyParamCaption}\item[{}]{PARITY }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                     (((PARITY) == SMARTCARD\_PARITY\_EVEN) || \(\backslash\)}
+\DoxyCodeLine{                                     ((PARITY) == SMARTCARD\_PARITY\_ODD))}
+
+\end{DoxyCode}
+
+
+Definition at line 641 of file stm32f4xx\+\_\+hal\+\_\+smartcard.\+h.
+
+\mbox{\label{group___s_m_a_r_t_c_a_r_d___private___macros_gad4f2566348232722026dc4861ed76125}} 
+\index{SMARTCARD Private Macros@{SMARTCARD Private Macros}!IS\_SMARTCARD\_PHASE@{IS\_SMARTCARD\_PHASE}}
+\index{IS\_SMARTCARD\_PHASE@{IS\_SMARTCARD\_PHASE}!SMARTCARD Private Macros@{SMARTCARD Private Macros}}
+\doxysubsubsection{IS\_SMARTCARD\_PHASE}
+{\footnotesize\ttfamily \#define IS\+\_\+\+SMARTCARD\+\_\+\+PHASE(\begin{DoxyParamCaption}\item[{}]{CPHA }\end{DoxyParamCaption})~(((CPHA) == \textbf{ SMARTCARD\+\_\+\+PHASE\+\_\+1\+EDGE}) $\vert$$\vert$ ((CPHA) == \textbf{ SMARTCARD\+\_\+\+PHASE\+\_\+2\+EDGE}))}
+
+
+
+Definition at line 645 of file stm32f4xx\+\_\+hal\+\_\+smartcard.\+h.
+
+\mbox{\label{group___s_m_a_r_t_c_a_r_d___private___macros_gab728caa9af7ecfe085a67603df18e567}} 
+\index{SMARTCARD Private Macros@{SMARTCARD Private Macros}!IS\_SMARTCARD\_POLARITY@{IS\_SMARTCARD\_POLARITY}}
+\index{IS\_SMARTCARD\_POLARITY@{IS\_SMARTCARD\_POLARITY}!SMARTCARD Private Macros@{SMARTCARD Private Macros}}
+\doxysubsubsection{IS\_SMARTCARD\_POLARITY}
+{\footnotesize\ttfamily \#define IS\+\_\+\+SMARTCARD\+\_\+\+POLARITY(\begin{DoxyParamCaption}\item[{}]{CPOL }\end{DoxyParamCaption})~(((CPOL) == \textbf{ SMARTCARD\+\_\+\+POLARITY\+\_\+\+LOW}) $\vert$$\vert$ ((CPOL) == \textbf{ SMARTCARD\+\_\+\+POLARITY\+\_\+\+HIGH}))}
+
+
+
+Definition at line 644 of file stm32f4xx\+\_\+hal\+\_\+smartcard.\+h.
+
+\mbox{\label{group___s_m_a_r_t_c_a_r_d___private___macros_ga55a0c0a41cc21f1c11d34457bf45b97b}} 
+\index{SMARTCARD Private Macros@{SMARTCARD Private Macros}!IS\_SMARTCARD\_STOPBITS@{IS\_SMARTCARD\_STOPBITS}}
+\index{IS\_SMARTCARD\_STOPBITS@{IS\_SMARTCARD\_STOPBITS}!SMARTCARD Private Macros@{SMARTCARD Private Macros}}
+\doxysubsubsection{IS\_SMARTCARD\_STOPBITS}
+{\footnotesize\ttfamily \#define IS\+\_\+\+SMARTCARD\+\_\+\+STOPBITS(\begin{DoxyParamCaption}\item[{}]{STOPBITS }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                         (((STOPBITS) == SMARTCARD\_STOPBITS\_0\_5) || \(\backslash\)}
+\DoxyCodeLine{                                         ((STOPBITS) == SMARTCARD\_STOPBITS\_1\_5))}
+
+\end{DoxyCode}
+
+
+Definition at line 639 of file stm32f4xx\+\_\+hal\+\_\+smartcard.\+h.
+
+\mbox{\label{group___s_m_a_r_t_c_a_r_d___private___macros_ga963c514e557b58c5c11bb60ab2660259}} 
+\index{SMARTCARD Private Macros@{SMARTCARD Private Macros}!IS\_SMARTCARD\_WORD\_LENGTH@{IS\_SMARTCARD\_WORD\_LENGTH}}
+\index{IS\_SMARTCARD\_WORD\_LENGTH@{IS\_SMARTCARD\_WORD\_LENGTH}!SMARTCARD Private Macros@{SMARTCARD Private Macros}}
+\doxysubsubsection{IS\_SMARTCARD\_WORD\_LENGTH}
+{\footnotesize\ttfamily \#define IS\+\_\+\+SMARTCARD\+\_\+\+WORD\+\_\+\+LENGTH(\begin{DoxyParamCaption}\item[{}]{LENGTH }\end{DoxyParamCaption})~((LENGTH) == \textbf{ SMARTCARD\+\_\+\+WORDLENGTH\+\_\+9B})}
+
+
+
+Definition at line 638 of file stm32f4xx\+\_\+hal\+\_\+smartcard.\+h.
+

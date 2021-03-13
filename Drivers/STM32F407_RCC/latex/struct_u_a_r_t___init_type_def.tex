@@ -1,0 +1,122 @@
+\doxysection{UART\+\_\+\+Init\+Type\+Def Struct Reference}
+\label{struct_u_a_r_t___init_type_def}\index{UART\_InitTypeDef@{UART\_InitTypeDef}}
+
+
+UART Init Structure definition ~\newline
+  
+
+
+
+
+{\ttfamily \#include $<$stm32f4xx\+\_\+hal\+\_\+uart.\+h$>$}
+
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \textbf{ Baud\+Rate}
+\item 
+uint32\+\_\+t \textbf{ Word\+Length}
+\item 
+uint32\+\_\+t \textbf{ Stop\+Bits}
+\item 
+uint32\+\_\+t \textbf{ Parity}
+\item 
+uint32\+\_\+t \textbf{ Mode}
+\item 
+uint32\+\_\+t \textbf{ Hw\+Flow\+Ctl}
+\item 
+uint32\+\_\+t \textbf{ Over\+Sampling}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+UART Init Structure definition ~\newline
+ 
+
+Definition at line 65 of file stm32f4xx\+\_\+hal\+\_\+uart.\+h.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\label{struct_u_a_r_t___init_type_def_aaad609733f3fd8146c8745e953a91b2a}} 
+\index{UART\_InitTypeDef@{UART\_InitTypeDef}!BaudRate@{BaudRate}}
+\index{BaudRate@{BaudRate}!UART\_InitTypeDef@{UART\_InitTypeDef}}
+\doxysubsubsection{BaudRate}
+{\footnotesize\ttfamily uint32\+\_\+t Baud\+Rate}
+
+This member configures the UART communication baud rate. The baud rate is computed using the following formula\+:
+\begin{DoxyItemize}
+\item Integer\+Divider = ((PCLKx) / (8 $\ast$ (OVR8+1) $\ast$ (huart-\/$>$Init.\+Baud\+Rate)))
+\item Fractional\+Divider = ((Integer\+Divider -\/ ((uint32\+\_\+t) Integer\+Divider)) $\ast$ 8 $\ast$ (OVR8+1)) + 0.\+5 Where OVR8 is the \char`\"{}oversampling by 8 mode\char`\"{} configuration bit in the CR1 register. 
+\end{DoxyItemize}
+
+Definition at line 67 of file stm32f4xx\+\_\+hal\+\_\+uart.\+h.
+
+\mbox{\label{struct_u_a_r_t___init_type_def_a0a933d213b17470c582c8fec23a24d09}} 
+\index{UART\_InitTypeDef@{UART\_InitTypeDef}!HwFlowCtl@{HwFlowCtl}}
+\index{HwFlowCtl@{HwFlowCtl}!UART\_InitTypeDef@{UART\_InitTypeDef}}
+\doxysubsubsection{HwFlowCtl}
+{\footnotesize\ttfamily uint32\+\_\+t Hw\+Flow\+Ctl}
+
+Specifies whether the hardware flow control mode is enabled or disabled. This parameter can be a value of \doxyref{UART Hardware Flow Control}{p.}{group___u_a_r_t___hardware___flow___control} 
+
+Definition at line 89 of file stm32f4xx\+\_\+hal\+\_\+uart.\+h.
+
+\mbox{\label{struct_u_a_r_t___init_type_def_a0ffc93ec511ed9cf1663f6939bd3e839}} 
+\index{UART\_InitTypeDef@{UART\_InitTypeDef}!Mode@{Mode}}
+\index{Mode@{Mode}!UART\_InitTypeDef@{UART\_InitTypeDef}}
+\doxysubsubsection{Mode}
+{\footnotesize\ttfamily uint32\+\_\+t Mode}
+
+Specifies whether the Receive or Transmit mode is enabled or disabled. This parameter can be a value of \doxyref{UART Transfer Mode}{p.}{group___u_a_r_t___mode} 
+
+Definition at line 86 of file stm32f4xx\+\_\+hal\+\_\+uart.\+h.
+
+\mbox{\label{struct_u_a_r_t___init_type_def_a35770b237370fda7fd0fabad22898490}} 
+\index{UART\_InitTypeDef@{UART\_InitTypeDef}!OverSampling@{OverSampling}}
+\index{OverSampling@{OverSampling}!UART\_InitTypeDef@{UART\_InitTypeDef}}
+\doxysubsubsection{OverSampling}
+{\footnotesize\ttfamily uint32\+\_\+t Over\+Sampling}
+
+Specifies whether the Over sampling 8 is enabled or disabled, to achieve higher speed (up to f\+PCLK/8). This parameter can be a value of \doxyref{UART Over Sampling}{p.}{group___u_a_r_t___over___sampling} 
+
+Definition at line 93 of file stm32f4xx\+\_\+hal\+\_\+uart.\+h.
+
+\mbox{\label{struct_u_a_r_t___init_type_def_a1d60a99b8f3965f01ab23444b154ba79}} 
+\index{UART\_InitTypeDef@{UART\_InitTypeDef}!Parity@{Parity}}
+\index{Parity@{Parity}!UART\_InitTypeDef@{UART\_InitTypeDef}}
+\doxysubsubsection{Parity}
+{\footnotesize\ttfamily uint32\+\_\+t Parity}
+
+Specifies the parity mode. This parameter can be a value of \doxyref{UART Parity}{p.}{group___u_a_r_t___parity} \begin{DoxyNote}{Note}
+When parity is enabled, the computed parity is inserted at the MSB position of the transmitted data (9th bit when the word length is set to 9 data bits; 8th bit when the word length is set to 8 data bits). 
+\end{DoxyNote}
+
+
+Definition at line 79 of file stm32f4xx\+\_\+hal\+\_\+uart.\+h.
+
+\mbox{\label{struct_u_a_r_t___init_type_def_a8394ba239444e3e5fe1ada1c37cb1019}} 
+\index{UART\_InitTypeDef@{UART\_InitTypeDef}!StopBits@{StopBits}}
+\index{StopBits@{StopBits}!UART\_InitTypeDef@{UART\_InitTypeDef}}
+\doxysubsubsection{StopBits}
+{\footnotesize\ttfamily uint32\+\_\+t Stop\+Bits}
+
+Specifies the number of stop bits transmitted. This parameter can be a value of \doxyref{UART Number of Stop Bits}{p.}{group___u_a_r_t___stop___bits} 
+
+Definition at line 76 of file stm32f4xx\+\_\+hal\+\_\+uart.\+h.
+
+\mbox{\label{struct_u_a_r_t___init_type_def_ae5e60b9a021fe0009588fc86c7584a5a}} 
+\index{UART\_InitTypeDef@{UART\_InitTypeDef}!WordLength@{WordLength}}
+\index{WordLength@{WordLength}!UART\_InitTypeDef@{UART\_InitTypeDef}}
+\doxysubsubsection{WordLength}
+{\footnotesize\ttfamily uint32\+\_\+t Word\+Length}
+
+Specifies the number of data bits transmitted or received in a frame. This parameter can be a value of \doxyref{UART Word Length}{p.}{group___u_a_r_t___word___length} 
+
+Definition at line 73 of file stm32f4xx\+\_\+hal\+\_\+uart.\+h.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+system/include/stm32f4-\/hal/\textbf{ stm32f4xx\+\_\+hal\+\_\+uart.\+h}\end{DoxyCompactItemize}

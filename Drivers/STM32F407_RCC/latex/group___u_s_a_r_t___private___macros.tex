@@ -1,0 +1,226 @@
+\doxysection{USART Private Macros}
+\label{group___u_s_a_r_t___private___macros}\index{USART Private Macros@{USART Private Macros}}
+Collaboration diagram for USART Private Macros\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=281pt]{group___u_s_a_r_t___private___macros}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \textbf{ IS\+\_\+\+USART\+\_\+\+NACK\+\_\+\+STATE}(NACK)
+\item 
+\#define \textbf{ IS\+\_\+\+USART\+\_\+\+LASTBIT}(LASTBIT)
+\item 
+\#define \textbf{ IS\+\_\+\+USART\+\_\+\+PHASE}(CPHA)~(((CPHA) == \textbf{ USART\+\_\+\+PHASE\+\_\+1\+EDGE}) $\vert$$\vert$ ((CPHA) == \textbf{ USART\+\_\+\+PHASE\+\_\+2\+EDGE}))
+\item 
+\#define \textbf{ IS\+\_\+\+USART\+\_\+\+POLARITY}(CPOL)~(((CPOL) == \textbf{ USART\+\_\+\+POLARITY\+\_\+\+LOW}) $\vert$$\vert$ ((CPOL) == \textbf{ USART\+\_\+\+POLARITY\+\_\+\+HIGH}))
+\item 
+\#define \textbf{ IS\+\_\+\+USART\+\_\+\+CLOCK}(CLOCK)
+\item 
+\#define \textbf{ IS\+\_\+\+USART\+\_\+\+WORD\+\_\+\+LENGTH}(LENGTH)
+\item 
+\#define \textbf{ IS\+\_\+\+USART\+\_\+\+STOPBITS}(STOPBITS)
+\item 
+\#define \textbf{ IS\+\_\+\+USART\+\_\+\+PARITY}(PARITY)
+\item 
+\#define \textbf{ IS\+\_\+\+USART\+\_\+\+MODE}(MODE)~((((MODE) \& (uint32\+\_\+t)0x\+FFF3) == 0x00U) \&\& ((MODE) != (uint32\+\_\+t)0x00U))
+\item 
+\#define \textbf{ IS\+\_\+\+USART\+\_\+\+BAUDRATE}(BAUDRATE)~((BAUDRATE) $<$ 10500001U)
+\item 
+\#define \textbf{ USART\+\_\+\+DIV}(\+\_\+\+PCLK\+\_\+,  \+\_\+\+BAUD\+\_\+)~(((\+\_\+\+PCLK\+\_\+)$\ast$25U)/(2U$\ast$(\+\_\+\+BAUD\+\_\+)))
+\item 
+\#define \textbf{ USART\+\_\+\+DIVMANT}(\+\_\+\+PCLK\+\_\+,  \+\_\+\+BAUD\+\_\+)~(\textbf{ USART\+\_\+\+DIV}((\+\_\+\+PCLK\+\_\+), (\+\_\+\+BAUD\+\_\+))/100U)
+\item 
+\#define \textbf{ USART\+\_\+\+DIVFRAQ}(\+\_\+\+PCLK\+\_\+,  \+\_\+\+BAUD\+\_\+)~(((\textbf{ USART\+\_\+\+DIV}((\+\_\+\+PCLK\+\_\+), (\+\_\+\+BAUD\+\_\+)) -\/ (\textbf{ USART\+\_\+\+DIVMANT}((\+\_\+\+PCLK\+\_\+), (\+\_\+\+BAUD\+\_\+)) $\ast$ 100U)) $\ast$ 16U + 50U) / 100U)
+\item 
+\#define \textbf{ USART\+\_\+\+BRR}(\+\_\+\+PCLK\+\_\+,  \+\_\+\+BAUD\+\_\+)~((\textbf{ USART\+\_\+\+DIVMANT}((\+\_\+\+PCLK\+\_\+), (\+\_\+\+BAUD\+\_\+)) $<$$<$ 4U)$\vert$(\textbf{ USART\+\_\+\+DIVFRAQ}((\+\_\+\+PCLK\+\_\+), (\+\_\+\+BAUD\+\_\+)) \& 0x0\+FU))
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\label{group___u_s_a_r_t___private___macros_ga9dc365e0a1e01031a8e0757a34b9d420}} 
+\index{USART Private Macros@{USART Private Macros}!IS\_USART\_BAUDRATE@{IS\_USART\_BAUDRATE}}
+\index{IS\_USART\_BAUDRATE@{IS\_USART\_BAUDRATE}!USART Private Macros@{USART Private Macros}}
+\doxysubsubsection{IS\_USART\_BAUDRATE}
+{\footnotesize\ttfamily \#define IS\+\_\+\+USART\+\_\+\+BAUDRATE(\begin{DoxyParamCaption}\item[{}]{BAUDRATE }\end{DoxyParamCaption})~((BAUDRATE) $<$ 10500001U)}
+
+
+
+Definition at line 555 of file stm32f4xx\+\_\+hal\+\_\+usart.\+h.
+
+\mbox{\label{group___u_s_a_r_t___private___macros_ga0f1e1ba37690b21b7338ed3b06614cf6}} 
+\index{USART Private Macros@{USART Private Macros}!IS\_USART\_CLOCK@{IS\_USART\_CLOCK}}
+\index{IS\_USART\_CLOCK@{IS\_USART\_CLOCK}!USART Private Macros@{USART Private Macros}}
+\doxysubsubsection{IS\_USART\_CLOCK}
+{\footnotesize\ttfamily \#define IS\+\_\+\+USART\+\_\+\+CLOCK(\begin{DoxyParamCaption}\item[{}]{CLOCK }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                               (((CLOCK) == USART\_CLOCK\_DISABLE) || \(\backslash\)}
+\DoxyCodeLine{                               ((CLOCK) == USART\_CLOCK\_ENABLE))}
+
+\end{DoxyCode}
+
+
+Definition at line 543 of file stm32f4xx\+\_\+hal\+\_\+usart.\+h.
+
+\mbox{\label{group___u_s_a_r_t___private___macros_gaa941695e5612b53e9c2aca6a9fa0d695}} 
+\index{USART Private Macros@{USART Private Macros}!IS\_USART\_LASTBIT@{IS\_USART\_LASTBIT}}
+\index{IS\_USART\_LASTBIT@{IS\_USART\_LASTBIT}!USART Private Macros@{USART Private Macros}}
+\doxysubsubsection{IS\_USART\_LASTBIT}
+{\footnotesize\ttfamily \#define IS\+\_\+\+USART\+\_\+\+LASTBIT(\begin{DoxyParamCaption}\item[{}]{LASTBIT }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                       (((LASTBIT) == USART\_LASTBIT\_DISABLE) || \(\backslash\)}
+\DoxyCodeLine{                                       ((LASTBIT) == USART\_LASTBIT\_ENABLE))}
+
+\end{DoxyCode}
+
+
+Definition at line 539 of file stm32f4xx\+\_\+hal\+\_\+usart.\+h.
+
+\mbox{\label{group___u_s_a_r_t___private___macros_gae9140e5ca405d2377fe0e82c79e136a2}} 
+\index{USART Private Macros@{USART Private Macros}!IS\_USART\_MODE@{IS\_USART\_MODE}}
+\index{IS\_USART\_MODE@{IS\_USART\_MODE}!USART Private Macros@{USART Private Macros}}
+\doxysubsubsection{IS\_USART\_MODE}
+{\footnotesize\ttfamily \#define IS\+\_\+\+USART\+\_\+\+MODE(\begin{DoxyParamCaption}\item[{}]{MODE }\end{DoxyParamCaption})~((((MODE) \& (uint32\+\_\+t)0x\+FFF3) == 0x00U) \&\& ((MODE) != (uint32\+\_\+t)0x00U))}
+
+
+
+Definition at line 554 of file stm32f4xx\+\_\+hal\+\_\+usart.\+h.
+
+\mbox{\label{group___u_s_a_r_t___private___macros_ga92c8c26cb4d4f8f20c67a85c2d457797}} 
+\index{USART Private Macros@{USART Private Macros}!IS\_USART\_NACK\_STATE@{IS\_USART\_NACK\_STATE}}
+\index{IS\_USART\_NACK\_STATE@{IS\_USART\_NACK\_STATE}!USART Private Macros@{USART Private Macros}}
+\doxysubsubsection{IS\_USART\_NACK\_STATE}
+{\footnotesize\ttfamily \#define IS\+\_\+\+USART\+\_\+\+NACK\+\_\+\+STATE(\begin{DoxyParamCaption}\item[{}]{NACK }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                   (((NACK) == USART\_NACK\_ENABLE) || \(\backslash\)}
+\DoxyCodeLine{                                   ((NACK) == USART\_NACK\_DISABLE))}
+
+\end{DoxyCode}
+
+
+Definition at line 537 of file stm32f4xx\+\_\+hal\+\_\+usart.\+h.
+
+\mbox{\label{group___u_s_a_r_t___private___macros_gaa87b2e338e0ccc42887d3c56901bee87}} 
+\index{USART Private Macros@{USART Private Macros}!IS\_USART\_PARITY@{IS\_USART\_PARITY}}
+\index{IS\_USART\_PARITY@{IS\_USART\_PARITY}!USART Private Macros@{USART Private Macros}}
+\doxysubsubsection{IS\_USART\_PARITY}
+{\footnotesize\ttfamily \#define IS\+\_\+\+USART\+\_\+\+PARITY(\begin{DoxyParamCaption}\item[{}]{PARITY }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                     (((PARITY) == USART\_PARITY\_NONE) || \(\backslash\)}
+\DoxyCodeLine{                                     ((PARITY) == USART\_PARITY\_EVEN) || \(\backslash\)}
+\DoxyCodeLine{                                     ((PARITY) == USART\_PARITY\_ODD))}
+
+\end{DoxyCode}
+
+
+Definition at line 551 of file stm32f4xx\+\_\+hal\+\_\+usart.\+h.
+
+\mbox{\label{group___u_s_a_r_t___private___macros_ga6ea3d074e9204eb593472e03452e537b}} 
+\index{USART Private Macros@{USART Private Macros}!IS\_USART\_PHASE@{IS\_USART\_PHASE}}
+\index{IS\_USART\_PHASE@{IS\_USART\_PHASE}!USART Private Macros@{USART Private Macros}}
+\doxysubsubsection{IS\_USART\_PHASE}
+{\footnotesize\ttfamily \#define IS\+\_\+\+USART\+\_\+\+PHASE(\begin{DoxyParamCaption}\item[{}]{CPHA }\end{DoxyParamCaption})~(((CPHA) == \textbf{ USART\+\_\+\+PHASE\+\_\+1\+EDGE}) $\vert$$\vert$ ((CPHA) == \textbf{ USART\+\_\+\+PHASE\+\_\+2\+EDGE}))}
+
+
+
+Definition at line 541 of file stm32f4xx\+\_\+hal\+\_\+usart.\+h.
+
+\mbox{\label{group___u_s_a_r_t___private___macros_ga365cbaaf0cc68a8c689b4ee418cd287d}} 
+\index{USART Private Macros@{USART Private Macros}!IS\_USART\_POLARITY@{IS\_USART\_POLARITY}}
+\index{IS\_USART\_POLARITY@{IS\_USART\_POLARITY}!USART Private Macros@{USART Private Macros}}
+\doxysubsubsection{IS\_USART\_POLARITY}
+{\footnotesize\ttfamily \#define IS\+\_\+\+USART\+\_\+\+POLARITY(\begin{DoxyParamCaption}\item[{}]{CPOL }\end{DoxyParamCaption})~(((CPOL) == \textbf{ USART\+\_\+\+POLARITY\+\_\+\+LOW}) $\vert$$\vert$ ((CPOL) == \textbf{ USART\+\_\+\+POLARITY\+\_\+\+HIGH}))}
+
+
+
+Definition at line 542 of file stm32f4xx\+\_\+hal\+\_\+usart.\+h.
+
+\mbox{\label{group___u_s_a_r_t___private___macros_ga6f9153c1fbee1058ba26ec88f0f20828}} 
+\index{USART Private Macros@{USART Private Macros}!IS\_USART\_STOPBITS@{IS\_USART\_STOPBITS}}
+\index{IS\_USART\_STOPBITS@{IS\_USART\_STOPBITS}!USART Private Macros@{USART Private Macros}}
+\doxysubsubsection{IS\_USART\_STOPBITS}
+{\footnotesize\ttfamily \#define IS\+\_\+\+USART\+\_\+\+STOPBITS(\begin{DoxyParamCaption}\item[{}]{STOPBITS }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                         (((STOPBITS) == USART\_STOPBITS\_1) || \(\backslash\)}
+\DoxyCodeLine{                                         ((STOPBITS) == USART\_STOPBITS\_0\_5) || \(\backslash\)}
+\DoxyCodeLine{                                         ((STOPBITS) == USART\_STOPBITS\_1\_5) || \(\backslash\)}
+\DoxyCodeLine{                                         ((STOPBITS) == USART\_STOPBITS\_2))}
+
+\end{DoxyCode}
+
+
+Definition at line 547 of file stm32f4xx\+\_\+hal\+\_\+usart.\+h.
+
+\mbox{\label{group___u_s_a_r_t___private___macros_ga5b07b29ee91f0bea4c10ec0fd74fbc04}} 
+\index{USART Private Macros@{USART Private Macros}!IS\_USART\_WORD\_LENGTH@{IS\_USART\_WORD\_LENGTH}}
+\index{IS\_USART\_WORD\_LENGTH@{IS\_USART\_WORD\_LENGTH}!USART Private Macros@{USART Private Macros}}
+\doxysubsubsection{IS\_USART\_WORD\_LENGTH}
+{\footnotesize\ttfamily \#define IS\+\_\+\+USART\+\_\+\+WORD\+\_\+\+LENGTH(\begin{DoxyParamCaption}\item[{}]{LENGTH }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                          (((LENGTH) == USART\_WORDLENGTH\_8B) || \(\backslash\)}
+\DoxyCodeLine{                                          ((LENGTH) == USART\_WORDLENGTH\_9B))}
+
+\end{DoxyCode}
+
+
+Definition at line 545 of file stm32f4xx\+\_\+hal\+\_\+usart.\+h.
+
+\mbox{\label{group___u_s_a_r_t___private___macros_ga783dc52032f468497a8affe268751909}} 
+\index{USART Private Macros@{USART Private Macros}!USART\_BRR@{USART\_BRR}}
+\index{USART\_BRR@{USART\_BRR}!USART Private Macros@{USART Private Macros}}
+\doxysubsubsection{USART\_BRR}
+{\footnotesize\ttfamily \#define USART\+\_\+\+BRR(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+PCLK\+\_\+,  }\item[{}]{\+\_\+\+BAUD\+\_\+ }\end{DoxyParamCaption})~((\textbf{ USART\+\_\+\+DIVMANT}((\+\_\+\+PCLK\+\_\+), (\+\_\+\+BAUD\+\_\+)) $<$$<$ 4U)$\vert$(\textbf{ USART\+\_\+\+DIVFRAQ}((\+\_\+\+PCLK\+\_\+), (\+\_\+\+BAUD\+\_\+)) \& 0x0\+FU))}
+
+
+
+Definition at line 560 of file stm32f4xx\+\_\+hal\+\_\+usart.\+h.
+
+\mbox{\label{group___u_s_a_r_t___private___macros_ga97e94c06b8493c8eafac36cb787dcb26}} 
+\index{USART Private Macros@{USART Private Macros}!USART\_DIV@{USART\_DIV}}
+\index{USART\_DIV@{USART\_DIV}!USART Private Macros@{USART Private Macros}}
+\doxysubsubsection{USART\_DIV}
+{\footnotesize\ttfamily \#define USART\+\_\+\+DIV(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+PCLK\+\_\+,  }\item[{}]{\+\_\+\+BAUD\+\_\+ }\end{DoxyParamCaption})~(((\+\_\+\+PCLK\+\_\+)$\ast$25U)/(2U$\ast$(\+\_\+\+BAUD\+\_\+)))}
+
+
+
+Definition at line 557 of file stm32f4xx\+\_\+hal\+\_\+usart.\+h.
+
+\mbox{\label{group___u_s_a_r_t___private___macros_ga00df975ff1f97cde5c9aff11decf858b}} 
+\index{USART Private Macros@{USART Private Macros}!USART\_DIVFRAQ@{USART\_DIVFRAQ}}
+\index{USART\_DIVFRAQ@{USART\_DIVFRAQ}!USART Private Macros@{USART Private Macros}}
+\doxysubsubsection{USART\_DIVFRAQ}
+{\footnotesize\ttfamily \#define USART\+\_\+\+DIVFRAQ(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+PCLK\+\_\+,  }\item[{}]{\+\_\+\+BAUD\+\_\+ }\end{DoxyParamCaption})~(((\textbf{ USART\+\_\+\+DIV}((\+\_\+\+PCLK\+\_\+), (\+\_\+\+BAUD\+\_\+)) -\/ (\textbf{ USART\+\_\+\+DIVMANT}((\+\_\+\+PCLK\+\_\+), (\+\_\+\+BAUD\+\_\+)) $\ast$ 100U)) $\ast$ 16U + 50U) / 100U)}
+
+
+
+Definition at line 559 of file stm32f4xx\+\_\+hal\+\_\+usart.\+h.
+
+\mbox{\label{group___u_s_a_r_t___private___macros_gaa2c98efc6728b5c725cb8d0105e877a5}} 
+\index{USART Private Macros@{USART Private Macros}!USART\_DIVMANT@{USART\_DIVMANT}}
+\index{USART\_DIVMANT@{USART\_DIVMANT}!USART Private Macros@{USART Private Macros}}
+\doxysubsubsection{USART\_DIVMANT}
+{\footnotesize\ttfamily \#define USART\+\_\+\+DIVMANT(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+PCLK\+\_\+,  }\item[{}]{\+\_\+\+BAUD\+\_\+ }\end{DoxyParamCaption})~(\textbf{ USART\+\_\+\+DIV}((\+\_\+\+PCLK\+\_\+), (\+\_\+\+BAUD\+\_\+))/100U)}
+
+
+
+Definition at line 558 of file stm32f4xx\+\_\+hal\+\_\+usart.\+h.
+

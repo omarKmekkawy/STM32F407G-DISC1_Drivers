@@ -1,0 +1,452 @@
+\doxysection{USART Exported Macros}
+\label{group___u_s_a_r_t___exported___macros}\index{USART Exported Macros@{USART Exported Macros}}
+Collaboration diagram for USART Exported Macros\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=291pt]{group___u_s_a_r_t___exported___macros}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+USART\+\_\+\+RESET\+\_\+\+HANDLE\+\_\+\+STATE}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$State = \textbf{ HAL\+\_\+\+USART\+\_\+\+STATE\+\_\+\+RESET})
+\begin{DoxyCompactList}\small\item\em Reset USART handle state. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+USART\+\_\+\+GET\+\_\+\+FLAG}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+FLAG\+\_\+\+\_\+)~(((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$SR \& (\+\_\+\+\_\+\+FLAG\+\_\+\+\_\+)) == (\+\_\+\+\_\+\+FLAG\+\_\+\+\_\+))
+\begin{DoxyCompactList}\small\item\em Checks whether the specified Smartcard flag is set or not. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+USART\+\_\+\+CLEAR\+\_\+\+FLAG}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+FLAG\+\_\+\+\_\+)~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$SR = $\sim$(\+\_\+\+\_\+\+FLAG\+\_\+\+\_\+))
+\begin{DoxyCompactList}\small\item\em Clears the specified Smartcard pending flags. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+USART\+\_\+\+CLEAR\+\_\+\+PEFLAG}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Clear the USART PE pending flag. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+USART\+\_\+\+CLEAR\+\_\+\+FEFLAG}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)~\textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+USART\+\_\+\+CLEAR\+\_\+\+PEFLAG}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Clear the USART FE pending flag. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+USART\+\_\+\+CLEAR\+\_\+\+NEFLAG}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)~\textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+USART\+\_\+\+CLEAR\+\_\+\+PEFLAG}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Clear the USART NE pending flag. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+USART\+\_\+\+CLEAR\+\_\+\+OREFLAG}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)~\textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+USART\+\_\+\+CLEAR\+\_\+\+PEFLAG}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Clear the UART ORE pending flag. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+USART\+\_\+\+CLEAR\+\_\+\+IDLEFLAG}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)~\textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+USART\+\_\+\+CLEAR\+\_\+\+PEFLAG}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Clear the USART IDLE pending flag. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+USART\+\_\+\+ENABLE\+\_\+\+IT}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Enables or disables the specified USART interrupts. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+USART\+\_\+\+DISABLE\+\_\+\+IT}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)
+\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+USART\+\_\+\+GET\+\_\+\+IT\+\_\+\+SOURCE}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+IT\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Checks whether the specified USART interrupt has occurred or not. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+USART\+\_\+\+ONE\+\_\+\+BIT\+\_\+\+SAMPLE\+\_\+\+ENABLE}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$CR3$\vert$= \textbf{ USART\+\_\+\+CR3\+\_\+\+ONEBIT})
+\begin{DoxyCompactList}\small\item\em Macro to enable the USART\textquotesingle{}s one bit sample method. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+USART\+\_\+\+ONE\+\_\+\+BIT\+\_\+\+SAMPLE\+\_\+\+DISABLE}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$CR3 \&= (uint16\+\_\+t)$\sim$((uint16\+\_\+t)\textbf{ USART\+\_\+\+CR3\+\_\+\+ONEBIT}))
+\begin{DoxyCompactList}\small\item\em Macro to disable the USART\textquotesingle{}s one bit sample method. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+USART\+\_\+\+ENABLE}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)~( (\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$CR1 $\vert$=  \textbf{ USART\+\_\+\+CR1\+\_\+\+UE})
+\begin{DoxyCompactList}\small\item\em Enable USART. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+USART\+\_\+\+DISABLE}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)~( (\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$CR1 \&=  $\sim$\textbf{ USART\+\_\+\+CR1\+\_\+\+UE})
+\begin{DoxyCompactList}\small\item\em Disable USART. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\label{group___u_s_a_r_t___exported___macros_ga816bc7a3be6d6a96e4b69078679d9d4c}} 
+\index{USART Exported Macros@{USART Exported Macros}!\_\_HAL\_USART\_CLEAR\_FEFLAG@{\_\_HAL\_USART\_CLEAR\_FEFLAG}}
+\index{\_\_HAL\_USART\_CLEAR\_FEFLAG@{\_\_HAL\_USART\_CLEAR\_FEFLAG}!USART Exported Macros@{USART Exported Macros}}
+\doxysubsubsection{\_\_HAL\_USART\_CLEAR\_FEFLAG}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+USART\+\_\+\+CLEAR\+\_\+\+FEFLAG(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+ }\end{DoxyParamCaption})~\textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+USART\+\_\+\+CLEAR\+\_\+\+PEFLAG}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)}
+
+
+
+Clear the USART FE pending flag. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$strong$>$\+HANDLE$<$/strong$>$} & specifies the USART Handle. This parameter can be USARTx where x\+: 1, 2, 3 or 6 to select the USART peripheral. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 367 of file stm32f4xx\+\_\+hal\+\_\+usart.\+h.
+
+\mbox{\label{group___u_s_a_r_t___exported___macros_gaff3cb6ff740b240764e7844eaf3d6807}} 
+\index{USART Exported Macros@{USART Exported Macros}!\_\_HAL\_USART\_CLEAR\_FLAG@{\_\_HAL\_USART\_CLEAR\_FLAG}}
+\index{\_\_HAL\_USART\_CLEAR\_FLAG@{\_\_HAL\_USART\_CLEAR\_FLAG}!USART Exported Macros@{USART Exported Macros}}
+\doxysubsubsection{\_\_HAL\_USART\_CLEAR\_FLAG}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+USART\+\_\+\+CLEAR\+\_\+\+FLAG(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+FLAG\+\_\+\+\_\+ }\end{DoxyParamCaption})~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$SR = $\sim$(\+\_\+\+\_\+\+FLAG\+\_\+\+\_\+))}
+
+
+
+Clears the specified Smartcard pending flags. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$strong$>$\+HANDLE$<$/strong$>$} & specifies the USART Handle. This parameter can be USARTx where x\+: 1, 2, 3 or 6 to select the USART peripheral. \\
+\hline
+{\em $<$strong$>$\+FLAG$<$/strong$>$} & specifies the flag to check. This parameter can be any combination of the following values\+: \begin{DoxyItemize}
+\item USART\+\_\+\+FLAG\+\_\+\+TC\+: Transmission Complete flag. \item USART\+\_\+\+FLAG\+\_\+\+RXNE\+: Receive data register not empty flag.\end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+PE (Parity error), FE (Framing error), NE (Noise error), ORE (Overrun error) and IDLE (Idle line detected) flags are cleared by software sequence\+: a read operation to USART\+\_\+\+SR register followed by a read operation to USART\+\_\+\+DR register. 
+
+RXNE flag can be also cleared by a read to the USART\+\_\+\+DR register. 
+
+TC flag can be also cleared by software sequence\+: a read operation to USART\+\_\+\+SR register followed by a write operation to USART\+\_\+\+DR register. 
+
+TXE flag is cleared only by a write to the USART\+\_\+\+DR register.
+\end{DoxyNote}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 347 of file stm32f4xx\+\_\+hal\+\_\+usart.\+h.
+
+\mbox{\label{group___u_s_a_r_t___exported___macros_ga9805694ed8725e6b1f52c5f16cf7bbef}} 
+\index{USART Exported Macros@{USART Exported Macros}!\_\_HAL\_USART\_CLEAR\_IDLEFLAG@{\_\_HAL\_USART\_CLEAR\_IDLEFLAG}}
+\index{\_\_HAL\_USART\_CLEAR\_IDLEFLAG@{\_\_HAL\_USART\_CLEAR\_IDLEFLAG}!USART Exported Macros@{USART Exported Macros}}
+\doxysubsubsection{\_\_HAL\_USART\_CLEAR\_IDLEFLAG}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+USART\+\_\+\+CLEAR\+\_\+\+IDLEFLAG(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+ }\end{DoxyParamCaption})~\textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+USART\+\_\+\+CLEAR\+\_\+\+PEFLAG}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)}
+
+
+
+Clear the USART IDLE pending flag. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$strong$>$\+HANDLE$<$/strong$>$} & specifies the USART Handle. This parameter can be USARTx where x\+: 1, 2, 3 or 6 to select the USART peripheral. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 388 of file stm32f4xx\+\_\+hal\+\_\+usart.\+h.
+
+\mbox{\label{group___u_s_a_r_t___exported___macros_ga740fe9f08804ae46a8421a4ecc81a734}} 
+\index{USART Exported Macros@{USART Exported Macros}!\_\_HAL\_USART\_CLEAR\_NEFLAG@{\_\_HAL\_USART\_CLEAR\_NEFLAG}}
+\index{\_\_HAL\_USART\_CLEAR\_NEFLAG@{\_\_HAL\_USART\_CLEAR\_NEFLAG}!USART Exported Macros@{USART Exported Macros}}
+\doxysubsubsection{\_\_HAL\_USART\_CLEAR\_NEFLAG}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+USART\+\_\+\+CLEAR\+\_\+\+NEFLAG(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+ }\end{DoxyParamCaption})~\textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+USART\+\_\+\+CLEAR\+\_\+\+PEFLAG}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)}
+
+
+
+Clear the USART NE pending flag. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$strong$>$\+HANDLE$<$/strong$>$} & specifies the USART Handle. This parameter can be USARTx where x\+: 1, 2, 3 or 6 to select the USART peripheral. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 374 of file stm32f4xx\+\_\+hal\+\_\+usart.\+h.
+
+\mbox{\label{group___u_s_a_r_t___exported___macros_gacf8140c2c877760459410dfa3cf2f4b3}} 
+\index{USART Exported Macros@{USART Exported Macros}!\_\_HAL\_USART\_CLEAR\_OREFLAG@{\_\_HAL\_USART\_CLEAR\_OREFLAG}}
+\index{\_\_HAL\_USART\_CLEAR\_OREFLAG@{\_\_HAL\_USART\_CLEAR\_OREFLAG}!USART Exported Macros@{USART Exported Macros}}
+\doxysubsubsection{\_\_HAL\_USART\_CLEAR\_OREFLAG}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+USART\+\_\+\+CLEAR\+\_\+\+OREFLAG(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+ }\end{DoxyParamCaption})~\textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+USART\+\_\+\+CLEAR\+\_\+\+PEFLAG}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)}
+
+
+
+Clear the UART ORE pending flag. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$strong$>$\+HANDLE$<$/strong$>$} & specifies the USART Handle. This parameter can be USARTx where x\+: 1, 2, 3 or 6 to select the USART peripheral. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 381 of file stm32f4xx\+\_\+hal\+\_\+usart.\+h.
+
+\mbox{\label{group___u_s_a_r_t___exported___macros_ga8d03cf61b8ec17b505cb4eac48333632}} 
+\index{USART Exported Macros@{USART Exported Macros}!\_\_HAL\_USART\_CLEAR\_PEFLAG@{\_\_HAL\_USART\_CLEAR\_PEFLAG}}
+\index{\_\_HAL\_USART\_CLEAR\_PEFLAG@{\_\_HAL\_USART\_CLEAR\_PEFLAG}!USART Exported Macros@{USART Exported Macros}}
+\doxysubsubsection{\_\_HAL\_USART\_CLEAR\_PEFLAG}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+USART\+\_\+\+CLEAR\+\_\+\+PEFLAG(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  \textcolor{keywordflow}{do}\{                                           \(\backslash\)}
+\DoxyCodeLine{    \_\_IO uint32\_t tmpreg = 0x00U;                \(\backslash\)}
+\DoxyCodeLine{    tmpreg = (\_\_HANDLE\_\_)-\/>Instance-\/>SR;        \(\backslash\)}
+\DoxyCodeLine{    tmpreg = (\_\_HANDLE\_\_)-\/>Instance-\/>DR;        \(\backslash\)}
+\DoxyCodeLine{    UNUSED(tmpreg);                             \(\backslash\)}
+\DoxyCodeLine{  \} \textcolor{keywordflow}{while}(0)}
+
+\end{DoxyCode}
+
+
+Clear the USART PE pending flag. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$strong$>$\+HANDLE$<$/strong$>$} & specifies the USART Handle. This parameter can be USARTx where x\+: 1, 2, 3 or 6 to select the USART peripheral. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 354 of file stm32f4xx\+\_\+hal\+\_\+usart.\+h.
+
+\mbox{\label{group___u_s_a_r_t___exported___macros_ga8cc760b7a382db42655d21a5edbfc227}} 
+\index{USART Exported Macros@{USART Exported Macros}!\_\_HAL\_USART\_DISABLE@{\_\_HAL\_USART\_DISABLE}}
+\index{\_\_HAL\_USART\_DISABLE@{\_\_HAL\_USART\_DISABLE}!USART Exported Macros@{USART Exported Macros}}
+\doxysubsubsection{\_\_HAL\_USART\_DISABLE}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+USART\+\_\+\+DISABLE(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+ }\end{DoxyParamCaption})~( (\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$CR1 \&=  $\sim$\textbf{ USART\+\_\+\+CR1\+\_\+\+UE})}
+
+
+
+Disable USART. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$strong$>$\+HANDLE$<$/strong$>$} & specifies the USART Handle. USART Handle selects the USARTx peripheral (USART availability and x value depending on device). \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 451 of file stm32f4xx\+\_\+hal\+\_\+usart.\+h.
+
+\mbox{\label{group___u_s_a_r_t___exported___macros_gad1cd8973d175b1b031f21aff3101f5fd}} 
+\index{USART Exported Macros@{USART Exported Macros}!\_\_HAL\_USART\_DISABLE\_IT@{\_\_HAL\_USART\_DISABLE\_IT}}
+\index{\_\_HAL\_USART\_DISABLE\_IT@{\_\_HAL\_USART\_DISABLE\_IT}!USART Exported Macros@{USART Exported Macros}}
+\doxysubsubsection{\_\_HAL\_USART\_DISABLE\_IT}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+USART\+\_\+\+DISABLE\+\_\+\+IT(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                                            ((((\_\_INTERRUPT\_\_) >> 28U) == 1U)? ((\_\_HANDLE\_\_)-\/>Instance-\/>CR1 \&= \string~((\_\_INTERRUPT\_\_) \& USART\_IT\_MASK)): \(\backslash\)}
+\DoxyCodeLine{                                                            (((\_\_INTERRUPT\_\_) >> 28U) == 2U)? ((\_\_HANDLE\_\_)-\/>Instance-\/>CR2 \&= \string~((\_\_INTERRUPT\_\_) \& USART\_IT\_MASK)): \(\backslash\)}
+\DoxyCodeLine{                                                             ((\_\_HANDLE\_\_)-\/>Instance-\/>CR3 \&= \string~ ((\_\_INTERRUPT\_\_) \& USART\_IT\_MASK)))}
+
+\end{DoxyCode}
+
+
+Definition at line 407 of file stm32f4xx\+\_\+hal\+\_\+usart.\+h.
+
+\mbox{\label{group___u_s_a_r_t___exported___macros_ga60e106d6d610ea5fa1ab2d5ca079a8cf}} 
+\index{USART Exported Macros@{USART Exported Macros}!\_\_HAL\_USART\_ENABLE@{\_\_HAL\_USART\_ENABLE}}
+\index{\_\_HAL\_USART\_ENABLE@{\_\_HAL\_USART\_ENABLE}!USART Exported Macros@{USART Exported Macros}}
+\doxysubsubsection{\_\_HAL\_USART\_ENABLE}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+USART\+\_\+\+ENABLE(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+ }\end{DoxyParamCaption})~( (\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$CR1 $\vert$=  \textbf{ USART\+\_\+\+CR1\+\_\+\+UE})}
+
+
+
+Enable USART. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$strong$>$\+HANDLE$<$/strong$>$} & specifies the USART Handle. USART Handle selects the USARTx peripheral (USART availability and x value depending on device). \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 444 of file stm32f4xx\+\_\+hal\+\_\+usart.\+h.
+
+\mbox{\label{group___u_s_a_r_t___exported___macros_ga2258521c741456b4254064958ca7ef51}} 
+\index{USART Exported Macros@{USART Exported Macros}!\_\_HAL\_USART\_ENABLE\_IT@{\_\_HAL\_USART\_ENABLE\_IT}}
+\index{\_\_HAL\_USART\_ENABLE\_IT@{\_\_HAL\_USART\_ENABLE\_IT}!USART Exported Macros@{USART Exported Macros}}
+\doxysubsubsection{\_\_HAL\_USART\_ENABLE\_IT}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+USART\+\_\+\+ENABLE\+\_\+\+IT(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                                            ((((\_\_INTERRUPT\_\_) >> 28U) == 1U)? ((\_\_HANDLE\_\_)-\/>Instance-\/>CR1 |= ((\_\_INTERRUPT\_\_) \& USART\_IT\_MASK)): \(\backslash\)}
+\DoxyCodeLine{                                                            (((\_\_INTERRUPT\_\_) >> 28U) == 2U)? ((\_\_HANDLE\_\_)-\/>Instance-\/>CR2 |=  ((\_\_INTERRUPT\_\_) \& USART\_IT\_MASK)): \(\backslash\)}
+\DoxyCodeLine{                                                             ((\_\_HANDLE\_\_)-\/>Instance-\/>CR3 |= ((\_\_INTERRUPT\_\_) \& USART\_IT\_MASK)))}
+
+\end{DoxyCode}
+
+
+Enables or disables the specified USART interrupts. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$strong$>$\+HANDLE$<$/strong$>$} & specifies the USART Handle. This parameter can be USARTx where x\+: 1, 2, 3 or 6 to select the USART peripheral. \\
+\hline
+{\em $<$strong$>$\+INTERRUPT$<$/strong$>$} & specifies the USART interrupt source to check. This parameter can be one of the following values\+: \begin{DoxyItemize}
+\item USART\+\_\+\+IT\+\_\+\+TXE\+: Transmit Data Register empty interrupt \item USART\+\_\+\+IT\+\_\+\+TC\+: Transmission complete interrupt \item USART\+\_\+\+IT\+\_\+\+RXNE\+: Receive Data register not empty interrupt \item USART\+\_\+\+IT\+\_\+\+IDLE\+: Idle line detection interrupt \item USART\+\_\+\+IT\+\_\+\+PE\+: Parity Error interrupt \item USART\+\_\+\+IT\+\_\+\+ERR\+: Error interrupt(\+Frame error, noise error, overrun error) This parameter can be\+: ENABLE or DISABLE. \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 404 of file stm32f4xx\+\_\+hal\+\_\+usart.\+h.
+
+\mbox{\label{group___u_s_a_r_t___exported___macros_ga16b9a5a85a8edc0464db168c2db21b3a}} 
+\index{USART Exported Macros@{USART Exported Macros}!\_\_HAL\_USART\_GET\_FLAG@{\_\_HAL\_USART\_GET\_FLAG}}
+\index{\_\_HAL\_USART\_GET\_FLAG@{\_\_HAL\_USART\_GET\_FLAG}!USART Exported Macros@{USART Exported Macros}}
+\doxysubsubsection{\_\_HAL\_USART\_GET\_FLAG}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+USART\+\_\+\+GET\+\_\+\+FLAG(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+FLAG\+\_\+\+\_\+ }\end{DoxyParamCaption})~(((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$SR \& (\+\_\+\+\_\+\+FLAG\+\_\+\+\_\+)) == (\+\_\+\+\_\+\+FLAG\+\_\+\+\_\+))}
+
+
+
+Checks whether the specified Smartcard flag is set or not. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$strong$>$\+HANDLE$<$/strong$>$} & specifies the USART Handle. This parameter can be USARTx where x\+: 1, 2, 3 or 6 to select the USART peripheral. \\
+\hline
+{\em $<$strong$>$\+FLAG$<$/strong$>$} & specifies the flag to check. This parameter can be one of the following values\+: \begin{DoxyItemize}
+\item USART\+\_\+\+FLAG\+\_\+\+TXE\+: Transmit data register empty flag \item USART\+\_\+\+FLAG\+\_\+\+TC\+: Transmission Complete flag \item USART\+\_\+\+FLAG\+\_\+\+RXNE\+: Receive data register not empty flag \item USART\+\_\+\+FLAG\+\_\+\+IDLE\+: Idle Line detection flag \item USART\+\_\+\+FLAG\+\_\+\+ORE\+: Overrun Error flag \item USART\+\_\+\+FLAG\+\_\+\+NE\+: Noise Error flag \item USART\+\_\+\+FLAG\+\_\+\+FE\+: Framing Error flag \item USART\+\_\+\+FLAG\+\_\+\+PE\+: Parity Error flag \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em The} & new state of {\bfseries{FLAG}} (TRUE or FALSE). \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 326 of file stm32f4xx\+\_\+hal\+\_\+usart.\+h.
+
+\mbox{\label{group___u_s_a_r_t___exported___macros_ga3ab781c75a319bd41e4b64098259f018}} 
+\index{USART Exported Macros@{USART Exported Macros}!\_\_HAL\_USART\_GET\_IT\_SOURCE@{\_\_HAL\_USART\_GET\_IT\_SOURCE}}
+\index{\_\_HAL\_USART\_GET\_IT\_SOURCE@{\_\_HAL\_USART\_GET\_IT\_SOURCE}!USART Exported Macros@{USART Exported Macros}}
+\doxysubsubsection{\_\_HAL\_USART\_GET\_IT\_SOURCE}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+USART\+\_\+\+GET\+\_\+\+IT\+\_\+\+SOURCE(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+IT\+\_\+\+\_\+ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                                      (((((\_\_IT\_\_) >> 28U) == 1U)? (\_\_HANDLE\_\_)-\/>Instance-\/>CR1:(((((uint32\_t)(\_\_IT\_\_)) >> 28U) == 2U)? \(\backslash\)}
+\DoxyCodeLine{                                                      (\_\_HANDLE\_\_)-\/>Instance-\/>CR2 : (\_\_HANDLE\_\_)-\/>Instance-\/>CR3)) \& (((uint32\_t)(\_\_IT\_\_)) \& USART\_IT\_MASK))}
+
+\end{DoxyCode}
+
+
+Checks whether the specified USART interrupt has occurred or not. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$strong$>$\+HANDLE$<$/strong$>$} & specifies the USART Handle. This parameter can be USARTx where x\+: 1, 2, 3 or 6 to select the USART peripheral. \\
+\hline
+{\em $<$strong$>$\+IT$<$/strong$>$} & specifies the USART interrupt source to check. This parameter can be one of the following values\+: \begin{DoxyItemize}
+\item USART\+\_\+\+IT\+\_\+\+TXE\+: Transmit Data Register empty interrupt \item USART\+\_\+\+IT\+\_\+\+TC\+: Transmission complete interrupt \item USART\+\_\+\+IT\+\_\+\+RXNE\+: Receive Data register not empty interrupt \item USART\+\_\+\+IT\+\_\+\+IDLE\+: Idle line detection interrupt \item USART\+\_\+\+IT\+\_\+\+ERR\+: Error interrupt \item USART\+\_\+\+IT\+\_\+\+PE\+: Parity Error interrupt \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em The} & new state of {\bfseries{IT}} (TRUE or FALSE). \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 424 of file stm32f4xx\+\_\+hal\+\_\+usart.\+h.
+
+\mbox{\label{group___u_s_a_r_t___exported___macros_ga78be92ca3073a9029f4696dc2fbb7b71}} 
+\index{USART Exported Macros@{USART Exported Macros}!\_\_HAL\_USART\_ONE\_BIT\_SAMPLE\_DISABLE@{\_\_HAL\_USART\_ONE\_BIT\_SAMPLE\_DISABLE}}
+\index{\_\_HAL\_USART\_ONE\_BIT\_SAMPLE\_DISABLE@{\_\_HAL\_USART\_ONE\_BIT\_SAMPLE\_DISABLE}!USART Exported Macros@{USART Exported Macros}}
+\doxysubsubsection{\_\_HAL\_USART\_ONE\_BIT\_SAMPLE\_DISABLE}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+USART\+\_\+\+ONE\+\_\+\+BIT\+\_\+\+SAMPLE\+\_\+\+DISABLE(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+ }\end{DoxyParamCaption})~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$CR3 \&= (uint16\+\_\+t)$\sim$((uint16\+\_\+t)\textbf{ USART\+\_\+\+CR3\+\_\+\+ONEBIT}))}
+
+
+
+Macro to disable the USART\textquotesingle{}s one bit sample method. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$strong$>$\+HANDLE$<$/strong$>$} & specifies the USART Handle. ~\newline
+ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 437 of file stm32f4xx\+\_\+hal\+\_\+usart.\+h.
+
+\mbox{\label{group___u_s_a_r_t___exported___macros_gab18a3100efa1cf12b5874cadec193e04}} 
+\index{USART Exported Macros@{USART Exported Macros}!\_\_HAL\_USART\_ONE\_BIT\_SAMPLE\_ENABLE@{\_\_HAL\_USART\_ONE\_BIT\_SAMPLE\_ENABLE}}
+\index{\_\_HAL\_USART\_ONE\_BIT\_SAMPLE\_ENABLE@{\_\_HAL\_USART\_ONE\_BIT\_SAMPLE\_ENABLE}!USART Exported Macros@{USART Exported Macros}}
+\doxysubsubsection{\_\_HAL\_USART\_ONE\_BIT\_SAMPLE\_ENABLE}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+USART\+\_\+\+ONE\+\_\+\+BIT\+\_\+\+SAMPLE\+\_\+\+ENABLE(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+ }\end{DoxyParamCaption})~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$CR3$\vert$= \textbf{ USART\+\_\+\+CR3\+\_\+\+ONEBIT})}
+
+
+
+Macro to enable the USART\textquotesingle{}s one bit sample method. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$strong$>$\+HANDLE$<$/strong$>$} & specifies the USART Handle. ~\newline
+ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 431 of file stm32f4xx\+\_\+hal\+\_\+usart.\+h.
+
+\mbox{\label{group___u_s_a_r_t___exported___macros_ga953ddcf8e901974e9f73e7d337238170}} 
+\index{USART Exported Macros@{USART Exported Macros}!\_\_HAL\_USART\_RESET\_HANDLE\_STATE@{\_\_HAL\_USART\_RESET\_HANDLE\_STATE}}
+\index{\_\_HAL\_USART\_RESET\_HANDLE\_STATE@{\_\_HAL\_USART\_RESET\_HANDLE\_STATE}!USART Exported Macros@{USART Exported Macros}}
+\doxysubsubsection{\_\_HAL\_USART\_RESET\_HANDLE\_STATE}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+USART\+\_\+\+RESET\+\_\+\+HANDLE\+\_\+\+STATE(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+ }\end{DoxyParamCaption})~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$State = \textbf{ HAL\+\_\+\+USART\+\_\+\+STATE\+\_\+\+RESET})}
+
+
+
+Reset USART handle state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$strong$>$\+HANDLE$<$/strong$>$} & specifies the USART Handle. This parameter can be USARTx where x\+: 1, 2, 3 or 6 to select the USART peripheral. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 309 of file stm32f4xx\+\_\+hal\+\_\+usart.\+h.
+

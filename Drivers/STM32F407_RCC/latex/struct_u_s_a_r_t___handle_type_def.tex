@@ -1,0 +1,197 @@
+\doxysection{USART\+\_\+\+Handle\+Type\+Def Struct Reference}
+\label{struct_u_s_a_r_t___handle_type_def}\index{USART\_HandleTypeDef@{USART\_HandleTypeDef}}
+
+
+USART handle Structure definition ~\newline
+  
+
+
+
+
+{\ttfamily \#include $<$stm32f4xx\+\_\+hal\+\_\+usart.\+h$>$}
+
+
+
+Collaboration diagram for USART\+\_\+\+Handle\+Type\+Def\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_u_s_a_r_t___handle_type_def__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ USART\+\_\+\+Type\+Def} $\ast$ \textbf{ Instance}
+\item 
+\textbf{ USART\+\_\+\+Init\+Type\+Def} \textbf{ Init}
+\item 
+uint8\+\_\+t $\ast$ \textbf{ p\+Tx\+Buff\+Ptr}
+\item 
+uint16\+\_\+t \textbf{ Tx\+Xfer\+Size}
+\item 
+\textbf{ \+\_\+\+\_\+\+IO} uint16\+\_\+t \textbf{ Tx\+Xfer\+Count}
+\item 
+uint8\+\_\+t $\ast$ \textbf{ p\+Rx\+Buff\+Ptr}
+\item 
+uint16\+\_\+t \textbf{ Rx\+Xfer\+Size}
+\item 
+\textbf{ \+\_\+\+\_\+\+IO} uint16\+\_\+t \textbf{ Rx\+Xfer\+Count}
+\item 
+\textbf{ DMA\+\_\+\+Handle\+Type\+Def} $\ast$ \textbf{ hdmatx}
+\item 
+\textbf{ DMA\+\_\+\+Handle\+Type\+Def} $\ast$ \textbf{ hdmarx}
+\item 
+\textbf{ HAL\+\_\+\+Lock\+Type\+Def} \textbf{ Lock}
+\item 
+\textbf{ \+\_\+\+\_\+\+IO} \textbf{ HAL\+\_\+\+USART\+\_\+\+State\+Type\+Def} \textbf{ State}
+\item 
+\textbf{ \+\_\+\+\_\+\+IO} uint32\+\_\+t \textbf{ Error\+Code}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+USART handle Structure definition ~\newline
+ 
+
+Definition at line 117 of file stm32f4xx\+\_\+hal\+\_\+usart.\+h.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\label{struct_u_s_a_r_t___handle_type_def_a123c5063e6a3b1901b2fbe5f88c53a7e}} 
+\index{USART\_HandleTypeDef@{USART\_HandleTypeDef}!ErrorCode@{ErrorCode}}
+\index{ErrorCode@{ErrorCode}!USART\_HandleTypeDef@{USART\_HandleTypeDef}}
+\doxysubsubsection{ErrorCode}
+{\footnotesize\ttfamily \textbf{ \+\_\+\+\_\+\+IO} uint32\+\_\+t Error\+Code}
+
+
+
+Definition at line 143 of file stm32f4xx\+\_\+hal\+\_\+usart.\+h.
+
+\mbox{\label{struct_u_s_a_r_t___handle_type_def_abd0aeec20298a55d89a440320e35634f}} 
+\index{USART\_HandleTypeDef@{USART\_HandleTypeDef}!hdmarx@{hdmarx}}
+\index{hdmarx@{hdmarx}!USART\_HandleTypeDef@{USART\_HandleTypeDef}}
+\doxysubsubsection{hdmarx}
+{\footnotesize\ttfamily \textbf{ DMA\+\_\+\+Handle\+Type\+Def}$\ast$ hdmarx}
+
+
+
+Definition at line 137 of file stm32f4xx\+\_\+hal\+\_\+usart.\+h.
+
+\mbox{\label{struct_u_s_a_r_t___handle_type_def_a33e13c28b1a70e6164417abb026d7a22}} 
+\index{USART\_HandleTypeDef@{USART\_HandleTypeDef}!hdmatx@{hdmatx}}
+\index{hdmatx@{hdmatx}!USART\_HandleTypeDef@{USART\_HandleTypeDef}}
+\doxysubsubsection{hdmatx}
+{\footnotesize\ttfamily \textbf{ DMA\+\_\+\+Handle\+Type\+Def}$\ast$ hdmatx}
+
+
+
+Definition at line 135 of file stm32f4xx\+\_\+hal\+\_\+usart.\+h.
+
+\mbox{\label{struct_u_s_a_r_t___handle_type_def_a5f2f1b2ea49a64918c58f95c97fe58f6}} 
+\index{USART\_HandleTypeDef@{USART\_HandleTypeDef}!Init@{Init}}
+\index{Init@{Init}!USART\_HandleTypeDef@{USART\_HandleTypeDef}}
+\doxysubsubsection{Init}
+{\footnotesize\ttfamily \textbf{ USART\+\_\+\+Init\+Type\+Def} Init}
+
+
+
+Definition at line 121 of file stm32f4xx\+\_\+hal\+\_\+usart.\+h.
+
+\mbox{\label{struct_u_s_a_r_t___handle_type_def_a2b30b6d22df80fbebd8ceefc6f162310}} 
+\index{USART\_HandleTypeDef@{USART\_HandleTypeDef}!Instance@{Instance}}
+\index{Instance@{Instance}!USART\_HandleTypeDef@{USART\_HandleTypeDef}}
+\doxysubsubsection{Instance}
+{\footnotesize\ttfamily \textbf{ USART\+\_\+\+Type\+Def}$\ast$ Instance}
+
+
+
+Definition at line 119 of file stm32f4xx\+\_\+hal\+\_\+usart.\+h.
+
+\mbox{\label{struct_u_s_a_r_t___handle_type_def_ad4cf225029dbefe8d3fe660c33b8bb6b}} 
+\index{USART\_HandleTypeDef@{USART\_HandleTypeDef}!Lock@{Lock}}
+\index{Lock@{Lock}!USART\_HandleTypeDef@{USART\_HandleTypeDef}}
+\doxysubsubsection{Lock}
+{\footnotesize\ttfamily \textbf{ HAL\+\_\+\+Lock\+Type\+Def} Lock}
+
+
+
+Definition at line 139 of file stm32f4xx\+\_\+hal\+\_\+usart.\+h.
+
+\mbox{\label{struct_u_s_a_r_t___handle_type_def_a7cee540cb21048ac48ba17355440e668}} 
+\index{USART\_HandleTypeDef@{USART\_HandleTypeDef}!pRxBuffPtr@{pRxBuffPtr}}
+\index{pRxBuffPtr@{pRxBuffPtr}!USART\_HandleTypeDef@{USART\_HandleTypeDef}}
+\doxysubsubsection{pRxBuffPtr}
+{\footnotesize\ttfamily uint8\+\_\+t$\ast$ p\+Rx\+Buff\+Ptr}
+
+
+
+Definition at line 129 of file stm32f4xx\+\_\+hal\+\_\+usart.\+h.
+
+\mbox{\label{struct_u_s_a_r_t___handle_type_def_a5cc31f7c52dafd32f27f8f2756dbf343}} 
+\index{USART\_HandleTypeDef@{USART\_HandleTypeDef}!pTxBuffPtr@{pTxBuffPtr}}
+\index{pTxBuffPtr@{pTxBuffPtr}!USART\_HandleTypeDef@{USART\_HandleTypeDef}}
+\doxysubsubsection{pTxBuffPtr}
+{\footnotesize\ttfamily uint8\+\_\+t$\ast$ p\+Tx\+Buff\+Ptr}
+
+
+
+Definition at line 123 of file stm32f4xx\+\_\+hal\+\_\+usart.\+h.
+
+\mbox{\label{struct_u_s_a_r_t___handle_type_def_ad95a26d6b12b7087bba3d1b769175db2}} 
+\index{USART\_HandleTypeDef@{USART\_HandleTypeDef}!RxXferCount@{RxXferCount}}
+\index{RxXferCount@{RxXferCount}!USART\_HandleTypeDef@{USART\_HandleTypeDef}}
+\doxysubsubsection{RxXferCount}
+{\footnotesize\ttfamily \textbf{ \+\_\+\+\_\+\+IO} uint16\+\_\+t Rx\+Xfer\+Count}
+
+
+
+Definition at line 133 of file stm32f4xx\+\_\+hal\+\_\+usart.\+h.
+
+\mbox{\label{struct_u_s_a_r_t___handle_type_def_ac12f5f1f6295b3c3327d5feabf5a96fb}} 
+\index{USART\_HandleTypeDef@{USART\_HandleTypeDef}!RxXferSize@{RxXferSize}}
+\index{RxXferSize@{RxXferSize}!USART\_HandleTypeDef@{USART\_HandleTypeDef}}
+\doxysubsubsection{RxXferSize}
+{\footnotesize\ttfamily uint16\+\_\+t Rx\+Xfer\+Size}
+
+
+
+Definition at line 131 of file stm32f4xx\+\_\+hal\+\_\+usart.\+h.
+
+\mbox{\label{struct_u_s_a_r_t___handle_type_def_a9f34f91ce6e926e30e09bc087a5f8d4e}} 
+\index{USART\_HandleTypeDef@{USART\_HandleTypeDef}!State@{State}}
+\index{State@{State}!USART\_HandleTypeDef@{USART\_HandleTypeDef}}
+\doxysubsubsection{State}
+{\footnotesize\ttfamily \textbf{ \+\_\+\+\_\+\+IO} \textbf{ HAL\+\_\+\+USART\+\_\+\+State\+Type\+Def} State}
+
+
+
+Definition at line 141 of file stm32f4xx\+\_\+hal\+\_\+usart.\+h.
+
+\mbox{\label{struct_u_s_a_r_t___handle_type_def_a1823437fbed80bdd1510782ced4e5532}} 
+\index{USART\_HandleTypeDef@{USART\_HandleTypeDef}!TxXferCount@{TxXferCount}}
+\index{TxXferCount@{TxXferCount}!USART\_HandleTypeDef@{USART\_HandleTypeDef}}
+\doxysubsubsection{TxXferCount}
+{\footnotesize\ttfamily \textbf{ \+\_\+\+\_\+\+IO} uint16\+\_\+t Tx\+Xfer\+Count}
+
+
+
+Definition at line 127 of file stm32f4xx\+\_\+hal\+\_\+usart.\+h.
+
+\mbox{\label{struct_u_s_a_r_t___handle_type_def_a80907b65d6f9541bc0dee444d16bc45b}} 
+\index{USART\_HandleTypeDef@{USART\_HandleTypeDef}!TxXferSize@{TxXferSize}}
+\index{TxXferSize@{TxXferSize}!USART\_HandleTypeDef@{USART\_HandleTypeDef}}
+\doxysubsubsection{TxXferSize}
+{\footnotesize\ttfamily uint16\+\_\+t Tx\+Xfer\+Size}
+
+
+
+Definition at line 125 of file stm32f4xx\+\_\+hal\+\_\+usart.\+h.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+system/include/stm32f4-\/hal/\textbf{ stm32f4xx\+\_\+hal\+\_\+usart.\+h}\end{DoxyCompactItemize}

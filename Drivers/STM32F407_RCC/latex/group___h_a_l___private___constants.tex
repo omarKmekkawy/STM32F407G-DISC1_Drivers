@@ -1,0 +1,187 @@
+\doxysection{HAL Private Constants}
+\label{group___h_a_l___private___constants}\index{HAL Private Constants@{HAL Private Constants}}
+Collaboration diagram for HAL Private Constants\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=266pt]{group___h_a_l___private___constants}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \textbf{ \+\_\+\+\_\+\+STM32\+F4xx\+\_\+\+HAL\+\_\+\+VERSION\+\_\+\+MAIN}~(0x01)
+\begin{DoxyCompactList}\small\item\em STM32\+F4xx HAL Driver version number V1.\+5.\+0. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+STM32\+F4xx\+\_\+\+HAL\+\_\+\+VERSION\+\_\+\+SUB1}~(0x05)
+\item 
+\#define \textbf{ \+\_\+\+\_\+\+STM32\+F4xx\+\_\+\+HAL\+\_\+\+VERSION\+\_\+\+SUB2}~(0x00)
+\item 
+\#define \textbf{ \+\_\+\+\_\+\+STM32\+F4xx\+\_\+\+HAL\+\_\+\+VERSION\+\_\+\+RC}~(0x00)
+\item 
+\#define \textbf{ \+\_\+\+\_\+\+STM32\+F4xx\+\_\+\+HAL\+\_\+\+VERSION}
+\item 
+\#define \textbf{ IDCODE\+\_\+\+DEVID\+\_\+\+MASK}~((uint32\+\_\+t)0x00000\+FFFU)
+\item 
+\#define \textbf{ SYSCFG\+\_\+\+OFFSET}~(\textbf{ SYSCFG\+\_\+\+BASE} -\/ \textbf{ PERIPH\+\_\+\+BASE})
+\item 
+\#define \textbf{ MEMRMP\+\_\+\+OFFSET}~\textbf{ SYSCFG\+\_\+\+OFFSET}
+\item 
+\#define \textbf{ UFB\+\_\+\+MODE\+\_\+\+BIT\+\_\+\+NUMBER}~\textbf{ POSITION\+\_\+\+VAL}(SYSCFG\+\_\+\+MEMRMP\+\_\+\+UFB\+\_\+\+MODE)
+\item 
+\#define \textbf{ UFB\+\_\+\+MODE\+\_\+\+BB}~(uint32\+\_\+t)(\textbf{ PERIPH\+\_\+\+BB\+\_\+\+BASE} + (\textbf{ MEMRMP\+\_\+\+OFFSET} $\ast$ 32U) + (\textbf{ UFB\+\_\+\+MODE\+\_\+\+BIT\+\_\+\+NUMBER} $\ast$ 4U))
+\item 
+\#define \textbf{ CMPCR\+\_\+\+OFFSET}~(\textbf{ SYSCFG\+\_\+\+OFFSET} + 0x20U)
+\item 
+\#define \textbf{ CMP\+\_\+\+PD\+\_\+\+BIT\+\_\+\+NUMBER}~\textbf{ POSITION\+\_\+\+VAL}(\textbf{ SYSCFG\+\_\+\+CMPCR\+\_\+\+CMP\+\_\+\+PD})
+\item 
+\#define \textbf{ CMPCR\+\_\+\+CMP\+\_\+\+PD\+\_\+\+BB}~(uint32\+\_\+t)(\textbf{ PERIPH\+\_\+\+BB\+\_\+\+BASE} + (\textbf{ CMPCR\+\_\+\+OFFSET} $\ast$ 32U) + (\textbf{ CMP\+\_\+\+PD\+\_\+\+BIT\+\_\+\+NUMBER} $\ast$ 4U))
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\label{group___h_a_l___private___constants_ga2e012cfb937fbdfa71a0c0c83f2db5b3}} 
+\index{HAL Private Constants@{HAL Private Constants}!\_\_STM32F4xx\_HAL\_VERSION@{\_\_STM32F4xx\_HAL\_VERSION}}
+\index{\_\_STM32F4xx\_HAL\_VERSION@{\_\_STM32F4xx\_HAL\_VERSION}!HAL Private Constants@{HAL Private Constants}}
+\doxysubsubsection{\_\_STM32F4xx\_HAL\_VERSION}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+STM32\+F4xx\+\_\+\+HAL\+\_\+\+VERSION}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                        ((\_\_STM32F4xx\_HAL\_VERSION\_MAIN << 24U)\(\backslash\)}
+\DoxyCodeLine{                                        |(\_\_STM32F4xx\_HAL\_VERSION\_SUB1 << 16U)\(\backslash\)}
+\DoxyCodeLine{                                        |(\_\_STM32F4xx\_HAL\_VERSION\_SUB2 << 8U )\(\backslash\)}
+\DoxyCodeLine{                                        |(\_\_STM32F4xx\_HAL\_VERSION\_RC))}
+
+\end{DoxyCode}
+
+
+Definition at line 77 of file stm32f4xx\+\_\+hal.\+c.
+
+\mbox{\label{group___h_a_l___private___constants_gadaedd4f6c52f98c7a4ba371ec551b6ce}} 
+\index{HAL Private Constants@{HAL Private Constants}!\_\_STM32F4xx\_HAL\_VERSION\_MAIN@{\_\_STM32F4xx\_HAL\_VERSION\_MAIN}}
+\index{\_\_STM32F4xx\_HAL\_VERSION\_MAIN@{\_\_STM32F4xx\_HAL\_VERSION\_MAIN}!HAL Private Constants@{HAL Private Constants}}
+\doxysubsubsection{\_\_STM32F4xx\_HAL\_VERSION\_MAIN}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+STM32\+F4xx\+\_\+\+HAL\+\_\+\+VERSION\+\_\+\+MAIN~(0x01)}
+
+
+
+STM32\+F4xx HAL Driver version number V1.\+5.\+0. 
+
+[31\+:24] main version 
+
+Definition at line 73 of file stm32f4xx\+\_\+hal.\+c.
+
+\mbox{\label{group___h_a_l___private___constants_ga61fad66d665ed89f1227e459e480e28b}} 
+\index{HAL Private Constants@{HAL Private Constants}!\_\_STM32F4xx\_HAL\_VERSION\_RC@{\_\_STM32F4xx\_HAL\_VERSION\_RC}}
+\index{\_\_STM32F4xx\_HAL\_VERSION\_RC@{\_\_STM32F4xx\_HAL\_VERSION\_RC}!HAL Private Constants@{HAL Private Constants}}
+\doxysubsubsection{\_\_STM32F4xx\_HAL\_VERSION\_RC}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+STM32\+F4xx\+\_\+\+HAL\+\_\+\+VERSION\+\_\+\+RC~(0x00)}
+
+[7\+:0] release candidate 
+
+Definition at line 76 of file stm32f4xx\+\_\+hal.\+c.
+
+\mbox{\label{group___h_a_l___private___constants_ga9d5e3917a3f5a417be6c8423faf78f0e}} 
+\index{HAL Private Constants@{HAL Private Constants}!\_\_STM32F4xx\_HAL\_VERSION\_SUB1@{\_\_STM32F4xx\_HAL\_VERSION\_SUB1}}
+\index{\_\_STM32F4xx\_HAL\_VERSION\_SUB1@{\_\_STM32F4xx\_HAL\_VERSION\_SUB1}!HAL Private Constants@{HAL Private Constants}}
+\doxysubsubsection{\_\_STM32F4xx\_HAL\_VERSION\_SUB1}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+STM32\+F4xx\+\_\+\+HAL\+\_\+\+VERSION\+\_\+\+SUB1~(0x05)}
+
+[23\+:16] sub1 version 
+
+Definition at line 74 of file stm32f4xx\+\_\+hal.\+c.
+
+\mbox{\label{group___h_a_l___private___constants_ga87b379595edcc7d72d78b2263ae08dee}} 
+\index{HAL Private Constants@{HAL Private Constants}!\_\_STM32F4xx\_HAL\_VERSION\_SUB2@{\_\_STM32F4xx\_HAL\_VERSION\_SUB2}}
+\index{\_\_STM32F4xx\_HAL\_VERSION\_SUB2@{\_\_STM32F4xx\_HAL\_VERSION\_SUB2}!HAL Private Constants@{HAL Private Constants}}
+\doxysubsubsection{\_\_STM32F4xx\_HAL\_VERSION\_SUB2}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+STM32\+F4xx\+\_\+\+HAL\+\_\+\+VERSION\+\_\+\+SUB2~(0x00)}
+
+[15\+:8] sub2 version 
+
+Definition at line 75 of file stm32f4xx\+\_\+hal.\+c.
+
+\mbox{\label{group___h_a_l___private___constants_ga9e34adb28e3eed088c55766f72d53183}} 
+\index{HAL Private Constants@{HAL Private Constants}!CMP\_PD\_BIT\_NUMBER@{CMP\_PD\_BIT\_NUMBER}}
+\index{CMP\_PD\_BIT\_NUMBER@{CMP\_PD\_BIT\_NUMBER}!HAL Private Constants@{HAL Private Constants}}
+\doxysubsubsection{CMP\_PD\_BIT\_NUMBER}
+{\footnotesize\ttfamily \#define CMP\+\_\+\+PD\+\_\+\+BIT\+\_\+\+NUMBER~\textbf{ POSITION\+\_\+\+VAL}(\textbf{ SYSCFG\+\_\+\+CMPCR\+\_\+\+CMP\+\_\+\+PD})}
+
+
+
+Definition at line 95 of file stm32f4xx\+\_\+hal.\+c.
+
+\mbox{\label{group___h_a_l___private___constants_gae4516ed27e02d84d9d20c7d711b87437}} 
+\index{HAL Private Constants@{HAL Private Constants}!CMPCR\_CMP\_PD\_BB@{CMPCR\_CMP\_PD\_BB}}
+\index{CMPCR\_CMP\_PD\_BB@{CMPCR\_CMP\_PD\_BB}!HAL Private Constants@{HAL Private Constants}}
+\doxysubsubsection{CMPCR\_CMP\_PD\_BB}
+{\footnotesize\ttfamily \#define CMPCR\+\_\+\+CMP\+\_\+\+PD\+\_\+\+BB~(uint32\+\_\+t)(\textbf{ PERIPH\+\_\+\+BB\+\_\+\+BASE} + (\textbf{ CMPCR\+\_\+\+OFFSET} $\ast$ 32U) + (\textbf{ CMP\+\_\+\+PD\+\_\+\+BIT\+\_\+\+NUMBER} $\ast$ 4U))}
+
+
+
+Definition at line 96 of file stm32f4xx\+\_\+hal.\+c.
+
+\mbox{\label{group___h_a_l___private___constants_ga8e5fbe846e7478d522df749672b90084}} 
+\index{HAL Private Constants@{HAL Private Constants}!CMPCR\_OFFSET@{CMPCR\_OFFSET}}
+\index{CMPCR\_OFFSET@{CMPCR\_OFFSET}!HAL Private Constants@{HAL Private Constants}}
+\doxysubsubsection{CMPCR\_OFFSET}
+{\footnotesize\ttfamily \#define CMPCR\+\_\+\+OFFSET~(\textbf{ SYSCFG\+\_\+\+OFFSET} + 0x20U)}
+
+
+
+Definition at line 94 of file stm32f4xx\+\_\+hal.\+c.
+
+\mbox{\label{group___h_a_l___private___constants_gaeeece10cca80f3c632d3d77c3f2917b6}} 
+\index{HAL Private Constants@{HAL Private Constants}!IDCODE\_DEVID\_MASK@{IDCODE\_DEVID\_MASK}}
+\index{IDCODE\_DEVID\_MASK@{IDCODE\_DEVID\_MASK}!HAL Private Constants@{HAL Private Constants}}
+\doxysubsubsection{IDCODE\_DEVID\_MASK}
+{\footnotesize\ttfamily \#define IDCODE\+\_\+\+DEVID\+\_\+\+MASK~((uint32\+\_\+t)0x00000\+FFFU)}
+
+
+
+Definition at line 82 of file stm32f4xx\+\_\+hal.\+c.
+
+\mbox{\label{group___h_a_l___private___constants_ga7f801653c361f31380f21357f92dc9af}} 
+\index{HAL Private Constants@{HAL Private Constants}!MEMRMP\_OFFSET@{MEMRMP\_OFFSET}}
+\index{MEMRMP\_OFFSET@{MEMRMP\_OFFSET}!HAL Private Constants@{HAL Private Constants}}
+\doxysubsubsection{MEMRMP\_OFFSET}
+{\footnotesize\ttfamily \#define MEMRMP\+\_\+\+OFFSET~\textbf{ SYSCFG\+\_\+\+OFFSET}}
+
+
+
+Definition at line 88 of file stm32f4xx\+\_\+hal.\+c.
+
+\mbox{\label{group___h_a_l___private___constants_ga13f7abe3641989d4d063ad21962da8b0}} 
+\index{HAL Private Constants@{HAL Private Constants}!SYSCFG\_OFFSET@{SYSCFG\_OFFSET}}
+\index{SYSCFG\_OFFSET@{SYSCFG\_OFFSET}!HAL Private Constants@{HAL Private Constants}}
+\doxysubsubsection{SYSCFG\_OFFSET}
+{\footnotesize\ttfamily \#define SYSCFG\+\_\+\+OFFSET~(\textbf{ SYSCFG\+\_\+\+BASE} -\/ \textbf{ PERIPH\+\_\+\+BASE})}
+
+
+
+Definition at line 85 of file stm32f4xx\+\_\+hal.\+c.
+
+\mbox{\label{group___h_a_l___private___constants_ga96bde9109ea6ea0a7887658669ff9221}} 
+\index{HAL Private Constants@{HAL Private Constants}!UFB\_MODE\_BB@{UFB\_MODE\_BB}}
+\index{UFB\_MODE\_BB@{UFB\_MODE\_BB}!HAL Private Constants@{HAL Private Constants}}
+\doxysubsubsection{UFB\_MODE\_BB}
+{\footnotesize\ttfamily \#define UFB\+\_\+\+MODE\+\_\+\+BB~(uint32\+\_\+t)(\textbf{ PERIPH\+\_\+\+BB\+\_\+\+BASE} + (\textbf{ MEMRMP\+\_\+\+OFFSET} $\ast$ 32U) + (\textbf{ UFB\+\_\+\+MODE\+\_\+\+BIT\+\_\+\+NUMBER} $\ast$ 4U))}
+
+
+
+Definition at line 90 of file stm32f4xx\+\_\+hal.\+c.
+
+\mbox{\label{group___h_a_l___private___constants_gac8a0079a8d30ec8633adaed9e2cfa49d}} 
+\index{HAL Private Constants@{HAL Private Constants}!UFB\_MODE\_BIT\_NUMBER@{UFB\_MODE\_BIT\_NUMBER}}
+\index{UFB\_MODE\_BIT\_NUMBER@{UFB\_MODE\_BIT\_NUMBER}!HAL Private Constants@{HAL Private Constants}}
+\doxysubsubsection{UFB\_MODE\_BIT\_NUMBER}
+{\footnotesize\ttfamily \#define UFB\+\_\+\+MODE\+\_\+\+BIT\+\_\+\+NUMBER~\textbf{ POSITION\+\_\+\+VAL}(SYSCFG\+\_\+\+MEMRMP\+\_\+\+UFB\+\_\+\+MODE)}
+
+
+
+Definition at line 89 of file stm32f4xx\+\_\+hal.\+c.
+

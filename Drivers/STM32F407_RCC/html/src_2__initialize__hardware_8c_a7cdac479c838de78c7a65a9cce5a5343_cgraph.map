@@ -1,0 +1,11 @@
+<map id="__initialize_hardware" name="__initialize_hardware">
+<area shape="rect" id="node1" title=" " alt="" coords="5,132,148,159"/>
+<area shape="rect" id="node2" href="$group___h_a_l___exported___functions___group1.html#gaecac54d350c3730e6831eb404e557dc4" title="This function is used to initialize the HAL Library; it must be the first instruction to be executed ..." alt="" coords="245,81,315,108"/>
+<area shape="rect" id="node8" href="$src_2__initialize__hardware_8c.html#a70af21c671abfcc773614a9a4f63d920" title=" " alt="" coords="209,132,351,159"/>
+<area shape="rect" id="node9" href="$group___s_t_m32_f4xx___system___exported___functions.html#gae0c36a9591fe6e9c45ecb21a794f0f0f" title="Update SystemCoreClock variable according to Clock Register Values. The SystemCoreClock variable cont..." alt="" coords="196,183,364,209"/>
+<area shape="rect" id="node3" href="$group___h_a_l___exported___functions___group1.html#ga44d1542f9985b2243b14a41070cc41cc" title="This function configures the source of the time base. The time source is configured to have 1ms time ..." alt="" coords="467,31,561,57"/>
+<area shape="rect" id="node6" href="$group___h_a_l___m_s_p___private___functions.html#gae4fb8e66865c87d0ebab74a726a6891f" title="Initializes the Global MSP." alt="" coords="466,81,562,108"/>
+<area shape="rect" id="node7" href="$group___c_o_r_t_e_x___exported___functions___group1.html#gad9be53e08b1498adea006e5e037f238f" title=" " alt="" coords="412,132,616,159"/>
+<area shape="rect" id="node4" href="$group___c_o_r_t_e_x___exported___functions___group1.html#ga8581a82025a4780efd00876a66e3e91b" title=" " alt="" coords="664,5,816,32"/>
+<area shape="rect" id="node5" href="$group___c_o_r_t_e_x___exported___functions___group1.html#gac3a3f0d53c315523a8e6e7bcac1940cf" title=" " alt="" coords="664,56,816,83"/>
+</map>

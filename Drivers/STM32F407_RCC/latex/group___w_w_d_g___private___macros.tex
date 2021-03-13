@@ -1,0 +1,81 @@
+\doxysection{WWDG Private Macros}
+\label{group___w_w_d_g___private___macros}\index{WWDG Private Macros@{WWDG Private Macros}}
+Collaboration diagram for WWDG Private Macros\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=284pt]{group___w_w_d_g___private___macros}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \textbf{ IS\+\_\+\+WWDG\+\_\+\+PRESCALER}(\+\_\+\+\_\+\+PRESCALER\+\_\+\+\_\+)
+\item 
+\#define \textbf{ IS\+\_\+\+WWDG\+\_\+\+WINDOW}(\+\_\+\+\_\+\+WINDOW\+\_\+\+\_\+)~(((\+\_\+\+\_\+\+WINDOW\+\_\+\+\_\+) $>$= \textbf{ WWDG\+\_\+\+CFR\+\_\+\+W\+\_\+6}) \&\& ((\+\_\+\+\_\+\+WINDOW\+\_\+\+\_\+) $<$= \textbf{ WWDG\+\_\+\+CFR\+\_\+W}))
+\item 
+\#define \textbf{ IS\+\_\+\+WWDG\+\_\+\+COUNTER}(\+\_\+\+\_\+\+COUNTER\+\_\+\+\_\+)~(((\+\_\+\+\_\+\+COUNTER\+\_\+\+\_\+) $>$= \textbf{ WWDG\+\_\+\+CR\+\_\+\+T\+\_\+6}) \&\& ((\+\_\+\+\_\+\+COUNTER\+\_\+\+\_\+) $<$= \textbf{ WWDG\+\_\+\+CR\+\_\+T}))
+\item 
+\#define \textbf{ IS\+\_\+\+WWDG\+\_\+\+EWI\+\_\+\+MODE}(\+\_\+\+\_\+\+MODE\+\_\+\+\_\+)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\label{group___w_w_d_g___private___macros_ga01304524b12741cc7c4fa1905f1945bd}} 
+\index{WWDG Private Macros@{WWDG Private Macros}!IS\_WWDG\_COUNTER@{IS\_WWDG\_COUNTER}}
+\index{IS\_WWDG\_COUNTER@{IS\_WWDG\_COUNTER}!WWDG Private Macros@{WWDG Private Macros}}
+\doxysubsubsection{IS\_WWDG\_COUNTER}
+{\footnotesize\ttfamily \#define IS\+\_\+\+WWDG\+\_\+\+COUNTER(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+COUNTER\+\_\+\+\_\+ }\end{DoxyParamCaption})~(((\+\_\+\+\_\+\+COUNTER\+\_\+\+\_\+) $>$= \textbf{ WWDG\+\_\+\+CR\+\_\+\+T\+\_\+6}) \&\& ((\+\_\+\+\_\+\+COUNTER\+\_\+\+\_\+) $<$= \textbf{ WWDG\+\_\+\+CR\+\_\+T}))}
+
+
+
+Definition at line 154 of file stm32f4xx\+\_\+hal\+\_\+wwdg.\+h.
+
+\mbox{\label{group___w_w_d_g___private___macros_gaf3c14bbd0c44269e181d729e545a5db7}} 
+\index{WWDG Private Macros@{WWDG Private Macros}!IS\_WWDG\_EWI\_MODE@{IS\_WWDG\_EWI\_MODE}}
+\index{IS\_WWDG\_EWI\_MODE@{IS\_WWDG\_EWI\_MODE}!WWDG Private Macros@{WWDG Private Macros}}
+\doxysubsubsection{IS\_WWDG\_EWI\_MODE}
+{\footnotesize\ttfamily \#define IS\+\_\+\+WWDG\+\_\+\+EWI\+\_\+\+MODE(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+MODE\+\_\+\+\_\+ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                             (((\_\_MODE\_\_) == WWDG\_EWI\_ENABLE) || \(\backslash\)}
+\DoxyCodeLine{                                             ((\_\_MODE\_\_) == WWDG\_EWI\_DISABLE))}
+
+\end{DoxyCode}
+
+
+Definition at line 156 of file stm32f4xx\+\_\+hal\+\_\+wwdg.\+h.
+
+\mbox{\label{group___w_w_d_g___private___macros_ga3cfe8f6be7754dd9dfe20eeed6ca7d08}} 
+\index{WWDG Private Macros@{WWDG Private Macros}!IS\_WWDG\_PRESCALER@{IS\_WWDG\_PRESCALER}}
+\index{IS\_WWDG\_PRESCALER@{IS\_WWDG\_PRESCALER}!WWDG Private Macros@{WWDG Private Macros}}
+\doxysubsubsection{IS\_WWDG\_PRESCALER}
+{\footnotesize\ttfamily \#define IS\+\_\+\+WWDG\+\_\+\+PRESCALER(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+PRESCALER\+\_\+\+\_\+ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                             (((\_\_PRESCALER\_\_) == WWDG\_PRESCALER\_1) || \(\backslash\)}
+\DoxyCodeLine{                                             ((\_\_PRESCALER\_\_) == WWDG\_PRESCALER\_2) || \(\backslash\)}
+\DoxyCodeLine{                                             ((\_\_PRESCALER\_\_) == WWDG\_PRESCALER\_4) || \(\backslash\)}
+\DoxyCodeLine{                                             ((\_\_PRESCALER\_\_) == WWDG\_PRESCALER\_8))}
+
+\end{DoxyCode}
+
+
+Definition at line 147 of file stm32f4xx\+\_\+hal\+\_\+wwdg.\+h.
+
+\mbox{\label{group___w_w_d_g___private___macros_ga2e7358bcfcc6df115466ebfd0ff55644}} 
+\index{WWDG Private Macros@{WWDG Private Macros}!IS\_WWDG\_WINDOW@{IS\_WWDG\_WINDOW}}
+\index{IS\_WWDG\_WINDOW@{IS\_WWDG\_WINDOW}!WWDG Private Macros@{WWDG Private Macros}}
+\doxysubsubsection{IS\_WWDG\_WINDOW}
+{\footnotesize\ttfamily \#define IS\+\_\+\+WWDG\+\_\+\+WINDOW(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+WINDOW\+\_\+\+\_\+ }\end{DoxyParamCaption})~(((\+\_\+\+\_\+\+WINDOW\+\_\+\+\_\+) $>$= \textbf{ WWDG\+\_\+\+CFR\+\_\+\+W\+\_\+6}) \&\& ((\+\_\+\+\_\+\+WINDOW\+\_\+\+\_\+) $<$= \textbf{ WWDG\+\_\+\+CFR\+\_\+W}))}
+
+
+
+Definition at line 152 of file stm32f4xx\+\_\+hal\+\_\+wwdg.\+h.
+

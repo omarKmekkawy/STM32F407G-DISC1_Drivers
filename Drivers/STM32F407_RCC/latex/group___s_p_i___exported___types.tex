@@ -1,0 +1,105 @@
+\doxysection{SPI Exported Types}
+\label{group___s_p_i___exported___types}\index{SPI Exported Types@{SPI Exported Types}}
+Collaboration diagram for SPI Exported Types\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=252pt]{group___s_p_i___exported___types}
+\end{center}
+\end{figure}
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \textbf{ SPI\+\_\+\+Init\+Type\+Def}
+\begin{DoxyCompactList}\small\item\em SPI Configuration Structure definition. \end{DoxyCompactList}\item 
+struct \textbf{ \+\_\+\+\_\+\+SPI\+\_\+\+Handle\+Type\+Def}
+\begin{DoxyCompactList}\small\item\em SPI handle Structure definition. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \textbf{ \+\_\+\+\_\+\+SPI\+\_\+\+Handle\+Type\+Def} \textbf{ SPI\+\_\+\+Handle\+Type\+Def}
+\begin{DoxyCompactList}\small\item\em SPI handle Structure definition. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \textbf{ HAL\+\_\+\+SPI\+\_\+\+State\+Type\+Def} \{ \newline
+\textbf{ HAL\+\_\+\+SPI\+\_\+\+STATE\+\_\+\+RESET} = 0x00U
+, \textbf{ HAL\+\_\+\+SPI\+\_\+\+STATE\+\_\+\+READY} = 0x01U
+, \textbf{ HAL\+\_\+\+SPI\+\_\+\+STATE\+\_\+\+BUSY} = 0x02U
+, \textbf{ HAL\+\_\+\+SPI\+\_\+\+STATE\+\_\+\+BUSY\+\_\+\+TX} = 0x03U
+, \newline
+\textbf{ HAL\+\_\+\+SPI\+\_\+\+STATE\+\_\+\+BUSY\+\_\+\+RX} = 0x04U
+, \textbf{ HAL\+\_\+\+SPI\+\_\+\+STATE\+\_\+\+BUSY\+\_\+\+TX\+\_\+\+RX} = 0x05U
+, \textbf{ HAL\+\_\+\+SPI\+\_\+\+STATE\+\_\+\+ERROR} = 0x06U
+ \}
+\begin{DoxyCompactList}\small\item\em HAL SPI State structure definition. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\label{group___s_p_i___exported___types_gab633e49dd034de2f3a1fe79853d78d18}} 
+\index{SPI Exported Types@{SPI Exported Types}!SPI\_HandleTypeDef@{SPI\_HandleTypeDef}}
+\index{SPI\_HandleTypeDef@{SPI\_HandleTypeDef}!SPI Exported Types@{SPI Exported Types}}
+\doxysubsubsection{SPI\_HandleTypeDef}
+{\footnotesize\ttfamily typedef struct \textbf{ \+\_\+\+\_\+\+SPI\+\_\+\+Handle\+Type\+Def} \textbf{ SPI\+\_\+\+Handle\+Type\+Def}}
+
+
+
+SPI handle Structure definition. 
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\label{group___s_p_i___exported___types_ga8891cb64e76198a860172d94c638c9b4}} 
+\index{SPI Exported Types@{SPI Exported Types}!HAL\_SPI\_StateTypeDef@{HAL\_SPI\_StateTypeDef}}
+\index{HAL\_SPI\_StateTypeDef@{HAL\_SPI\_StateTypeDef}!SPI Exported Types@{SPI Exported Types}}
+\doxysubsubsection{HAL\_SPI\_StateTypeDef}
+{\footnotesize\ttfamily enum \textbf{ HAL\+\_\+\+SPI\+\_\+\+State\+Type\+Def}}
+
+
+
+HAL SPI State structure definition. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HAL\_SPI\_STATE\_RESET@{HAL\_SPI\_STATE\_RESET}!SPI Exported Types@{SPI Exported Types}}\index{SPI Exported Types@{SPI Exported Types}!HAL\_SPI\_STATE\_RESET@{HAL\_SPI\_STATE\_RESET}}}\mbox{\label{group___s_p_i___exported___types_gga8891cb64e76198a860172d94c638c9b4adbc218df2c9841b561282b40b3ded69d}} 
+HAL\+\_\+\+SPI\+\_\+\+STATE\+\_\+\+RESET&Peripheral not Initialized ~\newline
+ \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HAL\_SPI\_STATE\_READY@{HAL\_SPI\_STATE\_READY}!SPI Exported Types@{SPI Exported Types}}\index{SPI Exported Types@{SPI Exported Types}!HAL\_SPI\_STATE\_READY@{HAL\_SPI\_STATE\_READY}}}\mbox{\label{group___s_p_i___exported___types_gga8891cb64e76198a860172d94c638c9b4abb3992c67a15c14bd1808ef6b63fa926}} 
+HAL\+\_\+\+SPI\+\_\+\+STATE\+\_\+\+READY&Peripheral Initialized and ready for use ~\newline
+ \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HAL\_SPI\_STATE\_BUSY@{HAL\_SPI\_STATE\_BUSY}!SPI Exported Types@{SPI Exported Types}}\index{SPI Exported Types@{SPI Exported Types}!HAL\_SPI\_STATE\_BUSY@{HAL\_SPI\_STATE\_BUSY}}}\mbox{\label{group___s_p_i___exported___types_gga8891cb64e76198a860172d94c638c9b4a0635e168bc0430253fe8e74cfe9768fd}} 
+HAL\+\_\+\+SPI\+\_\+\+STATE\+\_\+\+BUSY&an internal process is ongoing ~\newline
+ \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HAL\_SPI\_STATE\_BUSY\_TX@{HAL\_SPI\_STATE\_BUSY\_TX}!SPI Exported Types@{SPI Exported Types}}\index{SPI Exported Types@{SPI Exported Types}!HAL\_SPI\_STATE\_BUSY\_TX@{HAL\_SPI\_STATE\_BUSY\_TX}}}\mbox{\label{group___s_p_i___exported___types_gga8891cb64e76198a860172d94c638c9b4a5d82b644c7ca656ab5fe8a8e3cbc29ab}} 
+HAL\+\_\+\+SPI\+\_\+\+STATE\+\_\+\+BUSY\+\_\+\+TX&Data Transmission process is ongoing ~\newline
+ \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HAL\_SPI\_STATE\_BUSY\_RX@{HAL\_SPI\_STATE\_BUSY\_RX}!SPI Exported Types@{SPI Exported Types}}\index{SPI Exported Types@{SPI Exported Types}!HAL\_SPI\_STATE\_BUSY\_RX@{HAL\_SPI\_STATE\_BUSY\_RX}}}\mbox{\label{group___s_p_i___exported___types_gga8891cb64e76198a860172d94c638c9b4afd7e00128aca1feaa099c2595ffb9277}} 
+HAL\+\_\+\+SPI\+\_\+\+STATE\+\_\+\+BUSY\+\_\+\+RX&Data Reception process is ongoing ~\newline
+ \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HAL\_SPI\_STATE\_BUSY\_TX\_RX@{HAL\_SPI\_STATE\_BUSY\_TX\_RX}!SPI Exported Types@{SPI Exported Types}}\index{SPI Exported Types@{SPI Exported Types}!HAL\_SPI\_STATE\_BUSY\_TX\_RX@{HAL\_SPI\_STATE\_BUSY\_TX\_RX}}}\mbox{\label{group___s_p_i___exported___types_gga8891cb64e76198a860172d94c638c9b4a9dae2883ae3e43ca28afc9453a14c938}} 
+HAL\+\_\+\+SPI\+\_\+\+STATE\+\_\+\+BUSY\+\_\+\+TX\+\_\+\+RX&Data Transmission and Reception process is ongoing \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HAL\_SPI\_STATE\_ERROR@{HAL\_SPI\_STATE\_ERROR}!SPI Exported Types@{SPI Exported Types}}\index{SPI Exported Types@{SPI Exported Types}!HAL\_SPI\_STATE\_ERROR@{HAL\_SPI\_STATE\_ERROR}}}\mbox{\label{group___s_p_i___exported___types_gga8891cb64e76198a860172d94c638c9b4a3cba266d2346abe3b62fa0acccab4711}} 
+HAL\+\_\+\+SPI\+\_\+\+STATE\+\_\+\+ERROR&SPI error state ~\newline
+ \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 108 of file stm32f4xx\+\_\+hal\+\_\+spi.\+h.
+

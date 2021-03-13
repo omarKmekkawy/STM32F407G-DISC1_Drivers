@@ -1,0 +1,50 @@
+\doxysection{PWREx Private macros to check input parameters}
+\label{group___p_w_r_ex___i_s___p_w_r___definitions}\index{PWREx Private macros to check input parameters@{PWREx Private macros to check input parameters}}
+Collaboration diagram for PWREx Private macros to check input parameters\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group___p_w_r_ex___i_s___p_w_r___definitions}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \textbf{ IS\+\_\+\+PWR\+\_\+\+VOLTAGE\+\_\+\+SCALING\+\_\+\+RANGE}(VOLTAGE)
+\item 
+\#define \textbf{ IS\+\_\+\+PWR\+\_\+\+WAKEUP\+\_\+\+PIN}(PIN)~((PIN) == \textbf{ PWR\+\_\+\+WAKEUP\+\_\+\+PIN1})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\label{group___p_w_r_ex___i_s___p_w_r___definitions_ga007e15203cc13b9f50824ffc103e0a5c}} 
+\index{PWREx Private macros to check input parameters@{PWREx Private macros to check input parameters}!IS\_PWR\_VOLTAGE\_SCALING\_RANGE@{IS\_PWR\_VOLTAGE\_SCALING\_RANGE}}
+\index{IS\_PWR\_VOLTAGE\_SCALING\_RANGE@{IS\_PWR\_VOLTAGE\_SCALING\_RANGE}!PWREx Private macros to check input parameters@{PWREx Private macros to check input parameters}}
+\doxysubsubsection{IS\_PWR\_VOLTAGE\_SCALING\_RANGE}
+{\footnotesize\ttfamily \#define IS\+\_\+\+PWR\+\_\+\+VOLTAGE\+\_\+\+SCALING\+\_\+\+RANGE(\begin{DoxyParamCaption}\item[{}]{VOLTAGE }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                               (((VOLTAGE) == PWR\_REGULATOR\_VOLTAGE\_SCALE1) || \(\backslash\)}
+\DoxyCodeLine{                                               ((VOLTAGE) == PWR\_REGULATOR\_VOLTAGE\_SCALE2) || \(\backslash\)}
+\DoxyCodeLine{                                               ((VOLTAGE) == PWR\_REGULATOR\_VOLTAGE\_SCALE3))}
+
+\end{DoxyCode}
+
+
+Definition at line 331 of file stm32f4xx\+\_\+hal\+\_\+pwr\+\_\+ex.\+h.
+
+\mbox{\label{group___p_w_r_ex___i_s___p_w_r___definitions_gac6fcc59d6ff95b8feda1b228517f9c3f}} 
+\index{PWREx Private macros to check input parameters@{PWREx Private macros to check input parameters}!IS\_PWR\_WAKEUP\_PIN@{IS\_PWR\_WAKEUP\_PIN}}
+\index{IS\_PWR\_WAKEUP\_PIN@{IS\_PWR\_WAKEUP\_PIN}!PWREx Private macros to check input parameters@{PWREx Private macros to check input parameters}}
+\doxysubsubsection{IS\_PWR\_WAKEUP\_PIN}
+{\footnotesize\ttfamily \#define IS\+\_\+\+PWR\+\_\+\+WAKEUP\+\_\+\+PIN(\begin{DoxyParamCaption}\item[{}]{PIN }\end{DoxyParamCaption})~((PIN) == \textbf{ PWR\+\_\+\+WAKEUP\+\_\+\+PIN1})}
+
+
+
+Definition at line 343 of file stm32f4xx\+\_\+hal\+\_\+pwr\+\_\+ex.\+h.
+

@@ -1,0 +1,209 @@
+\doxysection{IRDA\+\_\+\+Handle\+Type\+Def Struct Reference}
+\label{struct_i_r_d_a___handle_type_def}\index{IRDA\_HandleTypeDef@{IRDA\_HandleTypeDef}}
+
+
+IRDA handle Structure definition ~\newline
+  
+
+
+
+
+{\ttfamily \#include $<$stm32f4xx\+\_\+hal\+\_\+irda.\+h$>$}
+
+
+
+Collaboration diagram for IRDA\+\_\+\+Handle\+Type\+Def\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_i_r_d_a___handle_type_def__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ USART\+\_\+\+Type\+Def} $\ast$ \textbf{ Instance}
+\item 
+\textbf{ IRDA\+\_\+\+Init\+Type\+Def} \textbf{ Init}
+\item 
+uint8\+\_\+t $\ast$ \textbf{ p\+Tx\+Buff\+Ptr}
+\item 
+uint16\+\_\+t \textbf{ Tx\+Xfer\+Size}
+\item 
+uint16\+\_\+t \textbf{ Tx\+Xfer\+Count}
+\item 
+uint8\+\_\+t $\ast$ \textbf{ p\+Rx\+Buff\+Ptr}
+\item 
+uint16\+\_\+t \textbf{ Rx\+Xfer\+Size}
+\item 
+uint16\+\_\+t \textbf{ Rx\+Xfer\+Count}
+\item 
+\textbf{ DMA\+\_\+\+Handle\+Type\+Def} $\ast$ \textbf{ hdmatx}
+\item 
+\textbf{ DMA\+\_\+\+Handle\+Type\+Def} $\ast$ \textbf{ hdmarx}
+\item 
+\textbf{ HAL\+\_\+\+Lock\+Type\+Def} \textbf{ Lock}
+\item 
+\textbf{ \+\_\+\+\_\+\+IO} \textbf{ HAL\+\_\+\+IRDA\+\_\+\+State\+Type\+Def} \textbf{ g\+State}
+\item 
+\textbf{ \+\_\+\+\_\+\+IO} \textbf{ HAL\+\_\+\+IRDA\+\_\+\+State\+Type\+Def} \textbf{ Rx\+State}
+\item 
+\textbf{ \+\_\+\+\_\+\+IO} uint32\+\_\+t \textbf{ Error\+Code}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+IRDA handle Structure definition ~\newline
+ 
+
+Definition at line 153 of file stm32f4xx\+\_\+hal\+\_\+irda.\+h.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\label{struct_i_r_d_a___handle_type_def_a123c5063e6a3b1901b2fbe5f88c53a7e}} 
+\index{IRDA\_HandleTypeDef@{IRDA\_HandleTypeDef}!ErrorCode@{ErrorCode}}
+\index{ErrorCode@{ErrorCode}!IRDA\_HandleTypeDef@{IRDA\_HandleTypeDef}}
+\doxysubsubsection{ErrorCode}
+{\footnotesize\ttfamily \textbf{ \+\_\+\+\_\+\+IO} uint32\+\_\+t Error\+Code}
+
+
+
+Definition at line 184 of file stm32f4xx\+\_\+hal\+\_\+irda.\+h.
+
+\mbox{\label{struct_i_r_d_a___handle_type_def_a5075d3e29bb3a5fba531c19a779dec46}} 
+\index{IRDA\_HandleTypeDef@{IRDA\_HandleTypeDef}!gState@{gState}}
+\index{gState@{gState}!IRDA\_HandleTypeDef@{IRDA\_HandleTypeDef}}
+\doxysubsubsection{gState}
+{\footnotesize\ttfamily \textbf{ \+\_\+\+\_\+\+IO} \textbf{ HAL\+\_\+\+IRDA\+\_\+\+State\+Type\+Def} g\+State}
+
+
+
+Definition at line 177 of file stm32f4xx\+\_\+hal\+\_\+irda.\+h.
+
+\mbox{\label{struct_i_r_d_a___handle_type_def_abd0aeec20298a55d89a440320e35634f}} 
+\index{IRDA\_HandleTypeDef@{IRDA\_HandleTypeDef}!hdmarx@{hdmarx}}
+\index{hdmarx@{hdmarx}!IRDA\_HandleTypeDef@{IRDA\_HandleTypeDef}}
+\doxysubsubsection{hdmarx}
+{\footnotesize\ttfamily \textbf{ DMA\+\_\+\+Handle\+Type\+Def}$\ast$ hdmarx}
+
+
+
+Definition at line 173 of file stm32f4xx\+\_\+hal\+\_\+irda.\+h.
+
+\mbox{\label{struct_i_r_d_a___handle_type_def_a33e13c28b1a70e6164417abb026d7a22}} 
+\index{IRDA\_HandleTypeDef@{IRDA\_HandleTypeDef}!hdmatx@{hdmatx}}
+\index{hdmatx@{hdmatx}!IRDA\_HandleTypeDef@{IRDA\_HandleTypeDef}}
+\doxysubsubsection{hdmatx}
+{\footnotesize\ttfamily \textbf{ DMA\+\_\+\+Handle\+Type\+Def}$\ast$ hdmatx}
+
+
+
+Definition at line 171 of file stm32f4xx\+\_\+hal\+\_\+irda.\+h.
+
+\mbox{\label{struct_i_r_d_a___handle_type_def_afd099a0cd7d746a2685c4dd17878d461}} 
+\index{IRDA\_HandleTypeDef@{IRDA\_HandleTypeDef}!Init@{Init}}
+\index{Init@{Init}!IRDA\_HandleTypeDef@{IRDA\_HandleTypeDef}}
+\doxysubsubsection{Init}
+{\footnotesize\ttfamily \textbf{ IRDA\+\_\+\+Init\+Type\+Def} Init}
+
+
+
+Definition at line 157 of file stm32f4xx\+\_\+hal\+\_\+irda.\+h.
+
+\mbox{\label{struct_i_r_d_a___handle_type_def_a2b30b6d22df80fbebd8ceefc6f162310}} 
+\index{IRDA\_HandleTypeDef@{IRDA\_HandleTypeDef}!Instance@{Instance}}
+\index{Instance@{Instance}!IRDA\_HandleTypeDef@{IRDA\_HandleTypeDef}}
+\doxysubsubsection{Instance}
+{\footnotesize\ttfamily \textbf{ USART\+\_\+\+Type\+Def}$\ast$ Instance}
+
+
+
+Definition at line 155 of file stm32f4xx\+\_\+hal\+\_\+irda.\+h.
+
+\mbox{\label{struct_i_r_d_a___handle_type_def_ad4cf225029dbefe8d3fe660c33b8bb6b}} 
+\index{IRDA\_HandleTypeDef@{IRDA\_HandleTypeDef}!Lock@{Lock}}
+\index{Lock@{Lock}!IRDA\_HandleTypeDef@{IRDA\_HandleTypeDef}}
+\doxysubsubsection{Lock}
+{\footnotesize\ttfamily \textbf{ HAL\+\_\+\+Lock\+Type\+Def} Lock}
+
+
+
+Definition at line 175 of file stm32f4xx\+\_\+hal\+\_\+irda.\+h.
+
+\mbox{\label{struct_i_r_d_a___handle_type_def_a7cee540cb21048ac48ba17355440e668}} 
+\index{IRDA\_HandleTypeDef@{IRDA\_HandleTypeDef}!pRxBuffPtr@{pRxBuffPtr}}
+\index{pRxBuffPtr@{pRxBuffPtr}!IRDA\_HandleTypeDef@{IRDA\_HandleTypeDef}}
+\doxysubsubsection{pRxBuffPtr}
+{\footnotesize\ttfamily uint8\+\_\+t$\ast$ p\+Rx\+Buff\+Ptr}
+
+
+
+Definition at line 165 of file stm32f4xx\+\_\+hal\+\_\+irda.\+h.
+
+\mbox{\label{struct_i_r_d_a___handle_type_def_a5cc31f7c52dafd32f27f8f2756dbf343}} 
+\index{IRDA\_HandleTypeDef@{IRDA\_HandleTypeDef}!pTxBuffPtr@{pTxBuffPtr}}
+\index{pTxBuffPtr@{pTxBuffPtr}!IRDA\_HandleTypeDef@{IRDA\_HandleTypeDef}}
+\doxysubsubsection{pTxBuffPtr}
+{\footnotesize\ttfamily uint8\+\_\+t$\ast$ p\+Tx\+Buff\+Ptr}
+
+
+
+Definition at line 159 of file stm32f4xx\+\_\+hal\+\_\+irda.\+h.
+
+\mbox{\label{struct_i_r_d_a___handle_type_def_a2cb6641cbcc13a2824d3e3cfcb37c6aa}} 
+\index{IRDA\_HandleTypeDef@{IRDA\_HandleTypeDef}!RxState@{RxState}}
+\index{RxState@{RxState}!IRDA\_HandleTypeDef@{IRDA\_HandleTypeDef}}
+\doxysubsubsection{RxState}
+{\footnotesize\ttfamily \textbf{ \+\_\+\+\_\+\+IO} \textbf{ HAL\+\_\+\+IRDA\+\_\+\+State\+Type\+Def} Rx\+State}
+
+
+
+Definition at line 181 of file stm32f4xx\+\_\+hal\+\_\+irda.\+h.
+
+\mbox{\label{struct_i_r_d_a___handle_type_def_a6aa23da867471025c16cb4819b6a7a8a}} 
+\index{IRDA\_HandleTypeDef@{IRDA\_HandleTypeDef}!RxXferCount@{RxXferCount}}
+\index{RxXferCount@{RxXferCount}!IRDA\_HandleTypeDef@{IRDA\_HandleTypeDef}}
+\doxysubsubsection{RxXferCount}
+{\footnotesize\ttfamily uint16\+\_\+t Rx\+Xfer\+Count}
+
+
+
+Definition at line 169 of file stm32f4xx\+\_\+hal\+\_\+irda.\+h.
+
+\mbox{\label{struct_i_r_d_a___handle_type_def_ac12f5f1f6295b3c3327d5feabf5a96fb}} 
+\index{IRDA\_HandleTypeDef@{IRDA\_HandleTypeDef}!RxXferSize@{RxXferSize}}
+\index{RxXferSize@{RxXferSize}!IRDA\_HandleTypeDef@{IRDA\_HandleTypeDef}}
+\doxysubsubsection{RxXferSize}
+{\footnotesize\ttfamily uint16\+\_\+t Rx\+Xfer\+Size}
+
+
+
+Definition at line 167 of file stm32f4xx\+\_\+hal\+\_\+irda.\+h.
+
+\mbox{\label{struct_i_r_d_a___handle_type_def_a036cb7c739dc322aaa92d17c21da3a98}} 
+\index{IRDA\_HandleTypeDef@{IRDA\_HandleTypeDef}!TxXferCount@{TxXferCount}}
+\index{TxXferCount@{TxXferCount}!IRDA\_HandleTypeDef@{IRDA\_HandleTypeDef}}
+\doxysubsubsection{TxXferCount}
+{\footnotesize\ttfamily uint16\+\_\+t Tx\+Xfer\+Count}
+
+
+
+Definition at line 163 of file stm32f4xx\+\_\+hal\+\_\+irda.\+h.
+
+\mbox{\label{struct_i_r_d_a___handle_type_def_a80907b65d6f9541bc0dee444d16bc45b}} 
+\index{IRDA\_HandleTypeDef@{IRDA\_HandleTypeDef}!TxXferSize@{TxXferSize}}
+\index{TxXferSize@{TxXferSize}!IRDA\_HandleTypeDef@{IRDA\_HandleTypeDef}}
+\doxysubsubsection{TxXferSize}
+{\footnotesize\ttfamily uint16\+\_\+t Tx\+Xfer\+Size}
+
+
+
+Definition at line 161 of file stm32f4xx\+\_\+hal\+\_\+irda.\+h.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+system/include/stm32f4-\/hal/\textbf{ stm32f4xx\+\_\+hal\+\_\+irda.\+h}\end{DoxyCompactItemize}

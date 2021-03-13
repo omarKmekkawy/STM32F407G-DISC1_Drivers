@@ -1,0 +1,68 @@
+\doxysection{system/src/stm32f4-\/hal/stm32f4xx\+\_\+hal\+\_\+flash\+\_\+ramfunc.c File Reference}
+\label{stm32f4xx__hal__flash__ramfunc_8c}\index{system/src/stm32f4-\/hal/stm32f4xx\_hal\_flash\_ramfunc.c@{system/src/stm32f4-\/hal/stm32f4xx\_hal\_flash\_ramfunc.c}}
+
+
+FLASH RAMFUNC module driver. This file provides a FLASH firmware functions which should be executed from internal SRAM.  
+
+
+{\ttfamily \#include \char`\"{}stm32f4xx\+\_\+hal.\+h\char`\"{}}\newline
+Include dependency graph for stm32f4xx\+\_\+hal\+\_\+flash\+\_\+ramfunc.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{stm32f4xx__hal__flash__ramfunc_8c__incl}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Detailed Description}
+FLASH RAMFUNC module driver. This file provides a FLASH firmware functions which should be executed from internal SRAM. 
+
+\begin{DoxyAuthor}{Author}
+MCD Application Team 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+V1.\+5.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+06-\/May-\/2016
+\begin{DoxyItemize}
+\item Stop/\+Start the flash interface while System Run
+\item Enable/\+Disable the flash sleep while System Run \begin{DoxyVerb}==============================================================================
+                  ##### APIs executed from Internal RAM #####
+==============================================================================
+[..]
+  *** ARM Compiler ***
+  --------------------
+  [..] RAM functions are defined using the toolchain options. 
+       Functions that are be executed in RAM should reside in a separate
+       source module. Using the 'Options for File' dialog you can simply change
+       the 'Code / Const' area of a module to a memory space in physical RAM.
+       Available memory areas are declared in the 'Target' tab of the 
+       Options for Target' dialog.
+
+  *** ICCARM Compiler ***
+  -----------------------
+  [..] RAM functions are defined using a specific toolchain keyword "__ramfunc".
+
+  *** GNU Compiler ***
+  --------------------
+  [..] RAM functions are defined using a specific toolchain attribute
+       "__attribute__((section(".RamFunc")))".\end{DoxyVerb}
+
+\end{DoxyItemize}
+\end{DoxyDate}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+\doxysubsubsection*{\begin{center}\copyright{} COPYRIGHT(c) 2016 STMicroelectronics\end{center} }
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met\+:
+\begin{DoxyEnumerate}
+\item Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+\item Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+\item Neither the name of STMicroelectronics nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+\end{DoxyEnumerate}
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \char`\"{}\+AS IS\char`\"{} AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. 

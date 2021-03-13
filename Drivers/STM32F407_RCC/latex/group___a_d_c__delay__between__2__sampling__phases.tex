@@ -1,0 +1,211 @@
+\doxysection{ADC Delay Between 2 Sampling Phases}
+\label{group___a_d_c__delay__between__2__sampling__phases}\index{ADC Delay Between 2 Sampling Phases@{ADC Delay Between 2 Sampling Phases}}
+Collaboration diagram for ADC Delay Between 2 Sampling Phases\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group___a_d_c__delay__between__2__sampling__phases}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \textbf{ ADC\+\_\+\+TWOSAMPLINGDELAY\+\_\+5\+CYCLES}~((uint32\+\_\+t)0x00000000U)
+\item 
+\#define \textbf{ ADC\+\_\+\+TWOSAMPLINGDELAY\+\_\+6\+CYCLES}~((uint32\+\_\+t)\textbf{ ADC\+\_\+\+CCR\+\_\+\+DELAY\+\_\+0})
+\item 
+\#define \textbf{ ADC\+\_\+\+TWOSAMPLINGDELAY\+\_\+7\+CYCLES}~((uint32\+\_\+t)\textbf{ ADC\+\_\+\+CCR\+\_\+\+DELAY\+\_\+1})
+\item 
+\#define \textbf{ ADC\+\_\+\+TWOSAMPLINGDELAY\+\_\+8\+CYCLES}~((uint32\+\_\+t)(\textbf{ ADC\+\_\+\+CCR\+\_\+\+DELAY\+\_\+1} $\vert$ \textbf{ ADC\+\_\+\+CCR\+\_\+\+DELAY\+\_\+0}))
+\item 
+\#define \textbf{ ADC\+\_\+\+TWOSAMPLINGDELAY\+\_\+9\+CYCLES}~((uint32\+\_\+t)\textbf{ ADC\+\_\+\+CCR\+\_\+\+DELAY\+\_\+2})
+\item 
+\#define \textbf{ ADC\+\_\+\+TWOSAMPLINGDELAY\+\_\+10\+CYCLES}~((uint32\+\_\+t)(\textbf{ ADC\+\_\+\+CCR\+\_\+\+DELAY\+\_\+2} $\vert$ \textbf{ ADC\+\_\+\+CCR\+\_\+\+DELAY\+\_\+0}))
+\item 
+\#define \textbf{ ADC\+\_\+\+TWOSAMPLINGDELAY\+\_\+11\+CYCLES}~((uint32\+\_\+t)(\textbf{ ADC\+\_\+\+CCR\+\_\+\+DELAY\+\_\+2} $\vert$ \textbf{ ADC\+\_\+\+CCR\+\_\+\+DELAY\+\_\+1}))
+\item 
+\#define \textbf{ ADC\+\_\+\+TWOSAMPLINGDELAY\+\_\+12\+CYCLES}~((uint32\+\_\+t)(\textbf{ ADC\+\_\+\+CCR\+\_\+\+DELAY\+\_\+2} $\vert$ \textbf{ ADC\+\_\+\+CCR\+\_\+\+DELAY\+\_\+1} $\vert$ \textbf{ ADC\+\_\+\+CCR\+\_\+\+DELAY\+\_\+0}))
+\item 
+\#define \textbf{ ADC\+\_\+\+TWOSAMPLINGDELAY\+\_\+13\+CYCLES}~((uint32\+\_\+t)\textbf{ ADC\+\_\+\+CCR\+\_\+\+DELAY\+\_\+3})
+\item 
+\#define \textbf{ ADC\+\_\+\+TWOSAMPLINGDELAY\+\_\+14\+CYCLES}~((uint32\+\_\+t)(\textbf{ ADC\+\_\+\+CCR\+\_\+\+DELAY\+\_\+3} $\vert$ \textbf{ ADC\+\_\+\+CCR\+\_\+\+DELAY\+\_\+0}))
+\item 
+\#define \textbf{ ADC\+\_\+\+TWOSAMPLINGDELAY\+\_\+15\+CYCLES}~((uint32\+\_\+t)(\textbf{ ADC\+\_\+\+CCR\+\_\+\+DELAY\+\_\+3} $\vert$ \textbf{ ADC\+\_\+\+CCR\+\_\+\+DELAY\+\_\+1}))
+\item 
+\#define \textbf{ ADC\+\_\+\+TWOSAMPLINGDELAY\+\_\+16\+CYCLES}~((uint32\+\_\+t)(\textbf{ ADC\+\_\+\+CCR\+\_\+\+DELAY\+\_\+3} $\vert$ \textbf{ ADC\+\_\+\+CCR\+\_\+\+DELAY\+\_\+1} $\vert$ \textbf{ ADC\+\_\+\+CCR\+\_\+\+DELAY\+\_\+0}))
+\item 
+\#define \textbf{ ADC\+\_\+\+TWOSAMPLINGDELAY\+\_\+17\+CYCLES}~((uint32\+\_\+t)(\textbf{ ADC\+\_\+\+CCR\+\_\+\+DELAY\+\_\+3} $\vert$ \textbf{ ADC\+\_\+\+CCR\+\_\+\+DELAY\+\_\+2}))
+\item 
+\#define \textbf{ ADC\+\_\+\+TWOSAMPLINGDELAY\+\_\+18\+CYCLES}~((uint32\+\_\+t)(\textbf{ ADC\+\_\+\+CCR\+\_\+\+DELAY\+\_\+3} $\vert$ \textbf{ ADC\+\_\+\+CCR\+\_\+\+DELAY\+\_\+2} $\vert$ \textbf{ ADC\+\_\+\+CCR\+\_\+\+DELAY\+\_\+0}))
+\item 
+\#define \textbf{ ADC\+\_\+\+TWOSAMPLINGDELAY\+\_\+19\+CYCLES}~((uint32\+\_\+t)(\textbf{ ADC\+\_\+\+CCR\+\_\+\+DELAY\+\_\+3} $\vert$ \textbf{ ADC\+\_\+\+CCR\+\_\+\+DELAY\+\_\+2} $\vert$ \textbf{ ADC\+\_\+\+CCR\+\_\+\+DELAY\+\_\+1}))
+\item 
+\#define \textbf{ ADC\+\_\+\+TWOSAMPLINGDELAY\+\_\+20\+CYCLES}~((uint32\+\_\+t)\textbf{ ADC\+\_\+\+CCR\+\_\+\+DELAY})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\label{group___a_d_c__delay__between__2__sampling__phases_gad92dea71b0ad43af8ac0cee79ca9c6ec}} 
+\index{ADC Delay Between 2 Sampling Phases@{ADC Delay Between 2 Sampling Phases}!ADC\_TWOSAMPLINGDELAY\_10CYCLES@{ADC\_TWOSAMPLINGDELAY\_10CYCLES}}
+\index{ADC\_TWOSAMPLINGDELAY\_10CYCLES@{ADC\_TWOSAMPLINGDELAY\_10CYCLES}!ADC Delay Between 2 Sampling Phases@{ADC Delay Between 2 Sampling Phases}}
+\doxysubsubsection{ADC\_TWOSAMPLINGDELAY\_10CYCLES}
+{\footnotesize\ttfamily \#define ADC\+\_\+\+TWOSAMPLINGDELAY\+\_\+10\+CYCLES~((uint32\+\_\+t)(\textbf{ ADC\+\_\+\+CCR\+\_\+\+DELAY\+\_\+2} $\vert$ \textbf{ ADC\+\_\+\+CCR\+\_\+\+DELAY\+\_\+0}))}
+
+
+
+Definition at line 265 of file stm32f4xx\+\_\+hal\+\_\+adc.\+h.
+
+\mbox{\label{group___a_d_c__delay__between__2__sampling__phases_gaac0a9a4fb75f8f22f4c9f6c637f78d37}} 
+\index{ADC Delay Between 2 Sampling Phases@{ADC Delay Between 2 Sampling Phases}!ADC\_TWOSAMPLINGDELAY\_11CYCLES@{ADC\_TWOSAMPLINGDELAY\_11CYCLES}}
+\index{ADC\_TWOSAMPLINGDELAY\_11CYCLES@{ADC\_TWOSAMPLINGDELAY\_11CYCLES}!ADC Delay Between 2 Sampling Phases@{ADC Delay Between 2 Sampling Phases}}
+\doxysubsubsection{ADC\_TWOSAMPLINGDELAY\_11CYCLES}
+{\footnotesize\ttfamily \#define ADC\+\_\+\+TWOSAMPLINGDELAY\+\_\+11\+CYCLES~((uint32\+\_\+t)(\textbf{ ADC\+\_\+\+CCR\+\_\+\+DELAY\+\_\+2} $\vert$ \textbf{ ADC\+\_\+\+CCR\+\_\+\+DELAY\+\_\+1}))}
+
+
+
+Definition at line 266 of file stm32f4xx\+\_\+hal\+\_\+adc.\+h.
+
+\mbox{\label{group___a_d_c__delay__between__2__sampling__phases_ga2d6ed6a9d98c79f4160fe7005fbb9eba}} 
+\index{ADC Delay Between 2 Sampling Phases@{ADC Delay Between 2 Sampling Phases}!ADC\_TWOSAMPLINGDELAY\_12CYCLES@{ADC\_TWOSAMPLINGDELAY\_12CYCLES}}
+\index{ADC\_TWOSAMPLINGDELAY\_12CYCLES@{ADC\_TWOSAMPLINGDELAY\_12CYCLES}!ADC Delay Between 2 Sampling Phases@{ADC Delay Between 2 Sampling Phases}}
+\doxysubsubsection{ADC\_TWOSAMPLINGDELAY\_12CYCLES}
+{\footnotesize\ttfamily \#define ADC\+\_\+\+TWOSAMPLINGDELAY\+\_\+12\+CYCLES~((uint32\+\_\+t)(\textbf{ ADC\+\_\+\+CCR\+\_\+\+DELAY\+\_\+2} $\vert$ \textbf{ ADC\+\_\+\+CCR\+\_\+\+DELAY\+\_\+1} $\vert$ \textbf{ ADC\+\_\+\+CCR\+\_\+\+DELAY\+\_\+0}))}
+
+
+
+Definition at line 267 of file stm32f4xx\+\_\+hal\+\_\+adc.\+h.
+
+\mbox{\label{group___a_d_c__delay__between__2__sampling__phases_gae9dc984b6264e89f3291e9422d7030a6}} 
+\index{ADC Delay Between 2 Sampling Phases@{ADC Delay Between 2 Sampling Phases}!ADC\_TWOSAMPLINGDELAY\_13CYCLES@{ADC\_TWOSAMPLINGDELAY\_13CYCLES}}
+\index{ADC\_TWOSAMPLINGDELAY\_13CYCLES@{ADC\_TWOSAMPLINGDELAY\_13CYCLES}!ADC Delay Between 2 Sampling Phases@{ADC Delay Between 2 Sampling Phases}}
+\doxysubsubsection{ADC\_TWOSAMPLINGDELAY\_13CYCLES}
+{\footnotesize\ttfamily \#define ADC\+\_\+\+TWOSAMPLINGDELAY\+\_\+13\+CYCLES~((uint32\+\_\+t)\textbf{ ADC\+\_\+\+CCR\+\_\+\+DELAY\+\_\+3})}
+
+
+
+Definition at line 268 of file stm32f4xx\+\_\+hal\+\_\+adc.\+h.
+
+\mbox{\label{group___a_d_c__delay__between__2__sampling__phases_gaf1c28381b7c3640ade9b16a4418996c4}} 
+\index{ADC Delay Between 2 Sampling Phases@{ADC Delay Between 2 Sampling Phases}!ADC\_TWOSAMPLINGDELAY\_14CYCLES@{ADC\_TWOSAMPLINGDELAY\_14CYCLES}}
+\index{ADC\_TWOSAMPLINGDELAY\_14CYCLES@{ADC\_TWOSAMPLINGDELAY\_14CYCLES}!ADC Delay Between 2 Sampling Phases@{ADC Delay Between 2 Sampling Phases}}
+\doxysubsubsection{ADC\_TWOSAMPLINGDELAY\_14CYCLES}
+{\footnotesize\ttfamily \#define ADC\+\_\+\+TWOSAMPLINGDELAY\+\_\+14\+CYCLES~((uint32\+\_\+t)(\textbf{ ADC\+\_\+\+CCR\+\_\+\+DELAY\+\_\+3} $\vert$ \textbf{ ADC\+\_\+\+CCR\+\_\+\+DELAY\+\_\+0}))}
+
+
+
+Definition at line 269 of file stm32f4xx\+\_\+hal\+\_\+adc.\+h.
+
+\mbox{\label{group___a_d_c__delay__between__2__sampling__phases_ga168494ac34dad42ee342aebcdfd1808c}} 
+\index{ADC Delay Between 2 Sampling Phases@{ADC Delay Between 2 Sampling Phases}!ADC\_TWOSAMPLINGDELAY\_15CYCLES@{ADC\_TWOSAMPLINGDELAY\_15CYCLES}}
+\index{ADC\_TWOSAMPLINGDELAY\_15CYCLES@{ADC\_TWOSAMPLINGDELAY\_15CYCLES}!ADC Delay Between 2 Sampling Phases@{ADC Delay Between 2 Sampling Phases}}
+\doxysubsubsection{ADC\_TWOSAMPLINGDELAY\_15CYCLES}
+{\footnotesize\ttfamily \#define ADC\+\_\+\+TWOSAMPLINGDELAY\+\_\+15\+CYCLES~((uint32\+\_\+t)(\textbf{ ADC\+\_\+\+CCR\+\_\+\+DELAY\+\_\+3} $\vert$ \textbf{ ADC\+\_\+\+CCR\+\_\+\+DELAY\+\_\+1}))}
+
+
+
+Definition at line 270 of file stm32f4xx\+\_\+hal\+\_\+adc.\+h.
+
+\mbox{\label{group___a_d_c__delay__between__2__sampling__phases_gaf994387c40bf4b9ee52be8c785bd221f}} 
+\index{ADC Delay Between 2 Sampling Phases@{ADC Delay Between 2 Sampling Phases}!ADC\_TWOSAMPLINGDELAY\_16CYCLES@{ADC\_TWOSAMPLINGDELAY\_16CYCLES}}
+\index{ADC\_TWOSAMPLINGDELAY\_16CYCLES@{ADC\_TWOSAMPLINGDELAY\_16CYCLES}!ADC Delay Between 2 Sampling Phases@{ADC Delay Between 2 Sampling Phases}}
+\doxysubsubsection{ADC\_TWOSAMPLINGDELAY\_16CYCLES}
+{\footnotesize\ttfamily \#define ADC\+\_\+\+TWOSAMPLINGDELAY\+\_\+16\+CYCLES~((uint32\+\_\+t)(\textbf{ ADC\+\_\+\+CCR\+\_\+\+DELAY\+\_\+3} $\vert$ \textbf{ ADC\+\_\+\+CCR\+\_\+\+DELAY\+\_\+1} $\vert$ \textbf{ ADC\+\_\+\+CCR\+\_\+\+DELAY\+\_\+0}))}
+
+
+
+Definition at line 271 of file stm32f4xx\+\_\+hal\+\_\+adc.\+h.
+
+\mbox{\label{group___a_d_c__delay__between__2__sampling__phases_gaba99083f97b9869ad8397a04601ad1cb}} 
+\index{ADC Delay Between 2 Sampling Phases@{ADC Delay Between 2 Sampling Phases}!ADC\_TWOSAMPLINGDELAY\_17CYCLES@{ADC\_TWOSAMPLINGDELAY\_17CYCLES}}
+\index{ADC\_TWOSAMPLINGDELAY\_17CYCLES@{ADC\_TWOSAMPLINGDELAY\_17CYCLES}!ADC Delay Between 2 Sampling Phases@{ADC Delay Between 2 Sampling Phases}}
+\doxysubsubsection{ADC\_TWOSAMPLINGDELAY\_17CYCLES}
+{\footnotesize\ttfamily \#define ADC\+\_\+\+TWOSAMPLINGDELAY\+\_\+17\+CYCLES~((uint32\+\_\+t)(\textbf{ ADC\+\_\+\+CCR\+\_\+\+DELAY\+\_\+3} $\vert$ \textbf{ ADC\+\_\+\+CCR\+\_\+\+DELAY\+\_\+2}))}
+
+
+
+Definition at line 272 of file stm32f4xx\+\_\+hal\+\_\+adc.\+h.
+
+\mbox{\label{group___a_d_c__delay__between__2__sampling__phases_ga3d4626768769515ca85ead5834564dd4}} 
+\index{ADC Delay Between 2 Sampling Phases@{ADC Delay Between 2 Sampling Phases}!ADC\_TWOSAMPLINGDELAY\_18CYCLES@{ADC\_TWOSAMPLINGDELAY\_18CYCLES}}
+\index{ADC\_TWOSAMPLINGDELAY\_18CYCLES@{ADC\_TWOSAMPLINGDELAY\_18CYCLES}!ADC Delay Between 2 Sampling Phases@{ADC Delay Between 2 Sampling Phases}}
+\doxysubsubsection{ADC\_TWOSAMPLINGDELAY\_18CYCLES}
+{\footnotesize\ttfamily \#define ADC\+\_\+\+TWOSAMPLINGDELAY\+\_\+18\+CYCLES~((uint32\+\_\+t)(\textbf{ ADC\+\_\+\+CCR\+\_\+\+DELAY\+\_\+3} $\vert$ \textbf{ ADC\+\_\+\+CCR\+\_\+\+DELAY\+\_\+2} $\vert$ \textbf{ ADC\+\_\+\+CCR\+\_\+\+DELAY\+\_\+0}))}
+
+
+
+Definition at line 273 of file stm32f4xx\+\_\+hal\+\_\+adc.\+h.
+
+\mbox{\label{group___a_d_c__delay__between__2__sampling__phases_ga261b9cf07c6e2c6afd7327a629854408}} 
+\index{ADC Delay Between 2 Sampling Phases@{ADC Delay Between 2 Sampling Phases}!ADC\_TWOSAMPLINGDELAY\_19CYCLES@{ADC\_TWOSAMPLINGDELAY\_19CYCLES}}
+\index{ADC\_TWOSAMPLINGDELAY\_19CYCLES@{ADC\_TWOSAMPLINGDELAY\_19CYCLES}!ADC Delay Between 2 Sampling Phases@{ADC Delay Between 2 Sampling Phases}}
+\doxysubsubsection{ADC\_TWOSAMPLINGDELAY\_19CYCLES}
+{\footnotesize\ttfamily \#define ADC\+\_\+\+TWOSAMPLINGDELAY\+\_\+19\+CYCLES~((uint32\+\_\+t)(\textbf{ ADC\+\_\+\+CCR\+\_\+\+DELAY\+\_\+3} $\vert$ \textbf{ ADC\+\_\+\+CCR\+\_\+\+DELAY\+\_\+2} $\vert$ \textbf{ ADC\+\_\+\+CCR\+\_\+\+DELAY\+\_\+1}))}
+
+
+
+Definition at line 274 of file stm32f4xx\+\_\+hal\+\_\+adc.\+h.
+
+\mbox{\label{group___a_d_c__delay__between__2__sampling__phases_ga1a15072ba873631146f76de174ec66ab}} 
+\index{ADC Delay Between 2 Sampling Phases@{ADC Delay Between 2 Sampling Phases}!ADC\_TWOSAMPLINGDELAY\_20CYCLES@{ADC\_TWOSAMPLINGDELAY\_20CYCLES}}
+\index{ADC\_TWOSAMPLINGDELAY\_20CYCLES@{ADC\_TWOSAMPLINGDELAY\_20CYCLES}!ADC Delay Between 2 Sampling Phases@{ADC Delay Between 2 Sampling Phases}}
+\doxysubsubsection{ADC\_TWOSAMPLINGDELAY\_20CYCLES}
+{\footnotesize\ttfamily \#define ADC\+\_\+\+TWOSAMPLINGDELAY\+\_\+20\+CYCLES~((uint32\+\_\+t)\textbf{ ADC\+\_\+\+CCR\+\_\+\+DELAY})}
+
+
+
+Definition at line 275 of file stm32f4xx\+\_\+hal\+\_\+adc.\+h.
+
+\mbox{\label{group___a_d_c__delay__between__2__sampling__phases_gaf809f893a5fb22f6003d7248e484a991}} 
+\index{ADC Delay Between 2 Sampling Phases@{ADC Delay Between 2 Sampling Phases}!ADC\_TWOSAMPLINGDELAY\_5CYCLES@{ADC\_TWOSAMPLINGDELAY\_5CYCLES}}
+\index{ADC\_TWOSAMPLINGDELAY\_5CYCLES@{ADC\_TWOSAMPLINGDELAY\_5CYCLES}!ADC Delay Between 2 Sampling Phases@{ADC Delay Between 2 Sampling Phases}}
+\doxysubsubsection{ADC\_TWOSAMPLINGDELAY\_5CYCLES}
+{\footnotesize\ttfamily \#define ADC\+\_\+\+TWOSAMPLINGDELAY\+\_\+5\+CYCLES~((uint32\+\_\+t)0x00000000U)}
+
+
+
+Definition at line 260 of file stm32f4xx\+\_\+hal\+\_\+adc.\+h.
+
+\mbox{\label{group___a_d_c__delay__between__2__sampling__phases_ga3d731370a25ed30d8c1dae716d14b8bf}} 
+\index{ADC Delay Between 2 Sampling Phases@{ADC Delay Between 2 Sampling Phases}!ADC\_TWOSAMPLINGDELAY\_6CYCLES@{ADC\_TWOSAMPLINGDELAY\_6CYCLES}}
+\index{ADC\_TWOSAMPLINGDELAY\_6CYCLES@{ADC\_TWOSAMPLINGDELAY\_6CYCLES}!ADC Delay Between 2 Sampling Phases@{ADC Delay Between 2 Sampling Phases}}
+\doxysubsubsection{ADC\_TWOSAMPLINGDELAY\_6CYCLES}
+{\footnotesize\ttfamily \#define ADC\+\_\+\+TWOSAMPLINGDELAY\+\_\+6\+CYCLES~((uint32\+\_\+t)\textbf{ ADC\+\_\+\+CCR\+\_\+\+DELAY\+\_\+0})}
+
+
+
+Definition at line 261 of file stm32f4xx\+\_\+hal\+\_\+adc.\+h.
+
+\mbox{\label{group___a_d_c__delay__between__2__sampling__phases_ga630f7e758937ff7d1705ef4894227f08}} 
+\index{ADC Delay Between 2 Sampling Phases@{ADC Delay Between 2 Sampling Phases}!ADC\_TWOSAMPLINGDELAY\_7CYCLES@{ADC\_TWOSAMPLINGDELAY\_7CYCLES}}
+\index{ADC\_TWOSAMPLINGDELAY\_7CYCLES@{ADC\_TWOSAMPLINGDELAY\_7CYCLES}!ADC Delay Between 2 Sampling Phases@{ADC Delay Between 2 Sampling Phases}}
+\doxysubsubsection{ADC\_TWOSAMPLINGDELAY\_7CYCLES}
+{\footnotesize\ttfamily \#define ADC\+\_\+\+TWOSAMPLINGDELAY\+\_\+7\+CYCLES~((uint32\+\_\+t)\textbf{ ADC\+\_\+\+CCR\+\_\+\+DELAY\+\_\+1})}
+
+
+
+Definition at line 262 of file stm32f4xx\+\_\+hal\+\_\+adc.\+h.
+
+\mbox{\label{group___a_d_c__delay__between__2__sampling__phases_ga4a36c5233614aa76e4d911677c26067b}} 
+\index{ADC Delay Between 2 Sampling Phases@{ADC Delay Between 2 Sampling Phases}!ADC\_TWOSAMPLINGDELAY\_8CYCLES@{ADC\_TWOSAMPLINGDELAY\_8CYCLES}}
+\index{ADC\_TWOSAMPLINGDELAY\_8CYCLES@{ADC\_TWOSAMPLINGDELAY\_8CYCLES}!ADC Delay Between 2 Sampling Phases@{ADC Delay Between 2 Sampling Phases}}
+\doxysubsubsection{ADC\_TWOSAMPLINGDELAY\_8CYCLES}
+{\footnotesize\ttfamily \#define ADC\+\_\+\+TWOSAMPLINGDELAY\+\_\+8\+CYCLES~((uint32\+\_\+t)(\textbf{ ADC\+\_\+\+CCR\+\_\+\+DELAY\+\_\+1} $\vert$ \textbf{ ADC\+\_\+\+CCR\+\_\+\+DELAY\+\_\+0}))}
+
+
+
+Definition at line 263 of file stm32f4xx\+\_\+hal\+\_\+adc.\+h.
+
+\mbox{\label{group___a_d_c__delay__between__2__sampling__phases_ga504d458d630d8517836cc71e759af58f}} 
+\index{ADC Delay Between 2 Sampling Phases@{ADC Delay Between 2 Sampling Phases}!ADC\_TWOSAMPLINGDELAY\_9CYCLES@{ADC\_TWOSAMPLINGDELAY\_9CYCLES}}
+\index{ADC\_TWOSAMPLINGDELAY\_9CYCLES@{ADC\_TWOSAMPLINGDELAY\_9CYCLES}!ADC Delay Between 2 Sampling Phases@{ADC Delay Between 2 Sampling Phases}}
+\doxysubsubsection{ADC\_TWOSAMPLINGDELAY\_9CYCLES}
+{\footnotesize\ttfamily \#define ADC\+\_\+\+TWOSAMPLINGDELAY\+\_\+9\+CYCLES~((uint32\+\_\+t)\textbf{ ADC\+\_\+\+CCR\+\_\+\+DELAY\+\_\+2})}
+
+
+
+Definition at line 264 of file stm32f4xx\+\_\+hal\+\_\+adc.\+h.
+

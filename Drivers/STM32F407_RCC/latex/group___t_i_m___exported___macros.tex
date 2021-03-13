@@ -1,0 +1,803 @@
+\doxysection{TIM Exported Macros}
+\label{group___t_i_m___exported___macros}\index{TIM Exported Macros@{TIM Exported Macros}}
+Collaboration diagram for TIM Exported Macros\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=258pt]{group___t_i_m___exported___macros}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+TIM\+\_\+\+RESET\+\_\+\+HANDLE\+\_\+\+STATE}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$State = \textbf{ HAL\+\_\+\+TIM\+\_\+\+STATE\+\_\+\+RESET})
+\begin{DoxyCompactList}\small\item\em Reset TIM handle state. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+TIM\+\_\+\+ENABLE}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$CR1$\vert$=(\textbf{ TIM\+\_\+\+CR1\+\_\+\+CEN}))
+\begin{DoxyCompactList}\small\item\em Enable the TIM peripheral. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+TIM\+\_\+\+MOE\+\_\+\+ENABLE}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$BDTR$\vert$=(\textbf{ TIM\+\_\+\+BDTR\+\_\+\+MOE}))
+\begin{DoxyCompactList}\small\item\em Enable the TIM main Output. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+TIM\+\_\+\+DISABLE}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Disable the TIM peripheral. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+TIM\+\_\+\+MOE\+\_\+\+DISABLE}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Disable the TIM main Output. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+TIM\+\_\+\+ENABLE\+\_\+\+IT}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$DIER $\vert$= (\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+))
+\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+TIM\+\_\+\+ENABLE\+\_\+\+DMA}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+DMA\+\_\+\+\_\+)~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$DIER $\vert$= (\+\_\+\+\_\+\+DMA\+\_\+\+\_\+))
+\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+TIM\+\_\+\+DISABLE\+\_\+\+IT}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$DIER \&= $\sim$(\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+))
+\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+TIM\+\_\+\+DISABLE\+\_\+\+DMA}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+DMA\+\_\+\+\_\+)~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$DIER \&= $\sim$(\+\_\+\+\_\+\+DMA\+\_\+\+\_\+))
+\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+TIM\+\_\+\+GET\+\_\+\+FLAG}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+FLAG\+\_\+\+\_\+)~(((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$SR \&(\+\_\+\+\_\+\+FLAG\+\_\+\+\_\+)) == (\+\_\+\+\_\+\+FLAG\+\_\+\+\_\+))
+\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+TIM\+\_\+\+CLEAR\+\_\+\+FLAG}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+FLAG\+\_\+\+\_\+)~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$SR = $\sim$(\+\_\+\+\_\+\+FLAG\+\_\+\+\_\+))
+\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+TIM\+\_\+\+GET\+\_\+\+IT\+\_\+\+SOURCE}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)~((((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$DIER \& (\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)) == (\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)) ? \textbf{ SET} \+: \textbf{ RESET})
+\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+TIM\+\_\+\+CLEAR\+\_\+\+IT}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$SR = $\sim$(\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+))
+\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+TIM\+\_\+\+IS\+\_\+\+TIM\+\_\+\+COUNTING\+\_\+\+DOWN}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)~(((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$CR1 \&(\textbf{ TIM\+\_\+\+CR1\+\_\+\+DIR})) == (\textbf{ TIM\+\_\+\+CR1\+\_\+\+DIR}))
+\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+TIM\+\_\+\+SET\+\_\+\+PRESCALER}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+PRESC\+\_\+\+\_\+)~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$PSC = (\+\_\+\+\_\+\+PRESC\+\_\+\+\_\+))
+\item 
+\#define \textbf{ TIM\+\_\+\+SET\+\_\+\+ICPRESCALERVALUE}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+CHANNEL\+\_\+\+\_\+,  \+\_\+\+\_\+\+ICPSC\+\_\+\+\_\+)
+\item 
+\#define \textbf{ TIM\+\_\+\+RESET\+\_\+\+ICPRESCALERVALUE}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+CHANNEL\+\_\+\+\_\+)
+\item 
+\#define \textbf{ TIM\+\_\+\+SET\+\_\+\+CAPTUREPOLARITY}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+CHANNEL\+\_\+\+\_\+,  \+\_\+\+\_\+\+POLARITY\+\_\+\+\_\+)
+\item 
+\#define \textbf{ TIM\+\_\+\+RESET\+\_\+\+CAPTUREPOLARITY}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+CHANNEL\+\_\+\+\_\+)
+\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+TIM\+\_\+\+SET\+\_\+\+COMPARE}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+CHANNEL\+\_\+\+\_\+,  \+\_\+\+\_\+\+COMPARE\+\_\+\+\_\+)~($\ast$(\textbf{ \+\_\+\+\_\+\+IO} uint32\+\_\+t $\ast$)(\&((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$CCR1) + ((\+\_\+\+\_\+\+CHANNEL\+\_\+\+\_\+) $>$$>$ 2U)) = (\+\_\+\+\_\+\+COMPARE\+\_\+\+\_\+))
+\begin{DoxyCompactList}\small\item\em Sets the TIM Capture Compare Register value on runtime without calling another time Config\+Channel function. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+TIM\+\_\+\+GET\+\_\+\+COMPARE}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+CHANNEL\+\_\+\+\_\+)~  ($\ast$(\textbf{ \+\_\+\+\_\+\+IO} uint32\+\_\+t $\ast$)(\&((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$CCR1) + ((\+\_\+\+\_\+\+CHANNEL\+\_\+\+\_\+) $>$$>$ 2U)))
+\begin{DoxyCompactList}\small\item\em Gets the TIM Capture Compare Register value on runtime. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+TIM\+\_\+\+SET\+\_\+\+COUNTER}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+COUNTER\+\_\+\+\_\+)~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$CNT = (\+\_\+\+\_\+\+COUNTER\+\_\+\+\_\+))
+\begin{DoxyCompactList}\small\item\em Sets the TIM Counter Register value on runtime. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+TIM\+\_\+\+GET\+\_\+\+COUNTER}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$CNT)
+\begin{DoxyCompactList}\small\item\em Gets the TIM Counter Register value on runtime. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+TIM\+\_\+\+SET\+\_\+\+AUTORELOAD}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+AUTORELOAD\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Sets the TIM Autoreload Register value on runtime without calling another time any Init function. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+TIM\+\_\+\+GET\+\_\+\+AUTORELOAD}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$ARR)
+\begin{DoxyCompactList}\small\item\em Gets the TIM Autoreload Register value on runtime. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+TIM\+\_\+\+SET\+\_\+\+CLOCKDIVISION}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+CKD\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Sets the TIM Clock Division value on runtime without calling another time any Init function. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+TIM\+\_\+\+GET\+\_\+\+CLOCKDIVISION}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$CR1 \& \textbf{ TIM\+\_\+\+CR1\+\_\+\+CKD})
+\begin{DoxyCompactList}\small\item\em Gets the TIM Clock Division value on runtime. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+TIM\+\_\+\+SET\+\_\+\+ICPRESCALER}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+CHANNEL\+\_\+\+\_\+,  \+\_\+\+\_\+\+ICPSC\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Sets the TIM Input Capture prescaler on runtime without calling another time \doxyref{HAL\+\_\+\+TIM\+\_\+\+IC\+\_\+\+Config\+Channel()}{p.}{group___t_i_m___exported___functions___group8_ga34805dabaf748c6eb823275dad2f19f5} function. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+TIM\+\_\+\+GET\+\_\+\+ICPRESCALER}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+CHANNEL\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Gets the TIM Input Capture prescaler on runtime. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+TIM\+\_\+\+URS\+\_\+\+ENABLE}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)~    ((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$CR1$\vert$= (\textbf{ TIM\+\_\+\+CR1\+\_\+\+URS}))
+\begin{DoxyCompactList}\small\item\em Set the Update Request Source (URS) bit of the TIMx\+\_\+\+CR1 register. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+TIM\+\_\+\+URS\+\_\+\+DISABLE}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)~      ((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$CR1\&=$\sim$(\textbf{ TIM\+\_\+\+CR1\+\_\+\+URS}))
+\begin{DoxyCompactList}\small\item\em Reset the Update Request Source (URS) bit of the TIMx\+\_\+\+CR1 register. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+TIM\+\_\+\+SET\+\_\+\+CAPTUREPOLARITY}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+CHANNEL\+\_\+\+\_\+,  \+\_\+\+\_\+\+POLARITY\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Sets the TIM Capture x input polarity on runtime. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\label{group___t_i_m___exported___macros_ga2fe74db6b8cb4badd04ed48e0f5ac7b4}} 
+\index{TIM Exported Macros@{TIM Exported Macros}!\_\_HAL\_TIM\_CLEAR\_FLAG@{\_\_HAL\_TIM\_CLEAR\_FLAG}}
+\index{\_\_HAL\_TIM\_CLEAR\_FLAG@{\_\_HAL\_TIM\_CLEAR\_FLAG}!TIM Exported Macros@{TIM Exported Macros}}
+\doxysubsubsection{\_\_HAL\_TIM\_CLEAR\_FLAG}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+TIM\+\_\+\+CLEAR\+\_\+\+FLAG(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+FLAG\+\_\+\+\_\+ }\end{DoxyParamCaption})~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$SR = $\sim$(\+\_\+\+\_\+\+FLAG\+\_\+\+\_\+))}
+
+
+
+Definition at line 915 of file stm32f4xx\+\_\+hal\+\_\+tim.\+h.
+
+\mbox{\label{group___t_i_m___exported___macros_gaea68155ce77e591e0c2582def061d6f0}} 
+\index{TIM Exported Macros@{TIM Exported Macros}!\_\_HAL\_TIM\_CLEAR\_IT@{\_\_HAL\_TIM\_CLEAR\_IT}}
+\index{\_\_HAL\_TIM\_CLEAR\_IT@{\_\_HAL\_TIM\_CLEAR\_IT}!TIM Exported Macros@{TIM Exported Macros}}
+\doxysubsubsection{\_\_HAL\_TIM\_CLEAR\_IT}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+TIM\+\_\+\+CLEAR\+\_\+\+IT(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+ }\end{DoxyParamCaption})~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$SR = $\sim$(\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+))}
+
+
+
+Definition at line 918 of file stm32f4xx\+\_\+hal\+\_\+tim.\+h.
+
+\mbox{\label{group___t_i_m___exported___macros_ga6a5e653e0e06a04151b74eb1a5f96eb6}} 
+\index{TIM Exported Macros@{TIM Exported Macros}!\_\_HAL\_TIM\_DISABLE@{\_\_HAL\_TIM\_DISABLE}}
+\index{\_\_HAL\_TIM\_DISABLE@{\_\_HAL\_TIM\_DISABLE}!TIM Exported Macros@{TIM Exported Macros}}
+\doxysubsubsection{\_\_HAL\_TIM\_DISABLE}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+TIM\+\_\+\+DISABLE(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                        \textcolor{keywordflow}{do} \{ \(\backslash\)}
+\DoxyCodeLine{                          if (((\_\_HANDLE\_\_)-\/>Instance-\/>CCER \& TIM\_CCER\_CCxE\_MASK) == 0U) \(\backslash\)}
+\DoxyCodeLine{                          \{ \(\backslash\)}
+\DoxyCodeLine{                            if(((\_\_HANDLE\_\_)-\/>Instance-\/>CCER \& TIM\_CCER\_CCxNE\_MASK) == 0U) \(\backslash\)}
+\DoxyCodeLine{                            \{ \(\backslash\)}
+\DoxyCodeLine{                              (\_\_HANDLE\_\_)-\/>Instance-\/>CR1 \&= \string~(TIM\_CR1\_CEN); \(\backslash\)}
+\DoxyCodeLine{                            \} \(\backslash\)}
+\DoxyCodeLine{                          \} \(\backslash\)}
+\DoxyCodeLine{                        \} \textcolor{keywordflow}{while}(0)}
+
+\end{DoxyCode}
+
+
+Disable the TIM peripheral. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$strong$>$\+HANDLE$<$/strong$>$} & TIM handle \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 881 of file stm32f4xx\+\_\+hal\+\_\+tim.\+h.
+
+\mbox{\label{group___t_i_m___exported___macros_ga1a6e8b19efd23fd0295802d904c4702f}} 
+\index{TIM Exported Macros@{TIM Exported Macros}!\_\_HAL\_TIM\_DISABLE\_DMA@{\_\_HAL\_TIM\_DISABLE\_DMA}}
+\index{\_\_HAL\_TIM\_DISABLE\_DMA@{\_\_HAL\_TIM\_DISABLE\_DMA}!TIM Exported Macros@{TIM Exported Macros}}
+\doxysubsubsection{\_\_HAL\_TIM\_DISABLE\_DMA}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+TIM\+\_\+\+DISABLE\+\_\+\+DMA(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+DMA\+\_\+\+\_\+ }\end{DoxyParamCaption})~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$DIER \&= $\sim$(\+\_\+\+\_\+\+DMA\+\_\+\+\_\+))}
+
+
+
+Definition at line 913 of file stm32f4xx\+\_\+hal\+\_\+tim.\+h.
+
+\mbox{\label{group___t_i_m___exported___macros_ga31d67e905bc62e3142179dc4bbf8ba64}} 
+\index{TIM Exported Macros@{TIM Exported Macros}!\_\_HAL\_TIM\_DISABLE\_IT@{\_\_HAL\_TIM\_DISABLE\_IT}}
+\index{\_\_HAL\_TIM\_DISABLE\_IT@{\_\_HAL\_TIM\_DISABLE\_IT}!TIM Exported Macros@{TIM Exported Macros}}
+\doxysubsubsection{\_\_HAL\_TIM\_DISABLE\_IT}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+TIM\+\_\+\+DISABLE\+\_\+\+IT(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+ }\end{DoxyParamCaption})~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$DIER \&= $\sim$(\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+))}
+
+
+
+Definition at line 912 of file stm32f4xx\+\_\+hal\+\_\+tim.\+h.
+
+\mbox{\label{group___t_i_m___exported___macros_ga1a90544705059e9f19f991651623b0c0}} 
+\index{TIM Exported Macros@{TIM Exported Macros}!\_\_HAL\_TIM\_ENABLE@{\_\_HAL\_TIM\_ENABLE}}
+\index{\_\_HAL\_TIM\_ENABLE@{\_\_HAL\_TIM\_ENABLE}!TIM Exported Macros@{TIM Exported Macros}}
+\doxysubsubsection{\_\_HAL\_TIM\_ENABLE}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+TIM\+\_\+\+ENABLE(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+ }\end{DoxyParamCaption})~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$CR1$\vert$=(\textbf{ TIM\+\_\+\+CR1\+\_\+\+CEN}))}
+
+
+
+Enable the TIM peripheral. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$strong$>$\+HANDLE$<$/strong$>$} & TIM handle \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 866 of file stm32f4xx\+\_\+hal\+\_\+tim.\+h.
+
+\mbox{\label{group___t_i_m___exported___macros_gabb91ccd46cd7204c87170a1ea5b38135}} 
+\index{TIM Exported Macros@{TIM Exported Macros}!\_\_HAL\_TIM\_ENABLE\_DMA@{\_\_HAL\_TIM\_ENABLE\_DMA}}
+\index{\_\_HAL\_TIM\_ENABLE\_DMA@{\_\_HAL\_TIM\_ENABLE\_DMA}!TIM Exported Macros@{TIM Exported Macros}}
+\doxysubsubsection{\_\_HAL\_TIM\_ENABLE\_DMA}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+TIM\+\_\+\+ENABLE\+\_\+\+DMA(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+DMA\+\_\+\+\_\+ }\end{DoxyParamCaption})~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$DIER $\vert$= (\+\_\+\+\_\+\+DMA\+\_\+\+\_\+))}
+
+
+
+Definition at line 911 of file stm32f4xx\+\_\+hal\+\_\+tim.\+h.
+
+\mbox{\label{group___t_i_m___exported___macros_ga4d69943bc4716743c78e3194e259097e}} 
+\index{TIM Exported Macros@{TIM Exported Macros}!\_\_HAL\_TIM\_ENABLE\_IT@{\_\_HAL\_TIM\_ENABLE\_IT}}
+\index{\_\_HAL\_TIM\_ENABLE\_IT@{\_\_HAL\_TIM\_ENABLE\_IT}!TIM Exported Macros@{TIM Exported Macros}}
+\doxysubsubsection{\_\_HAL\_TIM\_ENABLE\_IT}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+TIM\+\_\+\+ENABLE\+\_\+\+IT(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+ }\end{DoxyParamCaption})~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$DIER $\vert$= (\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+))}
+
+
+
+Definition at line 910 of file stm32f4xx\+\_\+hal\+\_\+tim.\+h.
+
+\mbox{\label{group___t_i_m___exported___macros_gaa7a5c7645695bad15bacd402513a028a}} 
+\index{TIM Exported Macros@{TIM Exported Macros}!\_\_HAL\_TIM\_GET\_AUTORELOAD@{\_\_HAL\_TIM\_GET\_AUTORELOAD}}
+\index{\_\_HAL\_TIM\_GET\_AUTORELOAD@{\_\_HAL\_TIM\_GET\_AUTORELOAD}!TIM Exported Macros@{TIM Exported Macros}}
+\doxysubsubsection{\_\_HAL\_TIM\_GET\_AUTORELOAD}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+TIM\+\_\+\+GET\+\_\+\+AUTORELOAD(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+ }\end{DoxyParamCaption})~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$ARR)}
+
+
+
+Gets the TIM Autoreload Register value on runtime. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$strong$>$\+HANDLE$<$/strong$>$} & TIM handle. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 1009 of file stm32f4xx\+\_\+hal\+\_\+tim.\+h.
+
+\mbox{\label{group___t_i_m___exported___macros_gae6bc91bb5940bce52828c690f24001b8}} 
+\index{TIM Exported Macros@{TIM Exported Macros}!\_\_HAL\_TIM\_GET\_CLOCKDIVISION@{\_\_HAL\_TIM\_GET\_CLOCKDIVISION}}
+\index{\_\_HAL\_TIM\_GET\_CLOCKDIVISION@{\_\_HAL\_TIM\_GET\_CLOCKDIVISION}!TIM Exported Macros@{TIM Exported Macros}}
+\doxysubsubsection{\_\_HAL\_TIM\_GET\_CLOCKDIVISION}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+TIM\+\_\+\+GET\+\_\+\+CLOCKDIVISION(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+ }\end{DoxyParamCaption})~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$CR1 \& \textbf{ TIM\+\_\+\+CR1\+\_\+\+CKD})}
+
+
+
+Gets the TIM Clock Division value on runtime. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$strong$>$\+HANDLE$<$/strong$>$} & TIM handle. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 1033 of file stm32f4xx\+\_\+hal\+\_\+tim.\+h.
+
+\mbox{\label{group___t_i_m___exported___macros_gaa40722f56910966e1da5241b610eed84}} 
+\index{TIM Exported Macros@{TIM Exported Macros}!\_\_HAL\_TIM\_GET\_COMPARE@{\_\_HAL\_TIM\_GET\_COMPARE}}
+\index{\_\_HAL\_TIM\_GET\_COMPARE@{\_\_HAL\_TIM\_GET\_COMPARE}!TIM Exported Macros@{TIM Exported Macros}}
+\doxysubsubsection{\_\_HAL\_TIM\_GET\_COMPARE}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+TIM\+\_\+\+GET\+\_\+\+COMPARE(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+CHANNEL\+\_\+\+\_\+ }\end{DoxyParamCaption})~  ($\ast$(\textbf{ \+\_\+\+\_\+\+IO} uint32\+\_\+t $\ast$)(\&((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$CCR1) + ((\+\_\+\+\_\+\+CHANNEL\+\_\+\+\_\+) $>$$>$ 2U)))}
+
+
+
+Gets the TIM Capture Compare Register value on runtime. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$strong$>$\+HANDLE$<$/strong$>$} & TIM handle. \\
+\hline
+{\em $<$strong$>$\+CHANNEL$<$/strong$>$} & \+: TIM Channel associated with the capture compare register This parameter can be one of the following values\+: \begin{DoxyItemize}
+\item TIM\+\_\+\+CHANNEL\+\_\+1\+: get capture/compare 1 register value \item TIM\+\_\+\+CHANNEL\+\_\+2\+: get capture/compare 2 register value \item TIM\+\_\+\+CHANNEL\+\_\+3\+: get capture/compare 3 register value \item TIM\+\_\+\+CHANNEL\+\_\+4\+: get capture/compare 4 register value \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 974 of file stm32f4xx\+\_\+hal\+\_\+tim.\+h.
+
+\mbox{\label{group___t_i_m___exported___macros_gaf1af08014b9d06efbbb091d58d47c8ba}} 
+\index{TIM Exported Macros@{TIM Exported Macros}!\_\_HAL\_TIM\_GET\_COUNTER@{\_\_HAL\_TIM\_GET\_COUNTER}}
+\index{\_\_HAL\_TIM\_GET\_COUNTER@{\_\_HAL\_TIM\_GET\_COUNTER}!TIM Exported Macros@{TIM Exported Macros}}
+\doxysubsubsection{\_\_HAL\_TIM\_GET\_COUNTER}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+TIM\+\_\+\+GET\+\_\+\+COUNTER(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+ }\end{DoxyParamCaption})~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$CNT)}
+
+
+
+Gets the TIM Counter Register value on runtime. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$strong$>$\+HANDLE$<$/strong$>$} & TIM handle. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 990 of file stm32f4xx\+\_\+hal\+\_\+tim.\+h.
+
+\mbox{\label{group___t_i_m___exported___macros_ga96d98c66ad9d85f00c148de99888ef19}} 
+\index{TIM Exported Macros@{TIM Exported Macros}!\_\_HAL\_TIM\_GET\_FLAG@{\_\_HAL\_TIM\_GET\_FLAG}}
+\index{\_\_HAL\_TIM\_GET\_FLAG@{\_\_HAL\_TIM\_GET\_FLAG}!TIM Exported Macros@{TIM Exported Macros}}
+\doxysubsubsection{\_\_HAL\_TIM\_GET\_FLAG}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+TIM\+\_\+\+GET\+\_\+\+FLAG(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+FLAG\+\_\+\+\_\+ }\end{DoxyParamCaption})~(((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$SR \&(\+\_\+\+\_\+\+FLAG\+\_\+\+\_\+)) == (\+\_\+\+\_\+\+FLAG\+\_\+\+\_\+))}
+
+
+
+Definition at line 914 of file stm32f4xx\+\_\+hal\+\_\+tim.\+h.
+
+\mbox{\label{group___t_i_m___exported___macros_gabfeec6b3c67a5747c7dbd20aff61d8e2}} 
+\index{TIM Exported Macros@{TIM Exported Macros}!\_\_HAL\_TIM\_GET\_ICPRESCALER@{\_\_HAL\_TIM\_GET\_ICPRESCALER}}
+\index{\_\_HAL\_TIM\_GET\_ICPRESCALER@{\_\_HAL\_TIM\_GET\_ICPRESCALER}!TIM Exported Macros@{TIM Exported Macros}}
+\doxysubsubsection{\_\_HAL\_TIM\_GET\_ICPRESCALER}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+TIM\+\_\+\+GET\+\_\+\+ICPRESCALER(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+CHANNEL\+\_\+\+\_\+ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  (((\_\_CHANNEL\_\_) == TIM\_CHANNEL\_1) ? ((\_\_HANDLE\_\_)-\/>Instance-\/>CCMR1 \& TIM\_CCMR1\_IC1PSC) :\(\backslash\)}
+\DoxyCodeLine{   ((\_\_CHANNEL\_\_) == TIM\_CHANNEL\_2) ? (((\_\_HANDLE\_\_)-\/>Instance-\/>CCMR1 \& TIM\_CCMR1\_IC2PSC) >> 8U) :\(\backslash\)}
+\DoxyCodeLine{   ((\_\_CHANNEL\_\_) == TIM\_CHANNEL\_3) ? ((\_\_HANDLE\_\_)-\/>Instance-\/>CCMR2 \& TIM\_CCMR2\_IC3PSC) :\(\backslash\)}
+\DoxyCodeLine{   (((\_\_HANDLE\_\_)-\/>Instance-\/>CCMR2 \& TIM\_CCMR2\_IC4PSC)) >> 8U)}
+
+\end{DoxyCode}
+
+
+Gets the TIM Input Capture prescaler on runtime. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$strong$>$\+HANDLE$<$/strong$>$} & TIM handle. \\
+\hline
+{\em $<$strong$>$\+CHANNEL$<$/strong$>$} & \+: TIM Channels to be configured. This parameter can be one of the following values\+: \begin{DoxyItemize}
+\item TIM\+\_\+\+CHANNEL\+\_\+1\+: get input capture 1 prescaler value \item TIM\+\_\+\+CHANNEL\+\_\+2\+: get input capture 2 prescaler value \item TIM\+\_\+\+CHANNEL\+\_\+3\+: get input capture 3 prescaler value \item TIM\+\_\+\+CHANNEL\+\_\+4\+: get input capture 4 prescaler value \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 1070 of file stm32f4xx\+\_\+hal\+\_\+tim.\+h.
+
+\mbox{\label{group___t_i_m___exported___macros_ga644babf93470a6eee6bce8906c4da5c5}} 
+\index{TIM Exported Macros@{TIM Exported Macros}!\_\_HAL\_TIM\_GET\_IT\_SOURCE@{\_\_HAL\_TIM\_GET\_IT\_SOURCE}}
+\index{\_\_HAL\_TIM\_GET\_IT\_SOURCE@{\_\_HAL\_TIM\_GET\_IT\_SOURCE}!TIM Exported Macros@{TIM Exported Macros}}
+\doxysubsubsection{\_\_HAL\_TIM\_GET\_IT\_SOURCE}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+TIM\+\_\+\+GET\+\_\+\+IT\+\_\+\+SOURCE(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+ }\end{DoxyParamCaption})~((((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$DIER \& (\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)) == (\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)) ? \textbf{ SET} \+: \textbf{ RESET})}
+
+
+
+Definition at line 917 of file stm32f4xx\+\_\+hal\+\_\+tim.\+h.
+
+\mbox{\label{group___t_i_m___exported___macros_gac73f5e7669d92971830481e7298e98ba}} 
+\index{TIM Exported Macros@{TIM Exported Macros}!\_\_HAL\_TIM\_IS\_TIM\_COUNTING\_DOWN@{\_\_HAL\_TIM\_IS\_TIM\_COUNTING\_DOWN}}
+\index{\_\_HAL\_TIM\_IS\_TIM\_COUNTING\_DOWN@{\_\_HAL\_TIM\_IS\_TIM\_COUNTING\_DOWN}!TIM Exported Macros@{TIM Exported Macros}}
+\doxysubsubsection{\_\_HAL\_TIM\_IS\_TIM\_COUNTING\_DOWN}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+TIM\+\_\+\+IS\+\_\+\+TIM\+\_\+\+COUNTING\+\_\+\+DOWN(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+ }\end{DoxyParamCaption})~(((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$CR1 \&(\textbf{ TIM\+\_\+\+CR1\+\_\+\+DIR})) == (\textbf{ TIM\+\_\+\+CR1\+\_\+\+DIR}))}
+
+
+
+Definition at line 920 of file stm32f4xx\+\_\+hal\+\_\+tim.\+h.
+
+\mbox{\label{group___t_i_m___exported___macros_ga69d63e147faeca8909e9679f684c0325}} 
+\index{TIM Exported Macros@{TIM Exported Macros}!\_\_HAL\_TIM\_MOE\_DISABLE@{\_\_HAL\_TIM\_MOE\_DISABLE}}
+\index{\_\_HAL\_TIM\_MOE\_DISABLE@{\_\_HAL\_TIM\_MOE\_DISABLE}!TIM Exported Macros@{TIM Exported Macros}}
+\doxysubsubsection{\_\_HAL\_TIM\_MOE\_DISABLE}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+TIM\+\_\+\+MOE\+\_\+\+DISABLE(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                        \textcolor{keywordflow}{do} \{ \(\backslash\)}
+\DoxyCodeLine{                          if (((\_\_HANDLE\_\_)-\/>Instance-\/>CCER \& TIM\_CCER\_CCxE\_MASK) == 0U) \(\backslash\)}
+\DoxyCodeLine{                          \{ \(\backslash\)}
+\DoxyCodeLine{                            if(((\_\_HANDLE\_\_)-\/>Instance-\/>CCER \& TIM\_CCER\_CCxNE\_MASK) == 0U) \(\backslash\)}
+\DoxyCodeLine{                            \{ \(\backslash\)}
+\DoxyCodeLine{                              (\_\_HANDLE\_\_)-\/>Instance-\/>BDTR \&= \string~(TIM\_BDTR\_MOE); \(\backslash\)}
+\DoxyCodeLine{                            \} \(\backslash\)}
+\DoxyCodeLine{                          \} \(\backslash\)}
+\DoxyCodeLine{                        \} \textcolor{keywordflow}{while}(0)}
+
+\end{DoxyCode}
+
+
+Disable the TIM main Output. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$strong$>$\+HANDLE$<$/strong$>$} & TIM handle \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 899 of file stm32f4xx\+\_\+hal\+\_\+tim.\+h.
+
+\mbox{\label{group___t_i_m___exported___macros_ga04890dcef3ed061854721a3672585607}} 
+\index{TIM Exported Macros@{TIM Exported Macros}!\_\_HAL\_TIM\_MOE\_ENABLE@{\_\_HAL\_TIM\_MOE\_ENABLE}}
+\index{\_\_HAL\_TIM\_MOE\_ENABLE@{\_\_HAL\_TIM\_MOE\_ENABLE}!TIM Exported Macros@{TIM Exported Macros}}
+\doxysubsubsection{\_\_HAL\_TIM\_MOE\_ENABLE}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+TIM\+\_\+\+MOE\+\_\+\+ENABLE(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+ }\end{DoxyParamCaption})~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$BDTR$\vert$=(\textbf{ TIM\+\_\+\+BDTR\+\_\+\+MOE}))}
+
+
+
+Enable the TIM main Output. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$strong$>$\+HANDLE$<$/strong$>$} & TIM handle \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 873 of file stm32f4xx\+\_\+hal\+\_\+tim.\+h.
+
+\mbox{\label{group___t_i_m___exported___macros_gace20fd4e38231b9682fbc83a80ec19a3}} 
+\index{TIM Exported Macros@{TIM Exported Macros}!\_\_HAL\_TIM\_RESET\_HANDLE\_STATE@{\_\_HAL\_TIM\_RESET\_HANDLE\_STATE}}
+\index{\_\_HAL\_TIM\_RESET\_HANDLE\_STATE@{\_\_HAL\_TIM\_RESET\_HANDLE\_STATE}!TIM Exported Macros@{TIM Exported Macros}}
+\doxysubsubsection{\_\_HAL\_TIM\_RESET\_HANDLE\_STATE}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+TIM\+\_\+\+RESET\+\_\+\+HANDLE\+\_\+\+STATE(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+ }\end{DoxyParamCaption})~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$State = \textbf{ HAL\+\_\+\+TIM\+\_\+\+STATE\+\_\+\+RESET})}
+
+
+
+Reset TIM handle state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$strong$>$\+HANDLE$<$/strong$>$} & TIM handle \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 859 of file stm32f4xx\+\_\+hal\+\_\+tim.\+h.
+
+\mbox{\label{group___t_i_m___exported___macros_ga1e6300cab1e34ecaaf490dc7d4812d69}} 
+\index{TIM Exported Macros@{TIM Exported Macros}!\_\_HAL\_TIM\_SET\_AUTORELOAD@{\_\_HAL\_TIM\_SET\_AUTORELOAD}}
+\index{\_\_HAL\_TIM\_SET\_AUTORELOAD@{\_\_HAL\_TIM\_SET\_AUTORELOAD}!TIM Exported Macros@{TIM Exported Macros}}
+\doxysubsubsection{\_\_HAL\_TIM\_SET\_AUTORELOAD}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+TIM\+\_\+\+SET\+\_\+\+AUTORELOAD(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+AUTORELOAD\+\_\+\+\_\+ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                        \textcolor{keywordflow}{do}\{                                                  \(\backslash\)}
+\DoxyCodeLine{                            (\_\_HANDLE\_\_)-\/>Instance-\/>ARR = (\_\_AUTORELOAD\_\_);  \(\backslash\)}
+\DoxyCodeLine{                            (\_\_HANDLE\_\_)-\/>Init.Period = (\_\_AUTORELOAD\_\_);    \(\backslash\)}
+\DoxyCodeLine{                          \} \textcolor{keywordflow}{while}(0)}
+
+\end{DoxyCode}
+
+
+Sets the TIM Autoreload Register value on runtime without calling another time any Init function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$strong$>$\+HANDLE$<$/strong$>$} & TIM handle. \\
+\hline
+{\em $<$strong$>$\+AUTORELOAD$<$/strong$>$} & specifies the Counter register new value. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 999 of file stm32f4xx\+\_\+hal\+\_\+tim.\+h.
+
+\mbox{\label{group___t_i_m___exported___macros_gac5d6989516caa67fae23a9329228cdc7}} 
+\index{TIM Exported Macros@{TIM Exported Macros}!\_\_HAL\_TIM\_SET\_CAPTUREPOLARITY@{\_\_HAL\_TIM\_SET\_CAPTUREPOLARITY}}
+\index{\_\_HAL\_TIM\_SET\_CAPTUREPOLARITY@{\_\_HAL\_TIM\_SET\_CAPTUREPOLARITY}!TIM Exported Macros@{TIM Exported Macros}}
+\doxysubsubsection{\_\_HAL\_TIM\_SET\_CAPTUREPOLARITY}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+TIM\+\_\+\+SET\+\_\+\+CAPTUREPOLARITY(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+CHANNEL\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+POLARITY\+\_\+\+\_\+ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                       \textcolor{keywordflow}{do}\{                                                                            \(\backslash\)}
+\DoxyCodeLine{                           TIM\_RESET\_CAPTUREPOLARITY((\_\_HANDLE\_\_), (\_\_CHANNEL\_\_));               \(\backslash\)}
+\DoxyCodeLine{                           TIM\_SET\_CAPTUREPOLARITY((\_\_HANDLE\_\_), (\_\_CHANNEL\_\_), (\_\_POLARITY\_\_)); \(\backslash\)}
+\DoxyCodeLine{                         \}\textcolor{keywordflow}{while}(0)}
+
+\end{DoxyCode}
+
+
+Sets the TIM Capture x input polarity on runtime. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$strong$>$\+HANDLE$<$/strong$>$} & TIM handle. \\
+\hline
+{\em $<$strong$>$\+CHANNEL$<$/strong$>$} & TIM Channels to be configured. This parameter can be one of the following values\+: \begin{DoxyItemize}
+\item TIM\+\_\+\+CHANNEL\+\_\+1\+: TIM Channel 1 selected \item TIM\+\_\+\+CHANNEL\+\_\+2\+: TIM Channel 2 selected \item TIM\+\_\+\+CHANNEL\+\_\+3\+: TIM Channel 3 selected \item TIM\+\_\+\+CHANNEL\+\_\+4\+: TIM Channel 4 selected \end{DoxyItemize}
+\\
+\hline
+{\em $<$strong$>$\+POLARITY$<$/strong$>$} & Polarity for TIx source ~\newline
+ \begin{DoxyItemize}
+\item TIM\+\_\+\+INPUTCHANNELPOLARITY\+\_\+\+RISING\+: Rising Edge \item TIM\+\_\+\+INPUTCHANNELPOLARITY\+\_\+\+FALLING\+: Falling Edge \item TIM\+\_\+\+INPUTCHANNELPOLARITY\+\_\+\+BOTHEDGE\+: Rising and Falling Edge \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+The polarity TIM\+\_\+\+INPUTCHANNELPOLARITY\+\_\+\+BOTHEDGE is not authorized for TIM Channel 4. ~\newline
+ 
+\end{DoxyNote}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 1117 of file stm32f4xx\+\_\+hal\+\_\+tim.\+h.
+
+\mbox{\label{group___t_i_m___exported___macros_ga8aa84d77c670890408092630f9b2bdc4}} 
+\index{TIM Exported Macros@{TIM Exported Macros}!\_\_HAL\_TIM\_SET\_CLOCKDIVISION@{\_\_HAL\_TIM\_SET\_CLOCKDIVISION}}
+\index{\_\_HAL\_TIM\_SET\_CLOCKDIVISION@{\_\_HAL\_TIM\_SET\_CLOCKDIVISION}!TIM Exported Macros@{TIM Exported Macros}}
+\doxysubsubsection{\_\_HAL\_TIM\_SET\_CLOCKDIVISION}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+TIM\+\_\+\+SET\+\_\+\+CLOCKDIVISION(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+CKD\+\_\+\+\_\+ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                        \textcolor{keywordflow}{do}\{                                                             \(\backslash\)}
+\DoxyCodeLine{                              (\_\_HANDLE\_\_)-\/>Instance-\/>CR1 \&= (uint16\_t)(\string~TIM\_CR1\_CKD);  \(\backslash\)}
+\DoxyCodeLine{                              (\_\_HANDLE\_\_)-\/>Instance-\/>CR1 |= (\_\_CKD\_\_);                 \(\backslash\)}
+\DoxyCodeLine{                              (\_\_HANDLE\_\_)-\/>Init.ClockDivision = (\_\_CKD\_\_);             \(\backslash\)}
+\DoxyCodeLine{                          \} \textcolor{keywordflow}{while}(0)}
+
+\end{DoxyCode}
+
+
+Sets the TIM Clock Division value on runtime without calling another time any Init function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$strong$>$\+HANDLE$<$/strong$>$} & TIM handle. \\
+\hline
+{\em $<$strong$>$\+CKD$<$/strong$>$} & specifies the clock division value. This parameter can be one of the following value\+: \begin{DoxyItemize}
+\item TIM\+\_\+\+CLOCKDIVISION\+\_\+\+DIV1 \item TIM\+\_\+\+CLOCKDIVISION\+\_\+\+DIV2 \item TIM\+\_\+\+CLOCKDIVISION\+\_\+\+DIV4 \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 1022 of file stm32f4xx\+\_\+hal\+\_\+tim.\+h.
+
+\mbox{\label{group___t_i_m___exported___macros_ga300d0c9624c3b072d3afeb7cef639b66}} 
+\index{TIM Exported Macros@{TIM Exported Macros}!\_\_HAL\_TIM\_SET\_COMPARE@{\_\_HAL\_TIM\_SET\_COMPARE}}
+\index{\_\_HAL\_TIM\_SET\_COMPARE@{\_\_HAL\_TIM\_SET\_COMPARE}!TIM Exported Macros@{TIM Exported Macros}}
+\doxysubsubsection{\_\_HAL\_TIM\_SET\_COMPARE}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+TIM\+\_\+\+SET\+\_\+\+COMPARE(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+CHANNEL\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+COMPARE\+\_\+\+\_\+ }\end{DoxyParamCaption})~($\ast$(\textbf{ \+\_\+\+\_\+\+IO} uint32\+\_\+t $\ast$)(\&((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$CCR1) + ((\+\_\+\+\_\+\+CHANNEL\+\_\+\+\_\+) $>$$>$ 2U)) = (\+\_\+\+\_\+\+COMPARE\+\_\+\+\_\+))}
+
+
+
+Sets the TIM Capture Compare Register value on runtime without calling another time Config\+Channel function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$strong$>$\+HANDLE$<$/strong$>$} & TIM handle. \\
+\hline
+{\em $<$strong$>$\+CHANNEL$<$/strong$>$} & \+: TIM Channels to be configured. This parameter can be one of the following values\+: \begin{DoxyItemize}
+\item TIM\+\_\+\+CHANNEL\+\_\+1\+: TIM Channel 1 selected \item TIM\+\_\+\+CHANNEL\+\_\+2\+: TIM Channel 2 selected \item TIM\+\_\+\+CHANNEL\+\_\+3\+: TIM Channel 3 selected \item TIM\+\_\+\+CHANNEL\+\_\+4\+: TIM Channel 4 selected \end{DoxyItemize}
+\\
+\hline
+{\em $<$strong$>$\+COMPARE$<$/strong$>$} & specifies the Capture Compare register new value. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 960 of file stm32f4xx\+\_\+hal\+\_\+tim.\+h.
+
+\mbox{\label{group___t_i_m___exported___macros_ga9746ac75e4cd25cec1a9ebac8cb82b97}} 
+\index{TIM Exported Macros@{TIM Exported Macros}!\_\_HAL\_TIM\_SET\_COUNTER@{\_\_HAL\_TIM\_SET\_COUNTER}}
+\index{\_\_HAL\_TIM\_SET\_COUNTER@{\_\_HAL\_TIM\_SET\_COUNTER}!TIM Exported Macros@{TIM Exported Macros}}
+\doxysubsubsection{\_\_HAL\_TIM\_SET\_COUNTER}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+TIM\+\_\+\+SET\+\_\+\+COUNTER(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+COUNTER\+\_\+\+\_\+ }\end{DoxyParamCaption})~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$CNT = (\+\_\+\+\_\+\+COUNTER\+\_\+\+\_\+))}
+
+
+
+Sets the TIM Counter Register value on runtime. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$strong$>$\+HANDLE$<$/strong$>$} & TIM handle. \\
+\hline
+{\em $<$strong$>$\+COUNTER$<$/strong$>$} & specifies the Counter register new value. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 983 of file stm32f4xx\+\_\+hal\+\_\+tim.\+h.
+
+\mbox{\label{group___t_i_m___exported___macros_gaeb106399b95ef02cec502f58276a0e92}} 
+\index{TIM Exported Macros@{TIM Exported Macros}!\_\_HAL\_TIM\_SET\_ICPRESCALER@{\_\_HAL\_TIM\_SET\_ICPRESCALER}}
+\index{\_\_HAL\_TIM\_SET\_ICPRESCALER@{\_\_HAL\_TIM\_SET\_ICPRESCALER}!TIM Exported Macros@{TIM Exported Macros}}
+\doxysubsubsection{\_\_HAL\_TIM\_SET\_ICPRESCALER}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+TIM\+\_\+\+SET\+\_\+\+ICPRESCALER(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+CHANNEL\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+ICPSC\+\_\+\+\_\+ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                        \textcolor{keywordflow}{do}\{                                                    \(\backslash\)}
+\DoxyCodeLine{                              TIM\_RESET\_ICPRESCALERVALUE((\_\_HANDLE\_\_), (\_\_CHANNEL\_\_));  \(\backslash\)}
+\DoxyCodeLine{                              TIM\_SET\_ICPRESCALERVALUE((\_\_HANDLE\_\_), (\_\_CHANNEL\_\_), (\_\_ICPSC\_\_)); \(\backslash\)}
+\DoxyCodeLine{                          \} \textcolor{keywordflow}{while}(0)}
+
+\end{DoxyCode}
+
+
+Sets the TIM Input Capture prescaler on runtime without calling another time \doxyref{HAL\+\_\+\+TIM\+\_\+\+IC\+\_\+\+Config\+Channel()}{p.}{group___t_i_m___exported___functions___group8_ga34805dabaf748c6eb823275dad2f19f5} function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$strong$>$\+HANDLE$<$/strong$>$} & TIM handle. \\
+\hline
+{\em $<$strong$>$\+CHANNEL$<$/strong$>$} & \+: TIM Channels to be configured. This parameter can be one of the following values\+: \begin{DoxyItemize}
+\item TIM\+\_\+\+CHANNEL\+\_\+1\+: TIM Channel 1 selected \item TIM\+\_\+\+CHANNEL\+\_\+2\+: TIM Channel 2 selected \item TIM\+\_\+\+CHANNEL\+\_\+3\+: TIM Channel 3 selected \item TIM\+\_\+\+CHANNEL\+\_\+4\+: TIM Channel 4 selected \end{DoxyItemize}
+\\
+\hline
+{\em $<$strong$>$\+ICPSC$<$/strong$>$} & specifies the Input Capture4 prescaler new value. This parameter can be one of the following values\+: \begin{DoxyItemize}
+\item TIM\+\_\+\+ICPSC\+\_\+\+DIV1\+: no prescaler \item TIM\+\_\+\+ICPSC\+\_\+\+DIV2\+: capture is done once every 2 events \item TIM\+\_\+\+ICPSC\+\_\+\+DIV4\+: capture is done once every 4 events \item TIM\+\_\+\+ICPSC\+\_\+\+DIV8\+: capture is done once every 8 events \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 1053 of file stm32f4xx\+\_\+hal\+\_\+tim.\+h.
+
+\mbox{\label{group___t_i_m___exported___macros_gafdc5a06eab07e0c24e729fd492bdb27c}} 
+\index{TIM Exported Macros@{TIM Exported Macros}!\_\_HAL\_TIM\_SET\_PRESCALER@{\_\_HAL\_TIM\_SET\_PRESCALER}}
+\index{\_\_HAL\_TIM\_SET\_PRESCALER@{\_\_HAL\_TIM\_SET\_PRESCALER}!TIM Exported Macros@{TIM Exported Macros}}
+\doxysubsubsection{\_\_HAL\_TIM\_SET\_PRESCALER}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+TIM\+\_\+\+SET\+\_\+\+PRESCALER(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+PRESC\+\_\+\+\_\+ }\end{DoxyParamCaption})~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$PSC = (\+\_\+\+\_\+\+PRESC\+\_\+\+\_\+))}
+
+
+
+Definition at line 921 of file stm32f4xx\+\_\+hal\+\_\+tim.\+h.
+
+\mbox{\label{group___t_i_m___exported___macros_gafacb551a4c537e62a0fe740b2f12236c}} 
+\index{TIM Exported Macros@{TIM Exported Macros}!\_\_HAL\_TIM\_URS\_DISABLE@{\_\_HAL\_TIM\_URS\_DISABLE}}
+\index{\_\_HAL\_TIM\_URS\_DISABLE@{\_\_HAL\_TIM\_URS\_DISABLE}!TIM Exported Macros@{TIM Exported Macros}}
+\doxysubsubsection{\_\_HAL\_TIM\_URS\_DISABLE}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+TIM\+\_\+\+URS\+\_\+\+DISABLE(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+ }\end{DoxyParamCaption})~      ((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$CR1\&=$\sim$(\textbf{ TIM\+\_\+\+CR1\+\_\+\+URS}))}
+
+
+
+Reset the Update Request Source (URS) bit of the TIMx\+\_\+\+CR1 register. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$strong$>$\+HANDLE$<$/strong$>$} & TIM handle. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+When the USR bit of the TIMx\+\_\+\+CR1 register is reset, any of the following events generate an update interrupt or DMA request (if enabled)\+: \+\_\+ Counter overflow/underflow \+\_\+ Setting the UG bit \+\_\+ Update generation through the slave mode controller 
+\end{DoxyNote}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 1098 of file stm32f4xx\+\_\+hal\+\_\+tim.\+h.
+
+\mbox{\label{group___t_i_m___exported___macros_ga3b06856bd6d7e10cfff342b1726db51d}} 
+\index{TIM Exported Macros@{TIM Exported Macros}!\_\_HAL\_TIM\_URS\_ENABLE@{\_\_HAL\_TIM\_URS\_ENABLE}}
+\index{\_\_HAL\_TIM\_URS\_ENABLE@{\_\_HAL\_TIM\_URS\_ENABLE}!TIM Exported Macros@{TIM Exported Macros}}
+\doxysubsubsection{\_\_HAL\_TIM\_URS\_ENABLE}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+TIM\+\_\+\+URS\+\_\+\+ENABLE(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+ }\end{DoxyParamCaption})~    ((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$CR1$\vert$= (\textbf{ TIM\+\_\+\+CR1\+\_\+\+URS}))}
+
+
+
+Set the Update Request Source (URS) bit of the TIMx\+\_\+\+CR1 register. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$strong$>$\+HANDLE$<$/strong$>$} & TIM handle. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+When the USR bit of the TIMx\+\_\+\+CR1 register is set, only counter overflow/underflow generates an update interrupt or DMA request (if enabled) 
+\end{DoxyNote}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 1084 of file stm32f4xx\+\_\+hal\+\_\+tim.\+h.
+
+\mbox{\label{group___t_i_m___exported___macros_gada7535acf7e1f9b3e8e1dcca848871db}} 
+\index{TIM Exported Macros@{TIM Exported Macros}!TIM\_RESET\_CAPTUREPOLARITY@{TIM\_RESET\_CAPTUREPOLARITY}}
+\index{TIM\_RESET\_CAPTUREPOLARITY@{TIM\_RESET\_CAPTUREPOLARITY}!TIM Exported Macros@{TIM Exported Macros}}
+\doxysubsubsection{TIM\_RESET\_CAPTUREPOLARITY}
+{\footnotesize\ttfamily \#define TIM\+\_\+\+RESET\+\_\+\+CAPTUREPOLARITY(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+CHANNEL\+\_\+\+\_\+ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\_\_CHANNEL\_\_) == TIM\_CHANNEL\_1) ? ((\_\_HANDLE\_\_)-\/>Instance-\/>CCER \&= (uint16\_t)\string~(TIM\_CCER\_CC1P | TIM\_CCER\_CC1NP)) :\(\backslash\)}
+\DoxyCodeLine{ ((\_\_CHANNEL\_\_) == TIM\_CHANNEL\_2) ? ((\_\_HANDLE\_\_)-\/>Instance-\/>CCER \&= (uint16\_t)\string~(TIM\_CCER\_CC2P | TIM\_CCER\_CC2NP)) :\(\backslash\)}
+\DoxyCodeLine{ ((\_\_CHANNEL\_\_) == TIM\_CHANNEL\_3) ? ((\_\_HANDLE\_\_)-\/>Instance-\/>CCER \&= (uint16\_t)\string~(TIM\_CCER\_CC3P | TIM\_CCER\_CC3NP)) :\(\backslash\)}
+\DoxyCodeLine{ ((\_\_HANDLE\_\_)-\/>Instance-\/>CCER \&= (uint16\_t)\string~TIM\_CCER\_CC4P))}
+
+\end{DoxyCode}
+
+
+Definition at line 941 of file stm32f4xx\+\_\+hal\+\_\+tim.\+h.
+
+\mbox{\label{group___t_i_m___exported___macros_ga18ded32faf42c8981c8d2970bb02e126}} 
+\index{TIM Exported Macros@{TIM Exported Macros}!TIM\_RESET\_ICPRESCALERVALUE@{TIM\_RESET\_ICPRESCALERVALUE}}
+\index{TIM\_RESET\_ICPRESCALERVALUE@{TIM\_RESET\_ICPRESCALERVALUE}!TIM Exported Macros@{TIM Exported Macros}}
+\doxysubsubsection{TIM\_RESET\_ICPRESCALERVALUE}
+{\footnotesize\ttfamily \#define TIM\+\_\+\+RESET\+\_\+\+ICPRESCALERVALUE(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+CHANNEL\+\_\+\+\_\+ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\_\_CHANNEL\_\_) == TIM\_CHANNEL\_1) ? ((\_\_HANDLE\_\_)-\/>Instance-\/>CCMR1 \&= (uint16\_t)\string~TIM\_CCMR1\_IC1PSC) :\(\backslash\)}
+\DoxyCodeLine{ ((\_\_CHANNEL\_\_) == TIM\_CHANNEL\_2) ? ((\_\_HANDLE\_\_)-\/>Instance-\/>CCMR1 \&= (uint16\_t)\string~TIM\_CCMR1\_IC2PSC) :\(\backslash\)}
+\DoxyCodeLine{ ((\_\_CHANNEL\_\_) == TIM\_CHANNEL\_3) ? ((\_\_HANDLE\_\_)-\/>Instance-\/>CCMR2 \&= (uint16\_t)\string~TIM\_CCMR2\_IC3PSC) :\(\backslash\)}
+\DoxyCodeLine{ ((\_\_HANDLE\_\_)-\/>Instance-\/>CCMR2 \&= (uint16\_t)\string~TIM\_CCMR2\_IC4PSC))}
+
+\end{DoxyCode}
+
+
+Definition at line 929 of file stm32f4xx\+\_\+hal\+\_\+tim.\+h.
+
+\mbox{\label{group___t_i_m___exported___macros_ga4321d7371ca3a8c18f96e925667a7b2f}} 
+\index{TIM Exported Macros@{TIM Exported Macros}!TIM\_SET\_CAPTUREPOLARITY@{TIM\_SET\_CAPTUREPOLARITY}}
+\index{TIM\_SET\_CAPTUREPOLARITY@{TIM\_SET\_CAPTUREPOLARITY}!TIM Exported Macros@{TIM Exported Macros}}
+\doxysubsubsection{TIM\_SET\_CAPTUREPOLARITY}
+{\footnotesize\ttfamily \#define TIM\+\_\+\+SET\+\_\+\+CAPTUREPOLARITY(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+CHANNEL\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+POLARITY\+\_\+\+\_\+ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\_\_CHANNEL\_\_) == TIM\_CHANNEL\_1) ? ((\_\_HANDLE\_\_)-\/>Instance-\/>CCER |= (\_\_POLARITY\_\_)) :\(\backslash\)}
+\DoxyCodeLine{ ((\_\_CHANNEL\_\_) == TIM\_CHANNEL\_2) ? ((\_\_HANDLE\_\_)-\/>Instance-\/>CCER |= ((\_\_POLARITY\_\_) << 4U)) :\(\backslash\)}
+\DoxyCodeLine{ ((\_\_CHANNEL\_\_) == TIM\_CHANNEL\_3) ? ((\_\_HANDLE\_\_)-\/>Instance-\/>CCER |= ((\_\_POLARITY\_\_) << 8U)) :\(\backslash\)}
+\DoxyCodeLine{ ((\_\_HANDLE\_\_)-\/>Instance-\/>CCER |= (((\_\_POLARITY\_\_) << 12U) \& TIM\_CCER\_CC4P)))}
+
+\end{DoxyCode}
+
+
+Definition at line 935 of file stm32f4xx\+\_\+hal\+\_\+tim.\+h.
+
+\mbox{\label{group___t_i_m___exported___macros_ga99724157918ca8b4d8babee1d8008dcb}} 
+\index{TIM Exported Macros@{TIM Exported Macros}!TIM\_SET\_ICPRESCALERVALUE@{TIM\_SET\_ICPRESCALERVALUE}}
+\index{TIM\_SET\_ICPRESCALERVALUE@{TIM\_SET\_ICPRESCALERVALUE}!TIM Exported Macros@{TIM Exported Macros}}
+\doxysubsubsection{TIM\_SET\_ICPRESCALERVALUE}
+{\footnotesize\ttfamily \#define TIM\+\_\+\+SET\+\_\+\+ICPRESCALERVALUE(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+CHANNEL\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+ICPSC\+\_\+\+\_\+ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\_\_CHANNEL\_\_) == TIM\_CHANNEL\_1) ? ((\_\_HANDLE\_\_)-\/>Instance-\/>CCMR1 |= (\_\_ICPSC\_\_)) :\(\backslash\)}
+\DoxyCodeLine{ ((\_\_CHANNEL\_\_) == TIM\_CHANNEL\_2) ? ((\_\_HANDLE\_\_)-\/>Instance-\/>CCMR1 |= ((\_\_ICPSC\_\_) << 8U)) :\(\backslash\)}
+\DoxyCodeLine{ ((\_\_CHANNEL\_\_) == TIM\_CHANNEL\_3) ? ((\_\_HANDLE\_\_)-\/>Instance-\/>CCMR2 |= (\_\_ICPSC\_\_)) :\(\backslash\)}
+\DoxyCodeLine{ ((\_\_HANDLE\_\_)-\/>Instance-\/>CCMR2 |= ((\_\_ICPSC\_\_) << 8U)))}
+
+\end{DoxyCode}
+
+
+Definition at line 923 of file stm32f4xx\+\_\+hal\+\_\+tim.\+h.
+

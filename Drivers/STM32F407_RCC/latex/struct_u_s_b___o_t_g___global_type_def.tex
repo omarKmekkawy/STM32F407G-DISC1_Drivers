@@ -1,0 +1,245 @@
+\doxysection{USB\+\_\+\+OTG\+\_\+\+Global\+Type\+Def Struct Reference}
+\label{struct_u_s_b___o_t_g___global_type_def}\index{USB\_OTG\_GlobalTypeDef@{USB\_OTG\_GlobalTypeDef}}
+
+
+\+\_\+\+\_\+\+USB\+\_\+\+OTG\+\_\+\+Core\+\_\+register  
+
+
+
+
+{\ttfamily \#include $<$stm32f407xx.\+h$>$}
+
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ \+\_\+\+\_\+\+IO} uint32\+\_\+t \textbf{ GOTGCTL}
+\item 
+\textbf{ \+\_\+\+\_\+\+IO} uint32\+\_\+t \textbf{ GOTGINT}
+\item 
+\textbf{ \+\_\+\+\_\+\+IO} uint32\+\_\+t \textbf{ GAHBCFG}
+\item 
+\textbf{ \+\_\+\+\_\+\+IO} uint32\+\_\+t \textbf{ GUSBCFG}
+\item 
+\textbf{ \+\_\+\+\_\+\+IO} uint32\+\_\+t \textbf{ GRSTCTL}
+\item 
+\textbf{ \+\_\+\+\_\+\+IO} uint32\+\_\+t \textbf{ GINTSTS}
+\item 
+\textbf{ \+\_\+\+\_\+\+IO} uint32\+\_\+t \textbf{ GINTMSK}
+\item 
+\textbf{ \+\_\+\+\_\+\+IO} uint32\+\_\+t \textbf{ GRXSTSR}
+\item 
+\textbf{ \+\_\+\+\_\+\+IO} uint32\+\_\+t \textbf{ GRXSTSP}
+\item 
+\textbf{ \+\_\+\+\_\+\+IO} uint32\+\_\+t \textbf{ GRXFSIZ}
+\item 
+\textbf{ \+\_\+\+\_\+\+IO} uint32\+\_\+t \textbf{ DIEPTXF0\+\_\+\+HNPTXFSIZ}
+\item 
+\textbf{ \+\_\+\+\_\+\+IO} uint32\+\_\+t \textbf{ HNPTXSTS}
+\item 
+uint32\+\_\+t \textbf{ Reserved30} [2]
+\item 
+\textbf{ \+\_\+\+\_\+\+IO} uint32\+\_\+t \textbf{ GCCFG}
+\item 
+\textbf{ \+\_\+\+\_\+\+IO} uint32\+\_\+t \textbf{ CID}
+\item 
+uint32\+\_\+t \textbf{ Reserved40} [48]
+\item 
+\textbf{ \+\_\+\+\_\+\+IO} uint32\+\_\+t \textbf{ HPTXFSIZ}
+\item 
+\textbf{ \+\_\+\+\_\+\+IO} uint32\+\_\+t \textbf{ DIEPTXF} [0x0F]
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\+\_\+\+\_\+\+USB\+\_\+\+OTG\+\_\+\+Core\+\_\+register 
+
+Definition at line 814 of file stm32f407xx.\+h.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\label{struct_u_s_b___o_t_g___global_type_def_a6eefd74b3acdc3c1a88b833fcf5e8d81}} 
+\index{USB\_OTG\_GlobalTypeDef@{USB\_OTG\_GlobalTypeDef}!CID@{CID}}
+\index{CID@{CID}!USB\_OTG\_GlobalTypeDef@{USB\_OTG\_GlobalTypeDef}}
+\doxysubsubsection{CID}
+{\footnotesize\ttfamily \textbf{ \+\_\+\+\_\+\+IO} uint32\+\_\+t CID}
+
+
+
+Definition at line 830 of file stm32f407xx.\+h.
+
+\mbox{\label{struct_u_s_b___o_t_g___global_type_def_a2b783e516da93a95c56adf3e52dcbe62}} 
+\index{USB\_OTG\_GlobalTypeDef@{USB\_OTG\_GlobalTypeDef}!DIEPTXF@{DIEPTXF}}
+\index{DIEPTXF@{DIEPTXF}!USB\_OTG\_GlobalTypeDef@{USB\_OTG\_GlobalTypeDef}}
+\doxysubsubsection{DIEPTXF}
+{\footnotesize\ttfamily \textbf{ \+\_\+\+\_\+\+IO} uint32\+\_\+t DIEPTXF[0x0F]}
+
+
+
+Definition at line 833 of file stm32f407xx.\+h.
+
+\mbox{\label{struct_u_s_b___o_t_g___global_type_def_a93412b352267d3faf0bd2dbac590b69e}} 
+\index{USB\_OTG\_GlobalTypeDef@{USB\_OTG\_GlobalTypeDef}!DIEPTXF0\_HNPTXFSIZ@{DIEPTXF0\_HNPTXFSIZ}}
+\index{DIEPTXF0\_HNPTXFSIZ@{DIEPTXF0\_HNPTXFSIZ}!USB\_OTG\_GlobalTypeDef@{USB\_OTG\_GlobalTypeDef}}
+\doxysubsubsection{DIEPTXF0\_HNPTXFSIZ}
+{\footnotesize\ttfamily \textbf{ \+\_\+\+\_\+\+IO} uint32\+\_\+t DIEPTXF0\+\_\+\+HNPTXFSIZ}
+
+EP0 / Non Periodic Tx FIFO Size Register 028h 
+
+Definition at line 826 of file stm32f407xx.\+h.
+
+\mbox{\label{struct_u_s_b___o_t_g___global_type_def_ac38ac55e4148686564478e95f345b833}} 
+\index{USB\_OTG\_GlobalTypeDef@{USB\_OTG\_GlobalTypeDef}!GAHBCFG@{GAHBCFG}}
+\index{GAHBCFG@{GAHBCFG}!USB\_OTG\_GlobalTypeDef@{USB\_OTG\_GlobalTypeDef}}
+\doxysubsubsection{GAHBCFG}
+{\footnotesize\ttfamily \textbf{ \+\_\+\+\_\+\+IO} uint32\+\_\+t GAHBCFG}
+
+Core AHB Configuration Register 008h 
+
+Definition at line 818 of file stm32f407xx.\+h.
+
+\mbox{\label{struct_u_s_b___o_t_g___global_type_def_aef85efc005db9a8e37d95644e92e9032}} 
+\index{USB\_OTG\_GlobalTypeDef@{USB\_OTG\_GlobalTypeDef}!GCCFG@{GCCFG}}
+\index{GCCFG@{GCCFG}!USB\_OTG\_GlobalTypeDef@{USB\_OTG\_GlobalTypeDef}}
+\doxysubsubsection{GCCFG}
+{\footnotesize\ttfamily \textbf{ \+\_\+\+\_\+\+IO} uint32\+\_\+t GCCFG}
+
+
+
+Definition at line 829 of file stm32f407xx.\+h.
+
+\mbox{\label{struct_u_s_b___o_t_g___global_type_def_a69d9432b4272331bffb34e196b57cbdf}} 
+\index{USB\_OTG\_GlobalTypeDef@{USB\_OTG\_GlobalTypeDef}!GINTMSK@{GINTMSK}}
+\index{GINTMSK@{GINTMSK}!USB\_OTG\_GlobalTypeDef@{USB\_OTG\_GlobalTypeDef}}
+\doxysubsubsection{GINTMSK}
+{\footnotesize\ttfamily \textbf{ \+\_\+\+\_\+\+IO} uint32\+\_\+t GINTMSK}
+
+Core Interrupt Mask Register 018h 
+
+Definition at line 822 of file stm32f407xx.\+h.
+
+\mbox{\label{struct_u_s_b___o_t_g___global_type_def_a9980c4a55080745a11528f8c7ffa1c66}} 
+\index{USB\_OTG\_GlobalTypeDef@{USB\_OTG\_GlobalTypeDef}!GINTSTS@{GINTSTS}}
+\index{GINTSTS@{GINTSTS}!USB\_OTG\_GlobalTypeDef@{USB\_OTG\_GlobalTypeDef}}
+\doxysubsubsection{GINTSTS}
+{\footnotesize\ttfamily \textbf{ \+\_\+\+\_\+\+IO} uint32\+\_\+t GINTSTS}
+
+Core Interrupt Register 014h 
+
+Definition at line 821 of file stm32f407xx.\+h.
+
+\mbox{\label{struct_u_s_b___o_t_g___global_type_def_a4f006a75f87074f02a532fbeb215bd24}} 
+\index{USB\_OTG\_GlobalTypeDef@{USB\_OTG\_GlobalTypeDef}!GOTGCTL@{GOTGCTL}}
+\index{GOTGCTL@{GOTGCTL}!USB\_OTG\_GlobalTypeDef@{USB\_OTG\_GlobalTypeDef}}
+\doxysubsubsection{GOTGCTL}
+{\footnotesize\ttfamily \textbf{ \+\_\+\+\_\+\+IO} uint32\+\_\+t GOTGCTL}
+
+USB\+\_\+\+OTG Control and Status Register 000h 
+
+Definition at line 816 of file stm32f407xx.\+h.
+
+\mbox{\label{struct_u_s_b___o_t_g___global_type_def_aef613e58417a7201da95b89b85931da9}} 
+\index{USB\_OTG\_GlobalTypeDef@{USB\_OTG\_GlobalTypeDef}!GOTGINT@{GOTGINT}}
+\index{GOTGINT@{GOTGINT}!USB\_OTG\_GlobalTypeDef@{USB\_OTG\_GlobalTypeDef}}
+\doxysubsubsection{GOTGINT}
+{\footnotesize\ttfamily \textbf{ \+\_\+\+\_\+\+IO} uint32\+\_\+t GOTGINT}
+
+USB\+\_\+\+OTG Interrupt Register 004h 
+
+Definition at line 817 of file stm32f407xx.\+h.
+
+\mbox{\label{struct_u_s_b___o_t_g___global_type_def_aecf297022669fda29294f6fe9818ebbd}} 
+\index{USB\_OTG\_GlobalTypeDef@{USB\_OTG\_GlobalTypeDef}!GRSTCTL@{GRSTCTL}}
+\index{GRSTCTL@{GRSTCTL}!USB\_OTG\_GlobalTypeDef@{USB\_OTG\_GlobalTypeDef}}
+\doxysubsubsection{GRSTCTL}
+{\footnotesize\ttfamily \textbf{ \+\_\+\+\_\+\+IO} uint32\+\_\+t GRSTCTL}
+
+Core Reset Register 010h 
+
+Definition at line 820 of file stm32f407xx.\+h.
+
+\mbox{\label{struct_u_s_b___o_t_g___global_type_def_a1140b76ff103608f66c26ad0a3d595d0}} 
+\index{USB\_OTG\_GlobalTypeDef@{USB\_OTG\_GlobalTypeDef}!GRXFSIZ@{GRXFSIZ}}
+\index{GRXFSIZ@{GRXFSIZ}!USB\_OTG\_GlobalTypeDef@{USB\_OTG\_GlobalTypeDef}}
+\doxysubsubsection{GRXFSIZ}
+{\footnotesize\ttfamily \textbf{ \+\_\+\+\_\+\+IO} uint32\+\_\+t GRXFSIZ}
+
+
+
+Definition at line 825 of file stm32f407xx.\+h.
+
+\mbox{\label{struct_u_s_b___o_t_g___global_type_def_a026f1fea708d42ed74b0bd8a488bc55e}} 
+\index{USB\_OTG\_GlobalTypeDef@{USB\_OTG\_GlobalTypeDef}!GRXSTSP@{GRXSTSP}}
+\index{GRXSTSP@{GRXSTSP}!USB\_OTG\_GlobalTypeDef@{USB\_OTG\_GlobalTypeDef}}
+\doxysubsubsection{GRXSTSP}
+{\footnotesize\ttfamily \textbf{ \+\_\+\+\_\+\+IO} uint32\+\_\+t GRXSTSP}
+
+Receive Sts Q Read \& POP Register 020h 
+
+Definition at line 824 of file stm32f407xx.\+h.
+
+\mbox{\label{struct_u_s_b___o_t_g___global_type_def_a9925d279a01c6e9713426315e2e44c87}} 
+\index{USB\_OTG\_GlobalTypeDef@{USB\_OTG\_GlobalTypeDef}!GRXSTSR@{GRXSTSR}}
+\index{GRXSTSR@{GRXSTSR}!USB\_OTG\_GlobalTypeDef@{USB\_OTG\_GlobalTypeDef}}
+\doxysubsubsection{GRXSTSR}
+{\footnotesize\ttfamily \textbf{ \+\_\+\+\_\+\+IO} uint32\+\_\+t GRXSTSR}
+
+Receive Sts Q Read Register 01Ch 
+
+Definition at line 823 of file stm32f407xx.\+h.
+
+\mbox{\label{struct_u_s_b___o_t_g___global_type_def_a0633538b8b7a6f1372d38938851bba87}} 
+\index{USB\_OTG\_GlobalTypeDef@{USB\_OTG\_GlobalTypeDef}!GUSBCFG@{GUSBCFG}}
+\index{GUSBCFG@{GUSBCFG}!USB\_OTG\_GlobalTypeDef@{USB\_OTG\_GlobalTypeDef}}
+\doxysubsubsection{GUSBCFG}
+{\footnotesize\ttfamily \textbf{ \+\_\+\+\_\+\+IO} uint32\+\_\+t GUSBCFG}
+
+Core USB Configuration Register 00Ch 
+
+Definition at line 819 of file stm32f407xx.\+h.
+
+\mbox{\label{struct_u_s_b___o_t_g___global_type_def_a6ff3c8a6647ae7e5dfcd2ccfbfed4948}} 
+\index{USB\_OTG\_GlobalTypeDef@{USB\_OTG\_GlobalTypeDef}!HNPTXSTS@{HNPTXSTS}}
+\index{HNPTXSTS@{HNPTXSTS}!USB\_OTG\_GlobalTypeDef@{USB\_OTG\_GlobalTypeDef}}
+\doxysubsubsection{HNPTXSTS}
+{\footnotesize\ttfamily \textbf{ \+\_\+\+\_\+\+IO} uint32\+\_\+t HNPTXSTS}
+
+Non Periodic Tx FIFO/\+Queue Sts reg 02Ch 
+
+Definition at line 827 of file stm32f407xx.\+h.
+
+\mbox{\label{struct_u_s_b___o_t_g___global_type_def_a928fd38284165374eb5aa85ed8d4e6cb}} 
+\index{USB\_OTG\_GlobalTypeDef@{USB\_OTG\_GlobalTypeDef}!HPTXFSIZ@{HPTXFSIZ}}
+\index{HPTXFSIZ@{HPTXFSIZ}!USB\_OTG\_GlobalTypeDef@{USB\_OTG\_GlobalTypeDef}}
+\doxysubsubsection{HPTXFSIZ}
+{\footnotesize\ttfamily \textbf{ \+\_\+\+\_\+\+IO} uint32\+\_\+t HPTXFSIZ}
+
+
+
+Definition at line 832 of file stm32f407xx.\+h.
+
+\mbox{\label{struct_u_s_b___o_t_g___global_type_def_a577856159d58c037352ee10609b2a99c}} 
+\index{USB\_OTG\_GlobalTypeDef@{USB\_OTG\_GlobalTypeDef}!Reserved30@{Reserved30}}
+\index{Reserved30@{Reserved30}!USB\_OTG\_GlobalTypeDef@{USB\_OTG\_GlobalTypeDef}}
+\doxysubsubsection{Reserved30}
+{\footnotesize\ttfamily uint32\+\_\+t Reserved30[2]}
+
+
+
+Definition at line 828 of file stm32f407xx.\+h.
+
+\mbox{\label{struct_u_s_b___o_t_g___global_type_def_aea9d4b7970a55a4c87d8482ba1ed1b8b}} 
+\index{USB\_OTG\_GlobalTypeDef@{USB\_OTG\_GlobalTypeDef}!Reserved40@{Reserved40}}
+\index{Reserved40@{Reserved40}!USB\_OTG\_GlobalTypeDef@{USB\_OTG\_GlobalTypeDef}}
+\doxysubsubsection{Reserved40}
+{\footnotesize\ttfamily uint32\+\_\+t Reserved40[48]}
+
+
+
+Definition at line 831 of file stm32f407xx.\+h.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+system/include/cmsis/\textbf{ stm32f407xx.\+h}\end{DoxyCompactItemize}

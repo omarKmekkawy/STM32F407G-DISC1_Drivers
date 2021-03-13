@@ -1,0 +1,4 @@
+<map id="HAL_GetTick" name="HAL_GetTick">
+<area shape="rect" id="node1" title="Provides a tick value in millisecond." alt="" coords="140,5,239,32"/>
+<area shape="rect" id="node2" href="$group___h_a_l___exported___functions___group2.html#gaef87d3fec667bb34c418f5687e8204c1" title="This function provides accurate delay (in milliseconds) based on variable incremented." alt="" coords="5,5,92,32"/>
+</map>

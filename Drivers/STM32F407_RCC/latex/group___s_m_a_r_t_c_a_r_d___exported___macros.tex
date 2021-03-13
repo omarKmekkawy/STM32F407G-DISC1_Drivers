@@ -1,0 +1,500 @@
+\doxysection{SMARTCARD Exported Macros}
+\label{group___s_m_a_r_t_c_a_r_d___exported___macros}\index{SMARTCARD Exported Macros@{SMARTCARD Exported Macros}}
+Collaboration diagram for SMARTCARD Exported Macros\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=312pt]{group___s_m_a_r_t_c_a_r_d___exported___macros}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+SMARTCARD\+\_\+\+RESET\+\_\+\+HANDLE\+\_\+\+STATE}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Reset SMARTCARD handle gstate \& Rx\+State. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+SMARTCARD\+\_\+\+FLUSH\+\_\+\+DRREGISTER}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$DR)
+\begin{DoxyCompactList}\small\item\em Flushs the Smartcard DR register. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+SMARTCARD\+\_\+\+GET\+\_\+\+FLAG}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+FLAG\+\_\+\+\_\+)~(((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$SR \& (\+\_\+\+\_\+\+FLAG\+\_\+\+\_\+)) == (\+\_\+\+\_\+\+FLAG\+\_\+\+\_\+))
+\begin{DoxyCompactList}\small\item\em Checks whether the specified Smartcard flag is set or not. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+SMARTCARD\+\_\+\+CLEAR\+\_\+\+FLAG}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+FLAG\+\_\+\+\_\+)~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$SR = $\sim$(\+\_\+\+\_\+\+FLAG\+\_\+\+\_\+))
+\begin{DoxyCompactList}\small\item\em Clears the specified Smartcard pending flags. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+SMARTCARD\+\_\+\+CLEAR\+\_\+\+PEFLAG}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Clear the SMARTCARD PE pending flag. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+SMARTCARD\+\_\+\+CLEAR\+\_\+\+FEFLAG}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)~\textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+SMARTCARD\+\_\+\+CLEAR\+\_\+\+PEFLAG}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Clear the SMARTCARD FE pending flag. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+SMARTCARD\+\_\+\+CLEAR\+\_\+\+NEFLAG}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)~\textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+SMARTCARD\+\_\+\+CLEAR\+\_\+\+PEFLAG}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Clear the SMARTCARD NE pending flag. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+SMARTCARD\+\_\+\+CLEAR\+\_\+\+OREFLAG}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)~\textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+SMARTCARD\+\_\+\+CLEAR\+\_\+\+PEFLAG}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Clear the SMARTCARD ORE pending flag. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+SMARTCARD\+\_\+\+CLEAR\+\_\+\+IDLEFLAG}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)~\textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+SMARTCARD\+\_\+\+CLEAR\+\_\+\+PEFLAG}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Clear the SMARTCARD IDLE pending flag. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+SMARTCARD\+\_\+\+ENABLE\+\_\+\+IT}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Enables or disables the specified Smart\+Card interrupts. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+SMARTCARD\+\_\+\+DISABLE\+\_\+\+IT}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)
+\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+SMARTCARD\+\_\+\+GET\+\_\+\+IT\+\_\+\+SOURCE}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+IT\+\_\+\+\_\+)~(((((\+\_\+\+\_\+\+IT\+\_\+\+\_\+) $>$$>$ 28U) == 1U)? (\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$CR1\+: (\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$CR3) \& (((uint32\+\_\+t)(\+\_\+\+\_\+\+IT\+\_\+\+\_\+)) \& \textbf{ SMARTCARD\+\_\+\+IT\+\_\+\+MASK}))
+\begin{DoxyCompactList}\small\item\em Checks whether the specified Smart\+Card interrupt has occurred or not. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+SMARTCARD\+\_\+\+ONE\+\_\+\+BIT\+\_\+\+SAMPLE\+\_\+\+ENABLE}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$CR3$\vert$= \textbf{ USART\+\_\+\+CR3\+\_\+\+ONEBIT})
+\begin{DoxyCompactList}\small\item\em Macro to enable the SMARTCARD\textquotesingle{}s one bit sample method. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+SMARTCARD\+\_\+\+ONE\+\_\+\+BIT\+\_\+\+SAMPLE\+\_\+\+DISABLE}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$CR3 \&= (uint16\+\_\+t)$\sim$((uint16\+\_\+t)\textbf{ USART\+\_\+\+CR3\+\_\+\+ONEBIT}))
+\begin{DoxyCompactList}\small\item\em Macro to disable the SMARTCARD\textquotesingle{}s one bit sample method. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+SMARTCARD\+\_\+\+ENABLE}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$CR1 $\vert$=  \textbf{ USART\+\_\+\+CR1\+\_\+\+UE})
+\begin{DoxyCompactList}\small\item\em Enable the USART associated to the SMARTCARD Handle. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+SMARTCARD\+\_\+\+DISABLE}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$CR1 \&=  $\sim$\textbf{ USART\+\_\+\+CR1\+\_\+\+UE})
+\begin{DoxyCompactList}\small\item\em Disable the USART associated to the SMARTCARD Handle. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+SMARTCARD\+\_\+\+DMA\+\_\+\+REQUEST\+\_\+\+ENABLE}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+REQUEST\+\_\+\+\_\+)~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$CR3 $\vert$=  (\+\_\+\+\_\+\+REQUEST\+\_\+\+\_\+))
+\begin{DoxyCompactList}\small\item\em Macros to enable or disable the Smart\+Card DMA request. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+SMARTCARD\+\_\+\+DMA\+\_\+\+REQUEST\+\_\+\+DISABLE}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+REQUEST\+\_\+\+\_\+)~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$CR3 \&=  $\sim$(\+\_\+\+\_\+\+REQUEST\+\_\+\+\_\+))
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\label{group___s_m_a_r_t_c_a_r_d___exported___macros_gac6c4cf3895f565304c68faf23139a533}} 
+\index{SMARTCARD Exported Macros@{SMARTCARD Exported Macros}!\_\_HAL\_SMARTCARD\_CLEAR\_FEFLAG@{\_\_HAL\_SMARTCARD\_CLEAR\_FEFLAG}}
+\index{\_\_HAL\_SMARTCARD\_CLEAR\_FEFLAG@{\_\_HAL\_SMARTCARD\_CLEAR\_FEFLAG}!SMARTCARD Exported Macros@{SMARTCARD Exported Macros}}
+\doxysubsubsection{\_\_HAL\_SMARTCARD\_CLEAR\_FEFLAG}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+SMARTCARD\+\_\+\+CLEAR\+\_\+\+FEFLAG(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+ }\end{DoxyParamCaption})~\textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+SMARTCARD\+\_\+\+CLEAR\+\_\+\+PEFLAG}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)}
+
+
+
+Clear the SMARTCARD FE pending flag. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$strong$>$\+HANDLE$<$/strong$>$} & specifies the USART Handle. This parameter can be USARTx where x\+: 1, 2, 3, 4, 5, 6, 7 or 8 to select the USART or SMARTCARD peripheral. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 459 of file stm32f4xx\+\_\+hal\+\_\+smartcard.\+h.
+
+\mbox{\label{group___s_m_a_r_t_c_a_r_d___exported___macros_gab40a9ea5252be0340f074b1cab9c2264}} 
+\index{SMARTCARD Exported Macros@{SMARTCARD Exported Macros}!\_\_HAL\_SMARTCARD\_CLEAR\_FLAG@{\_\_HAL\_SMARTCARD\_CLEAR\_FLAG}}
+\index{\_\_HAL\_SMARTCARD\_CLEAR\_FLAG@{\_\_HAL\_SMARTCARD\_CLEAR\_FLAG}!SMARTCARD Exported Macros@{SMARTCARD Exported Macros}}
+\doxysubsubsection{\_\_HAL\_SMARTCARD\_CLEAR\_FLAG}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+SMARTCARD\+\_\+\+CLEAR\+\_\+\+FLAG(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+FLAG\+\_\+\+\_\+ }\end{DoxyParamCaption})~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$SR = $\sim$(\+\_\+\+\_\+\+FLAG\+\_\+\+\_\+))}
+
+
+
+Clears the specified Smartcard pending flags. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$strong$>$\+HANDLE$<$/strong$>$} & specifies the SMARTCARD Handle. \\
+\hline
+{\em $<$strong$>$\+FLAG$<$/strong$>$} & specifies the flag to check. This parameter can be any combination of the following values\+: \begin{DoxyItemize}
+\item SMARTCARD\+\_\+\+FLAG\+\_\+\+TC\+: Transmission Complete flag. \item SMARTCARD\+\_\+\+FLAG\+\_\+\+RXNE\+: Receive data register not empty flag.\end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+PE (Parity error), FE (Framing error), NE (Noise error) and ORE (Overrun error) flags are cleared by software sequence\+: a read operation to USART\+\_\+\+SR register followed by a read operation to USART\+\_\+\+DR register. 
+
+RXNE flag can be also cleared by a read to the USART\+\_\+\+DR register. 
+
+TC flag can be also cleared by software sequence\+: a read operation to USART\+\_\+\+SR register followed by a write operation to USART\+\_\+\+DR register. 
+
+TXE flag is cleared only by a write to the USART\+\_\+\+DR register. 
+\end{DoxyNote}
+
+
+Definition at line 437 of file stm32f4xx\+\_\+hal\+\_\+smartcard.\+h.
+
+\mbox{\label{group___s_m_a_r_t_c_a_r_d___exported___macros_ga20777f06c3aaad7872cd3d655f021f45}} 
+\index{SMARTCARD Exported Macros@{SMARTCARD Exported Macros}!\_\_HAL\_SMARTCARD\_CLEAR\_IDLEFLAG@{\_\_HAL\_SMARTCARD\_CLEAR\_IDLEFLAG}}
+\index{\_\_HAL\_SMARTCARD\_CLEAR\_IDLEFLAG@{\_\_HAL\_SMARTCARD\_CLEAR\_IDLEFLAG}!SMARTCARD Exported Macros@{SMARTCARD Exported Macros}}
+\doxysubsubsection{\_\_HAL\_SMARTCARD\_CLEAR\_IDLEFLAG}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+SMARTCARD\+\_\+\+CLEAR\+\_\+\+IDLEFLAG(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+ }\end{DoxyParamCaption})~\textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+SMARTCARD\+\_\+\+CLEAR\+\_\+\+PEFLAG}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)}
+
+
+
+Clear the SMARTCARD IDLE pending flag. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$strong$>$\+HANDLE$<$/strong$>$} & specifies the USART Handle. This parameter can be USARTx where x\+: 1, 2, 3, 4, 5, 6, 7 or 8 to select the USART or SMARTCARD peripheral. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 483 of file stm32f4xx\+\_\+hal\+\_\+smartcard.\+h.
+
+\mbox{\label{group___s_m_a_r_t_c_a_r_d___exported___macros_gaa6e054a509676625edc0dfa060f1a742}} 
+\index{SMARTCARD Exported Macros@{SMARTCARD Exported Macros}!\_\_HAL\_SMARTCARD\_CLEAR\_NEFLAG@{\_\_HAL\_SMARTCARD\_CLEAR\_NEFLAG}}
+\index{\_\_HAL\_SMARTCARD\_CLEAR\_NEFLAG@{\_\_HAL\_SMARTCARD\_CLEAR\_NEFLAG}!SMARTCARD Exported Macros@{SMARTCARD Exported Macros}}
+\doxysubsubsection{\_\_HAL\_SMARTCARD\_CLEAR\_NEFLAG}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+SMARTCARD\+\_\+\+CLEAR\+\_\+\+NEFLAG(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+ }\end{DoxyParamCaption})~\textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+SMARTCARD\+\_\+\+CLEAR\+\_\+\+PEFLAG}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)}
+
+
+
+Clear the SMARTCARD NE pending flag. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$strong$>$\+HANDLE$<$/strong$>$} & specifies the USART Handle. This parameter can be USARTx where x\+: 1, 2, 3, 4, 5, 6, 7 or 8 to select the USART or SMARTCARD peripheral. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 467 of file stm32f4xx\+\_\+hal\+\_\+smartcard.\+h.
+
+\mbox{\label{group___s_m_a_r_t_c_a_r_d___exported___macros_gaa645ab03b85a13098a4e597f525e9f02}} 
+\index{SMARTCARD Exported Macros@{SMARTCARD Exported Macros}!\_\_HAL\_SMARTCARD\_CLEAR\_OREFLAG@{\_\_HAL\_SMARTCARD\_CLEAR\_OREFLAG}}
+\index{\_\_HAL\_SMARTCARD\_CLEAR\_OREFLAG@{\_\_HAL\_SMARTCARD\_CLEAR\_OREFLAG}!SMARTCARD Exported Macros@{SMARTCARD Exported Macros}}
+\doxysubsubsection{\_\_HAL\_SMARTCARD\_CLEAR\_OREFLAG}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+SMARTCARD\+\_\+\+CLEAR\+\_\+\+OREFLAG(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+ }\end{DoxyParamCaption})~\textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+SMARTCARD\+\_\+\+CLEAR\+\_\+\+PEFLAG}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)}
+
+
+
+Clear the SMARTCARD ORE pending flag. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$strong$>$\+HANDLE$<$/strong$>$} & specifies the USART Handle. This parameter can be USARTx where x\+: 1, 2, 3, 4, 5, 6, 7 or 8 to select the USART or SMARTCARD peripheral. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 475 of file stm32f4xx\+\_\+hal\+\_\+smartcard.\+h.
+
+\mbox{\label{group___s_m_a_r_t_c_a_r_d___exported___macros_gae74183878abc11bff63af74fc3ffa3a3}} 
+\index{SMARTCARD Exported Macros@{SMARTCARD Exported Macros}!\_\_HAL\_SMARTCARD\_CLEAR\_PEFLAG@{\_\_HAL\_SMARTCARD\_CLEAR\_PEFLAG}}
+\index{\_\_HAL\_SMARTCARD\_CLEAR\_PEFLAG@{\_\_HAL\_SMARTCARD\_CLEAR\_PEFLAG}!SMARTCARD Exported Macros@{SMARTCARD Exported Macros}}
+\doxysubsubsection{\_\_HAL\_SMARTCARD\_CLEAR\_PEFLAG}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+SMARTCARD\+\_\+\+CLEAR\+\_\+\+PEFLAG(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  \textcolor{keywordflow}{do}\{                                                \(\backslash\)}
+\DoxyCodeLine{    \_\_IO uint32\_t tmpreg = 0x00U;                    \(\backslash\)}
+\DoxyCodeLine{    tmpreg = (\_\_HANDLE\_\_)-\/>Instance-\/>SR;             \(\backslash\)}
+\DoxyCodeLine{    tmpreg = (\_\_HANDLE\_\_)-\/>Instance-\/>DR;             \(\backslash\)}
+\DoxyCodeLine{    UNUSED(tmpreg);                                  \(\backslash\)}
+\DoxyCodeLine{  \} \textcolor{keywordflow}{while}(0)}
+
+\end{DoxyCode}
+
+
+Clear the SMARTCARD PE pending flag. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$strong$>$\+HANDLE$<$/strong$>$} & specifies the USART Handle. This parameter can be USARTx where x\+: 1, 2, 3, 4, 5, 6, 7 or 8 to select the USART or SMARTCARD peripheral. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 445 of file stm32f4xx\+\_\+hal\+\_\+smartcard.\+h.
+
+\mbox{\label{group___s_m_a_r_t_c_a_r_d___exported___macros_gaeea5d27b1628195b28bb3f3fdf0b19bb}} 
+\index{SMARTCARD Exported Macros@{SMARTCARD Exported Macros}!\_\_HAL\_SMARTCARD\_DISABLE@{\_\_HAL\_SMARTCARD\_DISABLE}}
+\index{\_\_HAL\_SMARTCARD\_DISABLE@{\_\_HAL\_SMARTCARD\_DISABLE}!SMARTCARD Exported Macros@{SMARTCARD Exported Macros}}
+\doxysubsubsection{\_\_HAL\_SMARTCARD\_DISABLE}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+SMARTCARD\+\_\+\+DISABLE(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+ }\end{DoxyParamCaption})~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$CR1 \&=  $\sim$\textbf{ USART\+\_\+\+CR1\+\_\+\+UE})}
+
+
+
+Disable the USART associated to the SMARTCARD Handle. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$strong$>$\+HANDLE$<$/strong$>$} & specifies the SMARTCARD Handle. SMARTCARD Handle selects the USARTx peripheral (USART availability and x value depending on device). \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 539 of file stm32f4xx\+\_\+hal\+\_\+smartcard.\+h.
+
+\mbox{\label{group___s_m_a_r_t_c_a_r_d___exported___macros_gaa85d69ff6a1a3bd9d00bdfb35122375d}} 
+\index{SMARTCARD Exported Macros@{SMARTCARD Exported Macros}!\_\_HAL\_SMARTCARD\_DISABLE\_IT@{\_\_HAL\_SMARTCARD\_DISABLE\_IT}}
+\index{\_\_HAL\_SMARTCARD\_DISABLE\_IT@{\_\_HAL\_SMARTCARD\_DISABLE\_IT}!SMARTCARD Exported Macros@{SMARTCARD Exported Macros}}
+\doxysubsubsection{\_\_HAL\_SMARTCARD\_DISABLE\_IT}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+SMARTCARD\+\_\+\+DISABLE\+\_\+\+IT(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                                                 ((((\_\_INTERRUPT\_\_) >> 28U) == 1U)? ((\_\_HANDLE\_\_)-\/>Instance-\/>CR1 \&= \string~((\_\_INTERRUPT\_\_) \& SMARTCARD\_IT\_MASK)): \(\backslash\)}
+\DoxyCodeLine{                                                                 ((\_\_HANDLE\_\_)-\/>Instance-\/>CR3 \&= \string~ ((\_\_INTERRUPT\_\_) \& SMARTCARD\_IT\_MASK)))}
+
+\end{DoxyCode}
+
+
+Definition at line 498 of file stm32f4xx\+\_\+hal\+\_\+smartcard.\+h.
+
+\mbox{\label{group___s_m_a_r_t_c_a_r_d___exported___macros_ga115d518ea985082ab487a31e41cf507b}} 
+\index{SMARTCARD Exported Macros@{SMARTCARD Exported Macros}!\_\_HAL\_SMARTCARD\_DMA\_REQUEST\_DISABLE@{\_\_HAL\_SMARTCARD\_DMA\_REQUEST\_DISABLE}}
+\index{\_\_HAL\_SMARTCARD\_DMA\_REQUEST\_DISABLE@{\_\_HAL\_SMARTCARD\_DMA\_REQUEST\_DISABLE}!SMARTCARD Exported Macros@{SMARTCARD Exported Macros}}
+\doxysubsubsection{\_\_HAL\_SMARTCARD\_DMA\_REQUEST\_DISABLE}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+SMARTCARD\+\_\+\+DMA\+\_\+\+REQUEST\+\_\+\+DISABLE(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+REQUEST\+\_\+\+\_\+ }\end{DoxyParamCaption})~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$CR3 \&=  $\sim$(\+\_\+\+\_\+\+REQUEST\+\_\+\+\_\+))}
+
+
+
+Definition at line 549 of file stm32f4xx\+\_\+hal\+\_\+smartcard.\+h.
+
+\mbox{\label{group___s_m_a_r_t_c_a_r_d___exported___macros_gad804640be44ae81aa60fe888bb9aa187}} 
+\index{SMARTCARD Exported Macros@{SMARTCARD Exported Macros}!\_\_HAL\_SMARTCARD\_DMA\_REQUEST\_ENABLE@{\_\_HAL\_SMARTCARD\_DMA\_REQUEST\_ENABLE}}
+\index{\_\_HAL\_SMARTCARD\_DMA\_REQUEST\_ENABLE@{\_\_HAL\_SMARTCARD\_DMA\_REQUEST\_ENABLE}!SMARTCARD Exported Macros@{SMARTCARD Exported Macros}}
+\doxysubsubsection{\_\_HAL\_SMARTCARD\_DMA\_REQUEST\_ENABLE}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+SMARTCARD\+\_\+\+DMA\+\_\+\+REQUEST\+\_\+\+ENABLE(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+REQUEST\+\_\+\+\_\+ }\end{DoxyParamCaption})~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$CR3 $\vert$=  (\+\_\+\+\_\+\+REQUEST\+\_\+\+\_\+))}
+
+
+
+Macros to enable or disable the Smart\+Card DMA request. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$strong$>$\+HANDLE$<$/strong$>$} & specifies the Smart\+Card Handle. \\
+\hline
+{\em $<$strong$>$\+REQUEST$<$/strong$>$} & specifies the Smart\+Card DMA request. This parameter can be one of the following values\+: \begin{DoxyItemize}
+\item SMARTCARD\+\_\+\+DMAREQ\+\_\+\+TX\+: Smart\+Card DMA transmit request \item SMARTCARD\+\_\+\+DMAREQ\+\_\+\+RX\+: Smart\+Card DMA receive request \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 548 of file stm32f4xx\+\_\+hal\+\_\+smartcard.\+h.
+
+\mbox{\label{group___s_m_a_r_t_c_a_r_d___exported___macros_gac739764f1f7326689516931771d60742}} 
+\index{SMARTCARD Exported Macros@{SMARTCARD Exported Macros}!\_\_HAL\_SMARTCARD\_ENABLE@{\_\_HAL\_SMARTCARD\_ENABLE}}
+\index{\_\_HAL\_SMARTCARD\_ENABLE@{\_\_HAL\_SMARTCARD\_ENABLE}!SMARTCARD Exported Macros@{SMARTCARD Exported Macros}}
+\doxysubsubsection{\_\_HAL\_SMARTCARD\_ENABLE}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+SMARTCARD\+\_\+\+ENABLE(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+ }\end{DoxyParamCaption})~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$CR1 $\vert$=  \textbf{ USART\+\_\+\+CR1\+\_\+\+UE})}
+
+
+
+Enable the USART associated to the SMARTCARD Handle. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$strong$>$\+HANDLE$<$/strong$>$} & specifies the SMARTCARD Handle. SMARTCARD Handle selects the USARTx peripheral (USART availability and x value depending on device). \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 532 of file stm32f4xx\+\_\+hal\+\_\+smartcard.\+h.
+
+\mbox{\label{group___s_m_a_r_t_c_a_r_d___exported___macros_gaa80e83666a04249e0c7ca26d036a0d3b}} 
+\index{SMARTCARD Exported Macros@{SMARTCARD Exported Macros}!\_\_HAL\_SMARTCARD\_ENABLE\_IT@{\_\_HAL\_SMARTCARD\_ENABLE\_IT}}
+\index{\_\_HAL\_SMARTCARD\_ENABLE\_IT@{\_\_HAL\_SMARTCARD\_ENABLE\_IT}!SMARTCARD Exported Macros@{SMARTCARD Exported Macros}}
+\doxysubsubsection{\_\_HAL\_SMARTCARD\_ENABLE\_IT}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+SMARTCARD\+\_\+\+ENABLE\+\_\+\+IT(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                                                 ((((\_\_INTERRUPT\_\_) >> 28U) == 1U)? ((\_\_HANDLE\_\_)-\/>Instance-\/>CR1 |= ((\_\_INTERRUPT\_\_) \& SMARTCARD\_IT\_MASK)): \(\backslash\)}
+\DoxyCodeLine{                                                                 ((\_\_HANDLE\_\_)-\/>Instance-\/>CR3 |= ((\_\_INTERRUPT\_\_) \& SMARTCARD\_IT\_MASK)))}
+
+\end{DoxyCode}
+
+
+Enables or disables the specified Smart\+Card interrupts. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$strong$>$\+HANDLE$<$/strong$>$} & specifies the SMARTCARD Handle. \\
+\hline
+{\em $<$strong$>$\+INTERRUPT$<$/strong$>$} & specifies the SMARTCARD interrupt source to check. This parameter can be one of the following values\+: \begin{DoxyItemize}
+\item SMARTCARD\+\_\+\+IT\+\_\+\+TXE\+: Transmit Data Register empty interrupt \item SMARTCARD\+\_\+\+IT\+\_\+\+TC\+: Transmission complete interrupt \item SMARTCARD\+\_\+\+IT\+\_\+\+RXNE\+: Receive Data register not empty interrupt \item SMARTCARD\+\_\+\+IT\+\_\+\+IDLE\+: Idle line detection interrupt \item SMARTCARD\+\_\+\+IT\+\_\+\+PE\+: Parity Error interrupt \item SMARTCARD\+\_\+\+IT\+\_\+\+ERR\+: Error interrupt(\+Frame error, noise error, overrun error) \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 496 of file stm32f4xx\+\_\+hal\+\_\+smartcard.\+h.
+
+\mbox{\label{group___s_m_a_r_t_c_a_r_d___exported___macros_ga942e652bb57d4f12e7273f4e97035ff4}} 
+\index{SMARTCARD Exported Macros@{SMARTCARD Exported Macros}!\_\_HAL\_SMARTCARD\_FLUSH\_DRREGISTER@{\_\_HAL\_SMARTCARD\_FLUSH\_DRREGISTER}}
+\index{\_\_HAL\_SMARTCARD\_FLUSH\_DRREGISTER@{\_\_HAL\_SMARTCARD\_FLUSH\_DRREGISTER}!SMARTCARD Exported Macros@{SMARTCARD Exported Macros}}
+\doxysubsubsection{\_\_HAL\_SMARTCARD\_FLUSH\_DRREGISTER}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+SMARTCARD\+\_\+\+FLUSH\+\_\+\+DRREGISTER(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+ }\end{DoxyParamCaption})~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$DR)}
+
+
+
+Flushs the Smartcard DR register. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$strong$>$\+HANDLE$<$/strong$>$} & specifies the SMARTCARD Handle. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 404 of file stm32f4xx\+\_\+hal\+\_\+smartcard.\+h.
+
+\mbox{\label{group___s_m_a_r_t_c_a_r_d___exported___macros_ga38f995afc135ddbaafc0c68e12c31f11}} 
+\index{SMARTCARD Exported Macros@{SMARTCARD Exported Macros}!\_\_HAL\_SMARTCARD\_GET\_FLAG@{\_\_HAL\_SMARTCARD\_GET\_FLAG}}
+\index{\_\_HAL\_SMARTCARD\_GET\_FLAG@{\_\_HAL\_SMARTCARD\_GET\_FLAG}!SMARTCARD Exported Macros@{SMARTCARD Exported Macros}}
+\doxysubsubsection{\_\_HAL\_SMARTCARD\_GET\_FLAG}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+SMARTCARD\+\_\+\+GET\+\_\+\+FLAG(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+FLAG\+\_\+\+\_\+ }\end{DoxyParamCaption})~(((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$SR \& (\+\_\+\+\_\+\+FLAG\+\_\+\+\_\+)) == (\+\_\+\+\_\+\+FLAG\+\_\+\+\_\+))}
+
+
+
+Checks whether the specified Smartcard flag is set or not. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$strong$>$\+HANDLE$<$/strong$>$} & specifies the SMARTCARD Handle. \\
+\hline
+{\em $<$strong$>$\+FLAG$<$/strong$>$} & specifies the flag to check. This parameter can be one of the following values\+: \begin{DoxyItemize}
+\item SMARTCARD\+\_\+\+FLAG\+\_\+\+TXE\+: Transmit data register empty flag \item SMARTCARD\+\_\+\+FLAG\+\_\+\+TC\+: Transmission Complete flag \item SMARTCARD\+\_\+\+FLAG\+\_\+\+RXNE\+: Receive data register not empty flag \item SMARTCARD\+\_\+\+FLAG\+\_\+\+IDLE\+: Idle Line detection flag \item SMARTCARD\+\_\+\+FLAG\+\_\+\+ORE\+: Overrun Error flag \item SMARTCARD\+\_\+\+FLAG\+\_\+\+NE\+: Noise Error flag \item SMARTCARD\+\_\+\+FLAG\+\_\+\+FE\+: Framing Error flag \item SMARTCARD\+\_\+\+FLAG\+\_\+\+PE\+: Parity Error flag \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em The} & new state of {\bfseries{FLAG}} (TRUE or FALSE). \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 420 of file stm32f4xx\+\_\+hal\+\_\+smartcard.\+h.
+
+\mbox{\label{group___s_m_a_r_t_c_a_r_d___exported___macros_ga8bae0fc7f068414790697698adafc4f2}} 
+\index{SMARTCARD Exported Macros@{SMARTCARD Exported Macros}!\_\_HAL\_SMARTCARD\_GET\_IT\_SOURCE@{\_\_HAL\_SMARTCARD\_GET\_IT\_SOURCE}}
+\index{\_\_HAL\_SMARTCARD\_GET\_IT\_SOURCE@{\_\_HAL\_SMARTCARD\_GET\_IT\_SOURCE}!SMARTCARD Exported Macros@{SMARTCARD Exported Macros}}
+\doxysubsubsection{\_\_HAL\_SMARTCARD\_GET\_IT\_SOURCE}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+SMARTCARD\+\_\+\+GET\+\_\+\+IT\+\_\+\+SOURCE(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+IT\+\_\+\+\_\+ }\end{DoxyParamCaption})~(((((\+\_\+\+\_\+\+IT\+\_\+\+\_\+) $>$$>$ 28U) == 1U)? (\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$CR1\+: (\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$CR3) \& (((uint32\+\_\+t)(\+\_\+\+\_\+\+IT\+\_\+\+\_\+)) \& \textbf{ SMARTCARD\+\_\+\+IT\+\_\+\+MASK}))}
+
+
+
+Checks whether the specified Smart\+Card interrupt has occurred or not. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$strong$>$\+HANDLE$<$/strong$>$} & specifies the Smart\+Card Handle. \\
+\hline
+{\em $<$strong$>$\+IT$<$/strong$>$} & specifies the SMARTCARD interrupt source to check. This parameter can be one of the following values\+: \begin{DoxyItemize}
+\item SMARTCARD\+\_\+\+IT\+\_\+\+TXE\+: Transmit Data Register empty interrupt \item SMARTCARD\+\_\+\+IT\+\_\+\+TC\+: Transmission complete interrupt \item SMARTCARD\+\_\+\+IT\+\_\+\+RXNE\+: Receive Data register not empty interrupt \item SMARTCARD\+\_\+\+IT\+\_\+\+IDLE\+: Idle line detection interrupt \item SMARTCARD\+\_\+\+IT\+\_\+\+ERR\+: Error interrupt \item SMARTCARD\+\_\+\+IT\+\_\+\+PE\+: Parity Error interrupt \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em The} & new state of {\bfseries{IT}} (TRUE or FALSE). \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 513 of file stm32f4xx\+\_\+hal\+\_\+smartcard.\+h.
+
+\mbox{\label{group___s_m_a_r_t_c_a_r_d___exported___macros_ga82594558a0ec7710672d530161d1c761}} 
+\index{SMARTCARD Exported Macros@{SMARTCARD Exported Macros}!\_\_HAL\_SMARTCARD\_ONE\_BIT\_SAMPLE\_DISABLE@{\_\_HAL\_SMARTCARD\_ONE\_BIT\_SAMPLE\_DISABLE}}
+\index{\_\_HAL\_SMARTCARD\_ONE\_BIT\_SAMPLE\_DISABLE@{\_\_HAL\_SMARTCARD\_ONE\_BIT\_SAMPLE\_DISABLE}!SMARTCARD Exported Macros@{SMARTCARD Exported Macros}}
+\doxysubsubsection{\_\_HAL\_SMARTCARD\_ONE\_BIT\_SAMPLE\_DISABLE}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+SMARTCARD\+\_\+\+ONE\+\_\+\+BIT\+\_\+\+SAMPLE\+\_\+\+DISABLE(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+ }\end{DoxyParamCaption})~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$CR3 \&= (uint16\+\_\+t)$\sim$((uint16\+\_\+t)\textbf{ USART\+\_\+\+CR3\+\_\+\+ONEBIT}))}
+
+
+
+Macro to disable the SMARTCARD\textquotesingle{}s one bit sample method. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$strong$>$\+HANDLE$<$/strong$>$} & specifies the SMARTCARD Handle. ~\newline
+ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 525 of file stm32f4xx\+\_\+hal\+\_\+smartcard.\+h.
+
+\mbox{\label{group___s_m_a_r_t_c_a_r_d___exported___macros_ga6b4e136b15d772d901351369df7a4dda}} 
+\index{SMARTCARD Exported Macros@{SMARTCARD Exported Macros}!\_\_HAL\_SMARTCARD\_ONE\_BIT\_SAMPLE\_ENABLE@{\_\_HAL\_SMARTCARD\_ONE\_BIT\_SAMPLE\_ENABLE}}
+\index{\_\_HAL\_SMARTCARD\_ONE\_BIT\_SAMPLE\_ENABLE@{\_\_HAL\_SMARTCARD\_ONE\_BIT\_SAMPLE\_ENABLE}!SMARTCARD Exported Macros@{SMARTCARD Exported Macros}}
+\doxysubsubsection{\_\_HAL\_SMARTCARD\_ONE\_BIT\_SAMPLE\_ENABLE}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+SMARTCARD\+\_\+\+ONE\+\_\+\+BIT\+\_\+\+SAMPLE\+\_\+\+ENABLE(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+ }\end{DoxyParamCaption})~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$CR3$\vert$= \textbf{ USART\+\_\+\+CR3\+\_\+\+ONEBIT})}
+
+
+
+Macro to enable the SMARTCARD\textquotesingle{}s one bit sample method. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$strong$>$\+HANDLE$<$/strong$>$} & specifies the SMARTCARD Handle. ~\newline
+ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 519 of file stm32f4xx\+\_\+hal\+\_\+smartcard.\+h.
+
+\mbox{\label{group___s_m_a_r_t_c_a_r_d___exported___macros_ga080b197f190ae36b8db1745a4db94bf4}} 
+\index{SMARTCARD Exported Macros@{SMARTCARD Exported Macros}!\_\_HAL\_SMARTCARD\_RESET\_HANDLE\_STATE@{\_\_HAL\_SMARTCARD\_RESET\_HANDLE\_STATE}}
+\index{\_\_HAL\_SMARTCARD\_RESET\_HANDLE\_STATE@{\_\_HAL\_SMARTCARD\_RESET\_HANDLE\_STATE}!SMARTCARD Exported Macros@{SMARTCARD Exported Macros}}
+\doxysubsubsection{\_\_HAL\_SMARTCARD\_RESET\_HANDLE\_STATE}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+SMARTCARD\+\_\+\+RESET\+\_\+\+HANDLE\+\_\+\+STATE(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                                            \textcolor{keywordflow}{do}\{                                                        \(\backslash\)}
+\DoxyCodeLine{                                                            (\_\_HANDLE\_\_)-\/>gState = HAL\_SMARTCARD\_STATE\_RESET;      \(\backslash\)}
+\DoxyCodeLine{                                                            (\_\_HANDLE\_\_)-\/>RxState = HAL\_SMARTCARD\_STATE\_RESET;     \(\backslash\)}
+\DoxyCodeLine{                                                          \} \textcolor{keywordflow}{while}(0)}
+
+\end{DoxyCode}
+
+
+Reset SMARTCARD handle gstate \& Rx\+State. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$strong$>$\+HANDLE$<$/strong$>$} & specifies the SMARTCARD Handle. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 396 of file stm32f4xx\+\_\+hal\+\_\+smartcard.\+h.
+

@@ -1,0 +1,205 @@
+\doxysection{system/include/stm32f4-\/hal/stm32f4xx\+\_\+hal\+\_\+flash.h File Reference}
+\label{stm32f4xx__hal__flash_8h}\index{system/include/stm32f4-\/hal/stm32f4xx\_hal\_flash.h@{system/include/stm32f4-\/hal/stm32f4xx\_hal\_flash.h}}
+
+
+Header file of FLASH HAL module.  
+
+
+{\ttfamily \#include \char`\"{}stm32f4xx\+\_\+hal\+\_\+def.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}stm32f4xx\+\_\+hal\+\_\+flash\+\_\+ex.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}stm32f4xx\+\_\+hal\+\_\+flash\+\_\+ramfunc.\+h\char`\"{}}\newline
+Include dependency graph for stm32f4xx\+\_\+hal\+\_\+flash.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{stm32f4xx__hal__flash_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{stm32f4xx__hal__flash_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \textbf{ FLASH\+\_\+\+Process\+Type\+Def}
+\begin{DoxyCompactList}\small\item\em FLASH handle Structure definition ~\newline
+ \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \textbf{ HAL\+\_\+\+FLASH\+\_\+\+ERROR\+\_\+\+NONE}~((uint32\+\_\+t)0x00000000U)
+\item 
+\#define \textbf{ HAL\+\_\+\+FLASH\+\_\+\+ERROR\+\_\+\+RD}~((uint32\+\_\+t)0x00000001U)
+\item 
+\#define \textbf{ HAL\+\_\+\+FLASH\+\_\+\+ERROR\+\_\+\+PGS}~((uint32\+\_\+t)0x00000002U)
+\item 
+\#define \textbf{ HAL\+\_\+\+FLASH\+\_\+\+ERROR\+\_\+\+PGP}~((uint32\+\_\+t)0x00000004U)
+\item 
+\#define \textbf{ HAL\+\_\+\+FLASH\+\_\+\+ERROR\+\_\+\+PGA}~((uint32\+\_\+t)0x00000008U)
+\item 
+\#define \textbf{ HAL\+\_\+\+FLASH\+\_\+\+ERROR\+\_\+\+WRP}~((uint32\+\_\+t)0x00000010U)
+\item 
+\#define \textbf{ HAL\+\_\+\+FLASH\+\_\+\+ERROR\+\_\+\+OPERATION}~((uint32\+\_\+t)0x00000020U)
+\item 
+\#define \textbf{ FLASH\+\_\+\+TYPEPROGRAM\+\_\+\+BYTE}~((uint32\+\_\+t)0x00U)
+\item 
+\#define \textbf{ FLASH\+\_\+\+TYPEPROGRAM\+\_\+\+HALFWORD}~((uint32\+\_\+t)0x01U)
+\item 
+\#define \textbf{ FLASH\+\_\+\+TYPEPROGRAM\+\_\+\+WORD}~((uint32\+\_\+t)0x02U)
+\item 
+\#define \textbf{ FLASH\+\_\+\+TYPEPROGRAM\+\_\+\+DOUBLEWORD}~((uint32\+\_\+t)0x03U)
+\item 
+\#define \textbf{ FLASH\+\_\+\+FLAG\+\_\+\+EOP}~\textbf{ FLASH\+\_\+\+SR\+\_\+\+EOP}
+\item 
+\#define \textbf{ FLASH\+\_\+\+FLAG\+\_\+\+OPERR}~\textbf{ FLASH\+\_\+\+SR\+\_\+\+SOP}
+\item 
+\#define \textbf{ FLASH\+\_\+\+FLAG\+\_\+\+WRPERR}~\textbf{ FLASH\+\_\+\+SR\+\_\+\+WRPERR}
+\item 
+\#define \textbf{ FLASH\+\_\+\+FLAG\+\_\+\+PGAERR}~\textbf{ FLASH\+\_\+\+SR\+\_\+\+PGAERR}
+\item 
+\#define \textbf{ FLASH\+\_\+\+FLAG\+\_\+\+PGPERR}~\textbf{ FLASH\+\_\+\+SR\+\_\+\+PGPERR}
+\item 
+\#define \textbf{ FLASH\+\_\+\+FLAG\+\_\+\+PGSERR}~\textbf{ FLASH\+\_\+\+SR\+\_\+\+PGSERR}
+\item 
+\#define \textbf{ FLASH\+\_\+\+FLAG\+\_\+\+RDERR}~((uint32\+\_\+t)0x00000100U)
+\item 
+\#define \textbf{ FLASH\+\_\+\+FLAG\+\_\+\+BSY}~\textbf{ FLASH\+\_\+\+SR\+\_\+\+BSY}
+\item 
+\#define \textbf{ FLASH\+\_\+\+IT\+\_\+\+EOP}~\textbf{ FLASH\+\_\+\+CR\+\_\+\+EOPIE}
+\item 
+\#define \textbf{ FLASH\+\_\+\+IT\+\_\+\+ERR}~((uint32\+\_\+t)0x02000000U)
+\item 
+\#define \textbf{ FLASH\+\_\+\+PSIZE\+\_\+\+BYTE}~((uint32\+\_\+t)0x00000000U)
+\item 
+\#define \textbf{ FLASH\+\_\+\+PSIZE\+\_\+\+HALF\+\_\+\+WORD}~((uint32\+\_\+t)0x00000100U)
+\item 
+\#define \textbf{ FLASH\+\_\+\+PSIZE\+\_\+\+WORD}~((uint32\+\_\+t)0x00000200U)
+\item 
+\#define \textbf{ FLASH\+\_\+\+PSIZE\+\_\+\+DOUBLE\+\_\+\+WORD}~((uint32\+\_\+t)0x00000300U)
+\item 
+\#define \textbf{ CR\+\_\+\+PSIZE\+\_\+\+MASK}~((uint32\+\_\+t)0x\+FFFFFCFFU)
+\item 
+\#define \textbf{ RDP\+\_\+\+KEY}~((uint16\+\_\+t)0x00\+A5U)
+\item 
+\#define \textbf{ FLASH\+\_\+\+KEY1}~((uint32\+\_\+t)0x45670123U)
+\item 
+\#define \textbf{ FLASH\+\_\+\+KEY2}~((uint32\+\_\+t)0x\+CDEF89\+ABU)
+\item 
+\#define \textbf{ FLASH\+\_\+\+OPT\+\_\+\+KEY1}~((uint32\+\_\+t)0x08192\+A3\+BU)
+\item 
+\#define \textbf{ FLASH\+\_\+\+OPT\+\_\+\+KEY2}~((uint32\+\_\+t)0x4\+C5\+D6\+E7\+FU)
+\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+FLASH\+\_\+\+SET\+\_\+\+LATENCY}(\+\_\+\+\_\+\+LATENCY\+\_\+\+\_\+)~($\ast$(\textbf{ \+\_\+\+\_\+\+IO} uint8\+\_\+t $\ast$)\textbf{ ACR\+\_\+\+BYTE0\+\_\+\+ADDRESS} = (uint8\+\_\+t)(\+\_\+\+\_\+\+LATENCY\+\_\+\+\_\+))
+\begin{DoxyCompactList}\small\item\em Set the FLASH Latency. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+FLASH\+\_\+\+GET\+\_\+\+LATENCY}()~(\textbf{ READ\+\_\+\+BIT}((\textbf{ FLASH}-\/$>$ACR), \textbf{ FLASH\+\_\+\+ACR\+\_\+\+LATENCY}))
+\begin{DoxyCompactList}\small\item\em Get the FLASH Latency. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+FLASH\+\_\+\+PREFETCH\+\_\+\+BUFFER\+\_\+\+ENABLE}()~(\textbf{ FLASH}-\/$>$ACR $\vert$= \textbf{ FLASH\+\_\+\+ACR\+\_\+\+PRFTEN})
+\begin{DoxyCompactList}\small\item\em Enable the FLASH prefetch buffer. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+FLASH\+\_\+\+PREFETCH\+\_\+\+BUFFER\+\_\+\+DISABLE}()~(\textbf{ FLASH}-\/$>$ACR \&= ($\sim$\textbf{ FLASH\+\_\+\+ACR\+\_\+\+PRFTEN}))
+\begin{DoxyCompactList}\small\item\em Disable the FLASH prefetch buffer. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+FLASH\+\_\+\+INSTRUCTION\+\_\+\+CACHE\+\_\+\+ENABLE}()~(\textbf{ FLASH}-\/$>$ACR $\vert$= \textbf{ FLASH\+\_\+\+ACR\+\_\+\+ICEN})
+\begin{DoxyCompactList}\small\item\em Enable the FLASH instruction cache. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+FLASH\+\_\+\+INSTRUCTION\+\_\+\+CACHE\+\_\+\+DISABLE}()~(\textbf{ FLASH}-\/$>$ACR \&= ($\sim$\textbf{ FLASH\+\_\+\+ACR\+\_\+\+ICEN}))
+\begin{DoxyCompactList}\small\item\em Disable the FLASH instruction cache. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+FLASH\+\_\+\+DATA\+\_\+\+CACHE\+\_\+\+ENABLE}()~(\textbf{ FLASH}-\/$>$ACR $\vert$= \textbf{ FLASH\+\_\+\+ACR\+\_\+\+DCEN})
+\begin{DoxyCompactList}\small\item\em Enable the FLASH data cache. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+FLASH\+\_\+\+DATA\+\_\+\+CACHE\+\_\+\+DISABLE}()~(\textbf{ FLASH}-\/$>$ACR \&= ($\sim$\textbf{ FLASH\+\_\+\+ACR\+\_\+\+DCEN}))
+\begin{DoxyCompactList}\small\item\em Disable the FLASH data cache. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+FLASH\+\_\+\+INSTRUCTION\+\_\+\+CACHE\+\_\+\+RESET}()
+\begin{DoxyCompactList}\small\item\em Resets the FLASH instruction Cache. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+FLASH\+\_\+\+DATA\+\_\+\+CACHE\+\_\+\+RESET}()
+\begin{DoxyCompactList}\small\item\em Resets the FLASH data Cache. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+FLASH\+\_\+\+ENABLE\+\_\+\+IT}(\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)~(\textbf{ FLASH}-\/$>$CR $\vert$= (\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+))
+\begin{DoxyCompactList}\small\item\em Enable the specified FLASH interrupt. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+FLASH\+\_\+\+DISABLE\+\_\+\+IT}(\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)~(\textbf{ FLASH}-\/$>$CR \&= $\sim$(uint32\+\_\+t)(\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+))
+\begin{DoxyCompactList}\small\item\em Disable the specified FLASH interrupt. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+FLASH\+\_\+\+GET\+\_\+\+FLAG}(\+\_\+\+\_\+\+FLAG\+\_\+\+\_\+)~((\textbf{ FLASH}-\/$>$SR \& (\+\_\+\+\_\+\+FLAG\+\_\+\+\_\+))==(\+\_\+\+\_\+\+FLAG\+\_\+\+\_\+))
+\begin{DoxyCompactList}\small\item\em Get the specified FLASH flag status. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+FLASH\+\_\+\+CLEAR\+\_\+\+FLAG}(\+\_\+\+\_\+\+FLAG\+\_\+\+\_\+)~(\textbf{ FLASH}-\/$>$SR = (\+\_\+\+\_\+\+FLAG\+\_\+\+\_\+))
+\begin{DoxyCompactList}\small\item\em Clear the specified FLASH flag. \end{DoxyCompactList}\item 
+\#define \textbf{ ACR\+\_\+\+BYTE0\+\_\+\+ADDRESS}~((uint32\+\_\+t)0x40023\+C00U)
+\begin{DoxyCompactList}\small\item\em ACR register byte 0 (Bits[7\+:0]) base address ~\newline
+ \end{DoxyCompactList}\item 
+\#define \textbf{ OPTCR\+\_\+\+BYTE0\+\_\+\+ADDRESS}~((uint32\+\_\+t)0x40023\+C14U)
+\begin{DoxyCompactList}\small\item\em OPTCR register byte 0 (Bits[7\+:0]) base address ~\newline
+ \end{DoxyCompactList}\item 
+\#define \textbf{ OPTCR\+\_\+\+BYTE1\+\_\+\+ADDRESS}~((uint32\+\_\+t)0x40023\+C15U)
+\begin{DoxyCompactList}\small\item\em OPTCR register byte 1 (Bits[15\+:8]) base address ~\newline
+ \end{DoxyCompactList}\item 
+\#define \textbf{ OPTCR\+\_\+\+BYTE2\+\_\+\+ADDRESS}~((uint32\+\_\+t)0x40023\+C16U)
+\begin{DoxyCompactList}\small\item\em OPTCR register byte 2 (Bits[23\+:16]) base address ~\newline
+ \end{DoxyCompactList}\item 
+\#define \textbf{ OPTCR\+\_\+\+BYTE3\+\_\+\+ADDRESS}~((uint32\+\_\+t)0x40023\+C17U)
+\begin{DoxyCompactList}\small\item\em OPTCR register byte 3 (Bits[31\+:24]) base address ~\newline
+ \end{DoxyCompactList}\item 
+\#define \textbf{ IS\+\_\+\+FLASH\+\_\+\+TYPEPROGRAM}(VALUE)
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \textbf{ FLASH\+\_\+\+Procedure\+Type\+Def} \{ \textbf{ FLASH\+\_\+\+PROC\+\_\+\+NONE} = 0U
+, \textbf{ FLASH\+\_\+\+PROC\+\_\+\+SECTERASE}
+, \textbf{ FLASH\+\_\+\+PROC\+\_\+\+MASSERASE}
+, \textbf{ FLASH\+\_\+\+PROC\+\_\+\+PROGRAM}
+ \}
+\begin{DoxyCompactList}\small\item\em FLASH Procedure structure definition. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+FLASH\+\_\+\+Program} (uint32\+\_\+t Type\+Program, uint32\+\_\+t Address, uint64\+\_\+t Data)
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+FLASH\+\_\+\+Program\+\_\+\+IT} (uint32\+\_\+t Type\+Program, uint32\+\_\+t Address, uint64\+\_\+t Data)
+\item 
+void \textbf{ HAL\+\_\+\+FLASH\+\_\+\+IRQHandler} (void)
+\item 
+void \textbf{ HAL\+\_\+\+FLASH\+\_\+\+End\+Of\+Operation\+Callback} (uint32\+\_\+t Return\+Value)
+\item 
+void \textbf{ HAL\+\_\+\+FLASH\+\_\+\+Operation\+Error\+Callback} (uint32\+\_\+t Return\+Value)
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+FLASH\+\_\+\+Unlock} (void)
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+FLASH\+\_\+\+Lock} (void)
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+FLASH\+\_\+\+OB\+\_\+\+Unlock} (void)
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+FLASH\+\_\+\+OB\+\_\+\+Lock} (void)
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+FLASH\+\_\+\+OB\+\_\+\+Launch} (void)
+\item 
+uint32\+\_\+t \textbf{ HAL\+\_\+\+FLASH\+\_\+\+Get\+Error} (void)
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ FLASH\+\_\+\+Wait\+For\+Last\+Operation} (uint32\+\_\+t Timeout)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Header file of FLASH HAL module. 
+
+\begin{DoxyAuthor}{Author}
+MCD Application Team 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+V1.\+5.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+06-\/May-\/2016
+\end{DoxyDate}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+\doxysubsubsection*{\begin{center}\copyright{} COPYRIGHT(c) 2016 STMicroelectronics\end{center} }
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met\+:
+\begin{DoxyEnumerate}
+\item Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+\item Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+\item Neither the name of STMicroelectronics nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+\end{DoxyEnumerate}
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \char`\"{}\+AS IS\char`\"{} AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. 

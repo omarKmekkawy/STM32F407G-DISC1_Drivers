@@ -1,0 +1,125 @@
+\doxysection{I2\+C\+\_\+\+Init\+Type\+Def Struct Reference}
+\label{struct_i2_c___init_type_def}\index{I2C\_InitTypeDef@{I2C\_InitTypeDef}}
+
+
+I2C Configuration Structure definition.  
+
+
+
+
+{\ttfamily \#include $<$stm32f4xx\+\_\+hal\+\_\+i2c.\+h$>$}
+
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \textbf{ Clock\+Speed}
+\item 
+uint32\+\_\+t \textbf{ Duty\+Cycle}
+\item 
+uint32\+\_\+t \textbf{ Own\+Address1}
+\item 
+uint32\+\_\+t \textbf{ Addressing\+Mode}
+\item 
+uint32\+\_\+t \textbf{ Dual\+Address\+Mode}
+\item 
+uint32\+\_\+t \textbf{ Own\+Address2}
+\item 
+uint32\+\_\+t \textbf{ General\+Call\+Mode}
+\item 
+uint32\+\_\+t \textbf{ No\+Stretch\+Mode}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+I2C Configuration Structure definition. 
+
+Definition at line 65 of file stm32f4xx\+\_\+hal\+\_\+i2c.\+h.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\label{struct_i2_c___init_type_def_aa7afcb44ef1f351763d7dc69ba0f4f8c}} 
+\index{I2C\_InitTypeDef@{I2C\_InitTypeDef}!AddressingMode@{AddressingMode}}
+\index{AddressingMode@{AddressingMode}!I2C\_InitTypeDef@{I2C\_InitTypeDef}}
+\doxysubsubsection{AddressingMode}
+{\footnotesize\ttfamily uint32\+\_\+t Addressing\+Mode}
+
+Specifies if 7-\/bit or 10-\/bit addressing mode is selected. This parameter can be a value of \doxyref{I2C addressing mode}{p.}{group___i2_c__addressing__mode} 
+
+Definition at line 76 of file stm32f4xx\+\_\+hal\+\_\+i2c.\+h.
+
+\mbox{\label{struct_i2_c___init_type_def_a2e90d47d6a9a180f8c3126c70102d562}} 
+\index{I2C\_InitTypeDef@{I2C\_InitTypeDef}!ClockSpeed@{ClockSpeed}}
+\index{ClockSpeed@{ClockSpeed}!I2C\_InitTypeDef@{I2C\_InitTypeDef}}
+\doxysubsubsection{ClockSpeed}
+{\footnotesize\ttfamily uint32\+\_\+t Clock\+Speed}
+
+Specifies the clock frequency. This parameter must be set to a value lower than 400k\+Hz 
+
+Definition at line 67 of file stm32f4xx\+\_\+hal\+\_\+i2c.\+h.
+
+\mbox{\label{struct_i2_c___init_type_def_aabb4e156aa4af60dfaf591419e9b1a07}} 
+\index{I2C\_InitTypeDef@{I2C\_InitTypeDef}!DualAddressMode@{DualAddressMode}}
+\index{DualAddressMode@{DualAddressMode}!I2C\_InitTypeDef@{I2C\_InitTypeDef}}
+\doxysubsubsection{DualAddressMode}
+{\footnotesize\ttfamily uint32\+\_\+t Dual\+Address\+Mode}
+
+Specifies if dual addressing mode is selected. This parameter can be a value of \doxyref{I2C dual addressing mode}{p.}{group___i2_c__dual__addressing__mode} 
+
+Definition at line 79 of file stm32f4xx\+\_\+hal\+\_\+i2c.\+h.
+
+\mbox{\label{struct_i2_c___init_type_def_a762a4d954f3ccee6017e31fe902fb1c1}} 
+\index{I2C\_InitTypeDef@{I2C\_InitTypeDef}!DutyCycle@{DutyCycle}}
+\index{DutyCycle@{DutyCycle}!I2C\_InitTypeDef@{I2C\_InitTypeDef}}
+\doxysubsubsection{DutyCycle}
+{\footnotesize\ttfamily uint32\+\_\+t Duty\+Cycle}
+
+Specifies the I2C fast mode duty cycle. This parameter can be a value of \doxyref{I2C duty cycle in fast mode}{p.}{group___i2_c__duty__cycle__in__fast__mode} 
+
+Definition at line 70 of file stm32f4xx\+\_\+hal\+\_\+i2c.\+h.
+
+\mbox{\label{struct_i2_c___init_type_def_afc70f58c0935194064d720779fbf22b5}} 
+\index{I2C\_InitTypeDef@{I2C\_InitTypeDef}!GeneralCallMode@{GeneralCallMode}}
+\index{GeneralCallMode@{GeneralCallMode}!I2C\_InitTypeDef@{I2C\_InitTypeDef}}
+\doxysubsubsection{GeneralCallMode}
+{\footnotesize\ttfamily uint32\+\_\+t General\+Call\+Mode}
+
+Specifies if general call mode is selected. This parameter can be a value of \doxyref{I2C general call addressing mode}{p.}{group___i2_c__general__call__addressing__mode} 
+
+Definition at line 85 of file stm32f4xx\+\_\+hal\+\_\+i2c.\+h.
+
+\mbox{\label{struct_i2_c___init_type_def_a47971fd08a9784eddaa3d83fb998030c}} 
+\index{I2C\_InitTypeDef@{I2C\_InitTypeDef}!NoStretchMode@{NoStretchMode}}
+\index{NoStretchMode@{NoStretchMode}!I2C\_InitTypeDef@{I2C\_InitTypeDef}}
+\doxysubsubsection{NoStretchMode}
+{\footnotesize\ttfamily uint32\+\_\+t No\+Stretch\+Mode}
+
+Specifies if nostretch mode is selected. This parameter can be a value of \doxyref{I2C nostretch mode}{p.}{group___i2_c__nostretch__mode} 
+
+Definition at line 88 of file stm32f4xx\+\_\+hal\+\_\+i2c.\+h.
+
+\mbox{\label{struct_i2_c___init_type_def_a8abec5c168e27bf11b2808c1450bdeda}} 
+\index{I2C\_InitTypeDef@{I2C\_InitTypeDef}!OwnAddress1@{OwnAddress1}}
+\index{OwnAddress1@{OwnAddress1}!I2C\_InitTypeDef@{I2C\_InitTypeDef}}
+\doxysubsubsection{OwnAddress1}
+{\footnotesize\ttfamily uint32\+\_\+t Own\+Address1}
+
+Specifies the first device own address. This parameter can be a 7-\/bit or 10-\/bit address. 
+
+Definition at line 73 of file stm32f4xx\+\_\+hal\+\_\+i2c.\+h.
+
+\mbox{\label{struct_i2_c___init_type_def_a6300c7a7e1b7d5444226a1bd55744f53}} 
+\index{I2C\_InitTypeDef@{I2C\_InitTypeDef}!OwnAddress2@{OwnAddress2}}
+\index{OwnAddress2@{OwnAddress2}!I2C\_InitTypeDef@{I2C\_InitTypeDef}}
+\doxysubsubsection{OwnAddress2}
+{\footnotesize\ttfamily uint32\+\_\+t Own\+Address2}
+
+Specifies the second device own address if dual addressing mode is selected This parameter can be a 7-\/bit address. 
+
+Definition at line 82 of file stm32f4xx\+\_\+hal\+\_\+i2c.\+h.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+system/include/stm32f4-\/hal/\textbf{ stm32f4xx\+\_\+hal\+\_\+i2c.\+h}\end{DoxyCompactItemize}

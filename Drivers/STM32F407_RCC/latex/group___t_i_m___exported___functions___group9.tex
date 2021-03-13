@@ -1,0 +1,96 @@
+\doxysection{TIM\+\_\+\+Exported\+\_\+\+Functions\+\_\+\+Group9}
+\label{group___t_i_m___exported___functions___group9}\index{TIM\_Exported\_Functions\_Group9@{TIM\_Exported\_Functions\_Group9}}
+Collaboration diagram for TIM\+\_\+\+Exported\+\_\+\+Functions\+\_\+\+Group9\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group___t_i_m___exported___functions___group9}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \textbf{ HAL\+\_\+\+TIM\+\_\+\+Period\+Elapsed\+Callback} (\textbf{ TIM\+\_\+\+Handle\+Type\+Def} $\ast$htim)
+\begin{DoxyCompactList}\small\item\em Period elapsed callback in non blocking mode. \end{DoxyCompactList}\item 
+void \textbf{ HAL\+\_\+\+TIM\+\_\+\+OC\+\_\+\+Delay\+Elapsed\+Callback} (\textbf{ TIM\+\_\+\+Handle\+Type\+Def} $\ast$htim)
+\item 
+void \textbf{ HAL\+\_\+\+TIM\+\_\+\+IC\+\_\+\+Capture\+Callback} (\textbf{ TIM\+\_\+\+Handle\+Type\+Def} $\ast$htim)
+\item 
+void \textbf{ HAL\+\_\+\+TIM\+\_\+\+PWM\+\_\+\+Pulse\+Finished\+Callback} (\textbf{ TIM\+\_\+\+Handle\+Type\+Def} $\ast$htim)
+\item 
+void \textbf{ HAL\+\_\+\+TIM\+\_\+\+Trigger\+Callback} (\textbf{ TIM\+\_\+\+Handle\+Type\+Def} $\ast$htim)
+\item 
+void \textbf{ HAL\+\_\+\+TIM\+\_\+\+Error\+Callback} (\textbf{ TIM\+\_\+\+Handle\+Type\+Def} $\ast$htim)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\label{group___t_i_m___exported___functions___group9_ga6f0868af383d592940700dbb52fac016}} 
+\index{TIM\_Exported\_Functions\_Group9@{TIM\_Exported\_Functions\_Group9}!HAL\_TIM\_ErrorCallback@{HAL\_TIM\_ErrorCallback}}
+\index{HAL\_TIM\_ErrorCallback@{HAL\_TIM\_ErrorCallback}!TIM\_Exported\_Functions\_Group9@{TIM\_Exported\_Functions\_Group9}}
+\doxysubsubsection{HAL\_TIM\_ErrorCallback()}
+{\footnotesize\ttfamily void HAL\+\_\+\+TIM\+\_\+\+Error\+Callback (\begin{DoxyParamCaption}\item[{\textbf{ TIM\+\_\+\+Handle\+Type\+Def} $\ast$}]{htim }\end{DoxyParamCaption})}
+
+\mbox{\label{group___t_i_m___exported___functions___group9_ga77a2401a35ddd9bd0b8fc28331b81381}} 
+\index{TIM\_Exported\_Functions\_Group9@{TIM\_Exported\_Functions\_Group9}!HAL\_TIM\_IC\_CaptureCallback@{HAL\_TIM\_IC\_CaptureCallback}}
+\index{HAL\_TIM\_IC\_CaptureCallback@{HAL\_TIM\_IC\_CaptureCallback}!TIM\_Exported\_Functions\_Group9@{TIM\_Exported\_Functions\_Group9}}
+\doxysubsubsection{HAL\_TIM\_IC\_CaptureCallback()}
+{\footnotesize\ttfamily void HAL\+\_\+\+TIM\+\_\+\+IC\+\_\+\+Capture\+Callback (\begin{DoxyParamCaption}\item[{\textbf{ TIM\+\_\+\+Handle\+Type\+Def} $\ast$}]{htim }\end{DoxyParamCaption})}
+
+\mbox{\label{group___t_i_m___exported___functions___group9_ga1fc39499fe9db8b7fb88005e9f107a36}} 
+\index{TIM\_Exported\_Functions\_Group9@{TIM\_Exported\_Functions\_Group9}!HAL\_TIM\_OC\_DelayElapsedCallback@{HAL\_TIM\_OC\_DelayElapsedCallback}}
+\index{HAL\_TIM\_OC\_DelayElapsedCallback@{HAL\_TIM\_OC\_DelayElapsedCallback}!TIM\_Exported\_Functions\_Group9@{TIM\_Exported\_Functions\_Group9}}
+\doxysubsubsection{HAL\_TIM\_OC\_DelayElapsedCallback()}
+{\footnotesize\ttfamily void HAL\+\_\+\+TIM\+\_\+\+OC\+\_\+\+Delay\+Elapsed\+Callback (\begin{DoxyParamCaption}\item[{\textbf{ TIM\+\_\+\+Handle\+Type\+Def} $\ast$}]{htim }\end{DoxyParamCaption})}
+
+\mbox{\label{group___t_i_m___exported___functions___group9_ga8a3b0ad512a6e6c6157440b68d395eac}} 
+\index{TIM\_Exported\_Functions\_Group9@{TIM\_Exported\_Functions\_Group9}!HAL\_TIM\_PeriodElapsedCallback@{HAL\_TIM\_PeriodElapsedCallback}}
+\index{HAL\_TIM\_PeriodElapsedCallback@{HAL\_TIM\_PeriodElapsedCallback}!TIM\_Exported\_Functions\_Group9@{TIM\_Exported\_Functions\_Group9}}
+\doxysubsubsection{HAL\_TIM\_PeriodElapsedCallback()}
+{\footnotesize\ttfamily void HAL\+\_\+\+TIM\+\_\+\+Period\+Elapsed\+Callback (\begin{DoxyParamCaption}\item[{\textbf{ TIM\+\_\+\+Handle\+Type\+Def} $\ast$}]{htim }\end{DoxyParamCaption})}
+
+
+
+Period elapsed callback in non blocking mode. 
+
+\begin{DoxyNote}{Note}
+This function is called when TIM6 interrupt took place, inside \doxyref{HAL\+\_\+\+TIM\+\_\+\+IRQHandler()}{p.}{group___t_i_m___exported___functions___group7_ga2dc3ef34340412aa8a01d734d2ff8f88}. It makes a direct call to \doxyref{HAL\+\_\+\+Inc\+Tick()}{p.}{group___h_a_l___exported___functions___group2_gaba5b726bfedd013bf7bb5a51d5c4f188} to increment a global variable \char`\"{}uw\+Tick\char`\"{} used as application time base. 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em htim} & \+: TIM handle \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 163 of file stm32f4xx\+\_\+hal\+\_\+timebase\+\_\+tim\+\_\+template.\+c.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=349pt]{group___t_i_m___exported___functions___group9_ga8a3b0ad512a6e6c6157440b68d395eac_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{group___t_i_m___exported___functions___group9_ga07e5fc4d223b16bec2fd6bed547cf91d}} 
+\index{TIM\_Exported\_Functions\_Group9@{TIM\_Exported\_Functions\_Group9}!HAL\_TIM\_PWM\_PulseFinishedCallback@{HAL\_TIM\_PWM\_PulseFinishedCallback}}
+\index{HAL\_TIM\_PWM\_PulseFinishedCallback@{HAL\_TIM\_PWM\_PulseFinishedCallback}!TIM\_Exported\_Functions\_Group9@{TIM\_Exported\_Functions\_Group9}}
+\doxysubsubsection{HAL\_TIM\_PWM\_PulseFinishedCallback()}
+{\footnotesize\ttfamily void HAL\+\_\+\+TIM\+\_\+\+PWM\+\_\+\+Pulse\+Finished\+Callback (\begin{DoxyParamCaption}\item[{\textbf{ TIM\+\_\+\+Handle\+Type\+Def} $\ast$}]{htim }\end{DoxyParamCaption})}
+
+\mbox{\label{group___t_i_m___exported___functions___group9_ga189577c72b1963671b26820d8161d678}} 
+\index{TIM\_Exported\_Functions\_Group9@{TIM\_Exported\_Functions\_Group9}!HAL\_TIM\_TriggerCallback@{HAL\_TIM\_TriggerCallback}}
+\index{HAL\_TIM\_TriggerCallback@{HAL\_TIM\_TriggerCallback}!TIM\_Exported\_Functions\_Group9@{TIM\_Exported\_Functions\_Group9}}
+\doxysubsubsection{HAL\_TIM\_TriggerCallback()}
+{\footnotesize\ttfamily void HAL\+\_\+\+TIM\+\_\+\+Trigger\+Callback (\begin{DoxyParamCaption}\item[{\textbf{ TIM\+\_\+\+Handle\+Type\+Def} $\ast$}]{htim }\end{DoxyParamCaption})}
+

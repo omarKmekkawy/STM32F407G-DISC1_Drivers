@@ -1,0 +1,223 @@
+\doxysection{RTC Alarm Sub Seconds Masks Definitions}
+\label{group___r_t_c___alarm___sub___seconds___masks___definitions}\index{RTC Alarm Sub Seconds Masks Definitions@{RTC Alarm Sub Seconds Masks Definitions}}
+Collaboration diagram for RTC Alarm Sub Seconds Masks Definitions\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group___r_t_c___alarm___sub___seconds___masks___definitions}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \textbf{ RTC\+\_\+\+ALARMSUBSECONDMASK\+\_\+\+ALL}~((uint32\+\_\+t)0x00000000U)
+\item 
+\#define \textbf{ RTC\+\_\+\+ALARMSUBSECONDMASK\+\_\+\+SS14\+\_\+1}~((uint32\+\_\+t)0x01000000U)
+\item 
+\#define \textbf{ RTC\+\_\+\+ALARMSUBSECONDMASK\+\_\+\+SS14\+\_\+2}~((uint32\+\_\+t)0x02000000U)
+\item 
+\#define \textbf{ RTC\+\_\+\+ALARMSUBSECONDMASK\+\_\+\+SS14\+\_\+3}~((uint32\+\_\+t)0x03000000U)
+\item 
+\#define \textbf{ RTC\+\_\+\+ALARMSUBSECONDMASK\+\_\+\+SS14\+\_\+4}~((uint32\+\_\+t)0x04000000U)
+\item 
+\#define \textbf{ RTC\+\_\+\+ALARMSUBSECONDMASK\+\_\+\+SS14\+\_\+5}~((uint32\+\_\+t)0x05000000U)
+\item 
+\#define \textbf{ RTC\+\_\+\+ALARMSUBSECONDMASK\+\_\+\+SS14\+\_\+6}~((uint32\+\_\+t)0x06000000U)
+\item 
+\#define \textbf{ RTC\+\_\+\+ALARMSUBSECONDMASK\+\_\+\+SS14\+\_\+7}~((uint32\+\_\+t)0x07000000U)
+\item 
+\#define \textbf{ RTC\+\_\+\+ALARMSUBSECONDMASK\+\_\+\+SS14\+\_\+8}~((uint32\+\_\+t)0x08000000U)
+\item 
+\#define \textbf{ RTC\+\_\+\+ALARMSUBSECONDMASK\+\_\+\+SS14\+\_\+9}~((uint32\+\_\+t)0x09000000U)
+\item 
+\#define \textbf{ RTC\+\_\+\+ALARMSUBSECONDMASK\+\_\+\+SS14\+\_\+10}~((uint32\+\_\+t)0x0\+A000000U)
+\item 
+\#define \textbf{ RTC\+\_\+\+ALARMSUBSECONDMASK\+\_\+\+SS14\+\_\+11}~((uint32\+\_\+t)0x0\+B000000U)
+\item 
+\#define \textbf{ RTC\+\_\+\+ALARMSUBSECONDMASK\+\_\+\+SS14\+\_\+12}~((uint32\+\_\+t)0x0\+C000000U)
+\item 
+\#define \textbf{ RTC\+\_\+\+ALARMSUBSECONDMASK\+\_\+\+SS14\+\_\+13}~((uint32\+\_\+t)0x0\+D000000U)
+\item 
+\#define \textbf{ RTC\+\_\+\+ALARMSUBSECONDMASK\+\_\+\+SS14}~((uint32\+\_\+t)0x0\+E000000U)
+\item 
+\#define \textbf{ RTC\+\_\+\+ALARMSUBSECONDMASK\+\_\+\+NONE}~((uint32\+\_\+t)0x0\+F000000U)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\label{group___r_t_c___alarm___sub___seconds___masks___definitions_gaf96ae2bcfc62e92473372c4510d517d5}} 
+\index{RTC Alarm Sub Seconds Masks Definitions@{RTC Alarm Sub Seconds Masks Definitions}!RTC\_ALARMSUBSECONDMASK\_ALL@{RTC\_ALARMSUBSECONDMASK\_ALL}}
+\index{RTC\_ALARMSUBSECONDMASK\_ALL@{RTC\_ALARMSUBSECONDMASK\_ALL}!RTC Alarm Sub Seconds Masks Definitions@{RTC Alarm Sub Seconds Masks Definitions}}
+\doxysubsubsection{RTC\_ALARMSUBSECONDMASK\_ALL}
+{\footnotesize\ttfamily \#define RTC\+\_\+\+ALARMSUBSECONDMASK\+\_\+\+ALL~((uint32\+\_\+t)0x00000000U)}
+
+All Alarm SS fields are masked. There is no comparison on sub seconds for Alarm 
+
+Definition at line 346 of file stm32f4xx\+\_\+hal\+\_\+rtc.\+h.
+
+\mbox{\label{group___r_t_c___alarm___sub___seconds___masks___definitions_ga2c3802d48626766a3fc85ad910caea02}} 
+\index{RTC Alarm Sub Seconds Masks Definitions@{RTC Alarm Sub Seconds Masks Definitions}!RTC\_ALARMSUBSECONDMASK\_NONE@{RTC\_ALARMSUBSECONDMASK\_NONE}}
+\index{RTC\_ALARMSUBSECONDMASK\_NONE@{RTC\_ALARMSUBSECONDMASK\_NONE}!RTC Alarm Sub Seconds Masks Definitions@{RTC Alarm Sub Seconds Masks Definitions}}
+\doxysubsubsection{RTC\_ALARMSUBSECONDMASK\_NONE}
+{\footnotesize\ttfamily \#define RTC\+\_\+\+ALARMSUBSECONDMASK\+\_\+\+NONE~((uint32\+\_\+t)0x0\+F000000U)}
+
+SS[14\+:0] are compared and must match to activate alarm. 
+
+Definition at line 376 of file stm32f4xx\+\_\+hal\+\_\+rtc.\+h.
+
+\mbox{\label{group___r_t_c___alarm___sub___seconds___masks___definitions_ga91e1225dc11de4ce4bd74eb18fc155f7}} 
+\index{RTC Alarm Sub Seconds Masks Definitions@{RTC Alarm Sub Seconds Masks Definitions}!RTC\_ALARMSUBSECONDMASK\_SS14@{RTC\_ALARMSUBSECONDMASK\_SS14}}
+\index{RTC\_ALARMSUBSECONDMASK\_SS14@{RTC\_ALARMSUBSECONDMASK\_SS14}!RTC Alarm Sub Seconds Masks Definitions@{RTC Alarm Sub Seconds Masks Definitions}}
+\doxysubsubsection{RTC\_ALARMSUBSECONDMASK\_SS14}
+{\footnotesize\ttfamily \#define RTC\+\_\+\+ALARMSUBSECONDMASK\+\_\+\+SS14~((uint32\+\_\+t)0x0\+E000000U)}
+
+SS[14] is don\textquotesingle{}t care in Alarm comparison.\+Only SS[13\+:0] are compared ~\newline
+ 
+
+Definition at line 374 of file stm32f4xx\+\_\+hal\+\_\+rtc.\+h.
+
+\mbox{\label{group___r_t_c___alarm___sub___seconds___masks___definitions_ga382ddfaca27c4b547c69878a320aab43}} 
+\index{RTC Alarm Sub Seconds Masks Definitions@{RTC Alarm Sub Seconds Masks Definitions}!RTC\_ALARMSUBSECONDMASK\_SS14\_1@{RTC\_ALARMSUBSECONDMASK\_SS14\_1}}
+\index{RTC\_ALARMSUBSECONDMASK\_SS14\_1@{RTC\_ALARMSUBSECONDMASK\_SS14\_1}!RTC Alarm Sub Seconds Masks Definitions@{RTC Alarm Sub Seconds Masks Definitions}}
+\doxysubsubsection{RTC\_ALARMSUBSECONDMASK\_SS14\_1}
+{\footnotesize\ttfamily \#define RTC\+\_\+\+ALARMSUBSECONDMASK\+\_\+\+SS14\+\_\+1~((uint32\+\_\+t)0x01000000U)}
+
+SS[14\+:1] are don\textquotesingle{}t care in Alarm comparison. Only SS[0] is compared. ~\newline
+ 
+
+Definition at line 348 of file stm32f4xx\+\_\+hal\+\_\+rtc.\+h.
+
+\mbox{\label{group___r_t_c___alarm___sub___seconds___masks___definitions_ga7cb4d4abdac134b508cbb6e9b5d21638}} 
+\index{RTC Alarm Sub Seconds Masks Definitions@{RTC Alarm Sub Seconds Masks Definitions}!RTC\_ALARMSUBSECONDMASK\_SS14\_10@{RTC\_ALARMSUBSECONDMASK\_SS14\_10}}
+\index{RTC\_ALARMSUBSECONDMASK\_SS14\_10@{RTC\_ALARMSUBSECONDMASK\_SS14\_10}!RTC Alarm Sub Seconds Masks Definitions@{RTC Alarm Sub Seconds Masks Definitions}}
+\doxysubsubsection{RTC\_ALARMSUBSECONDMASK\_SS14\_10}
+{\footnotesize\ttfamily \#define RTC\+\_\+\+ALARMSUBSECONDMASK\+\_\+\+SS14\+\_\+10~((uint32\+\_\+t)0x0\+A000000U)}
+
+SS[14\+:10] are don\textquotesingle{}t care in Alarm comparison. Only SS[9\+:0] are compared ~\newline
+ 
+
+Definition at line 366 of file stm32f4xx\+\_\+hal\+\_\+rtc.\+h.
+
+\mbox{\label{group___r_t_c___alarm___sub___seconds___masks___definitions_gaf67fcaa5c58e46e47d97be746c9dec24}} 
+\index{RTC Alarm Sub Seconds Masks Definitions@{RTC Alarm Sub Seconds Masks Definitions}!RTC\_ALARMSUBSECONDMASK\_SS14\_11@{RTC\_ALARMSUBSECONDMASK\_SS14\_11}}
+\index{RTC\_ALARMSUBSECONDMASK\_SS14\_11@{RTC\_ALARMSUBSECONDMASK\_SS14\_11}!RTC Alarm Sub Seconds Masks Definitions@{RTC Alarm Sub Seconds Masks Definitions}}
+\doxysubsubsection{RTC\_ALARMSUBSECONDMASK\_SS14\_11}
+{\footnotesize\ttfamily \#define RTC\+\_\+\+ALARMSUBSECONDMASK\+\_\+\+SS14\+\_\+11~((uint32\+\_\+t)0x0\+B000000U)}
+
+SS[14\+:11] are don\textquotesingle{}t care in Alarm comparison. Only SS[10\+:0] are compared 
+
+Definition at line 368 of file stm32f4xx\+\_\+hal\+\_\+rtc.\+h.
+
+\mbox{\label{group___r_t_c___alarm___sub___seconds___masks___definitions_ga37c03d1ef098287fa559af1a28bd8ba5}} 
+\index{RTC Alarm Sub Seconds Masks Definitions@{RTC Alarm Sub Seconds Masks Definitions}!RTC\_ALARMSUBSECONDMASK\_SS14\_12@{RTC\_ALARMSUBSECONDMASK\_SS14\_12}}
+\index{RTC\_ALARMSUBSECONDMASK\_SS14\_12@{RTC\_ALARMSUBSECONDMASK\_SS14\_12}!RTC Alarm Sub Seconds Masks Definitions@{RTC Alarm Sub Seconds Masks Definitions}}
+\doxysubsubsection{RTC\_ALARMSUBSECONDMASK\_SS14\_12}
+{\footnotesize\ttfamily \#define RTC\+\_\+\+ALARMSUBSECONDMASK\+\_\+\+SS14\+\_\+12~((uint32\+\_\+t)0x0\+C000000U)}
+
+SS[14\+:12] are don\textquotesingle{}t care in Alarm comparison.\+Only SS[11\+:0] are compared ~\newline
+ 
+
+Definition at line 370 of file stm32f4xx\+\_\+hal\+\_\+rtc.\+h.
+
+\mbox{\label{group___r_t_c___alarm___sub___seconds___masks___definitions_gada3b5b45dbdabf604340b0c09bdbdc2c}} 
+\index{RTC Alarm Sub Seconds Masks Definitions@{RTC Alarm Sub Seconds Masks Definitions}!RTC\_ALARMSUBSECONDMASK\_SS14\_13@{RTC\_ALARMSUBSECONDMASK\_SS14\_13}}
+\index{RTC\_ALARMSUBSECONDMASK\_SS14\_13@{RTC\_ALARMSUBSECONDMASK\_SS14\_13}!RTC Alarm Sub Seconds Masks Definitions@{RTC Alarm Sub Seconds Masks Definitions}}
+\doxysubsubsection{RTC\_ALARMSUBSECONDMASK\_SS14\_13}
+{\footnotesize\ttfamily \#define RTC\+\_\+\+ALARMSUBSECONDMASK\+\_\+\+SS14\+\_\+13~((uint32\+\_\+t)0x0\+D000000U)}
+
+SS[14\+:13] are don\textquotesingle{}t care in Alarm comparison. Only SS[12\+:0] are compared 
+
+Definition at line 372 of file stm32f4xx\+\_\+hal\+\_\+rtc.\+h.
+
+\mbox{\label{group___r_t_c___alarm___sub___seconds___masks___definitions_gad627f4e6c83537e1d5b8c657f91d6bcf}} 
+\index{RTC Alarm Sub Seconds Masks Definitions@{RTC Alarm Sub Seconds Masks Definitions}!RTC\_ALARMSUBSECONDMASK\_SS14\_2@{RTC\_ALARMSUBSECONDMASK\_SS14\_2}}
+\index{RTC\_ALARMSUBSECONDMASK\_SS14\_2@{RTC\_ALARMSUBSECONDMASK\_SS14\_2}!RTC Alarm Sub Seconds Masks Definitions@{RTC Alarm Sub Seconds Masks Definitions}}
+\doxysubsubsection{RTC\_ALARMSUBSECONDMASK\_SS14\_2}
+{\footnotesize\ttfamily \#define RTC\+\_\+\+ALARMSUBSECONDMASK\+\_\+\+SS14\+\_\+2~((uint32\+\_\+t)0x02000000U)}
+
+SS[14\+:2] are don\textquotesingle{}t care in Alarm comparison. Only SS[1\+:0] are compared ~\newline
+ 
+
+Definition at line 350 of file stm32f4xx\+\_\+hal\+\_\+rtc.\+h.
+
+\mbox{\label{group___r_t_c___alarm___sub___seconds___masks___definitions_gaeb5fb21c4ef0d54ca1515564563c0487}} 
+\index{RTC Alarm Sub Seconds Masks Definitions@{RTC Alarm Sub Seconds Masks Definitions}!RTC\_ALARMSUBSECONDMASK\_SS14\_3@{RTC\_ALARMSUBSECONDMASK\_SS14\_3}}
+\index{RTC\_ALARMSUBSECONDMASK\_SS14\_3@{RTC\_ALARMSUBSECONDMASK\_SS14\_3}!RTC Alarm Sub Seconds Masks Definitions@{RTC Alarm Sub Seconds Masks Definitions}}
+\doxysubsubsection{RTC\_ALARMSUBSECONDMASK\_SS14\_3}
+{\footnotesize\ttfamily \#define RTC\+\_\+\+ALARMSUBSECONDMASK\+\_\+\+SS14\+\_\+3~((uint32\+\_\+t)0x03000000U)}
+
+SS[14\+:3] are don\textquotesingle{}t care in Alarm comparison. Only SS[2\+:0] are compared ~\newline
+ 
+
+Definition at line 352 of file stm32f4xx\+\_\+hal\+\_\+rtc.\+h.
+
+\mbox{\label{group___r_t_c___alarm___sub___seconds___masks___definitions_ga6f9b0a78f9723a20b1f94b5581e04194}} 
+\index{RTC Alarm Sub Seconds Masks Definitions@{RTC Alarm Sub Seconds Masks Definitions}!RTC\_ALARMSUBSECONDMASK\_SS14\_4@{RTC\_ALARMSUBSECONDMASK\_SS14\_4}}
+\index{RTC\_ALARMSUBSECONDMASK\_SS14\_4@{RTC\_ALARMSUBSECONDMASK\_SS14\_4}!RTC Alarm Sub Seconds Masks Definitions@{RTC Alarm Sub Seconds Masks Definitions}}
+\doxysubsubsection{RTC\_ALARMSUBSECONDMASK\_SS14\_4}
+{\footnotesize\ttfamily \#define RTC\+\_\+\+ALARMSUBSECONDMASK\+\_\+\+SS14\+\_\+4~((uint32\+\_\+t)0x04000000U)}
+
+SS[14\+:4] are don\textquotesingle{}t care in Alarm comparison. Only SS[3\+:0] are compared ~\newline
+ 
+
+Definition at line 354 of file stm32f4xx\+\_\+hal\+\_\+rtc.\+h.
+
+\mbox{\label{group___r_t_c___alarm___sub___seconds___masks___definitions_gafc0252b2f8a935811dadd3d6b8ea3574}} 
+\index{RTC Alarm Sub Seconds Masks Definitions@{RTC Alarm Sub Seconds Masks Definitions}!RTC\_ALARMSUBSECONDMASK\_SS14\_5@{RTC\_ALARMSUBSECONDMASK\_SS14\_5}}
+\index{RTC\_ALARMSUBSECONDMASK\_SS14\_5@{RTC\_ALARMSUBSECONDMASK\_SS14\_5}!RTC Alarm Sub Seconds Masks Definitions@{RTC Alarm Sub Seconds Masks Definitions}}
+\doxysubsubsection{RTC\_ALARMSUBSECONDMASK\_SS14\_5}
+{\footnotesize\ttfamily \#define RTC\+\_\+\+ALARMSUBSECONDMASK\+\_\+\+SS14\+\_\+5~((uint32\+\_\+t)0x05000000U)}
+
+SS[14\+:5] are don\textquotesingle{}t care in Alarm comparison. Only SS[4\+:0] are compared ~\newline
+ 
+
+Definition at line 356 of file stm32f4xx\+\_\+hal\+\_\+rtc.\+h.
+
+\mbox{\label{group___r_t_c___alarm___sub___seconds___masks___definitions_ga60fab8d647e6f8500926a0db2dff94d8}} 
+\index{RTC Alarm Sub Seconds Masks Definitions@{RTC Alarm Sub Seconds Masks Definitions}!RTC\_ALARMSUBSECONDMASK\_SS14\_6@{RTC\_ALARMSUBSECONDMASK\_SS14\_6}}
+\index{RTC\_ALARMSUBSECONDMASK\_SS14\_6@{RTC\_ALARMSUBSECONDMASK\_SS14\_6}!RTC Alarm Sub Seconds Masks Definitions@{RTC Alarm Sub Seconds Masks Definitions}}
+\doxysubsubsection{RTC\_ALARMSUBSECONDMASK\_SS14\_6}
+{\footnotesize\ttfamily \#define RTC\+\_\+\+ALARMSUBSECONDMASK\+\_\+\+SS14\+\_\+6~((uint32\+\_\+t)0x06000000U)}
+
+SS[14\+:6] are don\textquotesingle{}t care in Alarm comparison. Only SS[5\+:0] are compared ~\newline
+ 
+
+Definition at line 358 of file stm32f4xx\+\_\+hal\+\_\+rtc.\+h.
+
+\mbox{\label{group___r_t_c___alarm___sub___seconds___masks___definitions_gac0f57cb99c0a40708e3dd44eafa7f8e6}} 
+\index{RTC Alarm Sub Seconds Masks Definitions@{RTC Alarm Sub Seconds Masks Definitions}!RTC\_ALARMSUBSECONDMASK\_SS14\_7@{RTC\_ALARMSUBSECONDMASK\_SS14\_7}}
+\index{RTC\_ALARMSUBSECONDMASK\_SS14\_7@{RTC\_ALARMSUBSECONDMASK\_SS14\_7}!RTC Alarm Sub Seconds Masks Definitions@{RTC Alarm Sub Seconds Masks Definitions}}
+\doxysubsubsection{RTC\_ALARMSUBSECONDMASK\_SS14\_7}
+{\footnotesize\ttfamily \#define RTC\+\_\+\+ALARMSUBSECONDMASK\+\_\+\+SS14\+\_\+7~((uint32\+\_\+t)0x07000000U)}
+
+SS[14\+:7] are don\textquotesingle{}t care in Alarm comparison. Only SS[6\+:0] are compared ~\newline
+ 
+
+Definition at line 360 of file stm32f4xx\+\_\+hal\+\_\+rtc.\+h.
+
+\mbox{\label{group___r_t_c___alarm___sub___seconds___masks___definitions_ga0f7cdfed3ad8bbe33fc2c4c2b8d5d2ce}} 
+\index{RTC Alarm Sub Seconds Masks Definitions@{RTC Alarm Sub Seconds Masks Definitions}!RTC\_ALARMSUBSECONDMASK\_SS14\_8@{RTC\_ALARMSUBSECONDMASK\_SS14\_8}}
+\index{RTC\_ALARMSUBSECONDMASK\_SS14\_8@{RTC\_ALARMSUBSECONDMASK\_SS14\_8}!RTC Alarm Sub Seconds Masks Definitions@{RTC Alarm Sub Seconds Masks Definitions}}
+\doxysubsubsection{RTC\_ALARMSUBSECONDMASK\_SS14\_8}
+{\footnotesize\ttfamily \#define RTC\+\_\+\+ALARMSUBSECONDMASK\+\_\+\+SS14\+\_\+8~((uint32\+\_\+t)0x08000000U)}
+
+SS[14\+:8] are don\textquotesingle{}t care in Alarm comparison. Only SS[7\+:0] are compared ~\newline
+ 
+
+Definition at line 362 of file stm32f4xx\+\_\+hal\+\_\+rtc.\+h.
+
+\mbox{\label{group___r_t_c___alarm___sub___seconds___masks___definitions_ga173d153f6543cd34062d8ca14fb04975}} 
+\index{RTC Alarm Sub Seconds Masks Definitions@{RTC Alarm Sub Seconds Masks Definitions}!RTC\_ALARMSUBSECONDMASK\_SS14\_9@{RTC\_ALARMSUBSECONDMASK\_SS14\_9}}
+\index{RTC\_ALARMSUBSECONDMASK\_SS14\_9@{RTC\_ALARMSUBSECONDMASK\_SS14\_9}!RTC Alarm Sub Seconds Masks Definitions@{RTC Alarm Sub Seconds Masks Definitions}}
+\doxysubsubsection{RTC\_ALARMSUBSECONDMASK\_SS14\_9}
+{\footnotesize\ttfamily \#define RTC\+\_\+\+ALARMSUBSECONDMASK\+\_\+\+SS14\+\_\+9~((uint32\+\_\+t)0x09000000U)}
+
+SS[14\+:9] are don\textquotesingle{}t care in Alarm comparison. Only SS[8\+:0] are compared ~\newline
+ 
+
+Definition at line 364 of file stm32f4xx\+\_\+hal\+\_\+rtc.\+h.
+

@@ -1,0 +1,175 @@
+\doxysection{system/src/stm32f4-\/hal/stm32f4xx\+\_\+hal\+\_\+dac.c File Reference}
+\label{stm32f4xx__hal__dac_8c}\index{system/src/stm32f4-\/hal/stm32f4xx\_hal\_dac.c@{system/src/stm32f4-\/hal/stm32f4xx\_hal\_dac.c}}
+
+
+DAC HAL module driver. This file provides firmware functions to manage the following functionalities of the Digital to Analog Converter (DAC) peripheral\+:  
+
+
+{\ttfamily \#include \char`\"{}stm32f4xx\+\_\+hal.\+h\char`\"{}}\newline
+Include dependency graph for stm32f4xx\+\_\+hal\+\_\+dac.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{stm32f4xx__hal__dac_8c__incl}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Detailed Description}
+DAC HAL module driver. This file provides firmware functions to manage the following functionalities of the Digital to Analog Converter (DAC) peripheral\+: 
+
+\begin{DoxyAuthor}{Author}
+MCD Application Team 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+V1.\+5.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+06-\/May-\/2016
+\begin{DoxyItemize}
+\item Initialization and de-\/initialization functions
+\item IO operation functions
+\item Peripheral Control functions
+\item Peripheral State and Errors functions ~\newline
+
+\end{DoxyItemize}
+\end{DoxyDate}
+\begin{DoxyVerb} ==============================================================================
+                     ##### DAC Peripheral features #####
+ ==============================================================================
+   [..]        
+     *** DAC Channels ***
+     ====================  
+   [..]
+   The device integrates two 12-bit Digital Analog Converters that can 
+   be used independently or simultaneously (dual mode):
+     (#) DAC channel1 with DAC_OUT1 (PA4) as output
+     (#) DAC channel2 with DAC_OUT2 (PA5) as output
+     
+     *** DAC Triggers ***
+     ====================
+   [..]
+   Digital to Analog conversion can be non-triggered using DAC_TRIGGER_NONE
+   and DAC_OUT1/DAC_OUT2 is available once writing to DHRx register. 
+   [..] 
+   Digital to Analog conversion can be triggered by:
+     (#) External event: EXTI Line 9 (any GPIOx_Pin9) using DAC_TRIGGER_EXT_IT9.
+         The used pin (GPIOx_Pin9) must be configured in input mode.
+ 
+     (#) Timers TRGO: TIM2, TIM4, TIM5, TIM6, TIM7 and TIM8 
+         (DAC_TRIGGER_T2_TRGO, DAC_TRIGGER_T4_TRGO...)
+ 
+     (#) Software using DAC_TRIGGER_SOFTWARE
+ 
+     *** DAC Buffer mode feature ***
+     =============================== 
+     [..] 
+     Each DAC channel integrates an output buffer that can be used to 
+     reduce the output impedance, and to drive external loads directly
+     without having to add an external operational amplifier.
+     To enable, the output buffer use  
+     sConfig.DAC_OutputBuffer = DAC_OUTPUTBUFFER_ENABLE;
+     [..]           
+     (@) Refer to the device datasheet for more details about output 
+         impedance value with and without output buffer.
+           
+      *** DAC wave generation feature ***
+      =================================== 
+      [..]     
+      Both DAC channels can be used to generate
+        (#) Noise wave 
+        (#) Triangle wave
+           
+      *** DAC data format ***
+      =======================
+      [..]   
+      The DAC data format can be:
+        (#) 8-bit right alignment using DAC_ALIGN_8B_R
+        (#) 12-bit left alignment using DAC_ALIGN_12B_L
+        (#) 12-bit right alignment using DAC_ALIGN_12B_R
+ 
+      *** DAC data value to voltage correspondence ***  
+      ================================================ 
+      [..] 
+      The analog output voltage on each DAC channel pin is determined
+      by the following equation: 
+      DAC_OUTx = VREF+ * DOR / 4095
+      with  DOR is the Data Output Register
+         VEF+ is the input voltage reference (refer to the device datasheet)
+       e.g. To set DAC_OUT1 to 0.7V, use
+         Assuming that VREF+ = 3.3V, DAC_OUT1 = (3.3 * 868) / 4095 = 0.7V
+ 
+      *** DMA requests  ***
+      =====================
+      [..]    
+      A DMA1 request can be generated when an external trigger (but not
+      a software trigger) occurs if DMA1 requests are enabled using
+      HAL_DAC_Start_DMA()
+      [..]
+      DMA1 requests are mapped as following:
+        (#) DAC channel1 : mapped on DMA1 Stream5 channel7 which must be 
+            already configured
+        (#) DAC channel2 : mapped on DMA1 Stream6 channel7 which must be 
+            already configured
+      
+   -@- For Dual mode and specific signal (Triangle and noise) generation please 
+       refer to Extension Features Driver description        
+ 
+     
+                     ##### How to use this driver #####
+ ==============================================================================
+   [..]          
+     (+) DAC APB clock must be enabled to get write access to DAC
+         registers using HAL_DAC_Init()
+     (+) Configure DAC_OUTx (DAC_OUT1: PA4, DAC_OUT2: PA5) in analog mode.
+     (+) Configure the DAC channel using HAL_DAC_ConfigChannel() function.
+     (+) Enable the DAC channel using HAL_DAC_Start() or HAL_DAC_Start_DMA functions
+
+    *** Polling mode IO operation ***
+    =================================
+    [..]    
+      (+) Start the DAC peripheral using HAL_DAC_Start() 
+      (+) To read the DAC last data output value, use the HAL_DAC_GetValue() function.
+      (+) Stop the DAC peripheral using HAL_DAC_Stop()
+      
+    *** DMA mode IO operation ***    
+    ==============================
+    [..]    
+      (+) Start the DAC peripheral using HAL_DAC_Start_DMA(), at this stage the user specify the length 
+          of data to be transferred at each end of conversion 
+      (+) At The end of data transfer HAL_DAC_ConvCpltCallbackCh1()or HAL_DAC_ConvCpltCallbackCh2()  
+          function is executed and user can add his own code by customization of function pointer 
+          HAL_DAC_ConvCpltCallbackCh1 or HAL_DAC_ConvCpltCallbackCh2
+      (+) In case of transfer Error, HAL_DAC_ErrorCallbackCh1() function is executed and user can 
+           add his own code by customization of function pointer HAL_DAC_ErrorCallbackCh1
+      (+) Stop the DAC peripheral using HAL_DAC_Stop_DMA()
+                   
+    *** DAC HAL driver macros list ***
+    ============================================= 
+    [..]
+      Below the list of most used macros in DAC HAL driver.
+      
+     (+) __HAL_DAC_ENABLE : Enable the DAC peripheral
+     (+) __HAL_DAC_DISABLE : Disable the DAC peripheral
+     (+) __HAL_DAC_CLEAR_FLAG: Clear the DAC's pending flags
+     (+) __HAL_DAC_GET_FLAG: Get the selected DAC's flag status
+     
+    [..]
+     (@) You can refer to the DAC HAL driver header file for more useful macros  \end{DoxyVerb}
+ ~\newline
+
+
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+\doxysubsubsection*{\begin{center}\copyright{} COPYRIGHT(c) 2016 STMicroelectronics\end{center} }
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met\+:
+\begin{DoxyEnumerate}
+\item Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+\item Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+\item Neither the name of STMicroelectronics nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+\end{DoxyEnumerate}
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \char`\"{}\+AS IS\char`\"{} AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. 

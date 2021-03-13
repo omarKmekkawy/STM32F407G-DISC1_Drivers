@@ -1,0 +1,541 @@
+\doxysection{RTC Wake\+Up Timer}
+\label{group___r_t_c_ex___wake_up___timer}\index{RTC WakeUp Timer@{RTC WakeUp Timer}}
+Collaboration diagram for RTC Wake\+Up Timer\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=344pt]{group___r_t_c_ex___wake_up___timer}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+WAKEUPTIMER\+\_\+\+ENABLE}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$CR $\vert$= (\textbf{ RTC\+\_\+\+CR\+\_\+\+WUTE}))
+\begin{DoxyCompactList}\small\item\em Enable the RTC Wake\+Up Timer peripheral. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+WAKEUPTIMER\+\_\+\+DISABLE}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$CR \&= $\sim$(\textbf{ RTC\+\_\+\+CR\+\_\+\+WUTE}))
+\begin{DoxyCompactList}\small\item\em Disable the RTC Wake-\/up Timer peripheral. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+WAKEUPTIMER\+\_\+\+ENABLE\+\_\+\+IT}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$CR $\vert$= (\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+))
+\begin{DoxyCompactList}\small\item\em Enable the RTC Wake\+Up\+Timer interrupt. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+WAKEUPTIMER\+\_\+\+DISABLE\+\_\+\+IT}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$CR \&= $\sim$(\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+))
+\begin{DoxyCompactList}\small\item\em Disable the RTC Wake\+Up\+Timer interrupt. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+WAKEUPTIMER\+\_\+\+GET\+\_\+\+IT}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)~(((((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$ISR) \& ((\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)$>$$>$ 4U)) != \textbf{ RESET})? \textbf{ SET} \+: \textbf{ RESET})
+\begin{DoxyCompactList}\small\item\em Check whether the specified RTC Wake\+Up\+Timer interrupt has occurred or not. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+WAKEUPTIMER\+\_\+\+GET\+\_\+\+IT\+\_\+\+SOURCE}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)~(((((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$CR) \& (\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)) != \textbf{ RESET}) ? \textbf{ SET} \+: \textbf{ RESET})
+\begin{DoxyCompactList}\small\item\em Check whether the specified RTC Wake Up timer interrupt has been enabled or not. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+WAKEUPTIMER\+\_\+\+GET\+\_\+\+FLAG}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+FLAG\+\_\+\+\_\+)~(((((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$ISR) \& (\+\_\+\+\_\+\+FLAG\+\_\+\+\_\+)) != \textbf{ RESET})? \textbf{ SET} \+: \textbf{ RESET})
+\begin{DoxyCompactList}\small\item\em Get the selected RTC Wake\+Up\+Timer\textquotesingle{}s flag status. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+WAKEUPTIMER\+\_\+\+CLEAR\+\_\+\+FLAG}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+FLAG\+\_\+\+\_\+)~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$ISR) = ($\sim$((\+\_\+\+\_\+\+FLAG\+\_\+\+\_\+) $\vert$ \textbf{ RTC\+\_\+\+ISR\+\_\+\+INIT})$\vert$((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$ISR \& \textbf{ RTC\+\_\+\+ISR\+\_\+\+INIT}))
+\begin{DoxyCompactList}\small\item\em Clear the RTC Wake Up timer\textquotesingle{}s pending flags. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+WAKEUPTIMER\+\_\+\+EXTI\+\_\+\+ENABLE\+\_\+\+IT}()~(\textbf{ EXTI}-\/$>$IMR $\vert$= \textbf{ RTC\+\_\+\+EXTI\+\_\+\+LINE\+\_\+\+WAKEUPTIMER\+\_\+\+EVENT})
+\begin{DoxyCompactList}\small\item\em Enable interrupt on the RTC Wake-\/up Timer associated Exti line. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+WAKEUPTIMER\+\_\+\+EXTI\+\_\+\+DISABLE\+\_\+\+IT}()~(\textbf{ EXTI}-\/$>$IMR \&= $\sim$(\textbf{ RTC\+\_\+\+EXTI\+\_\+\+LINE\+\_\+\+WAKEUPTIMER\+\_\+\+EVENT}))
+\begin{DoxyCompactList}\small\item\em Disable interrupt on the RTC Wake-\/up Timer associated Exti line. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+WAKEUPTIMER\+\_\+\+EXTI\+\_\+\+ENABLE\+\_\+\+EVENT}()~(\textbf{ EXTI}-\/$>$EMR $\vert$= \textbf{ RTC\+\_\+\+EXTI\+\_\+\+LINE\+\_\+\+WAKEUPTIMER\+\_\+\+EVENT})
+\begin{DoxyCompactList}\small\item\em Enable event on the RTC Wake-\/up Timer associated Exti line. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+WAKEUPTIMER\+\_\+\+EXTI\+\_\+\+DISABLE\+\_\+\+EVENT}()~(\textbf{ EXTI}-\/$>$EMR \&= $\sim$(\textbf{ RTC\+\_\+\+EXTI\+\_\+\+LINE\+\_\+\+WAKEUPTIMER\+\_\+\+EVENT}))
+\begin{DoxyCompactList}\small\item\em Disable event on the RTC Wake-\/up Timer associated Exti line. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+WAKEUPTIMER\+\_\+\+EXTI\+\_\+\+ENABLE\+\_\+\+FALLING\+\_\+\+EDGE}()~(\textbf{ EXTI}-\/$>$FTSR $\vert$= \textbf{ RTC\+\_\+\+EXTI\+\_\+\+LINE\+\_\+\+WAKEUPTIMER\+\_\+\+EVENT})
+\begin{DoxyCompactList}\small\item\em Enable falling edge trigger on the RTC Wake-\/up Timer associated Exti line. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+WAKEUPTIMER\+\_\+\+EXTI\+\_\+\+DISABLE\+\_\+\+FALLING\+\_\+\+EDGE}()~(\textbf{ EXTI}-\/$>$FTSR \&= $\sim$(\textbf{ RTC\+\_\+\+EXTI\+\_\+\+LINE\+\_\+\+WAKEUPTIMER\+\_\+\+EVENT}))
+\begin{DoxyCompactList}\small\item\em Disable falling edge trigger on the RTC Wake-\/up Timer associated Exti line. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+WAKEUPTIMER\+\_\+\+EXTI\+\_\+\+ENABLE\+\_\+\+RISING\+\_\+\+EDGE}()~(\textbf{ EXTI}-\/$>$RTSR $\vert$= \textbf{ RTC\+\_\+\+EXTI\+\_\+\+LINE\+\_\+\+WAKEUPTIMER\+\_\+\+EVENT})
+\begin{DoxyCompactList}\small\item\em Enable rising edge trigger on the RTC Wake-\/up Timer associated Exti line. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+WAKEUPTIMER\+\_\+\+EXTI\+\_\+\+DISABLE\+\_\+\+RISING\+\_\+\+EDGE}()~(\textbf{ EXTI}-\/$>$RTSR \&= $\sim$(\textbf{ RTC\+\_\+\+EXTI\+\_\+\+LINE\+\_\+\+WAKEUPTIMER\+\_\+\+EVENT}))
+\begin{DoxyCompactList}\small\item\em Disable rising edge trigger on the RTC Wake-\/up Timer associated Exti line. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+WAKEUPTIMER\+\_\+\+EXTI\+\_\+\+ENABLE\+\_\+\+RISING\+\_\+\+FALLING\+\_\+\+EDGE}()
+\begin{DoxyCompactList}\small\item\em Enable rising \& falling edge trigger on the RTC Wake-\/up Timer associated Exti line. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+WAKEUPTIMER\+\_\+\+EXTI\+\_\+\+DISABLE\+\_\+\+RISING\+\_\+\+FALLING\+\_\+\+EDGE}()
+\begin{DoxyCompactList}\small\item\em Disable rising \& falling edge trigger on the RTC Wake-\/up Timer associated Exti line. This parameter can be\+: \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+WAKEUPTIMER\+\_\+\+EXTI\+\_\+\+GET\+\_\+\+FLAG}()~(\textbf{ EXTI}-\/$>$PR \& \textbf{ RTC\+\_\+\+EXTI\+\_\+\+LINE\+\_\+\+WAKEUPTIMER\+\_\+\+EVENT})
+\begin{DoxyCompactList}\small\item\em Check whether the RTC Wake-\/up Timer associated Exti line interrupt flag is set or not. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+WAKEUPTIMER\+\_\+\+EXTI\+\_\+\+CLEAR\+\_\+\+FLAG}()~(\textbf{ EXTI}-\/$>$PR = \textbf{ RTC\+\_\+\+EXTI\+\_\+\+LINE\+\_\+\+WAKEUPTIMER\+\_\+\+EVENT})
+\begin{DoxyCompactList}\small\item\em Clear the RTC Wake-\/up Timer associated Exti line flag. \end{DoxyCompactList}\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+WAKEUPTIMER\+\_\+\+EXTI\+\_\+\+GENERATE\+\_\+\+SWIT}()~(\textbf{ EXTI}-\/$>$SWIER $\vert$= \textbf{ RTC\+\_\+\+EXTI\+\_\+\+LINE\+\_\+\+WAKEUPTIMER\+\_\+\+EVENT})
+\begin{DoxyCompactList}\small\item\em Generate a Software interrupt on the RTC Wake-\/up Timer associated Exti line. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\label{group___r_t_c_ex___wake_up___timer_gabb56cd29b62b414c5da34e2fc1cabf16}} 
+\index{RTC WakeUp Timer@{RTC WakeUp Timer}!\_\_HAL\_RTC\_WAKEUPTIMER\_CLEAR\_FLAG@{\_\_HAL\_RTC\_WAKEUPTIMER\_CLEAR\_FLAG}}
+\index{\_\_HAL\_RTC\_WAKEUPTIMER\_CLEAR\_FLAG@{\_\_HAL\_RTC\_WAKEUPTIMER\_CLEAR\_FLAG}!RTC WakeUp Timer@{RTC WakeUp Timer}}
+\doxysubsubsection{\_\_HAL\_RTC\_WAKEUPTIMER\_CLEAR\_FLAG}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+WAKEUPTIMER\+\_\+\+CLEAR\+\_\+\+FLAG(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+FLAG\+\_\+\+\_\+ }\end{DoxyParamCaption})~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$ISR) = ($\sim$((\+\_\+\+\_\+\+FLAG\+\_\+\+\_\+) $\vert$ \textbf{ RTC\+\_\+\+ISR\+\_\+\+INIT})$\vert$((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$ISR \& \textbf{ RTC\+\_\+\+ISR\+\_\+\+INIT}))}
+
+
+
+Clear the RTC Wake Up timer\textquotesingle{}s pending flags. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$strong$>$\+HANDLE$<$/strong$>$} & specifies the RTC handle. \\
+\hline
+{\em $<$strong$>$\+FLAG$<$/strong$>$} & specifies the RTC Tamper Flag sources to be enabled or disabled. This parameter can be\+: \begin{DoxyItemize}
+\item RTC\+\_\+\+FLAG\+\_\+\+WUTF ~\newline
+ \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 398 of file stm32f4xx\+\_\+hal\+\_\+rtc\+\_\+ex.\+h.
+
+\mbox{\label{group___r_t_c_ex___wake_up___timer_ga18822c018d0b07be72ca315220bb02df}} 
+\index{RTC WakeUp Timer@{RTC WakeUp Timer}!\_\_HAL\_RTC\_WAKEUPTIMER\_DISABLE@{\_\_HAL\_RTC\_WAKEUPTIMER\_DISABLE}}
+\index{\_\_HAL\_RTC\_WAKEUPTIMER\_DISABLE@{\_\_HAL\_RTC\_WAKEUPTIMER\_DISABLE}!RTC WakeUp Timer@{RTC WakeUp Timer}}
+\doxysubsubsection{\_\_HAL\_RTC\_WAKEUPTIMER\_DISABLE}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+WAKEUPTIMER\+\_\+\+DISABLE(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+ }\end{DoxyParamCaption})~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$CR \&= $\sim$(\textbf{ RTC\+\_\+\+CR\+\_\+\+WUTE}))}
+
+
+
+Disable the RTC Wake-\/up Timer peripheral. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$strong$>$\+HANDLE$<$/strong$>$} & specifies the RTC handle. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 337 of file stm32f4xx\+\_\+hal\+\_\+rtc\+\_\+ex.\+h.
+
+\mbox{\label{group___r_t_c_ex___wake_up___timer_ga702b63d21958eab45856264c19ee6004}} 
+\index{RTC WakeUp Timer@{RTC WakeUp Timer}!\_\_HAL\_RTC\_WAKEUPTIMER\_DISABLE\_IT@{\_\_HAL\_RTC\_WAKEUPTIMER\_DISABLE\_IT}}
+\index{\_\_HAL\_RTC\_WAKEUPTIMER\_DISABLE\_IT@{\_\_HAL\_RTC\_WAKEUPTIMER\_DISABLE\_IT}!RTC WakeUp Timer@{RTC WakeUp Timer}}
+\doxysubsubsection{\_\_HAL\_RTC\_WAKEUPTIMER\_DISABLE\_IT}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+WAKEUPTIMER\+\_\+\+DISABLE\+\_\+\+IT(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+ }\end{DoxyParamCaption})~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$CR \&= $\sim$(\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+))}
+
+
+
+Disable the RTC Wake\+Up\+Timer interrupt. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$strong$>$\+HANDLE$<$/strong$>$} & specifies the RTC handle. \\
+\hline
+{\em $<$strong$>$\+INTERRUPT$<$/strong$>$} & specifies the RTC Wake\+Up\+Timer interrupt sources to be enabled or disabled. This parameter can be\+: \begin{DoxyItemize}
+\item RTC\+\_\+\+IT\+\_\+\+WUT\+: Wake\+Up\+Timer A interrupt \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 357 of file stm32f4xx\+\_\+hal\+\_\+rtc\+\_\+ex.\+h.
+
+\mbox{\label{group___r_t_c_ex___wake_up___timer_ga9b3ce87851ab95b1ab508b524a1055c8}} 
+\index{RTC WakeUp Timer@{RTC WakeUp Timer}!\_\_HAL\_RTC\_WAKEUPTIMER\_ENABLE@{\_\_HAL\_RTC\_WAKEUPTIMER\_ENABLE}}
+\index{\_\_HAL\_RTC\_WAKEUPTIMER\_ENABLE@{\_\_HAL\_RTC\_WAKEUPTIMER\_ENABLE}!RTC WakeUp Timer@{RTC WakeUp Timer}}
+\doxysubsubsection{\_\_HAL\_RTC\_WAKEUPTIMER\_ENABLE}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+WAKEUPTIMER\+\_\+\+ENABLE(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+ }\end{DoxyParamCaption})~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$CR $\vert$= (\textbf{ RTC\+\_\+\+CR\+\_\+\+WUTE}))}
+
+
+
+Enable the RTC Wake\+Up Timer peripheral. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$strong$>$\+HANDLE$<$/strong$>$} & specifies the RTC handle. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 330 of file stm32f4xx\+\_\+hal\+\_\+rtc\+\_\+ex.\+h.
+
+\mbox{\label{group___r_t_c_ex___wake_up___timer_gab02dbd4cbdcd1c544a5e45b37fad276b}} 
+\index{RTC WakeUp Timer@{RTC WakeUp Timer}!\_\_HAL\_RTC\_WAKEUPTIMER\_ENABLE\_IT@{\_\_HAL\_RTC\_WAKEUPTIMER\_ENABLE\_IT}}
+\index{\_\_HAL\_RTC\_WAKEUPTIMER\_ENABLE\_IT@{\_\_HAL\_RTC\_WAKEUPTIMER\_ENABLE\_IT}!RTC WakeUp Timer@{RTC WakeUp Timer}}
+\doxysubsubsection{\_\_HAL\_RTC\_WAKEUPTIMER\_ENABLE\_IT}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+WAKEUPTIMER\+\_\+\+ENABLE\+\_\+\+IT(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+ }\end{DoxyParamCaption})~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$CR $\vert$= (\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+))}
+
+
+
+Enable the RTC Wake\+Up\+Timer interrupt. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$strong$>$\+HANDLE$<$/strong$>$} & specifies the RTC handle. \\
+\hline
+{\em $<$strong$>$\+INTERRUPT$<$/strong$>$} & specifies the RTC Wake\+Up\+Timer interrupt sources to be enabled or disabled. This parameter can be\+: \begin{DoxyItemize}
+\item RTC\+\_\+\+IT\+\_\+\+WUT\+: Wake\+Up\+Timer A interrupt \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 347 of file stm32f4xx\+\_\+hal\+\_\+rtc\+\_\+ex.\+h.
+
+\mbox{\label{group___r_t_c_ex___wake_up___timer_ga2e01c03f14b2f39e9557c98774032fb3}} 
+\index{RTC WakeUp Timer@{RTC WakeUp Timer}!\_\_HAL\_RTC\_WAKEUPTIMER\_EXTI\_CLEAR\_FLAG@{\_\_HAL\_RTC\_WAKEUPTIMER\_EXTI\_CLEAR\_FLAG}}
+\index{\_\_HAL\_RTC\_WAKEUPTIMER\_EXTI\_CLEAR\_FLAG@{\_\_HAL\_RTC\_WAKEUPTIMER\_EXTI\_CLEAR\_FLAG}!RTC WakeUp Timer@{RTC WakeUp Timer}}
+\doxysubsubsection{\_\_HAL\_RTC\_WAKEUPTIMER\_EXTI\_CLEAR\_FLAG}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+WAKEUPTIMER\+\_\+\+EXTI\+\_\+\+CLEAR\+\_\+\+FLAG(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~(\textbf{ EXTI}-\/$>$PR = \textbf{ RTC\+\_\+\+EXTI\+\_\+\+LINE\+\_\+\+WAKEUPTIMER\+\_\+\+EVENT})}
+
+
+
+Clear the RTC Wake-\/up Timer associated Exti line flag. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em None.} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 475 of file stm32f4xx\+\_\+hal\+\_\+rtc\+\_\+ex.\+h.
+
+\mbox{\label{group___r_t_c_ex___wake_up___timer_ga751e44e4b43b1b47f9dfc6bad02e4567}} 
+\index{RTC WakeUp Timer@{RTC WakeUp Timer}!\_\_HAL\_RTC\_WAKEUPTIMER\_EXTI\_DISABLE\_EVENT@{\_\_HAL\_RTC\_WAKEUPTIMER\_EXTI\_DISABLE\_EVENT}}
+\index{\_\_HAL\_RTC\_WAKEUPTIMER\_EXTI\_DISABLE\_EVENT@{\_\_HAL\_RTC\_WAKEUPTIMER\_EXTI\_DISABLE\_EVENT}!RTC WakeUp Timer@{RTC WakeUp Timer}}
+\doxysubsubsection{\_\_HAL\_RTC\_WAKEUPTIMER\_EXTI\_DISABLE\_EVENT}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+WAKEUPTIMER\+\_\+\+EXTI\+\_\+\+DISABLE\+\_\+\+EVENT(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~(\textbf{ EXTI}-\/$>$EMR \&= $\sim$(\textbf{ RTC\+\_\+\+EXTI\+\_\+\+LINE\+\_\+\+WAKEUPTIMER\+\_\+\+EVENT}))}
+
+
+
+Disable event on the RTC Wake-\/up Timer associated Exti line. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em None.} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 422 of file stm32f4xx\+\_\+hal\+\_\+rtc\+\_\+ex.\+h.
+
+\mbox{\label{group___r_t_c_ex___wake_up___timer_ga94a983c6e382cb5e93780d6402a3416f}} 
+\index{RTC WakeUp Timer@{RTC WakeUp Timer}!\_\_HAL\_RTC\_WAKEUPTIMER\_EXTI\_DISABLE\_FALLING\_EDGE@{\_\_HAL\_RTC\_WAKEUPTIMER\_EXTI\_DISABLE\_FALLING\_EDGE}}
+\index{\_\_HAL\_RTC\_WAKEUPTIMER\_EXTI\_DISABLE\_FALLING\_EDGE@{\_\_HAL\_RTC\_WAKEUPTIMER\_EXTI\_DISABLE\_FALLING\_EDGE}!RTC WakeUp Timer@{RTC WakeUp Timer}}
+\doxysubsubsection{\_\_HAL\_RTC\_WAKEUPTIMER\_EXTI\_DISABLE\_FALLING\_EDGE}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+WAKEUPTIMER\+\_\+\+EXTI\+\_\+\+DISABLE\+\_\+\+FALLING\+\_\+\+EDGE(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~(\textbf{ EXTI}-\/$>$FTSR \&= $\sim$(\textbf{ RTC\+\_\+\+EXTI\+\_\+\+LINE\+\_\+\+WAKEUPTIMER\+\_\+\+EVENT}))}
+
+
+
+Disable falling edge trigger on the RTC Wake-\/up Timer associated Exti line. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em None.} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 434 of file stm32f4xx\+\_\+hal\+\_\+rtc\+\_\+ex.\+h.
+
+\mbox{\label{group___r_t_c_ex___wake_up___timer_ga28f230877e574a8f6b9fac1e56959dbd}} 
+\index{RTC WakeUp Timer@{RTC WakeUp Timer}!\_\_HAL\_RTC\_WAKEUPTIMER\_EXTI\_DISABLE\_IT@{\_\_HAL\_RTC\_WAKEUPTIMER\_EXTI\_DISABLE\_IT}}
+\index{\_\_HAL\_RTC\_WAKEUPTIMER\_EXTI\_DISABLE\_IT@{\_\_HAL\_RTC\_WAKEUPTIMER\_EXTI\_DISABLE\_IT}!RTC WakeUp Timer@{RTC WakeUp Timer}}
+\doxysubsubsection{\_\_HAL\_RTC\_WAKEUPTIMER\_EXTI\_DISABLE\_IT}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+WAKEUPTIMER\+\_\+\+EXTI\+\_\+\+DISABLE\+\_\+\+IT(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~(\textbf{ EXTI}-\/$>$IMR \&= $\sim$(\textbf{ RTC\+\_\+\+EXTI\+\_\+\+LINE\+\_\+\+WAKEUPTIMER\+\_\+\+EVENT}))}
+
+
+
+Disable interrupt on the RTC Wake-\/up Timer associated Exti line. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 410 of file stm32f4xx\+\_\+hal\+\_\+rtc\+\_\+ex.\+h.
+
+\mbox{\label{group___r_t_c_ex___wake_up___timer_ga11e7f1f6333edce0c78f4d4f4d496c82}} 
+\index{RTC WakeUp Timer@{RTC WakeUp Timer}!\_\_HAL\_RTC\_WAKEUPTIMER\_EXTI\_DISABLE\_RISING\_EDGE@{\_\_HAL\_RTC\_WAKEUPTIMER\_EXTI\_DISABLE\_RISING\_EDGE}}
+\index{\_\_HAL\_RTC\_WAKEUPTIMER\_EXTI\_DISABLE\_RISING\_EDGE@{\_\_HAL\_RTC\_WAKEUPTIMER\_EXTI\_DISABLE\_RISING\_EDGE}!RTC WakeUp Timer@{RTC WakeUp Timer}}
+\doxysubsubsection{\_\_HAL\_RTC\_WAKEUPTIMER\_EXTI\_DISABLE\_RISING\_EDGE}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+WAKEUPTIMER\+\_\+\+EXTI\+\_\+\+DISABLE\+\_\+\+RISING\+\_\+\+EDGE(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~(\textbf{ EXTI}-\/$>$RTSR \&= $\sim$(\textbf{ RTC\+\_\+\+EXTI\+\_\+\+LINE\+\_\+\+WAKEUPTIMER\+\_\+\+EVENT}))}
+
+
+
+Disable rising edge trigger on the RTC Wake-\/up Timer associated Exti line. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em None.} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 446 of file stm32f4xx\+\_\+hal\+\_\+rtc\+\_\+ex.\+h.
+
+\mbox{\label{group___r_t_c_ex___wake_up___timer_gabbe8d774c60ffe4fb6eccfb4996e69f5}} 
+\index{RTC WakeUp Timer@{RTC WakeUp Timer}!\_\_HAL\_RTC\_WAKEUPTIMER\_EXTI\_DISABLE\_RISING\_FALLING\_EDGE@{\_\_HAL\_RTC\_WAKEUPTIMER\_EXTI\_DISABLE\_RISING\_FALLING\_EDGE}}
+\index{\_\_HAL\_RTC\_WAKEUPTIMER\_EXTI\_DISABLE\_RISING\_FALLING\_EDGE@{\_\_HAL\_RTC\_WAKEUPTIMER\_EXTI\_DISABLE\_RISING\_FALLING\_EDGE}!RTC WakeUp Timer@{RTC WakeUp Timer}}
+\doxysubsubsection{\_\_HAL\_RTC\_WAKEUPTIMER\_EXTI\_DISABLE\_RISING\_FALLING\_EDGE}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+WAKEUPTIMER\+\_\+\+EXTI\+\_\+\+DISABLE\+\_\+\+RISING\+\_\+\+FALLING\+\_\+\+EDGE(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                                                      \textcolor{keywordflow}{do} \{ \_\_HAL\_RTC\_WAKEUPTIMER\_EXTI\_DISABLE\_RISING\_EDGE();\(\backslash\)}
+\DoxyCodeLine{                                                                      \_\_HAL\_RTC\_WAKEUPTIMER\_EXTI\_DISABLE\_FALLING\_EDGE();\(\backslash\)}
+\DoxyCodeLine{                                                                    \} \textcolor{keywordflow}{while}(0)}
+
+\end{DoxyCode}
+
+
+Disable rising \& falling edge trigger on the RTC Wake-\/up Timer associated Exti line. This parameter can be\+: 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em None.} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 461 of file stm32f4xx\+\_\+hal\+\_\+rtc\+\_\+ex.\+h.
+
+\mbox{\label{group___r_t_c_ex___wake_up___timer_gadc3d27024b156eb8bda551b479c3d324}} 
+\index{RTC WakeUp Timer@{RTC WakeUp Timer}!\_\_HAL\_RTC\_WAKEUPTIMER\_EXTI\_ENABLE\_EVENT@{\_\_HAL\_RTC\_WAKEUPTIMER\_EXTI\_ENABLE\_EVENT}}
+\index{\_\_HAL\_RTC\_WAKEUPTIMER\_EXTI\_ENABLE\_EVENT@{\_\_HAL\_RTC\_WAKEUPTIMER\_EXTI\_ENABLE\_EVENT}!RTC WakeUp Timer@{RTC WakeUp Timer}}
+\doxysubsubsection{\_\_HAL\_RTC\_WAKEUPTIMER\_EXTI\_ENABLE\_EVENT}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+WAKEUPTIMER\+\_\+\+EXTI\+\_\+\+ENABLE\+\_\+\+EVENT(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~(\textbf{ EXTI}-\/$>$EMR $\vert$= \textbf{ RTC\+\_\+\+EXTI\+\_\+\+LINE\+\_\+\+WAKEUPTIMER\+\_\+\+EVENT})}
+
+
+
+Enable event on the RTC Wake-\/up Timer associated Exti line. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em None.} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 416 of file stm32f4xx\+\_\+hal\+\_\+rtc\+\_\+ex.\+h.
+
+\mbox{\label{group___r_t_c_ex___wake_up___timer_ga525d35796380847da5969c08a1f66031}} 
+\index{RTC WakeUp Timer@{RTC WakeUp Timer}!\_\_HAL\_RTC\_WAKEUPTIMER\_EXTI\_ENABLE\_FALLING\_EDGE@{\_\_HAL\_RTC\_WAKEUPTIMER\_EXTI\_ENABLE\_FALLING\_EDGE}}
+\index{\_\_HAL\_RTC\_WAKEUPTIMER\_EXTI\_ENABLE\_FALLING\_EDGE@{\_\_HAL\_RTC\_WAKEUPTIMER\_EXTI\_ENABLE\_FALLING\_EDGE}!RTC WakeUp Timer@{RTC WakeUp Timer}}
+\doxysubsubsection{\_\_HAL\_RTC\_WAKEUPTIMER\_EXTI\_ENABLE\_FALLING\_EDGE}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+WAKEUPTIMER\+\_\+\+EXTI\+\_\+\+ENABLE\+\_\+\+FALLING\+\_\+\+EDGE(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~(\textbf{ EXTI}-\/$>$FTSR $\vert$= \textbf{ RTC\+\_\+\+EXTI\+\_\+\+LINE\+\_\+\+WAKEUPTIMER\+\_\+\+EVENT})}
+
+
+
+Enable falling edge trigger on the RTC Wake-\/up Timer associated Exti line. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em None.} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 428 of file stm32f4xx\+\_\+hal\+\_\+rtc\+\_\+ex.\+h.
+
+\mbox{\label{group___r_t_c_ex___wake_up___timer_gae4c38c6e964650ef7ca83737f1995d13}} 
+\index{RTC WakeUp Timer@{RTC WakeUp Timer}!\_\_HAL\_RTC\_WAKEUPTIMER\_EXTI\_ENABLE\_IT@{\_\_HAL\_RTC\_WAKEUPTIMER\_EXTI\_ENABLE\_IT}}
+\index{\_\_HAL\_RTC\_WAKEUPTIMER\_EXTI\_ENABLE\_IT@{\_\_HAL\_RTC\_WAKEUPTIMER\_EXTI\_ENABLE\_IT}!RTC WakeUp Timer@{RTC WakeUp Timer}}
+\doxysubsubsection{\_\_HAL\_RTC\_WAKEUPTIMER\_EXTI\_ENABLE\_IT}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+WAKEUPTIMER\+\_\+\+EXTI\+\_\+\+ENABLE\+\_\+\+IT(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~(\textbf{ EXTI}-\/$>$IMR $\vert$= \textbf{ RTC\+\_\+\+EXTI\+\_\+\+LINE\+\_\+\+WAKEUPTIMER\+\_\+\+EVENT})}
+
+
+
+Enable interrupt on the RTC Wake-\/up Timer associated Exti line. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 404 of file stm32f4xx\+\_\+hal\+\_\+rtc\+\_\+ex.\+h.
+
+\mbox{\label{group___r_t_c_ex___wake_up___timer_gac78f5d3b55d0cc1ea109e00bf03b5d13}} 
+\index{RTC WakeUp Timer@{RTC WakeUp Timer}!\_\_HAL\_RTC\_WAKEUPTIMER\_EXTI\_ENABLE\_RISING\_EDGE@{\_\_HAL\_RTC\_WAKEUPTIMER\_EXTI\_ENABLE\_RISING\_EDGE}}
+\index{\_\_HAL\_RTC\_WAKEUPTIMER\_EXTI\_ENABLE\_RISING\_EDGE@{\_\_HAL\_RTC\_WAKEUPTIMER\_EXTI\_ENABLE\_RISING\_EDGE}!RTC WakeUp Timer@{RTC WakeUp Timer}}
+\doxysubsubsection{\_\_HAL\_RTC\_WAKEUPTIMER\_EXTI\_ENABLE\_RISING\_EDGE}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+WAKEUPTIMER\+\_\+\+EXTI\+\_\+\+ENABLE\+\_\+\+RISING\+\_\+\+EDGE(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~(\textbf{ EXTI}-\/$>$RTSR $\vert$= \textbf{ RTC\+\_\+\+EXTI\+\_\+\+LINE\+\_\+\+WAKEUPTIMER\+\_\+\+EVENT})}
+
+
+
+Enable rising edge trigger on the RTC Wake-\/up Timer associated Exti line. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em None.} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 440 of file stm32f4xx\+\_\+hal\+\_\+rtc\+\_\+ex.\+h.
+
+\mbox{\label{group___r_t_c_ex___wake_up___timer_gad6178bec846750956fe6829791a31f40}} 
+\index{RTC WakeUp Timer@{RTC WakeUp Timer}!\_\_HAL\_RTC\_WAKEUPTIMER\_EXTI\_ENABLE\_RISING\_FALLING\_EDGE@{\_\_HAL\_RTC\_WAKEUPTIMER\_EXTI\_ENABLE\_RISING\_FALLING\_EDGE}}
+\index{\_\_HAL\_RTC\_WAKEUPTIMER\_EXTI\_ENABLE\_RISING\_FALLING\_EDGE@{\_\_HAL\_RTC\_WAKEUPTIMER\_EXTI\_ENABLE\_RISING\_FALLING\_EDGE}!RTC WakeUp Timer@{RTC WakeUp Timer}}
+\doxysubsubsection{\_\_HAL\_RTC\_WAKEUPTIMER\_EXTI\_ENABLE\_RISING\_FALLING\_EDGE}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+WAKEUPTIMER\+\_\+\+EXTI\+\_\+\+ENABLE\+\_\+\+RISING\+\_\+\+FALLING\+\_\+\+EDGE(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                                                     \textcolor{keywordflow}{do} \{ \_\_HAL\_RTC\_WAKEUPTIMER\_EXTI\_ENABLE\_RISING\_EDGE();\(\backslash\)}
+\DoxyCodeLine{                                                                     \_\_HAL\_RTC\_WAKEUPTIMER\_EXTI\_ENABLE\_FALLING\_EDGE();\(\backslash\)}
+\DoxyCodeLine{                                                                   \} \textcolor{keywordflow}{while}(0)}
+
+\end{DoxyCode}
+
+
+Enable rising \& falling edge trigger on the RTC Wake-\/up Timer associated Exti line. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em None.} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 452 of file stm32f4xx\+\_\+hal\+\_\+rtc\+\_\+ex.\+h.
+
+\mbox{\label{group___r_t_c_ex___wake_up___timer_gab5dad44b7b38c3a05cdd6fef526ee738}} 
+\index{RTC WakeUp Timer@{RTC WakeUp Timer}!\_\_HAL\_RTC\_WAKEUPTIMER\_EXTI\_GENERATE\_SWIT@{\_\_HAL\_RTC\_WAKEUPTIMER\_EXTI\_GENERATE\_SWIT}}
+\index{\_\_HAL\_RTC\_WAKEUPTIMER\_EXTI\_GENERATE\_SWIT@{\_\_HAL\_RTC\_WAKEUPTIMER\_EXTI\_GENERATE\_SWIT}!RTC WakeUp Timer@{RTC WakeUp Timer}}
+\doxysubsubsection{\_\_HAL\_RTC\_WAKEUPTIMER\_EXTI\_GENERATE\_SWIT}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+WAKEUPTIMER\+\_\+\+EXTI\+\_\+\+GENERATE\+\_\+\+SWIT(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~(\textbf{ EXTI}-\/$>$SWIER $\vert$= \textbf{ RTC\+\_\+\+EXTI\+\_\+\+LINE\+\_\+\+WAKEUPTIMER\+\_\+\+EVENT})}
+
+
+
+Generate a Software interrupt on the RTC Wake-\/up Timer associated Exti line. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em None.} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 481 of file stm32f4xx\+\_\+hal\+\_\+rtc\+\_\+ex.\+h.
+
+\mbox{\label{group___r_t_c_ex___wake_up___timer_gae55e5dcddf0323049c1e49936c8cd9bf}} 
+\index{RTC WakeUp Timer@{RTC WakeUp Timer}!\_\_HAL\_RTC\_WAKEUPTIMER\_EXTI\_GET\_FLAG@{\_\_HAL\_RTC\_WAKEUPTIMER\_EXTI\_GET\_FLAG}}
+\index{\_\_HAL\_RTC\_WAKEUPTIMER\_EXTI\_GET\_FLAG@{\_\_HAL\_RTC\_WAKEUPTIMER\_EXTI\_GET\_FLAG}!RTC WakeUp Timer@{RTC WakeUp Timer}}
+\doxysubsubsection{\_\_HAL\_RTC\_WAKEUPTIMER\_EXTI\_GET\_FLAG}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+WAKEUPTIMER\+\_\+\+EXTI\+\_\+\+GET\+\_\+\+FLAG(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~(\textbf{ EXTI}-\/$>$PR \& \textbf{ RTC\+\_\+\+EXTI\+\_\+\+LINE\+\_\+\+WAKEUPTIMER\+\_\+\+EVENT})}
+
+
+
+Check whether the RTC Wake-\/up Timer associated Exti line interrupt flag is set or not. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em Line} & Status. \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 469 of file stm32f4xx\+\_\+hal\+\_\+rtc\+\_\+ex.\+h.
+
+\mbox{\label{group___r_t_c_ex___wake_up___timer_ga217666f5b1e27e24441e2e9a3b51f28e}} 
+\index{RTC WakeUp Timer@{RTC WakeUp Timer}!\_\_HAL\_RTC\_WAKEUPTIMER\_GET\_FLAG@{\_\_HAL\_RTC\_WAKEUPTIMER\_GET\_FLAG}}
+\index{\_\_HAL\_RTC\_WAKEUPTIMER\_GET\_FLAG@{\_\_HAL\_RTC\_WAKEUPTIMER\_GET\_FLAG}!RTC WakeUp Timer@{RTC WakeUp Timer}}
+\doxysubsubsection{\_\_HAL\_RTC\_WAKEUPTIMER\_GET\_FLAG}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+WAKEUPTIMER\+\_\+\+GET\+\_\+\+FLAG(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+FLAG\+\_\+\+\_\+ }\end{DoxyParamCaption})~(((((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$ISR) \& (\+\_\+\+\_\+\+FLAG\+\_\+\+\_\+)) != \textbf{ RESET})? \textbf{ SET} \+: \textbf{ RESET})}
+
+
+
+Get the selected RTC Wake\+Up\+Timer\textquotesingle{}s flag status. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$strong$>$\+HANDLE$<$/strong$>$} & specifies the RTC handle. \\
+\hline
+{\em $<$strong$>$\+FLAG$<$/strong$>$} & specifies the RTC Wake\+Up\+Timer Flag to check. This parameter can be\+: \begin{DoxyItemize}
+\item RTC\+\_\+\+FLAG\+\_\+\+WUTF ~\newline
+ \item RTC\+\_\+\+FLAG\+\_\+\+WUTWF ~\newline
+ \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 388 of file stm32f4xx\+\_\+hal\+\_\+rtc\+\_\+ex.\+h.
+
+\mbox{\label{group___r_t_c_ex___wake_up___timer_gaac6051af0e8efabdae50b7051554355b}} 
+\index{RTC WakeUp Timer@{RTC WakeUp Timer}!\_\_HAL\_RTC\_WAKEUPTIMER\_GET\_IT@{\_\_HAL\_RTC\_WAKEUPTIMER\_GET\_IT}}
+\index{\_\_HAL\_RTC\_WAKEUPTIMER\_GET\_IT@{\_\_HAL\_RTC\_WAKEUPTIMER\_GET\_IT}!RTC WakeUp Timer@{RTC WakeUp Timer}}
+\doxysubsubsection{\_\_HAL\_RTC\_WAKEUPTIMER\_GET\_IT}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+WAKEUPTIMER\+\_\+\+GET\+\_\+\+IT(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+ }\end{DoxyParamCaption})~(((((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$ISR) \& ((\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)$>$$>$ 4U)) != \textbf{ RESET})? \textbf{ SET} \+: \textbf{ RESET})}
+
+
+
+Check whether the specified RTC Wake\+Up\+Timer interrupt has occurred or not. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$strong$>$\+HANDLE$<$/strong$>$} & specifies the RTC handle. \\
+\hline
+{\em $<$strong$>$\+INTERRUPT$<$/strong$>$} & specifies the RTC Wake\+Up\+Timer interrupt to check. This parameter can be\+: \begin{DoxyItemize}
+\item RTC\+\_\+\+IT\+\_\+\+WUT\+: Wake\+Up\+Timer A interrupt \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 367 of file stm32f4xx\+\_\+hal\+\_\+rtc\+\_\+ex.\+h.
+
+\mbox{\label{group___r_t_c_ex___wake_up___timer_gafbe296c7719885437a245d5967194ac0}} 
+\index{RTC WakeUp Timer@{RTC WakeUp Timer}!\_\_HAL\_RTC\_WAKEUPTIMER\_GET\_IT\_SOURCE@{\_\_HAL\_RTC\_WAKEUPTIMER\_GET\_IT\_SOURCE}}
+\index{\_\_HAL\_RTC\_WAKEUPTIMER\_GET\_IT\_SOURCE@{\_\_HAL\_RTC\_WAKEUPTIMER\_GET\_IT\_SOURCE}!RTC WakeUp Timer@{RTC WakeUp Timer}}
+\doxysubsubsection{\_\_HAL\_RTC\_WAKEUPTIMER\_GET\_IT\_SOURCE}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+WAKEUPTIMER\+\_\+\+GET\+\_\+\+IT\+\_\+\+SOURCE(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+ }\end{DoxyParamCaption})~(((((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$CR) \& (\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)) != \textbf{ RESET}) ? \textbf{ SET} \+: \textbf{ RESET})}
+
+
+
+Check whether the specified RTC Wake Up timer interrupt has been enabled or not. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$strong$>$\+HANDLE$<$/strong$>$} & specifies the RTC handle. \\
+\hline
+{\em $<$strong$>$\+INTERRUPT$<$/strong$>$} & specifies the RTC Wake Up timer interrupt sources to check. This parameter can be\+: \begin{DoxyItemize}
+\item RTC\+\_\+\+IT\+\_\+\+WUT\+: Wake\+Up\+Timer interrupt \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 377 of file stm32f4xx\+\_\+hal\+\_\+rtc\+\_\+ex.\+h.
+

@@ -1,0 +1,187 @@
+\doxysection{system/include/stm32f4-\/hal/stm32f4xx\+\_\+hal\+\_\+adc\+\_\+ex.h File Reference}
+\label{stm32f4xx__hal__adc__ex_8h}\index{system/include/stm32f4-\/hal/stm32f4xx\_hal\_adc\_ex.h@{system/include/stm32f4-\/hal/stm32f4xx\_hal\_adc\_ex.h}}
+
+
+Header file of ADC HAL module.  
+
+
+{\ttfamily \#include \char`\"{}stm32f4xx\+\_\+hal\+\_\+def.\+h\char`\"{}}\newline
+Include dependency graph for stm32f4xx\+\_\+hal\+\_\+adc\+\_\+ex.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{stm32f4xx__hal__adc__ex_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{stm32f4xx__hal__adc__ex_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \textbf{ ADC\+\_\+\+Injection\+Conf\+Type\+Def}
+\begin{DoxyCompactList}\small\item\em ADC Configuration injected Channel structure definition. \end{DoxyCompactList}\item 
+struct \textbf{ ADC\+\_\+\+Multi\+Mode\+Type\+Def}
+\begin{DoxyCompactList}\small\item\em ADC Configuration multi-\/mode structure definition ~\newline
+ \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \textbf{ ADC\+\_\+\+MODE\+\_\+\+INDEPENDENT}~((uint32\+\_\+t)0x00000000U)
+\item 
+\#define \textbf{ ADC\+\_\+\+DUALMODE\+\_\+\+REGSIMULT\+\_\+\+INJECSIMULT}~((uint32\+\_\+t)\textbf{ ADC\+\_\+\+CCR\+\_\+\+MULTI\+\_\+0})
+\item 
+\#define \textbf{ ADC\+\_\+\+DUALMODE\+\_\+\+REGSIMULT\+\_\+\+ALTERTRIG}~((uint32\+\_\+t)\textbf{ ADC\+\_\+\+CCR\+\_\+\+MULTI\+\_\+1})
+\item 
+\#define \textbf{ ADC\+\_\+\+DUALMODE\+\_\+\+INJECSIMULT}~((uint32\+\_\+t)(\textbf{ ADC\+\_\+\+CCR\+\_\+\+MULTI\+\_\+2} $\vert$ \textbf{ ADC\+\_\+\+CCR\+\_\+\+MULTI\+\_\+0}))
+\item 
+\#define \textbf{ ADC\+\_\+\+DUALMODE\+\_\+\+REGSIMULT}~((uint32\+\_\+t)(\textbf{ ADC\+\_\+\+CCR\+\_\+\+MULTI\+\_\+2} $\vert$ \textbf{ ADC\+\_\+\+CCR\+\_\+\+MULTI\+\_\+1}))
+\item 
+\#define \textbf{ ADC\+\_\+\+DUALMODE\+\_\+\+INTERL}~((uint32\+\_\+t)(\textbf{ ADC\+\_\+\+CCR\+\_\+\+MULTI\+\_\+2} $\vert$ \textbf{ ADC\+\_\+\+CCR\+\_\+\+MULTI\+\_\+1} $\vert$ \textbf{ ADC\+\_\+\+CCR\+\_\+\+MULTI\+\_\+0}))
+\item 
+\#define \textbf{ ADC\+\_\+\+DUALMODE\+\_\+\+ALTERTRIG}~((uint32\+\_\+t)(\textbf{ ADC\+\_\+\+CCR\+\_\+\+MULTI\+\_\+3} $\vert$ \textbf{ ADC\+\_\+\+CCR\+\_\+\+MULTI\+\_\+0}))
+\item 
+\#define \textbf{ ADC\+\_\+\+TRIPLEMODE\+\_\+\+REGSIMULT\+\_\+\+INJECSIMULT}~((uint32\+\_\+t)(\textbf{ ADC\+\_\+\+CCR\+\_\+\+MULTI\+\_\+4} $\vert$ \textbf{ ADC\+\_\+\+CCR\+\_\+\+MULTI\+\_\+0}))
+\item 
+\#define \textbf{ ADC\+\_\+\+TRIPLEMODE\+\_\+\+REGSIMULT\+\_\+\+Alter\+Trig}~((uint32\+\_\+t)(\textbf{ ADC\+\_\+\+CCR\+\_\+\+MULTI\+\_\+4} $\vert$ \textbf{ ADC\+\_\+\+CCR\+\_\+\+MULTI\+\_\+1}))
+\item 
+\#define \textbf{ ADC\+\_\+\+TRIPLEMODE\+\_\+\+INJECSIMULT}~((uint32\+\_\+t)(\textbf{ ADC\+\_\+\+CCR\+\_\+\+MULTI\+\_\+4} $\vert$ \textbf{ ADC\+\_\+\+CCR\+\_\+\+MULTI\+\_\+2} $\vert$ \textbf{ ADC\+\_\+\+CCR\+\_\+\+MULTI\+\_\+0}))
+\item 
+\#define \textbf{ ADC\+\_\+\+TRIPLEMODE\+\_\+\+REGSIMULT}~((uint32\+\_\+t)(\textbf{ ADC\+\_\+\+CCR\+\_\+\+MULTI\+\_\+4} $\vert$ \textbf{ ADC\+\_\+\+CCR\+\_\+\+MULTI\+\_\+2} $\vert$ \textbf{ ADC\+\_\+\+CCR\+\_\+\+MULTI\+\_\+1}))
+\item 
+\#define \textbf{ ADC\+\_\+\+TRIPLEMODE\+\_\+\+INTERL}~((uint32\+\_\+t)(\textbf{ ADC\+\_\+\+CCR\+\_\+\+MULTI\+\_\+4} $\vert$ \textbf{ ADC\+\_\+\+CCR\+\_\+\+MULTI\+\_\+2} $\vert$ \textbf{ ADC\+\_\+\+CCR\+\_\+\+MULTI\+\_\+1} $\vert$ \textbf{ ADC\+\_\+\+CCR\+\_\+\+MULTI\+\_\+0}))
+\item 
+\#define \textbf{ ADC\+\_\+\+TRIPLEMODE\+\_\+\+ALTERTRIG}~((uint32\+\_\+t)(\textbf{ ADC\+\_\+\+CCR\+\_\+\+MULTI\+\_\+4} $\vert$ \textbf{ ADC\+\_\+\+CCR\+\_\+\+MULTI\+\_\+3} $\vert$ \textbf{ ADC\+\_\+\+CCR\+\_\+\+MULTI\+\_\+0}))
+\item 
+\#define \textbf{ ADC\+\_\+\+DMAACCESSMODE\+\_\+\+DISABLED}~((uint32\+\_\+t)0x00000000U)
+\item 
+\#define \textbf{ ADC\+\_\+\+DMAACCESSMODE\+\_\+1}~((uint32\+\_\+t)\textbf{ ADC\+\_\+\+CCR\+\_\+\+DMA\+\_\+0})
+\item 
+\#define \textbf{ ADC\+\_\+\+DMAACCESSMODE\+\_\+2}~((uint32\+\_\+t)\textbf{ ADC\+\_\+\+CCR\+\_\+\+DMA\+\_\+1})
+\item 
+\#define \textbf{ ADC\+\_\+\+DMAACCESSMODE\+\_\+3}~((uint32\+\_\+t)\textbf{ ADC\+\_\+\+CCR\+\_\+\+DMA})
+\item 
+\#define \textbf{ ADC\+\_\+\+EXTERNALTRIGINJECCONVEDGE\+\_\+\+NONE}~((uint32\+\_\+t)0x00000000U)
+\item 
+\#define \textbf{ ADC\+\_\+\+EXTERNALTRIGINJECCONVEDGE\+\_\+\+RISING}~((uint32\+\_\+t)\textbf{ ADC\+\_\+\+CR2\+\_\+\+JEXTEN\+\_\+0})
+\item 
+\#define \textbf{ ADC\+\_\+\+EXTERNALTRIGINJECCONVEDGE\+\_\+\+FALLING}~((uint32\+\_\+t)\textbf{ ADC\+\_\+\+CR2\+\_\+\+JEXTEN\+\_\+1})
+\item 
+\#define \textbf{ ADC\+\_\+\+EXTERNALTRIGINJECCONVEDGE\+\_\+\+RISINGFALLING}~((uint32\+\_\+t)\textbf{ ADC\+\_\+\+CR2\+\_\+\+JEXTEN})
+\item 
+\#define \textbf{ ADC\+\_\+\+EXTERNALTRIGINJECCONV\+\_\+\+T1\+\_\+\+CC4}~((uint32\+\_\+t)0x00000000U)
+\item 
+\#define \textbf{ ADC\+\_\+\+EXTERNALTRIGINJECCONV\+\_\+\+T1\+\_\+\+TRGO}~((uint32\+\_\+t)\textbf{ ADC\+\_\+\+CR2\+\_\+\+JEXTSEL\+\_\+0})
+\item 
+\#define \textbf{ ADC\+\_\+\+EXTERNALTRIGINJECCONV\+\_\+\+T2\+\_\+\+CC1}~((uint32\+\_\+t)\textbf{ ADC\+\_\+\+CR2\+\_\+\+JEXTSEL\+\_\+1})
+\item 
+\#define \textbf{ ADC\+\_\+\+EXTERNALTRIGINJECCONV\+\_\+\+T2\+\_\+\+TRGO}~((uint32\+\_\+t)(\textbf{ ADC\+\_\+\+CR2\+\_\+\+JEXTSEL\+\_\+1} $\vert$ \textbf{ ADC\+\_\+\+CR2\+\_\+\+JEXTSEL\+\_\+0}))
+\item 
+\#define \textbf{ ADC\+\_\+\+EXTERNALTRIGINJECCONV\+\_\+\+T3\+\_\+\+CC2}~((uint32\+\_\+t)\textbf{ ADC\+\_\+\+CR2\+\_\+\+JEXTSEL\+\_\+2})
+\item 
+\#define \textbf{ ADC\+\_\+\+EXTERNALTRIGINJECCONV\+\_\+\+T3\+\_\+\+CC4}~((uint32\+\_\+t)(\textbf{ ADC\+\_\+\+CR2\+\_\+\+JEXTSEL\+\_\+2} $\vert$ \textbf{ ADC\+\_\+\+CR2\+\_\+\+JEXTSEL\+\_\+0}))
+\item 
+\#define \textbf{ ADC\+\_\+\+EXTERNALTRIGINJECCONV\+\_\+\+T4\+\_\+\+CC1}~((uint32\+\_\+t)(\textbf{ ADC\+\_\+\+CR2\+\_\+\+JEXTSEL\+\_\+2} $\vert$ \textbf{ ADC\+\_\+\+CR2\+\_\+\+JEXTSEL\+\_\+1}))
+\item 
+\#define \textbf{ ADC\+\_\+\+EXTERNALTRIGINJECCONV\+\_\+\+T4\+\_\+\+CC2}~((uint32\+\_\+t)(\textbf{ ADC\+\_\+\+CR2\+\_\+\+JEXTSEL\+\_\+2} $\vert$ \textbf{ ADC\+\_\+\+CR2\+\_\+\+JEXTSEL\+\_\+1} $\vert$ \textbf{ ADC\+\_\+\+CR2\+\_\+\+JEXTSEL\+\_\+0}))
+\item 
+\#define \textbf{ ADC\+\_\+\+EXTERNALTRIGINJECCONV\+\_\+\+T4\+\_\+\+CC3}~((uint32\+\_\+t)\textbf{ ADC\+\_\+\+CR2\+\_\+\+JEXTSEL\+\_\+3})
+\item 
+\#define \textbf{ ADC\+\_\+\+EXTERNALTRIGINJECCONV\+\_\+\+T4\+\_\+\+TRGO}~((uint32\+\_\+t)(\textbf{ ADC\+\_\+\+CR2\+\_\+\+JEXTSEL\+\_\+3} $\vert$ \textbf{ ADC\+\_\+\+CR2\+\_\+\+JEXTSEL\+\_\+0}))
+\item 
+\#define \textbf{ ADC\+\_\+\+EXTERNALTRIGINJECCONV\+\_\+\+T5\+\_\+\+CC4}~((uint32\+\_\+t)(\textbf{ ADC\+\_\+\+CR2\+\_\+\+JEXTSEL\+\_\+3} $\vert$ \textbf{ ADC\+\_\+\+CR2\+\_\+\+JEXTSEL\+\_\+1}))
+\item 
+\#define \textbf{ ADC\+\_\+\+EXTERNALTRIGINJECCONV\+\_\+\+T5\+\_\+\+TRGO}~((uint32\+\_\+t)(\textbf{ ADC\+\_\+\+CR2\+\_\+\+JEXTSEL\+\_\+3} $\vert$ \textbf{ ADC\+\_\+\+CR2\+\_\+\+JEXTSEL\+\_\+1} $\vert$ \textbf{ ADC\+\_\+\+CR2\+\_\+\+JEXTSEL\+\_\+0}))
+\item 
+\#define \textbf{ ADC\+\_\+\+EXTERNALTRIGINJECCONV\+\_\+\+T8\+\_\+\+CC2}~((uint32\+\_\+t)(\textbf{ ADC\+\_\+\+CR2\+\_\+\+JEXTSEL\+\_\+3} $\vert$ \textbf{ ADC\+\_\+\+CR2\+\_\+\+JEXTSEL\+\_\+2}))
+\item 
+\#define \textbf{ ADC\+\_\+\+EXTERNALTRIGINJECCONV\+\_\+\+T8\+\_\+\+CC3}~((uint32\+\_\+t)(\textbf{ ADC\+\_\+\+CR2\+\_\+\+JEXTSEL\+\_\+3} $\vert$ \textbf{ ADC\+\_\+\+CR2\+\_\+\+JEXTSEL\+\_\+2} $\vert$ \textbf{ ADC\+\_\+\+CR2\+\_\+\+JEXTSEL\+\_\+0}))
+\item 
+\#define \textbf{ ADC\+\_\+\+EXTERNALTRIGINJECCONV\+\_\+\+T8\+\_\+\+CC4}~((uint32\+\_\+t)(\textbf{ ADC\+\_\+\+CR2\+\_\+\+JEXTSEL\+\_\+3} $\vert$ \textbf{ ADC\+\_\+\+CR2\+\_\+\+JEXTSEL\+\_\+2} $\vert$ \textbf{ ADC\+\_\+\+CR2\+\_\+\+JEXTSEL\+\_\+1}))
+\item 
+\#define \textbf{ ADC\+\_\+\+EXTERNALTRIGINJECCONV\+\_\+\+EXT\+\_\+\+IT15}~((uint32\+\_\+t)\textbf{ ADC\+\_\+\+CR2\+\_\+\+JEXTSEL})
+\item 
+\#define \textbf{ ADC\+\_\+\+INJECTED\+\_\+\+SOFTWARE\+\_\+\+START}~((uint32\+\_\+t)\textbf{ ADC\+\_\+\+CR2\+\_\+\+JEXTSEL} + 1U)
+\item 
+\#define \textbf{ ADC\+\_\+\+INJECTED\+\_\+\+RANK\+\_\+1}~((uint32\+\_\+t)0x00000001U)
+\item 
+\#define \textbf{ ADC\+\_\+\+INJECTED\+\_\+\+RANK\+\_\+2}~((uint32\+\_\+t)0x00000002U)
+\item 
+\#define \textbf{ ADC\+\_\+\+INJECTED\+\_\+\+RANK\+\_\+3}~((uint32\+\_\+t)0x00000003U)
+\item 
+\#define \textbf{ ADC\+\_\+\+INJECTED\+\_\+\+RANK\+\_\+4}~((uint32\+\_\+t)0x00000004U)
+\item 
+\#define \textbf{ IS\+\_\+\+ADC\+\_\+\+MODE}(MODE)
+\item 
+\#define \textbf{ IS\+\_\+\+ADC\+\_\+\+DMA\+\_\+\+ACCESS\+\_\+\+MODE}(MODE)
+\item 
+\#define \textbf{ IS\+\_\+\+ADC\+\_\+\+EXT\+\_\+\+INJEC\+\_\+\+TRIG\+\_\+\+EDGE}(EDGE)
+\item 
+\#define \textbf{ IS\+\_\+\+ADC\+\_\+\+EXT\+\_\+\+INJEC\+\_\+\+TRIG}(INJTRIG)
+\item 
+\#define \textbf{ IS\+\_\+\+ADC\+\_\+\+INJECTED\+\_\+\+LENGTH}(LENGTH)~(((LENGTH) $>$= ((uint32\+\_\+t)1U)) \&\& ((LENGTH) $<$= ((uint32\+\_\+t)4U)))
+\item 
+\#define \textbf{ IS\+\_\+\+ADC\+\_\+\+INJECTED\+\_\+\+RANK}(RANK)~(((RANK) $>$= ((uint32\+\_\+t)1U)) \&\& ((RANK) $<$= ((uint32\+\_\+t)4U)))
+\item 
+\#define \textbf{ ADC\+\_\+\+JSQR}(\+\_\+\+CHANNELNB\+\_\+,  \+\_\+\+RANKNB\+\_\+,  \+\_\+\+JSQR\+\_\+\+JL\+\_\+)~(((uint32\+\_\+t)((uint16\+\_\+t)(\+\_\+\+CHANNELNB\+\_\+))) $<$$<$ (5U $\ast$ (uint8\+\_\+t)(((\+\_\+\+RANKNB\+\_\+) + 3U) -\/ (\+\_\+\+JSQR\+\_\+\+JL\+\_\+))))
+\begin{DoxyCompactList}\small\item\em Set the selected injected Channel rank. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+ADCEx\+\_\+\+Injected\+Start} (\textbf{ ADC\+\_\+\+Handle\+Type\+Def} $\ast$hadc)
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+ADCEx\+\_\+\+Injected\+Stop} (\textbf{ ADC\+\_\+\+Handle\+Type\+Def} $\ast$hadc)
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+ADCEx\+\_\+\+Injected\+Poll\+For\+Conversion} (\textbf{ ADC\+\_\+\+Handle\+Type\+Def} $\ast$hadc, uint32\+\_\+t Timeout)
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+ADCEx\+\_\+\+Injected\+Start\+\_\+\+IT} (\textbf{ ADC\+\_\+\+Handle\+Type\+Def} $\ast$hadc)
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+ADCEx\+\_\+\+Injected\+Stop\+\_\+\+IT} (\textbf{ ADC\+\_\+\+Handle\+Type\+Def} $\ast$hadc)
+\item 
+uint32\+\_\+t \textbf{ HAL\+\_\+\+ADCEx\+\_\+\+Injected\+Get\+Value} (\textbf{ ADC\+\_\+\+Handle\+Type\+Def} $\ast$hadc, uint32\+\_\+t Injected\+Rank)
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+ADCEx\+\_\+\+Multi\+Mode\+Start\+\_\+\+DMA} (\textbf{ ADC\+\_\+\+Handle\+Type\+Def} $\ast$hadc, uint32\+\_\+t $\ast$p\+Data, uint32\+\_\+t Length)
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+ADCEx\+\_\+\+Multi\+Mode\+Stop\+\_\+\+DMA} (\textbf{ ADC\+\_\+\+Handle\+Type\+Def} $\ast$hadc)
+\item 
+uint32\+\_\+t \textbf{ HAL\+\_\+\+ADCEx\+\_\+\+Multi\+Mode\+Get\+Value} (\textbf{ ADC\+\_\+\+Handle\+Type\+Def} $\ast$hadc)
+\item 
+void \textbf{ HAL\+\_\+\+ADCEx\+\_\+\+Injected\+Conv\+Cplt\+Callback} (\textbf{ ADC\+\_\+\+Handle\+Type\+Def} $\ast$hadc)
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+ADCEx\+\_\+\+Injected\+Config\+Channel} (\textbf{ ADC\+\_\+\+Handle\+Type\+Def} $\ast$hadc, \textbf{ ADC\+\_\+\+Injection\+Conf\+Type\+Def} $\ast$s\+Config\+Injected)
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+ADCEx\+\_\+\+Multi\+Mode\+Config\+Channel} (\textbf{ ADC\+\_\+\+Handle\+Type\+Def} $\ast$hadc, \textbf{ ADC\+\_\+\+Multi\+Mode\+Type\+Def} $\ast$multimode)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Header file of ADC HAL module. 
+
+\begin{DoxyAuthor}{Author}
+MCD Application Team 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+V1.\+5.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+06-\/May-\/2016
+\end{DoxyDate}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+\doxysubsubsection*{\begin{center}\copyright{} COPYRIGHT(c) 2016 STMicroelectronics\end{center} }
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met\+:
+\begin{DoxyEnumerate}
+\item Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+\item Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+\item Neither the name of STMicroelectronics nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+\end{DoxyEnumerate}
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \char`\"{}\+AS IS\char`\"{} AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. 

@@ -1,0 +1,63 @@
+\doxysection{PWREx Exported Constants}
+\label{group___p_w_r_ex___exported___constants}\index{PWREx Exported Constants@{PWREx Exported Constants}}
+Collaboration diagram for PWREx Exported Constants\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group___p_w_r_ex___exported___constants}
+\end{center}
+\end{figure}
+\doxysubsection*{Modules}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ PWREx Regulator Voltage Scale}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \textbf{ \+\_\+\+\_\+\+HAL\+\_\+\+PWR\+\_\+\+VOLTAGESCALING\+\_\+\+CONFIG}(\+\_\+\+\_\+\+REGULATOR\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em macros configure the main internal regulator output voltage. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\label{group___p_w_r_ex___exported___constants_ga1ee778f7ff494723bd0ef04ec44b0f77}} 
+\index{PWREx Exported Constants@{PWREx Exported Constants}!\_\_HAL\_PWR\_VOLTAGESCALING\_CONFIG@{\_\_HAL\_PWR\_VOLTAGESCALING\_CONFIG}}
+\index{\_\_HAL\_PWR\_VOLTAGESCALING\_CONFIG@{\_\_HAL\_PWR\_VOLTAGESCALING\_CONFIG}!PWREx Exported Constants@{PWREx Exported Constants}}
+\doxysubsubsection{\_\_HAL\_PWR\_VOLTAGESCALING\_CONFIG}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+PWR\+\_\+\+VOLTAGESCALING\+\_\+\+CONFIG(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+REGULATOR\+\_\+\+\_\+ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                                            \textcolor{keywordflow}{do} \{                                                     \(\backslash\)}
+\DoxyCodeLine{                                                            \_\_IO uint32\_t tmpreg = 0x00U;                        \(\backslash\)}
+\DoxyCodeLine{                                                            MODIFY\_REG(PWR-\/>CR, PWR\_CR\_VOS, (\_\_REGULATOR\_\_));   \(\backslash\)}
+\DoxyCodeLine{                                                            \textcolor{comment}{/* Delay after an RCC peripheral clock enabling */}  \(\backslash\)}
+\DoxyCodeLine{                                                            tmpreg = READ\_BIT(PWR-\/>CR, PWR\_CR\_VOS);             \(\backslash\)}
+\DoxyCodeLine{                                                            UNUSED(tmpreg);                                     \(\backslash\)}
+\DoxyCodeLine{                                                          \} \textcolor{keywordflow}{while}(0)}
+
+\end{DoxyCode}
+
+
+macros configure the main internal regulator output voltage. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$strong$>$\+REGULATOR$<$/strong$>$} & specifies the regulator output voltage to achieve a tradeoff between performance and power consumption when the device does not operate at the maximum frequency (refer to the datasheets for more details). This parameter can be one of the following values\+: \begin{DoxyItemize}
+\item PWR\+\_\+\+REGULATOR\+\_\+\+VOLTAGE\+\_\+\+SCALE1\+: Regulator voltage output Scale 1 mode \item PWR\+\_\+\+REGULATOR\+\_\+\+VOLTAGE\+\_\+\+SCALE2\+: Regulator voltage output Scale 2 mode \item PWR\+\_\+\+REGULATOR\+\_\+\+VOLTAGE\+\_\+\+SCALE3\+: Regulator voltage output Scale 3 mode \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 152 of file stm32f4xx\+\_\+hal\+\_\+pwr\+\_\+ex.\+h.
+

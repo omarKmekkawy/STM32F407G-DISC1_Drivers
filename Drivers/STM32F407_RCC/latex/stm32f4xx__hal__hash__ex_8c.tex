@@ -1,0 +1,98 @@
+\doxysection{system/src/stm32f4-\/hal/stm32f4xx\+\_\+hal\+\_\+hash\+\_\+ex.c File Reference}
+\label{stm32f4xx__hal__hash__ex_8c}\index{system/src/stm32f4-\/hal/stm32f4xx\_hal\_hash\_ex.c@{system/src/stm32f4-\/hal/stm32f4xx\_hal\_hash\_ex.c}}
+
+
+HASH HAL Extension module driver. This file provides firmware functions to manage the following functionalities of HASH peripheral\+:  
+
+
+{\ttfamily \#include \char`\"{}stm32f4xx\+\_\+hal.\+h\char`\"{}}\newline
+Include dependency graph for stm32f4xx\+\_\+hal\+\_\+hash\+\_\+ex.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{stm32f4xx__hal__hash__ex_8c__incl}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Detailed Description}
+HASH HAL Extension module driver. This file provides firmware functions to manage the following functionalities of HASH peripheral\+: 
+
+\begin{DoxyAuthor}{Author}
+MCD Application Team 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+V1.\+5.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+06-\/May-\/2016
+\begin{DoxyItemize}
+\item Extended HASH processing functions based on SHA224 Algorithm
+\item Extended HASH processing functions based on SHA256 Algorithm
+\end{DoxyItemize}
+\end{DoxyDate}
+\begin{DoxyVerb}==============================================================================
+                   ##### How to use this driver #####
+==============================================================================
+  [..]
+  The HASH HAL driver can be used as follows:
+  (#)Initialize the HASH low level resources by implementing the HAL_HASH_MspInit():
+      (##) Enable the HASH interface clock using __HAL_RCC_HASH_CLK_ENABLE()
+      (##) In case of using processing APIs based on interrupts (e.g. HAL_HMACEx_SHA224_Start())
+          (+++) Configure the HASH interrupt priority using HAL_NVIC_SetPriority()
+          (+++) Enable the HASH IRQ handler using HAL_NVIC_EnableIRQ()
+          (+++) In HASH IRQ handler, call HAL_HASH_IRQHandler()
+      (##) In case of using DMA to control data transfer (e.g. HAL_HMACEx_SH224_Start_DMA())
+          (+++) Enable the DMAx interface clock using __DMAx_CLK_ENABLE()
+          (+++) Configure and enable one DMA stream one for managing data transfer from
+              memory to peripheral (input stream). Managing data transfer from
+              peripheral to memory can be performed only using CPU
+          (+++) Associate the initialized DMA handle to the HASH DMA handle
+              using  __HAL_LINKDMA()
+          (+++) Configure the priority and enable the NVIC for the transfer complete
+              interrupt on the DMA Stream: HAL_NVIC_SetPriority() and HAL_NVIC_EnableIRQ()
+  (#)Initialize the HASH HAL using HAL_HASH_Init(). This function configures mainly:
+      (##) The data type: 1-bit, 8-bit, 16-bit and 32-bit.
+      (##) For HMAC, the encryption key.
+      (##) For HMAC, the key size used for encryption.
+  (#)Three processing functions are available:
+      (##) Polling mode: processing APIs are blocking functions
+           i.e. they process the data and wait till the digest computation is finished
+           e.g. HAL_HASHEx_SHA224_Start()
+      (##) Interrupt mode: encryption and decryption APIs are not blocking functions
+              i.e. they process the data under interrupt
+              e.g. HAL_HASHEx_SHA224_Start_IT()
+      (##) DMA mode: processing APIs are not blocking functions and the CPU is
+           not used for data transfer i.e. the data transfer is ensured by DMA
+              e.g. HAL_HASHEx_SHA224_Start_DMA()
+  (#)When the processing function is called at first time after HAL_HASH_Init()
+     the HASH peripheral is initialized and processes the buffer in input.
+     After that, the digest computation is started.
+     When processing multi-buffer use the accumulate function to write the
+     data in the peripheral without starting the digest computation. In last 
+     buffer use the start function to input the last buffer ans start the digest
+     computation.
+     (##) e.g. HAL_HASHEx_SHA224_Accumulate() : write 1st data buffer in the peripheral without starting the digest computation
+     (##)  write (n-1)th data buffer in the peripheral without starting the digest computation
+     (##)  HAL_HASHEx_SHA224_Start() : write (n)th data buffer in the peripheral and start the digest computation
+  (#)In HMAC mode, there is no Accumulate API. Only Start API is available.
+  (#)In case of using DMA, call the DMA start processing e.g. HAL_HASHEx_SHA224_Start_DMA().
+     After that, call the finish function in order to get the digest value
+     e.g. HAL_HASHEx_SHA224_Finish()
+  (#)Call HAL_HASH_DeInit() to deinitialize the HASH peripheral.\end{DoxyVerb}
+
+
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+\doxysubsubsection*{\begin{center}\copyright{} COPYRIGHT(c) 2016 STMicroelectronics\end{center} }
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met\+:
+\begin{DoxyEnumerate}
+\item Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+\item Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+\item Neither the name of STMicroelectronics nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+\end{DoxyEnumerate}
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \char`\"{}\+AS IS\char`\"{} AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. 

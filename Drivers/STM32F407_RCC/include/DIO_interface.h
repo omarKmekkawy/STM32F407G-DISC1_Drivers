@@ -72,9 +72,9 @@ void MGPIO_voidSetPinMode(GPIO_TypeDef *copy_GPIO_TypeDefPORT, u8 copy_u8PIN, u8
 void MGPIO_voidSetPinValue(GPIO_TypeDef *copy_GPIO_TypeDefPORT, u8 copy_u8PIN, u8 copy_u8Value);
 void MGPIO_voidTogPinValue(GPIO_TypeDef *copy_GPIO_TypeDefPORT, u8 copy_u8PIN);
 u8 MGPIO_u8GetPinValue(GPIO_TypeDef *copy_GPIO_TypeDefPORT, u8 copy_u8PIN);
-HAL_Status_TypeDef MGPIO_HAL_Status_TypeDefLockGPIO(GPIO_TypeDef *copy_GPIO_TypeDefPORT, u8 copy_u8PIN);
-HAL_Status_TypeDef MGPIO_HAL_Status_TypeDefEnableAlternateFunction(GPIO_TypeDef *copy_GPIO_TypeDefPORT, u8 copy_u8AlternateFunction);
-HAL_Status_TypeDef MGPIO_HAL_Status_TypeDefResetAlternateFunction(GPIO_TypeDef *copy_GPIO_TypeDefPORT, u8 copy_u8PIN);
+MCAL_Status_TypeDef MGPIO_MCAL_Status_TypeDefLockGPIO(GPIO_TypeDef *copy_GPIO_TypeDefPORT, u8 copy_u8PIN);
+MCAL_Status_TypeDef MGPIO_MCAL_Status_TypeDefEnableAlternateFunction(GPIO_TypeDef *copy_GPIO_TypeDefPORT, GPIOx_AF_t copy_u8AlternateFunction);
+MCAL_Status_TypeDef MGPIO_MCAL_Status_TypeDefResetAlternateFunction(GPIO_TypeDef *copy_GPIO_TypeDefPORT, u8 copy_u8PIN);
 
 #endif
 

@@ -1,0 +1,171 @@
+\doxysection{USART\+\_\+\+Exported\+\_\+\+Functions\+\_\+\+Group2}
+\label{group___u_s_a_r_t___exported___functions___group2}\index{USART\_Exported\_Functions\_Group2@{USART\_Exported\_Functions\_Group2}}
+Collaboration diagram for USART\+\_\+\+Exported\+\_\+\+Functions\+\_\+\+Group2\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group___u_s_a_r_t___exported___functions___group2}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+USART\+\_\+\+Transmit} (\textbf{ USART\+\_\+\+Handle\+Type\+Def} $\ast$husart, uint8\+\_\+t $\ast$p\+Tx\+Data, uint16\+\_\+t Size, uint32\+\_\+t Timeout)
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+USART\+\_\+\+Receive} (\textbf{ USART\+\_\+\+Handle\+Type\+Def} $\ast$husart, uint8\+\_\+t $\ast$p\+Rx\+Data, uint16\+\_\+t Size, uint32\+\_\+t Timeout)
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+USART\+\_\+\+Transmit\+Receive} (\textbf{ USART\+\_\+\+Handle\+Type\+Def} $\ast$husart, uint8\+\_\+t $\ast$p\+Tx\+Data, uint8\+\_\+t $\ast$p\+Rx\+Data, uint16\+\_\+t Size, uint32\+\_\+t Timeout)
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+USART\+\_\+\+Transmit\+\_\+\+IT} (\textbf{ USART\+\_\+\+Handle\+Type\+Def} $\ast$husart, uint8\+\_\+t $\ast$p\+Tx\+Data, uint16\+\_\+t Size)
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+USART\+\_\+\+Receive\+\_\+\+IT} (\textbf{ USART\+\_\+\+Handle\+Type\+Def} $\ast$husart, uint8\+\_\+t $\ast$p\+Rx\+Data, uint16\+\_\+t Size)
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+USART\+\_\+\+Transmit\+Receive\+\_\+\+IT} (\textbf{ USART\+\_\+\+Handle\+Type\+Def} $\ast$husart, uint8\+\_\+t $\ast$p\+Tx\+Data, uint8\+\_\+t $\ast$p\+Rx\+Data, uint16\+\_\+t Size)
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+USART\+\_\+\+Transmit\+\_\+\+DMA} (\textbf{ USART\+\_\+\+Handle\+Type\+Def} $\ast$husart, uint8\+\_\+t $\ast$p\+Tx\+Data, uint16\+\_\+t Size)
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+USART\+\_\+\+Receive\+\_\+\+DMA} (\textbf{ USART\+\_\+\+Handle\+Type\+Def} $\ast$husart, uint8\+\_\+t $\ast$p\+Rx\+Data, uint16\+\_\+t Size)
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+USART\+\_\+\+Transmit\+Receive\+\_\+\+DMA} (\textbf{ USART\+\_\+\+Handle\+Type\+Def} $\ast$husart, uint8\+\_\+t $\ast$p\+Tx\+Data, uint8\+\_\+t $\ast$p\+Rx\+Data, uint16\+\_\+t Size)
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+USART\+\_\+\+DMAPause} (\textbf{ USART\+\_\+\+Handle\+Type\+Def} $\ast$husart)
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+USART\+\_\+\+DMAResume} (\textbf{ USART\+\_\+\+Handle\+Type\+Def} $\ast$husart)
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+USART\+\_\+\+DMAStop} (\textbf{ USART\+\_\+\+Handle\+Type\+Def} $\ast$husart)
+\item 
+void \textbf{ HAL\+\_\+\+USART\+\_\+\+IRQHandler} (\textbf{ USART\+\_\+\+Handle\+Type\+Def} $\ast$husart)
+\item 
+void \textbf{ HAL\+\_\+\+USART\+\_\+\+Tx\+Cplt\+Callback} (\textbf{ USART\+\_\+\+Handle\+Type\+Def} $\ast$husart)
+\item 
+void \textbf{ HAL\+\_\+\+USART\+\_\+\+Tx\+Half\+Cplt\+Callback} (\textbf{ USART\+\_\+\+Handle\+Type\+Def} $\ast$husart)
+\item 
+void \textbf{ HAL\+\_\+\+USART\+\_\+\+Rx\+Cplt\+Callback} (\textbf{ USART\+\_\+\+Handle\+Type\+Def} $\ast$husart)
+\item 
+void \textbf{ HAL\+\_\+\+USART\+\_\+\+Rx\+Half\+Cplt\+Callback} (\textbf{ USART\+\_\+\+Handle\+Type\+Def} $\ast$husart)
+\item 
+void \textbf{ HAL\+\_\+\+USART\+\_\+\+Tx\+Rx\+Cplt\+Callback} (\textbf{ USART\+\_\+\+Handle\+Type\+Def} $\ast$husart)
+\item 
+void \textbf{ HAL\+\_\+\+USART\+\_\+\+Error\+Callback} (\textbf{ USART\+\_\+\+Handle\+Type\+Def} $\ast$husart)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\label{group___u_s_a_r_t___exported___functions___group2_gab6d960d952daee0b6aa82fbf0a4b61b0}} 
+\index{USART\_Exported\_Functions\_Group2@{USART\_Exported\_Functions\_Group2}!HAL\_USART\_DMAPause@{HAL\_USART\_DMAPause}}
+\index{HAL\_USART\_DMAPause@{HAL\_USART\_DMAPause}!USART\_Exported\_Functions\_Group2@{USART\_Exported\_Functions\_Group2}}
+\doxysubsubsection{HAL\_USART\_DMAPause()}
+{\footnotesize\ttfamily \textbf{ HAL\+\_\+\+Status\+Type\+Def} HAL\+\_\+\+USART\+\_\+\+DMAPause (\begin{DoxyParamCaption}\item[{\textbf{ USART\+\_\+\+Handle\+Type\+Def} $\ast$}]{husart }\end{DoxyParamCaption})}
+
+\mbox{\label{group___u_s_a_r_t___exported___functions___group2_ga20e7a0e7864825eb18c9ee57a4e63fb7}} 
+\index{USART\_Exported\_Functions\_Group2@{USART\_Exported\_Functions\_Group2}!HAL\_USART\_DMAResume@{HAL\_USART\_DMAResume}}
+\index{HAL\_USART\_DMAResume@{HAL\_USART\_DMAResume}!USART\_Exported\_Functions\_Group2@{USART\_Exported\_Functions\_Group2}}
+\doxysubsubsection{HAL\_USART\_DMAResume()}
+{\footnotesize\ttfamily \textbf{ HAL\+\_\+\+Status\+Type\+Def} HAL\+\_\+\+USART\+\_\+\+DMAResume (\begin{DoxyParamCaption}\item[{\textbf{ USART\+\_\+\+Handle\+Type\+Def} $\ast$}]{husart }\end{DoxyParamCaption})}
+
+\mbox{\label{group___u_s_a_r_t___exported___functions___group2_gabeaf40f697cb852cb54a3ad81df4375e}} 
+\index{USART\_Exported\_Functions\_Group2@{USART\_Exported\_Functions\_Group2}!HAL\_USART\_DMAStop@{HAL\_USART\_DMAStop}}
+\index{HAL\_USART\_DMAStop@{HAL\_USART\_DMAStop}!USART\_Exported\_Functions\_Group2@{USART\_Exported\_Functions\_Group2}}
+\doxysubsubsection{HAL\_USART\_DMAStop()}
+{\footnotesize\ttfamily \textbf{ HAL\+\_\+\+Status\+Type\+Def} HAL\+\_\+\+USART\+\_\+\+DMAStop (\begin{DoxyParamCaption}\item[{\textbf{ USART\+\_\+\+Handle\+Type\+Def} $\ast$}]{husart }\end{DoxyParamCaption})}
+
+\mbox{\label{group___u_s_a_r_t___exported___functions___group2_gae7e2b482040e13cb538fa507617f8229}} 
+\index{USART\_Exported\_Functions\_Group2@{USART\_Exported\_Functions\_Group2}!HAL\_USART\_ErrorCallback@{HAL\_USART\_ErrorCallback}}
+\index{HAL\_USART\_ErrorCallback@{HAL\_USART\_ErrorCallback}!USART\_Exported\_Functions\_Group2@{USART\_Exported\_Functions\_Group2}}
+\doxysubsubsection{HAL\_USART\_ErrorCallback()}
+{\footnotesize\ttfamily void HAL\+\_\+\+USART\+\_\+\+Error\+Callback (\begin{DoxyParamCaption}\item[{\textbf{ USART\+\_\+\+Handle\+Type\+Def} $\ast$}]{husart }\end{DoxyParamCaption})}
+
+\mbox{\label{group___u_s_a_r_t___exported___functions___group2_ga4ac0981601603af111c7e59db1680ace}} 
+\index{USART\_Exported\_Functions\_Group2@{USART\_Exported\_Functions\_Group2}!HAL\_USART\_IRQHandler@{HAL\_USART\_IRQHandler}}
+\index{HAL\_USART\_IRQHandler@{HAL\_USART\_IRQHandler}!USART\_Exported\_Functions\_Group2@{USART\_Exported\_Functions\_Group2}}
+\doxysubsubsection{HAL\_USART\_IRQHandler()}
+{\footnotesize\ttfamily void HAL\+\_\+\+USART\+\_\+\+IRQHandler (\begin{DoxyParamCaption}\item[{\textbf{ USART\+\_\+\+Handle\+Type\+Def} $\ast$}]{husart }\end{DoxyParamCaption})}
+
+\mbox{\label{group___u_s_a_r_t___exported___functions___group2_ga1da8a5ce515c18b9960d366812bf737e}} 
+\index{USART\_Exported\_Functions\_Group2@{USART\_Exported\_Functions\_Group2}!HAL\_USART\_Receive@{HAL\_USART\_Receive}}
+\index{HAL\_USART\_Receive@{HAL\_USART\_Receive}!USART\_Exported\_Functions\_Group2@{USART\_Exported\_Functions\_Group2}}
+\doxysubsubsection{HAL\_USART\_Receive()}
+{\footnotesize\ttfamily \textbf{ HAL\+\_\+\+Status\+Type\+Def} HAL\+\_\+\+USART\+\_\+\+Receive (\begin{DoxyParamCaption}\item[{\textbf{ USART\+\_\+\+Handle\+Type\+Def} $\ast$}]{husart,  }\item[{uint8\+\_\+t $\ast$}]{p\+Rx\+Data,  }\item[{uint16\+\_\+t}]{Size,  }\item[{uint32\+\_\+t}]{Timeout }\end{DoxyParamCaption})}
+
+\mbox{\label{group___u_s_a_r_t___exported___functions___group2_gab0322771e1ddbb8c2ac6dd75e7e1c90e}} 
+\index{USART\_Exported\_Functions\_Group2@{USART\_Exported\_Functions\_Group2}!HAL\_USART\_Receive\_DMA@{HAL\_USART\_Receive\_DMA}}
+\index{HAL\_USART\_Receive\_DMA@{HAL\_USART\_Receive\_DMA}!USART\_Exported\_Functions\_Group2@{USART\_Exported\_Functions\_Group2}}
+\doxysubsubsection{HAL\_USART\_Receive\_DMA()}
+{\footnotesize\ttfamily \textbf{ HAL\+\_\+\+Status\+Type\+Def} HAL\+\_\+\+USART\+\_\+\+Receive\+\_\+\+DMA (\begin{DoxyParamCaption}\item[{\textbf{ USART\+\_\+\+Handle\+Type\+Def} $\ast$}]{husart,  }\item[{uint8\+\_\+t $\ast$}]{p\+Rx\+Data,  }\item[{uint16\+\_\+t}]{Size }\end{DoxyParamCaption})}
+
+\mbox{\label{group___u_s_a_r_t___exported___functions___group2_ga19816dd7809a5dba59f309172cb7ea2d}} 
+\index{USART\_Exported\_Functions\_Group2@{USART\_Exported\_Functions\_Group2}!HAL\_USART\_Receive\_IT@{HAL\_USART\_Receive\_IT}}
+\index{HAL\_USART\_Receive\_IT@{HAL\_USART\_Receive\_IT}!USART\_Exported\_Functions\_Group2@{USART\_Exported\_Functions\_Group2}}
+\doxysubsubsection{HAL\_USART\_Receive\_IT()}
+{\footnotesize\ttfamily \textbf{ HAL\+\_\+\+Status\+Type\+Def} HAL\+\_\+\+USART\+\_\+\+Receive\+\_\+\+IT (\begin{DoxyParamCaption}\item[{\textbf{ USART\+\_\+\+Handle\+Type\+Def} $\ast$}]{husart,  }\item[{uint8\+\_\+t $\ast$}]{p\+Rx\+Data,  }\item[{uint16\+\_\+t}]{Size }\end{DoxyParamCaption})}
+
+\mbox{\label{group___u_s_a_r_t___exported___functions___group2_ga5937cf9bb1958b927bf34900d19c9724}} 
+\index{USART\_Exported\_Functions\_Group2@{USART\_Exported\_Functions\_Group2}!HAL\_USART\_RxCpltCallback@{HAL\_USART\_RxCpltCallback}}
+\index{HAL\_USART\_RxCpltCallback@{HAL\_USART\_RxCpltCallback}!USART\_Exported\_Functions\_Group2@{USART\_Exported\_Functions\_Group2}}
+\doxysubsubsection{HAL\_USART\_RxCpltCallback()}
+{\footnotesize\ttfamily void HAL\+\_\+\+USART\+\_\+\+Rx\+Cplt\+Callback (\begin{DoxyParamCaption}\item[{\textbf{ USART\+\_\+\+Handle\+Type\+Def} $\ast$}]{husart }\end{DoxyParamCaption})}
+
+\mbox{\label{group___u_s_a_r_t___exported___functions___group2_ga2b22726b27e640b3d37a896ef5113b49}} 
+\index{USART\_Exported\_Functions\_Group2@{USART\_Exported\_Functions\_Group2}!HAL\_USART\_RxHalfCpltCallback@{HAL\_USART\_RxHalfCpltCallback}}
+\index{HAL\_USART\_RxHalfCpltCallback@{HAL\_USART\_RxHalfCpltCallback}!USART\_Exported\_Functions\_Group2@{USART\_Exported\_Functions\_Group2}}
+\doxysubsubsection{HAL\_USART\_RxHalfCpltCallback()}
+{\footnotesize\ttfamily void HAL\+\_\+\+USART\+\_\+\+Rx\+Half\+Cplt\+Callback (\begin{DoxyParamCaption}\item[{\textbf{ USART\+\_\+\+Handle\+Type\+Def} $\ast$}]{husart }\end{DoxyParamCaption})}
+
+\mbox{\label{group___u_s_a_r_t___exported___functions___group2_gaa80425d3a8fa74a17f74cb03a3c2ad05}} 
+\index{USART\_Exported\_Functions\_Group2@{USART\_Exported\_Functions\_Group2}!HAL\_USART\_Transmit@{HAL\_USART\_Transmit}}
+\index{HAL\_USART\_Transmit@{HAL\_USART\_Transmit}!USART\_Exported\_Functions\_Group2@{USART\_Exported\_Functions\_Group2}}
+\doxysubsubsection{HAL\_USART\_Transmit()}
+{\footnotesize\ttfamily \textbf{ HAL\+\_\+\+Status\+Type\+Def} HAL\+\_\+\+USART\+\_\+\+Transmit (\begin{DoxyParamCaption}\item[{\textbf{ USART\+\_\+\+Handle\+Type\+Def} $\ast$}]{husart,  }\item[{uint8\+\_\+t $\ast$}]{p\+Tx\+Data,  }\item[{uint16\+\_\+t}]{Size,  }\item[{uint32\+\_\+t}]{Timeout }\end{DoxyParamCaption})}
+
+\mbox{\label{group___u_s_a_r_t___exported___functions___group2_ga3d52e7ec93f6111e87c11daa8c00d1a1}} 
+\index{USART\_Exported\_Functions\_Group2@{USART\_Exported\_Functions\_Group2}!HAL\_USART\_Transmit\_DMA@{HAL\_USART\_Transmit\_DMA}}
+\index{HAL\_USART\_Transmit\_DMA@{HAL\_USART\_Transmit\_DMA}!USART\_Exported\_Functions\_Group2@{USART\_Exported\_Functions\_Group2}}
+\doxysubsubsection{HAL\_USART\_Transmit\_DMA()}
+{\footnotesize\ttfamily \textbf{ HAL\+\_\+\+Status\+Type\+Def} HAL\+\_\+\+USART\+\_\+\+Transmit\+\_\+\+DMA (\begin{DoxyParamCaption}\item[{\textbf{ USART\+\_\+\+Handle\+Type\+Def} $\ast$}]{husart,  }\item[{uint8\+\_\+t $\ast$}]{p\+Tx\+Data,  }\item[{uint16\+\_\+t}]{Size }\end{DoxyParamCaption})}
+
+\mbox{\label{group___u_s_a_r_t___exported___functions___group2_gaee43a3d0faab6467aea5663f8b0e87b0}} 
+\index{USART\_Exported\_Functions\_Group2@{USART\_Exported\_Functions\_Group2}!HAL\_USART\_Transmit\_IT@{HAL\_USART\_Transmit\_IT}}
+\index{HAL\_USART\_Transmit\_IT@{HAL\_USART\_Transmit\_IT}!USART\_Exported\_Functions\_Group2@{USART\_Exported\_Functions\_Group2}}
+\doxysubsubsection{HAL\_USART\_Transmit\_IT()}
+{\footnotesize\ttfamily \textbf{ HAL\+\_\+\+Status\+Type\+Def} HAL\+\_\+\+USART\+\_\+\+Transmit\+\_\+\+IT (\begin{DoxyParamCaption}\item[{\textbf{ USART\+\_\+\+Handle\+Type\+Def} $\ast$}]{husart,  }\item[{uint8\+\_\+t $\ast$}]{p\+Tx\+Data,  }\item[{uint16\+\_\+t}]{Size }\end{DoxyParamCaption})}
+
+\mbox{\label{group___u_s_a_r_t___exported___functions___group2_gad6da6800e21d17bd021f5d0cc068f271}} 
+\index{USART\_Exported\_Functions\_Group2@{USART\_Exported\_Functions\_Group2}!HAL\_USART\_TransmitReceive@{HAL\_USART\_TransmitReceive}}
+\index{HAL\_USART\_TransmitReceive@{HAL\_USART\_TransmitReceive}!USART\_Exported\_Functions\_Group2@{USART\_Exported\_Functions\_Group2}}
+\doxysubsubsection{HAL\_USART\_TransmitReceive()}
+{\footnotesize\ttfamily \textbf{ HAL\+\_\+\+Status\+Type\+Def} HAL\+\_\+\+USART\+\_\+\+Transmit\+Receive (\begin{DoxyParamCaption}\item[{\textbf{ USART\+\_\+\+Handle\+Type\+Def} $\ast$}]{husart,  }\item[{uint8\+\_\+t $\ast$}]{p\+Tx\+Data,  }\item[{uint8\+\_\+t $\ast$}]{p\+Rx\+Data,  }\item[{uint16\+\_\+t}]{Size,  }\item[{uint32\+\_\+t}]{Timeout }\end{DoxyParamCaption})}
+
+\mbox{\label{group___u_s_a_r_t___exported___functions___group2_ga8ad37a3c54b720f1f0a2a32dafcac6df}} 
+\index{USART\_Exported\_Functions\_Group2@{USART\_Exported\_Functions\_Group2}!HAL\_USART\_TransmitReceive\_DMA@{HAL\_USART\_TransmitReceive\_DMA}}
+\index{HAL\_USART\_TransmitReceive\_DMA@{HAL\_USART\_TransmitReceive\_DMA}!USART\_Exported\_Functions\_Group2@{USART\_Exported\_Functions\_Group2}}
+\doxysubsubsection{HAL\_USART\_TransmitReceive\_DMA()}
+{\footnotesize\ttfamily \textbf{ HAL\+\_\+\+Status\+Type\+Def} HAL\+\_\+\+USART\+\_\+\+Transmit\+Receive\+\_\+\+DMA (\begin{DoxyParamCaption}\item[{\textbf{ USART\+\_\+\+Handle\+Type\+Def} $\ast$}]{husart,  }\item[{uint8\+\_\+t $\ast$}]{p\+Tx\+Data,  }\item[{uint8\+\_\+t $\ast$}]{p\+Rx\+Data,  }\item[{uint16\+\_\+t}]{Size }\end{DoxyParamCaption})}
+
+\mbox{\label{group___u_s_a_r_t___exported___functions___group2_gaf67f2b883594afd0027f10a518a3f595}} 
+\index{USART\_Exported\_Functions\_Group2@{USART\_Exported\_Functions\_Group2}!HAL\_USART\_TransmitReceive\_IT@{HAL\_USART\_TransmitReceive\_IT}}
+\index{HAL\_USART\_TransmitReceive\_IT@{HAL\_USART\_TransmitReceive\_IT}!USART\_Exported\_Functions\_Group2@{USART\_Exported\_Functions\_Group2}}
+\doxysubsubsection{HAL\_USART\_TransmitReceive\_IT()}
+{\footnotesize\ttfamily \textbf{ HAL\+\_\+\+Status\+Type\+Def} HAL\+\_\+\+USART\+\_\+\+Transmit\+Receive\+\_\+\+IT (\begin{DoxyParamCaption}\item[{\textbf{ USART\+\_\+\+Handle\+Type\+Def} $\ast$}]{husart,  }\item[{uint8\+\_\+t $\ast$}]{p\+Tx\+Data,  }\item[{uint8\+\_\+t $\ast$}]{p\+Rx\+Data,  }\item[{uint16\+\_\+t}]{Size }\end{DoxyParamCaption})}
+
+\mbox{\label{group___u_s_a_r_t___exported___functions___group2_ga140f7cd834ae6359fcb4a71e0fe29909}} 
+\index{USART\_Exported\_Functions\_Group2@{USART\_Exported\_Functions\_Group2}!HAL\_USART\_TxCpltCallback@{HAL\_USART\_TxCpltCallback}}
+\index{HAL\_USART\_TxCpltCallback@{HAL\_USART\_TxCpltCallback}!USART\_Exported\_Functions\_Group2@{USART\_Exported\_Functions\_Group2}}
+\doxysubsubsection{HAL\_USART\_TxCpltCallback()}
+{\footnotesize\ttfamily void HAL\+\_\+\+USART\+\_\+\+Tx\+Cplt\+Callback (\begin{DoxyParamCaption}\item[{\textbf{ USART\+\_\+\+Handle\+Type\+Def} $\ast$}]{husart }\end{DoxyParamCaption})}
+
+\mbox{\label{group___u_s_a_r_t___exported___functions___group2_ga107416fd537ed66aaaf530581c1a2c0a}} 
+\index{USART\_Exported\_Functions\_Group2@{USART\_Exported\_Functions\_Group2}!HAL\_USART\_TxHalfCpltCallback@{HAL\_USART\_TxHalfCpltCallback}}
+\index{HAL\_USART\_TxHalfCpltCallback@{HAL\_USART\_TxHalfCpltCallback}!USART\_Exported\_Functions\_Group2@{USART\_Exported\_Functions\_Group2}}
+\doxysubsubsection{HAL\_USART\_TxHalfCpltCallback()}
+{\footnotesize\ttfamily void HAL\+\_\+\+USART\+\_\+\+Tx\+Half\+Cplt\+Callback (\begin{DoxyParamCaption}\item[{\textbf{ USART\+\_\+\+Handle\+Type\+Def} $\ast$}]{husart }\end{DoxyParamCaption})}
+
+\mbox{\label{group___u_s_a_r_t___exported___functions___group2_ga5ed0ad2c026a5d53cda4485557558eaa}} 
+\index{USART\_Exported\_Functions\_Group2@{USART\_Exported\_Functions\_Group2}!HAL\_USART\_TxRxCpltCallback@{HAL\_USART\_TxRxCpltCallback}}
+\index{HAL\_USART\_TxRxCpltCallback@{HAL\_USART\_TxRxCpltCallback}!USART\_Exported\_Functions\_Group2@{USART\_Exported\_Functions\_Group2}}
+\doxysubsubsection{HAL\_USART\_TxRxCpltCallback()}
+{\footnotesize\ttfamily void HAL\+\_\+\+USART\+\_\+\+Tx\+Rx\+Cplt\+Callback (\begin{DoxyParamCaption}\item[{\textbf{ USART\+\_\+\+Handle\+Type\+Def} $\ast$}]{husart }\end{DoxyParamCaption})}
+

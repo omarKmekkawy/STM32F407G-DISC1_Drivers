@@ -1,0 +1,436 @@
+\doxysection{HAL Control functions}
+\label{group___h_a_l___exported___functions___group2}\index{HAL Control functions@{HAL Control functions}}
+
+
+HAL Control functions.  
+
+
+Collaboration diagram for HAL Control functions\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group___h_a_l___exported___functions___group2}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \textbf{ HAL\+\_\+\+Inc\+Tick} (void)
+\begin{DoxyCompactList}\small\item\em This function is called to increment a global variable \char`\"{}uw\+Tick\char`\"{} used as application time base. \end{DoxyCompactList}\item 
+void \textbf{ HAL\+\_\+\+Delay} (\textbf{ \+\_\+\+\_\+\+IO} uint32\+\_\+t \textbf{ Delay})
+\begin{DoxyCompactList}\small\item\em This function provides accurate delay (in milliseconds) based on variable incremented. \end{DoxyCompactList}\item 
+uint32\+\_\+t \textbf{ HAL\+\_\+\+Get\+Tick} (void)
+\begin{DoxyCompactList}\small\item\em Provides a tick value in millisecond. \end{DoxyCompactList}\item 
+void \textbf{ HAL\+\_\+\+Suspend\+Tick} (void)
+\begin{DoxyCompactList}\small\item\em Suspend Tick increment. \end{DoxyCompactList}\item 
+void \textbf{ HAL\+\_\+\+Resume\+Tick} (void)
+\begin{DoxyCompactList}\small\item\em Resume Tick increment. \end{DoxyCompactList}\item 
+uint32\+\_\+t \textbf{ HAL\+\_\+\+Get\+Hal\+Version} (void)
+\begin{DoxyCompactList}\small\item\em Returns the HAL revision. \end{DoxyCompactList}\item 
+uint32\+\_\+t \textbf{ HAL\+\_\+\+Get\+REVID} (void)
+\begin{DoxyCompactList}\small\item\em Returns the device revision identifier. \end{DoxyCompactList}\item 
+uint32\+\_\+t \textbf{ HAL\+\_\+\+Get\+DEVID} (void)
+\begin{DoxyCompactList}\small\item\em Returns the device identifier. \end{DoxyCompactList}\item 
+void \textbf{ HAL\+\_\+\+DBGMCU\+\_\+\+Enable\+DBGSleep\+Mode} (void)
+\begin{DoxyCompactList}\small\item\em Enable the Debug Module during SLEEP mode. \end{DoxyCompactList}\item 
+void \textbf{ HAL\+\_\+\+DBGMCU\+\_\+\+Disable\+DBGSleep\+Mode} (void)
+\begin{DoxyCompactList}\small\item\em Disable the Debug Module during SLEEP mode. \end{DoxyCompactList}\item 
+void \textbf{ HAL\+\_\+\+DBGMCU\+\_\+\+Enable\+DBGStop\+Mode} (void)
+\begin{DoxyCompactList}\small\item\em Enable the Debug Module during STOP mode. \end{DoxyCompactList}\item 
+void \textbf{ HAL\+\_\+\+DBGMCU\+\_\+\+Disable\+DBGStop\+Mode} (void)
+\begin{DoxyCompactList}\small\item\em Disable the Debug Module during STOP mode. \end{DoxyCompactList}\item 
+void \textbf{ HAL\+\_\+\+DBGMCU\+\_\+\+Enable\+DBGStandby\+Mode} (void)
+\begin{DoxyCompactList}\small\item\em Enable the Debug Module during STANDBY mode. \end{DoxyCompactList}\item 
+void \textbf{ HAL\+\_\+\+DBGMCU\+\_\+\+Disable\+DBGStandby\+Mode} (void)
+\begin{DoxyCompactList}\small\item\em Disable the Debug Module during STANDBY mode. \end{DoxyCompactList}\item 
+void \textbf{ HAL\+\_\+\+Enable\+Compensation\+Cell} (void)
+\begin{DoxyCompactList}\small\item\em Enables the I/O Compensation Cell. \end{DoxyCompactList}\item 
+void \textbf{ HAL\+\_\+\+Disable\+Compensation\+Cell} (void)
+\begin{DoxyCompactList}\small\item\em Power-\/down the I/O Compensation Cell. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+HAL Control functions. 
+
+\begin{DoxyVerb} ===============================================================================
+                      ##### HAL Control functions #####
+ ===============================================================================
+    [..]  This section provides functions allowing to:
+      (+) Provide a tick value in millisecond
+      (+) Provide a blocking delay in millisecond
+      (+) Suspend the time base source interrupt
+      (+) Resume the time base source interrupt
+      (+) Get the HAL API driver version
+      (+) Get the device identifier
+      (+) Get the device revision identifier
+      (+) Enable/Disable Debug module during SLEEP mode
+      (+) Enable/Disable Debug module during STOP mode
+      (+) Enable/Disable Debug module during STANDBY mode\end{DoxyVerb}
+ 
+
+\doxysubsection{Function Documentation}
+\mbox{\label{group___h_a_l___exported___functions___group2_gac7820d0561f19999a68d714655b901b5}} 
+\index{HAL Control functions@{HAL Control functions}!HAL\_DBGMCU\_DisableDBGSleepMode@{HAL\_DBGMCU\_DisableDBGSleepMode}}
+\index{HAL\_DBGMCU\_DisableDBGSleepMode@{HAL\_DBGMCU\_DisableDBGSleepMode}!HAL Control functions@{HAL Control functions}}
+\doxysubsubsection{HAL\_DBGMCU\_DisableDBGSleepMode()}
+{\footnotesize\ttfamily void HAL\+\_\+\+DBGMCU\+\_\+\+Disable\+DBGSleep\+Mode (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Disable the Debug Module during SLEEP mode. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 419 of file stm32f4xx\+\_\+hal.\+c.
+
+\mbox{\label{group___h_a_l___exported___functions___group2_ga7faa58d8508ea3123b9f247a70379779}} 
+\index{HAL Control functions@{HAL Control functions}!HAL\_DBGMCU\_DisableDBGStandbyMode@{HAL\_DBGMCU\_DisableDBGStandbyMode}}
+\index{HAL\_DBGMCU\_DisableDBGStandbyMode@{HAL\_DBGMCU\_DisableDBGStandbyMode}!HAL Control functions@{HAL Control functions}}
+\doxysubsubsection{HAL\_DBGMCU\_DisableDBGStandbyMode()}
+{\footnotesize\ttfamily void HAL\+\_\+\+DBGMCU\+\_\+\+Disable\+DBGStandby\+Mode (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Disable the Debug Module during STANDBY mode. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 455 of file stm32f4xx\+\_\+hal.\+c.
+
+\mbox{\label{group___h_a_l___exported___functions___group2_ga2c93dcee35e5983d74f1000de7c042d5}} 
+\index{HAL Control functions@{HAL Control functions}!HAL\_DBGMCU\_DisableDBGStopMode@{HAL\_DBGMCU\_DisableDBGStopMode}}
+\index{HAL\_DBGMCU\_DisableDBGStopMode@{HAL\_DBGMCU\_DisableDBGStopMode}!HAL Control functions@{HAL Control functions}}
+\doxysubsubsection{HAL\_DBGMCU\_DisableDBGStopMode()}
+{\footnotesize\ttfamily void HAL\+\_\+\+DBGMCU\+\_\+\+Disable\+DBGStop\+Mode (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Disable the Debug Module during STOP mode. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 437 of file stm32f4xx\+\_\+hal.\+c.
+
+\mbox{\label{group___h_a_l___exported___functions___group2_gaf031bcc71ebad9b7edf405547efd762b}} 
+\index{HAL Control functions@{HAL Control functions}!HAL\_DBGMCU\_EnableDBGSleepMode@{HAL\_DBGMCU\_EnableDBGSleepMode}}
+\index{HAL\_DBGMCU\_EnableDBGSleepMode@{HAL\_DBGMCU\_EnableDBGSleepMode}!HAL Control functions@{HAL Control functions}}
+\doxysubsubsection{HAL\_DBGMCU\_EnableDBGSleepMode()}
+{\footnotesize\ttfamily void HAL\+\_\+\+DBGMCU\+\_\+\+Enable\+DBGSleep\+Mode (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Enable the Debug Module during SLEEP mode. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 410 of file stm32f4xx\+\_\+hal.\+c.
+
+\mbox{\label{group___h_a_l___exported___functions___group2_ga28a1323b2eeb0a408c1cfdbfa0db5ead}} 
+\index{HAL Control functions@{HAL Control functions}!HAL\_DBGMCU\_EnableDBGStandbyMode@{HAL\_DBGMCU\_EnableDBGStandbyMode}}
+\index{HAL\_DBGMCU\_EnableDBGStandbyMode@{HAL\_DBGMCU\_EnableDBGStandbyMode}!HAL Control functions@{HAL Control functions}}
+\doxysubsubsection{HAL\_DBGMCU\_EnableDBGStandbyMode()}
+{\footnotesize\ttfamily void HAL\+\_\+\+DBGMCU\+\_\+\+Enable\+DBGStandby\+Mode (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Enable the Debug Module during STANDBY mode. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 446 of file stm32f4xx\+\_\+hal.\+c.
+
+\mbox{\label{group___h_a_l___exported___functions___group2_gadf25043b17de4bef38a95a75fd03e5c4}} 
+\index{HAL Control functions@{HAL Control functions}!HAL\_DBGMCU\_EnableDBGStopMode@{HAL\_DBGMCU\_EnableDBGStopMode}}
+\index{HAL\_DBGMCU\_EnableDBGStopMode@{HAL\_DBGMCU\_EnableDBGStopMode}!HAL Control functions@{HAL Control functions}}
+\doxysubsubsection{HAL\_DBGMCU\_EnableDBGStopMode()}
+{\footnotesize\ttfamily void HAL\+\_\+\+DBGMCU\+\_\+\+Enable\+DBGStop\+Mode (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Enable the Debug Module during STOP mode. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 428 of file stm32f4xx\+\_\+hal.\+c.
+
+\mbox{\label{group___h_a_l___exported___functions___group2_gaef87d3fec667bb34c418f5687e8204c1}} 
+\index{HAL Control functions@{HAL Control functions}!HAL\_Delay@{HAL\_Delay}}
+\index{HAL\_Delay@{HAL\_Delay}!HAL Control functions@{HAL Control functions}}
+\doxysubsubsection{HAL\_Delay()}
+{\footnotesize\ttfamily \+\_\+\+\_\+weak void HAL\+\_\+\+Delay (\begin{DoxyParamCaption}\item[{\textbf{ \+\_\+\+\_\+\+IO} uint32\+\_\+t}]{Delay }\end{DoxyParamCaption})}
+
+
+
+This function provides accurate delay (in milliseconds) based on variable incremented. 
+
+\begin{DoxyNote}{Note}
+In the default implementation , Sys\+Tick timer is the source of time base. It is used to generate interrupts at regular time intervals where uw\+Tick is incremented. 
+
+This function is declared as \+\_\+\+\_\+weak to be overwritten in case of other implementations in user file. 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em Delay} & specifies the delay time length, in milliseconds. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 338 of file stm32f4xx\+\_\+hal.\+c.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=255pt]{group___h_a_l___exported___functions___group2_gaef87d3fec667bb34c418f5687e8204c1_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{group___h_a_l___exported___functions___group2_ga653f1166b0e37afd40372550d806e667}} 
+\index{HAL Control functions@{HAL Control functions}!HAL\_DisableCompensationCell@{HAL\_DisableCompensationCell}}
+\index{HAL\_DisableCompensationCell@{HAL\_DisableCompensationCell}!HAL Control functions@{HAL Control functions}}
+\doxysubsubsection{HAL\_DisableCompensationCell()}
+{\footnotesize\ttfamily void HAL\+\_\+\+Disable\+Compensation\+Cell (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Power-\/down the I/O Compensation Cell. 
+
+\begin{DoxyNote}{Note}
+The I/O compensation cell can be used only when the device supply voltage ranges from 2.\+4 to 3.\+6 V. ~\newline
+ 
+\end{DoxyNote}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 477 of file stm32f4xx\+\_\+hal.\+c.
+
+\mbox{\label{group___h_a_l___exported___functions___group2_ga20b6ca07582e10aec5e15ad2fda7dfc1}} 
+\index{HAL Control functions@{HAL Control functions}!HAL\_EnableCompensationCell@{HAL\_EnableCompensationCell}}
+\index{HAL\_EnableCompensationCell@{HAL\_EnableCompensationCell}!HAL Control functions@{HAL Control functions}}
+\doxysubsubsection{HAL\_EnableCompensationCell()}
+{\footnotesize\ttfamily void HAL\+\_\+\+Enable\+Compensation\+Cell (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Enables the I/O Compensation Cell. 
+
+\begin{DoxyNote}{Note}
+The I/O compensation cell can be used only when the device supply voltage ranges from 2.\+4 to 3.\+6 V. ~\newline
+ 
+\end{DoxyNote}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 466 of file stm32f4xx\+\_\+hal.\+c.
+
+\mbox{\label{group___h_a_l___exported___functions___group2_gaff785f069ed650de77ff82ac407f7c84}} 
+\index{HAL Control functions@{HAL Control functions}!HAL\_GetDEVID@{HAL\_GetDEVID}}
+\index{HAL\_GetDEVID@{HAL\_GetDEVID}!HAL Control functions@{HAL Control functions}}
+\doxysubsubsection{HAL\_GetDEVID()}
+{\footnotesize\ttfamily uint32\+\_\+t HAL\+\_\+\+Get\+DEVID (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Returns the device identifier. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em Device} & identifier \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 401 of file stm32f4xx\+\_\+hal.\+c.
+
+\mbox{\label{group___h_a_l___exported___functions___group2_gafb139b375512ad2a234e4619b129b966}} 
+\index{HAL Control functions@{HAL Control functions}!HAL\_GetHalVersion@{HAL\_GetHalVersion}}
+\index{HAL\_GetHalVersion@{HAL\_GetHalVersion}!HAL Control functions@{HAL Control functions}}
+\doxysubsubsection{HAL\_GetHalVersion()}
+{\footnotesize\ttfamily uint32\+\_\+t HAL\+\_\+\+Get\+Hal\+Version (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Returns the HAL revision. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em version} & \+: 0x\+XYZR (8bits for each decimal, R for RC) \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 383 of file stm32f4xx\+\_\+hal.\+c.
+
+\mbox{\label{group___h_a_l___exported___functions___group2_gae051ef9e932404b21f5877c7186406b8}} 
+\index{HAL Control functions@{HAL Control functions}!HAL\_GetREVID@{HAL\_GetREVID}}
+\index{HAL\_GetREVID@{HAL\_GetREVID}!HAL Control functions@{HAL Control functions}}
+\doxysubsubsection{HAL\_GetREVID()}
+{\footnotesize\ttfamily uint32\+\_\+t HAL\+\_\+\+Get\+REVID (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Returns the device revision identifier. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em Device} & revision identifier \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 392 of file stm32f4xx\+\_\+hal.\+c.
+
+\mbox{\label{group___h_a_l___exported___functions___group2_gac9b3a85a73735ac840d0dcb59bc0fdd6}} 
+\index{HAL Control functions@{HAL Control functions}!HAL\_GetTick@{HAL\_GetTick}}
+\index{HAL\_GetTick@{HAL\_GetTick}!HAL Control functions@{HAL Control functions}}
+\doxysubsubsection{HAL\_GetTick()}
+{\footnotesize\ttfamily \+\_\+\+\_\+weak uint32\+\_\+t HAL\+\_\+\+Get\+Tick (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Provides a tick value in millisecond. 
+
+\begin{DoxyNote}{Note}
+This function is declared as \+\_\+\+\_\+weak to be overwritten in case of other implementations in user file. 
+\end{DoxyNote}
+
+\begin{DoxyRetVals}{Return values}
+{\em tick} & value \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 322 of file stm32f4xx\+\_\+hal.\+c.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=255pt]{group___h_a_l___exported___functions___group2_gac9b3a85a73735ac840d0dcb59bc0fdd6_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{group___h_a_l___exported___functions___group2_gaba5b726bfedd013bf7bb5a51d5c4f188}} 
+\index{HAL Control functions@{HAL Control functions}!HAL\_IncTick@{HAL\_IncTick}}
+\index{HAL\_IncTick@{HAL\_IncTick}!HAL Control functions@{HAL Control functions}}
+\doxysubsubsection{HAL\_IncTick()}
+{\footnotesize\ttfamily \+\_\+\+\_\+weak void HAL\+\_\+\+Inc\+Tick (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+This function is called to increment a global variable \char`\"{}uw\+Tick\char`\"{} used as application time base. 
+
+\begin{DoxyNote}{Note}
+In the default implementation, this variable is incremented each 1ms in Systick ISR. 
+
+This function is declared as \+\_\+\+\_\+weak to be overwritten in case of other implementations in user file. 
+\end{DoxyNote}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 311 of file stm32f4xx\+\_\+hal.\+c.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=349pt]{group___h_a_l___exported___functions___group2_gaba5b726bfedd013bf7bb5a51d5c4f188_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{group___h_a_l___exported___functions___group2_gac3fa17aa85e357e3f1af56ad110d2e97}} 
+\index{HAL Control functions@{HAL Control functions}!HAL\_ResumeTick@{HAL\_ResumeTick}}
+\index{HAL\_ResumeTick@{HAL\_ResumeTick}!HAL Control functions@{HAL Control functions}}
+\doxysubsubsection{HAL\_ResumeTick()}
+{\footnotesize\ttfamily \+\_\+\+\_\+weak void HAL\+\_\+\+Resume\+Tick (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Resume Tick increment. 
+
+\begin{DoxyNote}{Note}
+In the default implementation , Sys\+Tick timer is the source of time base. It is used to generate interrupts at regular time intervals. Once \doxyref{HAL\+\_\+\+Resume\+Tick()}{p.}{group___h_a_l___exported___functions___group2_gac3fa17aa85e357e3f1af56ad110d2e97} is called, the Sys\+Tick interrupt will be enabled and so Tick increment is resumed. 
+
+This function is declared as \+\_\+\+\_\+weak to be overwritten in case of other implementations in user file. 
+\end{DoxyNote}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 373 of file stm32f4xx\+\_\+hal.\+c.
+
+\mbox{\label{group___h_a_l___exported___functions___group2_ga84ae4b045c45d49d96b2b02e2dc516b6}} 
+\index{HAL Control functions@{HAL Control functions}!HAL\_SuspendTick@{HAL\_SuspendTick}}
+\index{HAL\_SuspendTick@{HAL\_SuspendTick}!HAL Control functions@{HAL Control functions}}
+\doxysubsubsection{HAL\_SuspendTick()}
+{\footnotesize\ttfamily \+\_\+\+\_\+weak void HAL\+\_\+\+Suspend\+Tick (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Suspend Tick increment. 
+
+\begin{DoxyNote}{Note}
+In the default implementation , Sys\+Tick timer is the source of time base. It is used to generate interrupts at regular time intervals. Once \doxyref{HAL\+\_\+\+Suspend\+Tick()}{p.}{group___h_a_l___exported___functions___group2_ga84ae4b045c45d49d96b2b02e2dc516b6} is called, the Sys\+Tick interrupt will be disabled and so Tick increment is suspended. 
+
+This function is declared as \+\_\+\+\_\+weak to be overwritten in case of other implementations in user file. 
+\end{DoxyNote}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 357 of file stm32f4xx\+\_\+hal.\+c.
+

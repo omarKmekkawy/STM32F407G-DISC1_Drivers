@@ -1,0 +1,203 @@
+\doxysection{HAL\+\_\+\+Time\+Base}
+\label{group___h_a_l___time_base}\index{HAL\_TimeBase@{HAL\_TimeBase}}
+Collaboration diagram for HAL\+\_\+\+Time\+Base\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=322pt]{group___h_a_l___time_base}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \textbf{ TIM6\+\_\+\+DAC\+\_\+\+IRQHandler} (void)
+\begin{DoxyCompactList}\small\item\em This function handles TIM interrupt request. \end{DoxyCompactList}\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+Init\+Tick} (uint32\+\_\+t Tick\+Priority)
+\begin{DoxyCompactList}\small\item\em This function configures the TIM6 as a time base source. The time source is configured to have 1ms time base with a dedicated Tick interrupt priority. \end{DoxyCompactList}\item 
+void \textbf{ HAL\+\_\+\+Suspend\+Tick} (void)
+\begin{DoxyCompactList}\small\item\em Suspend Tick increment. \end{DoxyCompactList}\item 
+void \textbf{ HAL\+\_\+\+Resume\+Tick} (void)
+\begin{DoxyCompactList}\small\item\em Resume Tick increment. \end{DoxyCompactList}\item 
+void \textbf{ HAL\+\_\+\+TIM\+\_\+\+Period\+Elapsed\+Callback} (\textbf{ TIM\+\_\+\+Handle\+Type\+Def} $\ast$htim)
+\begin{DoxyCompactList}\small\item\em Period elapsed callback in non blocking mode. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ TIM\+\_\+\+Handle\+Type\+Def} \textbf{ Tim\+Handle}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\label{group___h_a_l___time_base_ga879cdb21ef051eb81ec51c18147397d5}} 
+\index{HAL\_TimeBase@{HAL\_TimeBase}!HAL\_InitTick@{HAL\_InitTick}}
+\index{HAL\_InitTick@{HAL\_InitTick}!HAL\_TimeBase@{HAL\_TimeBase}}
+\doxysubsubsection{HAL\_InitTick()}
+{\footnotesize\ttfamily \textbf{ HAL\+\_\+\+Status\+Type\+Def} HAL\+\_\+\+Init\+Tick (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Tick\+Priority }\end{DoxyParamCaption})}
+
+
+
+This function configures the TIM6 as a time base source. The time source is configured to have 1ms time base with a dedicated Tick interrupt priority. 
+
+\begin{DoxyNote}{Note}
+This function is called automatically at the beginning of program after reset by \doxyref{HAL\+\_\+\+Init()}{p.}{group___h_a_l___exported___functions___group1_gaecac54d350c3730e6831eb404e557dc4} or at any time when clock is configured, by \doxyref{HAL\+\_\+\+RCC\+\_\+\+Clock\+Config()}{p.}{group___r_c_c___exported___functions___group1_gad0a4b5c7459219fafc15f3f867563ef3}. 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em Tick\+Priority} & Tick interrupt priority. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em HAL} & status \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 73 of file stm32f4xx\+\_\+hal\+\_\+timebase\+\_\+tim\+\_\+template.\+c.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=321pt]{group___h_a_l___time_base_ga879cdb21ef051eb81ec51c18147397d5_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{group___h_a_l___time_base_ga24e0ee9dae1ec0f9d19200f5575ff790}} 
+\index{HAL\_TimeBase@{HAL\_TimeBase}!HAL\_ResumeTick@{HAL\_ResumeTick}}
+\index{HAL\_ResumeTick@{HAL\_ResumeTick}!HAL\_TimeBase@{HAL\_TimeBase}}
+\doxysubsubsection{HAL\_ResumeTick()}
+{\footnotesize\ttfamily void HAL\+\_\+\+Resume\+Tick (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Resume Tick increment. 
+
+\begin{DoxyNote}{Note}
+Enable the tick increment by Enabling TIM6 update interrupt. 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 149 of file stm32f4xx\+\_\+hal\+\_\+timebase\+\_\+tim\+\_\+template.\+c.
+
+\mbox{\label{group___h_a_l___time_base_gaaf651af2afe688a991c657f64f8fa5f9}} 
+\index{HAL\_TimeBase@{HAL\_TimeBase}!HAL\_SuspendTick@{HAL\_SuspendTick}}
+\index{HAL\_SuspendTick@{HAL\_SuspendTick}!HAL\_TimeBase@{HAL\_TimeBase}}
+\doxysubsubsection{HAL\_SuspendTick()}
+{\footnotesize\ttfamily void HAL\+\_\+\+Suspend\+Tick (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Suspend Tick increment. 
+
+\begin{DoxyNote}{Note}
+Disable the tick increment by disabling TIM6 update interrupt. 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 137 of file stm32f4xx\+\_\+hal\+\_\+timebase\+\_\+tim\+\_\+template.\+c.
+
+\mbox{\label{group___h_a_l___time_base_ga8a3b0ad512a6e6c6157440b68d395eac}} 
+\index{HAL\_TimeBase@{HAL\_TimeBase}!HAL\_TIM\_PeriodElapsedCallback@{HAL\_TIM\_PeriodElapsedCallback}}
+\index{HAL\_TIM\_PeriodElapsedCallback@{HAL\_TIM\_PeriodElapsedCallback}!HAL\_TimeBase@{HAL\_TimeBase}}
+\doxysubsubsection{HAL\_TIM\_PeriodElapsedCallback()}
+{\footnotesize\ttfamily void HAL\+\_\+\+TIM\+\_\+\+Period\+Elapsed\+Callback (\begin{DoxyParamCaption}\item[{\textbf{ TIM\+\_\+\+Handle\+Type\+Def} $\ast$}]{htim }\end{DoxyParamCaption})}
+
+
+
+Period elapsed callback in non blocking mode. 
+
+\begin{DoxyNote}{Note}
+This function is called when TIM6 interrupt took place, inside \doxyref{HAL\+\_\+\+TIM\+\_\+\+IRQHandler()}{p.}{group___t_i_m___exported___functions___group7_ga2dc3ef34340412aa8a01d734d2ff8f88}. It makes a direct call to \doxyref{HAL\+\_\+\+Inc\+Tick()}{p.}{group___h_a_l___exported___functions___group2_gaba5b726bfedd013bf7bb5a51d5c4f188} to increment a global variable \char`\"{}uw\+Tick\char`\"{} used as application time base. 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em htim} & \+: TIM handle \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 163 of file stm32f4xx\+\_\+hal\+\_\+timebase\+\_\+tim\+\_\+template.\+c.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=349pt]{group___h_a_l___time_base_ga8a3b0ad512a6e6c6157440b68d395eac_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{group___h_a_l___time_base_ga0839a45f331c4c067939b9c4533bbf4d}} 
+\index{HAL\_TimeBase@{HAL\_TimeBase}!TIM6\_DAC\_IRQHandler@{TIM6\_DAC\_IRQHandler}}
+\index{TIM6\_DAC\_IRQHandler@{TIM6\_DAC\_IRQHandler}!HAL\_TimeBase@{HAL\_TimeBase}}
+\doxysubsubsection{TIM6\_DAC\_IRQHandler()}
+{\footnotesize\ttfamily void TIM6\+\_\+\+DAC\+\_\+\+IRQHandler (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+This function handles TIM interrupt request. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 173 of file stm32f4xx\+\_\+hal\+\_\+timebase\+\_\+tim\+\_\+template.\+c.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=345pt]{group___h_a_l___time_base_ga0839a45f331c4c067939b9c4533bbf4d_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\label{group___h_a_l___time_base_gaad0e79d89de05e8451c9b6ac5d88109d}} 
+\index{HAL\_TimeBase@{HAL\_TimeBase}!TimHandle@{TimHandle}}
+\index{TimHandle@{TimHandle}!HAL\_TimeBase@{HAL\_TimeBase}}
+\doxysubsubsection{TimHandle}
+{\footnotesize\ttfamily \textbf{ TIM\+\_\+\+Handle\+Type\+Def} Tim\+Handle}
+
+
+
+Definition at line 59 of file stm32f4xx\+\_\+hal\+\_\+timebase\+\_\+tim\+\_\+template.\+c.
+

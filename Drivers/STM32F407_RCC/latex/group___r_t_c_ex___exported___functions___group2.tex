@@ -1,0 +1,112 @@
+\doxysection{RTCEx\+\_\+\+Exported\+\_\+\+Functions\+\_\+\+Group2}
+\label{group___r_t_c_ex___exported___functions___group2}\index{RTCEx\_Exported\_Functions\_Group2@{RTCEx\_Exported\_Functions\_Group2}}
+Collaboration diagram for RTCEx\+\_\+\+Exported\+\_\+\+Functions\+\_\+\+Group2\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group___r_t_c_ex___exported___functions___group2}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+RTCEx\+\_\+\+Set\+Wake\+Up\+Timer} (\textbf{ RTC\+\_\+\+Handle\+Type\+Def} $\ast$hrtc, uint32\+\_\+t Wake\+Up\+Counter, uint32\+\_\+t Wake\+Up\+Clock)
+\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+RTCEx\+\_\+\+Set\+Wake\+Up\+Timer\+\_\+\+IT} (\textbf{ RTC\+\_\+\+Handle\+Type\+Def} $\ast$hrtc, uint32\+\_\+t Wake\+Up\+Counter, uint32\+\_\+t Wake\+Up\+Clock)
+\item 
+uint32\+\_\+t \textbf{ HAL\+\_\+\+RTCEx\+\_\+\+Deactivate\+Wake\+Up\+Timer} (\textbf{ RTC\+\_\+\+Handle\+Type\+Def} $\ast$hrtc)
+\item 
+uint32\+\_\+t \textbf{ HAL\+\_\+\+RTCEx\+\_\+\+Get\+Wake\+Up\+Timer} (\textbf{ RTC\+\_\+\+Handle\+Type\+Def} $\ast$hrtc)
+\item 
+void \textbf{ HAL\+\_\+\+RTCEx\+\_\+\+Wake\+Up\+Timer\+IRQHandler} (\textbf{ RTC\+\_\+\+Handle\+Type\+Def} $\ast$hrtc)
+\item 
+void \textbf{ HAL\+\_\+\+RTCEx\+\_\+\+Wake\+Up\+Timer\+Event\+Callback} (\textbf{ RTC\+\_\+\+Handle\+Type\+Def} $\ast$hrtc)
+\begin{DoxyCompactList}\small\item\em Wake Up Timer Event Callback in non blocking mode. \end{DoxyCompactList}\item 
+\textbf{ HAL\+\_\+\+Status\+Type\+Def} \textbf{ HAL\+\_\+\+RTCEx\+\_\+\+Poll\+For\+Wake\+Up\+Timer\+Event} (\textbf{ RTC\+\_\+\+Handle\+Type\+Def} $\ast$hrtc, uint32\+\_\+t Timeout)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\label{group___r_t_c_ex___exported___functions___group2_ga48a0ebb678effede4fca4436e20b18f0}} 
+\index{RTCEx\_Exported\_Functions\_Group2@{RTCEx\_Exported\_Functions\_Group2}!HAL\_RTCEx\_DeactivateWakeUpTimer@{HAL\_RTCEx\_DeactivateWakeUpTimer}}
+\index{HAL\_RTCEx\_DeactivateWakeUpTimer@{HAL\_RTCEx\_DeactivateWakeUpTimer}!RTCEx\_Exported\_Functions\_Group2@{RTCEx\_Exported\_Functions\_Group2}}
+\doxysubsubsection{HAL\_RTCEx\_DeactivateWakeUpTimer()}
+{\footnotesize\ttfamily uint32\+\_\+t HAL\+\_\+\+RTCEx\+\_\+\+Deactivate\+Wake\+Up\+Timer (\begin{DoxyParamCaption}\item[{\textbf{ RTC\+\_\+\+Handle\+Type\+Def} $\ast$}]{hrtc }\end{DoxyParamCaption})}
+
+\mbox{\label{group___r_t_c_ex___exported___functions___group2_gae2aa87c6544a982c4e7657d649e7a797}} 
+\index{RTCEx\_Exported\_Functions\_Group2@{RTCEx\_Exported\_Functions\_Group2}!HAL\_RTCEx\_GetWakeUpTimer@{HAL\_RTCEx\_GetWakeUpTimer}}
+\index{HAL\_RTCEx\_GetWakeUpTimer@{HAL\_RTCEx\_GetWakeUpTimer}!RTCEx\_Exported\_Functions\_Group2@{RTCEx\_Exported\_Functions\_Group2}}
+\doxysubsubsection{HAL\_RTCEx\_GetWakeUpTimer()}
+{\footnotesize\ttfamily uint32\+\_\+t HAL\+\_\+\+RTCEx\+\_\+\+Get\+Wake\+Up\+Timer (\begin{DoxyParamCaption}\item[{\textbf{ RTC\+\_\+\+Handle\+Type\+Def} $\ast$}]{hrtc }\end{DoxyParamCaption})}
+
+\mbox{\label{group___r_t_c_ex___exported___functions___group2_ga13cdc56c03d2d606ef8c635dcc25f555}} 
+\index{RTCEx\_Exported\_Functions\_Group2@{RTCEx\_Exported\_Functions\_Group2}!HAL\_RTCEx\_PollForWakeUpTimerEvent@{HAL\_RTCEx\_PollForWakeUpTimerEvent}}
+\index{HAL\_RTCEx\_PollForWakeUpTimerEvent@{HAL\_RTCEx\_PollForWakeUpTimerEvent}!RTCEx\_Exported\_Functions\_Group2@{RTCEx\_Exported\_Functions\_Group2}}
+\doxysubsubsection{HAL\_RTCEx\_PollForWakeUpTimerEvent()}
+{\footnotesize\ttfamily \textbf{ HAL\+\_\+\+Status\+Type\+Def} HAL\+\_\+\+RTCEx\+\_\+\+Poll\+For\+Wake\+Up\+Timer\+Event (\begin{DoxyParamCaption}\item[{\textbf{ RTC\+\_\+\+Handle\+Type\+Def} $\ast$}]{hrtc,  }\item[{uint32\+\_\+t}]{Timeout }\end{DoxyParamCaption})}
+
+\mbox{\label{group___r_t_c_ex___exported___functions___group2_gab22373ae0d2eeb1322569c44c42ee9db}} 
+\index{RTCEx\_Exported\_Functions\_Group2@{RTCEx\_Exported\_Functions\_Group2}!HAL\_RTCEx\_SetWakeUpTimer@{HAL\_RTCEx\_SetWakeUpTimer}}
+\index{HAL\_RTCEx\_SetWakeUpTimer@{HAL\_RTCEx\_SetWakeUpTimer}!RTCEx\_Exported\_Functions\_Group2@{RTCEx\_Exported\_Functions\_Group2}}
+\doxysubsubsection{HAL\_RTCEx\_SetWakeUpTimer()}
+{\footnotesize\ttfamily \textbf{ HAL\+\_\+\+Status\+Type\+Def} HAL\+\_\+\+RTCEx\+\_\+\+Set\+Wake\+Up\+Timer (\begin{DoxyParamCaption}\item[{\textbf{ RTC\+\_\+\+Handle\+Type\+Def} $\ast$}]{hrtc,  }\item[{uint32\+\_\+t}]{Wake\+Up\+Counter,  }\item[{uint32\+\_\+t}]{Wake\+Up\+Clock }\end{DoxyParamCaption})}
+
+\mbox{\label{group___r_t_c_ex___exported___functions___group2_ga92f7781781a2fd96991ca932377418da}} 
+\index{RTCEx\_Exported\_Functions\_Group2@{RTCEx\_Exported\_Functions\_Group2}!HAL\_RTCEx\_SetWakeUpTimer\_IT@{HAL\_RTCEx\_SetWakeUpTimer\_IT}}
+\index{HAL\_RTCEx\_SetWakeUpTimer\_IT@{HAL\_RTCEx\_SetWakeUpTimer\_IT}!RTCEx\_Exported\_Functions\_Group2@{RTCEx\_Exported\_Functions\_Group2}}
+\doxysubsubsection{HAL\_RTCEx\_SetWakeUpTimer\_IT()}
+{\footnotesize\ttfamily \textbf{ HAL\+\_\+\+Status\+Type\+Def} HAL\+\_\+\+RTCEx\+\_\+\+Set\+Wake\+Up\+Timer\+\_\+\+IT (\begin{DoxyParamCaption}\item[{\textbf{ RTC\+\_\+\+Handle\+Type\+Def} $\ast$}]{hrtc,  }\item[{uint32\+\_\+t}]{Wake\+Up\+Counter,  }\item[{uint32\+\_\+t}]{Wake\+Up\+Clock }\end{DoxyParamCaption})}
+
+\mbox{\label{group___r_t_c_ex___exported___functions___group2_gac9ed5d6224b5c86f2845a9c1af7d94de}} 
+\index{RTCEx\_Exported\_Functions\_Group2@{RTCEx\_Exported\_Functions\_Group2}!HAL\_RTCEx\_WakeUpTimerEventCallback@{HAL\_RTCEx\_WakeUpTimerEventCallback}}
+\index{HAL\_RTCEx\_WakeUpTimerEventCallback@{HAL\_RTCEx\_WakeUpTimerEventCallback}!RTCEx\_Exported\_Functions\_Group2@{RTCEx\_Exported\_Functions\_Group2}}
+\doxysubsubsection{HAL\_RTCEx\_WakeUpTimerEventCallback()}
+{\footnotesize\ttfamily void HAL\+\_\+\+RTCEx\+\_\+\+Wake\+Up\+Timer\+Event\+Callback (\begin{DoxyParamCaption}\item[{\textbf{ RTC\+\_\+\+Handle\+Type\+Def} $\ast$}]{hrtc }\end{DoxyParamCaption})}
+
+
+
+Wake Up Timer Event Callback in non blocking mode. 
+
+\begin{DoxyNote}{Note}
+This function is called when RTC\+\_\+\+WKUP interrupt took place, inside \doxyref{RTC\+\_\+\+WKUP\+\_\+\+IRQHandler()}{p.}{group___h_a_l___time_base___r_t_c___wake_up___template_ga53a3fe340e323e2fec8d851cd2e83554}. It makes a direct call to \doxyref{HAL\+\_\+\+Inc\+Tick()}{p.}{group___h_a_l___exported___functions___group2_gaba5b726bfedd013bf7bb5a51d5c4f188} to increment a global variable \char`\"{}uw\+Tick\char`\"{} used as application time base. 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em hrtc} & \+: RTC handle \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 273 of file stm32f4xx\+\_\+hal\+\_\+timebase\+\_\+rtc\+\_\+wakeup\+\_\+template.\+c.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=349pt]{group___r_t_c_ex___exported___functions___group2_gac9ed5d6224b5c86f2845a9c1af7d94de_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{group___r_t_c_ex___exported___functions___group2_ga5e391424483012fe09827739dc53885f}} 
+\index{RTCEx\_Exported\_Functions\_Group2@{RTCEx\_Exported\_Functions\_Group2}!HAL\_RTCEx\_WakeUpTimerIRQHandler@{HAL\_RTCEx\_WakeUpTimerIRQHandler}}
+\index{HAL\_RTCEx\_WakeUpTimerIRQHandler@{HAL\_RTCEx\_WakeUpTimerIRQHandler}!RTCEx\_Exported\_Functions\_Group2@{RTCEx\_Exported\_Functions\_Group2}}
+\doxysubsubsection{HAL\_RTCEx\_WakeUpTimerIRQHandler()}
+{\footnotesize\ttfamily void HAL\+\_\+\+RTCEx\+\_\+\+Wake\+Up\+Timer\+IRQHandler (\begin{DoxyParamCaption}\item[{\textbf{ RTC\+\_\+\+Handle\+Type\+Def} $\ast$}]{hrtc }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group___r_t_c_ex___exported___functions___group2_ga5e391424483012fe09827739dc53885f_icgraph}
+\end{center}
+\end{figure}
