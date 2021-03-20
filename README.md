@@ -10,10 +10,16 @@ In this repository, I will create drivers for the STM32F407G-DISC1 board.
 The drivers will be MCAL ( Microcontroller Abstraction Layer ) and HAL ( Hardware Abstraction Layer )
 ### MCAL
 This will contains all the peripherals drivers
+#### Core Peripherals:
+* NVIC ( Semi completed, NMI not completed yet ).
+* SYSTICK ( Completed ).
+* SCB ( On progress ).
+* 
+#### Other Peripherals:
 * RCC ( On progress ).
 * DIO & AFIO ( Completed ).
-* SCB ( On progress ).
 * SYSCFG ( On progress ).
+* EXTI ( Completed ).
 * 
 
 ### HAL
