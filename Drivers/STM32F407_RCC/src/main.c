@@ -12,8 +12,10 @@
 #include "NVIC_interface.h"
 #include "EXTI_interface.h"
 #include "SYSCFG_interface.h"
+#include "STK_interface.h"
 
 void Delay(u16 copy_u16Delay);
+
 
 int main(void)
 {
@@ -49,10 +51,13 @@ int main(void)
 	//MEXTI_voidGenerateSoftwareInterrupt(EXTI0);
 	MEXTI_voidSetEdgeTriggering(EXTI0,MEXTI_FalingEdgeTrigger);
 
+
+	MSTK_voidInit(STK_CLKSOURCE_AHB_PROCESSOR_CLK);
+
 	while (1)
     {
 		MGPIO_voidTogPinValue(GPIOD,13);
-		Delay(100);
+		MSTK_voidSetBusyWait(1000000);
     }
 }
 

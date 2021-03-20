@@ -1,4 +1,0 @@
-<map id="HAL_TIM_Base_Start_IT" name="HAL_TIM_Base_Start_IT">
-<area shape="rect" id="node1" title=" " alt="" coords="148,5,312,32"/>
-<area shape="rect" id="node2" href="$group___h_a_l___time_base.html#ga879cdb21ef051eb81ec51c18147397d5" title="This function configures the TIM6 as a time base source. The time source is configured to have 1ms ti..." alt="" coords="5,5,100,32"/>
-</map>

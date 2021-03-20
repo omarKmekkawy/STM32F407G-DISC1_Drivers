@@ -1,4 +1,0 @@
-<map id="HAL_RTC_AlarmAEventCallback" name="HAL_RTC_AlarmAEventCallback">
-<area shape="rect" id="node1" title="ALARM A Event Callback in non blocking mode." alt="" coords="5,5,216,32"/>
-<area shape="rect" id="node2" href="$group___h_a_l___exported___functions___group2.html#gaba5b726bfedd013bf7bb5a51d5c4f188" title="This function is called to increment a global variable &quot;uwTick&quot; used as application time base." alt="" coords="264,5,359,32"/>
-</map>

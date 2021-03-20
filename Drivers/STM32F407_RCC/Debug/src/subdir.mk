@@ -9,6 +9,7 @@ C_SRCS += \
 ../src/NVIC_program.c \
 ../src/RCC_program.c \
 ../src/SCB_program.c \
+../src/STK_program.c \
 ../src/SYSCFG_program.c \
 ../src/_initialize_hardware.c \
 ../src/_write.c \
@@ -21,6 +22,7 @@ OBJS += \
 ./src/NVIC_program.o \
 ./src/RCC_program.o \
 ./src/SCB_program.o \
+./src/STK_program.o \
 ./src/SYSCFG_program.o \
 ./src/_initialize_hardware.o \
 ./src/_write.o \
@@ -33,6 +35,7 @@ C_DEPS += \
 ./src/NVIC_program.d \
 ./src/RCC_program.d \
 ./src/SCB_program.d \
+./src/STK_program.d \
 ./src/SYSCFG_program.d \
 ./src/_initialize_hardware.d \
 ./src/_write.d \

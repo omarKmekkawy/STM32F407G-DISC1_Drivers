@@ -1,7 +1,0 @@
-<map id="system/include/stm32f4&#45;hal/stm32f4xx_hal_gpio_ex.h" name="system/include/stm32f4&#45;hal/stm32f4xx_hal_gpio_ex.h">
-<area shape="rect" id="node1" title="Header file of GPIO HAL Extension module." alt="" coords="117,5,312,47"/>
-<area shape="rect" id="node2" href="$stm32f4xx__hal__def_8h.html" title="This file contains HAL common defines, enumeration, macros and structures definitions." alt="" coords="144,95,285,121"/>
-<area shape="rect" id="node3" href="$stm32f4xx_8h.html" title="CMSIS STM32F4xx Device Peripheral Access Layer Header File." alt="" coords="5,169,99,196"/>
-<area shape="rect" id="node4" href="$stm32__hal__legacy_8h.html" title="This file contains aliases definition for the STM32Cube HAL constants macros and functions maintained..." alt="" coords="123,169,307,196"/>
-<area shape="rect" id="node5" title=" " alt="" coords="331,169,392,196"/>
-</map>

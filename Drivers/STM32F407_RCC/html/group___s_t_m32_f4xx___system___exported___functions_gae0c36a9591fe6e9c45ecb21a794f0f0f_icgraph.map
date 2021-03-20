@@ -1,5 +1,0 @@
-<map id="SystemCoreClockUpdate" name="SystemCoreClockUpdate">
-<area shape="rect" id="node1" title="Update SystemCoreClock variable according to Clock Register Values. The SystemCoreClock variable cont..." alt="" coords="341,5,509,32"/>
-<area shape="rect" id="node2" href="$src_2__initialize__hardware_8c.html#a7cdac479c838de78c7a65a9cce5a5343" title=" " alt="" coords="151,5,293,32"/>
-<area shape="rect" id="node3" href="$__startup_8c.html#adc4b6e73e00d1d61b37d4e2cabdd7971" title=" " alt="" coords="5,5,103,32"/>
-</map>

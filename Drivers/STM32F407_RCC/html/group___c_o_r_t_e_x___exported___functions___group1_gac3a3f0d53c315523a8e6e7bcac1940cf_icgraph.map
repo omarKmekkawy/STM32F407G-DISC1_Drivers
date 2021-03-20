@@ -1,8 +1,0 @@
-<map id="HAL_SYSTICK_Config" name="HAL_SYSTICK_Config">
-<area shape="rect" id="node1" title=" " alt="" coords="605,31,757,57"/>
-<area shape="rect" id="node2" href="$src_2__initialize__hardware_8c.html#af9aace1b44b73111e15aa39f06f43456" title="System Clock Configuration." alt="" coords="460,5,557,32"/>
-<area shape="rect" id="node3" href="$group___h_a_l___exported___functions___group1.html#ga44d1542f9985b2243b14a41070cc41cc" title="This function configures the source of the time base. The time source is configured to have 1ms time ..." alt="" coords="461,56,556,83"/>
-<area shape="rect" id="node4" href="$group___h_a_l___exported___functions___group1.html#gaecac54d350c3730e6831eb404e557dc4" title="This function is used to initialize the HAL Library; it must be the first instruction to be executed ..." alt="" coords="341,56,412,83"/>
-<area shape="rect" id="node5" href="$src_2__initialize__hardware_8c.html#a7cdac479c838de78c7a65a9cce5a5343" title=" " alt="" coords="151,56,293,83"/>
-<area shape="rect" id="node6" href="$__startup_8c.html#adc4b6e73e00d1d61b37d4e2cabdd7971" title=" " alt="" coords="5,56,103,83"/>
-</map>
