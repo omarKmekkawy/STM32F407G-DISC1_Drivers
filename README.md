@@ -18,7 +18,7 @@ This will contains all the peripherals drivers
 #### Other Peripherals:
 * RCC ( On progress ).
 * DIO & AFIO ( Completed ).
-* SYSCFG ( On progress ).
+* SYSCFG ( In progress ).
 * EXTI ( Completed ).
 * 
 
