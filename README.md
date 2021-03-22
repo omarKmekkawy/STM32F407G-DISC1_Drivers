@@ -16,7 +16,7 @@ This will contains all the peripherals drivers
 * SCB ( On progress ).
 * 
 #### Other Peripherals:
-* RCC ( On progress ).
+* RCC ( In progress ).
 * DIO & AFIO ( Completed ).
 * SYSCFG ( In progress ).
 * EXTI ( Completed ).
